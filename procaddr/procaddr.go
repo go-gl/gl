@@ -1,3 +1,5 @@
+// Package procaddr defines platform-specific mechanisms for loading OpenGL
+// function addresses.
 package procaddr
 
 import "unsafe"
