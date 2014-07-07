@@ -9,10 +9,11 @@ import (
 	"unsafe"
 )
 // Ptr takes a pointer, slice, or array and returns its GL-compatible address.
-func Ptr(data interface{}) uintptr {
+func Ptr(data interface{}) unsafe.Pointer {
 	if data == nil {
-		return uintptr(0)
+		return unsafe.Pointer(nil)
 	}
+	var addr uintptr
 	v := reflect.ValueOf(data)
 	switch v.Type().Kind() {
 	case reflect.Ptr:
@@ -22,16 +23,24 @@ func Ptr(data interface{}) uintptr {
 			reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64,
 			reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64,
 			reflect.Float32, reflect.Float64:
-			return e.UnsafeAddr()
+			addr = e.UnsafeAddr()
 		}
 	case reflect.Uintptr:
-		return v.Pointer()
+		addr = v.Pointer()
 	case reflect.Slice:
-		return v.Index(0).UnsafeAddr()
+		addr = v.Index(0).UnsafeAddr()
 	case reflect.Array:
-		return v.UnsafeAddr()
+		addr = v.UnsafeAddr()
+	default:
+		panic(fmt.Sprintf("Unsupproted type %s; must be a pointer, slice, or array", v.Type()))
 	}
-	panic(fmt.Sprintf("Unsupproted type %s; must be a pointer, slice, or array", v.Type()))
+	return unsafe.Pointer(addr)
+}
+// PtrOffset takes a pointer offset and returns a GL-compatible pointer.
+// Useful for functions such as glVertexAttribPointer that take pointer
+// parameters indicating an offset rather than an absolute memory address.
+func PtrOffset(offset int) unsafe.Pointer {
+	return unsafe.Pointer(uintptr(offset))
 }
 // Str takes a null-terminated Go string and returns its GL-compatible address.
 // This function reaches into Go string storage in an unsafe way so the caller
