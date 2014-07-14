@@ -17985,252 +17985,252 @@ var (
   pWriteMaskEXT C.PWRITEMASKEXT
 )
 var (
-  ARB_multi_draw_indirect = true
-  EXT_index_material = true
-  ARB_tessellation_shader = true
-  ARB_indirect_parameters = true
-  ARB_vertex_program = true
-  NV_point_sprite = true
-  AMD_gpu_shader_int64 = true
-  NV_pixel_data_range = true
-  ARB_draw_instanced = true
-  EXT_direct_state_access = true
-  SGIX_async = true
-  ATI_vertex_streams = true
-  MESA_window_pos = true
-  INTEL_performance_query = true
-  ARB_provoking_vertex = true
-  ARB_clear_texture = true
-  ARB_sparse_texture = true
-  ARB_vertex_buffer_object = true
-  NV_transform_feedback = true
-  ARB_texture_view = true
-  EXT_geometry_shader4 = true
-  EXT_vertex_shader = true
-  EXT_framebuffer_object = true
-  ARB_transform_feedback_instanced = true
-  SUN_triangle_list = true
-  ARB_gpu_shader_fp64 = true
-  ARB_debug_output = true
-  ATI_vertex_array_object = true
-  EXT_blend_func_separate = true
-  SGIX_polynomial_ffd = true
-  ARB_compute_shader = true
-  ARB_point_parameters = true
-  EXT_vertex_weighting = true
-  NV_texture_barrier = true
-  ARB_texture_buffer_object = true
-  ATI_separate_stencil = true
-  NV_vertex_array_range = true
-  ARB_window_pos = true
-  EXT_secondary_color = true
-  AMD_performance_monitor = true
-  ARB_texture_compression = true
-  ARB_get_program_binary = true
-  APPLE_vertex_program_evaluators = true
-  EXT_subtexture = true
-  APPLE_element_array = true
-  NV_explicit_multisample = true
-  EXT_draw_instanced = true
-  SGIS_sharpen_texture = true
-  ARB_sample_shading = true
-  EXT_color_subtable = true
-  EXT_debug_label = true
-  ARB_copy_image = true
-  SGIX_pixel_texture = true
-  INGR_blend_func_separate = true
-  ARB_texture_storage = true
-  NV_blend_equation_advanced = true
-  EXT_stencil_two_side = true
-  SGIS_pixel_texture = true
-  ATI_draw_buffers = true
-  AMD_stencil_operation_extended = true
-  ARB_draw_elements_base_vertex = true
-  SGIX_tag_sample_buffer = true
-  NV_register_combiners2 = true
-  EXT_texture3D = true
-  AMD_name_gen_delete = true
-  ARB_clear_buffer_object = true
-  ARB_shader_image_load_store = true
-  ATI_map_object_buffer = true
-  NV_vdpau_interop = true
-  EXT_fog_coord = true
-  APPLE_texture_range = true
-  AMD_sparse_texture = true
-  ARB_robustness = true
-  ARB_vertex_blend = true
-  ARB_uniform_buffer_object = true
-  NV_copy_image = true
-  GREMEDY_string_marker = true
-  ARB_fragment_program = true
-  NV_vertex_buffer_unified_memory = true
-  ARB_buffer_storage = true
-  AMD_sample_positions = true
-  EXT_draw_buffers2 = true
-  ARB_geometry_shader4 = true
-  EXT_texture_integer = true
-  ARB_draw_buffers = true
-  SGIS_texture_filter4 = true
-  SGIX_framezoom = true
-  NVX_conditional_render = true
-  SGIS_point_parameters = true
-  EXT_polygon_offset = true
-  NV_depth_buffer_float = true
-  APPLE_flush_buffer_range = true
-  IBM_static_data = true
-  NV_half_float = true
-  EXT_shader_image_load_store = true
-  ARB_sync = true
-  NV_occlusion_query = true
-  INTEL_parallel_arrays = true
-  SGIX_igloo_interface = true
-  EXT_multisample = true
-  SGIX_flush_raster = true
-  IBM_vertex_array_lists = true
-  ARB_framebuffer_object = true
-  AMD_draw_buffers_blend = true
-  APPLE_vertex_array_object = true
-  KHR_debug = true
-  EXT_draw_range_elements = true
-  APPLE_fence = true
-  NV_bindless_texture = true
-  EXT_blend_color = true
-  EXT_vertex_array = true
-  ARB_instanced_arrays = true
-  ARB_shader_storage_buffer_object = true
-  NV_geometry_program4 = true
-  SGIS_multisample = true
-  ARB_separate_shader_objects = true
-  SGIX_fragment_lighting = true
-  EXT_histogram = true
-  SGIS_detail_texture = true
-  EXT_provoking_vertex = true
-  SGIS_fog_function = true
-  GREMEDY_frame_terminator = true
-  EXT_vertex_attrib_64bit = true
-  ARB_multitexture = true
-  ARB_vertex_attrib_64bit = true
-  EXT_blend_equation_separate = true
-  SUN_vertex = true
-  EXT_point_parameters = true
-  SGIX_list_priority = true
-  NV_fragment_program = true
-  NV_bindless_multi_draw_indirect = true
-  NV_path_rendering = true
-  ATI_fragment_shader = true
-  NV_conditional_render = true
-  ARB_ES2_compatibility = true
-  EXT_depth_bounds_test = true
-  EXT_gpu_shader4 = true
-  NV_register_combiners = true
-  PGI_misc_hints = true
-  EXT_texture_object = true
-  ARB_internalformat_query = true
-  ARB_multisample = true
-  ARB_viewport_array = true
-  NV_video_capture = true
-  SGIX_sprite = true
-  SGIX_instruments = true
-  EXT_debug_marker = true
-  EXT_convolution = true
-  NV_gpu_shader5 = true
-  ARB_occlusion_query = true
-  NV_evaluators = true
-  EXT_x11_sync_object = true
-  ARB_framebuffer_no_attachments = true
-  NV_framebuffer_multisample_coverage = true
-  ARB_vertex_shader = true
-  HP_image_transform = true
-  EXT_texture_perturb_normal = true
-  NV_gpu_program5 = true
-  NV_gpu_program4 = true
-  AMD_vertex_shader_tessellator = true
-  NV_shader_buffer_load = true
-  ARB_texture_multisample = true
-  EXT_light_texture = true
-  EXT_compiled_vertex_array = true
-  EXT_texture_buffer_object = true
-  ARB_shader_objects = true
-  EXT_pixel_transform = true
-  AMD_interleaved_elements = true
-  NV_draw_texture = true
-  AMD_occlusion_query_event = true
-  ARB_base_instance = true
-  SUN_global_alpha = true
-  ARB_draw_indirect = true
   AMD_debug_output = true
-  SUN_mesh_array = true
-  EXT_bindable_uniform = true
-  ATI_envmap_bumpmap = true
-  ARB_imaging = true
-  APPLE_object_purgeable = true
-  APPLE_vertex_array_range = true
-  NV_vertex_program4 = true
-  ARB_transform_feedback2 = true
-  EXT_coordinate_frame = true
-  ATI_element_array = true
-  ARB_texture_storage_multisample = true
-  SGIS_texture_color_mask = true
-  IBM_multimode_draw_arrays = true
-  ARB_internalformat_query2 = true
-  OES_fixed_point = true
-  NV_present_video = true
-  ARB_shader_atomic_counters = true
-  ARB_shading_language_include = true
-  EXT_framebuffer_blit = true
-  EXT_paletted_texture = true
-  EXT_stencil_clear_tag = true
-  ARB_multi_bind = true
-  EXT_cull_vertex = true
-  EXT_blend_minmax = true
-  ARB_texture_buffer_range = true
-  NV_parameter_buffer_object = true
-  MESA_resize_buffers = true
-  NV_transform_feedback2 = true
-  INTEL_map_texture = true
-  ARB_invalidate_subdata = true
-  ARB_timer_query = true
+  AMD_draw_buffers_blend = true
+  AMD_gpu_shader_int64 = true
+  AMD_interleaved_elements = true
   AMD_multi_draw_indirect = true
-  ARB_map_buffer_range = true
-  SGIS_texture4D = true
-  GL_3DFX_tbuffer = true
-  ARB_blend_func_extended = true
-  ARB_program_interface_query = true
+  AMD_name_gen_delete = true
+  AMD_occlusion_query_event = true
+  AMD_performance_monitor = true
+  AMD_sample_positions = true
+  AMD_sparse_texture = true
+  AMD_stencil_operation_extended = true
+  AMD_vertex_shader_tessellator = true
+  APPLE_element_array = true
+  APPLE_fence = true
+  APPLE_flush_buffer_range = true
+  APPLE_object_purgeable = true
+  APPLE_texture_range = true
+  APPLE_vertex_array_object = true
+  APPLE_vertex_array_range = true
+  APPLE_vertex_program_evaluators = true
+  ARB_ES2_compatibility = true
+  ARB_base_instance = true
   ARB_bindless_texture = true
-  ATI_pn_triangles = true
-  ARB_color_buffer_float = true
-  OES_query_matrix = true
-  NV_vertex_program = true
-  ARB_sampler_objects = true
-  ARB_compute_variable_group_size = true
-  ARB_transpose_matrix = true
-  ARB_draw_buffers_blend = true
-  OES_byte_coordinates = true
-  ARB_vertex_array_object = true
-  ARB_transform_feedback3 = true
-  OES_single_precision = true
-  EXT_timer_query = true
-  EXT_index_func = true
-  EXT_copy_texture = true
-  ATI_vertex_attrib_array_object = true
-  SUNX_constant_data = true
-  ARB_shader_subroutine = true
-  EXT_separate_shader_objects = true
-  NV_vertex_attrib_integer_64bit = true
-  EXT_multi_draw_arrays = true
-  ARB_copy_buffer = true
-  EXT_transform_feedback = true
-  EXT_framebuffer_multisample = true
-  NV_fence = true
-  EXT_gpu_program_parameters = true
-  ARB_vertex_type_2_10_10_10_rev = true
-  SGIX_reference_plane = true
-  SGI_color_table = true
-  ARB_matrix_palette = true
-  NV_primitive_restart = true
+  ARB_blend_func_extended = true
+  ARB_buffer_storage = true
   ARB_cl_event = true
+  ARB_clear_buffer_object = true
+  ARB_clear_texture = true
+  ARB_color_buffer_float = true
+  ARB_compute_shader = true
+  ARB_compute_variable_group_size = true
+  ARB_copy_buffer = true
+  ARB_copy_image = true
+  ARB_debug_output = true
+  ARB_draw_buffers = true
+  ARB_draw_buffers_blend = true
+  ARB_draw_elements_base_vertex = true
+  ARB_draw_indirect = true
+  ARB_draw_instanced = true
+  ARB_fragment_program = true
+  ARB_framebuffer_no_attachments = true
+  ARB_framebuffer_object = true
+  ARB_geometry_shader4 = true
+  ARB_get_program_binary = true
+  ARB_gpu_shader_fp64 = true
+  ARB_imaging = true
+  ARB_indirect_parameters = true
+  ARB_instanced_arrays = true
+  ARB_internalformat_query = true
+  ARB_internalformat_query2 = true
+  ARB_invalidate_subdata = true
+  ARB_map_buffer_range = true
+  ARB_matrix_palette = true
+  ARB_multi_bind = true
+  ARB_multi_draw_indirect = true
+  ARB_multisample = true
+  ARB_multitexture = true
+  ARB_occlusion_query = true
+  ARB_point_parameters = true
+  ARB_program_interface_query = true
+  ARB_provoking_vertex = true
+  ARB_robustness = true
+  ARB_sample_shading = true
+  ARB_sampler_objects = true
+  ARB_separate_shader_objects = true
+  ARB_shader_atomic_counters = true
+  ARB_shader_image_load_store = true
+  ARB_shader_objects = true
+  ARB_shader_storage_buffer_object = true
+  ARB_shader_subroutine = true
+  ARB_shading_language_include = true
+  ARB_sparse_texture = true
+  ARB_sync = true
+  ARB_tessellation_shader = true
+  ARB_texture_buffer_object = true
+  ARB_texture_buffer_range = true
+  ARB_texture_compression = true
+  ARB_texture_multisample = true
+  ARB_texture_storage = true
+  ARB_texture_storage_multisample = true
+  ARB_texture_view = true
+  ARB_timer_query = true
+  ARB_transform_feedback2 = true
+  ARB_transform_feedback3 = true
+  ARB_transform_feedback_instanced = true
+  ARB_transpose_matrix = true
+  ARB_uniform_buffer_object = true
+  ARB_vertex_array_object = true
+  ARB_vertex_attrib_64bit = true
   ARB_vertex_attrib_binding = true
+  ARB_vertex_blend = true
+  ARB_vertex_buffer_object = true
+  ARB_vertex_program = true
+  ARB_vertex_shader = true
+  ARB_vertex_type_2_10_10_10_rev = true
+  ARB_viewport_array = true
+  ARB_window_pos = true
+  ATI_draw_buffers = true
+  ATI_element_array = true
+  ATI_envmap_bumpmap = true
+  ATI_fragment_shader = true
+  ATI_map_object_buffer = true
+  ATI_pn_triangles = true
+  ATI_separate_stencil = true
+  ATI_vertex_array_object = true
+  ATI_vertex_attrib_array_object = true
+  ATI_vertex_streams = true
+  EXT_bindable_uniform = true
+  EXT_blend_color = true
+  EXT_blend_equation_separate = true
+  EXT_blend_func_separate = true
+  EXT_blend_minmax = true
+  EXT_color_subtable = true
+  EXT_compiled_vertex_array = true
+  EXT_convolution = true
+  EXT_coordinate_frame = true
+  EXT_copy_texture = true
+  EXT_cull_vertex = true
+  EXT_debug_label = true
+  EXT_debug_marker = true
+  EXT_depth_bounds_test = true
+  EXT_direct_state_access = true
+  EXT_draw_buffers2 = true
+  EXT_draw_instanced = true
+  EXT_draw_range_elements = true
+  EXT_fog_coord = true
+  EXT_framebuffer_blit = true
+  EXT_framebuffer_multisample = true
+  EXT_framebuffer_object = true
+  EXT_geometry_shader4 = true
+  EXT_gpu_program_parameters = true
+  EXT_gpu_shader4 = true
+  EXT_histogram = true
+  EXT_index_func = true
+  EXT_index_material = true
+  EXT_light_texture = true
+  EXT_multi_draw_arrays = true
+  EXT_multisample = true
+  EXT_paletted_texture = true
+  EXT_pixel_transform = true
+  EXT_point_parameters = true
+  EXT_polygon_offset = true
+  EXT_provoking_vertex = true
+  EXT_secondary_color = true
+  EXT_separate_shader_objects = true
+  EXT_shader_image_load_store = true
+  EXT_stencil_clear_tag = true
+  EXT_stencil_two_side = true
+  EXT_subtexture = true
+  EXT_texture3D = true
+  EXT_texture_buffer_object = true
+  EXT_texture_integer = true
+  EXT_texture_object = true
+  EXT_texture_perturb_normal = true
+  EXT_timer_query = true
+  EXT_transform_feedback = true
+  EXT_vertex_array = true
+  EXT_vertex_attrib_64bit = true
+  EXT_vertex_shader = true
+  EXT_vertex_weighting = true
+  EXT_x11_sync_object = true
+  GL_3DFX_tbuffer = true
+  GREMEDY_frame_terminator = true
+  GREMEDY_string_marker = true
+  HP_image_transform = true
+  IBM_multimode_draw_arrays = true
+  IBM_static_data = true
+  IBM_vertex_array_lists = true
+  INGR_blend_func_separate = true
+  INTEL_map_texture = true
+  INTEL_parallel_arrays = true
+  INTEL_performance_query = true
+  KHR_debug = true
+  MESA_resize_buffers = true
+  MESA_window_pos = true
+  NVX_conditional_render = true
+  NV_bindless_multi_draw_indirect = true
+  NV_bindless_texture = true
+  NV_blend_equation_advanced = true
+  NV_conditional_render = true
+  NV_copy_image = true
+  NV_depth_buffer_float = true
+  NV_draw_texture = true
+  NV_evaluators = true
+  NV_explicit_multisample = true
+  NV_fence = true
+  NV_fragment_program = true
+  NV_framebuffer_multisample_coverage = true
+  NV_geometry_program4 = true
+  NV_gpu_program4 = true
+  NV_gpu_program5 = true
+  NV_gpu_shader5 = true
+  NV_half_float = true
+  NV_occlusion_query = true
+  NV_parameter_buffer_object = true
+  NV_path_rendering = true
+  NV_pixel_data_range = true
+  NV_point_sprite = true
+  NV_present_video = true
+  NV_primitive_restart = true
+  NV_register_combiners = true
+  NV_register_combiners2 = true
+  NV_shader_buffer_load = true
+  NV_texture_barrier = true
   NV_texture_multisample = true
+  NV_transform_feedback = true
+  NV_transform_feedback2 = true
+  NV_vdpau_interop = true
+  NV_vertex_array_range = true
+  NV_vertex_attrib_integer_64bit = true
+  NV_vertex_buffer_unified_memory = true
+  NV_vertex_program = true
+  NV_vertex_program4 = true
+  NV_video_capture = true
+  OES_byte_coordinates = true
+  OES_fixed_point = true
+  OES_query_matrix = true
+  OES_single_precision = true
+  PGI_misc_hints = true
+  SGIS_detail_texture = true
+  SGIS_fog_function = true
+  SGIS_multisample = true
+  SGIS_pixel_texture = true
+  SGIS_point_parameters = true
+  SGIS_sharpen_texture = true
+  SGIS_texture4D = true
+  SGIS_texture_color_mask = true
+  SGIS_texture_filter4 = true
+  SGIX_async = true
+  SGIX_flush_raster = true
+  SGIX_fragment_lighting = true
+  SGIX_framezoom = true
+  SGIX_igloo_interface = true
+  SGIX_instruments = true
+  SGIX_list_priority = true
+  SGIX_pixel_texture = true
+  SGIX_polynomial_ffd = true
+  SGIX_reference_plane = true
+  SGIX_sprite = true
+  SGIX_tag_sample_buffer = true
+  SGI_color_table = true
+  SUNX_constant_data = true
+  SUN_global_alpha = true
+  SUN_mesh_array = true
+  SUN_triangle_list = true
+  SUN_vertex = true
 )
 // Helper functions
 func boolToInt(b bool) int {
@@ -18312,7 +18312,7 @@ func ArrayObjectATI(array uint32, size int32, xtype uint32, stride int32, buffer
 func AsyncMarkerSGIX(marker uint32) {
   C.glowAsyncMarkerSGIX(pAsyncMarkerSGIX, (C.GLuint)(marker))
 }
-func AttachObjectARB(containerObj unsafe.Pointer, obj unsafe.Pointer) {
+func AttachObjectARB(containerObj uintptr, obj uintptr) {
   C.glowAttachObjectARB(pAttachObjectARB, (C.GLhandleARB)(containerObj), (C.GLhandleARB)(obj))
 }
 // Attaches a shader object to a program object
@@ -18375,7 +18375,7 @@ func BeginVideoCaptureNV(video_capture_slot uint32) {
 func BindAttribLocation(program uint32, index uint32, name *int8) {
   C.glowBindAttribLocation(pBindAttribLocation, (C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func BindAttribLocationARB(programObj unsafe.Pointer, index uint32, name *int8) {
+func BindAttribLocationARB(programObj uintptr, index uint32, name *int8) {
   C.glowBindAttribLocationARB(pBindAttribLocationARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
 // bind a named buffer object
@@ -19081,7 +19081,7 @@ func CombinerStageParameterfvNV(stage uint32, pname uint32, params *float32) {
 func CompileShader(shader uint32) {
   C.glowCompileShader(pCompileShader, (C.GLuint)(shader))
 }
-func CompileShaderARB(shaderObj unsafe.Pointer) {
+func CompileShaderARB(shaderObj uintptr) {
   C.glowCompileShaderARB(pCompileShaderARB, (C.GLhandleARB)(shaderObj))
 }
 func CompileShaderIncludeARB(shader uint32, count int32, path **int8, length *int32) {
@@ -19340,18 +19340,18 @@ func CreateProgram() uint32 {
   ret := C.glowCreateProgram(pCreateProgram)
   return (uint32)(ret)
 }
-func CreateProgramObjectARB() unsafe.Pointer {
+func CreateProgramObjectARB() uintptr {
   ret := C.glowCreateProgramObjectARB(pCreateProgramObjectARB)
-  return (unsafe.Pointer)(ret)
+  return (uintptr)(ret)
 }
 // Creates a shader object
 func CreateShader(xtype uint32) uint32 {
   ret := C.glowCreateShader(pCreateShader, (C.GLenum)(xtype))
   return (uint32)(ret)
 }
-func CreateShaderObjectARB(shaderType uint32) unsafe.Pointer {
+func CreateShaderObjectARB(shaderType uint32) uintptr {
   ret := C.glowCreateShaderObjectARB(pCreateShaderObjectARB, (C.GLenum)(shaderType))
-  return (unsafe.Pointer)(ret)
+  return (uintptr)(ret)
 }
 func CreateShaderProgramEXT(xtype uint32, xstring *int8) uint32 {
   ret := C.glowCreateShaderProgramEXT(pCreateShaderProgramEXT, (C.GLenum)(xtype), (*C.GLchar)(unsafe.Pointer(xstring)))
@@ -19470,7 +19470,7 @@ func DeleteNamedStringARB(namelen int32, name *int8) {
 func DeleteNamesAMD(identifier uint32, num uint32, names *uint32) {
   C.glowDeleteNamesAMD(pDeleteNamesAMD, (C.GLenum)(identifier), (C.GLuint)(num), (*C.GLuint)(unsafe.Pointer(names)))
 }
-func DeleteObjectARB(obj unsafe.Pointer) {
+func DeleteObjectARB(obj uintptr) {
   C.glowDeleteObjectARB(pDeleteObjectARB, (C.GLhandleARB)(obj))
 }
 func DeleteOcclusionQueriesNV(n int32, ids *uint32) {
@@ -19589,7 +19589,7 @@ func DepthRangefOES(n float32, f float32) {
 func DepthRangexOES(n int32, f int32) {
   C.glowDepthRangexOES(pDepthRangexOES, (C.GLfixed)(n), (C.GLfixed)(f))
 }
-func DetachObjectARB(containerObj unsafe.Pointer, attachedObj unsafe.Pointer) {
+func DetachObjectARB(containerObj uintptr, attachedObj uintptr) {
   C.glowDetachObjectARB(pDetachObjectARB, (C.GLhandleARB)(containerObj), (C.GLhandleARB)(attachedObj))
 }
 // Detaches a shader object from a program object to which it is attached
@@ -20325,7 +20325,7 @@ func GetActiveAtomicCounterBufferiv(program uint32, bufferIndex uint32, pname ui
 func GetActiveAttrib(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
   C.glowGetActiveAttrib(pGetActiveAttrib, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func GetActiveAttribARB(programObj unsafe.Pointer, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveAttribARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *int8) {
   C.glowGetActiveAttribARB(pGetActiveAttribARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
 // query the name of an active shader subroutine
@@ -20343,7 +20343,7 @@ func GetActiveSubroutineUniformiv(program uint32, shadertype uint32, index uint3
 func GetActiveUniform(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
   C.glowGetActiveUniform(pGetActiveUniform, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func GetActiveUniformARB(programObj unsafe.Pointer, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveUniformARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *int8) {
   C.glowGetActiveUniformARB(pGetActiveUniformARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
 // retrieve the name of an active uniform block
@@ -20370,7 +20370,7 @@ func GetArrayObjectfvATI(array uint32, pname uint32, params *float32) {
 func GetArrayObjectivATI(array uint32, pname uint32, params *int32) {
   C.glowGetArrayObjectivATI(pGetArrayObjectivATI, (C.GLenum)(array), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetAttachedObjectsARB(containerObj unsafe.Pointer, maxCount int32, count *int32, obj *unsafe.Pointer) {
+func GetAttachedObjectsARB(containerObj uintptr, maxCount int32, count *int32, obj *uintptr) {
   C.glowGetAttachedObjectsARB(pGetAttachedObjectsARB, (C.GLhandleARB)(containerObj), (C.GLsizei)(maxCount), (*C.GLsizei)(unsafe.Pointer(count)), (*C.GLhandleARB)(unsafe.Pointer(obj)))
 }
 // Returns the handles of the shader objects attached to a program object
@@ -20382,7 +20382,7 @@ func GetAttribLocation(program uint32, name *int8) int32 {
   ret := C.glowGetAttribLocation(pGetAttribLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
   return (int32)(ret)
 }
-func GetAttribLocationARB(programObj unsafe.Pointer, name *int8) int32 {
+func GetAttribLocationARB(programObj uintptr, name *int8) int32 {
   ret := C.glowGetAttribLocationARB(pGetAttribLocationARB, (C.GLhandleARB)(programObj), (*C.GLcharARB)(unsafe.Pointer(name)))
   return (int32)(ret)
 }
@@ -20620,9 +20620,9 @@ func GetGraphicsResetStatusARB() uint32 {
   ret := C.glowGetGraphicsResetStatusARB(pGetGraphicsResetStatusARB)
   return (uint32)(ret)
 }
-func GetHandleARB(pname uint32) unsafe.Pointer {
+func GetHandleARB(pname uint32) uintptr {
   ret := C.glowGetHandleARB(pGetHandleARB, (C.GLenum)(pname))
-  return (unsafe.Pointer)(ret)
+  return (uintptr)(ret)
 }
 // get histogram table
 func GetHistogram(target uint32, reset bool, format uint32, xtype uint32, values unsafe.Pointer) {
@@ -20660,7 +20660,7 @@ func GetImageTransformParameterfvHP(target uint32, pname uint32, params *float32
 func GetImageTransformParameterivHP(target uint32, pname uint32, params *int32) {
   C.glowGetImageTransformParameterivHP(pGetImageTransformParameterivHP, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetInfoLogARB(obj unsafe.Pointer, maxLength int32, length *int32, infoLog *int8) {
+func GetInfoLogARB(obj uintptr, maxLength int32, length *int32, infoLog *int8) {
   C.glowGetInfoLogARB(pGetInfoLogARB, (C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLcharARB)(unsafe.Pointer(infoLog)))
 }
 func GetInstrumentsSGIX() int32 {
@@ -20895,13 +20895,13 @@ func GetObjectLabelEXT(xtype uint32, object uint32, bufSize int32, length *int32
 func GetObjectLabelKHR(identifier uint32, name uint32, bufSize int32, length *int32, label *int8) {
   C.glowGetObjectLabelKHR(pGetObjectLabelKHR, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func GetObjectParameterfvARB(obj unsafe.Pointer, pname uint32, params *float32) {
+func GetObjectParameterfvARB(obj uintptr, pname uint32, params *float32) {
   C.glowGetObjectParameterfvARB(pGetObjectParameterfvARB, (C.GLhandleARB)(obj), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
 func GetObjectParameterivAPPLE(objectType uint32, name uint32, pname uint32, params *int32) {
   C.glowGetObjectParameterivAPPLE(pGetObjectParameterivAPPLE, (C.GLenum)(objectType), (C.GLuint)(name), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetObjectParameterivARB(obj unsafe.Pointer, pname uint32, params *int32) {
+func GetObjectParameterivARB(obj uintptr, pname uint32, params *int32) {
   C.glowGetObjectParameterivARB(pGetObjectParameterivARB, (C.GLhandleARB)(obj), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
 // retrieve the label of a sync object identified by a pointer
@@ -21208,7 +21208,7 @@ func GetShaderPrecisionFormat(shadertype uint32, precisiontype uint32, xrange *i
 func GetShaderSource(shader uint32, bufSize int32, length *int32, source *int8) {
   C.glowGetShaderSource(pGetShaderSource, (C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(source)))
 }
-func GetShaderSourceARB(obj unsafe.Pointer, maxLength int32, length *int32, source *int8) {
+func GetShaderSourceARB(obj uintptr, maxLength int32, length *int32, source *int8) {
   C.glowGetShaderSourceARB(pGetShaderSourceARB, (C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLcharARB)(unsafe.Pointer(source)))
 }
 // Returns a parameter from a shader object
@@ -21376,7 +21376,7 @@ func GetUniformLocation(program uint32, name *int8) int32 {
   ret := C.glowGetUniformLocation(pGetUniformLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
   return (int32)(ret)
 }
-func GetUniformLocationARB(programObj unsafe.Pointer, name *int8) int32 {
+func GetUniformLocationARB(programObj uintptr, name *int8) int32 {
   ret := C.glowGetUniformLocationARB(pGetUniformLocationARB, (C.GLhandleARB)(programObj), (*C.GLcharARB)(unsafe.Pointer(name)))
   return (int32)(ret)
 }
@@ -21394,7 +21394,7 @@ func GetUniformdv(program uint32, location int32, params *float64) {
 func GetUniformfv(program uint32, location int32, params *float32) {
   C.glowGetUniformfv(pGetUniformfv, (C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-func GetUniformfvARB(programObj unsafe.Pointer, location int32, params *float32) {
+func GetUniformfvARB(programObj uintptr, location int32, params *float32) {
   C.glowGetUniformfvARB(pGetUniformfvARB, (C.GLhandleARB)(programObj), (C.GLint)(location), (*C.GLfloat)(unsafe.Pointer(params)))
 }
 func GetUniformi64vNV(program uint32, location int32, params *int64) {
@@ -21404,7 +21404,7 @@ func GetUniformi64vNV(program uint32, location int32, params *int64) {
 func GetUniformiv(program uint32, location int32, params *int32) {
   C.glowGetUniformiv(pGetUniformiv, (C.GLuint)(program), (C.GLint)(location), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetUniformivARB(programObj unsafe.Pointer, location int32, params *int32) {
+func GetUniformivARB(programObj uintptr, location int32, params *int32) {
   C.glowGetUniformivARB(pGetUniformivARB, (C.GLhandleARB)(programObj), (C.GLint)(location), (*C.GLint)(unsafe.Pointer(params)))
 }
 func GetUniformui64vNV(program uint32, location int32, params *uint64) {
@@ -22010,7 +22010,7 @@ func LineWidthxOES(width int32) {
 func LinkProgram(program uint32) {
   C.glowLinkProgram(pLinkProgram, (C.GLuint)(program))
 }
-func LinkProgramARB(programObj unsafe.Pointer) {
+func LinkProgramARB(programObj uintptr) {
   C.glowLinkProgramARB(pLinkProgramARB, (C.GLhandleARB)(programObj))
 }
 // set the display-list base for 
@@ -24344,7 +24344,7 @@ func ShaderOp3EXT(op uint32, res uint32, arg1 uint32, arg2 uint32, arg3 uint32) 
 func ShaderSource(shader uint32, count int32, xstring **int8, length *int32) {
   C.glowShaderSource(pShaderSource, (C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(xstring)), (*C.GLint)(unsafe.Pointer(length)))
 }
-func ShaderSourceARB(shaderObj unsafe.Pointer, count int32, xstring **int8, length *int32) {
+func ShaderSourceARB(shaderObj uintptr, count int32, xstring **int8, length *int32) {
   C.glowShaderSourceARB(pShaderSourceARB, (C.GLhandleARB)(shaderObj), (C.GLsizei)(count), (**C.GLcharARB)(unsafe.Pointer(xstring)), (*C.GLint)(unsafe.Pointer(length)))
 }
 // change an active shader storage block binding
@@ -25415,7 +25415,7 @@ func UpdateObjectBufferATI(buffer uint32, offset uint32, size int32, pointer uns
 func UseProgram(program uint32) {
   C.glowUseProgram(pUseProgram, (C.GLuint)(program))
 }
-func UseProgramObjectARB(programObj unsafe.Pointer) {
+func UseProgramObjectARB(programObj uintptr) {
   C.glowUseProgramObjectARB(pUseProgramObjectARB, (C.GLhandleARB)(programObj))
 }
 // bind stages of a program object to a program pipeline
@@ -25431,41 +25431,41 @@ func UseShaderProgramEXT(xtype uint32, program uint32) {
 func VDPAUFiniNV() {
   C.glowVDPAUFiniNV(pVDPAUFiniNV)
 }
-func VDPAUGetSurfaceivNV(surface C.GLvdpauSurfaceNV, pname uint32, bufSize int32, length *int32, values *int32) {
+func VDPAUGetSurfaceivNV(surface uintptr, pname uint32, bufSize int32, length *int32, values *int32) {
   C.glowVDPAUGetSurfaceivNV(pVDPAUGetSurfaceivNV, (C.GLvdpauSurfaceNV)(surface), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(values)))
 }
 func VDPAUInitNV(vdpDevice unsafe.Pointer, getProcAddress unsafe.Pointer) {
   C.glowVDPAUInitNV(pVDPAUInitNV, vdpDevice, getProcAddress)
 }
-func VDPAUIsSurfaceNV(surface C.GLvdpauSurfaceNV) bool {
+func VDPAUIsSurfaceNV(surface uintptr) bool {
   ret := C.glowVDPAUIsSurfaceNV(pVDPAUIsSurfaceNV, (C.GLvdpauSurfaceNV)(surface))
   return ret == TRUE
 }
-func VDPAUMapSurfacesNV(numSurfaces int32, surfaces *C.GLvdpauSurfaceNV) {
+func VDPAUMapSurfacesNV(numSurfaces int32, surfaces *uintptr) {
   C.glowVDPAUMapSurfacesNV(pVDPAUMapSurfacesNV, (C.GLsizei)(numSurfaces), (*C.GLvdpauSurfaceNV)(unsafe.Pointer(surfaces)))
 }
-func VDPAURegisterOutputSurfaceNV(vdpSurface unsafe.Pointer, target uint32, numTextureNames int32, textureNames *uint32) C.GLvdpauSurfaceNV {
+func VDPAURegisterOutputSurfaceNV(vdpSurface unsafe.Pointer, target uint32, numTextureNames int32, textureNames *uint32) uintptr {
   ret := C.glowVDPAURegisterOutputSurfaceNV(pVDPAURegisterOutputSurfaceNV, vdpSurface, (C.GLenum)(target), (C.GLsizei)(numTextureNames), (*C.GLuint)(unsafe.Pointer(textureNames)))
-  return (C.GLvdpauSurfaceNV)(ret)
+  return (uintptr)(ret)
 }
-func VDPAURegisterVideoSurfaceNV(vdpSurface unsafe.Pointer, target uint32, numTextureNames int32, textureNames *uint32) C.GLvdpauSurfaceNV {
+func VDPAURegisterVideoSurfaceNV(vdpSurface unsafe.Pointer, target uint32, numTextureNames int32, textureNames *uint32) uintptr {
   ret := C.glowVDPAURegisterVideoSurfaceNV(pVDPAURegisterVideoSurfaceNV, vdpSurface, (C.GLenum)(target), (C.GLsizei)(numTextureNames), (*C.GLuint)(unsafe.Pointer(textureNames)))
-  return (C.GLvdpauSurfaceNV)(ret)
+  return (uintptr)(ret)
 }
-func VDPAUSurfaceAccessNV(surface C.GLvdpauSurfaceNV, access uint32) {
+func VDPAUSurfaceAccessNV(surface uintptr, access uint32) {
   C.glowVDPAUSurfaceAccessNV(pVDPAUSurfaceAccessNV, (C.GLvdpauSurfaceNV)(surface), (C.GLenum)(access))
 }
-func VDPAUUnmapSurfacesNV(numSurface int32, surfaces *C.GLvdpauSurfaceNV) {
+func VDPAUUnmapSurfacesNV(numSurface int32, surfaces *uintptr) {
   C.glowVDPAUUnmapSurfacesNV(pVDPAUUnmapSurfacesNV, (C.GLsizei)(numSurface), (*C.GLvdpauSurfaceNV)(unsafe.Pointer(surfaces)))
 }
-func VDPAUUnregisterSurfaceNV(surface C.GLvdpauSurfaceNV) {
+func VDPAUUnregisterSurfaceNV(surface uintptr) {
   C.glowVDPAUUnregisterSurfaceNV(pVDPAUUnregisterSurfaceNV, (C.GLvdpauSurfaceNV)(surface))
 }
 // Validates a program object
 func ValidateProgram(program uint32) {
   C.glowValidateProgram(pValidateProgram, (C.GLuint)(program))
 }
-func ValidateProgramARB(programObj unsafe.Pointer) {
+func ValidateProgramARB(programObj uintptr) {
   C.glowValidateProgramARB(pValidateProgramARB, (C.GLhandleARB)(programObj))
 }
 // validate a program pipeline object against current GL state
