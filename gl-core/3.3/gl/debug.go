@@ -11,8 +11,8 @@ type DebugProc func(
 	message string,
 	userParam unsafe.Pointer)
 var userDebugCallback DebugProc
-//export glowDebugCallback
-func glowDebugCallback(
+//export glowDebugCallback_glcore33
+func glowDebugCallback_glcore33(
 	source uint32,
 	gltype uint32,
 	id uint32,
