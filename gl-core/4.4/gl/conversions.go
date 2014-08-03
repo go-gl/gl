@@ -1,5 +1,6 @@
-// Glow automatically generated OpenGL binding: http://github.com/errcw/glow
+// Glow automatically generated OpenGL binding: http://github.com/go-gl/glow
 package gl
+
 import (
 	"C"
 	"fmt"
@@ -8,6 +9,7 @@ import (
 	"strings"
 	"unsafe"
 )
+
 // Ptr takes a pointer, slice, or array and returns its GL-compatible address.
 func Ptr(data interface{}) unsafe.Pointer {
 	if data == nil {
@@ -36,12 +38,14 @@ func Ptr(data interface{}) unsafe.Pointer {
 	}
 	return unsafe.Pointer(addr)
 }
+
 // PtrOffset takes a pointer offset and returns a GL-compatible pointer.
 // Useful for functions such as glVertexAttribPointer that take pointer
 // parameters indicating an offset rather than an absolute memory address.
 func PtrOffset(offset int) unsafe.Pointer {
 	return unsafe.Pointer(uintptr(offset))
 }
+
 // Str takes a null-terminated Go string and returns its GL-compatible address.
 // This function reaches into Go string storage in an unsafe way so the caller
 // must ensure the string is not garbage collected.
@@ -52,6 +56,7 @@ func Str(str string) *int8 {
 	header := (*reflect.StringHeader)(unsafe.Pointer(&str))
 	return (*int8)(unsafe.Pointer(header.Data))
 }
+
 // GoStr takes a null-terminated string returned by OpenGL and constructs a
 // corresponding Go string.
 func GoStr(cstr *uint8) string {
