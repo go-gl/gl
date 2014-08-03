@@ -2,7 +2,7 @@
 
 package auto
 
-import "github.com/errcw/glow/procaddr/glx"
+import "github.com/go-gl/glow/procaddr/glx"
 
 func init() {
 	GetProcAddress = glx.GetProcAddress

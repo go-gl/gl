@@ -2,7 +2,7 @@
 
 package auto
 
-import "github.com/errcw/glow/procaddr/wgl"
+import "github.com/go-gl/glow/procaddr/wgl"
 
 func init() {
 	GetProcAddress = wgl.GetProcAddress
