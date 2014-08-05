@@ -15,7 +15,7 @@ func Ptr(data interface{}) unsafe.Pointer {
 	if data == nil {
 		return unsafe.Pointer(nil)
 	}
-	var addr uintptr
+	var addr unsafe.Pointer
 	v := reflect.ValueOf(data)
 	switch v.Type().Kind() {
 	case reflect.Ptr:
@@ -25,18 +25,18 @@ func Ptr(data interface{}) unsafe.Pointer {
 			reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64,
 			reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64,
 			reflect.Float32, reflect.Float64:
-			addr = e.UnsafeAddr()
+			addr = unsafe.Pointer(e.UnsafeAddr())
 		}
 	case reflect.Uintptr:
-		addr = v.Pointer()
+		addr = unsafe.Pointer(v.Pointer())
 	case reflect.Slice:
-		addr = v.Index(0).UnsafeAddr()
+		addr = unsafe.Pointer(v.Index(0).UnsafeAddr())
 	case reflect.Array:
-		addr = v.UnsafeAddr()
+		addr = unsafe.Pointer(v.UnsafeAddr())
 	default:
 		panic(fmt.Sprintf("Unsupproted type %s; must be a pointer, slice, or array", v.Type()))
 	}
-	return unsafe.Pointer(addr)
+	return addr
 }
 
 // PtrOffset takes a pointer offset and returns a GL-compatible pointer.
