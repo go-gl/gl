@@ -1,4 +1,5 @@
 // Glow automatically generated OpenGL binding: http://github.com/go-gl/glow
+// Generated based on XML spec SVN revision 27647.
 // Copyright (c) 2010 Khronos Group.
 // This material may be distributed subject to the terms and conditions
 // set forth in the Open Publication License, v 1.0, 8 June 1999.
@@ -211,6 +212,7 @@ package gl
 // typedef void  (APIENTRYP GPBINORMALPOINTEREXT)(GLenum  type, GLsizei  stride, const void * pointer);
 // typedef void  (APIENTRYP GPBITMAP)(GLsizei  width, GLsizei  height, GLfloat  xorig, GLfloat  yorig, GLfloat  xmove, GLfloat  ymove, const GLubyte * bitmap);
 // typedef void  (APIENTRYP GPBITMAPXOES)(GLsizei  width, GLsizei  height, GLfixed  xorig, GLfixed  yorig, GLfixed  xmove, GLfixed  ymove, const GLubyte * bitmap);
+// typedef void  (APIENTRYP GPBLENDBARRIERKHR)();
 // typedef void  (APIENTRYP GPBLENDBARRIERNV)();
 // typedef void  (APIENTRYP GPBLENDCOLOR)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
 // typedef void  (APIENTRYP GPBLENDCOLOREXT)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
@@ -537,7 +539,7 @@ package gl
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDARB)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  primcount);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDBASEINSTANCE)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount, GLuint  baseinstance);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDEXT)(GLenum  mode, GLint  start, GLsizei  count, GLsizei  primcount);
-// typedef void  (APIENTRYP GPDRAWBUFFER)(GLenum  mode);
+// typedef void  (APIENTRYP GPDRAWBUFFER)(GLenum  buf);
 // typedef void  (APIENTRYP GPDRAWBUFFERS)(GLsizei  n, const GLenum * bufs);
 // typedef void  (APIENTRYP GPDRAWBUFFERSARB)(GLsizei  n, const GLenum * bufs);
 // typedef void  (APIENTRYP GPDRAWBUFFERSATI)(GLsizei  n, const GLenum * bufs);
@@ -981,6 +983,7 @@ package gl
 // typedef GLint  (APIENTRYP GPGETPROGRAMRESOURCELOCATION)(GLuint  program, GLenum  programInterface, const GLchar * name);
 // typedef GLint  (APIENTRYP GPGETPROGRAMRESOURCELOCATIONINDEX)(GLuint  program, GLenum  programInterface, const GLchar * name);
 // typedef void  (APIENTRYP GPGETPROGRAMRESOURCENAME)(GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  bufSize, GLsizei * length, GLchar * name);
+// typedef void  (APIENTRYP GPGETPROGRAMRESOURCEFVNV)(GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  bufSize, GLsizei * length, GLfloat * params);
 // typedef void  (APIENTRYP GPGETPROGRAMRESOURCEIV)(GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  bufSize, GLsizei * length, GLint * params);
 // typedef void  (APIENTRYP GPGETPROGRAMSTAGEIV)(GLuint  program, GLenum  shadertype, GLenum  pname, GLint * values);
 // typedef void  (APIENTRYP GPGETPROGRAMSTRINGARB)(GLenum  target, GLenum  pname, void * string);
@@ -1312,12 +1315,18 @@ package gl
 // typedef void  (APIENTRYP GPMATRIXINDEXUBVARB)(GLint  size, const GLubyte * indices);
 // typedef void  (APIENTRYP GPMATRIXINDEXUIVARB)(GLint  size, const GLuint * indices);
 // typedef void  (APIENTRYP GPMATRIXINDEXUSVARB)(GLint  size, const GLushort * indices);
+// typedef void  (APIENTRYP GPMATRIXLOAD3X2FNV)(GLenum  matrixMode, const GLfloat * m);
+// typedef void  (APIENTRYP GPMATRIXLOAD3X3FNV)(GLenum  matrixMode, const GLfloat * m);
 // typedef void  (APIENTRYP GPMATRIXLOADIDENTITYEXT)(GLenum  mode);
+// typedef void  (APIENTRYP GPMATRIXLOADTRANSPOSE3X3FNV)(GLenum  matrixMode, const GLfloat * m);
 // typedef void  (APIENTRYP GPMATRIXLOADTRANSPOSEDEXT)(GLenum  mode, const GLdouble * m);
 // typedef void  (APIENTRYP GPMATRIXLOADTRANSPOSEFEXT)(GLenum  mode, const GLfloat * m);
 // typedef void  (APIENTRYP GPMATRIXLOADDEXT)(GLenum  mode, const GLdouble * m);
 // typedef void  (APIENTRYP GPMATRIXLOADFEXT)(GLenum  mode, const GLfloat * m);
 // typedef void  (APIENTRYP GPMATRIXMODE)(GLenum  mode);
+// typedef void  (APIENTRYP GPMATRIXMULT3X2FNV)(GLenum  matrixMode, const GLfloat * m);
+// typedef void  (APIENTRYP GPMATRIXMULT3X3FNV)(GLenum  matrixMode, const GLfloat * m);
+// typedef void  (APIENTRYP GPMATRIXMULTTRANSPOSE3X3FNV)(GLenum  matrixMode, const GLfloat * m);
 // typedef void  (APIENTRYP GPMATRIXMULTTRANSPOSEDEXT)(GLenum  mode, const GLdouble * m);
 // typedef void  (APIENTRYP GPMATRIXMULTTRANSPOSEFEXT)(GLenum  mode, const GLfloat * m);
 // typedef void  (APIENTRYP GPMATRIXMULTDEXT)(GLenum  mode, const GLdouble * m);
@@ -1348,6 +1357,7 @@ package gl
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSEXT)(GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  primcount);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECT)(GLenum  mode, const void * indirect, GLsizei  drawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECTAMD)(GLenum  mode, const void * indirect, GLsizei  primcount, GLsizei  stride);
+// typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNV)(GLenum  mode, const void * indirect, GLsizei  drawCount, GLsizei  maxDrawCount, GLsizei  stride, GLint  vertexBufferCount);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECTBINDLESSNV)(GLenum  mode, const void * indirect, GLsizei  drawCount, GLsizei  stride, GLint  vertexBufferCount);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECTCOUNTARB)(GLenum  mode, GLintptr  indirect, GLintptr  drawcount, GLsizei  maxdrawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTARRAYAPPLE)(GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  primcount);
@@ -1356,6 +1366,7 @@ package gl
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSEXT)(GLenum  mode, const GLsizei * count, GLenum  type, const void *const* indices, GLsizei  primcount);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECT)(GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECTAMD)(GLenum  mode, GLenum  type, const void * indirect, GLsizei  primcount, GLsizei  stride);
+// typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNV)(GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawCount, GLsizei  maxDrawCount, GLsizei  stride, GLint  vertexBufferCount);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECTBINDLESSNV)(GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawCount, GLsizei  stride, GLint  vertexBufferCount);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECTCOUNTARB)(GLenum  mode, GLenum  type, GLintptr  indirect, GLintptr  drawcount, GLsizei  maxdrawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWRANGEELEMENTARRAYAPPLE)(GLenum  mode, GLuint  start, GLuint  end, const GLint * first, const GLsizei * count, GLsizei  primcount);
@@ -1567,8 +1578,11 @@ package gl
 // typedef void  (APIENTRYP GPPATHCOVERDEPTHFUNCNV)(GLenum  func);
 // typedef void  (APIENTRYP GPPATHDASHARRAYNV)(GLuint  path, GLsizei  dashCount, const GLfloat * dashArray);
 // typedef void  (APIENTRYP GPPATHFOGGENNV)(GLenum  genMode);
+// typedef GLenum  (APIENTRYP GPPATHGLYPHINDEXARRAYNV)(GLuint  firstPathName, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLuint  firstGlyphIndex, GLsizei  numGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale);
+// typedef GLenum  (APIENTRYP GPPATHGLYPHINDEXRANGENV)(GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLuint  pathParameterTemplate, GLfloat  emScale, GLuint * baseAndCount);
 // typedef void  (APIENTRYP GPPATHGLYPHRANGENV)(GLuint  firstPathName, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLuint  firstGlyph, GLsizei  numGlyphs, GLenum  handleMissingGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale);
 // typedef void  (APIENTRYP GPPATHGLYPHSNV)(GLuint  firstPathName, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLsizei  numGlyphs, GLenum  type, const void * charcodes, GLenum  handleMissingGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale);
+// typedef GLenum  (APIENTRYP GPPATHMEMORYGLYPHINDEXARRAYNV)(GLuint  firstPathName, GLenum  fontTarget, GLsizeiptr  fontSize, const void * fontData, GLsizei  faceIndex, GLuint  firstGlyphIndex, GLsizei  numGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale);
 // typedef void  (APIENTRYP GPPATHPARAMETERFNV)(GLuint  path, GLenum  pname, GLfloat  value);
 // typedef void  (APIENTRYP GPPATHPARAMETERFVNV)(GLuint  path, GLenum  pname, const GLfloat * value);
 // typedef void  (APIENTRYP GPPATHPARAMETERINV)(GLuint  path, GLenum  pname, GLint  value);
@@ -1681,6 +1695,7 @@ package gl
 // typedef void  (APIENTRYP GPPROGRAMPARAMETERIEXT)(GLuint  program, GLenum  pname, GLint  value);
 // typedef void  (APIENTRYP GPPROGRAMPARAMETERS4DVNV)(GLenum  target, GLuint  index, GLsizei  count, const GLdouble * v);
 // typedef void  (APIENTRYP GPPROGRAMPARAMETERS4FVNV)(GLenum  target, GLuint  index, GLsizei  count, const GLfloat * v);
+// typedef void  (APIENTRYP GPPROGRAMPATHFRAGMENTINPUTGENNV)(GLuint  program, GLint  location, GLenum  genMode, GLint  components, const GLfloat * coeffs);
 // typedef void  (APIENTRYP GPPROGRAMSTRINGARB)(GLenum  target, GLenum  format, GLsizei  len, const void * string);
 // typedef void  (APIENTRYP GPPROGRAMSUBROUTINEPARAMETERSUIVNV)(GLenum  target, GLsizei  count, const GLuint * params);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1D)(GLuint  program, GLint  location, GLdouble  v0);
@@ -1849,7 +1864,7 @@ package gl
 // typedef void  (APIENTRYP GPRASTERPOS4SV)(const GLshort * v);
 // typedef void  (APIENTRYP GPRASTERPOS4XOES)(GLfixed  x, GLfixed  y, GLfixed  z, GLfixed  w);
 // typedef void  (APIENTRYP GPRASTERPOS4XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPREADBUFFER)(GLenum  mode);
+// typedef void  (APIENTRYP GPREADBUFFER)(GLenum  src);
 // typedef void  (APIENTRYP GPREADINSTRUMENTSSGIX)(GLint  marker);
 // typedef void  (APIENTRYP GPREADPIXELS)(GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, void * pixels);
 // typedef void  (APIENTRYP GPREADNPIXELSARB)(GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, GLsizei  bufSize, void * data);
@@ -2007,6 +2022,10 @@ package gl
 // typedef void  (APIENTRYP GPSTENCILOPVALUEAMD)(GLenum  face, GLuint  value);
 // typedef void  (APIENTRYP GPSTENCILSTROKEPATHINSTANCEDNV)(GLsizei  numPaths, GLenum  pathNameType, const void * paths, GLuint  pathBase, GLint  reference, GLuint  mask, GLenum  transformType, const GLfloat * transformValues);
 // typedef void  (APIENTRYP GPSTENCILSTROKEPATHNV)(GLuint  path, GLint  reference, GLuint  mask);
+// typedef void  (APIENTRYP GPSTENCILTHENCOVERFILLPATHINSTANCEDNV)(GLsizei  numPaths, GLenum  pathNameType, const void * paths, GLuint  pathBase, GLenum  fillMode, GLuint  mask, GLenum  coverMode, GLenum  transformType, const GLfloat * transformValues);
+// typedef void  (APIENTRYP GPSTENCILTHENCOVERFILLPATHNV)(GLuint  path, GLenum  fillMode, GLuint  mask, GLenum  coverMode);
+// typedef void  (APIENTRYP GPSTENCILTHENCOVERSTROKEPATHINSTANCEDNV)(GLsizei  numPaths, GLenum  pathNameType, const void * paths, GLuint  pathBase, GLint  reference, GLuint  mask, GLenum  coverMode, GLenum  transformType, const GLfloat * transformValues);
+// typedef void  (APIENTRYP GPSTENCILTHENCOVERSTROKEPATHNV)(GLuint  path, GLint  reference, GLuint  mask, GLenum  coverMode);
 // typedef void  (APIENTRYP GPSTOPINSTRUMENTSSGIX)(GLint  marker);
 // typedef void  (APIENTRYP GPSTRINGMARKERGREMEDY)(GLsizei  len, const void * string);
 // typedef void  (APIENTRYP GPSWIZZLEEXT)(GLuint  res, GLuint  in, GLenum  outX, GLenum  outY, GLenum  outZ, GLenum  outW);
@@ -3068,6 +3087,9 @@ package gl
 // static void  glowBitmapxOES(GPBITMAPXOES fnptr, GLsizei  width, GLsizei  height, GLfixed  xorig, GLfixed  yorig, GLfixed  xmove, GLfixed  ymove, const GLubyte * bitmap) {
 //   (*fnptr)(width, height, xorig, yorig, xmove, ymove, bitmap);
 // }
+// static void  glowBlendBarrierKHR(GPBLENDBARRIERKHR fnptr) {
+//   (*fnptr)();
+// }
 // static void  glowBlendBarrierNV(GPBLENDBARRIERNV fnptr) {
 //   (*fnptr)();
 // }
@@ -4046,8 +4068,8 @@ package gl
 // static void  glowDrawArraysInstancedEXT(GPDRAWARRAYSINSTANCEDEXT fnptr, GLenum  mode, GLint  start, GLsizei  count, GLsizei  primcount) {
 //   (*fnptr)(mode, start, count, primcount);
 // }
-// static void  glowDrawBuffer(GPDRAWBUFFER fnptr, GLenum  mode) {
-//   (*fnptr)(mode);
+// static void  glowDrawBuffer(GPDRAWBUFFER fnptr, GLenum  buf) {
+//   (*fnptr)(buf);
 // }
 // static void  glowDrawBuffers(GPDRAWBUFFERS fnptr, GLsizei  n, const GLenum * bufs) {
 //   (*fnptr)(n, bufs);
@@ -5378,6 +5400,9 @@ package gl
 // static void  glowGetProgramResourceName(GPGETPROGRAMRESOURCENAME fnptr, GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  bufSize, GLsizei * length, GLchar * name) {
 //   (*fnptr)(program, programInterface, index, bufSize, length, name);
 // }
+// static void  glowGetProgramResourcefvNV(GPGETPROGRAMRESOURCEFVNV fnptr, GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  bufSize, GLsizei * length, GLfloat * params) {
+//   (*fnptr)(program, programInterface, index, propCount, props, bufSize, length, params);
+// }
 // static void  glowGetProgramResourceiv(GPGETPROGRAMRESOURCEIV fnptr, GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  bufSize, GLsizei * length, GLint * params) {
 //   (*fnptr)(program, programInterface, index, propCount, props, bufSize, length, params);
 // }
@@ -6371,8 +6396,17 @@ package gl
 // static void  glowMatrixIndexusvARB(GPMATRIXINDEXUSVARB fnptr, GLint  size, const GLushort * indices) {
 //   (*fnptr)(size, indices);
 // }
+// static void  glowMatrixLoad3x2fNV(GPMATRIXLOAD3X2FNV fnptr, GLenum  matrixMode, const GLfloat * m) {
+//   (*fnptr)(matrixMode, m);
+// }
+// static void  glowMatrixLoad3x3fNV(GPMATRIXLOAD3X3FNV fnptr, GLenum  matrixMode, const GLfloat * m) {
+//   (*fnptr)(matrixMode, m);
+// }
 // static void  glowMatrixLoadIdentityEXT(GPMATRIXLOADIDENTITYEXT fnptr, GLenum  mode) {
 //   (*fnptr)(mode);
+// }
+// static void  glowMatrixLoadTranspose3x3fNV(GPMATRIXLOADTRANSPOSE3X3FNV fnptr, GLenum  matrixMode, const GLfloat * m) {
+//   (*fnptr)(matrixMode, m);
 // }
 // static void  glowMatrixLoadTransposedEXT(GPMATRIXLOADTRANSPOSEDEXT fnptr, GLenum  mode, const GLdouble * m) {
 //   (*fnptr)(mode, m);
@@ -6388,6 +6422,15 @@ package gl
 // }
 // static void  glowMatrixMode(GPMATRIXMODE fnptr, GLenum  mode) {
 //   (*fnptr)(mode);
+// }
+// static void  glowMatrixMult3x2fNV(GPMATRIXMULT3X2FNV fnptr, GLenum  matrixMode, const GLfloat * m) {
+//   (*fnptr)(matrixMode, m);
+// }
+// static void  glowMatrixMult3x3fNV(GPMATRIXMULT3X3FNV fnptr, GLenum  matrixMode, const GLfloat * m) {
+//   (*fnptr)(matrixMode, m);
+// }
+// static void  glowMatrixMultTranspose3x3fNV(GPMATRIXMULTTRANSPOSE3X3FNV fnptr, GLenum  matrixMode, const GLfloat * m) {
+//   (*fnptr)(matrixMode, m);
 // }
 // static void  glowMatrixMultTransposedEXT(GPMATRIXMULTTRANSPOSEDEXT fnptr, GLenum  mode, const GLdouble * m) {
 //   (*fnptr)(mode, m);
@@ -6479,6 +6522,9 @@ package gl
 // static void  glowMultiDrawArraysIndirectAMD(GPMULTIDRAWARRAYSINDIRECTAMD fnptr, GLenum  mode, const void * indirect, GLsizei  primcount, GLsizei  stride) {
 //   (*fnptr)(mode, indirect, primcount, stride);
 // }
+// static void  glowMultiDrawArraysIndirectBindlessCountNV(GPMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNV fnptr, GLenum  mode, const void * indirect, GLsizei  drawCount, GLsizei  maxDrawCount, GLsizei  stride, GLint  vertexBufferCount) {
+//   (*fnptr)(mode, indirect, drawCount, maxDrawCount, stride, vertexBufferCount);
+// }
 // static void  glowMultiDrawArraysIndirectBindlessNV(GPMULTIDRAWARRAYSINDIRECTBINDLESSNV fnptr, GLenum  mode, const void * indirect, GLsizei  drawCount, GLsizei  stride, GLint  vertexBufferCount) {
 //   (*fnptr)(mode, indirect, drawCount, stride, vertexBufferCount);
 // }
@@ -6502,6 +6548,9 @@ package gl
 // }
 // static void  glowMultiDrawElementsIndirectAMD(GPMULTIDRAWELEMENTSINDIRECTAMD fnptr, GLenum  mode, GLenum  type, const void * indirect, GLsizei  primcount, GLsizei  stride) {
 //   (*fnptr)(mode, type, indirect, primcount, stride);
+// }
+// static void  glowMultiDrawElementsIndirectBindlessCountNV(GPMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNV fnptr, GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawCount, GLsizei  maxDrawCount, GLsizei  stride, GLint  vertexBufferCount) {
+//   (*fnptr)(mode, type, indirect, drawCount, maxDrawCount, stride, vertexBufferCount);
 // }
 // static void  glowMultiDrawElementsIndirectBindlessNV(GPMULTIDRAWELEMENTSINDIRECTBINDLESSNV fnptr, GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawCount, GLsizei  stride, GLint  vertexBufferCount) {
 //   (*fnptr)(mode, type, indirect, drawCount, stride, vertexBufferCount);
@@ -7136,11 +7185,20 @@ package gl
 // static void  glowPathFogGenNV(GPPATHFOGGENNV fnptr, GLenum  genMode) {
 //   (*fnptr)(genMode);
 // }
+// static GLenum  glowPathGlyphIndexArrayNV(GPPATHGLYPHINDEXARRAYNV fnptr, GLuint  firstPathName, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLuint  firstGlyphIndex, GLsizei  numGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale) {
+//   return (*fnptr)(firstPathName, fontTarget, fontName, fontStyle, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale);
+// }
+// static GLenum  glowPathGlyphIndexRangeNV(GPPATHGLYPHINDEXRANGENV fnptr, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLuint  pathParameterTemplate, GLfloat  emScale, GLuint * baseAndCount) {
+//   return (*fnptr)(fontTarget, fontName, fontStyle, pathParameterTemplate, emScale, baseAndCount);
+// }
 // static void  glowPathGlyphRangeNV(GPPATHGLYPHRANGENV fnptr, GLuint  firstPathName, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLuint  firstGlyph, GLsizei  numGlyphs, GLenum  handleMissingGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale) {
 //   (*fnptr)(firstPathName, fontTarget, fontName, fontStyle, firstGlyph, numGlyphs, handleMissingGlyphs, pathParameterTemplate, emScale);
 // }
 // static void  glowPathGlyphsNV(GPPATHGLYPHSNV fnptr, GLuint  firstPathName, GLenum  fontTarget, const void * fontName, GLbitfield  fontStyle, GLsizei  numGlyphs, GLenum  type, const void * charcodes, GLenum  handleMissingGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale) {
 //   (*fnptr)(firstPathName, fontTarget, fontName, fontStyle, numGlyphs, type, charcodes, handleMissingGlyphs, pathParameterTemplate, emScale);
+// }
+// static GLenum  glowPathMemoryGlyphIndexArrayNV(GPPATHMEMORYGLYPHINDEXARRAYNV fnptr, GLuint  firstPathName, GLenum  fontTarget, GLsizeiptr  fontSize, const void * fontData, GLsizei  faceIndex, GLuint  firstGlyphIndex, GLsizei  numGlyphs, GLuint  pathParameterTemplate, GLfloat  emScale) {
+//   return (*fnptr)(firstPathName, fontTarget, fontSize, fontData, faceIndex, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale);
 // }
 // static void  glowPathParameterfNV(GPPATHPARAMETERFNV fnptr, GLuint  path, GLenum  pname, GLfloat  value) {
 //   (*fnptr)(path, pname, value);
@@ -7477,6 +7535,9 @@ package gl
 // }
 // static void  glowProgramParameters4fvNV(GPPROGRAMPARAMETERS4FVNV fnptr, GLenum  target, GLuint  index, GLsizei  count, const GLfloat * v) {
 //   (*fnptr)(target, index, count, v);
+// }
+// static void  glowProgramPathFragmentInputGenNV(GPPROGRAMPATHFRAGMENTINPUTGENNV fnptr, GLuint  program, GLint  location, GLenum  genMode, GLint  components, const GLfloat * coeffs) {
+//   (*fnptr)(program, location, genMode, components, coeffs);
 // }
 // static void  glowProgramStringARB(GPPROGRAMSTRINGARB fnptr, GLenum  target, GLenum  format, GLsizei  len, const void * string) {
 //   (*fnptr)(target, format, len, string);
@@ -7982,8 +8043,8 @@ package gl
 // static void  glowRasterPos4xvOES(GPRASTERPOS4XVOES fnptr, const GLfixed * coords) {
 //   (*fnptr)(coords);
 // }
-// static void  glowReadBuffer(GPREADBUFFER fnptr, GLenum  mode) {
-//   (*fnptr)(mode);
+// static void  glowReadBuffer(GPREADBUFFER fnptr, GLenum  src) {
+//   (*fnptr)(src);
 // }
 // static void  glowReadInstrumentsSGIX(GPREADINSTRUMENTSSGIX fnptr, GLint  marker) {
 //   (*fnptr)(marker);
@@ -8455,6 +8516,18 @@ package gl
 // }
 // static void  glowStencilStrokePathNV(GPSTENCILSTROKEPATHNV fnptr, GLuint  path, GLint  reference, GLuint  mask) {
 //   (*fnptr)(path, reference, mask);
+// }
+// static void  glowStencilThenCoverFillPathInstancedNV(GPSTENCILTHENCOVERFILLPATHINSTANCEDNV fnptr, GLsizei  numPaths, GLenum  pathNameType, const void * paths, GLuint  pathBase, GLenum  fillMode, GLuint  mask, GLenum  coverMode, GLenum  transformType, const GLfloat * transformValues) {
+//   (*fnptr)(numPaths, pathNameType, paths, pathBase, fillMode, mask, coverMode, transformType, transformValues);
+// }
+// static void  glowStencilThenCoverFillPathNV(GPSTENCILTHENCOVERFILLPATHNV fnptr, GLuint  path, GLenum  fillMode, GLuint  mask, GLenum  coverMode) {
+//   (*fnptr)(path, fillMode, mask, coverMode);
+// }
+// static void  glowStencilThenCoverStrokePathInstancedNV(GPSTENCILTHENCOVERSTROKEPATHINSTANCEDNV fnptr, GLsizei  numPaths, GLenum  pathNameType, const void * paths, GLuint  pathBase, GLint  reference, GLuint  mask, GLenum  coverMode, GLenum  transformType, const GLfloat * transformValues) {
+//   (*fnptr)(numPaths, pathNameType, paths, pathBase, reference, mask, coverMode, transformType, transformValues);
+// }
+// static void  glowStencilThenCoverStrokePathNV(GPSTENCILTHENCOVERSTROKEPATHNV fnptr, GLuint  path, GLint  reference, GLuint  mask, GLenum  coverMode) {
+//   (*fnptr)(path, reference, mask, coverMode);
 // }
 // static void  glowStopInstrumentsSGIX(GPSTOPINSTRUMENTSSGIX fnptr, GLint  marker) {
 //   (*fnptr)(marker);
@@ -10739,10 +10812,12 @@ const (
 	GL_2PASS_1_SGIS                                            = 0x80A3
 	GL_2X_BIT_ATI                                              = 0x00000001
 	GL_2_BYTES                                                 = 0x1407
+	GL_2_BYTES_NV                                              = 0x1407
 	GL_3D                                                      = 0x0601
 	GL_3D_COLOR                                                = 0x0602
 	GL_3D_COLOR_TEXTURE                                        = 0x0603
 	GL_3_BYTES                                                 = 0x1408
+	GL_3_BYTES_NV                                              = 0x1408
 	GL_422_AVERAGE_EXT                                         = 0x80CE
 	GL_422_EXT                                                 = 0x80CC
 	GL_422_REV_AVERAGE_EXT                                     = 0x80CF
@@ -10758,6 +10833,7 @@ const (
 	GL_4PASS_3_SGIS                                            = 0x80A7
 	GL_4X_BIT_ATI                                              = 0x00000002
 	GL_4_BYTES                                                 = 0x1409
+	GL_4_BYTES_NV                                              = 0x1409
 	GL_8X_BIT_ATI                                              = 0x00000004
 	ABGR_EXT                                                   = 0x8000
 	ACCUM                                                      = 0x0100
@@ -10931,6 +11007,7 @@ const (
 	BITMAP                                                     = 0x1A00
 	BITMAP_TOKEN                                               = 0x0704
 	BLEND                                                      = 0x0BE2
+	BLEND_ADVANCED_COHERENT_KHR                                = 0x9285
 	BLEND_ADVANCED_COHERENT_NV                                 = 0x9285
 	BLEND_COLOR                                                = 0x8005
 	BLEND_COLOR_EXT                                            = 0x8005
@@ -11068,7 +11145,9 @@ const (
 	COLOR                                                      = 0x1800
 	COLOR3_BIT_PGI                                             = 0x00010000
 	COLOR4_BIT_PGI                                             = 0x00020000
+	COLORBURN_KHR                                              = 0x929A
 	COLORBURN_NV                                               = 0x929A
+	COLORDODGE_KHR                                             = 0x9299
 	COLORDODGE_NV                                              = 0x9299
 	COLOR_ALPHA_PAIRING_ATI                                    = 0x8975
 	COLOR_ARRAY                                                = 0x8076
@@ -11309,6 +11388,7 @@ const (
 	COMPUTE_WORK_GROUP_SIZE                                    = 0x8267
 	COMP_BIT_ATI                                               = 0x00000002
 	CONDITION_SATISFIED                                        = 0x911C
+	CONIC_CURVE_TO_NV                                          = 0x1A
 	CONJOINT_NV                                                = 0x9284
 	CONSERVE_MEMORY_HINT_PGI                                   = 0x1A1FD
 	CONSTANT                                                   = 0x8576
@@ -11323,6 +11403,7 @@ const (
 	CONSTANT_COLOR1_NV                                         = 0x852B
 	CONSTANT_COLOR_EXT                                         = 0x8001
 	CONSTANT_EXT                                               = 0x8576
+	CONSTANT_NV                                                = 0x8576
 	CONST_EYE_NV                                               = 0x86E5
 	CONTEXT_COMPATIBILITY_PROFILE_BIT                          = 0x00000002
 	CONTEXT_CORE_PROFILE_BIT                                   = 0x00000001
@@ -11449,6 +11530,7 @@ const (
 	CURRENT_VERTEX_WEIGHT_EXT                                  = 0x850B
 	CURRENT_WEIGHT_ARB                                         = 0x86A8
 	CW                                                         = 0x0900
+	DARKEN_KHR                                                 = 0x9297
 	DARKEN_NV                                                  = 0x9297
 	DATA_BUFFER_AMD                                            = 0x9151
 	DEBUG_CALLBACK_FUNCTION                                    = 0x8244
@@ -11598,6 +11680,7 @@ const (
 	DETAIL_TEXTURE_FUNC_POINTS_SGIS                            = 0x809C
 	DETAIL_TEXTURE_LEVEL_SGIS                                  = 0x809A
 	DETAIL_TEXTURE_MODE_SGIS                                   = 0x809B
+	DIFFERENCE_KHR                                             = 0x929E
 	DIFFERENCE_NV                                              = 0x929E
 	DIFFUSE                                                    = 0x1201
 	DISCARD_ATI                                                = 0x8763
@@ -11822,6 +11905,7 @@ const (
 	EVAL_VERTEX_ATTRIB7_NV                                     = 0x86CD
 	EVAL_VERTEX_ATTRIB8_NV                                     = 0x86CE
 	EVAL_VERTEX_ATTRIB9_NV                                     = 0x86CF
+	EXCLUSION_KHR                                              = 0x92A0
 	EXCLUSION_NV                                               = 0x92A0
 	EXP                                                        = 0x0800
 	EXP2                                                       = 0x0801
@@ -11832,6 +11916,7 @@ const (
 	EYE_DISTANCE_TO_LINE_SGIS                                  = 0x81F2
 	EYE_DISTANCE_TO_POINT_SGIS                                 = 0x81F0
 	EYE_LINEAR                                                 = 0x2400
+	EYE_LINEAR_NV                                              = 0x2400
 	EYE_LINE_SGIS                                              = 0x81F6
 	EYE_PLANE                                                  = 0x2502
 	EYE_PLANE_ABSOLUTE_NV                                      = 0x855C
@@ -11946,12 +12031,17 @@ const (
 	FOG_START                                                  = 0x0B63
 	FONT_ASCENDER_BIT_NV                                       = 0x00200000
 	FONT_DESCENDER_BIT_NV                                      = 0x00400000
+	FONT_GLYPHS_AVAILABLE_NV                                   = 0x9368
 	FONT_HAS_KERNING_BIT_NV                                    = 0x10000000
 	FONT_HEIGHT_BIT_NV                                         = 0x00800000
 	FONT_MAX_ADVANCE_HEIGHT_BIT_NV                             = 0x02000000
 	FONT_MAX_ADVANCE_WIDTH_BIT_NV                              = 0x01000000
+	FONT_NUM_GLYPH_INDICES_BIT_NV                              = 0x20000000
+	FONT_TARGET_UNAVAILABLE_NV                                 = 0x9369
+	FONT_UNAVAILABLE_NV                                        = 0x936A
 	FONT_UNDERLINE_POSITION_BIT_NV                             = 0x04000000
 	FONT_UNDERLINE_THICKNESS_BIT_NV                            = 0x08000000
+	FONT_UNINTELLIGIBLE_NV                                     = 0x936B
 	FONT_UNITS_PER_EM_BIT_NV                                   = 0x00100000
 	FONT_X_MAX_BOUNDS_BIT_NV                                   = 0x00040000
 	FONT_X_MIN_BOUNDS_BIT_NV                                   = 0x00010000
@@ -11968,6 +12058,7 @@ const (
 	FRAGMENT_COLOR_MATERIAL_SGIX                               = 0x8401
 	FRAGMENT_DEPTH                                             = 0x8452
 	FRAGMENT_DEPTH_EXT                                         = 0x8452
+	FRAGMENT_INPUT_NV                                          = 0x936D
 	FRAGMENT_INTERPOLATION_OFFSET_BITS                         = 0x8E5D
 	FRAGMENT_LIGHT0_SGIX                                       = 0x840C
 	FRAGMENT_LIGHT1_SGIX                                       = 0x840D
@@ -12143,6 +12234,7 @@ const (
 	HALF_FLOAT                                                 = 0x140B
 	HALF_FLOAT_ARB                                             = 0x140B
 	HALF_FLOAT_NV                                              = 0x140B
+	HARDLIGHT_KHR                                              = 0x929B
 	HARDLIGHT_NV                                               = 0x929B
 	HARDMIX_NV                                                 = 0x92A9
 	HIGH_FLOAT                                                 = 0x8DF2
@@ -12172,9 +12264,13 @@ const (
 	HI_BIAS_NV                                                 = 0x8714
 	HI_SCALE_NV                                                = 0x870E
 	HORIZONTAL_LINE_TO_NV                                      = 0x06
+	HSL_COLOR_KHR                                              = 0x92AF
 	HSL_COLOR_NV                                               = 0x92AF
+	HSL_HUE_KHR                                                = 0x92AD
 	HSL_HUE_NV                                                 = 0x92AD
+	HSL_LUMINOSITY_KHR                                         = 0x92B0
 	HSL_LUMINOSITY_NV                                          = 0x92B0
+	HSL_SATURATION_KHR                                         = 0x92AE
 	HSL_SATURATION_NV                                          = 0x92AE
 	IDENTITY_NV                                                = 0x862A
 	IGNORE_BORDER_HP                                           = 0x8150
@@ -12442,6 +12538,7 @@ const (
 	LIGHT5                                                     = 0x4005
 	LIGHT6                                                     = 0x4006
 	LIGHT7                                                     = 0x4007
+	LIGHTEN_KHR                                                = 0x9298
 	LIGHTEN_NV                                                 = 0x9298
 	LIGHTING                                                   = 0x0B50
 	LIGHTING_BIT                                               = 0x00000040
@@ -13105,6 +13202,7 @@ const (
 	MOVE_TO_RESETS_NV                                          = 0x90B5
 	MOV_ATI                                                    = 0x8961
 	MULT                                                       = 0x0103
+	MULTIPLY_KHR                                               = 0x9294
 	MULTIPLY_NV                                                = 0x9294
 	MULTISAMPLE                                                = 0x809D
 	MULTISAMPLE_3DFX                                           = 0x86B2
@@ -13204,6 +13302,7 @@ const (
 	OBJECT_DISTANCE_TO_POINT_SGIS                              = 0x81F1
 	OBJECT_INFO_LOG_LENGTH_ARB                                 = 0x8B84
 	OBJECT_LINEAR                                              = 0x2401
+	OBJECT_LINEAR_NV                                           = 0x2401
 	OBJECT_LINE_SGIS                                           = 0x81F7
 	OBJECT_LINK_STATUS_ARB                                     = 0x8B82
 	OBJECT_PLANE                                               = 0x2501
@@ -13331,6 +13430,7 @@ const (
 	OUTPUT_TEXTURE_COORD9_EXT                                  = 0x87A6
 	OUTPUT_VERTEX_EXT                                          = 0x879A
 	OUT_OF_MEMORY                                              = 0x0505
+	OVERLAY_KHR                                                = 0x9296
 	OVERLAY_NV                                                 = 0x9296
 	PACK_ALIGNMENT                                             = 0x0D05
 	PACK_CMYK_HINT_EXT                                         = 0x800E
@@ -13399,8 +13499,16 @@ const (
 	PATH_INITIAL_DASH_CAP_NV                                   = 0x907C
 	PATH_INITIAL_END_CAP_NV                                    = 0x9077
 	PATH_JOIN_STYLE_NV                                         = 0x9079
+	PATH_MAX_MODELVIEW_STACK_DEPTH_NV                          = 0x0D36
+	PATH_MAX_PROJECTION_STACK_DEPTH_NV                         = 0x0D38
 	PATH_MITER_LIMIT_NV                                        = 0x907A
+	PATH_MODELVIEW_MATRIX_NV                                   = 0x0BA6
+	PATH_MODELVIEW_NV                                          = 0x1700
+	PATH_MODELVIEW_STACK_DEPTH_NV                              = 0x0BA3
 	PATH_OBJECT_BOUNDING_BOX_NV                                = 0x908A
+	PATH_PROJECTION_MATRIX_NV                                  = 0x0BA7
+	PATH_PROJECTION_NV                                         = 0x1701
+	PATH_PROJECTION_STACK_DEPTH_NV                             = 0x0BA4
 	PATH_STENCIL_DEPTH_OFFSET_FACTOR_NV                        = 0x90BD
 	PATH_STENCIL_DEPTH_OFFSET_UNITS_NV                         = 0x90BE
 	PATH_STENCIL_FUNC_NV                                       = 0x90B7
@@ -13412,6 +13520,8 @@ const (
 	PATH_STROKE_WIDTH_NV                                       = 0x9075
 	PATH_TERMINAL_DASH_CAP_NV                                  = 0x907D
 	PATH_TERMINAL_END_CAP_NV                                   = 0x9078
+	PATH_TRANSPOSE_MODELVIEW_MATRIX_NV                         = 0x84E3
+	PATH_TRANSPOSE_PROJECTION_MATRIX_NV                        = 0x84E4
 	PERCENTAGE_AMD                                             = 0x8BC3
 	PERFMON_RESULT_AMD                                         = 0x8BC6
 	PERFMON_RESULT_AVAILABLE_AMD                               = 0x8BC4
@@ -13864,6 +13974,7 @@ const (
 	REG_8_ATI                                                  = 0x8929
 	REG_9_ATI                                                  = 0x892A
 	RELATIVE_ARC_TO_NV                                         = 0xFF
+	RELATIVE_CONIC_CURVE_TO_NV                                 = 0x1B
 	RELATIVE_CUBIC_CURVE_TO_NV                                 = 0x0D
 	RELATIVE_HORIZONTAL_LINE_TO_NV                             = 0x07
 	RELATIVE_LARGE_CCW_ARC_TO_NV                               = 0x17
@@ -13871,6 +13982,11 @@ const (
 	RELATIVE_LINE_TO_NV                                        = 0x05
 	RELATIVE_MOVE_TO_NV                                        = 0x03
 	RELATIVE_QUADRATIC_CURVE_TO_NV                             = 0x0B
+	RELATIVE_RECT_NV                                           = 0xF7
+	RELATIVE_ROUNDED_RECT2_NV                                  = 0xEB
+	RELATIVE_ROUNDED_RECT4_NV                                  = 0xED
+	RELATIVE_ROUNDED_RECT8_NV                                  = 0xEF
+	RELATIVE_ROUNDED_RECT_NV                                   = 0xE9
 	RELATIVE_SMALL_CCW_ARC_TO_NV                               = 0x13
 	RELATIVE_SMALL_CW_ARC_TO_NV                                = 0x15
 	RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV                          = 0x11
@@ -14050,6 +14166,10 @@ const (
 	RG_INTEGER                                                 = 0x8228
 	RG_SNORM                                                   = 0x8F91
 	RIGHT                                                      = 0x0407
+	ROUNDED_RECT2_NV                                           = 0xEA
+	ROUNDED_RECT4_NV                                           = 0xEC
+	ROUNDED_RECT8_NV                                           = 0xEE
+	ROUNDED_RECT_NV                                            = 0xE8
 	ROUND_NV                                                   = 0x90A4
 	S                                                          = 0x2000
 	SAMPLER                                                    = 0x82E6
@@ -14143,6 +14263,7 @@ const (
 	SCISSOR_BOX                                                = 0x0C10
 	SCISSOR_TEST                                               = 0x0C11
 	SCREEN_COORDINATES_REND                                    = 0x8490
+	SCREEN_KHR                                                 = 0x9295
 	SCREEN_NV                                                  = 0x9295
 	SECONDARY_COLOR_ARRAY                                      = 0x845E
 	SECONDARY_COLOR_ARRAY_ADDRESS_NV                           = 0x8F27
@@ -14259,6 +14380,7 @@ const (
 	SMOOTH_POINT_SIZE_RANGE                                    = 0x0B12
 	SMOOTH_QUADRATIC_CURVE_TO_NV                               = 0x0E
 	SM_COUNT_NV                                                = 0x933B
+	SOFTLIGHT_KHR                                              = 0x929C
 	SOFTLIGHT_NV                                               = 0x929C
 	SOURCE0_ALPHA                                              = 0x8588
 	SOURCE0_ALPHA_ARB                                          = 0x8588
@@ -14327,6 +14449,7 @@ const (
 	STACK_OVERFLOW_KHR                                         = 0x0503
 	STACK_UNDERFLOW                                            = 0x0504
 	STACK_UNDERFLOW_KHR                                        = 0x0504
+	STANDARD_FONT_FORMAT_NV                                    = 0x936C
 	STANDARD_FONT_NAME_NV                                      = 0x9072
 	STATIC_ATI                                                 = 0x8760
 	STATIC_COPY                                                = 0x88E6
@@ -15394,6 +15517,7 @@ var (
 	gpBinormalPointerEXT                                     C.GPBINORMALPOINTEREXT
 	gpBitmap                                                 C.GPBITMAP
 	gpBitmapxOES                                             C.GPBITMAPXOES
+	gpBlendBarrierKHR                                        C.GPBLENDBARRIERKHR
 	gpBlendBarrierNV                                         C.GPBLENDBARRIERNV
 	gpBlendColor                                             C.GPBLENDCOLOR
 	gpBlendColorEXT                                          C.GPBLENDCOLOREXT
@@ -16164,6 +16288,7 @@ var (
 	gpGetProgramResourceLocation                             C.GPGETPROGRAMRESOURCELOCATION
 	gpGetProgramResourceLocationIndex                        C.GPGETPROGRAMRESOURCELOCATIONINDEX
 	gpGetProgramResourceName                                 C.GPGETPROGRAMRESOURCENAME
+	gpGetProgramResourcefvNV                                 C.GPGETPROGRAMRESOURCEFVNV
 	gpGetProgramResourceiv                                   C.GPGETPROGRAMRESOURCEIV
 	gpGetProgramStageiv                                      C.GPGETPROGRAMSTAGEIV
 	gpGetProgramStringARB                                    C.GPGETPROGRAMSTRINGARB
@@ -16495,12 +16620,18 @@ var (
 	gpMatrixIndexubvARB                                      C.GPMATRIXINDEXUBVARB
 	gpMatrixIndexuivARB                                      C.GPMATRIXINDEXUIVARB
 	gpMatrixIndexusvARB                                      C.GPMATRIXINDEXUSVARB
+	gpMatrixLoad3x2fNV                                       C.GPMATRIXLOAD3X2FNV
+	gpMatrixLoad3x3fNV                                       C.GPMATRIXLOAD3X3FNV
 	gpMatrixLoadIdentityEXT                                  C.GPMATRIXLOADIDENTITYEXT
+	gpMatrixLoadTranspose3x3fNV                              C.GPMATRIXLOADTRANSPOSE3X3FNV
 	gpMatrixLoadTransposedEXT                                C.GPMATRIXLOADTRANSPOSEDEXT
 	gpMatrixLoadTransposefEXT                                C.GPMATRIXLOADTRANSPOSEFEXT
 	gpMatrixLoaddEXT                                         C.GPMATRIXLOADDEXT
 	gpMatrixLoadfEXT                                         C.GPMATRIXLOADFEXT
 	gpMatrixMode                                             C.GPMATRIXMODE
+	gpMatrixMult3x2fNV                                       C.GPMATRIXMULT3X2FNV
+	gpMatrixMult3x3fNV                                       C.GPMATRIXMULT3X3FNV
+	gpMatrixMultTranspose3x3fNV                              C.GPMATRIXMULTTRANSPOSE3X3FNV
 	gpMatrixMultTransposedEXT                                C.GPMATRIXMULTTRANSPOSEDEXT
 	gpMatrixMultTransposefEXT                                C.GPMATRIXMULTTRANSPOSEFEXT
 	gpMatrixMultdEXT                                         C.GPMATRIXMULTDEXT
@@ -16531,6 +16662,7 @@ var (
 	gpMultiDrawArraysEXT                                     C.GPMULTIDRAWARRAYSEXT
 	gpMultiDrawArraysIndirect                                C.GPMULTIDRAWARRAYSINDIRECT
 	gpMultiDrawArraysIndirectAMD                             C.GPMULTIDRAWARRAYSINDIRECTAMD
+	gpMultiDrawArraysIndirectBindlessCountNV                 C.GPMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNV
 	gpMultiDrawArraysIndirectBindlessNV                      C.GPMULTIDRAWARRAYSINDIRECTBINDLESSNV
 	gpMultiDrawArraysIndirectCountARB                        C.GPMULTIDRAWARRAYSINDIRECTCOUNTARB
 	gpMultiDrawElementArrayAPPLE                             C.GPMULTIDRAWELEMENTARRAYAPPLE
@@ -16539,6 +16671,7 @@ var (
 	gpMultiDrawElementsEXT                                   C.GPMULTIDRAWELEMENTSEXT
 	gpMultiDrawElementsIndirect                              C.GPMULTIDRAWELEMENTSINDIRECT
 	gpMultiDrawElementsIndirectAMD                           C.GPMULTIDRAWELEMENTSINDIRECTAMD
+	gpMultiDrawElementsIndirectBindlessCountNV               C.GPMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNV
 	gpMultiDrawElementsIndirectBindlessNV                    C.GPMULTIDRAWELEMENTSINDIRECTBINDLESSNV
 	gpMultiDrawElementsIndirectCountARB                      C.GPMULTIDRAWELEMENTSINDIRECTCOUNTARB
 	gpMultiDrawRangeElementArrayAPPLE                        C.GPMULTIDRAWRANGEELEMENTARRAYAPPLE
@@ -16750,8 +16883,11 @@ var (
 	gpPathCoverDepthFuncNV                                   C.GPPATHCOVERDEPTHFUNCNV
 	gpPathDashArrayNV                                        C.GPPATHDASHARRAYNV
 	gpPathFogGenNV                                           C.GPPATHFOGGENNV
+	gpPathGlyphIndexArrayNV                                  C.GPPATHGLYPHINDEXARRAYNV
+	gpPathGlyphIndexRangeNV                                  C.GPPATHGLYPHINDEXRANGENV
 	gpPathGlyphRangeNV                                       C.GPPATHGLYPHRANGENV
 	gpPathGlyphsNV                                           C.GPPATHGLYPHSNV
+	gpPathMemoryGlyphIndexArrayNV                            C.GPPATHMEMORYGLYPHINDEXARRAYNV
 	gpPathParameterfNV                                       C.GPPATHPARAMETERFNV
 	gpPathParameterfvNV                                      C.GPPATHPARAMETERFVNV
 	gpPathParameteriNV                                       C.GPPATHPARAMETERINV
@@ -16864,6 +17000,7 @@ var (
 	gpProgramParameteriEXT                                   C.GPPROGRAMPARAMETERIEXT
 	gpProgramParameters4dvNV                                 C.GPPROGRAMPARAMETERS4DVNV
 	gpProgramParameters4fvNV                                 C.GPPROGRAMPARAMETERS4FVNV
+	gpProgramPathFragmentInputGenNV                          C.GPPROGRAMPATHFRAGMENTINPUTGENNV
 	gpProgramStringARB                                       C.GPPROGRAMSTRINGARB
 	gpProgramSubroutineParametersuivNV                       C.GPPROGRAMSUBROUTINEPARAMETERSUIVNV
 	gpProgramUniform1d                                       C.GPPROGRAMUNIFORM1D
@@ -17190,6 +17327,10 @@ var (
 	gpStencilOpValueAMD                                      C.GPSTENCILOPVALUEAMD
 	gpStencilStrokePathInstancedNV                           C.GPSTENCILSTROKEPATHINSTANCEDNV
 	gpStencilStrokePathNV                                    C.GPSTENCILSTROKEPATHNV
+	gpStencilThenCoverFillPathInstancedNV                    C.GPSTENCILTHENCOVERFILLPATHINSTANCEDNV
+	gpStencilThenCoverFillPathNV                             C.GPSTENCILTHENCOVERFILLPATHNV
+	gpStencilThenCoverStrokePathInstancedNV                  C.GPSTENCILTHENCOVERSTROKEPATHINSTANCEDNV
+	gpStencilThenCoverStrokePathNV                           C.GPSTENCILTHENCOVERSTROKEPATHNV
 	gpStopInstrumentsSGIX                                    C.GPSTOPINSTRUMENTSSGIX
 	gpStringMarkerGREMEDY                                    C.GPSTRINGMARKERGREMEDY
 	gpSwizzleEXT                                             C.GPSWIZZLEEXT
@@ -18333,6 +18474,9 @@ func Bitmap(width int32, height int32, xorig float32, yorig float32, xmove float
 }
 func BitmapxOES(width int32, height int32, xorig int32, yorig int32, xmove int32, ymove int32, bitmap *uint8) {
 	C.glowBitmapxOES(gpBitmapxOES, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLfixed)(xorig), (C.GLfixed)(yorig), (C.GLfixed)(xmove), (C.GLfixed)(ymove), (*C.GLubyte)(unsafe.Pointer(bitmap)))
+}
+func BlendBarrierKHR() {
+	C.glowBlendBarrierKHR(gpBlendBarrierKHR)
 }
 func BlendBarrierNV() {
 	C.glowBlendBarrierNV(gpBlendBarrierNV)
@@ -19495,8 +19639,8 @@ func DrawArraysInstancedEXT(mode uint32, start int32, count int32, primcount int
 }
 
 // specify which color buffers are to be drawn into
-func DrawBuffer(mode uint32) {
-	C.glowDrawBuffer(gpDrawBuffer, (C.GLenum)(mode))
+func DrawBuffer(buf uint32) {
+	C.glowDrawBuffer(gpDrawBuffer, (C.GLenum)(buf))
 }
 
 // Specifies a list of color buffers to be drawn into
@@ -21012,6 +21156,9 @@ func GetProgramResourceLocationIndex(program uint32, programInterface uint32, na
 func GetProgramResourceName(program uint32, programInterface uint32, index uint32, bufSize int32, length *int32, name *int8) {
 	C.glowGetProgramResourceName(gpGetProgramResourceName, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
 }
+func GetProgramResourcefvNV(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, bufSize int32, length *int32, params *float32) {
+	C.glowGetProgramResourcefvNV(gpGetProgramResourcefvNV, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(unsafe.Pointer(props)), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLfloat)(unsafe.Pointer(params)))
+}
 func GetProgramResourceiv(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, bufSize int32, length *int32, params *int32) {
 	C.glowGetProgramResourceiv(gpGetProgramResourceiv, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(unsafe.Pointer(props)), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -22193,8 +22340,17 @@ func MatrixIndexuivARB(size int32, indices *uint32) {
 func MatrixIndexusvARB(size int32, indices *uint16) {
 	C.glowMatrixIndexusvARB(gpMatrixIndexusvARB, (C.GLint)(size), (*C.GLushort)(unsafe.Pointer(indices)))
 }
+func MatrixLoad3x2fNV(matrixMode uint32, m *float32) {
+	C.glowMatrixLoad3x2fNV(gpMatrixLoad3x2fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
+}
+func MatrixLoad3x3fNV(matrixMode uint32, m *float32) {
+	C.glowMatrixLoad3x3fNV(gpMatrixLoad3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
+}
 func MatrixLoadIdentityEXT(mode uint32) {
 	C.glowMatrixLoadIdentityEXT(gpMatrixLoadIdentityEXT, (C.GLenum)(mode))
+}
+func MatrixLoadTranspose3x3fNV(matrixMode uint32, m *float32) {
+	C.glowMatrixLoadTranspose3x3fNV(gpMatrixLoadTranspose3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
 func MatrixLoadTransposedEXT(mode uint32, m *float64) {
 	C.glowMatrixLoadTransposedEXT(gpMatrixLoadTransposedEXT, (C.GLenum)(mode), (*C.GLdouble)(unsafe.Pointer(m)))
@@ -22212,6 +22368,15 @@ func MatrixLoadfEXT(mode uint32, m *float32) {
 // specify which matrix is the current matrix
 func MatrixMode(mode uint32) {
 	C.glowMatrixMode(gpMatrixMode, (C.GLenum)(mode))
+}
+func MatrixMult3x2fNV(matrixMode uint32, m *float32) {
+	C.glowMatrixMult3x2fNV(gpMatrixMult3x2fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
+}
+func MatrixMult3x3fNV(matrixMode uint32, m *float32) {
+	C.glowMatrixMult3x3fNV(gpMatrixMult3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
+}
+func MatrixMultTranspose3x3fNV(matrixMode uint32, m *float32) {
+	C.glowMatrixMultTranspose3x3fNV(gpMatrixMultTranspose3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
 func MatrixMultTransposedEXT(mode uint32, m *float64) {
 	C.glowMatrixMultTransposedEXT(gpMatrixMultTransposedEXT, (C.GLenum)(mode), (*C.GLdouble)(unsafe.Pointer(m)))
@@ -22311,6 +22476,9 @@ func MultiDrawArraysIndirect(mode uint32, indirect unsafe.Pointer, drawcount int
 func MultiDrawArraysIndirectAMD(mode uint32, indirect unsafe.Pointer, primcount int32, stride int32) {
 	C.glowMultiDrawArraysIndirectAMD(gpMultiDrawArraysIndirectAMD, (C.GLenum)(mode), indirect, (C.GLsizei)(primcount), (C.GLsizei)(stride))
 }
+func MultiDrawArraysIndirectBindlessCountNV(mode uint32, indirect unsafe.Pointer, drawCount int32, maxDrawCount int32, stride int32, vertexBufferCount int32) {
+	C.glowMultiDrawArraysIndirectBindlessCountNV(gpMultiDrawArraysIndirectBindlessCountNV, (C.GLenum)(mode), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(maxDrawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
+}
 func MultiDrawArraysIndirectBindlessNV(mode uint32, indirect unsafe.Pointer, drawCount int32, stride int32, vertexBufferCount int32) {
 	C.glowMultiDrawArraysIndirectBindlessNV(gpMultiDrawArraysIndirectBindlessNV, (C.GLenum)(mode), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
 }
@@ -22340,6 +22508,9 @@ func MultiDrawElementsIndirect(mode uint32, xtype uint32, indirect unsafe.Pointe
 }
 func MultiDrawElementsIndirectAMD(mode uint32, xtype uint32, indirect unsafe.Pointer, primcount int32, stride int32) {
 	C.glowMultiDrawElementsIndirectAMD(gpMultiDrawElementsIndirectAMD, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(primcount), (C.GLsizei)(stride))
+}
+func MultiDrawElementsIndirectBindlessCountNV(mode uint32, xtype uint32, indirect unsafe.Pointer, drawCount int32, maxDrawCount int32, stride int32, vertexBufferCount int32) {
+	C.glowMultiDrawElementsIndirectBindlessCountNV(gpMultiDrawElementsIndirectBindlessCountNV, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(maxDrawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
 }
 func MultiDrawElementsIndirectBindlessNV(mode uint32, xtype uint32, indirect unsafe.Pointer, drawCount int32, stride int32, vertexBufferCount int32) {
 	C.glowMultiDrawElementsIndirectBindlessNV(gpMultiDrawElementsIndirectBindlessNV, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
@@ -22989,11 +23160,23 @@ func PathDashArrayNV(path uint32, dashCount int32, dashArray *float32) {
 func PathFogGenNV(genMode uint32) {
 	C.glowPathFogGenNV(gpPathFogGenNV, (C.GLenum)(genMode))
 }
+func PathGlyphIndexArrayNV(firstPathName uint32, fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, firstGlyphIndex uint32, numGlyphs int32, pathParameterTemplate uint32, emScale float32) uint32 {
+	ret := C.glowPathGlyphIndexArrayNV(gpPathGlyphIndexArrayNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLuint)(firstGlyphIndex), (C.GLsizei)(numGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
+	return (uint32)(ret)
+}
+func PathGlyphIndexRangeNV(fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, pathParameterTemplate uint32, emScale float32, baseAndCount *uint32) uint32 {
+	ret := C.glowPathGlyphIndexRangeNV(gpPathGlyphIndexRangeNV, (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale), (*C.GLuint)(unsafe.Pointer(baseAndCount)))
+	return (uint32)(ret)
+}
 func PathGlyphRangeNV(firstPathName uint32, fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, firstGlyph uint32, numGlyphs int32, handleMissingGlyphs uint32, pathParameterTemplate uint32, emScale float32) {
 	C.glowPathGlyphRangeNV(gpPathGlyphRangeNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLuint)(firstGlyph), (C.GLsizei)(numGlyphs), (C.GLenum)(handleMissingGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
 }
 func PathGlyphsNV(firstPathName uint32, fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, numGlyphs int32, xtype uint32, charcodes unsafe.Pointer, handleMissingGlyphs uint32, pathParameterTemplate uint32, emScale float32) {
 	C.glowPathGlyphsNV(gpPathGlyphsNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLsizei)(numGlyphs), (C.GLenum)(xtype), charcodes, (C.GLenum)(handleMissingGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
+}
+func PathMemoryGlyphIndexArrayNV(firstPathName uint32, fontTarget uint32, fontSize int, fontData unsafe.Pointer, faceIndex int32, firstGlyphIndex uint32, numGlyphs int32, pathParameterTemplate uint32, emScale float32) uint32 {
+	ret := C.glowPathMemoryGlyphIndexArrayNV(gpPathMemoryGlyphIndexArrayNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), (C.GLsizeiptr)(fontSize), fontData, (C.GLsizei)(faceIndex), (C.GLuint)(firstGlyphIndex), (C.GLsizei)(numGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
+	return (uint32)(ret)
 }
 func PathParameterfNV(path uint32, pname uint32, value float32) {
 	C.glowPathParameterfNV(gpPathParameterfNV, (C.GLuint)(path), (C.GLenum)(pname), (C.GLfloat)(value))
@@ -23353,6 +23536,9 @@ func ProgramParameters4dvNV(target uint32, index uint32, count int32, v *float64
 }
 func ProgramParameters4fvNV(target uint32, index uint32, count int32, v *float32) {
 	C.glowProgramParameters4fvNV(gpProgramParameters4fvNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
+}
+func ProgramPathFragmentInputGenNV(program uint32, location int32, genMode uint32, components int32, coeffs *float32) {
+	C.glowProgramPathFragmentInputGenNV(gpProgramPathFragmentInputGenNV, (C.GLuint)(program), (C.GLint)(location), (C.GLenum)(genMode), (C.GLint)(components), (*C.GLfloat)(unsafe.Pointer(coeffs)))
 }
 func ProgramStringARB(target uint32, format uint32, len int32, xstring unsafe.Pointer) {
 	C.glowProgramStringARB(gpProgramStringARB, (C.GLenum)(target), (C.GLenum)(format), (C.GLsizei)(len), xstring)
@@ -23941,8 +24127,8 @@ func RasterPos4xvOES(coords *int32) {
 }
 
 // select a color buffer source for pixels
-func ReadBuffer(mode uint32) {
-	C.glowReadBuffer(gpReadBuffer, (C.GLenum)(mode))
+func ReadBuffer(src uint32) {
+	C.glowReadBuffer(gpReadBuffer, (C.GLenum)(src))
 }
 func ReadInstrumentsSGIX(marker int32) {
 	C.glowReadInstrumentsSGIX(gpReadInstrumentsSGIX, (C.GLint)(marker))
@@ -24465,6 +24651,18 @@ func StencilStrokePathInstancedNV(numPaths int32, pathNameType uint32, paths uns
 }
 func StencilStrokePathNV(path uint32, reference int32, mask uint32) {
 	C.glowStencilStrokePathNV(gpStencilStrokePathNV, (C.GLuint)(path), (C.GLint)(reference), (C.GLuint)(mask))
+}
+func StencilThenCoverFillPathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, fillMode uint32, mask uint32, coverMode uint32, transformType uint32, transformValues *float32) {
+	C.glowStencilThenCoverFillPathInstancedNV(gpStencilThenCoverFillPathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLenum)(fillMode), (C.GLuint)(mask), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
+}
+func StencilThenCoverFillPathNV(path uint32, fillMode uint32, mask uint32, coverMode uint32) {
+	C.glowStencilThenCoverFillPathNV(gpStencilThenCoverFillPathNV, (C.GLuint)(path), (C.GLenum)(fillMode), (C.GLuint)(mask), (C.GLenum)(coverMode))
+}
+func StencilThenCoverStrokePathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, reference int32, mask uint32, coverMode uint32, transformType uint32, transformValues *float32) {
+	C.glowStencilThenCoverStrokePathInstancedNV(gpStencilThenCoverStrokePathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLint)(reference), (C.GLuint)(mask), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
+}
+func StencilThenCoverStrokePathNV(path uint32, reference int32, mask uint32, coverMode uint32) {
+	C.glowStencilThenCoverStrokePathNV(gpStencilThenCoverStrokePathNV, (C.GLuint)(path), (C.GLint)(reference), (C.GLuint)(mask), (C.GLenum)(coverMode))
 }
 func StopInstrumentsSGIX(marker int32) {
 	C.glowStopInstrumentsSGIX(gpStopInstrumentsSGIX, (C.GLint)(marker))
@@ -27033,6 +27231,7 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 		return errors.New("glBitmap")
 	}
 	gpBitmapxOES = (C.GPBITMAPXOES)(getProcAddr("glBitmapxOES"))
+	gpBlendBarrierKHR = (C.GPBLENDBARRIERKHR)(getProcAddr("glBlendBarrierKHR"))
 	gpBlendBarrierNV = (C.GPBLENDBARRIERNV)(getProcAddr("glBlendBarrierNV"))
 	gpBlendColor = (C.GPBLENDCOLOR)(getProcAddr("glBlendColor"))
 	if gpBlendColor == nil {
@@ -28403,6 +28602,7 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpGetProgramResourceLocation = (C.GPGETPROGRAMRESOURCELOCATION)(getProcAddr("glGetProgramResourceLocation"))
 	gpGetProgramResourceLocationIndex = (C.GPGETPROGRAMRESOURCELOCATIONINDEX)(getProcAddr("glGetProgramResourceLocationIndex"))
 	gpGetProgramResourceName = (C.GPGETPROGRAMRESOURCENAME)(getProcAddr("glGetProgramResourceName"))
+	gpGetProgramResourcefvNV = (C.GPGETPROGRAMRESOURCEFVNV)(getProcAddr("glGetProgramResourcefvNV"))
 	gpGetProgramResourceiv = (C.GPGETPROGRAMRESOURCEIV)(getProcAddr("glGetProgramResourceiv"))
 	gpGetProgramStageiv = (C.GPGETPROGRAMSTAGEIV)(getProcAddr("glGetProgramStageiv"))
 	gpGetProgramStringARB = (C.GPGETPROGRAMSTRINGARB)(getProcAddr("glGetProgramStringARB"))
@@ -29022,7 +29222,10 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpMatrixIndexubvARB = (C.GPMATRIXINDEXUBVARB)(getProcAddr("glMatrixIndexubvARB"))
 	gpMatrixIndexuivARB = (C.GPMATRIXINDEXUIVARB)(getProcAddr("glMatrixIndexuivARB"))
 	gpMatrixIndexusvARB = (C.GPMATRIXINDEXUSVARB)(getProcAddr("glMatrixIndexusvARB"))
+	gpMatrixLoad3x2fNV = (C.GPMATRIXLOAD3X2FNV)(getProcAddr("glMatrixLoad3x2fNV"))
+	gpMatrixLoad3x3fNV = (C.GPMATRIXLOAD3X3FNV)(getProcAddr("glMatrixLoad3x3fNV"))
 	gpMatrixLoadIdentityEXT = (C.GPMATRIXLOADIDENTITYEXT)(getProcAddr("glMatrixLoadIdentityEXT"))
+	gpMatrixLoadTranspose3x3fNV = (C.GPMATRIXLOADTRANSPOSE3X3FNV)(getProcAddr("glMatrixLoadTranspose3x3fNV"))
 	gpMatrixLoadTransposedEXT = (C.GPMATRIXLOADTRANSPOSEDEXT)(getProcAddr("glMatrixLoadTransposedEXT"))
 	gpMatrixLoadTransposefEXT = (C.GPMATRIXLOADTRANSPOSEFEXT)(getProcAddr("glMatrixLoadTransposefEXT"))
 	gpMatrixLoaddEXT = (C.GPMATRIXLOADDEXT)(getProcAddr("glMatrixLoaddEXT"))
@@ -29031,6 +29234,9 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	if gpMatrixMode == nil {
 		return errors.New("glMatrixMode")
 	}
+	gpMatrixMult3x2fNV = (C.GPMATRIXMULT3X2FNV)(getProcAddr("glMatrixMult3x2fNV"))
+	gpMatrixMult3x3fNV = (C.GPMATRIXMULT3X3FNV)(getProcAddr("glMatrixMult3x3fNV"))
+	gpMatrixMultTranspose3x3fNV = (C.GPMATRIXMULTTRANSPOSE3X3FNV)(getProcAddr("glMatrixMultTranspose3x3fNV"))
 	gpMatrixMultTransposedEXT = (C.GPMATRIXMULTTRANSPOSEDEXT)(getProcAddr("glMatrixMultTransposedEXT"))
 	gpMatrixMultTransposefEXT = (C.GPMATRIXMULTTRANSPOSEFEXT)(getProcAddr("glMatrixMultTransposefEXT"))
 	gpMatrixMultdEXT = (C.GPMATRIXMULTDEXT)(getProcAddr("glMatrixMultdEXT"))
@@ -29076,6 +29282,7 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpMultiDrawArraysEXT = (C.GPMULTIDRAWARRAYSEXT)(getProcAddr("glMultiDrawArraysEXT"))
 	gpMultiDrawArraysIndirect = (C.GPMULTIDRAWARRAYSINDIRECT)(getProcAddr("glMultiDrawArraysIndirect"))
 	gpMultiDrawArraysIndirectAMD = (C.GPMULTIDRAWARRAYSINDIRECTAMD)(getProcAddr("glMultiDrawArraysIndirectAMD"))
+	gpMultiDrawArraysIndirectBindlessCountNV = (C.GPMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNV)(getProcAddr("glMultiDrawArraysIndirectBindlessCountNV"))
 	gpMultiDrawArraysIndirectBindlessNV = (C.GPMULTIDRAWARRAYSINDIRECTBINDLESSNV)(getProcAddr("glMultiDrawArraysIndirectBindlessNV"))
 	gpMultiDrawArraysIndirectCountARB = (C.GPMULTIDRAWARRAYSINDIRECTCOUNTARB)(getProcAddr("glMultiDrawArraysIndirectCountARB"))
 	gpMultiDrawElementArrayAPPLE = (C.GPMULTIDRAWELEMENTARRAYAPPLE)(getProcAddr("glMultiDrawElementArrayAPPLE"))
@@ -29090,6 +29297,7 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpMultiDrawElementsEXT = (C.GPMULTIDRAWELEMENTSEXT)(getProcAddr("glMultiDrawElementsEXT"))
 	gpMultiDrawElementsIndirect = (C.GPMULTIDRAWELEMENTSINDIRECT)(getProcAddr("glMultiDrawElementsIndirect"))
 	gpMultiDrawElementsIndirectAMD = (C.GPMULTIDRAWELEMENTSINDIRECTAMD)(getProcAddr("glMultiDrawElementsIndirectAMD"))
+	gpMultiDrawElementsIndirectBindlessCountNV = (C.GPMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNV)(getProcAddr("glMultiDrawElementsIndirectBindlessCountNV"))
 	gpMultiDrawElementsIndirectBindlessNV = (C.GPMULTIDRAWELEMENTSINDIRECTBINDLESSNV)(getProcAddr("glMultiDrawElementsIndirectBindlessNV"))
 	gpMultiDrawElementsIndirectCountARB = (C.GPMULTIDRAWELEMENTSINDIRECTCOUNTARB)(getProcAddr("glMultiDrawElementsIndirectCountARB"))
 	gpMultiDrawRangeElementArrayAPPLE = (C.GPMULTIDRAWRANGEELEMENTARRAYAPPLE)(getProcAddr("glMultiDrawRangeElementArrayAPPLE"))
@@ -29439,8 +29647,11 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpPathCoverDepthFuncNV = (C.GPPATHCOVERDEPTHFUNCNV)(getProcAddr("glPathCoverDepthFuncNV"))
 	gpPathDashArrayNV = (C.GPPATHDASHARRAYNV)(getProcAddr("glPathDashArrayNV"))
 	gpPathFogGenNV = (C.GPPATHFOGGENNV)(getProcAddr("glPathFogGenNV"))
+	gpPathGlyphIndexArrayNV = (C.GPPATHGLYPHINDEXARRAYNV)(getProcAddr("glPathGlyphIndexArrayNV"))
+	gpPathGlyphIndexRangeNV = (C.GPPATHGLYPHINDEXRANGENV)(getProcAddr("glPathGlyphIndexRangeNV"))
 	gpPathGlyphRangeNV = (C.GPPATHGLYPHRANGENV)(getProcAddr("glPathGlyphRangeNV"))
 	gpPathGlyphsNV = (C.GPPATHGLYPHSNV)(getProcAddr("glPathGlyphsNV"))
+	gpPathMemoryGlyphIndexArrayNV = (C.GPPATHMEMORYGLYPHINDEXARRAYNV)(getProcAddr("glPathMemoryGlyphIndexArrayNV"))
 	gpPathParameterfNV = (C.GPPATHPARAMETERFNV)(getProcAddr("glPathParameterfNV"))
 	gpPathParameterfvNV = (C.GPPATHPARAMETERFVNV)(getProcAddr("glPathParameterfvNV"))
 	gpPathParameteriNV = (C.GPPATHPARAMETERINV)(getProcAddr("glPathParameteriNV"))
@@ -29619,6 +29830,7 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpProgramParameteriEXT = (C.GPPROGRAMPARAMETERIEXT)(getProcAddr("glProgramParameteriEXT"))
 	gpProgramParameters4dvNV = (C.GPPROGRAMPARAMETERS4DVNV)(getProcAddr("glProgramParameters4dvNV"))
 	gpProgramParameters4fvNV = (C.GPPROGRAMPARAMETERS4FVNV)(getProcAddr("glProgramParameters4fvNV"))
+	gpProgramPathFragmentInputGenNV = (C.GPPROGRAMPATHFRAGMENTINPUTGENNV)(getProcAddr("glProgramPathFragmentInputGenNV"))
 	gpProgramStringARB = (C.GPPROGRAMSTRINGARB)(getProcAddr("glProgramStringARB"))
 	gpProgramSubroutineParametersuivNV = (C.GPPROGRAMSUBROUTINEPARAMETERSUIVNV)(getProcAddr("glProgramSubroutineParametersuivNV"))
 	gpProgramUniform1d = (C.GPPROGRAMUNIFORM1D)(getProcAddr("glProgramUniform1d"))
@@ -30170,6 +30382,10 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpStencilOpValueAMD = (C.GPSTENCILOPVALUEAMD)(getProcAddr("glStencilOpValueAMD"))
 	gpStencilStrokePathInstancedNV = (C.GPSTENCILSTROKEPATHINSTANCEDNV)(getProcAddr("glStencilStrokePathInstancedNV"))
 	gpStencilStrokePathNV = (C.GPSTENCILSTROKEPATHNV)(getProcAddr("glStencilStrokePathNV"))
+	gpStencilThenCoverFillPathInstancedNV = (C.GPSTENCILTHENCOVERFILLPATHINSTANCEDNV)(getProcAddr("glStencilThenCoverFillPathInstancedNV"))
+	gpStencilThenCoverFillPathNV = (C.GPSTENCILTHENCOVERFILLPATHNV)(getProcAddr("glStencilThenCoverFillPathNV"))
+	gpStencilThenCoverStrokePathInstancedNV = (C.GPSTENCILTHENCOVERSTROKEPATHINSTANCEDNV)(getProcAddr("glStencilThenCoverStrokePathInstancedNV"))
+	gpStencilThenCoverStrokePathNV = (C.GPSTENCILTHENCOVERSTROKEPATHNV)(getProcAddr("glStencilThenCoverStrokePathNV"))
 	gpStopInstrumentsSGIX = (C.GPSTOPINSTRUMENTSSGIX)(getProcAddr("glStopInstrumentsSGIX"))
 	gpStringMarkerGREMEDY = (C.GPSTRINGMARKERGREMEDY)(getProcAddr("glStringMarkerGREMEDY"))
 	gpSwizzleEXT = (C.GPSWIZZLEEXT)(getProcAddr("glSwizzleEXT"))

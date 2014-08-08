@@ -1,4 +1,5 @@
 // Glow automatically generated OpenGL binding: http://github.com/go-gl/glow
+// Generated based on XML spec SVN revision 27647.
 // Copyright (c) 2010 Khronos Group.
 // This material may be distributed subject to the terms and conditions
 // set forth in the Open Publication License, v 1.0, 8 June 1999.
@@ -132,6 +133,7 @@ package gl
 // typedef void  (APIENTRYP GPBINDVERTEXBUFFER)(GLuint  bindingindex, GLuint  buffer, GLintptr  offset, GLsizei  stride);
 // typedef void  (APIENTRYP GPBINDVERTEXBUFFERS)(GLuint  first, GLsizei  count, const GLuint * buffers, const GLintptr * offsets, const GLsizei * strides);
 // typedef void  (APIENTRYP GPBITMAPXOES)(GLsizei  width, GLsizei  height, GLfixed  xorig, GLfixed  yorig, GLfixed  xmove, GLfixed  ymove, const GLubyte * bitmap);
+// typedef void  (APIENTRYP GPBLENDBARRIERKHR)();
 // typedef void  (APIENTRYP GPBLENDBARRIERNV)();
 // typedef void  (APIENTRYP GPBLENDCOLOR)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
 // typedef void  (APIENTRYP GPBLENDCOLORXOES)(GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha);
@@ -252,7 +254,7 @@ package gl
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCED)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDBASEINSTANCE)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount, GLuint  baseinstance);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDEXT)(GLenum  mode, GLint  start, GLsizei  count, GLsizei  primcount);
-// typedef void  (APIENTRYP GPDRAWBUFFER)(GLenum  mode);
+// typedef void  (APIENTRYP GPDRAWBUFFER)(GLenum  buf);
 // typedef void  (APIENTRYP GPDRAWBUFFERS)(GLsizei  n, const GLenum * bufs);
 // typedef void  (APIENTRYP GPDRAWELEMENTS)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices);
 // typedef void  (APIENTRYP GPDRAWELEMENTSBASEVERTEX)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLint  basevertex);
@@ -672,7 +674,7 @@ package gl
 // typedef void  (APIENTRYP GPRASTERPOS3XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPRASTERPOS4XOES)(GLfixed  x, GLfixed  y, GLfixed  z, GLfixed  w);
 // typedef void  (APIENTRYP GPRASTERPOS4XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPREADBUFFER)(GLenum  mode);
+// typedef void  (APIENTRYP GPREADBUFFER)(GLenum  src);
 // typedef void  (APIENTRYP GPREADPIXELS)(GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, void * pixels);
 // typedef void  (APIENTRYP GPREADNPIXELSARB)(GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, GLsizei  bufSize, void * data);
 // typedef void  (APIENTRYP GPRECTXOES)(GLfixed  x1, GLfixed  y1, GLfixed  x2, GLfixed  y2);
@@ -1025,6 +1027,9 @@ package gl
 // }
 // static void  glowBitmapxOES(GPBITMAPXOES fnptr, GLsizei  width, GLsizei  height, GLfixed  xorig, GLfixed  yorig, GLfixed  xmove, GLfixed  ymove, const GLubyte * bitmap) {
 //   (*fnptr)(width, height, xorig, yorig, xmove, ymove, bitmap);
+// }
+// static void  glowBlendBarrierKHR(GPBLENDBARRIERKHR fnptr) {
+//   (*fnptr)();
 // }
 // static void  glowBlendBarrierNV(GPBLENDBARRIERNV fnptr) {
 //   (*fnptr)();
@@ -1386,8 +1391,8 @@ package gl
 // static void  glowDrawArraysInstancedEXT(GPDRAWARRAYSINSTANCEDEXT fnptr, GLenum  mode, GLint  start, GLsizei  count, GLsizei  primcount) {
 //   (*fnptr)(mode, start, count, primcount);
 // }
-// static void  glowDrawBuffer(GPDRAWBUFFER fnptr, GLenum  mode) {
-//   (*fnptr)(mode);
+// static void  glowDrawBuffer(GPDRAWBUFFER fnptr, GLenum  buf) {
+//   (*fnptr)(buf);
 // }
 // static void  glowDrawBuffers(GPDRAWBUFFERS fnptr, GLsizei  n, const GLenum * bufs) {
 //   (*fnptr)(n, bufs);
@@ -2646,8 +2651,8 @@ package gl
 // static void  glowRasterPos4xvOES(GPRASTERPOS4XVOES fnptr, const GLfixed * coords) {
 //   (*fnptr)(coords);
 // }
-// static void  glowReadBuffer(GPREADBUFFER fnptr, GLenum  mode) {
-//   (*fnptr)(mode);
+// static void  glowReadBuffer(GPREADBUFFER fnptr, GLenum  src) {
+//   (*fnptr)(src);
 // }
 // static void  glowReadPixels(GPREADPIXELS fnptr, GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, void * pixels) {
 //   (*fnptr)(x, y, width, height, format, type, pixels);
@@ -3452,6 +3457,7 @@ const (
 	BGRA_INTEGER                                               = 0x8D9B
 	BGR_INTEGER                                                = 0x8D9A
 	BLEND                                                      = 0x0BE2
+	BLEND_ADVANCED_COHERENT_KHR                                = 0x9285
 	BLEND_ADVANCED_COHERENT_NV                                 = 0x9285
 	BLEND_COLOR                                                = 0x8005
 	BLEND_DST                                                  = 0x0BE0
@@ -3511,7 +3517,9 @@ const (
 	CLIP_DISTANCE6                                             = 0x3006
 	CLIP_DISTANCE7                                             = 0x3007
 	COLOR                                                      = 0x1800
+	COLORBURN_KHR                                              = 0x929A
 	COLORBURN_NV                                               = 0x929A
+	COLORDODGE_KHR                                             = 0x9299
 	COLORDODGE_NV                                              = 0x9299
 	COLOR_ATTACHMENT0                                          = 0x8CE0
 	COLOR_ATTACHMENT1                                          = 0x8CE1
@@ -3630,6 +3638,7 @@ const (
 	CURRENT_QUERY                                              = 0x8865
 	CURRENT_VERTEX_ATTRIB                                      = 0x8626
 	CW                                                         = 0x0900
+	DARKEN_KHR                                                 = 0x9297
 	DARKEN_NV                                                  = 0x9297
 	DEBUG_CALLBACK_FUNCTION                                    = 0x8244
 	DEBUG_CALLBACK_FUNCTION_ARB                                = 0x8244
@@ -3728,6 +3737,7 @@ const (
 	DEPTH_STENCIL_TEXTURE_MODE                                 = 0x90EA
 	DEPTH_TEST                                                 = 0x0B71
 	DEPTH_WRITEMASK                                            = 0x0B72
+	DIFFERENCE_KHR                                             = 0x929E
 	DIFFERENCE_NV                                              = 0x929E
 	DISJOINT_NV                                                = 0x9283
 	DISPATCH_INDIRECT_BUFFER                                   = 0x90EE
@@ -3785,6 +3795,7 @@ const (
 	ELEMENT_ARRAY_BUFFER_BINDING                               = 0x8895
 	EQUAL                                                      = 0x0202
 	EQUIV                                                      = 0x1509
+	EXCLUSION_KHR                                              = 0x92A0
 	EXCLUSION_NV                                               = 0x92A0
 	EXTENSIONS                                                 = 0x1F03
 	FALSE                                                      = 0
@@ -3885,13 +3896,18 @@ const (
 	GREEN_NV                                                   = 0x1904
 	GUILTY_CONTEXT_RESET_ARB                                   = 0x8253
 	HALF_FLOAT                                                 = 0x140B
+	HARDLIGHT_KHR                                              = 0x929B
 	HARDLIGHT_NV                                               = 0x929B
 	HARDMIX_NV                                                 = 0x92A9
 	HIGH_FLOAT                                                 = 0x8DF2
 	HIGH_INT                                                   = 0x8DF5
+	HSL_COLOR_KHR                                              = 0x92AF
 	HSL_COLOR_NV                                               = 0x92AF
+	HSL_HUE_KHR                                                = 0x92AD
 	HSL_HUE_NV                                                 = 0x92AD
+	HSL_LUMINOSITY_KHR                                         = 0x92B0
 	HSL_LUMINOSITY_NV                                          = 0x92B0
+	HSL_SATURATION_KHR                                         = 0x92AE
 	HSL_SATURATION_NV                                          = 0x92AE
 	IMAGE_1D                                                   = 0x904C
 	IMAGE_1D_ARRAY                                             = 0x9052
@@ -3997,6 +4013,7 @@ const (
 	LEFT                                                       = 0x0406
 	LEQUAL                                                     = 0x0203
 	LESS                                                       = 0x0201
+	LIGHTEN_KHR                                                = 0x9298
 	LIGHTEN_NV                                                 = 0x9298
 	LINE                                                       = 0x1B01
 	LINEAR                                                     = 0x2601
@@ -4213,6 +4230,7 @@ const (
 	MIPMAP                                                     = 0x8293
 	MIRRORED_REPEAT                                            = 0x8370
 	MIRROR_CLAMP_TO_EDGE                                       = 0x8743
+	MULTIPLY_KHR                                               = 0x9294
 	MULTIPLY_NV                                                = 0x9294
 	MULTISAMPLE                                                = 0x809D
 	NAMED_STRING_LENGTH_ARB                                    = 0x8DE9
@@ -4253,6 +4271,7 @@ const (
 	OR_INVERTED                                                = 0x150D
 	OR_REVERSE                                                 = 0x150B
 	OUT_OF_MEMORY                                              = 0x0505
+	OVERLAY_KHR                                                = 0x9296
 	OVERLAY_NV                                                 = 0x9296
 	PACK_ALIGNMENT                                             = 0x0D05
 	PACK_COMPRESSED_BLOCK_DEPTH                                = 0x912D
@@ -4521,6 +4540,7 @@ const (
 	SAMPLE_SHADING_ARB                                         = 0x8C36
 	SCISSOR_BOX                                                = 0x0C10
 	SCISSOR_TEST                                               = 0x0C11
+	SCREEN_KHR                                                 = 0x9295
 	SCREEN_NV                                                  = 0x9295
 	SEPARATE_ATTRIBS                                           = 0x8C8D
 	SET                                                        = 0x150F
@@ -4556,6 +4576,7 @@ const (
 	SMOOTH_LINE_WIDTH_RANGE                                    = 0x0B22
 	SMOOTH_POINT_SIZE_GRANULARITY                              = 0x0B13
 	SMOOTH_POINT_SIZE_RANGE                                    = 0x0B12
+	SOFTLIGHT_KHR                                              = 0x929C
 	SOFTLIGHT_NV                                               = 0x929C
 	SPARSE_TEXTURE_FULL_ARRAY_CUBE_MIPMAPS_ARB                 = 0x91A9
 	SRC1_ALPHA                                                 = 0x8589
@@ -4990,6 +5011,7 @@ var (
 	gpBindVertexBuffer                            C.GPBINDVERTEXBUFFER
 	gpBindVertexBuffers                           C.GPBINDVERTEXBUFFERS
 	gpBitmapxOES                                  C.GPBITMAPXOES
+	gpBlendBarrierKHR                             C.GPBLENDBARRIERKHR
 	gpBlendBarrierNV                              C.GPBLENDBARRIERNV
 	gpBlendColor                                  C.GPBLENDCOLOR
 	gpBlendColorxOES                              C.GPBLENDCOLORXOES
@@ -5947,6 +5969,9 @@ func BindVertexBuffers(first uint32, count int32, buffers *uint32, offsets *int,
 func BitmapxOES(width int32, height int32, xorig int32, yorig int32, xmove int32, ymove int32, bitmap *uint8) {
 	C.glowBitmapxOES(gpBitmapxOES, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLfixed)(xorig), (C.GLfixed)(yorig), (C.GLfixed)(xmove), (C.GLfixed)(ymove), (*C.GLubyte)(unsafe.Pointer(bitmap)))
 }
+func BlendBarrierKHR() {
+	C.glowBlendBarrierKHR(gpBlendBarrierKHR)
+}
 func BlendBarrierNV() {
 	C.glowBlendBarrierNV(gpBlendBarrierNV)
 }
@@ -6450,8 +6475,8 @@ func DrawArraysInstancedEXT(mode uint32, start int32, count int32, primcount int
 }
 
 // specify which color buffers are to be drawn into
-func DrawBuffer(mode uint32) {
-	C.glowDrawBuffer(gpDrawBuffer, (C.GLenum)(mode))
+func DrawBuffer(buf uint32) {
+	C.glowDrawBuffer(gpDrawBuffer, (C.GLenum)(buf))
 }
 
 // Specifies a list of color buffers to be drawn into
@@ -8089,8 +8114,8 @@ func RasterPos4xvOES(coords *int32) {
 }
 
 // select a color buffer source for pixels
-func ReadBuffer(mode uint32) {
-	C.glowReadBuffer(gpReadBuffer, (C.GLenum)(mode))
+func ReadBuffer(src uint32) {
+	C.glowReadBuffer(gpReadBuffer, (C.GLenum)(src))
 }
 
 // read a block of pixels from the frame buffer
@@ -9089,6 +9114,7 @@ func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
 	gpBindVertexBuffer = (C.GPBINDVERTEXBUFFER)(getProcAddr("glBindVertexBuffer"))
 	gpBindVertexBuffers = (C.GPBINDVERTEXBUFFERS)(getProcAddr("glBindVertexBuffers"))
 	gpBitmapxOES = (C.GPBITMAPXOES)(getProcAddr("glBitmapxOES"))
+	gpBlendBarrierKHR = (C.GPBLENDBARRIERKHR)(getProcAddr("glBlendBarrierKHR"))
 	gpBlendBarrierNV = (C.GPBLENDBARRIERNV)(getProcAddr("glBlendBarrierNV"))
 	gpBlendColor = (C.GPBLENDCOLOR)(getProcAddr("glBlendColor"))
 	if gpBlendColor == nil {
