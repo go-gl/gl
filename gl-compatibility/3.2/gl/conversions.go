@@ -34,7 +34,7 @@ func Ptr(data interface{}) unsafe.Pointer {
 	case reflect.Array:
 		addr = unsafe.Pointer(v.UnsafeAddr())
 	default:
-		panic(fmt.Sprintf("Unsupproted type %s; must be a pointer, slice, or array", v.Type()))
+		panic(fmt.Sprintf("Unsupported type %s; must be a pointer, slice, or array", v.Type()))
 	}
 	return addr
 }
