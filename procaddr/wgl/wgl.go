@@ -3,6 +3,7 @@ package wgl
 // #cgo windows LDFLAGS: -lopengl32
 // #define WIN32_LEAN_AND_MEAN 1
 // #include <windows.h>
+// #include <stdlib.h>
 // static HMODULE ogl32dll = NULL;
 // void* GlowGetProcAddress(const char* name) {
 // 	void* pf = wglGetProcAddress((LPCSTR)name);
