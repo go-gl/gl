@@ -11272,10 +11272,9 @@ package gl
 import "C"
 import (
 	"errors"
-	"unsafe"
-
 	"github.com/go-gl/glow/procaddr"
 	"github.com/go-gl/glow/procaddr/auto"
+	"unsafe"
 )
 
 const (
@@ -18776,7 +18775,7 @@ func ActiveTexture(texture uint32) {
 func ActiveTextureARB(texture uint32) {
 	C.glowActiveTextureARB(gpActiveTextureARB, (C.GLenum)(texture))
 }
-func ActiveVaryingNV(program uint32, name *int8) {
+func ActiveVaryingNV(program uint32, name *uint8) {
 	C.glowActiveVaryingNV(gpActiveVaryingNV, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func AlphaFragmentOp1ATI(op uint32, dst uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32) {
@@ -18893,10 +18892,10 @@ func BeginVideoCaptureNV(video_capture_slot uint32) {
 }
 
 // Associates a generic vertex attribute index with a named attribute variable
-func BindAttribLocation(program uint32, index uint32, name *int8) {
+func BindAttribLocation(program uint32, index uint32, name *uint8) {
 	C.glowBindAttribLocation(gpBindAttribLocation, (C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func BindAttribLocationARB(programObj uintptr, index uint32, name *int8) {
+func BindAttribLocationARB(programObj uintptr, index uint32, name *uint8) {
 	C.glowBindAttribLocationARB(gpBindAttribLocationARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
 
@@ -18947,15 +18946,15 @@ func BindBuffersRange(target uint32, first uint32, count int32, buffers *uint32,
 }
 
 // bind a user-defined varying out variable to a fragment shader color number
-func BindFragDataLocation(program uint32, color uint32, name *int8) {
+func BindFragDataLocation(program uint32, color uint32, name *uint8) {
 	C.glowBindFragDataLocation(gpBindFragDataLocation, (C.GLuint)(program), (C.GLuint)(color), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func BindFragDataLocationEXT(program uint32, color uint32, name *int8) {
+func BindFragDataLocationEXT(program uint32, color uint32, name *uint8) {
 	C.glowBindFragDataLocationEXT(gpBindFragDataLocationEXT, (C.GLuint)(program), (C.GLuint)(color), (*C.GLchar)(unsafe.Pointer(name)))
 }
 
 // bind a user-defined varying out variable to a fragment shader color number and index
-func BindFragDataLocationIndexed(program uint32, colorNumber uint32, index uint32, name *int8) {
+func BindFragDataLocationIndexed(program uint32, colorNumber uint32, index uint32, name *uint8) {
 	C.glowBindFragDataLocationIndexed(gpBindFragDataLocationIndexed, (C.GLuint)(program), (C.GLuint)(colorNumber), (C.GLuint)(index), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func BindFragmentShaderATI(id uint32) {
@@ -19706,7 +19705,7 @@ func CompileShader(shader uint32) {
 func CompileShaderARB(shaderObj uintptr) {
 	C.glowCompileShaderARB(gpCompileShaderARB, (C.GLhandleARB)(shaderObj))
 }
-func CompileShaderIncludeARB(shader uint32, count int32, path **int8, length *int32) {
+func CompileShaderIncludeARB(shader uint32, count int32, path **uint8, length *int32) {
 	C.glowCompileShaderIncludeARB(gpCompileShaderIncludeARB, (C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(path)), (*C.GLint)(unsafe.Pointer(length)))
 }
 func CompressedMultiTexImage1DEXT(texunit uint32, target uint32, level int32, internalformat uint32, width int32, border int32, imageSize int32, bits unsafe.Pointer) {
@@ -20062,17 +20061,17 @@ func CreateShaderObjectARB(shaderType uint32) uintptr {
 	ret := C.glowCreateShaderObjectARB(gpCreateShaderObjectARB, (C.GLenum)(shaderType))
 	return (uintptr)(ret)
 }
-func CreateShaderProgramEXT(xtype uint32, xstring *int8) uint32 {
+func CreateShaderProgramEXT(xtype uint32, xstring *uint8) uint32 {
 	ret := C.glowCreateShaderProgramEXT(gpCreateShaderProgramEXT, (C.GLenum)(xtype), (*C.GLchar)(unsafe.Pointer(xstring)))
 	return (uint32)(ret)
 }
 
 // create a stand-alone program from an array of null-terminated source code strings
-func CreateShaderProgramv(xtype uint32, count int32, strings **int8) uint32 {
+func CreateShaderProgramv(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramv(gpCreateShaderProgramv, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
 }
-func CreateShaderProgramvEXT(xtype uint32, count int32, strings **int8) uint32 {
+func CreateShaderProgramvEXT(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramvEXT(gpCreateShaderProgramvEXT, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
 }
@@ -20142,16 +20141,16 @@ func DebugMessageEnableAMD(category uint32, severity uint32, count int32, ids *u
 }
 
 // inject an application-supplied message into the debug message queue
-func DebugMessageInsert(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *int8) {
+func DebugMessageInsert(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsert(gpDebugMessageInsert, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-func DebugMessageInsertAMD(category uint32, severity uint32, id uint32, length int32, buf *int8) {
+func DebugMessageInsertAMD(category uint32, severity uint32, id uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsertAMD(gpDebugMessageInsertAMD, (C.GLenum)(category), (C.GLenum)(severity), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-func DebugMessageInsertARB(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *int8) {
+func DebugMessageInsertARB(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsertARB(gpDebugMessageInsertARB, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-func DebugMessageInsertKHR(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *int8) {
+func DebugMessageInsertKHR(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsertKHR(gpDebugMessageInsertKHR, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
 func DeformSGIX(mask uint32) {
@@ -20196,7 +20195,7 @@ func DeleteFramebuffersEXT(n int32, framebuffers *uint32) {
 func DeleteLists(list uint32, xrange int32) {
 	C.glowDeleteLists(gpDeleteLists, (C.GLuint)(list), (C.GLsizei)(xrange))
 }
-func DeleteNamedStringARB(namelen int32, name *int8) {
+func DeleteNamedStringARB(namelen int32, name *uint8) {
 	C.glowDeleteNamedStringARB(gpDeleteNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func DeleteNamesAMD(identifier uint32, num uint32, names *uint32) {
@@ -21143,20 +21142,20 @@ func GetActiveAtomicCounterBufferiv(program uint32, bufferIndex uint32, pname ui
 }
 
 // Returns information about an active attribute variable for the specified program object
-func GetActiveAttrib(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveAttrib(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveAttrib(gpGetActiveAttrib, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func GetActiveAttribARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveAttribARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveAttribARB(gpGetActiveAttribARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
 
 // query the name of an active shader subroutine
-func GetActiveSubroutineName(program uint32, shadertype uint32, index uint32, bufsize int32, length *int32, name *int8) {
+func GetActiveSubroutineName(program uint32, shadertype uint32, index uint32, bufsize int32, length *int32, name *uint8) {
 	C.glowGetActiveSubroutineName(gpGetActiveSubroutineName, (C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLsizei)(bufsize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
 }
 
 // query the name of an active shader subroutine uniform
-func GetActiveSubroutineUniformName(program uint32, shadertype uint32, index uint32, bufsize int32, length *int32, name *int8) {
+func GetActiveSubroutineUniformName(program uint32, shadertype uint32, index uint32, bufsize int32, length *int32, name *uint8) {
 	C.glowGetActiveSubroutineUniformName(gpGetActiveSubroutineUniformName, (C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLsizei)(bufsize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func GetActiveSubroutineUniformiv(program uint32, shadertype uint32, index uint32, pname uint32, values *int32) {
@@ -21164,15 +21163,15 @@ func GetActiveSubroutineUniformiv(program uint32, shadertype uint32, index uint3
 }
 
 // Returns information about an active uniform variable for the specified program object
-func GetActiveUniform(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveUniform(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveUniform(gpGetActiveUniform, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func GetActiveUniformARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveUniformARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveUniformARB(gpGetActiveUniformARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
 
 // retrieve the name of an active uniform block
-func GetActiveUniformBlockName(program uint32, uniformBlockIndex uint32, bufSize int32, length *int32, uniformBlockName *int8) {
+func GetActiveUniformBlockName(program uint32, uniformBlockIndex uint32, bufSize int32, length *int32, uniformBlockName *uint8) {
 	C.glowGetActiveUniformBlockName(gpGetActiveUniformBlockName, (C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(uniformBlockName)))
 }
 func GetActiveUniformBlockiv(program uint32, uniformBlockIndex uint32, pname uint32, params *int32) {
@@ -21180,7 +21179,7 @@ func GetActiveUniformBlockiv(program uint32, uniformBlockIndex uint32, pname uin
 }
 
 // query the name of an active uniform
-func GetActiveUniformName(program uint32, uniformIndex uint32, bufSize int32, length *int32, uniformName *int8) {
+func GetActiveUniformName(program uint32, uniformIndex uint32, bufSize int32, length *int32, uniformName *uint8) {
 	C.glowGetActiveUniformName(gpGetActiveUniformName, (C.GLuint)(program), (C.GLuint)(uniformIndex), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(uniformName)))
 }
 
@@ -21188,7 +21187,7 @@ func GetActiveUniformName(program uint32, uniformIndex uint32, bufSize int32, le
 func GetActiveUniformsiv(program uint32, uniformCount int32, uniformIndices *uint32, pname uint32, params *int32) {
 	C.glowGetActiveUniformsiv(gpGetActiveUniformsiv, (C.GLuint)(program), (C.GLsizei)(uniformCount), (*C.GLuint)(unsafe.Pointer(uniformIndices)), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetActiveVaryingNV(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetActiveVaryingNV(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveVaryingNV(gpGetActiveVaryingNV, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLsizei)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func GetArrayObjectfvATI(array uint32, pname uint32, params *float32) {
@@ -21207,11 +21206,11 @@ func GetAttachedShaders(program uint32, maxCount int32, count *int32, shaders *u
 }
 
 // Returns the location of an attribute variable
-func GetAttribLocation(program uint32, name *int8) int32 {
+func GetAttribLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetAttribLocation(gpGetAttribLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-func GetAttribLocationARB(programObj uintptr, name *int8) int32 {
+func GetAttribLocationARB(programObj uintptr, name *uint8) int32 {
 	ret := C.glowGetAttribLocationARB(gpGetAttribLocationARB, (C.GLhandleARB)(programObj), (*C.GLcharARB)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
@@ -21360,19 +21359,19 @@ func GetConvolutionParameterxvOES(target uint32, pname uint32, params *int32) {
 }
 
 // retrieve messages from the debug message log
-func GetDebugMessageLog(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *int8) uint32 {
+func GetDebugMessageLog(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *uint8) uint32 {
 	ret := C.glowGetDebugMessageLog(gpGetDebugMessageLog, (C.GLuint)(count), (C.GLsizei)(bufSize), (*C.GLenum)(unsafe.Pointer(sources)), (*C.GLenum)(unsafe.Pointer(types)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLenum)(unsafe.Pointer(severities)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(messageLog)))
 	return (uint32)(ret)
 }
-func GetDebugMessageLogAMD(count uint32, bufsize int32, categories *uint32, severities *uint32, ids *uint32, lengths *int32, message *int8) uint32 {
+func GetDebugMessageLogAMD(count uint32, bufsize int32, categories *uint32, severities *uint32, ids *uint32, lengths *int32, message *uint8) uint32 {
 	ret := C.glowGetDebugMessageLogAMD(gpGetDebugMessageLogAMD, (C.GLuint)(count), (C.GLsizei)(bufsize), (*C.GLenum)(unsafe.Pointer(categories)), (*C.GLuint)(unsafe.Pointer(severities)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(message)))
 	return (uint32)(ret)
 }
-func GetDebugMessageLogARB(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *int8) uint32 {
+func GetDebugMessageLogARB(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *uint8) uint32 {
 	ret := C.glowGetDebugMessageLogARB(gpGetDebugMessageLogARB, (C.GLuint)(count), (C.GLsizei)(bufSize), (*C.GLenum)(unsafe.Pointer(sources)), (*C.GLenum)(unsafe.Pointer(types)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLenum)(unsafe.Pointer(severities)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(messageLog)))
 	return (uint32)(ret)
 }
-func GetDebugMessageLogKHR(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *int8) uint32 {
+func GetDebugMessageLogKHR(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *uint8) uint32 {
 	ret := C.glowGetDebugMessageLogKHR(gpGetDebugMessageLogKHR, (C.GLuint)(count), (C.GLsizei)(bufSize), (*C.GLenum)(unsafe.Pointer(sources)), (*C.GLenum)(unsafe.Pointer(types)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLenum)(unsafe.Pointer(severities)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(messageLog)))
 	return (uint32)(ret)
 }
@@ -21429,17 +21428,17 @@ func GetFogFuncSGIS(points *float32) {
 }
 
 // query the bindings of color indices to user-defined varying out variables
-func GetFragDataIndex(program uint32, name *int8) int32 {
+func GetFragDataIndex(program uint32, name *uint8) int32 {
 	ret := C.glowGetFragDataIndex(gpGetFragDataIndex, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
 
 // query the bindings of color numbers to user-defined varying out variables
-func GetFragDataLocation(program uint32, name *int8) int32 {
+func GetFragDataLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetFragDataLocation(gpGetFragDataLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-func GetFragDataLocationEXT(program uint32, name *int8) int32 {
+func GetFragDataLocationEXT(program uint32, name *uint8) int32 {
 	ret := C.glowGetFragDataLocationEXT(gpGetFragDataLocationEXT, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
@@ -21526,7 +21525,7 @@ func GetImageTransformParameterfvHP(target uint32, pname uint32, params *float32
 func GetImageTransformParameterivHP(target uint32, pname uint32, params *int32) {
 	C.glowGetImageTransformParameterivHP(gpGetImageTransformParameterivHP, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetInfoLogARB(obj uintptr, maxLength int32, length *int32, infoLog *int8) {
+func GetInfoLogARB(obj uintptr, maxLength int32, length *int32, infoLog *uint8) {
 	C.glowGetInfoLogARB(gpGetInfoLogARB, (C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLcharARB)(unsafe.Pointer(infoLog)))
 }
 func GetInstrumentsSGIX() int32 {
@@ -21773,10 +21772,10 @@ func GetNamedRenderbufferParameteriv(renderbuffer uint32, pname uint32, params *
 func GetNamedRenderbufferParameterivEXT(renderbuffer uint32, pname uint32, params *int32) {
 	C.glowGetNamedRenderbufferParameterivEXT(gpGetNamedRenderbufferParameterivEXT, (C.GLuint)(renderbuffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetNamedStringARB(namelen int32, name *int8, bufSize int32, stringlen *int32, xstring *int8) {
+func GetNamedStringARB(namelen int32, name *uint8, bufSize int32, stringlen *int32, xstring *uint8) {
 	C.glowGetNamedStringARB(gpGetNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(stringlen)), (*C.GLchar)(unsafe.Pointer(xstring)))
 }
-func GetNamedStringivARB(namelen int32, name *int8, pname uint32, params *int32) {
+func GetNamedStringivARB(namelen int32, name *uint8, pname uint32, params *int32) {
 	C.glowGetNamedStringivARB(gpGetNamedStringivARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
 func GetNextPerfQueryIdINTEL(queryId uint32, nextQueryId *uint32) {
@@ -21790,13 +21789,13 @@ func GetObjectBufferivATI(buffer uint32, pname uint32, params *int32) {
 }
 
 // retrieve the label of a named object identified within a namespace
-func GetObjectLabel(identifier uint32, name uint32, bufSize int32, length *int32, label *int8) {
+func GetObjectLabel(identifier uint32, name uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabel(gpGetObjectLabel, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func GetObjectLabelEXT(xtype uint32, object uint32, bufSize int32, length *int32, label *int8) {
+func GetObjectLabelEXT(xtype uint32, object uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabelEXT(gpGetObjectLabelEXT, (C.GLenum)(xtype), (C.GLuint)(object), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func GetObjectLabelKHR(identifier uint32, name uint32, bufSize int32, length *int32, label *int8) {
+func GetObjectLabelKHR(identifier uint32, name uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabelKHR(gpGetObjectLabelKHR, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
 func GetObjectParameterfvARB(obj uintptr, pname uint32, params *float32) {
@@ -21810,10 +21809,10 @@ func GetObjectParameterivARB(obj uintptr, pname uint32, params *int32) {
 }
 
 // retrieve the label of a sync object identified by a pointer
-func GetObjectPtrLabel(ptr unsafe.Pointer, bufSize int32, length *int32, label *int8) {
+func GetObjectPtrLabel(ptr unsafe.Pointer, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectPtrLabel(gpGetObjectPtrLabel, ptr, (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func GetObjectPtrLabelKHR(ptr unsafe.Pointer, bufSize int32, length *int32, label *int8) {
+func GetObjectPtrLabelKHR(ptr unsafe.Pointer, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectPtrLabelKHR(gpGetObjectPtrLabelKHR, ptr, (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
 func GetOcclusionQueryivNV(id uint32, pname uint32, params *int32) {
@@ -21862,7 +21861,7 @@ func GetPathTexGenfvNV(texCoordSet uint32, pname uint32, value *float32) {
 func GetPathTexGenivNV(texCoordSet uint32, pname uint32, value *int32) {
 	C.glowGetPathTexGenivNV(gpGetPathTexGenivNV, (C.GLenum)(texCoordSet), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(value)))
 }
-func GetPerfCounterInfoINTEL(queryId uint32, counterId uint32, counterNameLength uint32, counterName *int8, counterDescLength uint32, counterDesc *int8, counterOffset *uint32, counterDataSize *uint32, counterTypeEnum *uint32, counterDataTypeEnum *uint32, rawCounterMaxValue *uint64) {
+func GetPerfCounterInfoINTEL(queryId uint32, counterId uint32, counterNameLength uint32, counterName *uint8, counterDescLength uint32, counterDesc *uint8, counterOffset *uint32, counterDataSize *uint32, counterTypeEnum *uint32, counterDataTypeEnum *uint32, rawCounterMaxValue *uint64) {
 	C.glowGetPerfCounterInfoINTEL(gpGetPerfCounterInfoINTEL, (C.GLuint)(queryId), (C.GLuint)(counterId), (C.GLuint)(counterNameLength), (*C.GLchar)(unsafe.Pointer(counterName)), (C.GLuint)(counterDescLength), (*C.GLchar)(unsafe.Pointer(counterDesc)), (*C.GLuint)(unsafe.Pointer(counterOffset)), (*C.GLuint)(unsafe.Pointer(counterDataSize)), (*C.GLuint)(unsafe.Pointer(counterTypeEnum)), (*C.GLuint)(unsafe.Pointer(counterDataTypeEnum)), (*C.GLuint64)(unsafe.Pointer(rawCounterMaxValue)))
 }
 func GetPerfMonitorCounterDataAMD(monitor uint32, pname uint32, dataSize int32, data *uint32, bytesWritten *int32) {
@@ -21871,13 +21870,13 @@ func GetPerfMonitorCounterDataAMD(monitor uint32, pname uint32, dataSize int32, 
 func GetPerfMonitorCounterInfoAMD(group uint32, counter uint32, pname uint32, data unsafe.Pointer) {
 	C.glowGetPerfMonitorCounterInfoAMD(gpGetPerfMonitorCounterInfoAMD, (C.GLuint)(group), (C.GLuint)(counter), (C.GLenum)(pname), data)
 }
-func GetPerfMonitorCounterStringAMD(group uint32, counter uint32, bufSize int32, length *int32, counterString *int8) {
+func GetPerfMonitorCounterStringAMD(group uint32, counter uint32, bufSize int32, length *int32, counterString *uint8) {
 	C.glowGetPerfMonitorCounterStringAMD(gpGetPerfMonitorCounterStringAMD, (C.GLuint)(group), (C.GLuint)(counter), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(counterString)))
 }
 func GetPerfMonitorCountersAMD(group uint32, numCounters *int32, maxActiveCounters *int32, counterSize int32, counters *uint32) {
 	C.glowGetPerfMonitorCountersAMD(gpGetPerfMonitorCountersAMD, (C.GLuint)(group), (*C.GLint)(unsafe.Pointer(numCounters)), (*C.GLint)(unsafe.Pointer(maxActiveCounters)), (C.GLsizei)(counterSize), (*C.GLuint)(unsafe.Pointer(counters)))
 }
-func GetPerfMonitorGroupStringAMD(group uint32, bufSize int32, length *int32, groupString *int8) {
+func GetPerfMonitorGroupStringAMD(group uint32, bufSize int32, length *int32, groupString *uint8) {
 	C.glowGetPerfMonitorGroupStringAMD(gpGetPerfMonitorGroupStringAMD, (C.GLuint)(group), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(groupString)))
 }
 func GetPerfMonitorGroupsAMD(numGroups *int32, groupsSize int32, groups *uint32) {
@@ -21886,10 +21885,10 @@ func GetPerfMonitorGroupsAMD(numGroups *int32, groupsSize int32, groups *uint32)
 func GetPerfQueryDataINTEL(queryHandle uint32, flags uint32, dataSize int32, data unsafe.Pointer, bytesWritten *uint32) {
 	C.glowGetPerfQueryDataINTEL(gpGetPerfQueryDataINTEL, (C.GLuint)(queryHandle), (C.GLuint)(flags), (C.GLsizei)(dataSize), data, (*C.GLuint)(unsafe.Pointer(bytesWritten)))
 }
-func GetPerfQueryIdByNameINTEL(queryName *int8, queryId *uint32) {
+func GetPerfQueryIdByNameINTEL(queryName *uint8, queryId *uint32) {
 	C.glowGetPerfQueryIdByNameINTEL(gpGetPerfQueryIdByNameINTEL, (*C.GLchar)(unsafe.Pointer(queryName)), (*C.GLuint)(unsafe.Pointer(queryId)))
 }
-func GetPerfQueryInfoINTEL(queryId uint32, queryNameLength uint32, queryName *int8, dataSize *uint32, noCounters *uint32, noInstances *uint32, capsMask *uint32) {
+func GetPerfQueryInfoINTEL(queryId uint32, queryNameLength uint32, queryName *uint8, dataSize *uint32, noCounters *uint32, noInstances *uint32, capsMask *uint32) {
 	C.glowGetPerfQueryInfoINTEL(gpGetPerfQueryInfoINTEL, (C.GLuint)(queryId), (C.GLuint)(queryNameLength), (*C.GLchar)(unsafe.Pointer(queryName)), (*C.GLuint)(unsafe.Pointer(dataSize)), (*C.GLuint)(unsafe.Pointer(noCounters)), (*C.GLuint)(unsafe.Pointer(noInstances)), (*C.GLuint)(unsafe.Pointer(capsMask)))
 }
 func GetPixelMapfv(xmap uint32, values *float32) {
@@ -21957,7 +21956,7 @@ func GetProgramEnvParameterfvARB(target uint32, index uint32, params *float32) {
 }
 
 // Returns the information log for a program object
-func GetProgramInfoLog(program uint32, bufSize int32, length *int32, infoLog *int8) {
+func GetProgramInfoLog(program uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramInfoLog(gpGetProgramInfoLog, (C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
 func GetProgramInterfaceiv(program uint32, programInterface uint32, pname uint32, params *int32) {
@@ -21989,10 +21988,10 @@ func GetProgramParameterfvNV(target uint32, index uint32, pname uint32, params *
 }
 
 // retrieve the info log string from a program pipeline object
-func GetProgramPipelineInfoLog(pipeline uint32, bufSize int32, length *int32, infoLog *int8) {
+func GetProgramPipelineInfoLog(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramPipelineInfoLog(gpGetProgramPipelineInfoLog, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-func GetProgramPipelineInfoLogEXT(pipeline uint32, bufSize int32, length *int32, infoLog *int8) {
+func GetProgramPipelineInfoLogEXT(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramPipelineInfoLogEXT(gpGetProgramPipelineInfoLogEXT, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
 func GetProgramPipelineiv(pipeline uint32, pname uint32, params *int32) {
@@ -22003,25 +22002,25 @@ func GetProgramPipelineivEXT(pipeline uint32, pname uint32, params *int32) {
 }
 
 // query the index of a named resource within a program
-func GetProgramResourceIndex(program uint32, programInterface uint32, name *int8) uint32 {
+func GetProgramResourceIndex(program uint32, programInterface uint32, name *uint8) uint32 {
 	ret := C.glowGetProgramResourceIndex(gpGetProgramResourceIndex, (C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(unsafe.Pointer(name)))
 	return (uint32)(ret)
 }
 
 // query the location of a named resource within a program
-func GetProgramResourceLocation(program uint32, programInterface uint32, name *int8) int32 {
+func GetProgramResourceLocation(program uint32, programInterface uint32, name *uint8) int32 {
 	ret := C.glowGetProgramResourceLocation(gpGetProgramResourceLocation, (C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
 
 // query the fragment color index of a named variable within a program
-func GetProgramResourceLocationIndex(program uint32, programInterface uint32, name *int8) int32 {
+func GetProgramResourceLocationIndex(program uint32, programInterface uint32, name *uint8) int32 {
 	ret := C.glowGetProgramResourceLocationIndex(gpGetProgramResourceLocationIndex, (C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
 
 // query the name of an indexed resource within a program
-func GetProgramResourceName(program uint32, programInterface uint32, index uint32, bufSize int32, length *int32, name *int8) {
+func GetProgramResourceName(program uint32, programInterface uint32, index uint32, bufSize int32, length *int32, name *uint8) {
 	C.glowGetProgramResourceName(gpGetProgramResourceName, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func GetProgramResourcefvNV(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, bufSize int32, length *int32, params *float32) {
@@ -22120,7 +22119,7 @@ func GetSeparableFilterEXT(target uint32, format uint32, xtype uint32, row unsaf
 }
 
 // Returns the information log for a shader object
-func GetShaderInfoLog(shader uint32, bufSize int32, length *int32, infoLog *int8) {
+func GetShaderInfoLog(shader uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetShaderInfoLog(gpGetShaderInfoLog, (C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
 
@@ -22130,10 +22129,10 @@ func GetShaderPrecisionFormat(shadertype uint32, precisiontype uint32, xrange *i
 }
 
 // Returns the source code string from a shader object
-func GetShaderSource(shader uint32, bufSize int32, length *int32, source *int8) {
+func GetShaderSource(shader uint32, bufSize int32, length *int32, source *uint8) {
 	C.glowGetShaderSource(gpGetShaderSource, (C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(source)))
 }
-func GetShaderSourceARB(obj uintptr, maxLength int32, length *int32, source *int8) {
+func GetShaderSourceARB(obj uintptr, maxLength int32, length *int32, source *uint8) {
 	C.glowGetShaderSourceARB(gpGetShaderSourceARB, (C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLcharARB)(unsafe.Pointer(source)))
 }
 
@@ -22156,13 +22155,13 @@ func GetStringi(name uint32, index uint32) *uint8 {
 }
 
 // retrieve the index of a subroutine uniform of a given shader stage within a program
-func GetSubroutineIndex(program uint32, shadertype uint32, name *int8) uint32 {
+func GetSubroutineIndex(program uint32, shadertype uint32, name *uint8) uint32 {
 	ret := C.glowGetSubroutineIndex(gpGetSubroutineIndex, (C.GLuint)(program), (C.GLenum)(shadertype), (*C.GLchar)(unsafe.Pointer(name)))
 	return (uint32)(ret)
 }
 
 // retrieve the location of a subroutine uniform of a given shader stage within a program
-func GetSubroutineUniformLocation(program uint32, shadertype uint32, name *int8) int32 {
+func GetSubroutineUniformLocation(program uint32, shadertype uint32, name *uint8) int32 {
 	ret := C.glowGetSubroutineUniformLocation(gpGetSubroutineUniformLocation, (C.GLuint)(program), (C.GLenum)(shadertype), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
@@ -22309,10 +22308,10 @@ func GetTrackMatrixivNV(target uint32, address uint32, pname uint32, params *int
 }
 
 // retrieve information about varying variables selected for transform feedback
-func GetTransformFeedbackVarying(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetTransformFeedbackVarying(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetTransformFeedbackVarying(gpGetTransformFeedbackVarying, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLsizei)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func GetTransformFeedbackVaryingEXT(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *int8) {
+func GetTransformFeedbackVaryingEXT(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetTransformFeedbackVaryingEXT(gpGetTransformFeedbackVaryingEXT, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLsizei)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
 func GetTransformFeedbackVaryingNV(program uint32, index uint32, location *int32) {
@@ -22331,7 +22330,7 @@ func GetTransformFeedbackiv(xfb uint32, pname uint32, param *int32) {
 }
 
 // retrieve the index of a named uniform block
-func GetUniformBlockIndex(program uint32, uniformBlockName *int8) uint32 {
+func GetUniformBlockIndex(program uint32, uniformBlockName *uint8) uint32 {
 	ret := C.glowGetUniformBlockIndex(gpGetUniformBlockIndex, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(uniformBlockName)))
 	return (uint32)(ret)
 }
@@ -22341,16 +22340,16 @@ func GetUniformBufferSizeEXT(program uint32, location int32) int32 {
 }
 
 // retrieve the index of a named uniform block
-func GetUniformIndices(program uint32, uniformCount int32, uniformNames **int8, uniformIndices *uint32) {
+func GetUniformIndices(program uint32, uniformCount int32, uniformNames **uint8, uniformIndices *uint32) {
 	C.glowGetUniformIndices(gpGetUniformIndices, (C.GLuint)(program), (C.GLsizei)(uniformCount), (**C.GLchar)(unsafe.Pointer(uniformNames)), (*C.GLuint)(unsafe.Pointer(uniformIndices)))
 }
 
 // Returns the location of a uniform variable
-func GetUniformLocation(program uint32, name *int8) int32 {
+func GetUniformLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetUniformLocation(gpGetUniformLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-func GetUniformLocationARB(programObj uintptr, name *int8) int32 {
+func GetUniformLocationARB(programObj uintptr, name *uint8) int32 {
 	ret := C.glowGetUniformLocationARB(gpGetUniformLocationARB, (C.GLhandleARB)(programObj), (*C.GLcharARB)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
@@ -22410,7 +22409,7 @@ func GetVariantIntegervEXT(id uint32, value uint32, data *int32) {
 func GetVariantPointervEXT(id uint32, value uint32, data *unsafe.Pointer) {
 	C.glowGetVariantPointervEXT(gpGetVariantPointervEXT, (C.GLuint)(id), (C.GLenum)(value), data)
 }
-func GetVaryingLocationNV(program uint32, name *int8) int32 {
+func GetVaryingLocationNV(program uint32, name *uint8) int32 {
 	ret := C.glowGetVaryingLocationNV(gpGetVaryingLocationNV, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
@@ -22744,7 +22743,7 @@ func InitNames() {
 func InsertComponentEXT(res uint32, src uint32, num uint32) {
 	C.glowInsertComponentEXT(gpInsertComponentEXT, (C.GLuint)(res), (C.GLuint)(src), (C.GLuint)(num))
 }
-func InsertEventMarkerEXT(length int32, marker *int8) {
+func InsertEventMarkerEXT(length int32, marker *uint8) {
 	C.glowInsertEventMarkerEXT(gpInsertEventMarkerEXT, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(marker)))
 }
 func InstrumentsBufferSGIX(size int32, buffer *int32) {
@@ -22868,7 +22867,7 @@ func IsNamedBufferResidentNV(buffer uint32) bool {
 	ret := C.glowIsNamedBufferResidentNV(gpIsNamedBufferResidentNV, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-func IsNamedStringARB(namelen int32, name *int8) bool {
+func IsNamedStringARB(namelen int32, name *uint8) bool {
 	ret := C.glowIsNamedStringARB(gpIsNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)))
 	return ret == TRUE
 }
@@ -23000,7 +22999,7 @@ func IsVertexAttribEnabledAPPLE(index uint32, pname uint32) bool {
 	ret := C.glowIsVertexAttribEnabledAPPLE(gpIsVertexAttribEnabledAPPLE, (C.GLuint)(index), (C.GLenum)(pname))
 	return ret == TRUE
 }
-func LabelObjectEXT(xtype uint32, object uint32, length int32, label *int8) {
+func LabelObjectEXT(xtype uint32, object uint32, length int32, label *uint8) {
 	C.glowLabelObjectEXT(gpLabelObjectEXT, (C.GLenum)(xtype), (C.GLuint)(object), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
 func LightEnviSGIX(pname uint32, param int32) {
@@ -24001,7 +24000,7 @@ func NamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer uint32, coverag
 func NamedRenderbufferStorageMultisampleEXT(renderbuffer uint32, samples int32, internalformat uint32, width int32, height int32) {
 	C.glowNamedRenderbufferStorageMultisampleEXT(gpNamedRenderbufferStorageMultisampleEXT, (C.GLuint)(renderbuffer), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-func NamedStringARB(xtype uint32, namelen int32, name *int8, stringlen int32, xstring *int8) {
+func NamedStringARB(xtype uint32, namelen int32, name *uint8, stringlen int32, xstring *uint8) {
 	C.glowNamedStringARB(gpNamedStringARB, (C.GLenum)(xtype), (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLint)(stringlen), (*C.GLchar)(unsafe.Pointer(xstring)))
 }
 
@@ -24116,18 +24115,18 @@ func NormalStream3svATI(stream uint32, coords *int16) {
 }
 
 // label a named object identified within a namespace
-func ObjectLabel(identifier uint32, name uint32, length int32, label *int8) {
+func ObjectLabel(identifier uint32, name uint32, length int32, label *uint8) {
 	C.glowObjectLabel(gpObjectLabel, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func ObjectLabelKHR(identifier uint32, name uint32, length int32, label *int8) {
+func ObjectLabelKHR(identifier uint32, name uint32, length int32, label *uint8) {
 	C.glowObjectLabelKHR(gpObjectLabelKHR, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
 
 // label a a sync object identified by a pointer
-func ObjectPtrLabel(ptr unsafe.Pointer, length int32, label *int8) {
+func ObjectPtrLabel(ptr unsafe.Pointer, length int32, label *uint8) {
 	C.glowObjectPtrLabel(gpObjectPtrLabel, ptr, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func ObjectPtrLabelKHR(ptr unsafe.Pointer, length int32, label *int8) {
+func ObjectPtrLabelKHR(ptr unsafe.Pointer, length int32, label *uint8) {
 	C.glowObjectPtrLabelKHR(gpObjectPtrLabelKHR, ptr, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
 func ObjectPurgeableAPPLE(objectType uint32, name uint32, option uint32) uint32 {
@@ -25034,13 +25033,13 @@ func PushClientAttribDefaultEXT(mask uint32) {
 }
 
 // push a named debug group into the command stream
-func PushDebugGroup(source uint32, id uint32, length int32, message *int8) {
+func PushDebugGroup(source uint32, id uint32, length int32, message *uint8) {
 	C.glowPushDebugGroup(gpPushDebugGroup, (C.GLenum)(source), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(message)))
 }
-func PushDebugGroupKHR(source uint32, id uint32, length int32, message *int8) {
+func PushDebugGroupKHR(source uint32, id uint32, length int32, message *uint8) {
 	C.glowPushDebugGroupKHR(gpPushDebugGroupKHR, (C.GLenum)(source), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(message)))
 }
-func PushGroupMarkerEXT(length int32, marker *int8) {
+func PushGroupMarkerEXT(length int32, marker *uint8) {
 	C.glowPushGroupMarkerEXT(gpPushGroupMarkerEXT, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(marker)))
 }
 
@@ -25607,10 +25606,10 @@ func ShaderOp3EXT(op uint32, res uint32, arg1 uint32, arg2 uint32, arg3 uint32) 
 }
 
 // Replaces the source code in a shader object
-func ShaderSource(shader uint32, count int32, xstring **int8, length *int32) {
+func ShaderSource(shader uint32, count int32, xstring **uint8, length *int32) {
 	C.glowShaderSource(gpShaderSource, (C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(xstring)), (*C.GLint)(unsafe.Pointer(length)))
 }
-func ShaderSourceARB(shaderObj uintptr, count int32, xstring **int8, length *int32) {
+func ShaderSourceARB(shaderObj uintptr, count int32, xstring **uint8, length *int32) {
 	C.glowShaderSourceARB(gpShaderSourceARB, (C.GLhandleARB)(shaderObj), (C.GLsizei)(count), (**C.GLcharARB)(unsafe.Pointer(xstring)), (*C.GLint)(unsafe.Pointer(length)))
 }
 
@@ -26412,10 +26411,10 @@ func TransformFeedbackStreamAttribsNV(count int32, attribs *int32, nbuffers int3
 }
 
 // specify values to record in transform feedback buffers
-func TransformFeedbackVaryings(program uint32, count int32, varyings **int8, bufferMode uint32) {
+func TransformFeedbackVaryings(program uint32, count int32, varyings **uint8, bufferMode uint32) {
 	C.glowTransformFeedbackVaryings(gpTransformFeedbackVaryings, (C.GLuint)(program), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(varyings)), (C.GLenum)(bufferMode))
 }
-func TransformFeedbackVaryingsEXT(program uint32, count int32, varyings **int8, bufferMode uint32) {
+func TransformFeedbackVaryingsEXT(program uint32, count int32, varyings **uint8, bufferMode uint32) {
 	C.glowTransformFeedbackVaryingsEXT(gpTransformFeedbackVaryingsEXT, (C.GLuint)(program), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(varyings)), (C.GLenum)(bufferMode))
 }
 func TransformFeedbackVaryingsNV(program uint32, count int32, locations *int32, bufferMode uint32) {
