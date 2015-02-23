@@ -2,7 +2,7 @@
 
 package auto
 
-import "github.com/go-gl/glow/procaddr/darwin"
+import "github.com/go-gl/gl/procaddr/darwin"
 
 func init() {
 	GetProcAddress = darwin.GetProcAddress

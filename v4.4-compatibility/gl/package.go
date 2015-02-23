@@ -11272,8 +11272,8 @@ package gl
 import "C"
 import (
 	"errors"
-	"github.com/go-gl/glow/procaddr"
-	"github.com/go-gl/glow/procaddr/auto"
+	"github.com/go-gl/gl/procaddr"
+	"github.com/go-gl/gl/procaddr/auto"
 	"unsafe"
 )
 

@@ -8,7 +8,7 @@
 // - noauto: Disable automatic selection
 package auto
 
-import "github.com/go-gl/glow/procaddr"
+import "github.com/go-gl/gl/procaddr"
 
 // Automatically selected GetProcAddressFunc.
 var GetProcAddress procaddr.GetProcAddressFunc
