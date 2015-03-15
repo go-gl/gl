@@ -18,7 +18,7 @@ package gl
 #cgo linux LDFLAGS: -lGL
 #cgo egl CFLAGS: -DTAG_EGL
 #cgo egl LDFLAGS: -lEGL
-#ifdef TAG_WINDOWS
+#if defined(TAG_WINDOWS)
 	#define WIN32_LEAN_AND_MEAN 1
 	#include <windows.h>
 	#include <stdlib.h>
@@ -33,22 +33,19 @@ package gl
 		}
 		return GetProcAddress(ogl32dll, (LPCSTR)name);
 	}
-#endif
-#ifdef TAG_DARWIN
+#elif defined(TAG_DARWIN)
 	#include <stdlib.h>
 	#include <dlfcn.h>
 	void* GlowGetProcAddress(const char* name) {
 		return dlsym(RTLD_DEFAULT, name);
 	}
-#endif
-#ifdef TAG_LINUX
+#elif defined(TAG_LINUX)
 	#include <stdlib.h>
 	#include <GL/glx.h>
 	void* GlowGetProcAddress(const char* name) {
 		return glXGetProcAddress(name);
 	}
-#endif
-#ifdef TAG_EGL
+#elif defined(TAG_EGL)
 	#include <stdlib.h>
 	#include <EGL/egl.h>
 	void* GlowGetProcAddress(const char* name) {
