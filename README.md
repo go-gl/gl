@@ -45,7 +45,9 @@ The `procaddr` package contains platform-specific functions for [loading OpenGL 
 Generating
 ----------
 
-These gl bindings are generated using `glow` generator.
+These gl bindings are generated using `glow` generator. Only developers of this repository need to do this step.
+
+It is required to have glow source in the same Go workspace (since relative paths are used) and the glow generator installed, doable with `go get -u github.com/go-gl/glow`.
 
 ```bash
 go generate -tags=gen github.com/go-gl/gl
