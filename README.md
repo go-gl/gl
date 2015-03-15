@@ -42,7 +42,13 @@ Function Loading
 
 The `procaddr` package contains platform-specific functions for [loading OpenGL functions](https://www.opengl.org/wiki/Load_OpenGL_Functions). Calling `gl.Init()` uses the `auto` subpackage to automatically select an appropriate implementation based on the build environment. If you want to select a specific implementation you can use the `noauto` build tag and the `gl.InitWithProcAddrFunc` initialization function.
 
-More
-----
+Generating
+----------
+
+These gl bindings are generated using `glow` generator.
+
+```bash
+go generate -tags=gen github.com/go-gl/gl
+```
 
 More information about these bindings can be found in the [Glow repository](https://github.com/go-gl/glow).
