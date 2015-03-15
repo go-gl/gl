@@ -37,7 +37,20 @@ Examples
 
 Examples illustrating how to use the bindings are available in the [examples](https://github.com/go-gl/examples) repo. There are examples for [OpenGL 4.1 core](https://github.com/go-gl/examples/blob/master/glfw31-gl41core-cube) and [OpenGL 2.1](https://github.com/go-gl/examples/tree/master/glfw31-gl21-cube).
 
-More
-----
+Function Loading
+----------------
+
+The `procaddr` package contains platform-specific functions for [loading OpenGL functions](https://www.opengl.org/wiki/Load_OpenGL_Functions). Calling `gl.Init()` uses the `auto` subpackage to automatically select an appropriate implementation based on the build environment. If you want to select a specific implementation you can use the `noauto` build tag and the `gl.InitWithProcAddrFunc` initialization function.
+
+Generating
+----------
+
+These gl bindings are generated using the [Glow](https://github.com/go-gl/glow) generator. Only developers of this repository need to do this step.
+
+It is required to have `glow` source in the same Go workspace (since relative paths are used) and the `glow` binary should be in your `$PATH`. Doable with `go get -u github.com/go-gl/glow` if your `$GOPATH/bin` is in your `$PATH`.
+
+```bash
+go generate -tags=gen github.com/go-gl/gl
+```
 
 More information about these bindings can be found in the [Glow repository](https://github.com/go-gl/glow).

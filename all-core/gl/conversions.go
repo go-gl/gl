@@ -11,7 +11,8 @@ import (
 	"unsafe"
 )
 
-// Ptr takes a pointer, slice, or array and returns its GL-compatible address.
+// Ptr takes a slice or pointer (to a singular scalar value or the first
+// element of an array or slice) and returns its GL-compatible address.
 func Ptr(data interface{}) unsafe.Pointer {
 	if data == nil {
 		return unsafe.Pointer(nil)
@@ -32,8 +33,6 @@ func Ptr(data interface{}) unsafe.Pointer {
 		addr = unsafe.Pointer(v.Pointer())
 	case reflect.Slice:
 		addr = unsafe.Pointer(v.Index(0).UnsafeAddr())
-	case reflect.Array:
-		addr = unsafe.Pointer(v.UnsafeAddr())
 	default:
 		panic(fmt.Sprintf("Unsupported type %s; must be a pointer, slice, or array", v.Type()))
 	}
