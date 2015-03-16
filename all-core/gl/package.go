@@ -5250,8 +5250,6 @@ package gl
 // }
 import "C"
 import (
-	"github.com/go-gl/gl/procaddr"
-	"github.com/go-gl/gl/procaddr/auto"
 	"unsafe"
 )
 
@@ -13484,9 +13482,13 @@ func WindowPos3sv(v *int16) {
 	C.glowWindowPos3sv(gpWindowPos3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
 func Init() error {
-	return InitWithProcAddrFunc(auto.GetProcAddress)
+	return InitWithProcAddrFunc(getProcAddress)
 }
-func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
+
+// InitWithProcAddrFunc intializes the package using the specified OpenGL
+// function pointer loading function. For more cases Init should be used
+// instead.
+func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpAccum = (C.GPACCUM)(getProcAddr("glAccum"))
 	gpAccumxOES = (C.GPACCUMXOES)(getProcAddr("glAccumxOES"))
 	gpActiveProgramEXT = (C.GPACTIVEPROGRAMEXT)(getProcAddr("glActiveProgramEXT"))

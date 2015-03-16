@@ -3855,8 +3855,6 @@ package gl
 import "C"
 import (
 	"errors"
-	"github.com/go-gl/gl/procaddr"
-	"github.com/go-gl/gl/procaddr/auto"
 	"unsafe"
 )
 
@@ -10158,9 +10156,13 @@ func WaitSync(sync unsafe.Pointer, flags uint32, timeout uint64) {
 	C.glowWaitSync(gpWaitSync, (C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 }
 func Init() error {
-	return InitWithProcAddrFunc(auto.GetProcAddress)
+	return InitWithProcAddrFunc(getProcAddress)
 }
-func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
+
+// InitWithProcAddrFunc intializes the package using the specified OpenGL
+// function pointer loading function. For more cases Init should be used
+// instead.
+func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpAccumxOES = (C.GPACCUMXOES)(getProcAddr("glAccumxOES"))
 	gpActiveProgramEXT = (C.GPACTIVEPROGRAMEXT)(getProcAddr("glActiveProgramEXT"))
 	gpActiveShaderProgram = (C.GPACTIVESHADERPROGRAM)(getProcAddr("glActiveShaderProgram"))

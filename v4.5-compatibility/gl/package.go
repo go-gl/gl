@@ -11332,8 +11332,6 @@ package gl
 import "C"
 import (
 	"errors"
-	"github.com/go-gl/gl/procaddr"
-	"github.com/go-gl/gl/procaddr/auto"
 	"unsafe"
 )
 
@@ -28368,9 +28366,13 @@ func WriteMaskEXT(res uint32, in uint32, outX uint32, outY uint32, outZ uint32, 
 	C.glowWriteMaskEXT(gpWriteMaskEXT, (C.GLuint)(res), (C.GLuint)(in), (C.GLenum)(outX), (C.GLenum)(outY), (C.GLenum)(outZ), (C.GLenum)(outW))
 }
 func Init() error {
-	return InitWithProcAddrFunc(auto.GetProcAddress)
+	return InitWithProcAddrFunc(getProcAddress)
 }
-func InitWithProcAddrFunc(getProcAddr procaddr.GetProcAddressFunc) error {
+
+// InitWithProcAddrFunc intializes the package using the specified OpenGL
+// function pointer loading function. For more cases Init should be used
+// instead.
+func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpAccum = (C.GPACCUM)(getProcAddr("glAccum"))
 	if gpAccum == nil {
 		return errors.New("glAccum")
