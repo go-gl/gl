@@ -1,5 +1,5 @@
-// This file implements GlowGetProcAddress for each platform. The correct
-// version is chosen automatically based on build tags:
+// This file implements GlowGetProcAddress for every supported platform. The
+// correct version is chosen automatically based on build tags:
 // windows: WGL
 // darwin: CGL
 // linux: GLX
