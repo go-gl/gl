@@ -28246,7 +28246,7 @@ func Init() error {
 
 // InitWithProcAddrFunc intializes the package with the given getProcAddr
 // function. It is for advanced clients who wish to provide their own OpenGL
-// function pointers. For most cases Init will be used instead.
+// function pointers. For most cases Init should be used instead.
 func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpAccum = (C.GPACCUM)(getProcAddr("glAccum"))
 	if gpAccum == nil {

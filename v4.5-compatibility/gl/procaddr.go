@@ -18,20 +18,28 @@ package gl
 #cgo linux LDFLAGS: -lGL
 #cgo egl CFLAGS: -DTAG_EGL
 #cgo egl LDFLAGS: -lEGL
-#if defined(TAG_WINDOWS)
+// Check the EGL tag first as it takes priority over the platform's default
+// configuration of WGL/GLX/CGL.
+#if defined(TAG_EGL)
+	#include <stdlib.h>
+	#include <EGL/egl.h>
+	void* GlowGetProcAddress(const char* name) {
+		return eglGetProcAddress(name);
+	}
+#elif defined(TAG_WINDOWS)
 	#define WIN32_LEAN_AND_MEAN 1
 	#include <windows.h>
 	#include <stdlib.h>
 	static HMODULE ogl32dll = NULL;
 	void* GlowGetProcAddress(const char* name) {
-		void* pf = wglGetProcAddress((LPCSTR)name);
-		if(pf) {
+		void* pf = wglGetProcAddress((LPCSTR) name);
+		if (pf) {
 			return pf;
 		}
-		if(ogl32dll == NULL) {
+		if (ogl32dll == NULL) {
 			ogl32dll = LoadLibraryA("opengl32.dll");
 		}
-		return GetProcAddress(ogl32dll, (LPCSTR)name);
+		return GetProcAddress(ogl32dll, (LPCSTR) name);
 	}
 #elif defined(TAG_DARWIN)
 	#include <stdlib.h>
@@ -44,12 +52,6 @@ package gl
 	#include <GL/glx.h>
 	void* GlowGetProcAddress(const char* name) {
 		return glXGetProcAddress(name);
-	}
-#elif defined(TAG_EGL)
-	#include <stdlib.h>
-	#include <EGL/egl.h>
-	void* GlowGetProcAddress(const char* name) {
-		return eglGetProcAddress(name);
 	}
 #endif
 */
