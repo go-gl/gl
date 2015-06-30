@@ -8,6 +8,9 @@ Features:
 - Support for multiple OpenGL APIs (GL/GLES/EGL/WGL/GLX/EGL), versions, and profiles.
 - Support for extensions (including debug callbacks).
 
+Requirements:
+- A cgo compiler (typically gcc)
+
 Usage
 -----
 
