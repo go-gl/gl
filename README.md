@@ -1,7 +1,7 @@
 GL
 ==
 
-This repository holds Go bindings to various OpenGL versions. They are auto-generated using [Glow](github.com/go-gl/glow).
+This repository holds Go bindings to various OpenGL versions. They are auto-generated using [Glow](https://github.com/go-gl/glow).
 
 Features:
 - Go functions that mirror the C specification using Go types.
