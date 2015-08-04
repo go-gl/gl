@@ -10,7 +10,7 @@ Features:
 
 Requirements:
 - A cgo compiler (typically gcc).
-- The `libgl1-mesa-dev` package.
+- On Ubuntu/Debian-based systems, the `libgl1-mesa-dev` package.
 
 Usage
 -----
