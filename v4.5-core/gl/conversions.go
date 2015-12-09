@@ -51,7 +51,7 @@ func PtrOffset(offset int) unsafe.Pointer {
 // must ensure the string is not garbage collected.
 func Str(str string) *uint8 {
 	if !strings.HasSuffix(str, "\x00") {
-		log.Fatal("str argument missing null terminator", str)
+		log.Fatalln("str argument missing null terminator:", str)
 	}
 	header := (*reflect.StringHeader)(unsafe.Pointer(&str))
 	return (*uint8)(unsafe.Pointer(header.Data))
