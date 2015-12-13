@@ -9,7 +9,8 @@ Features:
 - Support for extensions (including debug callbacks).
 
 Requirements:
-- A cgo compiler (typically gcc)
+- A cgo compiler (typically gcc).
+- On Ubuntu/Debian-based systems, the `libgl1-mesa-dev` package.
 
 Usage
 -----
