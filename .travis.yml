@@ -1,4 +1,7 @@
 sudo: false
+addons:
+  apt_packages:
+    - libgles2-mesa-dev
 language: go
 go:
   - 1.5.2
