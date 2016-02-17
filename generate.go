@@ -12,6 +12,7 @@
 //go:generate glow generate -out=./v4.1-compatibility/gl/ -api=gl -version=4.1 -profile=compatibility -xml=../glow/xml/
 //go:generate glow generate -out=./v4.4-compatibility/gl/ -api=gl -version=4.4 -profile=compatibility -xml=../glow/xml/
 //go:generate glow generate -out=./v4.5-compatibility/gl/ -api=gl -version=4.5 -profile=compatibility -xml=../glow/xml/
+//go:generate glow generate -out=./v3.1/gles2/ -api=gles2 -version=3.1 -xml=../glow/xml/
 
 // This is an empty pseudo-package with the sole purpose of containing go generate directives
 // that generate all gl binding packages inside this repository.
