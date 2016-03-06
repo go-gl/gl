@@ -28365,6 +28365,26 @@ func WindowPos4svMESA(v *int16) {
 func WriteMaskEXT(res uint32, in uint32, outX uint32, outY uint32, outZ uint32, outW uint32) {
 	C.glowWriteMaskEXT(gpWriteMaskEXT, (C.GLuint)(res), (C.GLuint)(in), (C.GLenum)(outX), (C.GLenum)(outY), (C.GLenum)(outZ), (C.GLenum)(outW))
 }
+
+// Init initializes the OpenGL bindings by loading the function pointers (for
+// each OpenGL function) from the active OpenGL context.
+//
+// It must be called under the presence of an active OpenGL context, e.g.,
+// always after calling window.MakeContextCurrent() and always before calling
+// any OpenGL functions exported by this package.
+//
+// On Windows, Init loads pointers that are context-specific (and hence you
+// must re-init if switching between OpenGL contexts, although not calling Init
+// again after switching between OpenGL contexts may work if the contexts belong
+// to the same graphics driver/device).
+//
+// On OS X and Linux, the behavior is different, but code written compatible
+// with the Windows behavior is compatible with OS X and Linux. That is, always
+// Init under an active OpenGL context, and always re-init after switching
+// graphics contexts.
+//
+// For information about caveats of Init, you should read the "Platform Specific
+// Function Retrieval" section of https://www.opengl.org/wiki/Load_OpenGL_Functions.
 func Init() error {
 	return InitWithProcAddrFunc(getProcAddress)
 }
