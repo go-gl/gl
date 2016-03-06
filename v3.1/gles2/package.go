@@ -6682,6 +6682,26 @@ func WaitSync(sync unsafe.Pointer, flags uint32, timeout uint64) {
 func WaitSyncAPPLE(sync unsafe.Pointer, flags uint32, timeout uint64) {
 	C.glowWaitSyncAPPLE(gpWaitSyncAPPLE, (C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 }
+
+// Init initializes the OpenGL bindings by loading the function pointers (for
+// each OpenGL function) from the active OpenGL context.
+//
+// It must be called under the presence of an active OpenGL context, e.g.,
+// always after calling window.MakeContextCurrent() and always before calling
+// any OpenGL functions exported by this package.
+//
+// On Windows, Init loads pointers that are context-specific (and hence you
+// must re-init if switching between OpenGL contexts, although not calling Init
+// again after switching between OpenGL contexts may work if the contexts belong
+// to the same graphics driver/device).
+//
+// On OS X and Linux, the behavior is different, but code written compatible
+// with the Windows behavior is compatible with OS X and Linux. That is, always
+// Init under an active OpenGL context, and always re-init after switching
+// graphics contexts.
+//
+// For information about caveats of Init, you should read the "Platform Specific
+// Function Retrieval" section of https://www.opengl.org/wiki/Load_OpenGL_Functions.
 func Init() error {
 	return InitWithProcAddrFunc(getProcAddress)
 }
