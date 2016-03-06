@@ -75,20 +75,16 @@ package gl
 // typedef unsigned int GLenum;
 // typedef unsigned char GLboolean;
 // typedef unsigned int GLbitfield;
-// typedef void GLvoid;
 // typedef signed char GLbyte;
 // typedef short GLshort;
 // typedef int GLint;
-// typedef int GLclampx;
 // typedef unsigned char GLubyte;
 // typedef unsigned short GLushort;
 // typedef unsigned int GLuint;
 // typedef int GLsizei;
 // typedef float GLfloat;
-// typedef float GLclampf;
 // typedef double GLdouble;
 // typedef char GLchar;
-// typedef GLint GLfixed;
 // typedef ptrdiff_t GLintptr;
 // typedef ptrdiff_t GLsizeiptr;
 // typedef int64_t GLint64;
@@ -105,20 +101,14 @@ package gl
 //   glowDebugCallback_glcoreall(source, type, id, severity, length, message, userParam);
 // }
 // typedef void  (APIENTRYP GPACCUM)(GLenum  op, GLfloat  value);
-// typedef void  (APIENTRYP GPACCUMXOES)(GLenum  op, GLfixed  value);
-// typedef void  (APIENTRYP GPACTIVEPROGRAMEXT)(GLuint  program);
 // typedef void  (APIENTRYP GPACTIVESHADERPROGRAM)(GLuint  pipeline, GLuint  program);
-// typedef void  (APIENTRYP GPACTIVESHADERPROGRAMEXT)(GLuint  pipeline, GLuint  program);
 // typedef void  (APIENTRYP GPACTIVETEXTURE)(GLenum  texture);
 // typedef void  (APIENTRYP GPALPHAFUNC)(GLenum  func, GLfloat  ref);
-// typedef void  (APIENTRYP GPALPHAFUNCXOES)(GLenum  func, GLfixed  ref);
 // typedef GLboolean  (APIENTRYP GPARETEXTURESRESIDENT)(GLsizei  n, const GLuint * textures, GLboolean * residences);
 // typedef void  (APIENTRYP GPARRAYELEMENT)(GLint  i);
 // typedef void  (APIENTRYP GPATTACHSHADER)(GLuint  program, GLuint  shader);
 // typedef void  (APIENTRYP GPBEGIN)(GLenum  mode);
 // typedef void  (APIENTRYP GPBEGINCONDITIONALRENDER)(GLuint  id, GLenum  mode);
-// typedef void  (APIENTRYP GPBEGINPERFMONITORAMD)(GLuint  monitor);
-// typedef void  (APIENTRYP GPBEGINPERFQUERYINTEL)(GLuint  queryHandle);
 // typedef void  (APIENTRYP GPBEGINQUERY)(GLenum  target, GLuint  id);
 // typedef void  (APIENTRYP GPBEGINQUERYINDEXED)(GLenum  target, GLuint  index, GLuint  id);
 // typedef void  (APIENTRYP GPBEGINTRANSFORMFEEDBACK)(GLenum  primitiveMode);
@@ -134,7 +124,6 @@ package gl
 // typedef void  (APIENTRYP GPBINDIMAGETEXTURE)(GLuint  unit, GLuint  texture, GLint  level, GLboolean  layered, GLint  layer, GLenum  access, GLenum  format);
 // typedef void  (APIENTRYP GPBINDIMAGETEXTURES)(GLuint  first, GLsizei  count, const GLuint * textures);
 // typedef void  (APIENTRYP GPBINDPROGRAMPIPELINE)(GLuint  pipeline);
-// typedef void  (APIENTRYP GPBINDPROGRAMPIPELINEEXT)(GLuint  pipeline);
 // typedef void  (APIENTRYP GPBINDRENDERBUFFER)(GLenum  target, GLuint  renderbuffer);
 // typedef void  (APIENTRYP GPBINDSAMPLER)(GLuint  unit, GLuint  sampler);
 // typedef void  (APIENTRYP GPBINDSAMPLERS)(GLuint  first, GLsizei  count, const GLuint * samplers);
@@ -146,13 +135,8 @@ package gl
 // typedef void  (APIENTRYP GPBINDVERTEXBUFFER)(GLuint  bindingindex, GLuint  buffer, GLintptr  offset, GLsizei  stride);
 // typedef void  (APIENTRYP GPBINDVERTEXBUFFERS)(GLuint  first, GLsizei  count, const GLuint * buffers, const GLintptr * offsets, const GLsizei * strides);
 // typedef void  (APIENTRYP GPBITMAP)(GLsizei  width, GLsizei  height, GLfloat  xorig, GLfloat  yorig, GLfloat  xmove, GLfloat  ymove, const GLubyte * bitmap);
-// typedef void  (APIENTRYP GPBITMAPXOES)(GLsizei  width, GLsizei  height, GLfixed  xorig, GLfixed  yorig, GLfixed  xmove, GLfixed  ymove, const GLubyte * bitmap);
-// typedef void  (APIENTRYP GPBLENDBARRIERKHR)();
-// typedef void  (APIENTRYP GPBLENDBARRIERNV)();
 // typedef void  (APIENTRYP GPBLENDCOLOR)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
-// typedef void  (APIENTRYP GPBLENDCOLORXOES)(GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha);
 // typedef void  (APIENTRYP GPBLENDEQUATION)(GLenum  mode);
-// typedef void  (APIENTRYP GPBLENDEQUATIONEXT)(GLenum  mode);
 // typedef void  (APIENTRYP GPBLENDEQUATIONSEPARATE)(GLenum  modeRGB, GLenum  modeAlpha);
 // typedef void  (APIENTRYP GPBLENDEQUATIONSEPARATEI)(GLuint  buf, GLenum  modeRGB, GLenum  modeAlpha);
 // typedef void  (APIENTRYP GPBLENDEQUATIONSEPARATEIARB)(GLuint  buf, GLenum  modeRGB, GLenum  modeAlpha);
@@ -164,7 +148,6 @@ package gl
 // typedef void  (APIENTRYP GPBLENDFUNCSEPARATEIARB)(GLuint  buf, GLenum  srcRGB, GLenum  dstRGB, GLenum  srcAlpha, GLenum  dstAlpha);
 // typedef void  (APIENTRYP GPBLENDFUNCI)(GLuint  buf, GLenum  src, GLenum  dst);
 // typedef void  (APIENTRYP GPBLENDFUNCIARB)(GLuint  buf, GLenum  src, GLenum  dst);
-// typedef void  (APIENTRYP GPBLENDPARAMETERINV)(GLenum  pname, GLint  value);
 // typedef void  (APIENTRYP GPBLITFRAMEBUFFER)(GLint  srcX0, GLint  srcY0, GLint  srcX1, GLint  srcY1, GLint  dstX0, GLint  dstY0, GLint  dstX1, GLint  dstY1, GLbitfield  mask, GLenum  filter);
 // typedef void  (APIENTRYP GPBLITNAMEDFRAMEBUFFER)(GLuint  readFramebuffer, GLuint  drawFramebuffer, GLint  srcX0, GLint  srcY0, GLint  srcX1, GLint  srcY1, GLint  dstX0, GLint  dstY0, GLint  dstX1, GLint  dstY1, GLbitfield  mask, GLenum  filter);
 // typedef void  (APIENTRYP GPBUFFERDATA)(GLenum  target, GLsizeiptr  size, const void * data, GLenum  usage);
@@ -178,7 +161,6 @@ package gl
 // typedef void  (APIENTRYP GPCLAMPCOLOR)(GLenum  target, GLenum  clamp);
 // typedef void  (APIENTRYP GPCLEAR)(GLbitfield  mask);
 // typedef void  (APIENTRYP GPCLEARACCUM)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
-// typedef void  (APIENTRYP GPCLEARACCUMXOES)(GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha);
 // typedef void  (APIENTRYP GPCLEARBUFFERDATA)(GLenum  target, GLenum  internalformat, GLenum  format, GLenum  type, const void * data);
 // typedef void  (APIENTRYP GPCLEARBUFFERSUBDATA)(GLenum  target, GLenum  internalformat, GLintptr  offset, GLsizeiptr  size, GLenum  format, GLenum  type, const void * data);
 // typedef void  (APIENTRYP GPCLEARBUFFERFI)(GLenum  buffer, GLint  drawbuffer, GLfloat  depth, GLint  stencil);
@@ -186,11 +168,8 @@ package gl
 // typedef void  (APIENTRYP GPCLEARBUFFERIV)(GLenum  buffer, GLint  drawbuffer, const GLint * value);
 // typedef void  (APIENTRYP GPCLEARBUFFERUIV)(GLenum  buffer, GLint  drawbuffer, const GLuint * value);
 // typedef void  (APIENTRYP GPCLEARCOLOR)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
-// typedef void  (APIENTRYP GPCLEARCOLORXOES)(GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha);
 // typedef void  (APIENTRYP GPCLEARDEPTH)(GLdouble  depth);
 // typedef void  (APIENTRYP GPCLEARDEPTHF)(GLfloat  d);
-// typedef void  (APIENTRYP GPCLEARDEPTHFOES)(GLclampf  depth);
-// typedef void  (APIENTRYP GPCLEARDEPTHXOES)(GLfixed  depth);
 // typedef void  (APIENTRYP GPCLEARINDEX)(GLfloat  c);
 // typedef void  (APIENTRYP GPCLEARNAMEDBUFFERDATA)(GLuint  buffer, GLenum  internalformat, GLenum  format, GLenum  type, const void * data);
 // typedef void  (APIENTRYP GPCLEARNAMEDBUFFERSUBDATA)(GLuint  buffer, GLenum  internalformat, GLintptr  offset, GLsizei  size, GLenum  format, GLenum  type, const void * data);
@@ -205,8 +184,6 @@ package gl
 // typedef GLenum  (APIENTRYP GPCLIENTWAITSYNC)(GLsync  sync, GLbitfield  flags, GLuint64  timeout);
 // typedef void  (APIENTRYP GPCLIPCONTROL)(GLenum  origin, GLenum  depth);
 // typedef void  (APIENTRYP GPCLIPPLANE)(GLenum  plane, const GLdouble * equation);
-// typedef void  (APIENTRYP GPCLIPPLANEFOES)(GLenum  plane, const GLfloat * equation);
-// typedef void  (APIENTRYP GPCLIPPLANEXOES)(GLenum  plane, const GLfixed * equation);
 // typedef void  (APIENTRYP GPCOLOR3B)(GLbyte  red, GLbyte  green, GLbyte  blue);
 // typedef void  (APIENTRYP GPCOLOR3BV)(const GLbyte * v);
 // typedef void  (APIENTRYP GPCOLOR3D)(GLdouble  red, GLdouble  green, GLdouble  blue);
@@ -223,8 +200,6 @@ package gl
 // typedef void  (APIENTRYP GPCOLOR3UIV)(const GLuint * v);
 // typedef void  (APIENTRYP GPCOLOR3US)(GLushort  red, GLushort  green, GLushort  blue);
 // typedef void  (APIENTRYP GPCOLOR3USV)(const GLushort * v);
-// typedef void  (APIENTRYP GPCOLOR3XOES)(GLfixed  red, GLfixed  green, GLfixed  blue);
-// typedef void  (APIENTRYP GPCOLOR3XVOES)(const GLfixed * components);
 // typedef void  (APIENTRYP GPCOLOR4B)(GLbyte  red, GLbyte  green, GLbyte  blue, GLbyte  alpha);
 // typedef void  (APIENTRYP GPCOLOR4BV)(const GLbyte * v);
 // typedef void  (APIENTRYP GPCOLOR4D)(GLdouble  red, GLdouble  green, GLdouble  blue, GLdouble  alpha);
@@ -241,8 +216,6 @@ package gl
 // typedef void  (APIENTRYP GPCOLOR4UIV)(const GLuint * v);
 // typedef void  (APIENTRYP GPCOLOR4US)(GLushort  red, GLushort  green, GLushort  blue, GLushort  alpha);
 // typedef void  (APIENTRYP GPCOLOR4USV)(const GLushort * v);
-// typedef void  (APIENTRYP GPCOLOR4XOES)(GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha);
-// typedef void  (APIENTRYP GPCOLOR4XVOES)(const GLfixed * components);
 // typedef void  (APIENTRYP GPCOLORMASK)(GLboolean  red, GLboolean  green, GLboolean  blue, GLboolean  alpha);
 // typedef void  (APIENTRYP GPCOLORMASKI)(GLuint  index, GLboolean  r, GLboolean  g, GLboolean  b, GLboolean  a);
 // typedef void  (APIENTRYP GPCOLORMATERIAL)(GLenum  face, GLenum  mode);
@@ -258,8 +231,6 @@ package gl
 // typedef void  (APIENTRYP GPCOMPRESSEDTEXTURESUBIMAGE1D)(GLuint  texture, GLint  level, GLint  xoffset, GLsizei  width, GLenum  format, GLsizei  imageSize, const void * data);
 // typedef void  (APIENTRYP GPCOMPRESSEDTEXTURESUBIMAGE2D)(GLuint  texture, GLint  level, GLint  xoffset, GLint  yoffset, GLsizei  width, GLsizei  height, GLenum  format, GLsizei  imageSize, const void * data);
 // typedef void  (APIENTRYP GPCOMPRESSEDTEXTURESUBIMAGE3D)(GLuint  texture, GLint  level, GLint  xoffset, GLint  yoffset, GLint  zoffset, GLsizei  width, GLsizei  height, GLsizei  depth, GLenum  format, GLsizei  imageSize, const void * data);
-// typedef void  (APIENTRYP GPCONVOLUTIONPARAMETERXOES)(GLenum  target, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPCONVOLUTIONPARAMETERXVOES)(GLenum  target, GLenum  pname, const GLfixed * params);
 // typedef void  (APIENTRYP GPCOPYBUFFERSUBDATA)(GLenum  readTarget, GLenum  writeTarget, GLintptr  readOffset, GLintptr  writeOffset, GLsizeiptr  size);
 // typedef void  (APIENTRYP GPCOPYIMAGESUBDATA)(GLuint  srcName, GLenum  srcTarget, GLint  srcLevel, GLint  srcX, GLint  srcY, GLint  srcZ, GLuint  dstName, GLenum  dstTarget, GLint  dstLevel, GLint  dstX, GLint  dstY, GLint  dstZ, GLsizei  srcWidth, GLsizei  srcHeight, GLsizei  srcDepth);
 // typedef void  (APIENTRYP GPCOPYNAMEDBUFFERSUBDATA)(GLuint  readBuffer, GLuint  writeBuffer, GLintptr  readOffset, GLintptr  writeOffset, GLsizei  size);
@@ -274,16 +245,13 @@ package gl
 // typedef void  (APIENTRYP GPCOPYTEXTURESUBIMAGE3D)(GLuint  texture, GLint  level, GLint  xoffset, GLint  yoffset, GLint  zoffset, GLint  x, GLint  y, GLsizei  width, GLsizei  height);
 // typedef void  (APIENTRYP GPCREATEBUFFERS)(GLsizei  n, GLuint * buffers);
 // typedef void  (APIENTRYP GPCREATEFRAMEBUFFERS)(GLsizei  n, GLuint * framebuffers);
-// typedef void  (APIENTRYP GPCREATEPERFQUERYINTEL)(GLuint  queryId, GLuint * queryHandle);
 // typedef GLuint  (APIENTRYP GPCREATEPROGRAM)();
 // typedef void  (APIENTRYP GPCREATEPROGRAMPIPELINES)(GLsizei  n, GLuint * pipelines);
 // typedef void  (APIENTRYP GPCREATEQUERIES)(GLenum  target, GLsizei  n, GLuint * ids);
 // typedef void  (APIENTRYP GPCREATERENDERBUFFERS)(GLsizei  n, GLuint * renderbuffers);
 // typedef void  (APIENTRYP GPCREATESAMPLERS)(GLsizei  n, GLuint * samplers);
 // typedef GLuint  (APIENTRYP GPCREATESHADER)(GLenum  type);
-// typedef GLuint  (APIENTRYP GPCREATESHADERPROGRAMEXT)(GLenum  type, const GLchar * string);
 // typedef GLuint  (APIENTRYP GPCREATESHADERPROGRAMV)(GLenum  type, GLsizei  count, const GLchar *const* strings);
-// typedef GLuint  (APIENTRYP GPCREATESHADERPROGRAMVEXT)(GLenum  type, GLsizei  count, const GLchar ** strings);
 // typedef GLsync  (APIENTRYP GPCREATESYNCFROMCLEVENTARB)(struct _cl_context * context, struct _cl_event * event, GLbitfield  flags);
 // typedef void  (APIENTRYP GPCREATETEXTURES)(GLenum  target, GLsizei  n, GLuint * textures);
 // typedef void  (APIENTRYP GPCREATETRANSFORMFEEDBACKS)(GLsizei  n, GLuint * ids);
@@ -299,15 +267,11 @@ package gl
 // typedef void  (APIENTRYP GPDEBUGMESSAGEINSERTARB)(GLenum  source, GLenum  type, GLuint  id, GLenum  severity, GLsizei  length, const GLchar * buf);
 // typedef void  (APIENTRYP GPDEBUGMESSAGEINSERTKHR)(GLenum  source, GLenum  type, GLuint  id, GLenum  severity, GLsizei  length, const GLchar * buf);
 // typedef void  (APIENTRYP GPDELETEBUFFERS)(GLsizei  n, const GLuint * buffers);
-// typedef void  (APIENTRYP GPDELETEFENCESNV)(GLsizei  n, const GLuint * fences);
 // typedef void  (APIENTRYP GPDELETEFRAMEBUFFERS)(GLsizei  n, const GLuint * framebuffers);
 // typedef void  (APIENTRYP GPDELETELISTS)(GLuint  list, GLsizei  range);
 // typedef void  (APIENTRYP GPDELETENAMEDSTRINGARB)(GLint  namelen, const GLchar * name);
-// typedef void  (APIENTRYP GPDELETEPERFMONITORSAMD)(GLsizei  n, GLuint * monitors);
-// typedef void  (APIENTRYP GPDELETEPERFQUERYINTEL)(GLuint  queryHandle);
 // typedef void  (APIENTRYP GPDELETEPROGRAM)(GLuint  program);
 // typedef void  (APIENTRYP GPDELETEPROGRAMPIPELINES)(GLsizei  n, const GLuint * pipelines);
-// typedef void  (APIENTRYP GPDELETEPROGRAMPIPELINESEXT)(GLsizei  n, const GLuint * pipelines);
 // typedef void  (APIENTRYP GPDELETEQUERIES)(GLsizei  n, const GLuint * ids);
 // typedef void  (APIENTRYP GPDELETERENDERBUFFERS)(GLsizei  n, const GLuint * renderbuffers);
 // typedef void  (APIENTRYP GPDELETESAMPLERS)(GLsizei  count, const GLuint * samplers);
@@ -322,8 +286,6 @@ package gl
 // typedef void  (APIENTRYP GPDEPTHRANGEARRAYV)(GLuint  first, GLsizei  count, const GLdouble * v);
 // typedef void  (APIENTRYP GPDEPTHRANGEINDEXED)(GLuint  index, GLdouble  n, GLdouble  f);
 // typedef void  (APIENTRYP GPDEPTHRANGEF)(GLfloat  n, GLfloat  f);
-// typedef void  (APIENTRYP GPDEPTHRANGEFOES)(GLclampf  n, GLclampf  f);
-// typedef void  (APIENTRYP GPDEPTHRANGEXOES)(GLfixed  n, GLfixed  f);
 // typedef void  (APIENTRYP GPDETACHSHADER)(GLuint  program, GLuint  shader);
 // typedef void  (APIENTRYP GPDISABLE)(GLenum  cap);
 // typedef void  (APIENTRYP GPDISABLECLIENTSTATE)(GLenum  array);
@@ -337,7 +299,6 @@ package gl
 // typedef void  (APIENTRYP GPDRAWARRAYSINDIRECT)(GLenum  mode, const void * indirect);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCED)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDBASEINSTANCE)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount, GLuint  baseinstance);
-// typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDEXT)(GLenum  mode, GLint  start, GLsizei  count, GLsizei  primcount);
 // typedef void  (APIENTRYP GPDRAWBUFFER)(GLenum  buf);
 // typedef void  (APIENTRYP GPDRAWBUFFERS)(GLsizei  n, const GLenum * bufs);
 // typedef void  (APIENTRYP GPDRAWELEMENTS)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices);
@@ -347,7 +308,6 @@ package gl
 // typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCEDBASEINSTANCE)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount, GLuint  baseinstance);
 // typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCEDBASEVERTEX)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount, GLint  basevertex);
 // typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCE)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount, GLint  basevertex, GLuint  baseinstance);
-// typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCEDEXT)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  primcount);
 // typedef void  (APIENTRYP GPDRAWPIXELS)(GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, const void * pixels);
 // typedef void  (APIENTRYP GPDRAWRANGEELEMENTS)(GLenum  mode, GLuint  start, GLuint  end, GLsizei  count, GLenum  type, const void * indices);
 // typedef void  (APIENTRYP GPDRAWRANGEELEMENTSBASEVERTEX)(GLenum  mode, GLuint  start, GLuint  end, GLsizei  count, GLenum  type, const void * indices, GLint  basevertex);
@@ -366,8 +326,6 @@ package gl
 // typedef void  (APIENTRYP GPEND)();
 // typedef void  (APIENTRYP GPENDCONDITIONALRENDER)();
 // typedef void  (APIENTRYP GPENDLIST)();
-// typedef void  (APIENTRYP GPENDPERFMONITORAMD)(GLuint  monitor);
-// typedef void  (APIENTRYP GPENDPERFQUERYINTEL)(GLuint  queryHandle);
 // typedef void  (APIENTRYP GPENDQUERY)(GLenum  target);
 // typedef void  (APIENTRYP GPENDQUERYINDEXED)(GLenum  target, GLuint  index);
 // typedef void  (APIENTRYP GPENDTRANSFORMFEEDBACK)();
@@ -375,23 +333,17 @@ package gl
 // typedef void  (APIENTRYP GPEVALCOORD1DV)(const GLdouble * u);
 // typedef void  (APIENTRYP GPEVALCOORD1F)(GLfloat  u);
 // typedef void  (APIENTRYP GPEVALCOORD1FV)(const GLfloat * u);
-// typedef void  (APIENTRYP GPEVALCOORD1XOES)(GLfixed  u);
-// typedef void  (APIENTRYP GPEVALCOORD1XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPEVALCOORD2D)(GLdouble  u, GLdouble  v);
 // typedef void  (APIENTRYP GPEVALCOORD2DV)(const GLdouble * u);
 // typedef void  (APIENTRYP GPEVALCOORD2F)(GLfloat  u, GLfloat  v);
 // typedef void  (APIENTRYP GPEVALCOORD2FV)(const GLfloat * u);
-// typedef void  (APIENTRYP GPEVALCOORD2XOES)(GLfixed  u, GLfixed  v);
-// typedef void  (APIENTRYP GPEVALCOORD2XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPEVALMESH1)(GLenum  mode, GLint  i1, GLint  i2);
 // typedef void  (APIENTRYP GPEVALMESH2)(GLenum  mode, GLint  i1, GLint  i2, GLint  j1, GLint  j2);
 // typedef void  (APIENTRYP GPEVALPOINT1)(GLint  i);
 // typedef void  (APIENTRYP GPEVALPOINT2)(GLint  i, GLint  j);
 // typedef void  (APIENTRYP GPFEEDBACKBUFFER)(GLsizei  size, GLenum  type, GLfloat * buffer);
-// typedef void  (APIENTRYP GPFEEDBACKBUFFERXOES)(GLsizei  n, GLenum  type, const GLfixed * buffer);
 // typedef GLsync  (APIENTRYP GPFENCESYNC)(GLenum  condition, GLbitfield  flags);
 // typedef void  (APIENTRYP GPFINISH)();
-// typedef void  (APIENTRYP GPFINISHFENCENV)(GLuint  fence);
 // typedef void  (APIENTRYP GPFLUSH)();
 // typedef void  (APIENTRYP GPFLUSHMAPPEDBUFFERRANGE)(GLenum  target, GLintptr  offset, GLsizeiptr  length);
 // typedef void  (APIENTRYP GPFLUSHMAPPEDNAMEDBUFFERRANGE)(GLuint  buffer, GLintptr  offset, GLsizei  length);
@@ -404,8 +356,6 @@ package gl
 // typedef void  (APIENTRYP GPFOGFV)(GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPFOGI)(GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPFOGIV)(GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPFOGXOES)(GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPFOGXVOES)(GLenum  pname, const GLfixed * param);
 // typedef void  (APIENTRYP GPFRAMEBUFFERPARAMETERI)(GLenum  target, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPFRAMEBUFFERRENDERBUFFER)(GLenum  target, GLenum  attachment, GLenum  renderbuffertarget, GLuint  renderbuffer);
 // typedef void  (APIENTRYP GPFRAMEBUFFERTEXTURE)(GLenum  target, GLenum  attachment, GLuint  texture, GLint  level);
@@ -415,15 +365,10 @@ package gl
 // typedef void  (APIENTRYP GPFRAMEBUFFERTEXTURELAYER)(GLenum  target, GLenum  attachment, GLuint  texture, GLint  level, GLint  layer);
 // typedef void  (APIENTRYP GPFRONTFACE)(GLenum  mode);
 // typedef void  (APIENTRYP GPFRUSTUM)(GLdouble  left, GLdouble  right, GLdouble  bottom, GLdouble  top, GLdouble  zNear, GLdouble  zFar);
-// typedef void  (APIENTRYP GPFRUSTUMFOES)(GLfloat  l, GLfloat  r, GLfloat  b, GLfloat  t, GLfloat  n, GLfloat  f);
-// typedef void  (APIENTRYP GPFRUSTUMXOES)(GLfixed  l, GLfixed  r, GLfixed  b, GLfixed  t, GLfixed  n, GLfixed  f);
 // typedef void  (APIENTRYP GPGENBUFFERS)(GLsizei  n, GLuint * buffers);
-// typedef void  (APIENTRYP GPGENFENCESNV)(GLsizei  n, GLuint * fences);
 // typedef void  (APIENTRYP GPGENFRAMEBUFFERS)(GLsizei  n, GLuint * framebuffers);
 // typedef GLuint  (APIENTRYP GPGENLISTS)(GLsizei  range);
-// typedef void  (APIENTRYP GPGENPERFMONITORSAMD)(GLsizei  n, GLuint * monitors);
 // typedef void  (APIENTRYP GPGENPROGRAMPIPELINES)(GLsizei  n, GLuint * pipelines);
-// typedef void  (APIENTRYP GPGENPROGRAMPIPELINESEXT)(GLsizei  n, GLuint * pipelines);
 // typedef void  (APIENTRYP GPGENQUERIES)(GLsizei  n, GLuint * ids);
 // typedef void  (APIENTRYP GPGENRENDERBUFFERS)(GLsizei  n, GLuint * renderbuffers);
 // typedef void  (APIENTRYP GPGENSAMPLERS)(GLsizei  count, GLuint * samplers);
@@ -451,21 +396,15 @@ package gl
 // typedef void  (APIENTRYP GPGETBUFFERPOINTERV)(GLenum  target, GLenum  pname, void ** params);
 // typedef void  (APIENTRYP GPGETBUFFERSUBDATA)(GLenum  target, GLintptr  offset, GLsizeiptr  size, void * data);
 // typedef void  (APIENTRYP GPGETCLIPPLANE)(GLenum  plane, GLdouble * equation);
-// typedef void  (APIENTRYP GPGETCLIPPLANEFOES)(GLenum  plane, GLfloat * equation);
-// typedef void  (APIENTRYP GPGETCLIPPLANEXOES)(GLenum  plane, GLfixed * equation);
 // typedef void  (APIENTRYP GPGETCOMPRESSEDTEXIMAGE)(GLenum  target, GLint  level, void * img);
 // typedef void  (APIENTRYP GPGETCOMPRESSEDTEXTUREIMAGE)(GLuint  texture, GLint  level, GLsizei  bufSize, void * pixels);
 // typedef void  (APIENTRYP GPGETCOMPRESSEDTEXTURESUBIMAGE)(GLuint  texture, GLint  level, GLint  xoffset, GLint  yoffset, GLint  zoffset, GLsizei  width, GLsizei  height, GLsizei  depth, GLsizei  bufSize, void * pixels);
-// typedef void  (APIENTRYP GPGETCONVOLUTIONPARAMETERXVOES)(GLenum  target, GLenum  pname, GLfixed * params);
 // typedef GLuint  (APIENTRYP GPGETDEBUGMESSAGELOG)(GLuint  count, GLsizei  bufSize, GLenum * sources, GLenum * types, GLuint * ids, GLenum * severities, GLsizei * lengths, GLchar * messageLog);
 // typedef GLuint  (APIENTRYP GPGETDEBUGMESSAGELOGARB)(GLuint  count, GLsizei  bufSize, GLenum * sources, GLenum * types, GLuint * ids, GLenum * severities, GLsizei * lengths, GLchar * messageLog);
 // typedef GLuint  (APIENTRYP GPGETDEBUGMESSAGELOGKHR)(GLuint  count, GLsizei  bufSize, GLenum * sources, GLenum * types, GLuint * ids, GLenum * severities, GLsizei * lengths, GLchar * messageLog);
 // typedef void  (APIENTRYP GPGETDOUBLEI_V)(GLenum  target, GLuint  index, GLdouble * data);
 // typedef void  (APIENTRYP GPGETDOUBLEV)(GLenum  pname, GLdouble * data);
 // typedef GLenum  (APIENTRYP GPGETERROR)();
-// typedef void  (APIENTRYP GPGETFENCEIVNV)(GLuint  fence, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETFIRSTPERFQUERYIDINTEL)(GLuint * queryId);
-// typedef void  (APIENTRYP GPGETFIXEDVOES)(GLenum  pname, GLfixed * params);
 // typedef void  (APIENTRYP GPGETFLOATI_V)(GLenum  target, GLuint  index, GLfloat * data);
 // typedef void  (APIENTRYP GPGETFLOATV)(GLenum  pname, GLfloat * data);
 // typedef GLint  (APIENTRYP GPGETFRAGDATAINDEX)(GLuint  program, const GLchar * name);
@@ -475,7 +414,6 @@ package gl
 // typedef GLenum  (APIENTRYP GPGETGRAPHICSRESETSTATUS)();
 // typedef GLenum  (APIENTRYP GPGETGRAPHICSRESETSTATUSARB)();
 // typedef GLenum  (APIENTRYP GPGETGRAPHICSRESETSTATUSKHR)();
-// typedef void  (APIENTRYP GPGETHISTOGRAMPARAMETERXVOES)(GLenum  target, GLenum  pname, GLfixed * params);
 // typedef GLuint64  (APIENTRYP GPGETIMAGEHANDLEARB)(GLuint  texture, GLint  level, GLboolean  layered, GLint  layer, GLenum  format);
 // typedef void  (APIENTRYP GPGETINTEGER64I_V)(GLenum  target, GLuint  index, GLint64 * data);
 // typedef void  (APIENTRYP GPGETINTEGER64V)(GLenum  pname, GLint64 * data);
@@ -485,16 +423,11 @@ package gl
 // typedef void  (APIENTRYP GPGETINTERNALFORMATIV)(GLenum  target, GLenum  internalformat, GLenum  pname, GLsizei  bufSize, GLint * params);
 // typedef void  (APIENTRYP GPGETLIGHTFV)(GLenum  light, GLenum  pname, GLfloat * params);
 // typedef void  (APIENTRYP GPGETLIGHTIV)(GLenum  light, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETLIGHTXOES)(GLenum  light, GLenum  pname, GLfixed * params);
-// typedef void  (APIENTRYP GPGETLIGHTXVOES)(GLenum  light, GLenum  pname, GLfixed * params);
 // typedef void  (APIENTRYP GPGETMAPDV)(GLenum  target, GLenum  query, GLdouble * v);
 // typedef void  (APIENTRYP GPGETMAPFV)(GLenum  target, GLenum  query, GLfloat * v);
 // typedef void  (APIENTRYP GPGETMAPIV)(GLenum  target, GLenum  query, GLint * v);
-// typedef void  (APIENTRYP GPGETMAPXVOES)(GLenum  target, GLenum  query, GLfixed * v);
 // typedef void  (APIENTRYP GPGETMATERIALFV)(GLenum  face, GLenum  pname, GLfloat * params);
 // typedef void  (APIENTRYP GPGETMATERIALIV)(GLenum  face, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETMATERIALXOES)(GLenum  face, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPGETMATERIALXVOES)(GLenum  face, GLenum  pname, GLfixed * params);
 // typedef void  (APIENTRYP GPGETMULTISAMPLEFV)(GLenum  pname, GLuint  index, GLfloat * val);
 // typedef void  (APIENTRYP GPGETNAMEDBUFFERPARAMETERI64V)(GLuint  buffer, GLenum  pname, GLint64 * params);
 // typedef void  (APIENTRYP GPGETNAMEDBUFFERPARAMETERIV)(GLuint  buffer, GLenum  pname, GLint * params);
@@ -505,26 +438,13 @@ package gl
 // typedef void  (APIENTRYP GPGETNAMEDRENDERBUFFERPARAMETERIV)(GLuint  renderbuffer, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETNAMEDSTRINGARB)(GLint  namelen, const GLchar * name, GLsizei  bufSize, GLint * stringlen, GLchar * string);
 // typedef void  (APIENTRYP GPGETNAMEDSTRINGIVARB)(GLint  namelen, const GLchar * name, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETNEXTPERFQUERYIDINTEL)(GLuint  queryId, GLuint * nextQueryId);
 // typedef void  (APIENTRYP GPGETOBJECTLABEL)(GLenum  identifier, GLuint  name, GLsizei  bufSize, GLsizei * length, GLchar * label);
-// typedef void  (APIENTRYP GPGETOBJECTLABELEXT)(GLenum  type, GLuint  object, GLsizei  bufSize, GLsizei * length, GLchar * label);
 // typedef void  (APIENTRYP GPGETOBJECTLABELKHR)(GLenum  identifier, GLuint  name, GLsizei  bufSize, GLsizei * length, GLchar * label);
 // typedef void  (APIENTRYP GPGETOBJECTPTRLABEL)(const void * ptr, GLsizei  bufSize, GLsizei * length, GLchar * label);
 // typedef void  (APIENTRYP GPGETOBJECTPTRLABELKHR)(const void * ptr, GLsizei  bufSize, GLsizei * length, GLchar * label);
-// typedef void  (APIENTRYP GPGETPERFCOUNTERINFOINTEL)(GLuint  queryId, GLuint  counterId, GLuint  counterNameLength, GLchar * counterName, GLuint  counterDescLength, GLchar * counterDesc, GLuint * counterOffset, GLuint * counterDataSize, GLuint * counterTypeEnum, GLuint * counterDataTypeEnum, GLuint64 * rawCounterMaxValue);
-// typedef void  (APIENTRYP GPGETPERFMONITORCOUNTERDATAAMD)(GLuint  monitor, GLenum  pname, GLsizei  dataSize, GLuint * data, GLint * bytesWritten);
-// typedef void  (APIENTRYP GPGETPERFMONITORCOUNTERINFOAMD)(GLuint  group, GLuint  counter, GLenum  pname, void * data);
-// typedef void  (APIENTRYP GPGETPERFMONITORCOUNTERSTRINGAMD)(GLuint  group, GLuint  counter, GLsizei  bufSize, GLsizei * length, GLchar * counterString);
-// typedef void  (APIENTRYP GPGETPERFMONITORCOUNTERSAMD)(GLuint  group, GLint * numCounters, GLint * maxActiveCounters, GLsizei  counterSize, GLuint * counters);
-// typedef void  (APIENTRYP GPGETPERFMONITORGROUPSTRINGAMD)(GLuint  group, GLsizei  bufSize, GLsizei * length, GLchar * groupString);
-// typedef void  (APIENTRYP GPGETPERFMONITORGROUPSAMD)(GLint * numGroups, GLsizei  groupsSize, GLuint * groups);
-// typedef void  (APIENTRYP GPGETPERFQUERYDATAINTEL)(GLuint  queryHandle, GLuint  flags, GLsizei  dataSize, GLvoid * data, GLuint * bytesWritten);
-// typedef void  (APIENTRYP GPGETPERFQUERYIDBYNAMEINTEL)(GLchar * queryName, GLuint * queryId);
-// typedef void  (APIENTRYP GPGETPERFQUERYINFOINTEL)(GLuint  queryId, GLuint  queryNameLength, GLchar * queryName, GLuint * dataSize, GLuint * noCounters, GLuint * noInstances, GLuint * capsMask);
 // typedef void  (APIENTRYP GPGETPIXELMAPFV)(GLenum  map, GLfloat * values);
 // typedef void  (APIENTRYP GPGETPIXELMAPUIV)(GLenum  map, GLuint * values);
 // typedef void  (APIENTRYP GPGETPIXELMAPUSV)(GLenum  map, GLushort * values);
-// typedef void  (APIENTRYP GPGETPIXELMAPXV)(GLenum  map, GLint  size, GLfixed * values);
 // typedef void  (APIENTRYP GPGETPOINTERV)(GLenum  pname, void ** params);
 // typedef void  (APIENTRYP GPGETPOINTERVKHR)(GLenum  pname, void ** params);
 // typedef void  (APIENTRYP GPGETPOLYGONSTIPPLE)(GLubyte * mask);
@@ -532,9 +452,7 @@ package gl
 // typedef void  (APIENTRYP GPGETPROGRAMINFOLOG)(GLuint  program, GLsizei  bufSize, GLsizei * length, GLchar * infoLog);
 // typedef void  (APIENTRYP GPGETPROGRAMINTERFACEIV)(GLuint  program, GLenum  programInterface, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETPROGRAMPIPELINEINFOLOG)(GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog);
-// typedef void  (APIENTRYP GPGETPROGRAMPIPELINEINFOLOGEXT)(GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog);
 // typedef void  (APIENTRYP GPGETPROGRAMPIPELINEIV)(GLuint  pipeline, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETPROGRAMPIPELINEIVEXT)(GLuint  pipeline, GLenum  pname, GLint * params);
 // typedef GLuint  (APIENTRYP GPGETPROGRAMRESOURCEINDEX)(GLuint  program, GLenum  programInterface, const GLchar * name);
 // typedef GLint  (APIENTRYP GPGETPROGRAMRESOURCELOCATION)(GLuint  program, GLenum  programInterface, const GLchar * name);
 // typedef GLint  (APIENTRYP GPGETPROGRAMRESOURCELOCATIONINDEX)(GLuint  program, GLenum  programInterface, const GLchar * name);
@@ -564,20 +482,16 @@ package gl
 // typedef void  (APIENTRYP GPGETSYNCIV)(GLsync  sync, GLenum  pname, GLsizei  bufSize, GLsizei * length, GLint * values);
 // typedef void  (APIENTRYP GPGETTEXENVFV)(GLenum  target, GLenum  pname, GLfloat * params);
 // typedef void  (APIENTRYP GPGETTEXENVIV)(GLenum  target, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETTEXENVXVOES)(GLenum  target, GLenum  pname, GLfixed * params);
 // typedef void  (APIENTRYP GPGETTEXGENDV)(GLenum  coord, GLenum  pname, GLdouble * params);
 // typedef void  (APIENTRYP GPGETTEXGENFV)(GLenum  coord, GLenum  pname, GLfloat * params);
 // typedef void  (APIENTRYP GPGETTEXGENIV)(GLenum  coord, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETTEXGENXVOES)(GLenum  coord, GLenum  pname, GLfixed * params);
 // typedef void  (APIENTRYP GPGETTEXIMAGE)(GLenum  target, GLint  level, GLenum  format, GLenum  type, void * pixels);
 // typedef void  (APIENTRYP GPGETTEXLEVELPARAMETERFV)(GLenum  target, GLint  level, GLenum  pname, GLfloat * params);
 // typedef void  (APIENTRYP GPGETTEXLEVELPARAMETERIV)(GLenum  target, GLint  level, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETTEXLEVELPARAMETERXVOES)(GLenum  target, GLint  level, GLenum  pname, GLfixed * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERIIV)(GLenum  target, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERIUIV)(GLenum  target, GLenum  pname, GLuint * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERFV)(GLenum  target, GLenum  pname, GLfloat * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERIV)(GLenum  target, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETTEXPARAMETERXVOES)(GLenum  target, GLenum  pname, GLfixed * params);
 // typedef GLuint64  (APIENTRYP GPGETTEXTUREHANDLEARB)(GLuint  texture);
 // typedef void  (APIENTRYP GPGETTEXTUREIMAGE)(GLuint  texture, GLint  level, GLenum  format, GLenum  type, GLsizei  bufSize, void * pixels);
 // typedef void  (APIENTRYP GPGETTEXTURELEVELPARAMETERFV)(GLuint  texture, GLint  level, GLenum  pname, GLfloat * params);
@@ -639,10 +553,7 @@ package gl
 // typedef void  (APIENTRYP GPINDEXSV)(const GLshort * c);
 // typedef void  (APIENTRYP GPINDEXUB)(GLubyte  c);
 // typedef void  (APIENTRYP GPINDEXUBV)(const GLubyte * c);
-// typedef void  (APIENTRYP GPINDEXXOES)(GLfixed  component);
-// typedef void  (APIENTRYP GPINDEXXVOES)(const GLfixed * component);
 // typedef void  (APIENTRYP GPINITNAMES)();
-// typedef void  (APIENTRYP GPINSERTEVENTMARKEREXT)(GLsizei  length, const GLchar * marker);
 // typedef void  (APIENTRYP GPINTERLEAVEDARRAYS)(GLenum  format, GLsizei  stride, const void * pointer);
 // typedef void  (APIENTRYP GPINVALIDATEBUFFERDATA)(GLuint  buffer);
 // typedef void  (APIENTRYP GPINVALIDATEBUFFERSUBDATA)(GLuint  buffer, GLintptr  offset, GLsizeiptr  length);
@@ -655,14 +566,12 @@ package gl
 // typedef GLboolean  (APIENTRYP GPISBUFFER)(GLuint  buffer);
 // typedef GLboolean  (APIENTRYP GPISENABLED)(GLenum  cap);
 // typedef GLboolean  (APIENTRYP GPISENABLEDI)(GLenum  target, GLuint  index);
-// typedef GLboolean  (APIENTRYP GPISFENCENV)(GLuint  fence);
 // typedef GLboolean  (APIENTRYP GPISFRAMEBUFFER)(GLuint  framebuffer);
 // typedef GLboolean  (APIENTRYP GPISIMAGEHANDLERESIDENTARB)(GLuint64  handle);
 // typedef GLboolean  (APIENTRYP GPISLIST)(GLuint  list);
 // typedef GLboolean  (APIENTRYP GPISNAMEDSTRINGARB)(GLint  namelen, const GLchar * name);
 // typedef GLboolean  (APIENTRYP GPISPROGRAM)(GLuint  program);
 // typedef GLboolean  (APIENTRYP GPISPROGRAMPIPELINE)(GLuint  pipeline);
-// typedef GLboolean  (APIENTRYP GPISPROGRAMPIPELINEEXT)(GLuint  pipeline);
 // typedef GLboolean  (APIENTRYP GPISQUERY)(GLuint  id);
 // typedef GLboolean  (APIENTRYP GPISRENDERBUFFER)(GLuint  renderbuffer);
 // typedef GLboolean  (APIENTRYP GPISSAMPLER)(GLuint  sampler);
@@ -672,32 +581,24 @@ package gl
 // typedef GLboolean  (APIENTRYP GPISTEXTUREHANDLERESIDENTARB)(GLuint64  handle);
 // typedef GLboolean  (APIENTRYP GPISTRANSFORMFEEDBACK)(GLuint  id);
 // typedef GLboolean  (APIENTRYP GPISVERTEXARRAY)(GLuint  array);
-// typedef void  (APIENTRYP GPLABELOBJECTEXT)(GLenum  type, GLuint  object, GLsizei  length, const GLchar * label);
 // typedef void  (APIENTRYP GPLIGHTMODELF)(GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPLIGHTMODELFV)(GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPLIGHTMODELI)(GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPLIGHTMODELIV)(GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPLIGHTMODELXOES)(GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPLIGHTMODELXVOES)(GLenum  pname, const GLfixed * param);
 // typedef void  (APIENTRYP GPLIGHTF)(GLenum  light, GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPLIGHTFV)(GLenum  light, GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPLIGHTI)(GLenum  light, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPLIGHTIV)(GLenum  light, GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPLIGHTXOES)(GLenum  light, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPLIGHTXVOES)(GLenum  light, GLenum  pname, const GLfixed * params);
 // typedef void  (APIENTRYP GPLINESTIPPLE)(GLint  factor, GLushort  pattern);
 // typedef void  (APIENTRYP GPLINEWIDTH)(GLfloat  width);
-// typedef void  (APIENTRYP GPLINEWIDTHXOES)(GLfixed  width);
 // typedef void  (APIENTRYP GPLINKPROGRAM)(GLuint  program);
 // typedef void  (APIENTRYP GPLISTBASE)(GLuint  base);
 // typedef void  (APIENTRYP GPLOADIDENTITY)();
 // typedef void  (APIENTRYP GPLOADMATRIXD)(const GLdouble * m);
 // typedef void  (APIENTRYP GPLOADMATRIXF)(const GLfloat * m);
-// typedef void  (APIENTRYP GPLOADMATRIXXOES)(const GLfixed * m);
 // typedef void  (APIENTRYP GPLOADNAME)(GLuint  name);
 // typedef void  (APIENTRYP GPLOADTRANSPOSEMATRIXD)(const GLdouble * m);
 // typedef void  (APIENTRYP GPLOADTRANSPOSEMATRIXF)(const GLfloat * m);
-// typedef void  (APIENTRYP GPLOADTRANSPOSEMATRIXXOES)(const GLfixed * m);
 // typedef void  (APIENTRYP GPLOGICOP)(GLenum  opcode);
 // typedef void  (APIENTRYP GPMAKEIMAGEHANDLENONRESIDENTARB)(GLuint64  handle);
 // typedef void  (APIENTRYP GPMAKEIMAGEHANDLERESIDENTARB)(GLuint64  handle, GLenum  access);
@@ -705,26 +606,20 @@ package gl
 // typedef void  (APIENTRYP GPMAKETEXTUREHANDLERESIDENTARB)(GLuint64  handle);
 // typedef void  (APIENTRYP GPMAP1D)(GLenum  target, GLdouble  u1, GLdouble  u2, GLint  stride, GLint  order, const GLdouble * points);
 // typedef void  (APIENTRYP GPMAP1F)(GLenum  target, GLfloat  u1, GLfloat  u2, GLint  stride, GLint  order, const GLfloat * points);
-// typedef void  (APIENTRYP GPMAP1XOES)(GLenum  target, GLfixed  u1, GLfixed  u2, GLint  stride, GLint  order, GLfixed  points);
 // typedef void  (APIENTRYP GPMAP2D)(GLenum  target, GLdouble  u1, GLdouble  u2, GLint  ustride, GLint  uorder, GLdouble  v1, GLdouble  v2, GLint  vstride, GLint  vorder, const GLdouble * points);
 // typedef void  (APIENTRYP GPMAP2F)(GLenum  target, GLfloat  u1, GLfloat  u2, GLint  ustride, GLint  uorder, GLfloat  v1, GLfloat  v2, GLint  vstride, GLint  vorder, const GLfloat * points);
-// typedef void  (APIENTRYP GPMAP2XOES)(GLenum  target, GLfixed  u1, GLfixed  u2, GLint  ustride, GLint  uorder, GLfixed  v1, GLfixed  v2, GLint  vstride, GLint  vorder, GLfixed  points);
 // typedef void * (APIENTRYP GPMAPBUFFER)(GLenum  target, GLenum  access);
 // typedef void * (APIENTRYP GPMAPBUFFERRANGE)(GLenum  target, GLintptr  offset, GLsizeiptr  length, GLbitfield  access);
 // typedef void  (APIENTRYP GPMAPGRID1D)(GLint  un, GLdouble  u1, GLdouble  u2);
 // typedef void  (APIENTRYP GPMAPGRID1F)(GLint  un, GLfloat  u1, GLfloat  u2);
-// typedef void  (APIENTRYP GPMAPGRID1XOES)(GLint  n, GLfixed  u1, GLfixed  u2);
 // typedef void  (APIENTRYP GPMAPGRID2D)(GLint  un, GLdouble  u1, GLdouble  u2, GLint  vn, GLdouble  v1, GLdouble  v2);
 // typedef void  (APIENTRYP GPMAPGRID2F)(GLint  un, GLfloat  u1, GLfloat  u2, GLint  vn, GLfloat  v1, GLfloat  v2);
-// typedef void  (APIENTRYP GPMAPGRID2XOES)(GLint  n, GLfixed  u1, GLfixed  u2, GLfixed  v1, GLfixed  v2);
 // typedef void * (APIENTRYP GPMAPNAMEDBUFFER)(GLuint  buffer, GLenum  access);
 // typedef void * (APIENTRYP GPMAPNAMEDBUFFERRANGE)(GLuint  buffer, GLintptr  offset, GLsizei  length, GLbitfield  access);
 // typedef void  (APIENTRYP GPMATERIALF)(GLenum  face, GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPMATERIALFV)(GLenum  face, GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPMATERIALI)(GLenum  face, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPMATERIALIV)(GLenum  face, GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPMATERIALXOES)(GLenum  face, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPMATERIALXVOES)(GLenum  face, GLenum  pname, const GLfixed * param);
 // typedef void  (APIENTRYP GPMATRIXMODE)(GLenum  mode);
 // typedef void  (APIENTRYP GPMEMORYBARRIER)(GLbitfield  barriers);
 // typedef void  (APIENTRYP GPMEMORYBARRIERBYREGION)(GLbitfield  barriers);
@@ -732,21 +627,15 @@ package gl
 // typedef void  (APIENTRYP GPMINSAMPLESHADINGARB)(GLfloat  value);
 // typedef void  (APIENTRYP GPMULTMATRIXD)(const GLdouble * m);
 // typedef void  (APIENTRYP GPMULTMATRIXF)(const GLfloat * m);
-// typedef void  (APIENTRYP GPMULTMATRIXXOES)(const GLfixed * m);
 // typedef void  (APIENTRYP GPMULTTRANSPOSEMATRIXD)(const GLdouble * m);
 // typedef void  (APIENTRYP GPMULTTRANSPOSEMATRIXF)(const GLfloat * m);
-// typedef void  (APIENTRYP GPMULTTRANSPOSEMATRIXXOES)(const GLfixed * m);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYS)(GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  drawcount);
-// typedef void  (APIENTRYP GPMULTIDRAWARRAYSEXT)(GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  primcount);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECT)(GLenum  mode, const void * indirect, GLsizei  drawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSINDIRECTCOUNTARB)(GLenum  mode, GLintptr  indirect, GLintptr  drawcount, GLsizei  maxdrawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTS)(GLenum  mode, const GLsizei * count, GLenum  type, const void *const* indices, GLsizei  drawcount);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSBASEVERTEX)(GLenum  mode, const GLsizei * count, GLenum  type, const void *const* indices, GLsizei  drawcount, const GLint * basevertex);
-// typedef void  (APIENTRYP GPMULTIDRAWELEMENTSEXT)(GLenum  mode, const GLsizei * count, GLenum  type, const void *const* indices, GLsizei  primcount);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECT)(GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawcount, GLsizei  stride);
 // typedef void  (APIENTRYP GPMULTIDRAWELEMENTSINDIRECTCOUNTARB)(GLenum  mode, GLenum  type, GLintptr  indirect, GLintptr  drawcount, GLsizei  maxdrawcount, GLsizei  stride);
-// typedef void  (APIENTRYP GPMULTITEXCOORD1BOES)(GLenum  texture, GLbyte  s);
-// typedef void  (APIENTRYP GPMULTITEXCOORD1BVOES)(GLenum  texture, const GLbyte * coords);
 // typedef void  (APIENTRYP GPMULTITEXCOORD1D)(GLenum  target, GLdouble  s);
 // typedef void  (APIENTRYP GPMULTITEXCOORD1DV)(GLenum  target, const GLdouble * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD1F)(GLenum  target, GLfloat  s);
@@ -755,10 +644,6 @@ package gl
 // typedef void  (APIENTRYP GPMULTITEXCOORD1IV)(GLenum  target, const GLint * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD1S)(GLenum  target, GLshort  s);
 // typedef void  (APIENTRYP GPMULTITEXCOORD1SV)(GLenum  target, const GLshort * v);
-// typedef void  (APIENTRYP GPMULTITEXCOORD1XOES)(GLenum  texture, GLfixed  s);
-// typedef void  (APIENTRYP GPMULTITEXCOORD1XVOES)(GLenum  texture, const GLfixed * coords);
-// typedef void  (APIENTRYP GPMULTITEXCOORD2BOES)(GLenum  texture, GLbyte  s, GLbyte  t);
-// typedef void  (APIENTRYP GPMULTITEXCOORD2BVOES)(GLenum  texture, const GLbyte * coords);
 // typedef void  (APIENTRYP GPMULTITEXCOORD2D)(GLenum  target, GLdouble  s, GLdouble  t);
 // typedef void  (APIENTRYP GPMULTITEXCOORD2DV)(GLenum  target, const GLdouble * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD2F)(GLenum  target, GLfloat  s, GLfloat  t);
@@ -767,10 +652,6 @@ package gl
 // typedef void  (APIENTRYP GPMULTITEXCOORD2IV)(GLenum  target, const GLint * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD2S)(GLenum  target, GLshort  s, GLshort  t);
 // typedef void  (APIENTRYP GPMULTITEXCOORD2SV)(GLenum  target, const GLshort * v);
-// typedef void  (APIENTRYP GPMULTITEXCOORD2XOES)(GLenum  texture, GLfixed  s, GLfixed  t);
-// typedef void  (APIENTRYP GPMULTITEXCOORD2XVOES)(GLenum  texture, const GLfixed * coords);
-// typedef void  (APIENTRYP GPMULTITEXCOORD3BOES)(GLenum  texture, GLbyte  s, GLbyte  t, GLbyte  r);
-// typedef void  (APIENTRYP GPMULTITEXCOORD3BVOES)(GLenum  texture, const GLbyte * coords);
 // typedef void  (APIENTRYP GPMULTITEXCOORD3D)(GLenum  target, GLdouble  s, GLdouble  t, GLdouble  r);
 // typedef void  (APIENTRYP GPMULTITEXCOORD3DV)(GLenum  target, const GLdouble * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD3F)(GLenum  target, GLfloat  s, GLfloat  t, GLfloat  r);
@@ -779,10 +660,6 @@ package gl
 // typedef void  (APIENTRYP GPMULTITEXCOORD3IV)(GLenum  target, const GLint * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD3S)(GLenum  target, GLshort  s, GLshort  t, GLshort  r);
 // typedef void  (APIENTRYP GPMULTITEXCOORD3SV)(GLenum  target, const GLshort * v);
-// typedef void  (APIENTRYP GPMULTITEXCOORD3XOES)(GLenum  texture, GLfixed  s, GLfixed  t, GLfixed  r);
-// typedef void  (APIENTRYP GPMULTITEXCOORD3XVOES)(GLenum  texture, const GLfixed * coords);
-// typedef void  (APIENTRYP GPMULTITEXCOORD4BOES)(GLenum  texture, GLbyte  s, GLbyte  t, GLbyte  r, GLbyte  q);
-// typedef void  (APIENTRYP GPMULTITEXCOORD4BVOES)(GLenum  texture, const GLbyte * coords);
 // typedef void  (APIENTRYP GPMULTITEXCOORD4D)(GLenum  target, GLdouble  s, GLdouble  t, GLdouble  r, GLdouble  q);
 // typedef void  (APIENTRYP GPMULTITEXCOORD4DV)(GLenum  target, const GLdouble * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD4F)(GLenum  target, GLfloat  s, GLfloat  t, GLfloat  r, GLfloat  q);
@@ -791,8 +668,6 @@ package gl
 // typedef void  (APIENTRYP GPMULTITEXCOORD4IV)(GLenum  target, const GLint * v);
 // typedef void  (APIENTRYP GPMULTITEXCOORD4S)(GLenum  target, GLshort  s, GLshort  t, GLshort  r, GLshort  q);
 // typedef void  (APIENTRYP GPMULTITEXCOORD4SV)(GLenum  target, const GLshort * v);
-// typedef void  (APIENTRYP GPMULTITEXCOORD4XOES)(GLenum  texture, GLfixed  s, GLfixed  t, GLfixed  r, GLfixed  q);
-// typedef void  (APIENTRYP GPMULTITEXCOORD4XVOES)(GLenum  texture, const GLfixed * coords);
 // typedef void  (APIENTRYP GPNAMEDBUFFERDATA)(GLuint  buffer, GLsizei  size, const void * data, GLenum  usage);
 // typedef void  (APIENTRYP GPNAMEDBUFFERPAGECOMMITMENTARB)(GLuint  buffer, GLintptr  offset, GLsizei  size, GLboolean  commit);
 // typedef void  (APIENTRYP GPNAMEDBUFFERPAGECOMMITMENTEXT)(GLuint  buffer, GLintptr  offset, GLsizei  size, GLboolean  commit);
@@ -819,153 +694,102 @@ package gl
 // typedef void  (APIENTRYP GPNORMAL3IV)(const GLint * v);
 // typedef void  (APIENTRYP GPNORMAL3S)(GLshort  nx, GLshort  ny, GLshort  nz);
 // typedef void  (APIENTRYP GPNORMAL3SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPNORMAL3XOES)(GLfixed  nx, GLfixed  ny, GLfixed  nz);
-// typedef void  (APIENTRYP GPNORMAL3XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPNORMALPOINTER)(GLenum  type, GLsizei  stride, const void * pointer);
 // typedef void  (APIENTRYP GPOBJECTLABEL)(GLenum  identifier, GLuint  name, GLsizei  length, const GLchar * label);
 // typedef void  (APIENTRYP GPOBJECTLABELKHR)(GLenum  identifier, GLuint  name, GLsizei  length, const GLchar * label);
 // typedef void  (APIENTRYP GPOBJECTPTRLABEL)(const void * ptr, GLsizei  length, const GLchar * label);
 // typedef void  (APIENTRYP GPOBJECTPTRLABELKHR)(const void * ptr, GLsizei  length, const GLchar * label);
 // typedef void  (APIENTRYP GPORTHO)(GLdouble  left, GLdouble  right, GLdouble  bottom, GLdouble  top, GLdouble  zNear, GLdouble  zFar);
-// typedef void  (APIENTRYP GPORTHOFOES)(GLfloat  l, GLfloat  r, GLfloat  b, GLfloat  t, GLfloat  n, GLfloat  f);
-// typedef void  (APIENTRYP GPORTHOXOES)(GLfixed  l, GLfixed  r, GLfixed  b, GLfixed  t, GLfixed  n, GLfixed  f);
 // typedef void  (APIENTRYP GPPASSTHROUGH)(GLfloat  token);
-// typedef void  (APIENTRYP GPPASSTHROUGHXOES)(GLfixed  token);
 // typedef void  (APIENTRYP GPPATCHPARAMETERFV)(GLenum  pname, const GLfloat * values);
 // typedef void  (APIENTRYP GPPATCHPARAMETERI)(GLenum  pname, GLint  value);
 // typedef void  (APIENTRYP GPPAUSETRANSFORMFEEDBACK)();
 // typedef void  (APIENTRYP GPPIXELMAPFV)(GLenum  map, GLsizei  mapsize, const GLfloat * values);
 // typedef void  (APIENTRYP GPPIXELMAPUIV)(GLenum  map, GLsizei  mapsize, const GLuint * values);
 // typedef void  (APIENTRYP GPPIXELMAPUSV)(GLenum  map, GLsizei  mapsize, const GLushort * values);
-// typedef void  (APIENTRYP GPPIXELMAPX)(GLenum  map, GLint  size, const GLfixed * values);
 // typedef void  (APIENTRYP GPPIXELSTOREF)(GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPPIXELSTOREI)(GLenum  pname, GLint  param);
-// typedef void  (APIENTRYP GPPIXELSTOREX)(GLenum  pname, GLfixed  param);
 // typedef void  (APIENTRYP GPPIXELTRANSFERF)(GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPPIXELTRANSFERI)(GLenum  pname, GLint  param);
-// typedef void  (APIENTRYP GPPIXELTRANSFERXOES)(GLenum  pname, GLfixed  param);
 // typedef void  (APIENTRYP GPPIXELZOOM)(GLfloat  xfactor, GLfloat  yfactor);
-// typedef void  (APIENTRYP GPPIXELZOOMXOES)(GLfixed  xfactor, GLfixed  yfactor);
 // typedef void  (APIENTRYP GPPOINTPARAMETERF)(GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPPOINTPARAMETERFV)(GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPPOINTPARAMETERI)(GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPPOINTPARAMETERIV)(GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPPOINTPARAMETERXOES)(GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPPOINTPARAMETERXVOES)(GLenum  pname, const GLfixed * params);
 // typedef void  (APIENTRYP GPPOINTSIZE)(GLfloat  size);
-// typedef void  (APIENTRYP GPPOINTSIZEXOES)(GLfixed  size);
 // typedef void  (APIENTRYP GPPOLYGONMODE)(GLenum  face, GLenum  mode);
 // typedef void  (APIENTRYP GPPOLYGONOFFSET)(GLfloat  factor, GLfloat  units);
-// typedef void  (APIENTRYP GPPOLYGONOFFSETXOES)(GLfixed  factor, GLfixed  units);
 // typedef void  (APIENTRYP GPPOLYGONSTIPPLE)(const GLubyte * mask);
 // typedef void  (APIENTRYP GPPOPATTRIB)();
 // typedef void  (APIENTRYP GPPOPCLIENTATTRIB)();
 // typedef void  (APIENTRYP GPPOPDEBUGGROUP)();
 // typedef void  (APIENTRYP GPPOPDEBUGGROUPKHR)();
-// typedef void  (APIENTRYP GPPOPGROUPMARKEREXT)();
 // typedef void  (APIENTRYP GPPOPMATRIX)();
 // typedef void  (APIENTRYP GPPOPNAME)();
 // typedef void  (APIENTRYP GPPRIMITIVERESTARTINDEX)(GLuint  index);
 // typedef void  (APIENTRYP GPPRIORITIZETEXTURES)(GLsizei  n, const GLuint * textures, const GLfloat * priorities);
-// typedef void  (APIENTRYP GPPRIORITIZETEXTURESXOES)(GLsizei  n, const GLuint * textures, const GLfixed * priorities);
 // typedef void  (APIENTRYP GPPROGRAMBINARY)(GLuint  program, GLenum  binaryFormat, const void * binary, GLsizei  length);
 // typedef void  (APIENTRYP GPPROGRAMPARAMETERI)(GLuint  program, GLenum  pname, GLint  value);
-// typedef void  (APIENTRYP GPPROGRAMPARAMETERIEXT)(GLuint  program, GLenum  pname, GLint  value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1D)(GLuint  program, GLint  location, GLdouble  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1DV)(GLuint  program, GLint  location, GLsizei  count, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1F)(GLuint  program, GLint  location, GLfloat  v0);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1FEXT)(GLuint  program, GLint  location, GLfloat  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1I)(GLuint  program, GLint  location, GLint  v0);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1IEXT)(GLuint  program, GLint  location, GLint  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1UI)(GLuint  program, GLint  location, GLuint  v0);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1UIEXT)(GLuint  program, GLint  location, GLuint  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2D)(GLuint  program, GLint  location, GLdouble  v0, GLdouble  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2DV)(GLuint  program, GLint  location, GLsizei  count, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2F)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2FEXT)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2I)(GLuint  program, GLint  location, GLint  v0, GLint  v1);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2IEXT)(GLuint  program, GLint  location, GLint  v0, GLint  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2UI)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2UIEXT)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3D)(GLuint  program, GLint  location, GLdouble  v0, GLdouble  v1, GLdouble  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3DV)(GLuint  program, GLint  location, GLsizei  count, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3F)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3FEXT)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3I)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3IEXT)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3UI)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3UIEXT)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4D)(GLuint  program, GLint  location, GLdouble  v0, GLdouble  v1, GLdouble  v2, GLdouble  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4DV)(GLuint  program, GLint  location, GLsizei  count, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4F)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4FEXT)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4I)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4IEXT)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4UI)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4UIEXT)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMHANDLEUI64ARB)(GLuint  program, GLint  location, GLuint64  value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMHANDLEUI64VARB)(GLuint  program, GLint  location, GLsizei  count, const GLuint64 * values);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X3DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X3FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X3FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X4DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X4FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X4FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X2DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X2FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X2FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X4DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X4FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X4FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X2DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X2FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X2FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X3DV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X3FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X3FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROVOKINGVERTEX)(GLenum  mode);
 // typedef void  (APIENTRYP GPPUSHATTRIB)(GLbitfield  mask);
 // typedef void  (APIENTRYP GPPUSHCLIENTATTRIB)(GLbitfield  mask);
 // typedef void  (APIENTRYP GPPUSHDEBUGGROUP)(GLenum  source, GLuint  id, GLsizei  length, const GLchar * message);
 // typedef void  (APIENTRYP GPPUSHDEBUGGROUPKHR)(GLenum  source, GLuint  id, GLsizei  length, const GLchar * message);
-// typedef void  (APIENTRYP GPPUSHGROUPMARKEREXT)(GLsizei  length, const GLchar * marker);
 // typedef void  (APIENTRYP GPPUSHMATRIX)();
 // typedef void  (APIENTRYP GPPUSHNAME)(GLuint  name);
 // typedef void  (APIENTRYP GPQUERYCOUNTER)(GLuint  id, GLenum  target);
-// typedef GLbitfield  (APIENTRYP GPQUERYMATRIXXOES)(GLfixed * mantissa, GLint * exponent);
 // typedef void  (APIENTRYP GPRASTERPOS2D)(GLdouble  x, GLdouble  y);
 // typedef void  (APIENTRYP GPRASTERPOS2DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPRASTERPOS2F)(GLfloat  x, GLfloat  y);
@@ -974,8 +798,6 @@ package gl
 // typedef void  (APIENTRYP GPRASTERPOS2IV)(const GLint * v);
 // typedef void  (APIENTRYP GPRASTERPOS2S)(GLshort  x, GLshort  y);
 // typedef void  (APIENTRYP GPRASTERPOS2SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPRASTERPOS2XOES)(GLfixed  x, GLfixed  y);
-// typedef void  (APIENTRYP GPRASTERPOS2XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPRASTERPOS3D)(GLdouble  x, GLdouble  y, GLdouble  z);
 // typedef void  (APIENTRYP GPRASTERPOS3DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPRASTERPOS3F)(GLfloat  x, GLfloat  y, GLfloat  z);
@@ -984,8 +806,6 @@ package gl
 // typedef void  (APIENTRYP GPRASTERPOS3IV)(const GLint * v);
 // typedef void  (APIENTRYP GPRASTERPOS3S)(GLshort  x, GLshort  y, GLshort  z);
 // typedef void  (APIENTRYP GPRASTERPOS3SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPRASTERPOS3XOES)(GLfixed  x, GLfixed  y, GLfixed  z);
-// typedef void  (APIENTRYP GPRASTERPOS3XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPRASTERPOS4D)(GLdouble  x, GLdouble  y, GLdouble  z, GLdouble  w);
 // typedef void  (APIENTRYP GPRASTERPOS4DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPRASTERPOS4F)(GLfloat  x, GLfloat  y, GLfloat  z, GLfloat  w);
@@ -994,8 +814,6 @@ package gl
 // typedef void  (APIENTRYP GPRASTERPOS4IV)(const GLint * v);
 // typedef void  (APIENTRYP GPRASTERPOS4S)(GLshort  x, GLshort  y, GLshort  z, GLshort  w);
 // typedef void  (APIENTRYP GPRASTERPOS4SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPRASTERPOS4XOES)(GLfixed  x, GLfixed  y, GLfixed  z, GLfixed  w);
-// typedef void  (APIENTRYP GPRASTERPOS4XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPREADBUFFER)(GLenum  src);
 // typedef void  (APIENTRYP GPREADPIXELS)(GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, void * pixels);
 // typedef void  (APIENTRYP GPREADNPIXELS)(GLint  x, GLint  y, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, GLsizei  bufSize, void * data);
@@ -1009,8 +827,6 @@ package gl
 // typedef void  (APIENTRYP GPRECTIV)(const GLint * v1, const GLint * v2);
 // typedef void  (APIENTRYP GPRECTS)(GLshort  x1, GLshort  y1, GLshort  x2, GLshort  y2);
 // typedef void  (APIENTRYP GPRECTSV)(const GLshort * v1, const GLshort * v2);
-// typedef void  (APIENTRYP GPRECTXOES)(GLfixed  x1, GLfixed  y1, GLfixed  x2, GLfixed  y2);
-// typedef void  (APIENTRYP GPRECTXVOES)(const GLfixed * v1, const GLfixed * v2);
 // typedef void  (APIENTRYP GPRELEASESHADERCOMPILER)();
 // typedef GLint  (APIENTRYP GPRENDERMODE)(GLenum  mode);
 // typedef void  (APIENTRYP GPRENDERBUFFERSTORAGE)(GLenum  target, GLenum  internalformat, GLsizei  width, GLsizei  height);
@@ -1018,10 +834,7 @@ package gl
 // typedef void  (APIENTRYP GPRESUMETRANSFORMFEEDBACK)();
 // typedef void  (APIENTRYP GPROTATED)(GLdouble  angle, GLdouble  x, GLdouble  y, GLdouble  z);
 // typedef void  (APIENTRYP GPROTATEF)(GLfloat  angle, GLfloat  x, GLfloat  y, GLfloat  z);
-// typedef void  (APIENTRYP GPROTATEXOES)(GLfixed  angle, GLfixed  x, GLfixed  y, GLfixed  z);
 // typedef void  (APIENTRYP GPSAMPLECOVERAGE)(GLfloat  value, GLboolean  invert);
-// typedef void  (APIENTRYP GPSAMPLECOVERAGEOES)(GLfixed  value, GLboolean  invert);
-// typedef void  (APIENTRYP GPSAMPLECOVERAGEXOES)(GLclampx  value, GLboolean  invert);
 // typedef void  (APIENTRYP GPSAMPLEMASKI)(GLuint  maskNumber, GLbitfield  mask);
 // typedef void  (APIENTRYP GPSAMPLERPARAMETERIIV)(GLuint  sampler, GLenum  pname, const GLint * param);
 // typedef void  (APIENTRYP GPSAMPLERPARAMETERIUIV)(GLuint  sampler, GLenum  pname, const GLuint * param);
@@ -1031,7 +844,6 @@ package gl
 // typedef void  (APIENTRYP GPSAMPLERPARAMETERIV)(GLuint  sampler, GLenum  pname, const GLint * param);
 // typedef void  (APIENTRYP GPSCALED)(GLdouble  x, GLdouble  y, GLdouble  z);
 // typedef void  (APIENTRYP GPSCALEF)(GLfloat  x, GLfloat  y, GLfloat  z);
-// typedef void  (APIENTRYP GPSCALEXOES)(GLfixed  x, GLfixed  y, GLfixed  z);
 // typedef void  (APIENTRYP GPSCISSOR)(GLint  x, GLint  y, GLsizei  width, GLsizei  height);
 // typedef void  (APIENTRYP GPSCISSORARRAYV)(GLuint  first, GLsizei  count, const GLint * v);
 // typedef void  (APIENTRYP GPSCISSORINDEXED)(GLuint  index, GLint  left, GLint  bottom, GLsizei  width, GLsizei  height);
@@ -1054,8 +866,6 @@ package gl
 // typedef void  (APIENTRYP GPSECONDARYCOLOR3USV)(const GLushort * v);
 // typedef void  (APIENTRYP GPSECONDARYCOLORPOINTER)(GLint  size, GLenum  type, GLsizei  stride, const void * pointer);
 // typedef void  (APIENTRYP GPSELECTBUFFER)(GLsizei  size, GLuint * buffer);
-// typedef void  (APIENTRYP GPSELECTPERFMONITORCOUNTERSAMD)(GLuint  monitor, GLboolean  enable, GLuint  group, GLint  numCounters, GLuint * counterList);
-// typedef void  (APIENTRYP GPSETFENCENV)(GLuint  fence, GLenum  condition);
 // typedef void  (APIENTRYP GPSHADEMODEL)(GLenum  mode);
 // typedef void  (APIENTRYP GPSHADERBINARY)(GLsizei  count, const GLuint * shaders, GLenum  binaryformat, const void * binary, GLsizei  length);
 // typedef void  (APIENTRYP GPSHADERSOURCE)(GLuint  shader, GLsizei  count, const GLchar *const* string, const GLint * length);
@@ -1066,11 +876,8 @@ package gl
 // typedef void  (APIENTRYP GPSTENCILMASKSEPARATE)(GLenum  face, GLuint  mask);
 // typedef void  (APIENTRYP GPSTENCILOP)(GLenum  fail, GLenum  zfail, GLenum  zpass);
 // typedef void  (APIENTRYP GPSTENCILOPSEPARATE)(GLenum  face, GLenum  sfail, GLenum  dpfail, GLenum  dppass);
-// typedef GLboolean  (APIENTRYP GPTESTFENCENV)(GLuint  fence);
 // typedef void  (APIENTRYP GPTEXBUFFER)(GLenum  target, GLenum  internalformat, GLuint  buffer);
 // typedef void  (APIENTRYP GPTEXBUFFERRANGE)(GLenum  target, GLenum  internalformat, GLuint  buffer, GLintptr  offset, GLsizeiptr  size);
-// typedef void  (APIENTRYP GPTEXCOORD1BOES)(GLbyte  s);
-// typedef void  (APIENTRYP GPTEXCOORD1BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPTEXCOORD1D)(GLdouble  s);
 // typedef void  (APIENTRYP GPTEXCOORD1DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPTEXCOORD1F)(GLfloat  s);
@@ -1079,10 +886,6 @@ package gl
 // typedef void  (APIENTRYP GPTEXCOORD1IV)(const GLint * v);
 // typedef void  (APIENTRYP GPTEXCOORD1S)(GLshort  s);
 // typedef void  (APIENTRYP GPTEXCOORD1SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPTEXCOORD1XOES)(GLfixed  s);
-// typedef void  (APIENTRYP GPTEXCOORD1XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPTEXCOORD2BOES)(GLbyte  s, GLbyte  t);
-// typedef void  (APIENTRYP GPTEXCOORD2BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPTEXCOORD2D)(GLdouble  s, GLdouble  t);
 // typedef void  (APIENTRYP GPTEXCOORD2DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPTEXCOORD2F)(GLfloat  s, GLfloat  t);
@@ -1091,10 +894,6 @@ package gl
 // typedef void  (APIENTRYP GPTEXCOORD2IV)(const GLint * v);
 // typedef void  (APIENTRYP GPTEXCOORD2S)(GLshort  s, GLshort  t);
 // typedef void  (APIENTRYP GPTEXCOORD2SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPTEXCOORD2XOES)(GLfixed  s, GLfixed  t);
-// typedef void  (APIENTRYP GPTEXCOORD2XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPTEXCOORD3BOES)(GLbyte  s, GLbyte  t, GLbyte  r);
-// typedef void  (APIENTRYP GPTEXCOORD3BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPTEXCOORD3D)(GLdouble  s, GLdouble  t, GLdouble  r);
 // typedef void  (APIENTRYP GPTEXCOORD3DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPTEXCOORD3F)(GLfloat  s, GLfloat  t, GLfloat  r);
@@ -1103,10 +902,6 @@ package gl
 // typedef void  (APIENTRYP GPTEXCOORD3IV)(const GLint * v);
 // typedef void  (APIENTRYP GPTEXCOORD3S)(GLshort  s, GLshort  t, GLshort  r);
 // typedef void  (APIENTRYP GPTEXCOORD3SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPTEXCOORD3XOES)(GLfixed  s, GLfixed  t, GLfixed  r);
-// typedef void  (APIENTRYP GPTEXCOORD3XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPTEXCOORD4BOES)(GLbyte  s, GLbyte  t, GLbyte  r, GLbyte  q);
-// typedef void  (APIENTRYP GPTEXCOORD4BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPTEXCOORD4D)(GLdouble  s, GLdouble  t, GLdouble  r, GLdouble  q);
 // typedef void  (APIENTRYP GPTEXCOORD4DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPTEXCOORD4F)(GLfloat  s, GLfloat  t, GLfloat  r, GLfloat  q);
@@ -1115,23 +910,17 @@ package gl
 // typedef void  (APIENTRYP GPTEXCOORD4IV)(const GLint * v);
 // typedef void  (APIENTRYP GPTEXCOORD4S)(GLshort  s, GLshort  t, GLshort  r, GLshort  q);
 // typedef void  (APIENTRYP GPTEXCOORD4SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPTEXCOORD4XOES)(GLfixed  s, GLfixed  t, GLfixed  r, GLfixed  q);
-// typedef void  (APIENTRYP GPTEXCOORD4XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPTEXCOORDPOINTER)(GLint  size, GLenum  type, GLsizei  stride, const void * pointer);
 // typedef void  (APIENTRYP GPTEXENVF)(GLenum  target, GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPTEXENVFV)(GLenum  target, GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPTEXENVI)(GLenum  target, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPTEXENVIV)(GLenum  target, GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPTEXENVXOES)(GLenum  target, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPTEXENVXVOES)(GLenum  target, GLenum  pname, const GLfixed * params);
 // typedef void  (APIENTRYP GPTEXGEND)(GLenum  coord, GLenum  pname, GLdouble  param);
 // typedef void  (APIENTRYP GPTEXGENDV)(GLenum  coord, GLenum  pname, const GLdouble * params);
 // typedef void  (APIENTRYP GPTEXGENF)(GLenum  coord, GLenum  pname, GLfloat  param);
 // typedef void  (APIENTRYP GPTEXGENFV)(GLenum  coord, GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPTEXGENI)(GLenum  coord, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPTEXGENIV)(GLenum  coord, GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPTEXGENXOES)(GLenum  coord, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPTEXGENXVOES)(GLenum  coord, GLenum  pname, const GLfixed * params);
 // typedef void  (APIENTRYP GPTEXIMAGE1D)(GLenum  target, GLint  level, GLint  internalformat, GLsizei  width, GLint  border, GLenum  format, GLenum  type, const void * pixels);
 // typedef void  (APIENTRYP GPTEXIMAGE2D)(GLenum  target, GLint  level, GLint  internalformat, GLsizei  width, GLsizei  height, GLint  border, GLenum  format, GLenum  type, const void * pixels);
 // typedef void  (APIENTRYP GPTEXIMAGE2DMULTISAMPLE)(GLenum  target, GLsizei  samples, GLenum  internalformat, GLsizei  width, GLsizei  height, GLboolean  fixedsamplelocations);
@@ -1144,8 +933,6 @@ package gl
 // typedef void  (APIENTRYP GPTEXPARAMETERFV)(GLenum  target, GLenum  pname, const GLfloat * params);
 // typedef void  (APIENTRYP GPTEXPARAMETERI)(GLenum  target, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPTEXPARAMETERIV)(GLenum  target, GLenum  pname, const GLint * params);
-// typedef void  (APIENTRYP GPTEXPARAMETERXOES)(GLenum  target, GLenum  pname, GLfixed  param);
-// typedef void  (APIENTRYP GPTEXPARAMETERXVOES)(GLenum  target, GLenum  pname, const GLfixed * params);
 // typedef void  (APIENTRYP GPTEXSTORAGE1D)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width);
 // typedef void  (APIENTRYP GPTEXSTORAGE2D)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height);
 // typedef void  (APIENTRYP GPTEXSTORAGE2DMULTISAMPLE)(GLenum  target, GLsizei  samples, GLenum  internalformat, GLsizei  width, GLsizei  height, GLboolean  fixedsamplelocations);
@@ -1177,7 +964,6 @@ package gl
 // typedef void  (APIENTRYP GPTRANSFORMFEEDBACKVARYINGS)(GLuint  program, GLsizei  count, const GLchar *const* varyings, GLenum  bufferMode);
 // typedef void  (APIENTRYP GPTRANSLATED)(GLdouble  x, GLdouble  y, GLdouble  z);
 // typedef void  (APIENTRYP GPTRANSLATEF)(GLfloat  x, GLfloat  y, GLfloat  z);
-// typedef void  (APIENTRYP GPTRANSLATEXOES)(GLfixed  x, GLfixed  y, GLfixed  z);
 // typedef void  (APIENTRYP GPUNIFORM1D)(GLint  location, GLdouble  x);
 // typedef void  (APIENTRYP GPUNIFORM1DV)(GLint  location, GLsizei  count, const GLdouble * value);
 // typedef void  (APIENTRYP GPUNIFORM1F)(GLint  location, GLfloat  v0);
@@ -1236,13 +1022,8 @@ package gl
 // typedef GLboolean  (APIENTRYP GPUNMAPNAMEDBUFFER)(GLuint  buffer);
 // typedef void  (APIENTRYP GPUSEPROGRAM)(GLuint  program);
 // typedef void  (APIENTRYP GPUSEPROGRAMSTAGES)(GLuint  pipeline, GLbitfield  stages, GLuint  program);
-// typedef void  (APIENTRYP GPUSEPROGRAMSTAGESEXT)(GLuint  pipeline, GLbitfield  stages, GLuint  program);
-// typedef void  (APIENTRYP GPUSESHADERPROGRAMEXT)(GLenum  type, GLuint  program);
 // typedef void  (APIENTRYP GPVALIDATEPROGRAM)(GLuint  program);
 // typedef void  (APIENTRYP GPVALIDATEPROGRAMPIPELINE)(GLuint  pipeline);
-// typedef void  (APIENTRYP GPVALIDATEPROGRAMPIPELINEEXT)(GLuint  pipeline);
-// typedef void  (APIENTRYP GPVERTEX2BOES)(GLbyte  x, GLbyte  y);
-// typedef void  (APIENTRYP GPVERTEX2BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPVERTEX2D)(GLdouble  x, GLdouble  y);
 // typedef void  (APIENTRYP GPVERTEX2DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPVERTEX2F)(GLfloat  x, GLfloat  y);
@@ -1251,10 +1032,6 @@ package gl
 // typedef void  (APIENTRYP GPVERTEX2IV)(const GLint * v);
 // typedef void  (APIENTRYP GPVERTEX2S)(GLshort  x, GLshort  y);
 // typedef void  (APIENTRYP GPVERTEX2SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPVERTEX2XOES)(GLfixed  x);
-// typedef void  (APIENTRYP GPVERTEX2XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPVERTEX3BOES)(GLbyte  x, GLbyte  y, GLbyte  z);
-// typedef void  (APIENTRYP GPVERTEX3BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPVERTEX3D)(GLdouble  x, GLdouble  y, GLdouble  z);
 // typedef void  (APIENTRYP GPVERTEX3DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPVERTEX3F)(GLfloat  x, GLfloat  y, GLfloat  z);
@@ -1263,10 +1040,6 @@ package gl
 // typedef void  (APIENTRYP GPVERTEX3IV)(const GLint * v);
 // typedef void  (APIENTRYP GPVERTEX3S)(GLshort  x, GLshort  y, GLshort  z);
 // typedef void  (APIENTRYP GPVERTEX3SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPVERTEX3XOES)(GLfixed  x, GLfixed  y);
-// typedef void  (APIENTRYP GPVERTEX3XVOES)(const GLfixed * coords);
-// typedef void  (APIENTRYP GPVERTEX4BOES)(GLbyte  x, GLbyte  y, GLbyte  z, GLbyte  w);
-// typedef void  (APIENTRYP GPVERTEX4BVOES)(const GLbyte * coords);
 // typedef void  (APIENTRYP GPVERTEX4D)(GLdouble  x, GLdouble  y, GLdouble  z, GLdouble  w);
 // typedef void  (APIENTRYP GPVERTEX4DV)(const GLdouble * v);
 // typedef void  (APIENTRYP GPVERTEX4F)(GLfloat  x, GLfloat  y, GLfloat  z, GLfloat  w);
@@ -1275,8 +1048,6 @@ package gl
 // typedef void  (APIENTRYP GPVERTEX4IV)(const GLint * v);
 // typedef void  (APIENTRYP GPVERTEX4S)(GLshort  x, GLshort  y, GLshort  z, GLshort  w);
 // typedef void  (APIENTRYP GPVERTEX4SV)(const GLshort * v);
-// typedef void  (APIENTRYP GPVERTEX4XOES)(GLfixed  x, GLfixed  y, GLfixed  z);
-// typedef void  (APIENTRYP GPVERTEX4XVOES)(const GLfixed * coords);
 // typedef void  (APIENTRYP GPVERTEXARRAYATTRIBBINDING)(GLuint  vaobj, GLuint  attribindex, GLuint  bindingindex);
 // typedef void  (APIENTRYP GPVERTEXARRAYATTRIBFORMAT)(GLuint  vaobj, GLuint  attribindex, GLint  size, GLenum  type, GLboolean  normalized, GLuint  relativeoffset);
 // typedef void  (APIENTRYP GPVERTEXARRAYATTRIBIFORMAT)(GLuint  vaobj, GLuint  attribindex, GLint  size, GLenum  type, GLuint  relativeoffset);
@@ -1393,25 +1164,13 @@ package gl
 // static void  glowAccum(GPACCUM fnptr, GLenum  op, GLfloat  value) {
 //   (*fnptr)(op, value);
 // }
-// static void  glowAccumxOES(GPACCUMXOES fnptr, GLenum  op, GLfixed  value) {
-//   (*fnptr)(op, value);
-// }
-// static void  glowActiveProgramEXT(GPACTIVEPROGRAMEXT fnptr, GLuint  program) {
-//   (*fnptr)(program);
-// }
 // static void  glowActiveShaderProgram(GPACTIVESHADERPROGRAM fnptr, GLuint  pipeline, GLuint  program) {
-//   (*fnptr)(pipeline, program);
-// }
-// static void  glowActiveShaderProgramEXT(GPACTIVESHADERPROGRAMEXT fnptr, GLuint  pipeline, GLuint  program) {
 //   (*fnptr)(pipeline, program);
 // }
 // static void  glowActiveTexture(GPACTIVETEXTURE fnptr, GLenum  texture) {
 //   (*fnptr)(texture);
 // }
 // static void  glowAlphaFunc(GPALPHAFUNC fnptr, GLenum  func, GLfloat  ref) {
-//   (*fnptr)(func, ref);
-// }
-// static void  glowAlphaFuncxOES(GPALPHAFUNCXOES fnptr, GLenum  func, GLfixed  ref) {
 //   (*fnptr)(func, ref);
 // }
 // static GLboolean  glowAreTexturesResident(GPARETEXTURESRESIDENT fnptr, GLsizei  n, const GLuint * textures, GLboolean * residences) {
@@ -1428,12 +1187,6 @@ package gl
 // }
 // static void  glowBeginConditionalRender(GPBEGINCONDITIONALRENDER fnptr, GLuint  id, GLenum  mode) {
 //   (*fnptr)(id, mode);
-// }
-// static void  glowBeginPerfMonitorAMD(GPBEGINPERFMONITORAMD fnptr, GLuint  monitor) {
-//   (*fnptr)(monitor);
-// }
-// static void  glowBeginPerfQueryINTEL(GPBEGINPERFQUERYINTEL fnptr, GLuint  queryHandle) {
-//   (*fnptr)(queryHandle);
 // }
 // static void  glowBeginQuery(GPBEGINQUERY fnptr, GLenum  target, GLuint  id) {
 //   (*fnptr)(target, id);
@@ -1480,9 +1233,6 @@ package gl
 // static void  glowBindProgramPipeline(GPBINDPROGRAMPIPELINE fnptr, GLuint  pipeline) {
 //   (*fnptr)(pipeline);
 // }
-// static void  glowBindProgramPipelineEXT(GPBINDPROGRAMPIPELINEEXT fnptr, GLuint  pipeline) {
-//   (*fnptr)(pipeline);
-// }
 // static void  glowBindRenderbuffer(GPBINDRENDERBUFFER fnptr, GLenum  target, GLuint  renderbuffer) {
 //   (*fnptr)(target, renderbuffer);
 // }
@@ -1516,25 +1266,10 @@ package gl
 // static void  glowBitmap(GPBITMAP fnptr, GLsizei  width, GLsizei  height, GLfloat  xorig, GLfloat  yorig, GLfloat  xmove, GLfloat  ymove, const GLubyte * bitmap) {
 //   (*fnptr)(width, height, xorig, yorig, xmove, ymove, bitmap);
 // }
-// static void  glowBitmapxOES(GPBITMAPXOES fnptr, GLsizei  width, GLsizei  height, GLfixed  xorig, GLfixed  yorig, GLfixed  xmove, GLfixed  ymove, const GLubyte * bitmap) {
-//   (*fnptr)(width, height, xorig, yorig, xmove, ymove, bitmap);
-// }
-// static void  glowBlendBarrierKHR(GPBLENDBARRIERKHR fnptr) {
-//   (*fnptr)();
-// }
-// static void  glowBlendBarrierNV(GPBLENDBARRIERNV fnptr) {
-//   (*fnptr)();
-// }
 // static void  glowBlendColor(GPBLENDCOLOR fnptr, GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha) {
 //   (*fnptr)(red, green, blue, alpha);
 // }
-// static void  glowBlendColorxOES(GPBLENDCOLORXOES fnptr, GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha) {
-//   (*fnptr)(red, green, blue, alpha);
-// }
 // static void  glowBlendEquation(GPBLENDEQUATION fnptr, GLenum  mode) {
-//   (*fnptr)(mode);
-// }
-// static void  glowBlendEquationEXT(GPBLENDEQUATIONEXT fnptr, GLenum  mode) {
 //   (*fnptr)(mode);
 // }
 // static void  glowBlendEquationSeparate(GPBLENDEQUATIONSEPARATE fnptr, GLenum  modeRGB, GLenum  modeAlpha) {
@@ -1569,9 +1304,6 @@ package gl
 // }
 // static void  glowBlendFunciARB(GPBLENDFUNCIARB fnptr, GLuint  buf, GLenum  src, GLenum  dst) {
 //   (*fnptr)(buf, src, dst);
-// }
-// static void  glowBlendParameteriNV(GPBLENDPARAMETERINV fnptr, GLenum  pname, GLint  value) {
-//   (*fnptr)(pname, value);
 // }
 // static void  glowBlitFramebuffer(GPBLITFRAMEBUFFER fnptr, GLint  srcX0, GLint  srcY0, GLint  srcX1, GLint  srcY1, GLint  dstX0, GLint  dstY0, GLint  dstX1, GLint  dstY1, GLbitfield  mask, GLenum  filter) {
 //   (*fnptr)(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
@@ -1612,9 +1344,6 @@ package gl
 // static void  glowClearAccum(GPCLEARACCUM fnptr, GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha) {
 //   (*fnptr)(red, green, blue, alpha);
 // }
-// static void  glowClearAccumxOES(GPCLEARACCUMXOES fnptr, GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha) {
-//   (*fnptr)(red, green, blue, alpha);
-// }
 // static void  glowClearBufferData(GPCLEARBUFFERDATA fnptr, GLenum  target, GLenum  internalformat, GLenum  format, GLenum  type, const void * data) {
 //   (*fnptr)(target, internalformat, format, type, data);
 // }
@@ -1636,20 +1365,11 @@ package gl
 // static void  glowClearColor(GPCLEARCOLOR fnptr, GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha) {
 //   (*fnptr)(red, green, blue, alpha);
 // }
-// static void  glowClearColorxOES(GPCLEARCOLORXOES fnptr, GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha) {
-//   (*fnptr)(red, green, blue, alpha);
-// }
 // static void  glowClearDepth(GPCLEARDEPTH fnptr, GLdouble  depth) {
 //   (*fnptr)(depth);
 // }
 // static void  glowClearDepthf(GPCLEARDEPTHF fnptr, GLfloat  d) {
 //   (*fnptr)(d);
-// }
-// static void  glowClearDepthfOES(GPCLEARDEPTHFOES fnptr, GLclampf  depth) {
-//   (*fnptr)(depth);
-// }
-// static void  glowClearDepthxOES(GPCLEARDEPTHXOES fnptr, GLfixed  depth) {
-//   (*fnptr)(depth);
 // }
 // static void  glowClearIndex(GPCLEARINDEX fnptr, GLfloat  c) {
 //   (*fnptr)(c);
@@ -1691,12 +1411,6 @@ package gl
 //   (*fnptr)(origin, depth);
 // }
 // static void  glowClipPlane(GPCLIPPLANE fnptr, GLenum  plane, const GLdouble * equation) {
-//   (*fnptr)(plane, equation);
-// }
-// static void  glowClipPlanefOES(GPCLIPPLANEFOES fnptr, GLenum  plane, const GLfloat * equation) {
-//   (*fnptr)(plane, equation);
-// }
-// static void  glowClipPlanexOES(GPCLIPPLANEXOES fnptr, GLenum  plane, const GLfixed * equation) {
 //   (*fnptr)(plane, equation);
 // }
 // static void  glowColor3b(GPCOLOR3B fnptr, GLbyte  red, GLbyte  green, GLbyte  blue) {
@@ -1747,12 +1461,6 @@ package gl
 // static void  glowColor3usv(GPCOLOR3USV fnptr, const GLushort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowColor3xOES(GPCOLOR3XOES fnptr, GLfixed  red, GLfixed  green, GLfixed  blue) {
-//   (*fnptr)(red, green, blue);
-// }
-// static void  glowColor3xvOES(GPCOLOR3XVOES fnptr, const GLfixed * components) {
-//   (*fnptr)(components);
-// }
 // static void  glowColor4b(GPCOLOR4B fnptr, GLbyte  red, GLbyte  green, GLbyte  blue, GLbyte  alpha) {
 //   (*fnptr)(red, green, blue, alpha);
 // }
@@ -1801,12 +1509,6 @@ package gl
 // static void  glowColor4usv(GPCOLOR4USV fnptr, const GLushort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowColor4xOES(GPCOLOR4XOES fnptr, GLfixed  red, GLfixed  green, GLfixed  blue, GLfixed  alpha) {
-//   (*fnptr)(red, green, blue, alpha);
-// }
-// static void  glowColor4xvOES(GPCOLOR4XVOES fnptr, const GLfixed * components) {
-//   (*fnptr)(components);
-// }
 // static void  glowColorMask(GPCOLORMASK fnptr, GLboolean  red, GLboolean  green, GLboolean  blue, GLboolean  alpha) {
 //   (*fnptr)(red, green, blue, alpha);
 // }
@@ -1852,12 +1554,6 @@ package gl
 // static void  glowCompressedTextureSubImage3D(GPCOMPRESSEDTEXTURESUBIMAGE3D fnptr, GLuint  texture, GLint  level, GLint  xoffset, GLint  yoffset, GLint  zoffset, GLsizei  width, GLsizei  height, GLsizei  depth, GLenum  format, GLsizei  imageSize, const void * data) {
 //   (*fnptr)(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
 // }
-// static void  glowConvolutionParameterxOES(GPCONVOLUTIONPARAMETERXOES fnptr, GLenum  target, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(target, pname, param);
-// }
-// static void  glowConvolutionParameterxvOES(GPCONVOLUTIONPARAMETERXVOES fnptr, GLenum  target, GLenum  pname, const GLfixed * params) {
-//   (*fnptr)(target, pname, params);
-// }
 // static void  glowCopyBufferSubData(GPCOPYBUFFERSUBDATA fnptr, GLenum  readTarget, GLenum  writeTarget, GLintptr  readOffset, GLintptr  writeOffset, GLsizeiptr  size) {
 //   (*fnptr)(readTarget, writeTarget, readOffset, writeOffset, size);
 // }
@@ -1900,9 +1596,6 @@ package gl
 // static void  glowCreateFramebuffers(GPCREATEFRAMEBUFFERS fnptr, GLsizei  n, GLuint * framebuffers) {
 //   (*fnptr)(n, framebuffers);
 // }
-// static void  glowCreatePerfQueryINTEL(GPCREATEPERFQUERYINTEL fnptr, GLuint  queryId, GLuint * queryHandle) {
-//   (*fnptr)(queryId, queryHandle);
-// }
 // static GLuint  glowCreateProgram(GPCREATEPROGRAM fnptr) {
 //   return (*fnptr)();
 // }
@@ -1921,13 +1614,7 @@ package gl
 // static GLuint  glowCreateShader(GPCREATESHADER fnptr, GLenum  type) {
 //   return (*fnptr)(type);
 // }
-// static GLuint  glowCreateShaderProgramEXT(GPCREATESHADERPROGRAMEXT fnptr, GLenum  type, const GLchar * string) {
-//   return (*fnptr)(type, string);
-// }
 // static GLuint  glowCreateShaderProgramv(GPCREATESHADERPROGRAMV fnptr, GLenum  type, GLsizei  count, const GLchar *const* strings) {
-//   return (*fnptr)(type, count, strings);
-// }
-// static GLuint  glowCreateShaderProgramvEXT(GPCREATESHADERPROGRAMVEXT fnptr, GLenum  type, GLsizei  count, const GLchar ** strings) {
 //   return (*fnptr)(type, count, strings);
 // }
 // static GLsync  glowCreateSyncFromCLeventARB(GPCREATESYNCFROMCLEVENTARB fnptr, struct _cl_context * context, struct _cl_event * event, GLbitfield  flags) {
@@ -1975,9 +1662,6 @@ package gl
 // static void  glowDeleteBuffers(GPDELETEBUFFERS fnptr, GLsizei  n, const GLuint * buffers) {
 //   (*fnptr)(n, buffers);
 // }
-// static void  glowDeleteFencesNV(GPDELETEFENCESNV fnptr, GLsizei  n, const GLuint * fences) {
-//   (*fnptr)(n, fences);
-// }
 // static void  glowDeleteFramebuffers(GPDELETEFRAMEBUFFERS fnptr, GLsizei  n, const GLuint * framebuffers) {
 //   (*fnptr)(n, framebuffers);
 // }
@@ -1987,19 +1671,10 @@ package gl
 // static void  glowDeleteNamedStringARB(GPDELETENAMEDSTRINGARB fnptr, GLint  namelen, const GLchar * name) {
 //   (*fnptr)(namelen, name);
 // }
-// static void  glowDeletePerfMonitorsAMD(GPDELETEPERFMONITORSAMD fnptr, GLsizei  n, GLuint * monitors) {
-//   (*fnptr)(n, monitors);
-// }
-// static void  glowDeletePerfQueryINTEL(GPDELETEPERFQUERYINTEL fnptr, GLuint  queryHandle) {
-//   (*fnptr)(queryHandle);
-// }
 // static void  glowDeleteProgram(GPDELETEPROGRAM fnptr, GLuint  program) {
 //   (*fnptr)(program);
 // }
 // static void  glowDeleteProgramPipelines(GPDELETEPROGRAMPIPELINES fnptr, GLsizei  n, const GLuint * pipelines) {
-//   (*fnptr)(n, pipelines);
-// }
-// static void  glowDeleteProgramPipelinesEXT(GPDELETEPROGRAMPIPELINESEXT fnptr, GLsizei  n, const GLuint * pipelines) {
 //   (*fnptr)(n, pipelines);
 // }
 // static void  glowDeleteQueries(GPDELETEQUERIES fnptr, GLsizei  n, const GLuint * ids) {
@@ -2044,12 +1719,6 @@ package gl
 // static void  glowDepthRangef(GPDEPTHRANGEF fnptr, GLfloat  n, GLfloat  f) {
 //   (*fnptr)(n, f);
 // }
-// static void  glowDepthRangefOES(GPDEPTHRANGEFOES fnptr, GLclampf  n, GLclampf  f) {
-//   (*fnptr)(n, f);
-// }
-// static void  glowDepthRangexOES(GPDEPTHRANGEXOES fnptr, GLfixed  n, GLfixed  f) {
-//   (*fnptr)(n, f);
-// }
 // static void  glowDetachShader(GPDETACHSHADER fnptr, GLuint  program, GLuint  shader) {
 //   (*fnptr)(program, shader);
 // }
@@ -2089,9 +1758,6 @@ package gl
 // static void  glowDrawArraysInstancedBaseInstance(GPDRAWARRAYSINSTANCEDBASEINSTANCE fnptr, GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount, GLuint  baseinstance) {
 //   (*fnptr)(mode, first, count, instancecount, baseinstance);
 // }
-// static void  glowDrawArraysInstancedEXT(GPDRAWARRAYSINSTANCEDEXT fnptr, GLenum  mode, GLint  start, GLsizei  count, GLsizei  primcount) {
-//   (*fnptr)(mode, start, count, primcount);
-// }
 // static void  glowDrawBuffer(GPDRAWBUFFER fnptr, GLenum  buf) {
 //   (*fnptr)(buf);
 // }
@@ -2118,9 +1784,6 @@ package gl
 // }
 // static void  glowDrawElementsInstancedBaseVertexBaseInstance(GPDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCE fnptr, GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount, GLint  basevertex, GLuint  baseinstance) {
 //   (*fnptr)(mode, count, type, indices, instancecount, basevertex, baseinstance);
-// }
-// static void  glowDrawElementsInstancedEXT(GPDRAWELEMENTSINSTANCEDEXT fnptr, GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  primcount) {
-//   (*fnptr)(mode, count, type, indices, primcount);
 // }
 // static void  glowDrawPixels(GPDRAWPIXELS fnptr, GLsizei  width, GLsizei  height, GLenum  format, GLenum  type, const void * pixels) {
 //   (*fnptr)(width, height, format, type, pixels);
@@ -2176,12 +1839,6 @@ package gl
 // static void  glowEndList(GPENDLIST fnptr) {
 //   (*fnptr)();
 // }
-// static void  glowEndPerfMonitorAMD(GPENDPERFMONITORAMD fnptr, GLuint  monitor) {
-//   (*fnptr)(monitor);
-// }
-// static void  glowEndPerfQueryINTEL(GPENDPERFQUERYINTEL fnptr, GLuint  queryHandle) {
-//   (*fnptr)(queryHandle);
-// }
 // static void  glowEndQuery(GPENDQUERY fnptr, GLenum  target) {
 //   (*fnptr)(target);
 // }
@@ -2203,12 +1860,6 @@ package gl
 // static void  glowEvalCoord1fv(GPEVALCOORD1FV fnptr, const GLfloat * u) {
 //   (*fnptr)(u);
 // }
-// static void  glowEvalCoord1xOES(GPEVALCOORD1XOES fnptr, GLfixed  u) {
-//   (*fnptr)(u);
-// }
-// static void  glowEvalCoord1xvOES(GPEVALCOORD1XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowEvalCoord2d(GPEVALCOORD2D fnptr, GLdouble  u, GLdouble  v) {
 //   (*fnptr)(u, v);
 // }
@@ -2220,12 +1871,6 @@ package gl
 // }
 // static void  glowEvalCoord2fv(GPEVALCOORD2FV fnptr, const GLfloat * u) {
 //   (*fnptr)(u);
-// }
-// static void  glowEvalCoord2xOES(GPEVALCOORD2XOES fnptr, GLfixed  u, GLfixed  v) {
-//   (*fnptr)(u, v);
-// }
-// static void  glowEvalCoord2xvOES(GPEVALCOORD2XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
 // }
 // static void  glowEvalMesh1(GPEVALMESH1 fnptr, GLenum  mode, GLint  i1, GLint  i2) {
 //   (*fnptr)(mode, i1, i2);
@@ -2242,17 +1887,11 @@ package gl
 // static void  glowFeedbackBuffer(GPFEEDBACKBUFFER fnptr, GLsizei  size, GLenum  type, GLfloat * buffer) {
 //   (*fnptr)(size, type, buffer);
 // }
-// static void  glowFeedbackBufferxOES(GPFEEDBACKBUFFERXOES fnptr, GLsizei  n, GLenum  type, const GLfixed * buffer) {
-//   (*fnptr)(n, type, buffer);
-// }
 // static GLsync  glowFenceSync(GPFENCESYNC fnptr, GLenum  condition, GLbitfield  flags) {
 //   return (*fnptr)(condition, flags);
 // }
 // static void  glowFinish(GPFINISH fnptr) {
 //   (*fnptr)();
-// }
-// static void  glowFinishFenceNV(GPFINISHFENCENV fnptr, GLuint  fence) {
-//   (*fnptr)(fence);
 // }
 // static void  glowFlush(GPFLUSH fnptr) {
 //   (*fnptr)();
@@ -2290,12 +1929,6 @@ package gl
 // static void  glowFogiv(GPFOGIV fnptr, GLenum  pname, const GLint * params) {
 //   (*fnptr)(pname, params);
 // }
-// static void  glowFogxOES(GPFOGXOES fnptr, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(pname, param);
-// }
-// static void  glowFogxvOES(GPFOGXVOES fnptr, GLenum  pname, const GLfixed * param) {
-//   (*fnptr)(pname, param);
-// }
 // static void  glowFramebufferParameteri(GPFRAMEBUFFERPARAMETERI fnptr, GLenum  target, GLenum  pname, GLint  param) {
 //   (*fnptr)(target, pname, param);
 // }
@@ -2323,17 +1956,8 @@ package gl
 // static void  glowFrustum(GPFRUSTUM fnptr, GLdouble  left, GLdouble  right, GLdouble  bottom, GLdouble  top, GLdouble  zNear, GLdouble  zFar) {
 //   (*fnptr)(left, right, bottom, top, zNear, zFar);
 // }
-// static void  glowFrustumfOES(GPFRUSTUMFOES fnptr, GLfloat  l, GLfloat  r, GLfloat  b, GLfloat  t, GLfloat  n, GLfloat  f) {
-//   (*fnptr)(l, r, b, t, n, f);
-// }
-// static void  glowFrustumxOES(GPFRUSTUMXOES fnptr, GLfixed  l, GLfixed  r, GLfixed  b, GLfixed  t, GLfixed  n, GLfixed  f) {
-//   (*fnptr)(l, r, b, t, n, f);
-// }
 // static void  glowGenBuffers(GPGENBUFFERS fnptr, GLsizei  n, GLuint * buffers) {
 //   (*fnptr)(n, buffers);
-// }
-// static void  glowGenFencesNV(GPGENFENCESNV fnptr, GLsizei  n, GLuint * fences) {
-//   (*fnptr)(n, fences);
 // }
 // static void  glowGenFramebuffers(GPGENFRAMEBUFFERS fnptr, GLsizei  n, GLuint * framebuffers) {
 //   (*fnptr)(n, framebuffers);
@@ -2341,13 +1965,7 @@ package gl
 // static GLuint  glowGenLists(GPGENLISTS fnptr, GLsizei  range) {
 //   return (*fnptr)(range);
 // }
-// static void  glowGenPerfMonitorsAMD(GPGENPERFMONITORSAMD fnptr, GLsizei  n, GLuint * monitors) {
-//   (*fnptr)(n, monitors);
-// }
 // static void  glowGenProgramPipelines(GPGENPROGRAMPIPELINES fnptr, GLsizei  n, GLuint * pipelines) {
-//   (*fnptr)(n, pipelines);
-// }
-// static void  glowGenProgramPipelinesEXT(GPGENPROGRAMPIPELINESEXT fnptr, GLsizei  n, GLuint * pipelines) {
 //   (*fnptr)(n, pipelines);
 // }
 // static void  glowGenQueries(GPGENQUERIES fnptr, GLsizei  n, GLuint * ids) {
@@ -2431,12 +2049,6 @@ package gl
 // static void  glowGetClipPlane(GPGETCLIPPLANE fnptr, GLenum  plane, GLdouble * equation) {
 //   (*fnptr)(plane, equation);
 // }
-// static void  glowGetClipPlanefOES(GPGETCLIPPLANEFOES fnptr, GLenum  plane, GLfloat * equation) {
-//   (*fnptr)(plane, equation);
-// }
-// static void  glowGetClipPlanexOES(GPGETCLIPPLANEXOES fnptr, GLenum  plane, GLfixed * equation) {
-//   (*fnptr)(plane, equation);
-// }
 // static void  glowGetCompressedTexImage(GPGETCOMPRESSEDTEXIMAGE fnptr, GLenum  target, GLint  level, void * img) {
 //   (*fnptr)(target, level, img);
 // }
@@ -2445,9 +2057,6 @@ package gl
 // }
 // static void  glowGetCompressedTextureSubImage(GPGETCOMPRESSEDTEXTURESUBIMAGE fnptr, GLuint  texture, GLint  level, GLint  xoffset, GLint  yoffset, GLint  zoffset, GLsizei  width, GLsizei  height, GLsizei  depth, GLsizei  bufSize, void * pixels) {
 //   (*fnptr)(texture, level, xoffset, yoffset, zoffset, width, height, depth, bufSize, pixels);
-// }
-// static void  glowGetConvolutionParameterxvOES(GPGETCONVOLUTIONPARAMETERXVOES fnptr, GLenum  target, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(target, pname, params);
 // }
 // static GLuint  glowGetDebugMessageLog(GPGETDEBUGMESSAGELOG fnptr, GLuint  count, GLsizei  bufSize, GLenum * sources, GLenum * types, GLuint * ids, GLenum * severities, GLsizei * lengths, GLchar * messageLog) {
 //   return (*fnptr)(count, bufSize, sources, types, ids, severities, lengths, messageLog);
@@ -2466,15 +2075,6 @@ package gl
 // }
 // static GLenum  glowGetError(GPGETERROR fnptr) {
 //   return (*fnptr)();
-// }
-// static void  glowGetFenceivNV(GPGETFENCEIVNV fnptr, GLuint  fence, GLenum  pname, GLint * params) {
-//   (*fnptr)(fence, pname, params);
-// }
-// static void  glowGetFirstPerfQueryIdINTEL(GPGETFIRSTPERFQUERYIDINTEL fnptr, GLuint * queryId) {
-//   (*fnptr)(queryId);
-// }
-// static void  glowGetFixedvOES(GPGETFIXEDVOES fnptr, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(pname, params);
 // }
 // static void  glowGetFloati_v(GPGETFLOATI_V fnptr, GLenum  target, GLuint  index, GLfloat * data) {
 //   (*fnptr)(target, index, data);
@@ -2503,9 +2103,6 @@ package gl
 // static GLenum  glowGetGraphicsResetStatusKHR(GPGETGRAPHICSRESETSTATUSKHR fnptr) {
 //   return (*fnptr)();
 // }
-// static void  glowGetHistogramParameterxvOES(GPGETHISTOGRAMPARAMETERXVOES fnptr, GLenum  target, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(target, pname, params);
-// }
 // static GLuint64  glowGetImageHandleARB(GPGETIMAGEHANDLEARB fnptr, GLuint  texture, GLint  level, GLboolean  layered, GLint  layer, GLenum  format) {
 //   return (*fnptr)(texture, level, layered, layer, format);
 // }
@@ -2533,12 +2130,6 @@ package gl
 // static void  glowGetLightiv(GPGETLIGHTIV fnptr, GLenum  light, GLenum  pname, GLint * params) {
 //   (*fnptr)(light, pname, params);
 // }
-// static void  glowGetLightxOES(GPGETLIGHTXOES fnptr, GLenum  light, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(light, pname, params);
-// }
-// static void  glowGetLightxvOES(GPGETLIGHTXVOES fnptr, GLenum  light, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(light, pname, params);
-// }
 // static void  glowGetMapdv(GPGETMAPDV fnptr, GLenum  target, GLenum  query, GLdouble * v) {
 //   (*fnptr)(target, query, v);
 // }
@@ -2548,19 +2139,10 @@ package gl
 // static void  glowGetMapiv(GPGETMAPIV fnptr, GLenum  target, GLenum  query, GLint * v) {
 //   (*fnptr)(target, query, v);
 // }
-// static void  glowGetMapxvOES(GPGETMAPXVOES fnptr, GLenum  target, GLenum  query, GLfixed * v) {
-//   (*fnptr)(target, query, v);
-// }
 // static void  glowGetMaterialfv(GPGETMATERIALFV fnptr, GLenum  face, GLenum  pname, GLfloat * params) {
 //   (*fnptr)(face, pname, params);
 // }
 // static void  glowGetMaterialiv(GPGETMATERIALIV fnptr, GLenum  face, GLenum  pname, GLint * params) {
-//   (*fnptr)(face, pname, params);
-// }
-// static void  glowGetMaterialxOES(GPGETMATERIALXOES fnptr, GLenum  face, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(face, pname, param);
-// }
-// static void  glowGetMaterialxvOES(GPGETMATERIALXVOES fnptr, GLenum  face, GLenum  pname, GLfixed * params) {
 //   (*fnptr)(face, pname, params);
 // }
 // static void  glowGetMultisamplefv(GPGETMULTISAMPLEFV fnptr, GLenum  pname, GLuint  index, GLfloat * val) {
@@ -2593,14 +2175,8 @@ package gl
 // static void  glowGetNamedStringivARB(GPGETNAMEDSTRINGIVARB fnptr, GLint  namelen, const GLchar * name, GLenum  pname, GLint * params) {
 //   (*fnptr)(namelen, name, pname, params);
 // }
-// static void  glowGetNextPerfQueryIdINTEL(GPGETNEXTPERFQUERYIDINTEL fnptr, GLuint  queryId, GLuint * nextQueryId) {
-//   (*fnptr)(queryId, nextQueryId);
-// }
 // static void  glowGetObjectLabel(GPGETOBJECTLABEL fnptr, GLenum  identifier, GLuint  name, GLsizei  bufSize, GLsizei * length, GLchar * label) {
 //   (*fnptr)(identifier, name, bufSize, length, label);
-// }
-// static void  glowGetObjectLabelEXT(GPGETOBJECTLABELEXT fnptr, GLenum  type, GLuint  object, GLsizei  bufSize, GLsizei * length, GLchar * label) {
-//   (*fnptr)(type, object, bufSize, length, label);
 // }
 // static void  glowGetObjectLabelKHR(GPGETOBJECTLABELKHR fnptr, GLenum  identifier, GLuint  name, GLsizei  bufSize, GLsizei * length, GLchar * label) {
 //   (*fnptr)(identifier, name, bufSize, length, label);
@@ -2611,36 +2187,6 @@ package gl
 // static void  glowGetObjectPtrLabelKHR(GPGETOBJECTPTRLABELKHR fnptr, const void * ptr, GLsizei  bufSize, GLsizei * length, GLchar * label) {
 //   (*fnptr)(ptr, bufSize, length, label);
 // }
-// static void  glowGetPerfCounterInfoINTEL(GPGETPERFCOUNTERINFOINTEL fnptr, GLuint  queryId, GLuint  counterId, GLuint  counterNameLength, GLchar * counterName, GLuint  counterDescLength, GLchar * counterDesc, GLuint * counterOffset, GLuint * counterDataSize, GLuint * counterTypeEnum, GLuint * counterDataTypeEnum, GLuint64 * rawCounterMaxValue) {
-//   (*fnptr)(queryId, counterId, counterNameLength, counterName, counterDescLength, counterDesc, counterOffset, counterDataSize, counterTypeEnum, counterDataTypeEnum, rawCounterMaxValue);
-// }
-// static void  glowGetPerfMonitorCounterDataAMD(GPGETPERFMONITORCOUNTERDATAAMD fnptr, GLuint  monitor, GLenum  pname, GLsizei  dataSize, GLuint * data, GLint * bytesWritten) {
-//   (*fnptr)(monitor, pname, dataSize, data, bytesWritten);
-// }
-// static void  glowGetPerfMonitorCounterInfoAMD(GPGETPERFMONITORCOUNTERINFOAMD fnptr, GLuint  group, GLuint  counter, GLenum  pname, void * data) {
-//   (*fnptr)(group, counter, pname, data);
-// }
-// static void  glowGetPerfMonitorCounterStringAMD(GPGETPERFMONITORCOUNTERSTRINGAMD fnptr, GLuint  group, GLuint  counter, GLsizei  bufSize, GLsizei * length, GLchar * counterString) {
-//   (*fnptr)(group, counter, bufSize, length, counterString);
-// }
-// static void  glowGetPerfMonitorCountersAMD(GPGETPERFMONITORCOUNTERSAMD fnptr, GLuint  group, GLint * numCounters, GLint * maxActiveCounters, GLsizei  counterSize, GLuint * counters) {
-//   (*fnptr)(group, numCounters, maxActiveCounters, counterSize, counters);
-// }
-// static void  glowGetPerfMonitorGroupStringAMD(GPGETPERFMONITORGROUPSTRINGAMD fnptr, GLuint  group, GLsizei  bufSize, GLsizei * length, GLchar * groupString) {
-//   (*fnptr)(group, bufSize, length, groupString);
-// }
-// static void  glowGetPerfMonitorGroupsAMD(GPGETPERFMONITORGROUPSAMD fnptr, GLint * numGroups, GLsizei  groupsSize, GLuint * groups) {
-//   (*fnptr)(numGroups, groupsSize, groups);
-// }
-// static void  glowGetPerfQueryDataINTEL(GPGETPERFQUERYDATAINTEL fnptr, GLuint  queryHandle, GLuint  flags, GLsizei  dataSize, GLvoid * data, GLuint * bytesWritten) {
-//   (*fnptr)(queryHandle, flags, dataSize, data, bytesWritten);
-// }
-// static void  glowGetPerfQueryIdByNameINTEL(GPGETPERFQUERYIDBYNAMEINTEL fnptr, GLchar * queryName, GLuint * queryId) {
-//   (*fnptr)(queryName, queryId);
-// }
-// static void  glowGetPerfQueryInfoINTEL(GPGETPERFQUERYINFOINTEL fnptr, GLuint  queryId, GLuint  queryNameLength, GLchar * queryName, GLuint * dataSize, GLuint * noCounters, GLuint * noInstances, GLuint * capsMask) {
-//   (*fnptr)(queryId, queryNameLength, queryName, dataSize, noCounters, noInstances, capsMask);
-// }
 // static void  glowGetPixelMapfv(GPGETPIXELMAPFV fnptr, GLenum  map, GLfloat * values) {
 //   (*fnptr)(map, values);
 // }
@@ -2649,9 +2195,6 @@ package gl
 // }
 // static void  glowGetPixelMapusv(GPGETPIXELMAPUSV fnptr, GLenum  map, GLushort * values) {
 //   (*fnptr)(map, values);
-// }
-// static void  glowGetPixelMapxv(GPGETPIXELMAPXV fnptr, GLenum  map, GLint  size, GLfixed * values) {
-//   (*fnptr)(map, size, values);
 // }
 // static void  glowGetPointerv(GPGETPOINTERV fnptr, GLenum  pname, void ** params) {
 //   (*fnptr)(pname, params);
@@ -2674,13 +2217,7 @@ package gl
 // static void  glowGetProgramPipelineInfoLog(GPGETPROGRAMPIPELINEINFOLOG fnptr, GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog) {
 //   (*fnptr)(pipeline, bufSize, length, infoLog);
 // }
-// static void  glowGetProgramPipelineInfoLogEXT(GPGETPROGRAMPIPELINEINFOLOGEXT fnptr, GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog) {
-//   (*fnptr)(pipeline, bufSize, length, infoLog);
-// }
 // static void  glowGetProgramPipelineiv(GPGETPROGRAMPIPELINEIV fnptr, GLuint  pipeline, GLenum  pname, GLint * params) {
-//   (*fnptr)(pipeline, pname, params);
-// }
-// static void  glowGetProgramPipelineivEXT(GPGETPROGRAMPIPELINEIVEXT fnptr, GLuint  pipeline, GLenum  pname, GLint * params) {
 //   (*fnptr)(pipeline, pname, params);
 // }
 // static GLuint  glowGetProgramResourceIndex(GPGETPROGRAMRESOURCEINDEX fnptr, GLuint  program, GLenum  programInterface, const GLchar * name) {
@@ -2770,9 +2307,6 @@ package gl
 // static void  glowGetTexEnviv(GPGETTEXENVIV fnptr, GLenum  target, GLenum  pname, GLint * params) {
 //   (*fnptr)(target, pname, params);
 // }
-// static void  glowGetTexEnvxvOES(GPGETTEXENVXVOES fnptr, GLenum  target, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(target, pname, params);
-// }
 // static void  glowGetTexGendv(GPGETTEXGENDV fnptr, GLenum  coord, GLenum  pname, GLdouble * params) {
 //   (*fnptr)(coord, pname, params);
 // }
@@ -2782,9 +2316,6 @@ package gl
 // static void  glowGetTexGeniv(GPGETTEXGENIV fnptr, GLenum  coord, GLenum  pname, GLint * params) {
 //   (*fnptr)(coord, pname, params);
 // }
-// static void  glowGetTexGenxvOES(GPGETTEXGENXVOES fnptr, GLenum  coord, GLenum  pname, GLfixed * params) {
-//   (*fnptr)(coord, pname, params);
-// }
 // static void  glowGetTexImage(GPGETTEXIMAGE fnptr, GLenum  target, GLint  level, GLenum  format, GLenum  type, void * pixels) {
 //   (*fnptr)(target, level, format, type, pixels);
 // }
@@ -2792,9 +2323,6 @@ package gl
 //   (*fnptr)(target, level, pname, params);
 // }
 // static void  glowGetTexLevelParameteriv(GPGETTEXLEVELPARAMETERIV fnptr, GLenum  target, GLint  level, GLenum  pname, GLint * params) {
-//   (*fnptr)(target, level, pname, params);
-// }
-// static void  glowGetTexLevelParameterxvOES(GPGETTEXLEVELPARAMETERXVOES fnptr, GLenum  target, GLint  level, GLenum  pname, GLfixed * params) {
 //   (*fnptr)(target, level, pname, params);
 // }
 // static void  glowGetTexParameterIiv(GPGETTEXPARAMETERIIV fnptr, GLenum  target, GLenum  pname, GLint * params) {
@@ -2807,9 +2335,6 @@ package gl
 //   (*fnptr)(target, pname, params);
 // }
 // static void  glowGetTexParameteriv(GPGETTEXPARAMETERIV fnptr, GLenum  target, GLenum  pname, GLint * params) {
-//   (*fnptr)(target, pname, params);
-// }
-// static void  glowGetTexParameterxvOES(GPGETTEXPARAMETERXVOES fnptr, GLenum  target, GLenum  pname, GLfixed * params) {
 //   (*fnptr)(target, pname, params);
 // }
 // static GLuint64  glowGetTextureHandleARB(GPGETTEXTUREHANDLEARB fnptr, GLuint  texture) {
@@ -2995,17 +2520,8 @@ package gl
 // static void  glowIndexubv(GPINDEXUBV fnptr, const GLubyte * c) {
 //   (*fnptr)(c);
 // }
-// static void  glowIndexxOES(GPINDEXXOES fnptr, GLfixed  component) {
-//   (*fnptr)(component);
-// }
-// static void  glowIndexxvOES(GPINDEXXVOES fnptr, const GLfixed * component) {
-//   (*fnptr)(component);
-// }
 // static void  glowInitNames(GPINITNAMES fnptr) {
 //   (*fnptr)();
-// }
-// static void  glowInsertEventMarkerEXT(GPINSERTEVENTMARKEREXT fnptr, GLsizei  length, const GLchar * marker) {
-//   (*fnptr)(length, marker);
 // }
 // static void  glowInterleavedArrays(GPINTERLEAVEDARRAYS fnptr, GLenum  format, GLsizei  stride, const void * pointer) {
 //   (*fnptr)(format, stride, pointer);
@@ -3043,9 +2559,6 @@ package gl
 // static GLboolean  glowIsEnabledi(GPISENABLEDI fnptr, GLenum  target, GLuint  index) {
 //   return (*fnptr)(target, index);
 // }
-// static GLboolean  glowIsFenceNV(GPISFENCENV fnptr, GLuint  fence) {
-//   return (*fnptr)(fence);
-// }
 // static GLboolean  glowIsFramebuffer(GPISFRAMEBUFFER fnptr, GLuint  framebuffer) {
 //   return (*fnptr)(framebuffer);
 // }
@@ -3062,9 +2575,6 @@ package gl
 //   return (*fnptr)(program);
 // }
 // static GLboolean  glowIsProgramPipeline(GPISPROGRAMPIPELINE fnptr, GLuint  pipeline) {
-//   return (*fnptr)(pipeline);
-// }
-// static GLboolean  glowIsProgramPipelineEXT(GPISPROGRAMPIPELINEEXT fnptr, GLuint  pipeline) {
 //   return (*fnptr)(pipeline);
 // }
 // static GLboolean  glowIsQuery(GPISQUERY fnptr, GLuint  id) {
@@ -3094,9 +2604,6 @@ package gl
 // static GLboolean  glowIsVertexArray(GPISVERTEXARRAY fnptr, GLuint  array) {
 //   return (*fnptr)(array);
 // }
-// static void  glowLabelObjectEXT(GPLABELOBJECTEXT fnptr, GLenum  type, GLuint  object, GLsizei  length, const GLchar * label) {
-//   (*fnptr)(type, object, length, label);
-// }
 // static void  glowLightModelf(GPLIGHTMODELF fnptr, GLenum  pname, GLfloat  param) {
 //   (*fnptr)(pname, param);
 // }
@@ -3108,12 +2615,6 @@ package gl
 // }
 // static void  glowLightModeliv(GPLIGHTMODELIV fnptr, GLenum  pname, const GLint * params) {
 //   (*fnptr)(pname, params);
-// }
-// static void  glowLightModelxOES(GPLIGHTMODELXOES fnptr, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(pname, param);
-// }
-// static void  glowLightModelxvOES(GPLIGHTMODELXVOES fnptr, GLenum  pname, const GLfixed * param) {
-//   (*fnptr)(pname, param);
 // }
 // static void  glowLightf(GPLIGHTF fnptr, GLenum  light, GLenum  pname, GLfloat  param) {
 //   (*fnptr)(light, pname, param);
@@ -3127,19 +2628,10 @@ package gl
 // static void  glowLightiv(GPLIGHTIV fnptr, GLenum  light, GLenum  pname, const GLint * params) {
 //   (*fnptr)(light, pname, params);
 // }
-// static void  glowLightxOES(GPLIGHTXOES fnptr, GLenum  light, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(light, pname, param);
-// }
-// static void  glowLightxvOES(GPLIGHTXVOES fnptr, GLenum  light, GLenum  pname, const GLfixed * params) {
-//   (*fnptr)(light, pname, params);
-// }
 // static void  glowLineStipple(GPLINESTIPPLE fnptr, GLint  factor, GLushort  pattern) {
 //   (*fnptr)(factor, pattern);
 // }
 // static void  glowLineWidth(GPLINEWIDTH fnptr, GLfloat  width) {
-//   (*fnptr)(width);
-// }
-// static void  glowLineWidthxOES(GPLINEWIDTHXOES fnptr, GLfixed  width) {
 //   (*fnptr)(width);
 // }
 // static void  glowLinkProgram(GPLINKPROGRAM fnptr, GLuint  program) {
@@ -3157,9 +2649,6 @@ package gl
 // static void  glowLoadMatrixf(GPLOADMATRIXF fnptr, const GLfloat * m) {
 //   (*fnptr)(m);
 // }
-// static void  glowLoadMatrixxOES(GPLOADMATRIXXOES fnptr, const GLfixed * m) {
-//   (*fnptr)(m);
-// }
 // static void  glowLoadName(GPLOADNAME fnptr, GLuint  name) {
 //   (*fnptr)(name);
 // }
@@ -3167,9 +2656,6 @@ package gl
 //   (*fnptr)(m);
 // }
 // static void  glowLoadTransposeMatrixf(GPLOADTRANSPOSEMATRIXF fnptr, const GLfloat * m) {
-//   (*fnptr)(m);
-// }
-// static void  glowLoadTransposeMatrixxOES(GPLOADTRANSPOSEMATRIXXOES fnptr, const GLfixed * m) {
 //   (*fnptr)(m);
 // }
 // static void  glowLogicOp(GPLOGICOP fnptr, GLenum  opcode) {
@@ -3193,16 +2679,10 @@ package gl
 // static void  glowMap1f(GPMAP1F fnptr, GLenum  target, GLfloat  u1, GLfloat  u2, GLint  stride, GLint  order, const GLfloat * points) {
 //   (*fnptr)(target, u1, u2, stride, order, points);
 // }
-// static void  glowMap1xOES(GPMAP1XOES fnptr, GLenum  target, GLfixed  u1, GLfixed  u2, GLint  stride, GLint  order, GLfixed  points) {
-//   (*fnptr)(target, u1, u2, stride, order, points);
-// }
 // static void  glowMap2d(GPMAP2D fnptr, GLenum  target, GLdouble  u1, GLdouble  u2, GLint  ustride, GLint  uorder, GLdouble  v1, GLdouble  v2, GLint  vstride, GLint  vorder, const GLdouble * points) {
 //   (*fnptr)(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
 // }
 // static void  glowMap2f(GPMAP2F fnptr, GLenum  target, GLfloat  u1, GLfloat  u2, GLint  ustride, GLint  uorder, GLfloat  v1, GLfloat  v2, GLint  vstride, GLint  vorder, const GLfloat * points) {
-//   (*fnptr)(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
-// }
-// static void  glowMap2xOES(GPMAP2XOES fnptr, GLenum  target, GLfixed  u1, GLfixed  u2, GLint  ustride, GLint  uorder, GLfixed  v1, GLfixed  v2, GLint  vstride, GLint  vorder, GLfixed  points) {
 //   (*fnptr)(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
 // }
 // static void * glowMapBuffer(GPMAPBUFFER fnptr, GLenum  target, GLenum  access) {
@@ -3217,17 +2697,11 @@ package gl
 // static void  glowMapGrid1f(GPMAPGRID1F fnptr, GLint  un, GLfloat  u1, GLfloat  u2) {
 //   (*fnptr)(un, u1, u2);
 // }
-// static void  glowMapGrid1xOES(GPMAPGRID1XOES fnptr, GLint  n, GLfixed  u1, GLfixed  u2) {
-//   (*fnptr)(n, u1, u2);
-// }
 // static void  glowMapGrid2d(GPMAPGRID2D fnptr, GLint  un, GLdouble  u1, GLdouble  u2, GLint  vn, GLdouble  v1, GLdouble  v2) {
 //   (*fnptr)(un, u1, u2, vn, v1, v2);
 // }
 // static void  glowMapGrid2f(GPMAPGRID2F fnptr, GLint  un, GLfloat  u1, GLfloat  u2, GLint  vn, GLfloat  v1, GLfloat  v2) {
 //   (*fnptr)(un, u1, u2, vn, v1, v2);
-// }
-// static void  glowMapGrid2xOES(GPMAPGRID2XOES fnptr, GLint  n, GLfixed  u1, GLfixed  u2, GLfixed  v1, GLfixed  v2) {
-//   (*fnptr)(n, u1, u2, v1, v2);
 // }
 // static void * glowMapNamedBuffer(GPMAPNAMEDBUFFER fnptr, GLuint  buffer, GLenum  access) {
 //   return (*fnptr)(buffer, access);
@@ -3246,12 +2720,6 @@ package gl
 // }
 // static void  glowMaterialiv(GPMATERIALIV fnptr, GLenum  face, GLenum  pname, const GLint * params) {
 //   (*fnptr)(face, pname, params);
-// }
-// static void  glowMaterialxOES(GPMATERIALXOES fnptr, GLenum  face, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(face, pname, param);
-// }
-// static void  glowMaterialxvOES(GPMATERIALXVOES fnptr, GLenum  face, GLenum  pname, const GLfixed * param) {
-//   (*fnptr)(face, pname, param);
 // }
 // static void  glowMatrixMode(GPMATRIXMODE fnptr, GLenum  mode) {
 //   (*fnptr)(mode);
@@ -3274,23 +2742,14 @@ package gl
 // static void  glowMultMatrixf(GPMULTMATRIXF fnptr, const GLfloat * m) {
 //   (*fnptr)(m);
 // }
-// static void  glowMultMatrixxOES(GPMULTMATRIXXOES fnptr, const GLfixed * m) {
-//   (*fnptr)(m);
-// }
 // static void  glowMultTransposeMatrixd(GPMULTTRANSPOSEMATRIXD fnptr, const GLdouble * m) {
 //   (*fnptr)(m);
 // }
 // static void  glowMultTransposeMatrixf(GPMULTTRANSPOSEMATRIXF fnptr, const GLfloat * m) {
 //   (*fnptr)(m);
 // }
-// static void  glowMultTransposeMatrixxOES(GPMULTTRANSPOSEMATRIXXOES fnptr, const GLfixed * m) {
-//   (*fnptr)(m);
-// }
 // static void  glowMultiDrawArrays(GPMULTIDRAWARRAYS fnptr, GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  drawcount) {
 //   (*fnptr)(mode, first, count, drawcount);
-// }
-// static void  glowMultiDrawArraysEXT(GPMULTIDRAWARRAYSEXT fnptr, GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  primcount) {
-//   (*fnptr)(mode, first, count, primcount);
 // }
 // static void  glowMultiDrawArraysIndirect(GPMULTIDRAWARRAYSINDIRECT fnptr, GLenum  mode, const void * indirect, GLsizei  drawcount, GLsizei  stride) {
 //   (*fnptr)(mode, indirect, drawcount, stride);
@@ -3304,20 +2763,11 @@ package gl
 // static void  glowMultiDrawElementsBaseVertex(GPMULTIDRAWELEMENTSBASEVERTEX fnptr, GLenum  mode, const GLsizei * count, GLenum  type, const void *const* indices, GLsizei  drawcount, const GLint * basevertex) {
 //   (*fnptr)(mode, count, type, indices, drawcount, basevertex);
 // }
-// static void  glowMultiDrawElementsEXT(GPMULTIDRAWELEMENTSEXT fnptr, GLenum  mode, const GLsizei * count, GLenum  type, const void *const* indices, GLsizei  primcount) {
-//   (*fnptr)(mode, count, type, indices, primcount);
-// }
 // static void  glowMultiDrawElementsIndirect(GPMULTIDRAWELEMENTSINDIRECT fnptr, GLenum  mode, GLenum  type, const void * indirect, GLsizei  drawcount, GLsizei  stride) {
 //   (*fnptr)(mode, type, indirect, drawcount, stride);
 // }
 // static void  glowMultiDrawElementsIndirectCountARB(GPMULTIDRAWELEMENTSINDIRECTCOUNTARB fnptr, GLenum  mode, GLenum  type, GLintptr  indirect, GLintptr  drawcount, GLsizei  maxdrawcount, GLsizei  stride) {
 //   (*fnptr)(mode, type, indirect, drawcount, maxdrawcount, stride);
-// }
-// static void  glowMultiTexCoord1bOES(GPMULTITEXCOORD1BOES fnptr, GLenum  texture, GLbyte  s) {
-//   (*fnptr)(texture, s);
-// }
-// static void  glowMultiTexCoord1bvOES(GPMULTITEXCOORD1BVOES fnptr, GLenum  texture, const GLbyte * coords) {
-//   (*fnptr)(texture, coords);
 // }
 // static void  glowMultiTexCoord1d(GPMULTITEXCOORD1D fnptr, GLenum  target, GLdouble  s) {
 //   (*fnptr)(target, s);
@@ -3343,18 +2793,6 @@ package gl
 // static void  glowMultiTexCoord1sv(GPMULTITEXCOORD1SV fnptr, GLenum  target, const GLshort * v) {
 //   (*fnptr)(target, v);
 // }
-// static void  glowMultiTexCoord1xOES(GPMULTITEXCOORD1XOES fnptr, GLenum  texture, GLfixed  s) {
-//   (*fnptr)(texture, s);
-// }
-// static void  glowMultiTexCoord1xvOES(GPMULTITEXCOORD1XVOES fnptr, GLenum  texture, const GLfixed * coords) {
-//   (*fnptr)(texture, coords);
-// }
-// static void  glowMultiTexCoord2bOES(GPMULTITEXCOORD2BOES fnptr, GLenum  texture, GLbyte  s, GLbyte  t) {
-//   (*fnptr)(texture, s, t);
-// }
-// static void  glowMultiTexCoord2bvOES(GPMULTITEXCOORD2BVOES fnptr, GLenum  texture, const GLbyte * coords) {
-//   (*fnptr)(texture, coords);
-// }
 // static void  glowMultiTexCoord2d(GPMULTITEXCOORD2D fnptr, GLenum  target, GLdouble  s, GLdouble  t) {
 //   (*fnptr)(target, s, t);
 // }
@@ -3378,18 +2816,6 @@ package gl
 // }
 // static void  glowMultiTexCoord2sv(GPMULTITEXCOORD2SV fnptr, GLenum  target, const GLshort * v) {
 //   (*fnptr)(target, v);
-// }
-// static void  glowMultiTexCoord2xOES(GPMULTITEXCOORD2XOES fnptr, GLenum  texture, GLfixed  s, GLfixed  t) {
-//   (*fnptr)(texture, s, t);
-// }
-// static void  glowMultiTexCoord2xvOES(GPMULTITEXCOORD2XVOES fnptr, GLenum  texture, const GLfixed * coords) {
-//   (*fnptr)(texture, coords);
-// }
-// static void  glowMultiTexCoord3bOES(GPMULTITEXCOORD3BOES fnptr, GLenum  texture, GLbyte  s, GLbyte  t, GLbyte  r) {
-//   (*fnptr)(texture, s, t, r);
-// }
-// static void  glowMultiTexCoord3bvOES(GPMULTITEXCOORD3BVOES fnptr, GLenum  texture, const GLbyte * coords) {
-//   (*fnptr)(texture, coords);
 // }
 // static void  glowMultiTexCoord3d(GPMULTITEXCOORD3D fnptr, GLenum  target, GLdouble  s, GLdouble  t, GLdouble  r) {
 //   (*fnptr)(target, s, t, r);
@@ -3415,18 +2841,6 @@ package gl
 // static void  glowMultiTexCoord3sv(GPMULTITEXCOORD3SV fnptr, GLenum  target, const GLshort * v) {
 //   (*fnptr)(target, v);
 // }
-// static void  glowMultiTexCoord3xOES(GPMULTITEXCOORD3XOES fnptr, GLenum  texture, GLfixed  s, GLfixed  t, GLfixed  r) {
-//   (*fnptr)(texture, s, t, r);
-// }
-// static void  glowMultiTexCoord3xvOES(GPMULTITEXCOORD3XVOES fnptr, GLenum  texture, const GLfixed * coords) {
-//   (*fnptr)(texture, coords);
-// }
-// static void  glowMultiTexCoord4bOES(GPMULTITEXCOORD4BOES fnptr, GLenum  texture, GLbyte  s, GLbyte  t, GLbyte  r, GLbyte  q) {
-//   (*fnptr)(texture, s, t, r, q);
-// }
-// static void  glowMultiTexCoord4bvOES(GPMULTITEXCOORD4BVOES fnptr, GLenum  texture, const GLbyte * coords) {
-//   (*fnptr)(texture, coords);
-// }
 // static void  glowMultiTexCoord4d(GPMULTITEXCOORD4D fnptr, GLenum  target, GLdouble  s, GLdouble  t, GLdouble  r, GLdouble  q) {
 //   (*fnptr)(target, s, t, r, q);
 // }
@@ -3450,12 +2864,6 @@ package gl
 // }
 // static void  glowMultiTexCoord4sv(GPMULTITEXCOORD4SV fnptr, GLenum  target, const GLshort * v) {
 //   (*fnptr)(target, v);
-// }
-// static void  glowMultiTexCoord4xOES(GPMULTITEXCOORD4XOES fnptr, GLenum  texture, GLfixed  s, GLfixed  t, GLfixed  r, GLfixed  q) {
-//   (*fnptr)(texture, s, t, r, q);
-// }
-// static void  glowMultiTexCoord4xvOES(GPMULTITEXCOORD4XVOES fnptr, GLenum  texture, const GLfixed * coords) {
-//   (*fnptr)(texture, coords);
 // }
 // static void  glowNamedBufferData(GPNAMEDBUFFERDATA fnptr, GLuint  buffer, GLsizei  size, const void * data, GLenum  usage) {
 //   (*fnptr)(buffer, size, data, usage);
@@ -3535,12 +2943,6 @@ package gl
 // static void  glowNormal3sv(GPNORMAL3SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowNormal3xOES(GPNORMAL3XOES fnptr, GLfixed  nx, GLfixed  ny, GLfixed  nz) {
-//   (*fnptr)(nx, ny, nz);
-// }
-// static void  glowNormal3xvOES(GPNORMAL3XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowNormalPointer(GPNORMALPOINTER fnptr, GLenum  type, GLsizei  stride, const void * pointer) {
 //   (*fnptr)(type, stride, pointer);
 // }
@@ -3559,16 +2961,7 @@ package gl
 // static void  glowOrtho(GPORTHO fnptr, GLdouble  left, GLdouble  right, GLdouble  bottom, GLdouble  top, GLdouble  zNear, GLdouble  zFar) {
 //   (*fnptr)(left, right, bottom, top, zNear, zFar);
 // }
-// static void  glowOrthofOES(GPORTHOFOES fnptr, GLfloat  l, GLfloat  r, GLfloat  b, GLfloat  t, GLfloat  n, GLfloat  f) {
-//   (*fnptr)(l, r, b, t, n, f);
-// }
-// static void  glowOrthoxOES(GPORTHOXOES fnptr, GLfixed  l, GLfixed  r, GLfixed  b, GLfixed  t, GLfixed  n, GLfixed  f) {
-//   (*fnptr)(l, r, b, t, n, f);
-// }
 // static void  glowPassThrough(GPPASSTHROUGH fnptr, GLfloat  token) {
-//   (*fnptr)(token);
-// }
-// static void  glowPassThroughxOES(GPPASSTHROUGHXOES fnptr, GLfixed  token) {
 //   (*fnptr)(token);
 // }
 // static void  glowPatchParameterfv(GPPATCHPARAMETERFV fnptr, GLenum  pname, const GLfloat * values) {
@@ -3589,16 +2982,10 @@ package gl
 // static void  glowPixelMapusv(GPPIXELMAPUSV fnptr, GLenum  map, GLsizei  mapsize, const GLushort * values) {
 //   (*fnptr)(map, mapsize, values);
 // }
-// static void  glowPixelMapx(GPPIXELMAPX fnptr, GLenum  map, GLint  size, const GLfixed * values) {
-//   (*fnptr)(map, size, values);
-// }
 // static void  glowPixelStoref(GPPIXELSTOREF fnptr, GLenum  pname, GLfloat  param) {
 //   (*fnptr)(pname, param);
 // }
 // static void  glowPixelStorei(GPPIXELSTOREI fnptr, GLenum  pname, GLint  param) {
-//   (*fnptr)(pname, param);
-// }
-// static void  glowPixelStorex(GPPIXELSTOREX fnptr, GLenum  pname, GLfixed  param) {
 //   (*fnptr)(pname, param);
 // }
 // static void  glowPixelTransferf(GPPIXELTRANSFERF fnptr, GLenum  pname, GLfloat  param) {
@@ -3607,13 +2994,7 @@ package gl
 // static void  glowPixelTransferi(GPPIXELTRANSFERI fnptr, GLenum  pname, GLint  param) {
 //   (*fnptr)(pname, param);
 // }
-// static void  glowPixelTransferxOES(GPPIXELTRANSFERXOES fnptr, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(pname, param);
-// }
 // static void  glowPixelZoom(GPPIXELZOOM fnptr, GLfloat  xfactor, GLfloat  yfactor) {
-//   (*fnptr)(xfactor, yfactor);
-// }
-// static void  glowPixelZoomxOES(GPPIXELZOOMXOES fnptr, GLfixed  xfactor, GLfixed  yfactor) {
 //   (*fnptr)(xfactor, yfactor);
 // }
 // static void  glowPointParameterf(GPPOINTPARAMETERF fnptr, GLenum  pname, GLfloat  param) {
@@ -3628,25 +3009,13 @@ package gl
 // static void  glowPointParameteriv(GPPOINTPARAMETERIV fnptr, GLenum  pname, const GLint * params) {
 //   (*fnptr)(pname, params);
 // }
-// static void  glowPointParameterxOES(GPPOINTPARAMETERXOES fnptr, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(pname, param);
-// }
-// static void  glowPointParameterxvOES(GPPOINTPARAMETERXVOES fnptr, GLenum  pname, const GLfixed * params) {
-//   (*fnptr)(pname, params);
-// }
 // static void  glowPointSize(GPPOINTSIZE fnptr, GLfloat  size) {
-//   (*fnptr)(size);
-// }
-// static void  glowPointSizexOES(GPPOINTSIZEXOES fnptr, GLfixed  size) {
 //   (*fnptr)(size);
 // }
 // static void  glowPolygonMode(GPPOLYGONMODE fnptr, GLenum  face, GLenum  mode) {
 //   (*fnptr)(face, mode);
 // }
 // static void  glowPolygonOffset(GPPOLYGONOFFSET fnptr, GLfloat  factor, GLfloat  units) {
-//   (*fnptr)(factor, units);
-// }
-// static void  glowPolygonOffsetxOES(GPPOLYGONOFFSETXOES fnptr, GLfixed  factor, GLfixed  units) {
 //   (*fnptr)(factor, units);
 // }
 // static void  glowPolygonStipple(GPPOLYGONSTIPPLE fnptr, const GLubyte * mask) {
@@ -3664,9 +3033,6 @@ package gl
 // static void  glowPopDebugGroupKHR(GPPOPDEBUGGROUPKHR fnptr) {
 //   (*fnptr)();
 // }
-// static void  glowPopGroupMarkerEXT(GPPOPGROUPMARKEREXT fnptr) {
-//   (*fnptr)();
-// }
 // static void  glowPopMatrix(GPPOPMATRIX fnptr) {
 //   (*fnptr)();
 // }
@@ -3679,16 +3045,10 @@ package gl
 // static void  glowPrioritizeTextures(GPPRIORITIZETEXTURES fnptr, GLsizei  n, const GLuint * textures, const GLfloat * priorities) {
 //   (*fnptr)(n, textures, priorities);
 // }
-// static void  glowPrioritizeTexturesxOES(GPPRIORITIZETEXTURESXOES fnptr, GLsizei  n, const GLuint * textures, const GLfixed * priorities) {
-//   (*fnptr)(n, textures, priorities);
-// }
 // static void  glowProgramBinary(GPPROGRAMBINARY fnptr, GLuint  program, GLenum  binaryFormat, const void * binary, GLsizei  length) {
 //   (*fnptr)(program, binaryFormat, binary, length);
 // }
 // static void  glowProgramParameteri(GPPROGRAMPARAMETERI fnptr, GLuint  program, GLenum  pname, GLint  value) {
-//   (*fnptr)(program, pname, value);
-// }
-// static void  glowProgramParameteriEXT(GPPROGRAMPARAMETERIEXT fnptr, GLuint  program, GLenum  pname, GLint  value) {
 //   (*fnptr)(program, pname, value);
 // }
 // static void  glowProgramUniform1d(GPPROGRAMUNIFORM1D fnptr, GLuint  program, GLint  location, GLdouble  v0) {
@@ -3700,37 +3060,19 @@ package gl
 // static void  glowProgramUniform1f(GPPROGRAMUNIFORM1F fnptr, GLuint  program, GLint  location, GLfloat  v0) {
 //   (*fnptr)(program, location, v0);
 // }
-// static void  glowProgramUniform1fEXT(GPPROGRAMUNIFORM1FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0) {
-//   (*fnptr)(program, location, v0);
-// }
 // static void  glowProgramUniform1fv(GPPROGRAMUNIFORM1FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform1fvEXT(GPPROGRAMUNIFORM1FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform1i(GPPROGRAMUNIFORM1I fnptr, GLuint  program, GLint  location, GLint  v0) {
 //   (*fnptr)(program, location, v0);
 // }
-// static void  glowProgramUniform1iEXT(GPPROGRAMUNIFORM1IEXT fnptr, GLuint  program, GLint  location, GLint  v0) {
-//   (*fnptr)(program, location, v0);
-// }
 // static void  glowProgramUniform1iv(GPPROGRAMUNIFORM1IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform1ivEXT(GPPROGRAMUNIFORM1IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform1ui(GPPROGRAMUNIFORM1UI fnptr, GLuint  program, GLint  location, GLuint  v0) {
 //   (*fnptr)(program, location, v0);
 // }
-// static void  glowProgramUniform1uiEXT(GPPROGRAMUNIFORM1UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0) {
-//   (*fnptr)(program, location, v0);
-// }
 // static void  glowProgramUniform1uiv(GPPROGRAMUNIFORM1UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform1uivEXT(GPPROGRAMUNIFORM1UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform2d(GPPROGRAMUNIFORM2D fnptr, GLuint  program, GLint  location, GLdouble  v0, GLdouble  v1) {
@@ -3742,37 +3084,19 @@ package gl
 // static void  glowProgramUniform2f(GPPROGRAMUNIFORM2F fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1) {
 //   (*fnptr)(program, location, v0, v1);
 // }
-// static void  glowProgramUniform2fEXT(GPPROGRAMUNIFORM2FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1) {
-//   (*fnptr)(program, location, v0, v1);
-// }
 // static void  glowProgramUniform2fv(GPPROGRAMUNIFORM2FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform2fvEXT(GPPROGRAMUNIFORM2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform2i(GPPROGRAMUNIFORM2I fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1) {
 //   (*fnptr)(program, location, v0, v1);
 // }
-// static void  glowProgramUniform2iEXT(GPPROGRAMUNIFORM2IEXT fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1) {
-//   (*fnptr)(program, location, v0, v1);
-// }
 // static void  glowProgramUniform2iv(GPPROGRAMUNIFORM2IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform2ivEXT(GPPROGRAMUNIFORM2IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform2ui(GPPROGRAMUNIFORM2UI fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1) {
 //   (*fnptr)(program, location, v0, v1);
 // }
-// static void  glowProgramUniform2uiEXT(GPPROGRAMUNIFORM2UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1) {
-//   (*fnptr)(program, location, v0, v1);
-// }
 // static void  glowProgramUniform2uiv(GPPROGRAMUNIFORM2UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform2uivEXT(GPPROGRAMUNIFORM2UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform3d(GPPROGRAMUNIFORM3D fnptr, GLuint  program, GLint  location, GLdouble  v0, GLdouble  v1, GLdouble  v2) {
@@ -3784,37 +3108,19 @@ package gl
 // static void  glowProgramUniform3f(GPPROGRAMUNIFORM3F fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2) {
 //   (*fnptr)(program, location, v0, v1, v2);
 // }
-// static void  glowProgramUniform3fEXT(GPPROGRAMUNIFORM3FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2) {
-//   (*fnptr)(program, location, v0, v1, v2);
-// }
 // static void  glowProgramUniform3fv(GPPROGRAMUNIFORM3FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform3fvEXT(GPPROGRAMUNIFORM3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform3i(GPPROGRAMUNIFORM3I fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2) {
 //   (*fnptr)(program, location, v0, v1, v2);
 // }
-// static void  glowProgramUniform3iEXT(GPPROGRAMUNIFORM3IEXT fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2) {
-//   (*fnptr)(program, location, v0, v1, v2);
-// }
 // static void  glowProgramUniform3iv(GPPROGRAMUNIFORM3IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform3ivEXT(GPPROGRAMUNIFORM3IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform3ui(GPPROGRAMUNIFORM3UI fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2) {
 //   (*fnptr)(program, location, v0, v1, v2);
 // }
-// static void  glowProgramUniform3uiEXT(GPPROGRAMUNIFORM3UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2) {
-//   (*fnptr)(program, location, v0, v1, v2);
-// }
 // static void  glowProgramUniform3uiv(GPPROGRAMUNIFORM3UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform3uivEXT(GPPROGRAMUNIFORM3UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform4d(GPPROGRAMUNIFORM4D fnptr, GLuint  program, GLint  location, GLdouble  v0, GLdouble  v1, GLdouble  v2, GLdouble  v3) {
@@ -3826,37 +3132,19 @@ package gl
 // static void  glowProgramUniform4f(GPPROGRAMUNIFORM4F fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3) {
 //   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
-// static void  glowProgramUniform4fEXT(GPPROGRAMUNIFORM4FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3) {
-//   (*fnptr)(program, location, v0, v1, v2, v3);
-// }
 // static void  glowProgramUniform4fv(GPPROGRAMUNIFORM4FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform4fvEXT(GPPROGRAMUNIFORM4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform4i(GPPROGRAMUNIFORM4I fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3) {
 //   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
-// static void  glowProgramUniform4iEXT(GPPROGRAMUNIFORM4IEXT fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3) {
-//   (*fnptr)(program, location, v0, v1, v2, v3);
-// }
 // static void  glowProgramUniform4iv(GPPROGRAMUNIFORM4IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform4ivEXT(GPPROGRAMUNIFORM4IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform4ui(GPPROGRAMUNIFORM4UI fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3) {
 //   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
-// static void  glowProgramUniform4uiEXT(GPPROGRAMUNIFORM4UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3) {
-//   (*fnptr)(program, location, v0, v1, v2, v3);
-// }
 // static void  glowProgramUniform4uiv(GPPROGRAMUNIFORM4UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform4uivEXT(GPPROGRAMUNIFORM4UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniformHandleui64ARB(GPPROGRAMUNIFORMHANDLEUI64ARB fnptr, GLuint  program, GLint  location, GLuint64  value) {
@@ -3871,16 +3159,10 @@ package gl
 // static void  glowProgramUniformMatrix2fv(GPPROGRAMUNIFORMMATRIX2FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix2fvEXT(GPPROGRAMUNIFORMMATRIX2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix2x3dv(GPPROGRAMUNIFORMMATRIX2X3DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix2x3fv(GPPROGRAMUNIFORMMATRIX2X3FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix2x3fvEXT(GPPROGRAMUNIFORMMATRIX2X3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix2x4dv(GPPROGRAMUNIFORMMATRIX2X4DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
@@ -3889,16 +3171,10 @@ package gl
 // static void  glowProgramUniformMatrix2x4fv(GPPROGRAMUNIFORMMATRIX2X4FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix2x4fvEXT(GPPROGRAMUNIFORMMATRIX2X4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix3dv(GPPROGRAMUNIFORMMATRIX3DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix3fv(GPPROGRAMUNIFORMMATRIX3FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix3fvEXT(GPPROGRAMUNIFORMMATRIX3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix3x2dv(GPPROGRAMUNIFORMMATRIX3X2DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
@@ -3907,16 +3183,10 @@ package gl
 // static void  glowProgramUniformMatrix3x2fv(GPPROGRAMUNIFORMMATRIX3X2FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix3x2fvEXT(GPPROGRAMUNIFORMMATRIX3X2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix3x4dv(GPPROGRAMUNIFORMMATRIX3X4DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix3x4fv(GPPROGRAMUNIFORMMATRIX3X4FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix3x4fvEXT(GPPROGRAMUNIFORMMATRIX3X4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix4dv(GPPROGRAMUNIFORMMATRIX4DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
@@ -3925,25 +3195,16 @@ package gl
 // static void  glowProgramUniformMatrix4fv(GPPROGRAMUNIFORMMATRIX4FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix4fvEXT(GPPROGRAMUNIFORMMATRIX4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix4x2dv(GPPROGRAMUNIFORMMATRIX4X2DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix4x2fv(GPPROGRAMUNIFORMMATRIX4X2FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix4x2fvEXT(GPPROGRAMUNIFORMMATRIX4X2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix4x3dv(GPPROGRAMUNIFORMMATRIX4X3DV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLdouble * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix4x3fv(GPPROGRAMUNIFORMMATRIX4X3FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix4x3fvEXT(GPPROGRAMUNIFORMMATRIX4X3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProvokingVertex(GPPROVOKINGVERTEX fnptr, GLenum  mode) {
@@ -3961,9 +3222,6 @@ package gl
 // static void  glowPushDebugGroupKHR(GPPUSHDEBUGGROUPKHR fnptr, GLenum  source, GLuint  id, GLsizei  length, const GLchar * message) {
 //   (*fnptr)(source, id, length, message);
 // }
-// static void  glowPushGroupMarkerEXT(GPPUSHGROUPMARKEREXT fnptr, GLsizei  length, const GLchar * marker) {
-//   (*fnptr)(length, marker);
-// }
 // static void  glowPushMatrix(GPPUSHMATRIX fnptr) {
 //   (*fnptr)();
 // }
@@ -3972,9 +3230,6 @@ package gl
 // }
 // static void  glowQueryCounter(GPQUERYCOUNTER fnptr, GLuint  id, GLenum  target) {
 //   (*fnptr)(id, target);
-// }
-// static GLbitfield  glowQueryMatrixxOES(GPQUERYMATRIXXOES fnptr, GLfixed * mantissa, GLint * exponent) {
-//   return (*fnptr)(mantissa, exponent);
 // }
 // static void  glowRasterPos2d(GPRASTERPOS2D fnptr, GLdouble  x, GLdouble  y) {
 //   (*fnptr)(x, y);
@@ -4000,12 +3255,6 @@ package gl
 // static void  glowRasterPos2sv(GPRASTERPOS2SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowRasterPos2xOES(GPRASTERPOS2XOES fnptr, GLfixed  x, GLfixed  y) {
-//   (*fnptr)(x, y);
-// }
-// static void  glowRasterPos2xvOES(GPRASTERPOS2XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowRasterPos3d(GPRASTERPOS3D fnptr, GLdouble  x, GLdouble  y, GLdouble  z) {
 //   (*fnptr)(x, y, z);
 // }
@@ -4030,12 +3279,6 @@ package gl
 // static void  glowRasterPos3sv(GPRASTERPOS3SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowRasterPos3xOES(GPRASTERPOS3XOES fnptr, GLfixed  x, GLfixed  y, GLfixed  z) {
-//   (*fnptr)(x, y, z);
-// }
-// static void  glowRasterPos3xvOES(GPRASTERPOS3XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowRasterPos4d(GPRASTERPOS4D fnptr, GLdouble  x, GLdouble  y, GLdouble  z, GLdouble  w) {
 //   (*fnptr)(x, y, z, w);
 // }
@@ -4059,12 +3302,6 @@ package gl
 // }
 // static void  glowRasterPos4sv(GPRASTERPOS4SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
-// }
-// static void  glowRasterPos4xOES(GPRASTERPOS4XOES fnptr, GLfixed  x, GLfixed  y, GLfixed  z, GLfixed  w) {
-//   (*fnptr)(x, y, z, w);
-// }
-// static void  glowRasterPos4xvOES(GPRASTERPOS4XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
 // }
 // static void  glowReadBuffer(GPREADBUFFER fnptr, GLenum  src) {
 //   (*fnptr)(src);
@@ -4105,12 +3342,6 @@ package gl
 // static void  glowRectsv(GPRECTSV fnptr, const GLshort * v1, const GLshort * v2) {
 //   (*fnptr)(v1, v2);
 // }
-// static void  glowRectxOES(GPRECTXOES fnptr, GLfixed  x1, GLfixed  y1, GLfixed  x2, GLfixed  y2) {
-//   (*fnptr)(x1, y1, x2, y2);
-// }
-// static void  glowRectxvOES(GPRECTXVOES fnptr, const GLfixed * v1, const GLfixed * v2) {
-//   (*fnptr)(v1, v2);
-// }
 // static void  glowReleaseShaderCompiler(GPRELEASESHADERCOMPILER fnptr) {
 //   (*fnptr)();
 // }
@@ -4132,16 +3363,7 @@ package gl
 // static void  glowRotatef(GPROTATEF fnptr, GLfloat  angle, GLfloat  x, GLfloat  y, GLfloat  z) {
 //   (*fnptr)(angle, x, y, z);
 // }
-// static void  glowRotatexOES(GPROTATEXOES fnptr, GLfixed  angle, GLfixed  x, GLfixed  y, GLfixed  z) {
-//   (*fnptr)(angle, x, y, z);
-// }
 // static void  glowSampleCoverage(GPSAMPLECOVERAGE fnptr, GLfloat  value, GLboolean  invert) {
-//   (*fnptr)(value, invert);
-// }
-// static void  glowSampleCoverageOES(GPSAMPLECOVERAGEOES fnptr, GLfixed  value, GLboolean  invert) {
-//   (*fnptr)(value, invert);
-// }
-// static void  glowSampleCoveragexOES(GPSAMPLECOVERAGEXOES fnptr, GLclampx  value, GLboolean  invert) {
 //   (*fnptr)(value, invert);
 // }
 // static void  glowSampleMaski(GPSAMPLEMASKI fnptr, GLuint  maskNumber, GLbitfield  mask) {
@@ -4169,9 +3391,6 @@ package gl
 //   (*fnptr)(x, y, z);
 // }
 // static void  glowScalef(GPSCALEF fnptr, GLfloat  x, GLfloat  y, GLfloat  z) {
-//   (*fnptr)(x, y, z);
-// }
-// static void  glowScalexOES(GPSCALEXOES fnptr, GLfixed  x, GLfixed  y, GLfixed  z) {
 //   (*fnptr)(x, y, z);
 // }
 // static void  glowScissor(GPSCISSOR fnptr, GLint  x, GLint  y, GLsizei  width, GLsizei  height) {
@@ -4240,12 +3459,6 @@ package gl
 // static void  glowSelectBuffer(GPSELECTBUFFER fnptr, GLsizei  size, GLuint * buffer) {
 //   (*fnptr)(size, buffer);
 // }
-// static void  glowSelectPerfMonitorCountersAMD(GPSELECTPERFMONITORCOUNTERSAMD fnptr, GLuint  monitor, GLboolean  enable, GLuint  group, GLint  numCounters, GLuint * counterList) {
-//   (*fnptr)(monitor, enable, group, numCounters, counterList);
-// }
-// static void  glowSetFenceNV(GPSETFENCENV fnptr, GLuint  fence, GLenum  condition) {
-//   (*fnptr)(fence, condition);
-// }
 // static void  glowShadeModel(GPSHADEMODEL fnptr, GLenum  mode) {
 //   (*fnptr)(mode);
 // }
@@ -4276,20 +3489,11 @@ package gl
 // static void  glowStencilOpSeparate(GPSTENCILOPSEPARATE fnptr, GLenum  face, GLenum  sfail, GLenum  dpfail, GLenum  dppass) {
 //   (*fnptr)(face, sfail, dpfail, dppass);
 // }
-// static GLboolean  glowTestFenceNV(GPTESTFENCENV fnptr, GLuint  fence) {
-//   return (*fnptr)(fence);
-// }
 // static void  glowTexBuffer(GPTEXBUFFER fnptr, GLenum  target, GLenum  internalformat, GLuint  buffer) {
 //   (*fnptr)(target, internalformat, buffer);
 // }
 // static void  glowTexBufferRange(GPTEXBUFFERRANGE fnptr, GLenum  target, GLenum  internalformat, GLuint  buffer, GLintptr  offset, GLsizeiptr  size) {
 //   (*fnptr)(target, internalformat, buffer, offset, size);
-// }
-// static void  glowTexCoord1bOES(GPTEXCOORD1BOES fnptr, GLbyte  s) {
-//   (*fnptr)(s);
-// }
-// static void  glowTexCoord1bvOES(GPTEXCOORD1BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
 // }
 // static void  glowTexCoord1d(GPTEXCOORD1D fnptr, GLdouble  s) {
 //   (*fnptr)(s);
@@ -4315,18 +3519,6 @@ package gl
 // static void  glowTexCoord1sv(GPTEXCOORD1SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowTexCoord1xOES(GPTEXCOORD1XOES fnptr, GLfixed  s) {
-//   (*fnptr)(s);
-// }
-// static void  glowTexCoord1xvOES(GPTEXCOORD1XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
-// static void  glowTexCoord2bOES(GPTEXCOORD2BOES fnptr, GLbyte  s, GLbyte  t) {
-//   (*fnptr)(s, t);
-// }
-// static void  glowTexCoord2bvOES(GPTEXCOORD2BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowTexCoord2d(GPTEXCOORD2D fnptr, GLdouble  s, GLdouble  t) {
 //   (*fnptr)(s, t);
 // }
@@ -4350,18 +3542,6 @@ package gl
 // }
 // static void  glowTexCoord2sv(GPTEXCOORD2SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
-// }
-// static void  glowTexCoord2xOES(GPTEXCOORD2XOES fnptr, GLfixed  s, GLfixed  t) {
-//   (*fnptr)(s, t);
-// }
-// static void  glowTexCoord2xvOES(GPTEXCOORD2XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
-// static void  glowTexCoord3bOES(GPTEXCOORD3BOES fnptr, GLbyte  s, GLbyte  t, GLbyte  r) {
-//   (*fnptr)(s, t, r);
-// }
-// static void  glowTexCoord3bvOES(GPTEXCOORD3BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
 // }
 // static void  glowTexCoord3d(GPTEXCOORD3D fnptr, GLdouble  s, GLdouble  t, GLdouble  r) {
 //   (*fnptr)(s, t, r);
@@ -4387,18 +3567,6 @@ package gl
 // static void  glowTexCoord3sv(GPTEXCOORD3SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowTexCoord3xOES(GPTEXCOORD3XOES fnptr, GLfixed  s, GLfixed  t, GLfixed  r) {
-//   (*fnptr)(s, t, r);
-// }
-// static void  glowTexCoord3xvOES(GPTEXCOORD3XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
-// static void  glowTexCoord4bOES(GPTEXCOORD4BOES fnptr, GLbyte  s, GLbyte  t, GLbyte  r, GLbyte  q) {
-//   (*fnptr)(s, t, r, q);
-// }
-// static void  glowTexCoord4bvOES(GPTEXCOORD4BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowTexCoord4d(GPTEXCOORD4D fnptr, GLdouble  s, GLdouble  t, GLdouble  r, GLdouble  q) {
 //   (*fnptr)(s, t, r, q);
 // }
@@ -4423,12 +3591,6 @@ package gl
 // static void  glowTexCoord4sv(GPTEXCOORD4SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowTexCoord4xOES(GPTEXCOORD4XOES fnptr, GLfixed  s, GLfixed  t, GLfixed  r, GLfixed  q) {
-//   (*fnptr)(s, t, r, q);
-// }
-// static void  glowTexCoord4xvOES(GPTEXCOORD4XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowTexCoordPointer(GPTEXCOORDPOINTER fnptr, GLint  size, GLenum  type, GLsizei  stride, const void * pointer) {
 //   (*fnptr)(size, type, stride, pointer);
 // }
@@ -4442,12 +3604,6 @@ package gl
 //   (*fnptr)(target, pname, param);
 // }
 // static void  glowTexEnviv(GPTEXENVIV fnptr, GLenum  target, GLenum  pname, const GLint * params) {
-//   (*fnptr)(target, pname, params);
-// }
-// static void  glowTexEnvxOES(GPTEXENVXOES fnptr, GLenum  target, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(target, pname, param);
-// }
-// static void  glowTexEnvxvOES(GPTEXENVXVOES fnptr, GLenum  target, GLenum  pname, const GLfixed * params) {
 //   (*fnptr)(target, pname, params);
 // }
 // static void  glowTexGend(GPTEXGEND fnptr, GLenum  coord, GLenum  pname, GLdouble  param) {
@@ -4466,12 +3622,6 @@ package gl
 //   (*fnptr)(coord, pname, param);
 // }
 // static void  glowTexGeniv(GPTEXGENIV fnptr, GLenum  coord, GLenum  pname, const GLint * params) {
-//   (*fnptr)(coord, pname, params);
-// }
-// static void  glowTexGenxOES(GPTEXGENXOES fnptr, GLenum  coord, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(coord, pname, param);
-// }
-// static void  glowTexGenxvOES(GPTEXGENXVOES fnptr, GLenum  coord, GLenum  pname, const GLfixed * params) {
 //   (*fnptr)(coord, pname, params);
 // }
 // static void  glowTexImage1D(GPTEXIMAGE1D fnptr, GLenum  target, GLint  level, GLint  internalformat, GLsizei  width, GLint  border, GLenum  format, GLenum  type, const void * pixels) {
@@ -4508,12 +3658,6 @@ package gl
 //   (*fnptr)(target, pname, param);
 // }
 // static void  glowTexParameteriv(GPTEXPARAMETERIV fnptr, GLenum  target, GLenum  pname, const GLint * params) {
-//   (*fnptr)(target, pname, params);
-// }
-// static void  glowTexParameterxOES(GPTEXPARAMETERXOES fnptr, GLenum  target, GLenum  pname, GLfixed  param) {
-//   (*fnptr)(target, pname, param);
-// }
-// static void  glowTexParameterxvOES(GPTEXPARAMETERXVOES fnptr, GLenum  target, GLenum  pname, const GLfixed * params) {
 //   (*fnptr)(target, pname, params);
 // }
 // static void  glowTexStorage1D(GPTEXSTORAGE1D fnptr, GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width) {
@@ -4607,9 +3751,6 @@ package gl
 //   (*fnptr)(x, y, z);
 // }
 // static void  glowTranslatef(GPTRANSLATEF fnptr, GLfloat  x, GLfloat  y, GLfloat  z) {
-//   (*fnptr)(x, y, z);
-// }
-// static void  glowTranslatexOES(GPTRANSLATEXOES fnptr, GLfixed  x, GLfixed  y, GLfixed  z) {
 //   (*fnptr)(x, y, z);
 // }
 // static void  glowUniform1d(GPUNIFORM1D fnptr, GLint  location, GLdouble  x) {
@@ -4786,26 +3927,11 @@ package gl
 // static void  glowUseProgramStages(GPUSEPROGRAMSTAGES fnptr, GLuint  pipeline, GLbitfield  stages, GLuint  program) {
 //   (*fnptr)(pipeline, stages, program);
 // }
-// static void  glowUseProgramStagesEXT(GPUSEPROGRAMSTAGESEXT fnptr, GLuint  pipeline, GLbitfield  stages, GLuint  program) {
-//   (*fnptr)(pipeline, stages, program);
-// }
-// static void  glowUseShaderProgramEXT(GPUSESHADERPROGRAMEXT fnptr, GLenum  type, GLuint  program) {
-//   (*fnptr)(type, program);
-// }
 // static void  glowValidateProgram(GPVALIDATEPROGRAM fnptr, GLuint  program) {
 //   (*fnptr)(program);
 // }
 // static void  glowValidateProgramPipeline(GPVALIDATEPROGRAMPIPELINE fnptr, GLuint  pipeline) {
 //   (*fnptr)(pipeline);
-// }
-// static void  glowValidateProgramPipelineEXT(GPVALIDATEPROGRAMPIPELINEEXT fnptr, GLuint  pipeline) {
-//   (*fnptr)(pipeline);
-// }
-// static void  glowVertex2bOES(GPVERTEX2BOES fnptr, GLbyte  x, GLbyte  y) {
-//   (*fnptr)(x, y);
-// }
-// static void  glowVertex2bvOES(GPVERTEX2BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
 // }
 // static void  glowVertex2d(GPVERTEX2D fnptr, GLdouble  x, GLdouble  y) {
 //   (*fnptr)(x, y);
@@ -4831,18 +3957,6 @@ package gl
 // static void  glowVertex2sv(GPVERTEX2SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowVertex2xOES(GPVERTEX2XOES fnptr, GLfixed  x) {
-//   (*fnptr)(x);
-// }
-// static void  glowVertex2xvOES(GPVERTEX2XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
-// static void  glowVertex3bOES(GPVERTEX3BOES fnptr, GLbyte  x, GLbyte  y, GLbyte  z) {
-//   (*fnptr)(x, y, z);
-// }
-// static void  glowVertex3bvOES(GPVERTEX3BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowVertex3d(GPVERTEX3D fnptr, GLdouble  x, GLdouble  y, GLdouble  z) {
 //   (*fnptr)(x, y, z);
 // }
@@ -4867,18 +3981,6 @@ package gl
 // static void  glowVertex3sv(GPVERTEX3SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
 // }
-// static void  glowVertex3xOES(GPVERTEX3XOES fnptr, GLfixed  x, GLfixed  y) {
-//   (*fnptr)(x, y);
-// }
-// static void  glowVertex3xvOES(GPVERTEX3XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
-// }
-// static void  glowVertex4bOES(GPVERTEX4BOES fnptr, GLbyte  x, GLbyte  y, GLbyte  z, GLbyte  w) {
-//   (*fnptr)(x, y, z, w);
-// }
-// static void  glowVertex4bvOES(GPVERTEX4BVOES fnptr, const GLbyte * coords) {
-//   (*fnptr)(coords);
-// }
 // static void  glowVertex4d(GPVERTEX4D fnptr, GLdouble  x, GLdouble  y, GLdouble  z, GLdouble  w) {
 //   (*fnptr)(x, y, z, w);
 // }
@@ -4902,12 +4004,6 @@ package gl
 // }
 // static void  glowVertex4sv(GPVERTEX4SV fnptr, const GLshort * v) {
 //   (*fnptr)(v);
-// }
-// static void  glowVertex4xOES(GPVERTEX4XOES fnptr, GLfixed  x, GLfixed  y, GLfixed  z) {
-//   (*fnptr)(x, y, z);
-// }
-// static void  glowVertex4xvOES(GPVERTEX4XVOES fnptr, const GLfixed * coords) {
-//   (*fnptr)(coords);
 // }
 // static void  glowVertexArrayAttribBinding(GPVERTEXARRAYATTRIBBINDING fnptr, GLuint  vaobj, GLuint  attribindex, GLuint  bindingindex) {
 //   (*fnptr)(vaobj, attribindex, bindingindex);
@@ -5273,7 +4369,6 @@ const (
 	ACTIVE_ATTRIBUTES                                          = 0x8B89
 	ACTIVE_ATTRIBUTE_MAX_LENGTH                                = 0x8B8A
 	ACTIVE_PROGRAM                                             = 0x8259
-	ACTIVE_PROGRAM_EXT                                         = 0x8B8D
 	ACTIVE_RESOURCES                                           = 0x92F5
 	ACTIVE_SUBROUTINES                                         = 0x8DE5
 	ACTIVE_SUBROUTINE_MAX_LENGTH                               = 0x8E48
@@ -5292,9 +4387,7 @@ const (
 	ALIASED_POINT_SIZE_RANGE                                   = 0x846D
 	ALL_ATTRIB_BITS                                            = 0xFFFFFFFF
 	ALL_BARRIER_BITS                                           = 0xFFFFFFFF
-	ALL_COMPLETED_NV                                           = 0x84F2
 	ALL_SHADER_BITS                                            = 0xFFFFFFFF
-	ALL_SHADER_BITS_EXT                                        = 0xFFFFFFFF
 	ALPHA                                                      = 0x1906
 	ALPHA12                                                    = 0x803D
 	ALPHA16                                                    = 0x803E
@@ -5354,18 +4447,13 @@ const (
 	BITMAP                                                     = 0x1A00
 	BITMAP_TOKEN                                               = 0x0704
 	BLEND                                                      = 0x0BE2
-	BLEND_ADVANCED_COHERENT_KHR                                = 0x9285
-	BLEND_ADVANCED_COHERENT_NV                                 = 0x9285
 	BLEND_COLOR                                                = 0x8005
 	BLEND_DST                                                  = 0x0BE0
 	BLEND_DST_ALPHA                                            = 0x80CA
 	BLEND_DST_RGB                                              = 0x80C8
 	BLEND_EQUATION                                             = 0x8009
 	BLEND_EQUATION_ALPHA                                       = 0x883D
-	BLEND_EQUATION_EXT                                         = 0x8009
 	BLEND_EQUATION_RGB                                         = 0x8009
-	BLEND_OVERLAP_NV                                           = 0x9281
-	BLEND_PREMULTIPLIED_SRC_NV                                 = 0x9280
 	BLEND_SRC                                                  = 0x0BE1
 	BLEND_SRC_ALPHA                                            = 0x80CB
 	BLEND_SRC_RGB                                              = 0x80C9
@@ -5374,7 +4462,6 @@ const (
 	BLUE_BIAS                                                  = 0x0D1B
 	BLUE_BITS                                                  = 0x0D54
 	BLUE_INTEGER                                               = 0x8D96
-	BLUE_NV                                                    = 0x1905
 	BLUE_SCALE                                                 = 0x0D1A
 	BOOL                                                       = 0x8B56
 	BOOL_VEC2                                                  = 0x8B57
@@ -5391,7 +4478,6 @@ const (
 	BUFFER_MAP_LENGTH                                          = 0x9120
 	BUFFER_MAP_OFFSET                                          = 0x9121
 	BUFFER_MAP_POINTER                                         = 0x88BD
-	BUFFER_OBJECT_EXT                                          = 0x9151
 	BUFFER_SIZE                                                = 0x8764
 	BUFFER_STORAGE_FLAGS                                       = 0x8220
 	BUFFER_UPDATE_BARRIER_BIT                                  = 0x00000200
@@ -5440,10 +4526,6 @@ const (
 	CLIP_PLANE5                                                = 0x3005
 	COEFF                                                      = 0x0A00
 	COLOR                                                      = 0x1800
-	COLORBURN_KHR                                              = 0x929A
-	COLORBURN_NV                                               = 0x929A
-	COLORDODGE_KHR                                             = 0x9299
-	COLORDODGE_NV                                              = 0x9299
 	COLOR_ARRAY                                                = 0x8076
 	COLOR_ARRAY_BUFFER_BINDING                                 = 0x8898
 	COLOR_ARRAY_POINTER                                        = 0x8090
@@ -5519,14 +4601,10 @@ const (
 	COMPRESSED_RGBA_ASTC_8x8_KHR                               = 0x93B7
 	COMPRESSED_RGBA_BPTC_UNORM                                 = 0x8E8C
 	COMPRESSED_RGBA_BPTC_UNORM_ARB                             = 0x8E8C
-	COMPRESSED_RGBA_S3TC_DXT1_EXT                              = 0x83F1
-	COMPRESSED_RGBA_S3TC_DXT3_EXT                              = 0x83F2
-	COMPRESSED_RGBA_S3TC_DXT5_EXT                              = 0x83F3
 	COMPRESSED_RGB_BPTC_SIGNED_FLOAT                           = 0x8E8E
 	COMPRESSED_RGB_BPTC_SIGNED_FLOAT_ARB                       = 0x8E8E
 	COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT                         = 0x8E8F
 	COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_ARB                     = 0x8E8F
-	COMPRESSED_RGB_S3TC_DXT1_EXT                               = 0x83F0
 	COMPRESSED_RG_RGTC2                                        = 0x8DBD
 	COMPRESSED_SIGNED_R11_EAC                                  = 0x9271
 	COMPRESSED_SIGNED_RED_RGTC1                                = 0x8DBC
@@ -5564,7 +4642,6 @@ const (
 	COMPUTE_TEXTURE                                            = 0x82A0
 	COMPUTE_WORK_GROUP_SIZE                                    = 0x8267
 	CONDITION_SATISFIED                                        = 0x911C
-	CONJOINT_NV                                                = 0x9284
 	CONSTANT                                                   = 0x8576
 	CONSTANT_ALPHA                                             = 0x8003
 	CONSTANT_ATTENUATION                                       = 0x1207
@@ -5586,7 +4663,6 @@ const (
 	CONTEXT_RELEASE_BEHAVIOR_KHR                               = 0x82FB
 	CONTEXT_ROBUST_ACCESS                                      = 0x90F3
 	CONTEXT_ROBUST_ACCESS_KHR                                  = 0x90F3
-	CONTRAST_NV                                                = 0x92A1
 	COORD_REPLACE                                              = 0x8862
 	COPY                                                       = 0x1503
 	COPY_INVERTED                                              = 0x150C
@@ -5595,8 +4671,6 @@ const (
 	COPY_READ_BUFFER_BINDING                                   = 0x8F36
 	COPY_WRITE_BUFFER                                          = 0x8F37
 	COPY_WRITE_BUFFER_BINDING                                  = 0x8F37
-	COUNTER_RANGE_AMD                                          = 0x8BC1
-	COUNTER_TYPE_AMD                                           = 0x8BC0
 	CULL_FACE                                                  = 0x0B44
 	CULL_FACE_MODE                                             = 0x0B45
 	CURRENT_BIT                                                = 0x00000001
@@ -5618,8 +4692,6 @@ const (
 	CURRENT_TEXTURE_COORDS                                     = 0x0B03
 	CURRENT_VERTEX_ATTRIB                                      = 0x8626
 	CW                                                         = 0x0900
-	DARKEN_KHR                                                 = 0x9297
-	DARKEN_NV                                                  = 0x9297
 	DEBUG_CALLBACK_FUNCTION                                    = 0x8244
 	DEBUG_CALLBACK_FUNCTION_ARB                                = 0x8244
 	DEBUG_CALLBACK_FUNCTION_KHR                                = 0x8244
@@ -5693,7 +4765,6 @@ const (
 	DEBUG_TYPE_UNDEFINED_BEHAVIOR_ARB                          = 0x824E
 	DEBUG_TYPE_UNDEFINED_BEHAVIOR_KHR                          = 0x824E
 	DECAL                                                      = 0x2101
-	DECODE_EXT                                                 = 0x8A49
 	DECR                                                       = 0x1E03
 	DECR_WRAP                                                  = 0x8508
 	DELETE_STATUS                                              = 0x8B80
@@ -5722,10 +4793,7 @@ const (
 	DEPTH_TEST                                                 = 0x0B71
 	DEPTH_TEXTURE_MODE                                         = 0x884B
 	DEPTH_WRITEMASK                                            = 0x0B72
-	DIFFERENCE_KHR                                             = 0x929E
-	DIFFERENCE_NV                                              = 0x929E
 	DIFFUSE                                                    = 0x1201
-	DISJOINT_NV                                                = 0x9283
 	DISPATCH_INDIRECT_BUFFER                                   = 0x90EE
 	DISPATCH_INDIRECT_BUFFER_BINDING                           = 0x90EF
 	DITHER                                                     = 0x0BD0
@@ -5770,12 +4838,7 @@ const (
 	DRAW_INDIRECT_BUFFER_BINDING                               = 0x8F43
 	DRAW_PIXEL_TOKEN                                           = 0x0705
 	DST_ALPHA                                                  = 0x0304
-	DST_ATOP_NV                                                = 0x928F
 	DST_COLOR                                                  = 0x0306
-	DST_IN_NV                                                  = 0x928B
-	DST_NV                                                     = 0x9287
-	DST_OUT_NV                                                 = 0x928D
-	DST_OVER_NV                                                = 0x9289
 	DYNAMIC_COPY                                               = 0x88EA
 	DYNAMIC_DRAW                                               = 0x88E8
 	DYNAMIC_READ                                               = 0x88E9
@@ -5793,8 +4856,6 @@ const (
 	EQUAL                                                      = 0x0202
 	EQUIV                                                      = 0x1509
 	EVAL_BIT                                                   = 0x00010000
-	EXCLUSION_KHR                                              = 0x92A0
-	EXCLUSION_NV                                               = 0x92A0
 	EXP                                                        = 0x0800
 	EXP2                                                       = 0x0801
 	EXTENSIONS                                                 = 0x1F03
@@ -5806,13 +4867,10 @@ const (
 	FEEDBACK_BUFFER_POINTER                                    = 0x0DF0
 	FEEDBACK_BUFFER_SIZE                                       = 0x0DF1
 	FEEDBACK_BUFFER_TYPE                                       = 0x0DF2
-	FENCE_CONDITION_NV                                         = 0x84F4
-	FENCE_STATUS_NV                                            = 0x84F3
 	FILL                                                       = 0x1B02
 	FILTER                                                     = 0x829A
 	FIRST_VERTEX_CONVENTION                                    = 0x8E4D
 	FIXED                                                      = 0x140C
-	FIXED_OES                                                  = 0x140C
 	FIXED_ONLY                                                 = 0x891D
 	FLAT                                                       = 0x1D00
 	FLOAT                                                      = 0x1406
@@ -5858,7 +4916,6 @@ const (
 	FRAGMENT_INTERPOLATION_OFFSET_BITS                         = 0x8E5D
 	FRAGMENT_SHADER                                            = 0x8B30
 	FRAGMENT_SHADER_BIT                                        = 0x00000002
-	FRAGMENT_SHADER_BIT_EXT                                    = 0x00000002
 	FRAGMENT_SHADER_DERIVATIVE_HINT                            = 0x8B8B
 	FRAGMENT_SHADER_INVOCATIONS_ARB                            = 0x82F4
 	FRAGMENT_SUBROUTINE                                        = 0x92EC
@@ -5907,7 +4964,6 @@ const (
 	FRONT_RIGHT                                                = 0x0401
 	FULL_SUPPORT                                               = 0x82B7
 	FUNC_ADD                                                   = 0x8006
-	FUNC_ADD_EXT                                               = 0x8006
 	FUNC_REVERSE_SUBTRACT                                      = 0x800B
 	FUNC_SUBTRACT                                              = 0x800A
 	GENERATE_MIPMAP                                            = 0x8191
@@ -5930,26 +4986,14 @@ const (
 	GREEN_BIAS                                                 = 0x0D19
 	GREEN_BITS                                                 = 0x0D53
 	GREEN_INTEGER                                              = 0x8D95
-	GREEN_NV                                                   = 0x1904
 	GREEN_SCALE                                                = 0x0D18
 	GUILTY_CONTEXT_RESET                                       = 0x8253
 	GUILTY_CONTEXT_RESET_ARB                                   = 0x8253
 	GUILTY_CONTEXT_RESET_KHR                                   = 0x8253
 	HALF_FLOAT                                                 = 0x140B
-	HARDLIGHT_KHR                                              = 0x929B
-	HARDLIGHT_NV                                               = 0x929B
-	HARDMIX_NV                                                 = 0x92A9
 	HIGH_FLOAT                                                 = 0x8DF2
 	HIGH_INT                                                   = 0x8DF5
 	HINT_BIT                                                   = 0x00008000
-	HSL_COLOR_KHR                                              = 0x92AF
-	HSL_COLOR_NV                                               = 0x92AF
-	HSL_HUE_KHR                                                = 0x92AD
-	HSL_HUE_NV                                                 = 0x92AD
-	HSL_LUMINOSITY_KHR                                         = 0x92B0
-	HSL_LUMINOSITY_NV                                          = 0x92B0
-	HSL_SATURATION_KHR                                         = 0x92AE
-	HSL_SATURATION_NV                                          = 0x92AE
 	IMAGE_1D                                                   = 0x904C
 	IMAGE_1D_ARRAY                                             = 0x9052
 	IMAGE_2D                                                   = 0x904D
@@ -5986,9 +5030,7 @@ const (
 	IMAGE_PIXEL_TYPE                                           = 0x82AA
 	IMAGE_TEXEL_SIZE                                           = 0x82A7
 	IMPLEMENTATION_COLOR_READ_FORMAT                           = 0x8B9B
-	IMPLEMENTATION_COLOR_READ_FORMAT_OES                       = 0x8B9B
 	IMPLEMENTATION_COLOR_READ_TYPE                             = 0x8B9A
-	IMPLEMENTATION_COLOR_READ_TYPE_OES                         = 0x8B9A
 	INCR                                                       = 0x1E02
 	INCR_WRAP                                                  = 0x8507
 	INDEX_ARRAY                                                = 0x8077
@@ -6063,8 +5105,6 @@ const (
 	INVALID_OPERATION                                          = 0x0502
 	INVALID_VALUE                                              = 0x0501
 	INVERT                                                     = 0x150A
-	INVERT_OVG_NV                                              = 0x92B4
-	INVERT_RGB_NV                                              = 0x92A3
 	ISOLINES                                                   = 0x8E7A
 	IS_PER_PATCH                                               = 0x92E7
 	IS_ROW_MAJOR                                               = 0x9300
@@ -6082,8 +5122,6 @@ const (
 	LIGHT5                                                     = 0x4005
 	LIGHT6                                                     = 0x4006
 	LIGHT7                                                     = 0x4007
-	LIGHTEN_KHR                                                = 0x9298
-	LIGHTEN_NV                                                 = 0x9298
 	LIGHTING                                                   = 0x0B50
 	LIGHTING_BIT                                               = 0x00000040
 	LIGHT_MODEL_AMBIENT                                        = 0x0B53
@@ -6092,9 +5130,6 @@ const (
 	LIGHT_MODEL_TWO_SIDE                                       = 0x0B52
 	LINE                                                       = 0x1B01
 	LINEAR                                                     = 0x2601
-	LINEARBURN_NV                                              = 0x92A5
-	LINEARDODGE_NV                                             = 0x92A4
-	LINEARLIGHT_NV                                             = 0x92A7
 	LINEAR_ATTENUATION                                         = 0x1208
 	LINEAR_MIPMAP_LINEAR                                       = 0x2703
 	LINEAR_MIPMAP_NEAREST                                      = 0x2701
@@ -6239,7 +5274,6 @@ const (
 	MAX_ELEMENTS_VERTICES                                      = 0x80E8
 	MAX_ELEMENT_INDEX                                          = 0x8D6B
 	MAX_EVAL_ORDER                                             = 0x0D30
-	MAX_EXT                                                    = 0x8008
 	MAX_FRAGMENT_ATOMIC_COUNTERS                               = 0x92D6
 	MAX_FRAGMENT_ATOMIC_COUNTER_BUFFERS                        = 0x92D0
 	MAX_FRAGMENT_IMAGE_UNIFORMS                                = 0x90CE
@@ -6323,8 +5357,6 @@ const (
 	MAX_TEXTURE_COORDS                                         = 0x8871
 	MAX_TEXTURE_IMAGE_UNITS                                    = 0x8872
 	MAX_TEXTURE_LOD_BIAS                                       = 0x84FD
-	MAX_TEXTURE_LOD_BIAS_EXT                                   = 0x84FD
-	MAX_TEXTURE_MAX_ANISOTROPY_EXT                             = 0x84FF
 	MAX_TEXTURE_SIZE                                           = 0x0D33
 	MAX_TEXTURE_STACK_DEPTH                                    = 0x0D39
 	MAX_TEXTURE_UNITS                                          = 0x84E2
@@ -6359,9 +5391,6 @@ const (
 	MEDIUM_INT                                                 = 0x8DF4
 	MIN                                                        = 0x8007
 	MINOR_VERSION                                              = 0x821C
-	MINUS_CLAMPED_NV                                           = 0x92B3
-	MINUS_NV                                                   = 0x929F
-	MIN_EXT                                                    = 0x8007
 	MIN_FRAGMENT_INTERPOLATION_OFFSET                          = 0x8E5B
 	MIN_MAP_BUFFER_ALIGNMENT                                   = 0x90BC
 	MIN_PROGRAM_TEXEL_OFFSET                                   = 0x8904
@@ -6378,8 +5407,6 @@ const (
 	MODELVIEW_STACK_DEPTH                                      = 0x0BA3
 	MODULATE                                                   = 0x2100
 	MULT                                                       = 0x0103
-	MULTIPLY_KHR                                               = 0x9294
-	MULTIPLY_NV                                                = 0x9294
 	MULTISAMPLE                                                = 0x809D
 	MULTISAMPLE_BIT                                            = 0x20000000
 	N3F_V3F                                                    = 0x2A25
@@ -6442,8 +5469,6 @@ const (
 	OR_INVERTED                                                = 0x150D
 	OR_REVERSE                                                 = 0x150B
 	OUT_OF_MEMORY                                              = 0x0505
-	OVERLAY_KHR                                                = 0x9296
-	OVERLAY_NV                                                 = 0x9296
 	PACK_ALIGNMENT                                             = 0x0D05
 	PACK_COMPRESSED_BLOCK_DEPTH                                = 0x912D
 	PACK_COMPRESSED_BLOCK_HEIGHT                               = 0x912C
@@ -6456,16 +5481,6 @@ const (
 	PACK_SKIP_PIXELS                                           = 0x0D04
 	PACK_SKIP_ROWS                                             = 0x0D03
 	PACK_SWAP_BYTES                                            = 0x0D00
-	PALETTE4_R5_G6_B5_OES                                      = 0x8B92
-	PALETTE4_RGB5_A1_OES                                       = 0x8B94
-	PALETTE4_RGB8_OES                                          = 0x8B90
-	PALETTE4_RGBA4_OES                                         = 0x8B93
-	PALETTE4_RGBA8_OES                                         = 0x8B91
-	PALETTE8_R5_G6_B5_OES                                      = 0x8B97
-	PALETTE8_RGB5_A1_OES                                       = 0x8B99
-	PALETTE8_RGB8_OES                                          = 0x8B95
-	PALETTE8_RGBA4_OES                                         = 0x8B98
-	PALETTE8_RGBA8_OES                                         = 0x8B96
 	PARAMETER_BUFFER_ARB                                       = 0x80EE
 	PARAMETER_BUFFER_BINDING_ARB                               = 0x80EF
 	PASS_THROUGH_TOKEN                                         = 0x0700
@@ -6473,32 +5488,7 @@ const (
 	PATCH_DEFAULT_INNER_LEVEL                                  = 0x8E73
 	PATCH_DEFAULT_OUTER_LEVEL                                  = 0x8E74
 	PATCH_VERTICES                                             = 0x8E72
-	PERCENTAGE_AMD                                             = 0x8BC3
-	PERFMON_RESULT_AMD                                         = 0x8BC6
-	PERFMON_RESULT_AVAILABLE_AMD                               = 0x8BC4
-	PERFMON_RESULT_SIZE_AMD                                    = 0x8BC5
-	PERFQUERY_COUNTER_DATA_BOOL32_INTEL                        = 0x94FC
-	PERFQUERY_COUNTER_DATA_DOUBLE_INTEL                        = 0x94FB
-	PERFQUERY_COUNTER_DATA_FLOAT_INTEL                         = 0x94FA
-	PERFQUERY_COUNTER_DATA_UINT32_INTEL                        = 0x94F8
-	PERFQUERY_COUNTER_DATA_UINT64_INTEL                        = 0x94F9
-	PERFQUERY_COUNTER_DESC_LENGTH_MAX_INTEL                    = 0x94FF
-	PERFQUERY_COUNTER_DURATION_NORM_INTEL                      = 0x94F1
-	PERFQUERY_COUNTER_DURATION_RAW_INTEL                       = 0x94F2
-	PERFQUERY_COUNTER_EVENT_INTEL                              = 0x94F0
-	PERFQUERY_COUNTER_NAME_LENGTH_MAX_INTEL                    = 0x94FE
-	PERFQUERY_COUNTER_RAW_INTEL                                = 0x94F4
-	PERFQUERY_COUNTER_THROUGHPUT_INTEL                         = 0x94F3
-	PERFQUERY_COUNTER_TIMESTAMP_INTEL                          = 0x94F5
-	PERFQUERY_DONOT_FLUSH_INTEL                                = 0x83F9
-	PERFQUERY_FLUSH_INTEL                                      = 0x83FA
-	PERFQUERY_GLOBAL_CONTEXT_INTEL                             = 0x00000001
-	PERFQUERY_GPA_EXTENDED_COUNTERS_INTEL                      = 0x9500
-	PERFQUERY_QUERY_NAME_LENGTH_MAX_INTEL                      = 0x94FD
-	PERFQUERY_SINGLE_CONTEXT_INTEL                             = 0x00000000
-	PERFQUERY_WAIT_INTEL                                       = 0x83FB
 	PERSPECTIVE_CORRECTION_HINT                                = 0x0C50
-	PINLIGHT_NV                                                = 0x92A8
 	PIXEL_BUFFER_BARRIER_BIT                                   = 0x00000080
 	PIXEL_MAP_A_TO_A                                           = 0x0C79
 	PIXEL_MAP_A_TO_A_SIZE                                      = 0x0CB9
@@ -6525,10 +5515,6 @@ const (
 	PIXEL_PACK_BUFFER_BINDING                                  = 0x88ED
 	PIXEL_UNPACK_BUFFER                                        = 0x88EC
 	PIXEL_UNPACK_BUFFER_BINDING                                = 0x88EF
-	PLUS_CLAMPED_ALPHA_NV                                      = 0x92B2
-	PLUS_CLAMPED_NV                                            = 0x92B1
-	PLUS_DARKER_NV                                             = 0x9292
-	PLUS_NV                                                    = 0x9291
 	POINT                                                      = 0x1B00
 	POINTS                                                     = 0x0000
 	POINT_BIT                                                  = 0x00000002
@@ -6572,15 +5558,11 @@ const (
 	PROGRAM_BINARY_RETRIEVABLE_HINT                            = 0x8257
 	PROGRAM_INPUT                                              = 0x92E3
 	PROGRAM_KHR                                                = 0x82E2
-	PROGRAM_OBJECT_EXT                                         = 0x8B40
 	PROGRAM_OUTPUT                                             = 0x92E4
 	PROGRAM_PIPELINE                                           = 0x82E4
 	PROGRAM_PIPELINE_BINDING                                   = 0x825A
-	PROGRAM_PIPELINE_BINDING_EXT                               = 0x825A
-	PROGRAM_PIPELINE_OBJECT_EXT                                = 0x8A4F
 	PROGRAM_POINT_SIZE                                         = 0x8642
 	PROGRAM_SEPARABLE                                          = 0x8258
-	PROGRAM_SEPARABLE_EXT                                      = 0x8258
 	PROJECTION                                                 = 0x1701
 	PROJECTION_MATRIX                                          = 0x0BA7
 	PROJECTION_STACK_DEPTH                                     = 0x0BA4
@@ -6613,7 +5595,6 @@ const (
 	QUERY_KHR                                                  = 0x82E3
 	QUERY_NO_WAIT                                              = 0x8E14
 	QUERY_NO_WAIT_INVERTED                                     = 0x8E18
-	QUERY_OBJECT_EXT                                           = 0x9153
 	QUERY_RESULT                                               = 0x8866
 	QUERY_RESULT_AVAILABLE                                     = 0x8867
 	QUERY_RESULT_NO_WAIT                                       = 0x9194
@@ -6648,7 +5629,6 @@ const (
 	RED_BIAS                                                   = 0x0D15
 	RED_BITS                                                   = 0x0D52
 	RED_INTEGER                                                = 0x8D94
-	RED_NV                                                     = 0x1903
 	RED_SCALE                                                  = 0x0D14
 	REFERENCED_BY_COMPUTE_SHADER                               = 0x930B
 	REFERENCED_BY_FRAGMENT_SHADER                              = 0x930A
@@ -6732,9 +5712,7 @@ const (
 	RGBA8_SNORM                                                = 0x8F97
 	RGBA_INTEGER                                               = 0x8D99
 	RGBA_MODE                                                  = 0x0C31
-	RGB_422_APPLE                                              = 0x8A1F
 	RGB_INTEGER                                                = 0x8D98
-	RGB_RAW_422_APPLE                                          = 0x8A51
 	RGB_SCALE                                                  = 0x8573
 	RG_INTEGER                                                 = 0x8228
 	RIGHT                                                      = 0x0407
@@ -6778,8 +5756,6 @@ const (
 	SCISSOR_BIT                                                = 0x00080000
 	SCISSOR_BOX                                                = 0x0C10
 	SCISSOR_TEST                                               = 0x0C11
-	SCREEN_KHR                                                 = 0x9295
-	SCREEN_NV                                                  = 0x9295
 	SECONDARY_COLOR_ARRAY                                      = 0x845E
 	SECONDARY_COLOR_ARRAY_BUFFER_BINDING                       = 0x889C
 	SECONDARY_COLOR_ARRAY_POINTER                              = 0x845D
@@ -6801,7 +5777,6 @@ const (
 	SHADER_IMAGE_STORE                                         = 0x82A5
 	SHADER_INCLUDE_ARB                                         = 0x8DAE
 	SHADER_KHR                                                 = 0x82E1
-	SHADER_OBJECT_EXT                                          = 0x8B48
 	SHADER_SOURCE_LENGTH                                       = 0x8B88
 	SHADER_STORAGE_BARRIER_BIT                                 = 0x00002000
 	SHADER_STORAGE_BLOCK                                       = 0x92E6
@@ -6822,7 +5797,6 @@ const (
 	SIMULTANEOUS_TEXTURE_AND_STENCIL_TEST                      = 0x82AD
 	SIMULTANEOUS_TEXTURE_AND_STENCIL_WRITE                     = 0x82AF
 	SINGLE_COLOR                                               = 0x81F9
-	SKIP_DECODE_EXT                                            = 0x8A4A
 	SLUMINANCE                                                 = 0x8C46
 	SLUMINANCE8                                                = 0x8C47
 	SLUMINANCE8_ALPHA8                                         = 0x8C45
@@ -6832,8 +5806,6 @@ const (
 	SMOOTH_LINE_WIDTH_RANGE                                    = 0x0B22
 	SMOOTH_POINT_SIZE_GRANULARITY                              = 0x0B13
 	SMOOTH_POINT_SIZE_RANGE                                    = 0x0B12
-	SOFTLIGHT_KHR                                              = 0x929C
-	SOFTLIGHT_NV                                               = 0x929C
 	SOURCE0_ALPHA                                              = 0x8588
 	SOURCE0_RGB                                                = 0x8580
 	SOURCE1_ALPHA                                              = 0x8589
@@ -6857,12 +5829,7 @@ const (
 	SRC2_RGB                                                   = 0x8582
 	SRC_ALPHA                                                  = 0x0302
 	SRC_ALPHA_SATURATE                                         = 0x0308
-	SRC_ATOP_NV                                                = 0x928E
 	SRC_COLOR                                                  = 0x0300
-	SRC_IN_NV                                                  = 0x928A
-	SRC_NV                                                     = 0x9286
-	SRC_OUT_NV                                                 = 0x928C
-	SRC_OVER_NV                                                = 0x9288
 	SRGB                                                       = 0x8C40
 	SRGB8                                                      = 0x8C41
 	SRGB8_ALPHA8                                               = 0x8C43
@@ -7043,7 +6010,6 @@ const (
 	TEXTURE_ENV_MODE                                           = 0x2200
 	TEXTURE_FETCH_BARRIER_BIT                                  = 0x00000008
 	TEXTURE_FILTER_CONTROL                                     = 0x8500
-	TEXTURE_FILTER_CONTROL_EXT                                 = 0x8500
 	TEXTURE_FIXED_SAMPLE_LOCATIONS                             = 0x9107
 	TEXTURE_GATHER                                             = 0x82A2
 	TEXTURE_GATHER_SHADOW                                      = 0x82A3
@@ -7062,11 +6028,9 @@ const (
 	TEXTURE_INTENSITY_SIZE                                     = 0x8061
 	TEXTURE_INTERNAL_FORMAT                                    = 0x1003
 	TEXTURE_LOD_BIAS                                           = 0x8501
-	TEXTURE_LOD_BIAS_EXT                                       = 0x8501
 	TEXTURE_LUMINANCE_SIZE                                     = 0x8060
 	TEXTURE_MAG_FILTER                                         = 0x2800
 	TEXTURE_MATRIX                                             = 0x0BA8
-	TEXTURE_MAX_ANISOTROPY_EXT                                 = 0x84FE
 	TEXTURE_MAX_LEVEL                                          = 0x813D
 	TEXTURE_MAX_LOD                                            = 0x813B
 	TEXTURE_MIN_FILTER                                         = 0x2801
@@ -7080,7 +6044,6 @@ const (
 	TEXTURE_SHADOW                                             = 0x82A1
 	TEXTURE_SHARED_SIZE                                        = 0x8C3F
 	TEXTURE_SPARSE_ARB                                         = 0x91A6
-	TEXTURE_SRGB_DECODE_EXT                                    = 0x8A48
 	TEXTURE_STACK_DEPTH                                        = 0x0BA5
 	TEXTURE_STENCIL_SIZE                                       = 0x88F1
 	TEXTURE_SWIZZLE_A                                          = 0x8E45
@@ -7137,7 +6100,6 @@ const (
 	TRIANGLE_STRIP_ADJACENCY                                   = 0x000D
 	TRUE                                                       = 1
 	TYPE                                                       = 0x92FA
-	UNCORRELATED_NV                                            = 0x9282
 	UNDEFINED_VERTEX                                           = 0x8260
 	UNIFORM                                                    = 0x92E1
 	UNIFORM_ARRAY_STRIDE                                       = 0x8A3C
@@ -7187,7 +6149,6 @@ const (
 	UNSIGNED_BYTE_2_3_3_REV                                    = 0x8362
 	UNSIGNED_BYTE_3_3_2                                        = 0x8032
 	UNSIGNED_INT                                               = 0x1405
-	UNSIGNED_INT64_AMD                                         = 0x8BC2
 	UNSIGNED_INT64_ARB                                         = 0x140F
 	UNSIGNED_INT_10F_11F_11F_REV                               = 0x8C3B
 	UNSIGNED_INT_10_10_10_2                                    = 0x8036
@@ -7231,8 +6192,6 @@ const (
 	UNSIGNED_SHORT_5_5_5_1                                     = 0x8034
 	UNSIGNED_SHORT_5_6_5                                       = 0x8363
 	UNSIGNED_SHORT_5_6_5_REV                                   = 0x8364
-	UNSIGNED_SHORT_8_8_APPLE                                   = 0x85BA
-	UNSIGNED_SHORT_8_8_REV_APPLE                               = 0x85BB
 	UPPER_LEFT                                                 = 0x8CA2
 	V2F                                                        = 0x2A20
 	V3F                                                        = 0x2A21
@@ -7243,7 +6202,6 @@ const (
 	VERTEX_ARRAY_BINDING                                       = 0x85B5
 	VERTEX_ARRAY_BUFFER_BINDING                                = 0x8896
 	VERTEX_ARRAY_KHR                                           = 0x8074
-	VERTEX_ARRAY_OBJECT_EXT                                    = 0x9154
 	VERTEX_ARRAY_POINTER                                       = 0x808E
 	VERTEX_ARRAY_SIZE                                          = 0x807A
 	VERTEX_ARRAY_STRIDE                                        = 0x807C
@@ -7269,7 +6227,6 @@ const (
 	VERTEX_PROGRAM_TWO_SIDE                                    = 0x8643
 	VERTEX_SHADER                                              = 0x8B31
 	VERTEX_SHADER_BIT                                          = 0x00000001
-	VERTEX_SHADER_BIT_EXT                                      = 0x00000001
 	VERTEX_SHADER_INVOCATIONS_ARB                              = 0x82F0
 	VERTEX_SUBROUTINE                                          = 0x92E8
 	VERTEX_SUBROUTINE_UNIFORM                                  = 0x92EE
@@ -7301,12 +6258,10 @@ const (
 	VIRTUAL_PAGE_SIZE_X_ARB                                    = 0x9195
 	VIRTUAL_PAGE_SIZE_Y_ARB                                    = 0x9196
 	VIRTUAL_PAGE_SIZE_Z_ARB                                    = 0x9197
-	VIVIDLIGHT_NV                                              = 0x92A6
 	WAIT_FAILED                                                = 0x911D
 	WEIGHT_ARRAY_BUFFER_BINDING                                = 0x889E
 	WRITE_ONLY                                                 = 0x88B9
 	XOR                                                        = 0x1506
-	XOR_NV                                                     = 0x1506
 	ZERO                                                       = 0
 	ZERO_TO_ONE                                                = 0x935F
 	ZOOM_X                                                     = 0x0D16
@@ -7315,20 +6270,14 @@ const (
 
 var (
 	gpAccum                                       C.GPACCUM
-	gpAccumxOES                                   C.GPACCUMXOES
-	gpActiveProgramEXT                            C.GPACTIVEPROGRAMEXT
 	gpActiveShaderProgram                         C.GPACTIVESHADERPROGRAM
-	gpActiveShaderProgramEXT                      C.GPACTIVESHADERPROGRAMEXT
 	gpActiveTexture                               C.GPACTIVETEXTURE
 	gpAlphaFunc                                   C.GPALPHAFUNC
-	gpAlphaFuncxOES                               C.GPALPHAFUNCXOES
 	gpAreTexturesResident                         C.GPARETEXTURESRESIDENT
 	gpArrayElement                                C.GPARRAYELEMENT
 	gpAttachShader                                C.GPATTACHSHADER
 	gpBegin                                       C.GPBEGIN
 	gpBeginConditionalRender                      C.GPBEGINCONDITIONALRENDER
-	gpBeginPerfMonitorAMD                         C.GPBEGINPERFMONITORAMD
-	gpBeginPerfQueryINTEL                         C.GPBEGINPERFQUERYINTEL
 	gpBeginQuery                                  C.GPBEGINQUERY
 	gpBeginQueryIndexed                           C.GPBEGINQUERYINDEXED
 	gpBeginTransformFeedback                      C.GPBEGINTRANSFORMFEEDBACK
@@ -7344,7 +6293,6 @@ var (
 	gpBindImageTexture                            C.GPBINDIMAGETEXTURE
 	gpBindImageTextures                           C.GPBINDIMAGETEXTURES
 	gpBindProgramPipeline                         C.GPBINDPROGRAMPIPELINE
-	gpBindProgramPipelineEXT                      C.GPBINDPROGRAMPIPELINEEXT
 	gpBindRenderbuffer                            C.GPBINDRENDERBUFFER
 	gpBindSampler                                 C.GPBINDSAMPLER
 	gpBindSamplers                                C.GPBINDSAMPLERS
@@ -7356,13 +6304,8 @@ var (
 	gpBindVertexBuffer                            C.GPBINDVERTEXBUFFER
 	gpBindVertexBuffers                           C.GPBINDVERTEXBUFFERS
 	gpBitmap                                      C.GPBITMAP
-	gpBitmapxOES                                  C.GPBITMAPXOES
-	gpBlendBarrierKHR                             C.GPBLENDBARRIERKHR
-	gpBlendBarrierNV                              C.GPBLENDBARRIERNV
 	gpBlendColor                                  C.GPBLENDCOLOR
-	gpBlendColorxOES                              C.GPBLENDCOLORXOES
 	gpBlendEquation                               C.GPBLENDEQUATION
-	gpBlendEquationEXT                            C.GPBLENDEQUATIONEXT
 	gpBlendEquationSeparate                       C.GPBLENDEQUATIONSEPARATE
 	gpBlendEquationSeparatei                      C.GPBLENDEQUATIONSEPARATEI
 	gpBlendEquationSeparateiARB                   C.GPBLENDEQUATIONSEPARATEIARB
@@ -7374,7 +6317,6 @@ var (
 	gpBlendFuncSeparateiARB                       C.GPBLENDFUNCSEPARATEIARB
 	gpBlendFunci                                  C.GPBLENDFUNCI
 	gpBlendFunciARB                               C.GPBLENDFUNCIARB
-	gpBlendParameteriNV                           C.GPBLENDPARAMETERINV
 	gpBlitFramebuffer                             C.GPBLITFRAMEBUFFER
 	gpBlitNamedFramebuffer                        C.GPBLITNAMEDFRAMEBUFFER
 	gpBufferData                                  C.GPBUFFERDATA
@@ -7388,7 +6330,6 @@ var (
 	gpClampColor                                  C.GPCLAMPCOLOR
 	gpClear                                       C.GPCLEAR
 	gpClearAccum                                  C.GPCLEARACCUM
-	gpClearAccumxOES                              C.GPCLEARACCUMXOES
 	gpClearBufferData                             C.GPCLEARBUFFERDATA
 	gpClearBufferSubData                          C.GPCLEARBUFFERSUBDATA
 	gpClearBufferfi                               C.GPCLEARBUFFERFI
@@ -7396,11 +6337,8 @@ var (
 	gpClearBufferiv                               C.GPCLEARBUFFERIV
 	gpClearBufferuiv                              C.GPCLEARBUFFERUIV
 	gpClearColor                                  C.GPCLEARCOLOR
-	gpClearColorxOES                              C.GPCLEARCOLORXOES
 	gpClearDepth                                  C.GPCLEARDEPTH
 	gpClearDepthf                                 C.GPCLEARDEPTHF
-	gpClearDepthfOES                              C.GPCLEARDEPTHFOES
-	gpClearDepthxOES                              C.GPCLEARDEPTHXOES
 	gpClearIndex                                  C.GPCLEARINDEX
 	gpClearNamedBufferData                        C.GPCLEARNAMEDBUFFERDATA
 	gpClearNamedBufferSubData                     C.GPCLEARNAMEDBUFFERSUBDATA
@@ -7415,8 +6353,6 @@ var (
 	gpClientWaitSync                              C.GPCLIENTWAITSYNC
 	gpClipControl                                 C.GPCLIPCONTROL
 	gpClipPlane                                   C.GPCLIPPLANE
-	gpClipPlanefOES                               C.GPCLIPPLANEFOES
-	gpClipPlanexOES                               C.GPCLIPPLANEXOES
 	gpColor3b                                     C.GPCOLOR3B
 	gpColor3bv                                    C.GPCOLOR3BV
 	gpColor3d                                     C.GPCOLOR3D
@@ -7433,8 +6369,6 @@ var (
 	gpColor3uiv                                   C.GPCOLOR3UIV
 	gpColor3us                                    C.GPCOLOR3US
 	gpColor3usv                                   C.GPCOLOR3USV
-	gpColor3xOES                                  C.GPCOLOR3XOES
-	gpColor3xvOES                                 C.GPCOLOR3XVOES
 	gpColor4b                                     C.GPCOLOR4B
 	gpColor4bv                                    C.GPCOLOR4BV
 	gpColor4d                                     C.GPCOLOR4D
@@ -7451,8 +6385,6 @@ var (
 	gpColor4uiv                                   C.GPCOLOR4UIV
 	gpColor4us                                    C.GPCOLOR4US
 	gpColor4usv                                   C.GPCOLOR4USV
-	gpColor4xOES                                  C.GPCOLOR4XOES
-	gpColor4xvOES                                 C.GPCOLOR4XVOES
 	gpColorMask                                   C.GPCOLORMASK
 	gpColorMaski                                  C.GPCOLORMASKI
 	gpColorMaterial                               C.GPCOLORMATERIAL
@@ -7468,8 +6400,6 @@ var (
 	gpCompressedTextureSubImage1D                 C.GPCOMPRESSEDTEXTURESUBIMAGE1D
 	gpCompressedTextureSubImage2D                 C.GPCOMPRESSEDTEXTURESUBIMAGE2D
 	gpCompressedTextureSubImage3D                 C.GPCOMPRESSEDTEXTURESUBIMAGE3D
-	gpConvolutionParameterxOES                    C.GPCONVOLUTIONPARAMETERXOES
-	gpConvolutionParameterxvOES                   C.GPCONVOLUTIONPARAMETERXVOES
 	gpCopyBufferSubData                           C.GPCOPYBUFFERSUBDATA
 	gpCopyImageSubData                            C.GPCOPYIMAGESUBDATA
 	gpCopyNamedBufferSubData                      C.GPCOPYNAMEDBUFFERSUBDATA
@@ -7484,16 +6414,13 @@ var (
 	gpCopyTextureSubImage3D                       C.GPCOPYTEXTURESUBIMAGE3D
 	gpCreateBuffers                               C.GPCREATEBUFFERS
 	gpCreateFramebuffers                          C.GPCREATEFRAMEBUFFERS
-	gpCreatePerfQueryINTEL                        C.GPCREATEPERFQUERYINTEL
 	gpCreateProgram                               C.GPCREATEPROGRAM
 	gpCreateProgramPipelines                      C.GPCREATEPROGRAMPIPELINES
 	gpCreateQueries                               C.GPCREATEQUERIES
 	gpCreateRenderbuffers                         C.GPCREATERENDERBUFFERS
 	gpCreateSamplers                              C.GPCREATESAMPLERS
 	gpCreateShader                                C.GPCREATESHADER
-	gpCreateShaderProgramEXT                      C.GPCREATESHADERPROGRAMEXT
 	gpCreateShaderProgramv                        C.GPCREATESHADERPROGRAMV
-	gpCreateShaderProgramvEXT                     C.GPCREATESHADERPROGRAMVEXT
 	gpCreateSyncFromCLeventARB                    C.GPCREATESYNCFROMCLEVENTARB
 	gpCreateTextures                              C.GPCREATETEXTURES
 	gpCreateTransformFeedbacks                    C.GPCREATETRANSFORMFEEDBACKS
@@ -7509,15 +6436,11 @@ var (
 	gpDebugMessageInsertARB                       C.GPDEBUGMESSAGEINSERTARB
 	gpDebugMessageInsertKHR                       C.GPDEBUGMESSAGEINSERTKHR
 	gpDeleteBuffers                               C.GPDELETEBUFFERS
-	gpDeleteFencesNV                              C.GPDELETEFENCESNV
 	gpDeleteFramebuffers                          C.GPDELETEFRAMEBUFFERS
 	gpDeleteLists                                 C.GPDELETELISTS
 	gpDeleteNamedStringARB                        C.GPDELETENAMEDSTRINGARB
-	gpDeletePerfMonitorsAMD                       C.GPDELETEPERFMONITORSAMD
-	gpDeletePerfQueryINTEL                        C.GPDELETEPERFQUERYINTEL
 	gpDeleteProgram                               C.GPDELETEPROGRAM
 	gpDeleteProgramPipelines                      C.GPDELETEPROGRAMPIPELINES
-	gpDeleteProgramPipelinesEXT                   C.GPDELETEPROGRAMPIPELINESEXT
 	gpDeleteQueries                               C.GPDELETEQUERIES
 	gpDeleteRenderbuffers                         C.GPDELETERENDERBUFFERS
 	gpDeleteSamplers                              C.GPDELETESAMPLERS
@@ -7532,8 +6455,6 @@ var (
 	gpDepthRangeArrayv                            C.GPDEPTHRANGEARRAYV
 	gpDepthRangeIndexed                           C.GPDEPTHRANGEINDEXED
 	gpDepthRangef                                 C.GPDEPTHRANGEF
-	gpDepthRangefOES                              C.GPDEPTHRANGEFOES
-	gpDepthRangexOES                              C.GPDEPTHRANGEXOES
 	gpDetachShader                                C.GPDETACHSHADER
 	gpDisable                                     C.GPDISABLE
 	gpDisableClientState                          C.GPDISABLECLIENTSTATE
@@ -7547,7 +6468,6 @@ var (
 	gpDrawArraysIndirect                          C.GPDRAWARRAYSINDIRECT
 	gpDrawArraysInstanced                         C.GPDRAWARRAYSINSTANCED
 	gpDrawArraysInstancedBaseInstance             C.GPDRAWARRAYSINSTANCEDBASEINSTANCE
-	gpDrawArraysInstancedEXT                      C.GPDRAWARRAYSINSTANCEDEXT
 	gpDrawBuffer                                  C.GPDRAWBUFFER
 	gpDrawBuffers                                 C.GPDRAWBUFFERS
 	gpDrawElements                                C.GPDRAWELEMENTS
@@ -7557,7 +6477,6 @@ var (
 	gpDrawElementsInstancedBaseInstance           C.GPDRAWELEMENTSINSTANCEDBASEINSTANCE
 	gpDrawElementsInstancedBaseVertex             C.GPDRAWELEMENTSINSTANCEDBASEVERTEX
 	gpDrawElementsInstancedBaseVertexBaseInstance C.GPDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCE
-	gpDrawElementsInstancedEXT                    C.GPDRAWELEMENTSINSTANCEDEXT
 	gpDrawPixels                                  C.GPDRAWPIXELS
 	gpDrawRangeElements                           C.GPDRAWRANGEELEMENTS
 	gpDrawRangeElementsBaseVertex                 C.GPDRAWRANGEELEMENTSBASEVERTEX
@@ -7576,8 +6495,6 @@ var (
 	gpEnd                                         C.GPEND
 	gpEndConditionalRender                        C.GPENDCONDITIONALRENDER
 	gpEndList                                     C.GPENDLIST
-	gpEndPerfMonitorAMD                           C.GPENDPERFMONITORAMD
-	gpEndPerfQueryINTEL                           C.GPENDPERFQUERYINTEL
 	gpEndQuery                                    C.GPENDQUERY
 	gpEndQueryIndexed                             C.GPENDQUERYINDEXED
 	gpEndTransformFeedback                        C.GPENDTRANSFORMFEEDBACK
@@ -7585,23 +6502,17 @@ var (
 	gpEvalCoord1dv                                C.GPEVALCOORD1DV
 	gpEvalCoord1f                                 C.GPEVALCOORD1F
 	gpEvalCoord1fv                                C.GPEVALCOORD1FV
-	gpEvalCoord1xOES                              C.GPEVALCOORD1XOES
-	gpEvalCoord1xvOES                             C.GPEVALCOORD1XVOES
 	gpEvalCoord2d                                 C.GPEVALCOORD2D
 	gpEvalCoord2dv                                C.GPEVALCOORD2DV
 	gpEvalCoord2f                                 C.GPEVALCOORD2F
 	gpEvalCoord2fv                                C.GPEVALCOORD2FV
-	gpEvalCoord2xOES                              C.GPEVALCOORD2XOES
-	gpEvalCoord2xvOES                             C.GPEVALCOORD2XVOES
 	gpEvalMesh1                                   C.GPEVALMESH1
 	gpEvalMesh2                                   C.GPEVALMESH2
 	gpEvalPoint1                                  C.GPEVALPOINT1
 	gpEvalPoint2                                  C.GPEVALPOINT2
 	gpFeedbackBuffer                              C.GPFEEDBACKBUFFER
-	gpFeedbackBufferxOES                          C.GPFEEDBACKBUFFERXOES
 	gpFenceSync                                   C.GPFENCESYNC
 	gpFinish                                      C.GPFINISH
-	gpFinishFenceNV                               C.GPFINISHFENCENV
 	gpFlush                                       C.GPFLUSH
 	gpFlushMappedBufferRange                      C.GPFLUSHMAPPEDBUFFERRANGE
 	gpFlushMappedNamedBufferRange                 C.GPFLUSHMAPPEDNAMEDBUFFERRANGE
@@ -7614,8 +6525,6 @@ var (
 	gpFogfv                                       C.GPFOGFV
 	gpFogi                                        C.GPFOGI
 	gpFogiv                                       C.GPFOGIV
-	gpFogxOES                                     C.GPFOGXOES
-	gpFogxvOES                                    C.GPFOGXVOES
 	gpFramebufferParameteri                       C.GPFRAMEBUFFERPARAMETERI
 	gpFramebufferRenderbuffer                     C.GPFRAMEBUFFERRENDERBUFFER
 	gpFramebufferTexture                          C.GPFRAMEBUFFERTEXTURE
@@ -7625,15 +6534,10 @@ var (
 	gpFramebufferTextureLayer                     C.GPFRAMEBUFFERTEXTURELAYER
 	gpFrontFace                                   C.GPFRONTFACE
 	gpFrustum                                     C.GPFRUSTUM
-	gpFrustumfOES                                 C.GPFRUSTUMFOES
-	gpFrustumxOES                                 C.GPFRUSTUMXOES
 	gpGenBuffers                                  C.GPGENBUFFERS
-	gpGenFencesNV                                 C.GPGENFENCESNV
 	gpGenFramebuffers                             C.GPGENFRAMEBUFFERS
 	gpGenLists                                    C.GPGENLISTS
-	gpGenPerfMonitorsAMD                          C.GPGENPERFMONITORSAMD
 	gpGenProgramPipelines                         C.GPGENPROGRAMPIPELINES
-	gpGenProgramPipelinesEXT                      C.GPGENPROGRAMPIPELINESEXT
 	gpGenQueries                                  C.GPGENQUERIES
 	gpGenRenderbuffers                            C.GPGENRENDERBUFFERS
 	gpGenSamplers                                 C.GPGENSAMPLERS
@@ -7661,21 +6565,15 @@ var (
 	gpGetBufferPointerv                           C.GPGETBUFFERPOINTERV
 	gpGetBufferSubData                            C.GPGETBUFFERSUBDATA
 	gpGetClipPlane                                C.GPGETCLIPPLANE
-	gpGetClipPlanefOES                            C.GPGETCLIPPLANEFOES
-	gpGetClipPlanexOES                            C.GPGETCLIPPLANEXOES
 	gpGetCompressedTexImage                       C.GPGETCOMPRESSEDTEXIMAGE
 	gpGetCompressedTextureImage                   C.GPGETCOMPRESSEDTEXTUREIMAGE
 	gpGetCompressedTextureSubImage                C.GPGETCOMPRESSEDTEXTURESUBIMAGE
-	gpGetConvolutionParameterxvOES                C.GPGETCONVOLUTIONPARAMETERXVOES
 	gpGetDebugMessageLog                          C.GPGETDEBUGMESSAGELOG
 	gpGetDebugMessageLogARB                       C.GPGETDEBUGMESSAGELOGARB
 	gpGetDebugMessageLogKHR                       C.GPGETDEBUGMESSAGELOGKHR
 	gpGetDoublei_v                                C.GPGETDOUBLEI_V
 	gpGetDoublev                                  C.GPGETDOUBLEV
 	gpGetError                                    C.GPGETERROR
-	gpGetFenceivNV                                C.GPGETFENCEIVNV
-	gpGetFirstPerfQueryIdINTEL                    C.GPGETFIRSTPERFQUERYIDINTEL
-	gpGetFixedvOES                                C.GPGETFIXEDVOES
 	gpGetFloati_v                                 C.GPGETFLOATI_V
 	gpGetFloatv                                   C.GPGETFLOATV
 	gpGetFragDataIndex                            C.GPGETFRAGDATAINDEX
@@ -7685,7 +6583,6 @@ var (
 	gpGetGraphicsResetStatus                      C.GPGETGRAPHICSRESETSTATUS
 	gpGetGraphicsResetStatusARB                   C.GPGETGRAPHICSRESETSTATUSARB
 	gpGetGraphicsResetStatusKHR                   C.GPGETGRAPHICSRESETSTATUSKHR
-	gpGetHistogramParameterxvOES                  C.GPGETHISTOGRAMPARAMETERXVOES
 	gpGetImageHandleARB                           C.GPGETIMAGEHANDLEARB
 	gpGetInteger64i_v                             C.GPGETINTEGER64I_V
 	gpGetInteger64v                               C.GPGETINTEGER64V
@@ -7695,16 +6592,11 @@ var (
 	gpGetInternalformativ                         C.GPGETINTERNALFORMATIV
 	gpGetLightfv                                  C.GPGETLIGHTFV
 	gpGetLightiv                                  C.GPGETLIGHTIV
-	gpGetLightxOES                                C.GPGETLIGHTXOES
-	gpGetLightxvOES                               C.GPGETLIGHTXVOES
 	gpGetMapdv                                    C.GPGETMAPDV
 	gpGetMapfv                                    C.GPGETMAPFV
 	gpGetMapiv                                    C.GPGETMAPIV
-	gpGetMapxvOES                                 C.GPGETMAPXVOES
 	gpGetMaterialfv                               C.GPGETMATERIALFV
 	gpGetMaterialiv                               C.GPGETMATERIALIV
-	gpGetMaterialxOES                             C.GPGETMATERIALXOES
-	gpGetMaterialxvOES                            C.GPGETMATERIALXVOES
 	gpGetMultisamplefv                            C.GPGETMULTISAMPLEFV
 	gpGetNamedBufferParameteri64v                 C.GPGETNAMEDBUFFERPARAMETERI64V
 	gpGetNamedBufferParameteriv                   C.GPGETNAMEDBUFFERPARAMETERIV
@@ -7715,26 +6607,13 @@ var (
 	gpGetNamedRenderbufferParameteriv             C.GPGETNAMEDRENDERBUFFERPARAMETERIV
 	gpGetNamedStringARB                           C.GPGETNAMEDSTRINGARB
 	gpGetNamedStringivARB                         C.GPGETNAMEDSTRINGIVARB
-	gpGetNextPerfQueryIdINTEL                     C.GPGETNEXTPERFQUERYIDINTEL
 	gpGetObjectLabel                              C.GPGETOBJECTLABEL
-	gpGetObjectLabelEXT                           C.GPGETOBJECTLABELEXT
 	gpGetObjectLabelKHR                           C.GPGETOBJECTLABELKHR
 	gpGetObjectPtrLabel                           C.GPGETOBJECTPTRLABEL
 	gpGetObjectPtrLabelKHR                        C.GPGETOBJECTPTRLABELKHR
-	gpGetPerfCounterInfoINTEL                     C.GPGETPERFCOUNTERINFOINTEL
-	gpGetPerfMonitorCounterDataAMD                C.GPGETPERFMONITORCOUNTERDATAAMD
-	gpGetPerfMonitorCounterInfoAMD                C.GPGETPERFMONITORCOUNTERINFOAMD
-	gpGetPerfMonitorCounterStringAMD              C.GPGETPERFMONITORCOUNTERSTRINGAMD
-	gpGetPerfMonitorCountersAMD                   C.GPGETPERFMONITORCOUNTERSAMD
-	gpGetPerfMonitorGroupStringAMD                C.GPGETPERFMONITORGROUPSTRINGAMD
-	gpGetPerfMonitorGroupsAMD                     C.GPGETPERFMONITORGROUPSAMD
-	gpGetPerfQueryDataINTEL                       C.GPGETPERFQUERYDATAINTEL
-	gpGetPerfQueryIdByNameINTEL                   C.GPGETPERFQUERYIDBYNAMEINTEL
-	gpGetPerfQueryInfoINTEL                       C.GPGETPERFQUERYINFOINTEL
 	gpGetPixelMapfv                               C.GPGETPIXELMAPFV
 	gpGetPixelMapuiv                              C.GPGETPIXELMAPUIV
 	gpGetPixelMapusv                              C.GPGETPIXELMAPUSV
-	gpGetPixelMapxv                               C.GPGETPIXELMAPXV
 	gpGetPointerv                                 C.GPGETPOINTERV
 	gpGetPointervKHR                              C.GPGETPOINTERVKHR
 	gpGetPolygonStipple                           C.GPGETPOLYGONSTIPPLE
@@ -7742,9 +6621,7 @@ var (
 	gpGetProgramInfoLog                           C.GPGETPROGRAMINFOLOG
 	gpGetProgramInterfaceiv                       C.GPGETPROGRAMINTERFACEIV
 	gpGetProgramPipelineInfoLog                   C.GPGETPROGRAMPIPELINEINFOLOG
-	gpGetProgramPipelineInfoLogEXT                C.GPGETPROGRAMPIPELINEINFOLOGEXT
 	gpGetProgramPipelineiv                        C.GPGETPROGRAMPIPELINEIV
-	gpGetProgramPipelineivEXT                     C.GPGETPROGRAMPIPELINEIVEXT
 	gpGetProgramResourceIndex                     C.GPGETPROGRAMRESOURCEINDEX
 	gpGetProgramResourceLocation                  C.GPGETPROGRAMRESOURCELOCATION
 	gpGetProgramResourceLocationIndex             C.GPGETPROGRAMRESOURCELOCATIONINDEX
@@ -7774,20 +6651,16 @@ var (
 	gpGetSynciv                                   C.GPGETSYNCIV
 	gpGetTexEnvfv                                 C.GPGETTEXENVFV
 	gpGetTexEnviv                                 C.GPGETTEXENVIV
-	gpGetTexEnvxvOES                              C.GPGETTEXENVXVOES
 	gpGetTexGendv                                 C.GPGETTEXGENDV
 	gpGetTexGenfv                                 C.GPGETTEXGENFV
 	gpGetTexGeniv                                 C.GPGETTEXGENIV
-	gpGetTexGenxvOES                              C.GPGETTEXGENXVOES
 	gpGetTexImage                                 C.GPGETTEXIMAGE
 	gpGetTexLevelParameterfv                      C.GPGETTEXLEVELPARAMETERFV
 	gpGetTexLevelParameteriv                      C.GPGETTEXLEVELPARAMETERIV
-	gpGetTexLevelParameterxvOES                   C.GPGETTEXLEVELPARAMETERXVOES
 	gpGetTexParameterIiv                          C.GPGETTEXPARAMETERIIV
 	gpGetTexParameterIuiv                         C.GPGETTEXPARAMETERIUIV
 	gpGetTexParameterfv                           C.GPGETTEXPARAMETERFV
 	gpGetTexParameteriv                           C.GPGETTEXPARAMETERIV
-	gpGetTexParameterxvOES                        C.GPGETTEXPARAMETERXVOES
 	gpGetTextureHandleARB                         C.GPGETTEXTUREHANDLEARB
 	gpGetTextureImage                             C.GPGETTEXTUREIMAGE
 	gpGetTextureLevelParameterfv                  C.GPGETTEXTURELEVELPARAMETERFV
@@ -7849,10 +6722,7 @@ var (
 	gpIndexsv                                     C.GPINDEXSV
 	gpIndexub                                     C.GPINDEXUB
 	gpIndexubv                                    C.GPINDEXUBV
-	gpIndexxOES                                   C.GPINDEXXOES
-	gpIndexxvOES                                  C.GPINDEXXVOES
 	gpInitNames                                   C.GPINITNAMES
-	gpInsertEventMarkerEXT                        C.GPINSERTEVENTMARKEREXT
 	gpInterleavedArrays                           C.GPINTERLEAVEDARRAYS
 	gpInvalidateBufferData                        C.GPINVALIDATEBUFFERDATA
 	gpInvalidateBufferSubData                     C.GPINVALIDATEBUFFERSUBDATA
@@ -7865,14 +6735,12 @@ var (
 	gpIsBuffer                                    C.GPISBUFFER
 	gpIsEnabled                                   C.GPISENABLED
 	gpIsEnabledi                                  C.GPISENABLEDI
-	gpIsFenceNV                                   C.GPISFENCENV
 	gpIsFramebuffer                               C.GPISFRAMEBUFFER
 	gpIsImageHandleResidentARB                    C.GPISIMAGEHANDLERESIDENTARB
 	gpIsList                                      C.GPISLIST
 	gpIsNamedStringARB                            C.GPISNAMEDSTRINGARB
 	gpIsProgram                                   C.GPISPROGRAM
 	gpIsProgramPipeline                           C.GPISPROGRAMPIPELINE
-	gpIsProgramPipelineEXT                        C.GPISPROGRAMPIPELINEEXT
 	gpIsQuery                                     C.GPISQUERY
 	gpIsRenderbuffer                              C.GPISRENDERBUFFER
 	gpIsSampler                                   C.GPISSAMPLER
@@ -7882,32 +6750,24 @@ var (
 	gpIsTextureHandleResidentARB                  C.GPISTEXTUREHANDLERESIDENTARB
 	gpIsTransformFeedback                         C.GPISTRANSFORMFEEDBACK
 	gpIsVertexArray                               C.GPISVERTEXARRAY
-	gpLabelObjectEXT                              C.GPLABELOBJECTEXT
 	gpLightModelf                                 C.GPLIGHTMODELF
 	gpLightModelfv                                C.GPLIGHTMODELFV
 	gpLightModeli                                 C.GPLIGHTMODELI
 	gpLightModeliv                                C.GPLIGHTMODELIV
-	gpLightModelxOES                              C.GPLIGHTMODELXOES
-	gpLightModelxvOES                             C.GPLIGHTMODELXVOES
 	gpLightf                                      C.GPLIGHTF
 	gpLightfv                                     C.GPLIGHTFV
 	gpLighti                                      C.GPLIGHTI
 	gpLightiv                                     C.GPLIGHTIV
-	gpLightxOES                                   C.GPLIGHTXOES
-	gpLightxvOES                                  C.GPLIGHTXVOES
 	gpLineStipple                                 C.GPLINESTIPPLE
 	gpLineWidth                                   C.GPLINEWIDTH
-	gpLineWidthxOES                               C.GPLINEWIDTHXOES
 	gpLinkProgram                                 C.GPLINKPROGRAM
 	gpListBase                                    C.GPLISTBASE
 	gpLoadIdentity                                C.GPLOADIDENTITY
 	gpLoadMatrixd                                 C.GPLOADMATRIXD
 	gpLoadMatrixf                                 C.GPLOADMATRIXF
-	gpLoadMatrixxOES                              C.GPLOADMATRIXXOES
 	gpLoadName                                    C.GPLOADNAME
 	gpLoadTransposeMatrixd                        C.GPLOADTRANSPOSEMATRIXD
 	gpLoadTransposeMatrixf                        C.GPLOADTRANSPOSEMATRIXF
-	gpLoadTransposeMatrixxOES                     C.GPLOADTRANSPOSEMATRIXXOES
 	gpLogicOp                                     C.GPLOGICOP
 	gpMakeImageHandleNonResidentARB               C.GPMAKEIMAGEHANDLENONRESIDENTARB
 	gpMakeImageHandleResidentARB                  C.GPMAKEIMAGEHANDLERESIDENTARB
@@ -7915,26 +6775,20 @@ var (
 	gpMakeTextureHandleResidentARB                C.GPMAKETEXTUREHANDLERESIDENTARB
 	gpMap1d                                       C.GPMAP1D
 	gpMap1f                                       C.GPMAP1F
-	gpMap1xOES                                    C.GPMAP1XOES
 	gpMap2d                                       C.GPMAP2D
 	gpMap2f                                       C.GPMAP2F
-	gpMap2xOES                                    C.GPMAP2XOES
 	gpMapBuffer                                   C.GPMAPBUFFER
 	gpMapBufferRange                              C.GPMAPBUFFERRANGE
 	gpMapGrid1d                                   C.GPMAPGRID1D
 	gpMapGrid1f                                   C.GPMAPGRID1F
-	gpMapGrid1xOES                                C.GPMAPGRID1XOES
 	gpMapGrid2d                                   C.GPMAPGRID2D
 	gpMapGrid2f                                   C.GPMAPGRID2F
-	gpMapGrid2xOES                                C.GPMAPGRID2XOES
 	gpMapNamedBuffer                              C.GPMAPNAMEDBUFFER
 	gpMapNamedBufferRange                         C.GPMAPNAMEDBUFFERRANGE
 	gpMaterialf                                   C.GPMATERIALF
 	gpMaterialfv                                  C.GPMATERIALFV
 	gpMateriali                                   C.GPMATERIALI
 	gpMaterialiv                                  C.GPMATERIALIV
-	gpMaterialxOES                                C.GPMATERIALXOES
-	gpMaterialxvOES                               C.GPMATERIALXVOES
 	gpMatrixMode                                  C.GPMATRIXMODE
 	gpMemoryBarrier                               C.GPMEMORYBARRIER
 	gpMemoryBarrierByRegion                       C.GPMEMORYBARRIERBYREGION
@@ -7942,21 +6796,15 @@ var (
 	gpMinSampleShadingARB                         C.GPMINSAMPLESHADINGARB
 	gpMultMatrixd                                 C.GPMULTMATRIXD
 	gpMultMatrixf                                 C.GPMULTMATRIXF
-	gpMultMatrixxOES                              C.GPMULTMATRIXXOES
 	gpMultTransposeMatrixd                        C.GPMULTTRANSPOSEMATRIXD
 	gpMultTransposeMatrixf                        C.GPMULTTRANSPOSEMATRIXF
-	gpMultTransposeMatrixxOES                     C.GPMULTTRANSPOSEMATRIXXOES
 	gpMultiDrawArrays                             C.GPMULTIDRAWARRAYS
-	gpMultiDrawArraysEXT                          C.GPMULTIDRAWARRAYSEXT
 	gpMultiDrawArraysIndirect                     C.GPMULTIDRAWARRAYSINDIRECT
 	gpMultiDrawArraysIndirectCountARB             C.GPMULTIDRAWARRAYSINDIRECTCOUNTARB
 	gpMultiDrawElements                           C.GPMULTIDRAWELEMENTS
 	gpMultiDrawElementsBaseVertex                 C.GPMULTIDRAWELEMENTSBASEVERTEX
-	gpMultiDrawElementsEXT                        C.GPMULTIDRAWELEMENTSEXT
 	gpMultiDrawElementsIndirect                   C.GPMULTIDRAWELEMENTSINDIRECT
 	gpMultiDrawElementsIndirectCountARB           C.GPMULTIDRAWELEMENTSINDIRECTCOUNTARB
-	gpMultiTexCoord1bOES                          C.GPMULTITEXCOORD1BOES
-	gpMultiTexCoord1bvOES                         C.GPMULTITEXCOORD1BVOES
 	gpMultiTexCoord1d                             C.GPMULTITEXCOORD1D
 	gpMultiTexCoord1dv                            C.GPMULTITEXCOORD1DV
 	gpMultiTexCoord1f                             C.GPMULTITEXCOORD1F
@@ -7965,10 +6813,6 @@ var (
 	gpMultiTexCoord1iv                            C.GPMULTITEXCOORD1IV
 	gpMultiTexCoord1s                             C.GPMULTITEXCOORD1S
 	gpMultiTexCoord1sv                            C.GPMULTITEXCOORD1SV
-	gpMultiTexCoord1xOES                          C.GPMULTITEXCOORD1XOES
-	gpMultiTexCoord1xvOES                         C.GPMULTITEXCOORD1XVOES
-	gpMultiTexCoord2bOES                          C.GPMULTITEXCOORD2BOES
-	gpMultiTexCoord2bvOES                         C.GPMULTITEXCOORD2BVOES
 	gpMultiTexCoord2d                             C.GPMULTITEXCOORD2D
 	gpMultiTexCoord2dv                            C.GPMULTITEXCOORD2DV
 	gpMultiTexCoord2f                             C.GPMULTITEXCOORD2F
@@ -7977,10 +6821,6 @@ var (
 	gpMultiTexCoord2iv                            C.GPMULTITEXCOORD2IV
 	gpMultiTexCoord2s                             C.GPMULTITEXCOORD2S
 	gpMultiTexCoord2sv                            C.GPMULTITEXCOORD2SV
-	gpMultiTexCoord2xOES                          C.GPMULTITEXCOORD2XOES
-	gpMultiTexCoord2xvOES                         C.GPMULTITEXCOORD2XVOES
-	gpMultiTexCoord3bOES                          C.GPMULTITEXCOORD3BOES
-	gpMultiTexCoord3bvOES                         C.GPMULTITEXCOORD3BVOES
 	gpMultiTexCoord3d                             C.GPMULTITEXCOORD3D
 	gpMultiTexCoord3dv                            C.GPMULTITEXCOORD3DV
 	gpMultiTexCoord3f                             C.GPMULTITEXCOORD3F
@@ -7989,10 +6829,6 @@ var (
 	gpMultiTexCoord3iv                            C.GPMULTITEXCOORD3IV
 	gpMultiTexCoord3s                             C.GPMULTITEXCOORD3S
 	gpMultiTexCoord3sv                            C.GPMULTITEXCOORD3SV
-	gpMultiTexCoord3xOES                          C.GPMULTITEXCOORD3XOES
-	gpMultiTexCoord3xvOES                         C.GPMULTITEXCOORD3XVOES
-	gpMultiTexCoord4bOES                          C.GPMULTITEXCOORD4BOES
-	gpMultiTexCoord4bvOES                         C.GPMULTITEXCOORD4BVOES
 	gpMultiTexCoord4d                             C.GPMULTITEXCOORD4D
 	gpMultiTexCoord4dv                            C.GPMULTITEXCOORD4DV
 	gpMultiTexCoord4f                             C.GPMULTITEXCOORD4F
@@ -8001,8 +6837,6 @@ var (
 	gpMultiTexCoord4iv                            C.GPMULTITEXCOORD4IV
 	gpMultiTexCoord4s                             C.GPMULTITEXCOORD4S
 	gpMultiTexCoord4sv                            C.GPMULTITEXCOORD4SV
-	gpMultiTexCoord4xOES                          C.GPMULTITEXCOORD4XOES
-	gpMultiTexCoord4xvOES                         C.GPMULTITEXCOORD4XVOES
 	gpNamedBufferData                             C.GPNAMEDBUFFERDATA
 	gpNamedBufferPageCommitmentARB                C.GPNAMEDBUFFERPAGECOMMITMENTARB
 	gpNamedBufferPageCommitmentEXT                C.GPNAMEDBUFFERPAGECOMMITMENTEXT
@@ -8029,153 +6863,102 @@ var (
 	gpNormal3iv                                   C.GPNORMAL3IV
 	gpNormal3s                                    C.GPNORMAL3S
 	gpNormal3sv                                   C.GPNORMAL3SV
-	gpNormal3xOES                                 C.GPNORMAL3XOES
-	gpNormal3xvOES                                C.GPNORMAL3XVOES
 	gpNormalPointer                               C.GPNORMALPOINTER
 	gpObjectLabel                                 C.GPOBJECTLABEL
 	gpObjectLabelKHR                              C.GPOBJECTLABELKHR
 	gpObjectPtrLabel                              C.GPOBJECTPTRLABEL
 	gpObjectPtrLabelKHR                           C.GPOBJECTPTRLABELKHR
 	gpOrtho                                       C.GPORTHO
-	gpOrthofOES                                   C.GPORTHOFOES
-	gpOrthoxOES                                   C.GPORTHOXOES
 	gpPassThrough                                 C.GPPASSTHROUGH
-	gpPassThroughxOES                             C.GPPASSTHROUGHXOES
 	gpPatchParameterfv                            C.GPPATCHPARAMETERFV
 	gpPatchParameteri                             C.GPPATCHPARAMETERI
 	gpPauseTransformFeedback                      C.GPPAUSETRANSFORMFEEDBACK
 	gpPixelMapfv                                  C.GPPIXELMAPFV
 	gpPixelMapuiv                                 C.GPPIXELMAPUIV
 	gpPixelMapusv                                 C.GPPIXELMAPUSV
-	gpPixelMapx                                   C.GPPIXELMAPX
 	gpPixelStoref                                 C.GPPIXELSTOREF
 	gpPixelStorei                                 C.GPPIXELSTOREI
-	gpPixelStorex                                 C.GPPIXELSTOREX
 	gpPixelTransferf                              C.GPPIXELTRANSFERF
 	gpPixelTransferi                              C.GPPIXELTRANSFERI
-	gpPixelTransferxOES                           C.GPPIXELTRANSFERXOES
 	gpPixelZoom                                   C.GPPIXELZOOM
-	gpPixelZoomxOES                               C.GPPIXELZOOMXOES
 	gpPointParameterf                             C.GPPOINTPARAMETERF
 	gpPointParameterfv                            C.GPPOINTPARAMETERFV
 	gpPointParameteri                             C.GPPOINTPARAMETERI
 	gpPointParameteriv                            C.GPPOINTPARAMETERIV
-	gpPointParameterxOES                          C.GPPOINTPARAMETERXOES
-	gpPointParameterxvOES                         C.GPPOINTPARAMETERXVOES
 	gpPointSize                                   C.GPPOINTSIZE
-	gpPointSizexOES                               C.GPPOINTSIZEXOES
 	gpPolygonMode                                 C.GPPOLYGONMODE
 	gpPolygonOffset                               C.GPPOLYGONOFFSET
-	gpPolygonOffsetxOES                           C.GPPOLYGONOFFSETXOES
 	gpPolygonStipple                              C.GPPOLYGONSTIPPLE
 	gpPopAttrib                                   C.GPPOPATTRIB
 	gpPopClientAttrib                             C.GPPOPCLIENTATTRIB
 	gpPopDebugGroup                               C.GPPOPDEBUGGROUP
 	gpPopDebugGroupKHR                            C.GPPOPDEBUGGROUPKHR
-	gpPopGroupMarkerEXT                           C.GPPOPGROUPMARKEREXT
 	gpPopMatrix                                   C.GPPOPMATRIX
 	gpPopName                                     C.GPPOPNAME
 	gpPrimitiveRestartIndex                       C.GPPRIMITIVERESTARTINDEX
 	gpPrioritizeTextures                          C.GPPRIORITIZETEXTURES
-	gpPrioritizeTexturesxOES                      C.GPPRIORITIZETEXTURESXOES
 	gpProgramBinary                               C.GPPROGRAMBINARY
 	gpProgramParameteri                           C.GPPROGRAMPARAMETERI
-	gpProgramParameteriEXT                        C.GPPROGRAMPARAMETERIEXT
 	gpProgramUniform1d                            C.GPPROGRAMUNIFORM1D
 	gpProgramUniform1dv                           C.GPPROGRAMUNIFORM1DV
 	gpProgramUniform1f                            C.GPPROGRAMUNIFORM1F
-	gpProgramUniform1fEXT                         C.GPPROGRAMUNIFORM1FEXT
 	gpProgramUniform1fv                           C.GPPROGRAMUNIFORM1FV
-	gpProgramUniform1fvEXT                        C.GPPROGRAMUNIFORM1FVEXT
 	gpProgramUniform1i                            C.GPPROGRAMUNIFORM1I
-	gpProgramUniform1iEXT                         C.GPPROGRAMUNIFORM1IEXT
 	gpProgramUniform1iv                           C.GPPROGRAMUNIFORM1IV
-	gpProgramUniform1ivEXT                        C.GPPROGRAMUNIFORM1IVEXT
 	gpProgramUniform1ui                           C.GPPROGRAMUNIFORM1UI
-	gpProgramUniform1uiEXT                        C.GPPROGRAMUNIFORM1UIEXT
 	gpProgramUniform1uiv                          C.GPPROGRAMUNIFORM1UIV
-	gpProgramUniform1uivEXT                       C.GPPROGRAMUNIFORM1UIVEXT
 	gpProgramUniform2d                            C.GPPROGRAMUNIFORM2D
 	gpProgramUniform2dv                           C.GPPROGRAMUNIFORM2DV
 	gpProgramUniform2f                            C.GPPROGRAMUNIFORM2F
-	gpProgramUniform2fEXT                         C.GPPROGRAMUNIFORM2FEXT
 	gpProgramUniform2fv                           C.GPPROGRAMUNIFORM2FV
-	gpProgramUniform2fvEXT                        C.GPPROGRAMUNIFORM2FVEXT
 	gpProgramUniform2i                            C.GPPROGRAMUNIFORM2I
-	gpProgramUniform2iEXT                         C.GPPROGRAMUNIFORM2IEXT
 	gpProgramUniform2iv                           C.GPPROGRAMUNIFORM2IV
-	gpProgramUniform2ivEXT                        C.GPPROGRAMUNIFORM2IVEXT
 	gpProgramUniform2ui                           C.GPPROGRAMUNIFORM2UI
-	gpProgramUniform2uiEXT                        C.GPPROGRAMUNIFORM2UIEXT
 	gpProgramUniform2uiv                          C.GPPROGRAMUNIFORM2UIV
-	gpProgramUniform2uivEXT                       C.GPPROGRAMUNIFORM2UIVEXT
 	gpProgramUniform3d                            C.GPPROGRAMUNIFORM3D
 	gpProgramUniform3dv                           C.GPPROGRAMUNIFORM3DV
 	gpProgramUniform3f                            C.GPPROGRAMUNIFORM3F
-	gpProgramUniform3fEXT                         C.GPPROGRAMUNIFORM3FEXT
 	gpProgramUniform3fv                           C.GPPROGRAMUNIFORM3FV
-	gpProgramUniform3fvEXT                        C.GPPROGRAMUNIFORM3FVEXT
 	gpProgramUniform3i                            C.GPPROGRAMUNIFORM3I
-	gpProgramUniform3iEXT                         C.GPPROGRAMUNIFORM3IEXT
 	gpProgramUniform3iv                           C.GPPROGRAMUNIFORM3IV
-	gpProgramUniform3ivEXT                        C.GPPROGRAMUNIFORM3IVEXT
 	gpProgramUniform3ui                           C.GPPROGRAMUNIFORM3UI
-	gpProgramUniform3uiEXT                        C.GPPROGRAMUNIFORM3UIEXT
 	gpProgramUniform3uiv                          C.GPPROGRAMUNIFORM3UIV
-	gpProgramUniform3uivEXT                       C.GPPROGRAMUNIFORM3UIVEXT
 	gpProgramUniform4d                            C.GPPROGRAMUNIFORM4D
 	gpProgramUniform4dv                           C.GPPROGRAMUNIFORM4DV
 	gpProgramUniform4f                            C.GPPROGRAMUNIFORM4F
-	gpProgramUniform4fEXT                         C.GPPROGRAMUNIFORM4FEXT
 	gpProgramUniform4fv                           C.GPPROGRAMUNIFORM4FV
-	gpProgramUniform4fvEXT                        C.GPPROGRAMUNIFORM4FVEXT
 	gpProgramUniform4i                            C.GPPROGRAMUNIFORM4I
-	gpProgramUniform4iEXT                         C.GPPROGRAMUNIFORM4IEXT
 	gpProgramUniform4iv                           C.GPPROGRAMUNIFORM4IV
-	gpProgramUniform4ivEXT                        C.GPPROGRAMUNIFORM4IVEXT
 	gpProgramUniform4ui                           C.GPPROGRAMUNIFORM4UI
-	gpProgramUniform4uiEXT                        C.GPPROGRAMUNIFORM4UIEXT
 	gpProgramUniform4uiv                          C.GPPROGRAMUNIFORM4UIV
-	gpProgramUniform4uivEXT                       C.GPPROGRAMUNIFORM4UIVEXT
 	gpProgramUniformHandleui64ARB                 C.GPPROGRAMUNIFORMHANDLEUI64ARB
 	gpProgramUniformHandleui64vARB                C.GPPROGRAMUNIFORMHANDLEUI64VARB
 	gpProgramUniformMatrix2dv                     C.GPPROGRAMUNIFORMMATRIX2DV
 	gpProgramUniformMatrix2fv                     C.GPPROGRAMUNIFORMMATRIX2FV
-	gpProgramUniformMatrix2fvEXT                  C.GPPROGRAMUNIFORMMATRIX2FVEXT
 	gpProgramUniformMatrix2x3dv                   C.GPPROGRAMUNIFORMMATRIX2X3DV
 	gpProgramUniformMatrix2x3fv                   C.GPPROGRAMUNIFORMMATRIX2X3FV
-	gpProgramUniformMatrix2x3fvEXT                C.GPPROGRAMUNIFORMMATRIX2X3FVEXT
 	gpProgramUniformMatrix2x4dv                   C.GPPROGRAMUNIFORMMATRIX2X4DV
 	gpProgramUniformMatrix2x4fv                   C.GPPROGRAMUNIFORMMATRIX2X4FV
-	gpProgramUniformMatrix2x4fvEXT                C.GPPROGRAMUNIFORMMATRIX2X4FVEXT
 	gpProgramUniformMatrix3dv                     C.GPPROGRAMUNIFORMMATRIX3DV
 	gpProgramUniformMatrix3fv                     C.GPPROGRAMUNIFORMMATRIX3FV
-	gpProgramUniformMatrix3fvEXT                  C.GPPROGRAMUNIFORMMATRIX3FVEXT
 	gpProgramUniformMatrix3x2dv                   C.GPPROGRAMUNIFORMMATRIX3X2DV
 	gpProgramUniformMatrix3x2fv                   C.GPPROGRAMUNIFORMMATRIX3X2FV
-	gpProgramUniformMatrix3x2fvEXT                C.GPPROGRAMUNIFORMMATRIX3X2FVEXT
 	gpProgramUniformMatrix3x4dv                   C.GPPROGRAMUNIFORMMATRIX3X4DV
 	gpProgramUniformMatrix3x4fv                   C.GPPROGRAMUNIFORMMATRIX3X4FV
-	gpProgramUniformMatrix3x4fvEXT                C.GPPROGRAMUNIFORMMATRIX3X4FVEXT
 	gpProgramUniformMatrix4dv                     C.GPPROGRAMUNIFORMMATRIX4DV
 	gpProgramUniformMatrix4fv                     C.GPPROGRAMUNIFORMMATRIX4FV
-	gpProgramUniformMatrix4fvEXT                  C.GPPROGRAMUNIFORMMATRIX4FVEXT
 	gpProgramUniformMatrix4x2dv                   C.GPPROGRAMUNIFORMMATRIX4X2DV
 	gpProgramUniformMatrix4x2fv                   C.GPPROGRAMUNIFORMMATRIX4X2FV
-	gpProgramUniformMatrix4x2fvEXT                C.GPPROGRAMUNIFORMMATRIX4X2FVEXT
 	gpProgramUniformMatrix4x3dv                   C.GPPROGRAMUNIFORMMATRIX4X3DV
 	gpProgramUniformMatrix4x3fv                   C.GPPROGRAMUNIFORMMATRIX4X3FV
-	gpProgramUniformMatrix4x3fvEXT                C.GPPROGRAMUNIFORMMATRIX4X3FVEXT
 	gpProvokingVertex                             C.GPPROVOKINGVERTEX
 	gpPushAttrib                                  C.GPPUSHATTRIB
 	gpPushClientAttrib                            C.GPPUSHCLIENTATTRIB
 	gpPushDebugGroup                              C.GPPUSHDEBUGGROUP
 	gpPushDebugGroupKHR                           C.GPPUSHDEBUGGROUPKHR
-	gpPushGroupMarkerEXT                          C.GPPUSHGROUPMARKEREXT
 	gpPushMatrix                                  C.GPPUSHMATRIX
 	gpPushName                                    C.GPPUSHNAME
 	gpQueryCounter                                C.GPQUERYCOUNTER
-	gpQueryMatrixxOES                             C.GPQUERYMATRIXXOES
 	gpRasterPos2d                                 C.GPRASTERPOS2D
 	gpRasterPos2dv                                C.GPRASTERPOS2DV
 	gpRasterPos2f                                 C.GPRASTERPOS2F
@@ -8184,8 +6967,6 @@ var (
 	gpRasterPos2iv                                C.GPRASTERPOS2IV
 	gpRasterPos2s                                 C.GPRASTERPOS2S
 	gpRasterPos2sv                                C.GPRASTERPOS2SV
-	gpRasterPos2xOES                              C.GPRASTERPOS2XOES
-	gpRasterPos2xvOES                             C.GPRASTERPOS2XVOES
 	gpRasterPos3d                                 C.GPRASTERPOS3D
 	gpRasterPos3dv                                C.GPRASTERPOS3DV
 	gpRasterPos3f                                 C.GPRASTERPOS3F
@@ -8194,8 +6975,6 @@ var (
 	gpRasterPos3iv                                C.GPRASTERPOS3IV
 	gpRasterPos3s                                 C.GPRASTERPOS3S
 	gpRasterPos3sv                                C.GPRASTERPOS3SV
-	gpRasterPos3xOES                              C.GPRASTERPOS3XOES
-	gpRasterPos3xvOES                             C.GPRASTERPOS3XVOES
 	gpRasterPos4d                                 C.GPRASTERPOS4D
 	gpRasterPos4dv                                C.GPRASTERPOS4DV
 	gpRasterPos4f                                 C.GPRASTERPOS4F
@@ -8204,8 +6983,6 @@ var (
 	gpRasterPos4iv                                C.GPRASTERPOS4IV
 	gpRasterPos4s                                 C.GPRASTERPOS4S
 	gpRasterPos4sv                                C.GPRASTERPOS4SV
-	gpRasterPos4xOES                              C.GPRASTERPOS4XOES
-	gpRasterPos4xvOES                             C.GPRASTERPOS4XVOES
 	gpReadBuffer                                  C.GPREADBUFFER
 	gpReadPixels                                  C.GPREADPIXELS
 	gpReadnPixels                                 C.GPREADNPIXELS
@@ -8219,8 +6996,6 @@ var (
 	gpRectiv                                      C.GPRECTIV
 	gpRects                                       C.GPRECTS
 	gpRectsv                                      C.GPRECTSV
-	gpRectxOES                                    C.GPRECTXOES
-	gpRectxvOES                                   C.GPRECTXVOES
 	gpReleaseShaderCompiler                       C.GPRELEASESHADERCOMPILER
 	gpRenderMode                                  C.GPRENDERMODE
 	gpRenderbufferStorage                         C.GPRENDERBUFFERSTORAGE
@@ -8228,10 +7003,7 @@ var (
 	gpResumeTransformFeedback                     C.GPRESUMETRANSFORMFEEDBACK
 	gpRotated                                     C.GPROTATED
 	gpRotatef                                     C.GPROTATEF
-	gpRotatexOES                                  C.GPROTATEXOES
 	gpSampleCoverage                              C.GPSAMPLECOVERAGE
-	gpSampleCoverageOES                           C.GPSAMPLECOVERAGEOES
-	gpSampleCoveragexOES                          C.GPSAMPLECOVERAGEXOES
 	gpSampleMaski                                 C.GPSAMPLEMASKI
 	gpSamplerParameterIiv                         C.GPSAMPLERPARAMETERIIV
 	gpSamplerParameterIuiv                        C.GPSAMPLERPARAMETERIUIV
@@ -8241,7 +7013,6 @@ var (
 	gpSamplerParameteriv                          C.GPSAMPLERPARAMETERIV
 	gpScaled                                      C.GPSCALED
 	gpScalef                                      C.GPSCALEF
-	gpScalexOES                                   C.GPSCALEXOES
 	gpScissor                                     C.GPSCISSOR
 	gpScissorArrayv                               C.GPSCISSORARRAYV
 	gpScissorIndexed                              C.GPSCISSORINDEXED
@@ -8264,8 +7035,6 @@ var (
 	gpSecondaryColor3usv                          C.GPSECONDARYCOLOR3USV
 	gpSecondaryColorPointer                       C.GPSECONDARYCOLORPOINTER
 	gpSelectBuffer                                C.GPSELECTBUFFER
-	gpSelectPerfMonitorCountersAMD                C.GPSELECTPERFMONITORCOUNTERSAMD
-	gpSetFenceNV                                  C.GPSETFENCENV
 	gpShadeModel                                  C.GPSHADEMODEL
 	gpShaderBinary                                C.GPSHADERBINARY
 	gpShaderSource                                C.GPSHADERSOURCE
@@ -8276,11 +7045,8 @@ var (
 	gpStencilMaskSeparate                         C.GPSTENCILMASKSEPARATE
 	gpStencilOp                                   C.GPSTENCILOP
 	gpStencilOpSeparate                           C.GPSTENCILOPSEPARATE
-	gpTestFenceNV                                 C.GPTESTFENCENV
 	gpTexBuffer                                   C.GPTEXBUFFER
 	gpTexBufferRange                              C.GPTEXBUFFERRANGE
-	gpTexCoord1bOES                               C.GPTEXCOORD1BOES
-	gpTexCoord1bvOES                              C.GPTEXCOORD1BVOES
 	gpTexCoord1d                                  C.GPTEXCOORD1D
 	gpTexCoord1dv                                 C.GPTEXCOORD1DV
 	gpTexCoord1f                                  C.GPTEXCOORD1F
@@ -8289,10 +7055,6 @@ var (
 	gpTexCoord1iv                                 C.GPTEXCOORD1IV
 	gpTexCoord1s                                  C.GPTEXCOORD1S
 	gpTexCoord1sv                                 C.GPTEXCOORD1SV
-	gpTexCoord1xOES                               C.GPTEXCOORD1XOES
-	gpTexCoord1xvOES                              C.GPTEXCOORD1XVOES
-	gpTexCoord2bOES                               C.GPTEXCOORD2BOES
-	gpTexCoord2bvOES                              C.GPTEXCOORD2BVOES
 	gpTexCoord2d                                  C.GPTEXCOORD2D
 	gpTexCoord2dv                                 C.GPTEXCOORD2DV
 	gpTexCoord2f                                  C.GPTEXCOORD2F
@@ -8301,10 +7063,6 @@ var (
 	gpTexCoord2iv                                 C.GPTEXCOORD2IV
 	gpTexCoord2s                                  C.GPTEXCOORD2S
 	gpTexCoord2sv                                 C.GPTEXCOORD2SV
-	gpTexCoord2xOES                               C.GPTEXCOORD2XOES
-	gpTexCoord2xvOES                              C.GPTEXCOORD2XVOES
-	gpTexCoord3bOES                               C.GPTEXCOORD3BOES
-	gpTexCoord3bvOES                              C.GPTEXCOORD3BVOES
 	gpTexCoord3d                                  C.GPTEXCOORD3D
 	gpTexCoord3dv                                 C.GPTEXCOORD3DV
 	gpTexCoord3f                                  C.GPTEXCOORD3F
@@ -8313,10 +7071,6 @@ var (
 	gpTexCoord3iv                                 C.GPTEXCOORD3IV
 	gpTexCoord3s                                  C.GPTEXCOORD3S
 	gpTexCoord3sv                                 C.GPTEXCOORD3SV
-	gpTexCoord3xOES                               C.GPTEXCOORD3XOES
-	gpTexCoord3xvOES                              C.GPTEXCOORD3XVOES
-	gpTexCoord4bOES                               C.GPTEXCOORD4BOES
-	gpTexCoord4bvOES                              C.GPTEXCOORD4BVOES
 	gpTexCoord4d                                  C.GPTEXCOORD4D
 	gpTexCoord4dv                                 C.GPTEXCOORD4DV
 	gpTexCoord4f                                  C.GPTEXCOORD4F
@@ -8325,23 +7079,17 @@ var (
 	gpTexCoord4iv                                 C.GPTEXCOORD4IV
 	gpTexCoord4s                                  C.GPTEXCOORD4S
 	gpTexCoord4sv                                 C.GPTEXCOORD4SV
-	gpTexCoord4xOES                               C.GPTEXCOORD4XOES
-	gpTexCoord4xvOES                              C.GPTEXCOORD4XVOES
 	gpTexCoordPointer                             C.GPTEXCOORDPOINTER
 	gpTexEnvf                                     C.GPTEXENVF
 	gpTexEnvfv                                    C.GPTEXENVFV
 	gpTexEnvi                                     C.GPTEXENVI
 	gpTexEnviv                                    C.GPTEXENVIV
-	gpTexEnvxOES                                  C.GPTEXENVXOES
-	gpTexEnvxvOES                                 C.GPTEXENVXVOES
 	gpTexGend                                     C.GPTEXGEND
 	gpTexGendv                                    C.GPTEXGENDV
 	gpTexGenf                                     C.GPTEXGENF
 	gpTexGenfv                                    C.GPTEXGENFV
 	gpTexGeni                                     C.GPTEXGENI
 	gpTexGeniv                                    C.GPTEXGENIV
-	gpTexGenxOES                                  C.GPTEXGENXOES
-	gpTexGenxvOES                                 C.GPTEXGENXVOES
 	gpTexImage1D                                  C.GPTEXIMAGE1D
 	gpTexImage2D                                  C.GPTEXIMAGE2D
 	gpTexImage2DMultisample                       C.GPTEXIMAGE2DMULTISAMPLE
@@ -8354,8 +7102,6 @@ var (
 	gpTexParameterfv                              C.GPTEXPARAMETERFV
 	gpTexParameteri                               C.GPTEXPARAMETERI
 	gpTexParameteriv                              C.GPTEXPARAMETERIV
-	gpTexParameterxOES                            C.GPTEXPARAMETERXOES
-	gpTexParameterxvOES                           C.GPTEXPARAMETERXVOES
 	gpTexStorage1D                                C.GPTEXSTORAGE1D
 	gpTexStorage2D                                C.GPTEXSTORAGE2D
 	gpTexStorage2DMultisample                     C.GPTEXSTORAGE2DMULTISAMPLE
@@ -8387,7 +7133,6 @@ var (
 	gpTransformFeedbackVaryings                   C.GPTRANSFORMFEEDBACKVARYINGS
 	gpTranslated                                  C.GPTRANSLATED
 	gpTranslatef                                  C.GPTRANSLATEF
-	gpTranslatexOES                               C.GPTRANSLATEXOES
 	gpUniform1d                                   C.GPUNIFORM1D
 	gpUniform1dv                                  C.GPUNIFORM1DV
 	gpUniform1f                                   C.GPUNIFORM1F
@@ -8446,13 +7191,8 @@ var (
 	gpUnmapNamedBuffer                            C.GPUNMAPNAMEDBUFFER
 	gpUseProgram                                  C.GPUSEPROGRAM
 	gpUseProgramStages                            C.GPUSEPROGRAMSTAGES
-	gpUseProgramStagesEXT                         C.GPUSEPROGRAMSTAGESEXT
-	gpUseShaderProgramEXT                         C.GPUSESHADERPROGRAMEXT
 	gpValidateProgram                             C.GPVALIDATEPROGRAM
 	gpValidateProgramPipeline                     C.GPVALIDATEPROGRAMPIPELINE
-	gpValidateProgramPipelineEXT                  C.GPVALIDATEPROGRAMPIPELINEEXT
-	gpVertex2bOES                                 C.GPVERTEX2BOES
-	gpVertex2bvOES                                C.GPVERTEX2BVOES
 	gpVertex2d                                    C.GPVERTEX2D
 	gpVertex2dv                                   C.GPVERTEX2DV
 	gpVertex2f                                    C.GPVERTEX2F
@@ -8461,10 +7201,6 @@ var (
 	gpVertex2iv                                   C.GPVERTEX2IV
 	gpVertex2s                                    C.GPVERTEX2S
 	gpVertex2sv                                   C.GPVERTEX2SV
-	gpVertex2xOES                                 C.GPVERTEX2XOES
-	gpVertex2xvOES                                C.GPVERTEX2XVOES
-	gpVertex3bOES                                 C.GPVERTEX3BOES
-	gpVertex3bvOES                                C.GPVERTEX3BVOES
 	gpVertex3d                                    C.GPVERTEX3D
 	gpVertex3dv                                   C.GPVERTEX3DV
 	gpVertex3f                                    C.GPVERTEX3F
@@ -8473,10 +7209,6 @@ var (
 	gpVertex3iv                                   C.GPVERTEX3IV
 	gpVertex3s                                    C.GPVERTEX3S
 	gpVertex3sv                                   C.GPVERTEX3SV
-	gpVertex3xOES                                 C.GPVERTEX3XOES
-	gpVertex3xvOES                                C.GPVERTEX3XVOES
-	gpVertex4bOES                                 C.GPVERTEX4BOES
-	gpVertex4bvOES                                C.GPVERTEX4BVOES
 	gpVertex4d                                    C.GPVERTEX4D
 	gpVertex4dv                                   C.GPVERTEX4DV
 	gpVertex4f                                    C.GPVERTEX4F
@@ -8485,8 +7217,6 @@ var (
 	gpVertex4iv                                   C.GPVERTEX4IV
 	gpVertex4s                                    C.GPVERTEX4S
 	gpVertex4sv                                   C.GPVERTEX4SV
-	gpVertex4xOES                                 C.GPVERTEX4XOES
-	gpVertex4xvOES                                C.GPVERTEX4XVOES
 	gpVertexArrayAttribBinding                    C.GPVERTEXARRAYATTRIBBINDING
 	gpVertexArrayAttribFormat                     C.GPVERTEXARRAYATTRIBFORMAT
 	gpVertexArrayAttribIFormat                    C.GPVERTEXARRAYATTRIBIFORMAT
@@ -8614,19 +7344,10 @@ func boolToInt(b bool) int {
 func Accum(op uint32, value float32) {
 	C.glowAccum(gpAccum, (C.GLenum)(op), (C.GLfloat)(value))
 }
-func AccumxOES(op uint32, value int32) {
-	C.glowAccumxOES(gpAccumxOES, (C.GLenum)(op), (C.GLfixed)(value))
-}
-func ActiveProgramEXT(program uint32) {
-	C.glowActiveProgramEXT(gpActiveProgramEXT, (C.GLuint)(program))
-}
 
 // set the active program object for a program pipeline object
 func ActiveShaderProgram(pipeline uint32, program uint32) {
 	C.glowActiveShaderProgram(gpActiveShaderProgram, (C.GLuint)(pipeline), (C.GLuint)(program))
-}
-func ActiveShaderProgramEXT(pipeline uint32, program uint32) {
-	C.glowActiveShaderProgramEXT(gpActiveShaderProgramEXT, (C.GLuint)(pipeline), (C.GLuint)(program))
 }
 
 // select active texture unit
@@ -8637,9 +7358,6 @@ func ActiveTexture(texture uint32) {
 // specify the alpha test function
 func AlphaFunc(xfunc uint32, ref float32) {
 	C.glowAlphaFunc(gpAlphaFunc, (C.GLenum)(xfunc), (C.GLfloat)(ref))
-}
-func AlphaFuncxOES(xfunc uint32, ref int32) {
-	C.glowAlphaFuncxOES(gpAlphaFuncxOES, (C.GLenum)(xfunc), (C.GLfixed)(ref))
 }
 
 // determine if textures are loaded in texture memory
@@ -8666,12 +7384,6 @@ func Begin(mode uint32) {
 // start conditional rendering
 func BeginConditionalRender(id uint32, mode uint32) {
 	C.glowBeginConditionalRender(gpBeginConditionalRender, (C.GLuint)(id), (C.GLenum)(mode))
-}
-func BeginPerfMonitorAMD(monitor uint32) {
-	C.glowBeginPerfMonitorAMD(gpBeginPerfMonitorAMD, (C.GLuint)(monitor))
-}
-func BeginPerfQueryINTEL(queryHandle uint32) {
-	C.glowBeginPerfQueryINTEL(gpBeginPerfQueryINTEL, (C.GLuint)(queryHandle))
 }
 
 // delimit the boundaries of a query object
@@ -8746,9 +7458,6 @@ func BindImageTextures(first uint32, count int32, textures *uint32) {
 func BindProgramPipeline(pipeline uint32) {
 	C.glowBindProgramPipeline(gpBindProgramPipeline, (C.GLuint)(pipeline))
 }
-func BindProgramPipelineEXT(pipeline uint32) {
-	C.glowBindProgramPipelineEXT(gpBindProgramPipelineEXT, (C.GLuint)(pipeline))
-}
 
 // bind a renderbuffer to a renderbuffer target
 func BindRenderbuffer(target uint32, renderbuffer uint32) {
@@ -8804,30 +7513,15 @@ func BindVertexBuffers(first uint32, count int32, buffers *uint32, offsets *int,
 func Bitmap(width int32, height int32, xorig float32, yorig float32, xmove float32, ymove float32, bitmap *uint8) {
 	C.glowBitmap(gpBitmap, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLfloat)(xorig), (C.GLfloat)(yorig), (C.GLfloat)(xmove), (C.GLfloat)(ymove), (*C.GLubyte)(unsafe.Pointer(bitmap)))
 }
-func BitmapxOES(width int32, height int32, xorig int32, yorig int32, xmove int32, ymove int32, bitmap *uint8) {
-	C.glowBitmapxOES(gpBitmapxOES, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLfixed)(xorig), (C.GLfixed)(yorig), (C.GLfixed)(xmove), (C.GLfixed)(ymove), (*C.GLubyte)(unsafe.Pointer(bitmap)))
-}
-func BlendBarrierKHR() {
-	C.glowBlendBarrierKHR(gpBlendBarrierKHR)
-}
-func BlendBarrierNV() {
-	C.glowBlendBarrierNV(gpBlendBarrierNV)
-}
 
 // set the blend color
 func BlendColor(red float32, green float32, blue float32, alpha float32) {
 	C.glowBlendColor(gpBlendColor, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-func BlendColorxOES(red int32, green int32, blue int32, alpha int32) {
-	C.glowBlendColorxOES(gpBlendColorxOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
-}
 
 // specify the equation used for both the RGB blend equation and the Alpha blend equation
 func BlendEquation(mode uint32) {
 	C.glowBlendEquation(gpBlendEquation, (C.GLenum)(mode))
-}
-func BlendEquationEXT(mode uint32) {
-	C.glowBlendEquationEXT(gpBlendEquationEXT, (C.GLenum)(mode))
 }
 
 // set the RGB blend equation and the alpha blend equation separately
@@ -8867,9 +7561,6 @@ func BlendFunci(buf uint32, src uint32, dst uint32) {
 }
 func BlendFunciARB(buf uint32, src uint32, dst uint32) {
 	C.glowBlendFunciARB(gpBlendFunciARB, (C.GLuint)(buf), (C.GLenum)(src), (C.GLenum)(dst))
-}
-func BlendParameteriNV(pname uint32, value int32) {
-	C.glowBlendParameteriNV(gpBlendParameteriNV, (C.GLenum)(pname), (C.GLint)(value))
 }
 
 // copy a block of pixels from one framebuffer object to another
@@ -8936,9 +7627,6 @@ func Clear(mask uint32) {
 func ClearAccum(red float32, green float32, blue float32, alpha float32) {
 	C.glowClearAccum(gpClearAccum, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-func ClearAccumxOES(red int32, green int32, blue int32, alpha int32) {
-	C.glowClearAccumxOES(gpClearAccumxOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
-}
 
 // fill a buffer object's data store with a fixed value
 func ClearBufferData(target uint32, internalformat uint32, format uint32, xtype uint32, data unsafe.Pointer) {
@@ -8966,9 +7654,6 @@ func ClearBufferuiv(buffer uint32, drawbuffer int32, value *uint32) {
 func ClearColor(red float32, green float32, blue float32, alpha float32) {
 	C.glowClearColor(gpClearColor, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-func ClearColorxOES(red int32, green int32, blue int32, alpha int32) {
-	C.glowClearColorxOES(gpClearColorxOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
-}
 
 // specify the clear value for the depth buffer
 func ClearDepth(depth float64) {
@@ -8976,12 +7661,6 @@ func ClearDepth(depth float64) {
 }
 func ClearDepthf(d float32) {
 	C.glowClearDepthf(gpClearDepthf, (C.GLfloat)(d))
-}
-func ClearDepthfOES(depth float32) {
-	C.glowClearDepthfOES(gpClearDepthfOES, (C.GLclampf)(depth))
-}
-func ClearDepthxOES(depth int32) {
-	C.glowClearDepthxOES(gpClearDepthxOES, (C.GLfixed)(depth))
 }
 
 // specify the clear value for the color index buffers
@@ -9046,12 +7725,6 @@ func ClipControl(origin uint32, depth uint32) {
 func ClipPlane(plane uint32, equation *float64) {
 	C.glowClipPlane(gpClipPlane, (C.GLenum)(plane), (*C.GLdouble)(unsafe.Pointer(equation)))
 }
-func ClipPlanefOES(plane uint32, equation *float32) {
-	C.glowClipPlanefOES(gpClipPlanefOES, (C.GLenum)(plane), (*C.GLfloat)(unsafe.Pointer(equation)))
-}
-func ClipPlanexOES(plane uint32, equation *int32) {
-	C.glowClipPlanexOES(gpClipPlanexOES, (C.GLenum)(plane), (*C.GLfixed)(unsafe.Pointer(equation)))
-}
 func Color3b(red int8, green int8, blue int8) {
 	C.glowColor3b(gpColor3b, (C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue))
 }
@@ -9100,12 +7773,6 @@ func Color3us(red uint16, green uint16, blue uint16) {
 func Color3usv(v *uint16) {
 	C.glowColor3usv(gpColor3usv, (*C.GLushort)(unsafe.Pointer(v)))
 }
-func Color3xOES(red int32, green int32, blue int32) {
-	C.glowColor3xOES(gpColor3xOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue))
-}
-func Color3xvOES(components *int32) {
-	C.glowColor3xvOES(gpColor3xvOES, (*C.GLfixed)(unsafe.Pointer(components)))
-}
 func Color4b(red int8, green int8, blue int8, alpha int8) {
 	C.glowColor4b(gpColor4b, (C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue), (C.GLbyte)(alpha))
 }
@@ -9153,12 +7820,6 @@ func Color4us(red uint16, green uint16, blue uint16, alpha uint16) {
 }
 func Color4usv(v *uint16) {
 	C.glowColor4usv(gpColor4usv, (*C.GLushort)(unsafe.Pointer(v)))
-}
-func Color4xOES(red int32, green int32, blue int32, alpha int32) {
-	C.glowColor4xOES(gpColor4xOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
-}
-func Color4xvOES(components *int32) {
-	C.glowColor4xvOES(gpColor4xvOES, (*C.GLfixed)(unsafe.Pointer(components)))
 }
 func ColorMask(red bool, green bool, blue bool, alpha bool) {
 	C.glowColorMask(gpColorMask, (C.GLboolean)(boolToInt(red)), (C.GLboolean)(boolToInt(green)), (C.GLboolean)(boolToInt(blue)), (C.GLboolean)(boolToInt(alpha)))
@@ -9228,12 +7889,6 @@ func CompressedTextureSubImage2D(texture uint32, level int32, xoffset int32, yof
 // specify a three-dimensional texture subimage in a compressed format
 func CompressedTextureSubImage3D(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTextureSubImage3D(gpCompressedTextureSubImage3D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
-}
-func ConvolutionParameterxOES(target uint32, pname uint32, param int32) {
-	C.glowConvolutionParameterxOES(gpConvolutionParameterxOES, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func ConvolutionParameterxvOES(target uint32, pname uint32, params *int32) {
-	C.glowConvolutionParameterxvOES(gpConvolutionParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 
 // copy all or part of the data store of a buffer object to the data store of another buffer object
@@ -9305,9 +7960,6 @@ func CreateBuffers(n int32, buffers *uint32) {
 func CreateFramebuffers(n int32, framebuffers *uint32) {
 	C.glowCreateFramebuffers(gpCreateFramebuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(framebuffers)))
 }
-func CreatePerfQueryINTEL(queryId uint32, queryHandle *uint32) {
-	C.glowCreatePerfQueryINTEL(gpCreatePerfQueryINTEL, (C.GLuint)(queryId), (*C.GLuint)(unsafe.Pointer(queryHandle)))
-}
 
 // Creates a program object
 func CreateProgram() uint32 {
@@ -9340,18 +7992,10 @@ func CreateShader(xtype uint32) uint32 {
 	ret := C.glowCreateShader(gpCreateShader, (C.GLenum)(xtype))
 	return (uint32)(ret)
 }
-func CreateShaderProgramEXT(xtype uint32, xstring *uint8) uint32 {
-	ret := C.glowCreateShaderProgramEXT(gpCreateShaderProgramEXT, (C.GLenum)(xtype), (*C.GLchar)(unsafe.Pointer(xstring)))
-	return (uint32)(ret)
-}
 
 // create a stand-alone program from an array of null-terminated source code strings
 func CreateShaderProgramv(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramv(gpCreateShaderProgramv, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
-	return (uint32)(ret)
-}
-func CreateShaderProgramvEXT(xtype uint32, count int32, strings **uint8) uint32 {
-	ret := C.glowCreateShaderProgramvEXT(gpCreateShaderProgramvEXT, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
 }
 func CreateSyncFromCLeventARB(context *C.struct__cl_context, event *C.struct__cl_event, flags uint32) unsafe.Pointer {
@@ -9419,9 +8063,6 @@ func DebugMessageInsertKHR(source uint32, xtype uint32, id uint32, severity uint
 func DeleteBuffers(n int32, buffers *uint32) {
 	C.glowDeleteBuffers(gpDeleteBuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
 }
-func DeleteFencesNV(n int32, fences *uint32) {
-	C.glowDeleteFencesNV(gpDeleteFencesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(fences)))
-}
 
 // delete framebuffer objects
 func DeleteFramebuffers(n int32, framebuffers *uint32) {
@@ -9435,12 +8076,6 @@ func DeleteLists(list uint32, xrange int32) {
 func DeleteNamedStringARB(namelen int32, name *uint8) {
 	C.glowDeleteNamedStringARB(gpDeleteNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)))
 }
-func DeletePerfMonitorsAMD(n int32, monitors *uint32) {
-	C.glowDeletePerfMonitorsAMD(gpDeletePerfMonitorsAMD, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(monitors)))
-}
-func DeletePerfQueryINTEL(queryHandle uint32) {
-	C.glowDeletePerfQueryINTEL(gpDeletePerfQueryINTEL, (C.GLuint)(queryHandle))
-}
 
 // Deletes a program object
 func DeleteProgram(program uint32) {
@@ -9450,9 +8085,6 @@ func DeleteProgram(program uint32) {
 // delete program pipeline objects
 func DeleteProgramPipelines(n int32, pipelines *uint32) {
 	C.glowDeleteProgramPipelines(gpDeleteProgramPipelines, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
-}
-func DeleteProgramPipelinesEXT(n int32, pipelines *uint32) {
-	C.glowDeleteProgramPipelinesEXT(gpDeleteProgramPipelinesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
 
 // delete named query objects
@@ -9520,12 +8152,6 @@ func DepthRangeIndexed(index uint32, n float64, f float64) {
 func DepthRangef(n float32, f float32) {
 	C.glowDepthRangef(gpDepthRangef, (C.GLfloat)(n), (C.GLfloat)(f))
 }
-func DepthRangefOES(n float32, f float32) {
-	C.glowDepthRangefOES(gpDepthRangefOES, (C.GLclampf)(n), (C.GLclampf)(f))
-}
-func DepthRangexOES(n int32, f int32) {
-	C.glowDepthRangexOES(gpDepthRangexOES, (C.GLfixed)(n), (C.GLfixed)(f))
-}
 
 // Detaches a shader object from a program object to which it is attached
 func DetachShader(program uint32, shader uint32) {
@@ -9583,9 +8209,6 @@ func DrawArraysInstanced(mode uint32, first int32, count int32, instancecount in
 func DrawArraysInstancedBaseInstance(mode uint32, first int32, count int32, instancecount int32, baseinstance uint32) {
 	C.glowDrawArraysInstancedBaseInstance(gpDrawArraysInstancedBaseInstance, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(instancecount), (C.GLuint)(baseinstance))
 }
-func DrawArraysInstancedEXT(mode uint32, start int32, count int32, primcount int32) {
-	C.glowDrawArraysInstancedEXT(gpDrawArraysInstancedEXT, (C.GLenum)(mode), (C.GLint)(start), (C.GLsizei)(count), (C.GLsizei)(primcount))
-}
 
 // specify which color buffers are to be drawn into
 func DrawBuffer(buf uint32) {
@@ -9630,9 +8253,6 @@ func DrawElementsInstancedBaseVertex(mode uint32, count int32, xtype uint32, ind
 // render multiple instances of a set of primitives from array data with a per-element offset
 func DrawElementsInstancedBaseVertexBaseInstance(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, instancecount int32, basevertex int32, baseinstance uint32) {
 	C.glowDrawElementsInstancedBaseVertexBaseInstance(gpDrawElementsInstancedBaseVertexBaseInstance, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLsizei)(instancecount), (C.GLint)(basevertex), (C.GLuint)(baseinstance))
-}
-func DrawElementsInstancedEXT(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, primcount int32) {
-	C.glowDrawElementsInstancedEXT(gpDrawElementsInstancedEXT, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLsizei)(primcount))
 }
 
 // write a block of pixels to the frame buffer
@@ -9714,12 +8334,6 @@ func EndConditionalRender() {
 func EndList() {
 	C.glowEndList(gpEndList)
 }
-func EndPerfMonitorAMD(monitor uint32) {
-	C.glowEndPerfMonitorAMD(gpEndPerfMonitorAMD, (C.GLuint)(monitor))
-}
-func EndPerfQueryINTEL(queryHandle uint32) {
-	C.glowEndPerfQueryINTEL(gpEndPerfQueryINTEL, (C.GLuint)(queryHandle))
-}
 func EndQuery(target uint32) {
 	C.glowEndQuery(gpEndQuery, (C.GLenum)(target))
 }
@@ -9741,12 +8355,6 @@ func EvalCoord1f(u float32) {
 func EvalCoord1fv(u *float32) {
 	C.glowEvalCoord1fv(gpEvalCoord1fv, (*C.GLfloat)(unsafe.Pointer(u)))
 }
-func EvalCoord1xOES(u int32) {
-	C.glowEvalCoord1xOES(gpEvalCoord1xOES, (C.GLfixed)(u))
-}
-func EvalCoord1xvOES(coords *int32) {
-	C.glowEvalCoord1xvOES(gpEvalCoord1xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
 func EvalCoord2d(u float64, v float64) {
 	C.glowEvalCoord2d(gpEvalCoord2d, (C.GLdouble)(u), (C.GLdouble)(v))
 }
@@ -9758,12 +8366,6 @@ func EvalCoord2f(u float32, v float32) {
 }
 func EvalCoord2fv(u *float32) {
 	C.glowEvalCoord2fv(gpEvalCoord2fv, (*C.GLfloat)(unsafe.Pointer(u)))
-}
-func EvalCoord2xOES(u int32, v int32) {
-	C.glowEvalCoord2xOES(gpEvalCoord2xOES, (C.GLfixed)(u), (C.GLfixed)(v))
-}
-func EvalCoord2xvOES(coords *int32) {
-	C.glowEvalCoord2xvOES(gpEvalCoord2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
 func EvalMesh1(mode uint32, i1 int32, i2 int32) {
 	C.glowEvalMesh1(gpEvalMesh1, (C.GLenum)(mode), (C.GLint)(i1), (C.GLint)(i2))
@@ -9782,9 +8384,6 @@ func EvalPoint2(i int32, j int32) {
 func FeedbackBuffer(size int32, xtype uint32, buffer *float32) {
 	C.glowFeedbackBuffer(gpFeedbackBuffer, (C.GLsizei)(size), (C.GLenum)(xtype), (*C.GLfloat)(unsafe.Pointer(buffer)))
 }
-func FeedbackBufferxOES(n int32, xtype uint32, buffer *int32) {
-	C.glowFeedbackBufferxOES(gpFeedbackBufferxOES, (C.GLsizei)(n), (C.GLenum)(xtype), (*C.GLfixed)(unsafe.Pointer(buffer)))
-}
 
 // create a new sync object and insert it into the GL command stream
 func FenceSync(condition uint32, flags uint32) unsafe.Pointer {
@@ -9795,9 +8394,6 @@ func FenceSync(condition uint32, flags uint32) unsafe.Pointer {
 // block until all GL execution is complete
 func Finish() {
 	C.glowFinish(gpFinish)
-}
-func FinishFenceNV(fence uint32) {
-	C.glowFinishFenceNV(gpFinishFenceNV, (C.GLuint)(fence))
 }
 
 // force execution of GL commands in finite time
@@ -9843,12 +8439,6 @@ func Fogi(pname uint32, param int32) {
 func Fogiv(pname uint32, params *int32) {
 	C.glowFogiv(gpFogiv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func FogxOES(pname uint32, param int32) {
-	C.glowFogxOES(gpFogxOES, (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func FogxvOES(pname uint32, param *int32) {
-	C.glowFogxvOES(gpFogxvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(param)))
-}
 
 // set a named parameter of a framebuffer object
 func FramebufferParameteri(target uint32, pname uint32, param int32) {
@@ -9888,19 +8478,10 @@ func FrontFace(mode uint32) {
 func Frustum(left float64, right float64, bottom float64, top float64, zNear float64, zFar float64) {
 	C.glowFrustum(gpFrustum, (C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
-func FrustumfOES(l float32, r float32, b float32, t float32, n float32, f float32) {
-	C.glowFrustumfOES(gpFrustumfOES, (C.GLfloat)(l), (C.GLfloat)(r), (C.GLfloat)(b), (C.GLfloat)(t), (C.GLfloat)(n), (C.GLfloat)(f))
-}
-func FrustumxOES(l int32, r int32, b int32, t int32, n int32, f int32) {
-	C.glowFrustumxOES(gpFrustumxOES, (C.GLfixed)(l), (C.GLfixed)(r), (C.GLfixed)(b), (C.GLfixed)(t), (C.GLfixed)(n), (C.GLfixed)(f))
-}
 
 // generate buffer object names
 func GenBuffers(n int32, buffers *uint32) {
 	C.glowGenBuffers(gpGenBuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
-}
-func GenFencesNV(n int32, fences *uint32) {
-	C.glowGenFencesNV(gpGenFencesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(fences)))
 }
 
 // generate framebuffer object names
@@ -9913,16 +8494,10 @@ func GenLists(xrange int32) uint32 {
 	ret := C.glowGenLists(gpGenLists, (C.GLsizei)(xrange))
 	return (uint32)(ret)
 }
-func GenPerfMonitorsAMD(n int32, monitors *uint32) {
-	C.glowGenPerfMonitorsAMD(gpGenPerfMonitorsAMD, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(monitors)))
-}
 
 // reserve program pipeline object names
 func GenProgramPipelines(n int32, pipelines *uint32) {
 	C.glowGenProgramPipelines(gpGenProgramPipelines, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
-}
-func GenProgramPipelinesEXT(n int32, pipelines *uint32) {
-	C.glowGenProgramPipelinesEXT(gpGenProgramPipelinesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
 
 // generate query object names
@@ -10052,12 +8627,6 @@ func GetBufferSubData(target uint32, offset int, size int, data unsafe.Pointer) 
 func GetClipPlane(plane uint32, equation *float64) {
 	C.glowGetClipPlane(gpGetClipPlane, (C.GLenum)(plane), (*C.GLdouble)(unsafe.Pointer(equation)))
 }
-func GetClipPlanefOES(plane uint32, equation *float32) {
-	C.glowGetClipPlanefOES(gpGetClipPlanefOES, (C.GLenum)(plane), (*C.GLfloat)(unsafe.Pointer(equation)))
-}
-func GetClipPlanexOES(plane uint32, equation *int32) {
-	C.glowGetClipPlanexOES(gpGetClipPlanexOES, (C.GLenum)(plane), (*C.GLfixed)(unsafe.Pointer(equation)))
-}
 
 // return a compressed texture image
 func GetCompressedTexImage(target uint32, level int32, img unsafe.Pointer) {
@@ -10072,9 +8641,6 @@ func GetCompressedTextureImage(texture uint32, level int32, bufSize int32, pixel
 // retrieve a sub-region of a compressed texture image from a     compressed texture object
 func GetCompressedTextureSubImage(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, bufSize int32, pixels unsafe.Pointer) {
 	C.glowGetCompressedTextureSubImage(gpGetCompressedTextureSubImage, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLsizei)(bufSize), pixels)
-}
-func GetConvolutionParameterxvOES(target uint32, pname uint32, params *int32) {
-	C.glowGetConvolutionParameterxvOES(gpGetConvolutionParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 
 // retrieve messages from the debug message log
@@ -10101,15 +8667,6 @@ func GetDoublev(pname uint32, data *float64) {
 func GetError() uint32 {
 	ret := C.glowGetError(gpGetError)
 	return (uint32)(ret)
-}
-func GetFenceivNV(fence uint32, pname uint32, params *int32) {
-	C.glowGetFenceivNV(gpGetFenceivNV, (C.GLuint)(fence), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func GetFirstPerfQueryIdINTEL(queryId *uint32) {
-	C.glowGetFirstPerfQueryIdINTEL(gpGetFirstPerfQueryIdINTEL, (*C.GLuint)(unsafe.Pointer(queryId)))
-}
-func GetFixedvOES(pname uint32, params *int32) {
-	C.glowGetFixedvOES(gpGetFixedvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 func GetFloati_v(target uint32, index uint32, data *float32) {
 	C.glowGetFloati_v(gpGetFloati_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(data)))
@@ -10153,9 +8710,6 @@ func GetGraphicsResetStatusKHR() uint32 {
 	ret := C.glowGetGraphicsResetStatusKHR(gpGetGraphicsResetStatusKHR)
 	return (uint32)(ret)
 }
-func GetHistogramParameterxvOES(target uint32, pname uint32, params *int32) {
-	C.glowGetHistogramParameterxvOES(gpGetHistogramParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
 func GetImageHandleARB(texture uint32, level int32, layered bool, layer int32, format uint32) uint64 {
 	ret := C.glowGetImageHandleARB(gpGetImageHandleARB, (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(boolToInt(layered)), (C.GLint)(layer), (C.GLenum)(format))
 	return (uint64)(ret)
@@ -10184,12 +8738,6 @@ func GetLightfv(light uint32, pname uint32, params *float32) {
 func GetLightiv(light uint32, pname uint32, params *int32) {
 	C.glowGetLightiv(gpGetLightiv, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetLightxOES(light uint32, pname uint32, params *int32) {
-	C.glowGetLightxOES(gpGetLightxOES, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
-func GetLightxvOES(light uint32, pname uint32, params *int32) {
-	C.glowGetLightxvOES(gpGetLightxvOES, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
 func GetMapdv(target uint32, query uint32, v *float64) {
 	C.glowGetMapdv(gpGetMapdv, (C.GLenum)(target), (C.GLenum)(query), (*C.GLdouble)(unsafe.Pointer(v)))
 }
@@ -10199,20 +8747,11 @@ func GetMapfv(target uint32, query uint32, v *float32) {
 func GetMapiv(target uint32, query uint32, v *int32) {
 	C.glowGetMapiv(gpGetMapiv, (C.GLenum)(target), (C.GLenum)(query), (*C.GLint)(unsafe.Pointer(v)))
 }
-func GetMapxvOES(target uint32, query uint32, v *int32) {
-	C.glowGetMapxvOES(gpGetMapxvOES, (C.GLenum)(target), (C.GLenum)(query), (*C.GLfixed)(unsafe.Pointer(v)))
-}
 func GetMaterialfv(face uint32, pname uint32, params *float32) {
 	C.glowGetMaterialfv(gpGetMaterialfv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
 func GetMaterialiv(face uint32, pname uint32, params *int32) {
 	C.glowGetMaterialiv(gpGetMaterialiv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func GetMaterialxOES(face uint32, pname uint32, param int32) {
-	C.glowGetMaterialxOES(gpGetMaterialxOES, (C.GLenum)(face), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func GetMaterialxvOES(face uint32, pname uint32, params *int32) {
-	C.glowGetMaterialxvOES(gpGetMaterialxvOES, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 
 // retrieve the location of a sample
@@ -10260,16 +8799,10 @@ func GetNamedStringARB(namelen int32, name *uint8, bufSize int32, stringlen *int
 func GetNamedStringivARB(namelen int32, name *uint8, pname uint32, params *int32) {
 	C.glowGetNamedStringivARB(gpGetNamedStringivARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetNextPerfQueryIdINTEL(queryId uint32, nextQueryId *uint32) {
-	C.glowGetNextPerfQueryIdINTEL(gpGetNextPerfQueryIdINTEL, (C.GLuint)(queryId), (*C.GLuint)(unsafe.Pointer(nextQueryId)))
-}
 
 // retrieve the label of a named object identified within a namespace
 func GetObjectLabel(identifier uint32, name uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabel(gpGetObjectLabel, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
-}
-func GetObjectLabelEXT(xtype uint32, object uint32, bufSize int32, length *int32, label *uint8) {
-	C.glowGetObjectLabelEXT(gpGetObjectLabelEXT, (C.GLenum)(xtype), (C.GLuint)(object), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
 func GetObjectLabelKHR(identifier uint32, name uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabelKHR(gpGetObjectLabelKHR, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
@@ -10282,36 +8815,6 @@ func GetObjectPtrLabel(ptr unsafe.Pointer, bufSize int32, length *int32, label *
 func GetObjectPtrLabelKHR(ptr unsafe.Pointer, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectPtrLabelKHR(gpGetObjectPtrLabelKHR, ptr, (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-func GetPerfCounterInfoINTEL(queryId uint32, counterId uint32, counterNameLength uint32, counterName *uint8, counterDescLength uint32, counterDesc *uint8, counterOffset *uint32, counterDataSize *uint32, counterTypeEnum *uint32, counterDataTypeEnum *uint32, rawCounterMaxValue *uint64) {
-	C.glowGetPerfCounterInfoINTEL(gpGetPerfCounterInfoINTEL, (C.GLuint)(queryId), (C.GLuint)(counterId), (C.GLuint)(counterNameLength), (*C.GLchar)(unsafe.Pointer(counterName)), (C.GLuint)(counterDescLength), (*C.GLchar)(unsafe.Pointer(counterDesc)), (*C.GLuint)(unsafe.Pointer(counterOffset)), (*C.GLuint)(unsafe.Pointer(counterDataSize)), (*C.GLuint)(unsafe.Pointer(counterTypeEnum)), (*C.GLuint)(unsafe.Pointer(counterDataTypeEnum)), (*C.GLuint64)(unsafe.Pointer(rawCounterMaxValue)))
-}
-func GetPerfMonitorCounterDataAMD(monitor uint32, pname uint32, dataSize int32, data *uint32, bytesWritten *int32) {
-	C.glowGetPerfMonitorCounterDataAMD(gpGetPerfMonitorCounterDataAMD, (C.GLuint)(monitor), (C.GLenum)(pname), (C.GLsizei)(dataSize), (*C.GLuint)(unsafe.Pointer(data)), (*C.GLint)(unsafe.Pointer(bytesWritten)))
-}
-func GetPerfMonitorCounterInfoAMD(group uint32, counter uint32, pname uint32, data unsafe.Pointer) {
-	C.glowGetPerfMonitorCounterInfoAMD(gpGetPerfMonitorCounterInfoAMD, (C.GLuint)(group), (C.GLuint)(counter), (C.GLenum)(pname), data)
-}
-func GetPerfMonitorCounterStringAMD(group uint32, counter uint32, bufSize int32, length *int32, counterString *uint8) {
-	C.glowGetPerfMonitorCounterStringAMD(gpGetPerfMonitorCounterStringAMD, (C.GLuint)(group), (C.GLuint)(counter), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(counterString)))
-}
-func GetPerfMonitorCountersAMD(group uint32, numCounters *int32, maxActiveCounters *int32, counterSize int32, counters *uint32) {
-	C.glowGetPerfMonitorCountersAMD(gpGetPerfMonitorCountersAMD, (C.GLuint)(group), (*C.GLint)(unsafe.Pointer(numCounters)), (*C.GLint)(unsafe.Pointer(maxActiveCounters)), (C.GLsizei)(counterSize), (*C.GLuint)(unsafe.Pointer(counters)))
-}
-func GetPerfMonitorGroupStringAMD(group uint32, bufSize int32, length *int32, groupString *uint8) {
-	C.glowGetPerfMonitorGroupStringAMD(gpGetPerfMonitorGroupStringAMD, (C.GLuint)(group), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(groupString)))
-}
-func GetPerfMonitorGroupsAMD(numGroups *int32, groupsSize int32, groups *uint32) {
-	C.glowGetPerfMonitorGroupsAMD(gpGetPerfMonitorGroupsAMD, (*C.GLint)(unsafe.Pointer(numGroups)), (C.GLsizei)(groupsSize), (*C.GLuint)(unsafe.Pointer(groups)))
-}
-func GetPerfQueryDataINTEL(queryHandle uint32, flags uint32, dataSize int32, data unsafe.Pointer, bytesWritten *uint32) {
-	C.glowGetPerfQueryDataINTEL(gpGetPerfQueryDataINTEL, (C.GLuint)(queryHandle), (C.GLuint)(flags), (C.GLsizei)(dataSize), data, (*C.GLuint)(unsafe.Pointer(bytesWritten)))
-}
-func GetPerfQueryIdByNameINTEL(queryName *uint8, queryId *uint32) {
-	C.glowGetPerfQueryIdByNameINTEL(gpGetPerfQueryIdByNameINTEL, (*C.GLchar)(unsafe.Pointer(queryName)), (*C.GLuint)(unsafe.Pointer(queryId)))
-}
-func GetPerfQueryInfoINTEL(queryId uint32, queryNameLength uint32, queryName *uint8, dataSize *uint32, noCounters *uint32, noInstances *uint32, capsMask *uint32) {
-	C.glowGetPerfQueryInfoINTEL(gpGetPerfQueryInfoINTEL, (C.GLuint)(queryId), (C.GLuint)(queryNameLength), (*C.GLchar)(unsafe.Pointer(queryName)), (*C.GLuint)(unsafe.Pointer(dataSize)), (*C.GLuint)(unsafe.Pointer(noCounters)), (*C.GLuint)(unsafe.Pointer(noInstances)), (*C.GLuint)(unsafe.Pointer(capsMask)))
-}
 func GetPixelMapfv(xmap uint32, values *float32) {
 	C.glowGetPixelMapfv(gpGetPixelMapfv, (C.GLenum)(xmap), (*C.GLfloat)(unsafe.Pointer(values)))
 }
@@ -10320,9 +8823,6 @@ func GetPixelMapuiv(xmap uint32, values *uint32) {
 }
 func GetPixelMapusv(xmap uint32, values *uint16) {
 	C.glowGetPixelMapusv(gpGetPixelMapusv, (C.GLenum)(xmap), (*C.GLushort)(unsafe.Pointer(values)))
-}
-func GetPixelMapxv(xmap uint32, size int32, values *int32) {
-	C.glowGetPixelMapxv(gpGetPixelMapxv, (C.GLenum)(xmap), (C.GLint)(size), (*C.GLfixed)(unsafe.Pointer(values)))
 }
 
 // return the address of the specified pointer
@@ -10355,14 +8855,8 @@ func GetProgramInterfaceiv(program uint32, programInterface uint32, pname uint32
 func GetProgramPipelineInfoLog(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramPipelineInfoLog(gpGetProgramPipelineInfoLog, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-func GetProgramPipelineInfoLogEXT(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
-	C.glowGetProgramPipelineInfoLogEXT(gpGetProgramPipelineInfoLogEXT, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
-}
 func GetProgramPipelineiv(pipeline uint32, pname uint32, params *int32) {
 	C.glowGetProgramPipelineiv(gpGetProgramPipelineiv, (C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func GetProgramPipelineivEXT(pipeline uint32, pname uint32, params *int32) {
-	C.glowGetProgramPipelineivEXT(gpGetProgramPipelineivEXT, (C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
 
 // query the index of a named resource within a program
@@ -10490,9 +8984,6 @@ func GetTexEnvfv(target uint32, pname uint32, params *float32) {
 func GetTexEnviv(target uint32, pname uint32, params *int32) {
 	C.glowGetTexEnviv(gpGetTexEnviv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetTexEnvxvOES(target uint32, pname uint32, params *int32) {
-	C.glowGetTexEnvxvOES(gpGetTexEnvxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
 func GetTexGendv(coord uint32, pname uint32, params *float64) {
 	C.glowGetTexGendv(gpGetTexGendv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
@@ -10501,9 +8992,6 @@ func GetTexGenfv(coord uint32, pname uint32, params *float32) {
 }
 func GetTexGeniv(coord uint32, pname uint32, params *int32) {
 	C.glowGetTexGeniv(gpGetTexGeniv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func GetTexGenxvOES(coord uint32, pname uint32, params *int32) {
-	C.glowGetTexGenxvOES(gpGetTexGenxvOES, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 
 // return a texture image
@@ -10516,9 +9004,6 @@ func GetTexLevelParameterfv(target uint32, level int32, pname uint32, params *fl
 func GetTexLevelParameteriv(target uint32, level int32, pname uint32, params *int32) {
 	C.glowGetTexLevelParameteriv(gpGetTexLevelParameteriv, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetTexLevelParameterxvOES(target uint32, level int32, pname uint32, params *int32) {
-	C.glowGetTexLevelParameterxvOES(gpGetTexLevelParameterxvOES, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
 func GetTexParameterIiv(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameterIiv(gpGetTexParameterIiv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -10530,9 +9015,6 @@ func GetTexParameterfv(target uint32, pname uint32, params *float32) {
 }
 func GetTexParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameteriv(gpGetTexParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func GetTexParameterxvOES(target uint32, pname uint32, params *int32) {
-	C.glowGetTexParameterxvOES(gpGetTexParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 func GetTextureHandleARB(texture uint32) uint64 {
 	ret := C.glowGetTextureHandleARB(gpGetTextureHandleARB, (C.GLuint)(texture))
@@ -10765,19 +9247,10 @@ func Indexub(c uint8) {
 func Indexubv(c *uint8) {
 	C.glowIndexubv(gpIndexubv, (*C.GLubyte)(unsafe.Pointer(c)))
 }
-func IndexxOES(component int32) {
-	C.glowIndexxOES(gpIndexxOES, (C.GLfixed)(component))
-}
-func IndexxvOES(component *int32) {
-	C.glowIndexxvOES(gpIndexxvOES, (*C.GLfixed)(unsafe.Pointer(component)))
-}
 
 // initialize the name stack
 func InitNames() {
 	C.glowInitNames(gpInitNames)
-}
-func InsertEventMarkerEXT(length int32, marker *uint8) {
-	C.glowInsertEventMarkerEXT(gpInsertEventMarkerEXT, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(marker)))
 }
 
 // simultaneously specify and enable several interleaved arrays
@@ -10838,10 +9311,6 @@ func IsEnabledi(target uint32, index uint32) bool {
 	ret := C.glowIsEnabledi(gpIsEnabledi, (C.GLenum)(target), (C.GLuint)(index))
 	return ret == TRUE
 }
-func IsFenceNV(fence uint32) bool {
-	ret := C.glowIsFenceNV(gpIsFenceNV, (C.GLuint)(fence))
-	return ret == TRUE
-}
 
 // determine if a name corresponds to a framebuffer object
 func IsFramebuffer(framebuffer uint32) bool {
@@ -10872,10 +9341,6 @@ func IsProgram(program uint32) bool {
 // determine if a name corresponds to a program pipeline object
 func IsProgramPipeline(pipeline uint32) bool {
 	ret := C.glowIsProgramPipeline(gpIsProgramPipeline, (C.GLuint)(pipeline))
-	return ret == TRUE
-}
-func IsProgramPipelineEXT(pipeline uint32) bool {
-	ret := C.glowIsProgramPipelineEXT(gpIsProgramPipelineEXT, (C.GLuint)(pipeline))
 	return ret == TRUE
 }
 
@@ -10930,9 +9395,6 @@ func IsVertexArray(array uint32) bool {
 	ret := C.glowIsVertexArray(gpIsVertexArray, (C.GLuint)(array))
 	return ret == TRUE
 }
-func LabelObjectEXT(xtype uint32, object uint32, length int32, label *uint8) {
-	C.glowLabelObjectEXT(gpLabelObjectEXT, (C.GLenum)(xtype), (C.GLuint)(object), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
-}
 func LightModelf(pname uint32, param float32) {
 	C.glowLightModelf(gpLightModelf, (C.GLenum)(pname), (C.GLfloat)(param))
 }
@@ -10944,12 +9406,6 @@ func LightModeli(pname uint32, param int32) {
 }
 func LightModeliv(pname uint32, params *int32) {
 	C.glowLightModeliv(gpLightModeliv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func LightModelxOES(pname uint32, param int32) {
-	C.glowLightModelxOES(gpLightModelxOES, (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func LightModelxvOES(pname uint32, param *int32) {
-	C.glowLightModelxvOES(gpLightModelxvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(param)))
 }
 func Lightf(light uint32, pname uint32, param float32) {
 	C.glowLightf(gpLightf, (C.GLenum)(light), (C.GLenum)(pname), (C.GLfloat)(param))
@@ -10963,12 +9419,6 @@ func Lighti(light uint32, pname uint32, param int32) {
 func Lightiv(light uint32, pname uint32, params *int32) {
 	C.glowLightiv(gpLightiv, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func LightxOES(light uint32, pname uint32, param int32) {
-	C.glowLightxOES(gpLightxOES, (C.GLenum)(light), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func LightxvOES(light uint32, pname uint32, params *int32) {
-	C.glowLightxvOES(gpLightxvOES, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
 
 // specify the line stipple pattern
 func LineStipple(factor int32, pattern uint16) {
@@ -10978,9 +9428,6 @@ func LineStipple(factor int32, pattern uint16) {
 // specify the width of rasterized lines
 func LineWidth(width float32) {
 	C.glowLineWidth(gpLineWidth, (C.GLfloat)(width))
-}
-func LineWidthxOES(width int32) {
-	C.glowLineWidthxOES(gpLineWidthxOES, (C.GLfixed)(width))
 }
 
 // Links a program object
@@ -11003,9 +9450,6 @@ func LoadMatrixd(m *float64) {
 func LoadMatrixf(m *float32) {
 	C.glowLoadMatrixf(gpLoadMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-func LoadMatrixxOES(m *int32) {
-	C.glowLoadMatrixxOES(gpLoadMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
-}
 
 // load a name onto the name stack
 func LoadName(name uint32) {
@@ -11016,9 +9460,6 @@ func LoadTransposeMatrixd(m *float64) {
 }
 func LoadTransposeMatrixf(m *float32) {
 	C.glowLoadTransposeMatrixf(gpLoadTransposeMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
-}
-func LoadTransposeMatrixxOES(m *int32) {
-	C.glowLoadTransposeMatrixxOES(gpLoadTransposeMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
 }
 
 // specify a logical pixel operation for rendering
@@ -11043,17 +9484,11 @@ func Map1d(target uint32, u1 float64, u2 float64, stride int32, order int32, poi
 func Map1f(target uint32, u1 float32, u2 float32, stride int32, order int32, points *float32) {
 	C.glowMap1f(gpMap1f, (C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-func Map1xOES(target uint32, u1 int32, u2 int32, stride int32, order int32, points int32) {
-	C.glowMap1xOES(gpMap1xOES, (C.GLenum)(target), (C.GLfixed)(u1), (C.GLfixed)(u2), (C.GLint)(stride), (C.GLint)(order), (C.GLfixed)(points))
-}
 func Map2d(target uint32, u1 float64, u2 float64, ustride int32, uorder int32, v1 float64, v2 float64, vstride int32, vorder int32, points *float64) {
 	C.glowMap2d(gpMap2d, (C.GLenum)(target), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLdouble)(unsafe.Pointer(points)))
 }
 func Map2f(target uint32, u1 float32, u2 float32, ustride int32, uorder int32, v1 float32, v2 float32, vstride int32, vorder int32, points *float32) {
 	C.glowMap2f(gpMap2f, (C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLfloat)(unsafe.Pointer(points)))
-}
-func Map2xOES(target uint32, u1 int32, u2 int32, ustride int32, uorder int32, v1 int32, v2 int32, vstride int32, vorder int32, points int32) {
-	C.glowMap2xOES(gpMap2xOES, (C.GLenum)(target), (C.GLfixed)(u1), (C.GLfixed)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfixed)(v1), (C.GLfixed)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (C.GLfixed)(points))
 }
 
 // map all of a buffer object's data store into the client's address space
@@ -11073,17 +9508,11 @@ func MapGrid1d(un int32, u1 float64, u2 float64) {
 func MapGrid1f(un int32, u1 float32, u2 float32) {
 	C.glowMapGrid1f(gpMapGrid1f, (C.GLint)(un), (C.GLfloat)(u1), (C.GLfloat)(u2))
 }
-func MapGrid1xOES(n int32, u1 int32, u2 int32) {
-	C.glowMapGrid1xOES(gpMapGrid1xOES, (C.GLint)(n), (C.GLfixed)(u1), (C.GLfixed)(u2))
-}
 func MapGrid2d(un int32, u1 float64, u2 float64, vn int32, v1 float64, v2 float64) {
 	C.glowMapGrid2d(gpMapGrid2d, (C.GLint)(un), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(vn), (C.GLdouble)(v1), (C.GLdouble)(v2))
 }
 func MapGrid2f(un int32, u1 float32, u2 float32, vn int32, v1 float32, v2 float32) {
 	C.glowMapGrid2f(gpMapGrid2f, (C.GLint)(un), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(vn), (C.GLfloat)(v1), (C.GLfloat)(v2))
-}
-func MapGrid2xOES(n int32, u1 int32, u2 int32, v1 int32, v2 int32) {
-	C.glowMapGrid2xOES(gpMapGrid2xOES, (C.GLint)(n), (C.GLfixed)(u1), (C.GLfixed)(u2), (C.GLfixed)(v1), (C.GLfixed)(v2))
 }
 
 // map all of a buffer object's data store into the client's address space
@@ -11108,12 +9537,6 @@ func Materiali(face uint32, pname uint32, param int32) {
 }
 func Materialiv(face uint32, pname uint32, params *int32) {
 	C.glowMaterialiv(gpMaterialiv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func MaterialxOES(face uint32, pname uint32, param int32) {
-	C.glowMaterialxOES(gpMaterialxOES, (C.GLenum)(face), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func MaterialxvOES(face uint32, pname uint32, param *int32) {
-	C.glowMaterialxvOES(gpMaterialxvOES, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(param)))
 }
 
 // specify which matrix is the current matrix
@@ -11142,25 +9565,16 @@ func MultMatrixd(m *float64) {
 func MultMatrixf(m *float32) {
 	C.glowMultMatrixf(gpMultMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-func MultMatrixxOES(m *int32) {
-	C.glowMultMatrixxOES(gpMultMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
-}
 func MultTransposeMatrixd(m *float64) {
 	C.glowMultTransposeMatrixd(gpMultTransposeMatrixd, (*C.GLdouble)(unsafe.Pointer(m)))
 }
 func MultTransposeMatrixf(m *float32) {
 	C.glowMultTransposeMatrixf(gpMultTransposeMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-func MultTransposeMatrixxOES(m *int32) {
-	C.glowMultTransposeMatrixxOES(gpMultTransposeMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
-}
 
 // render multiple sets of primitives from array data
 func MultiDrawArrays(mode uint32, first *int32, count *int32, drawcount int32) {
 	C.glowMultiDrawArrays(gpMultiDrawArrays, (C.GLenum)(mode), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(drawcount))
-}
-func MultiDrawArraysEXT(mode uint32, first *int32, count *int32, primcount int32) {
-	C.glowMultiDrawArraysEXT(gpMultiDrawArraysEXT, (C.GLenum)(mode), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(primcount))
 }
 
 // render multiple sets of primitives from array data, taking parameters from memory
@@ -11180,9 +9594,6 @@ func MultiDrawElements(mode uint32, count *int32, xtype uint32, indices *unsafe.
 func MultiDrawElementsBaseVertex(mode uint32, count *int32, xtype uint32, indices *unsafe.Pointer, drawcount int32, basevertex *int32) {
 	C.glowMultiDrawElementsBaseVertex(gpMultiDrawElementsBaseVertex, (C.GLenum)(mode), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLenum)(xtype), indices, (C.GLsizei)(drawcount), (*C.GLint)(unsafe.Pointer(basevertex)))
 }
-func MultiDrawElementsEXT(mode uint32, count *int32, xtype uint32, indices *unsafe.Pointer, primcount int32) {
-	C.glowMultiDrawElementsEXT(gpMultiDrawElementsEXT, (C.GLenum)(mode), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLenum)(xtype), indices, (C.GLsizei)(primcount))
-}
 
 // render indexed primitives from array data, taking parameters from memory
 func MultiDrawElementsIndirect(mode uint32, xtype uint32, indirect unsafe.Pointer, drawcount int32, stride int32) {
@@ -11190,12 +9601,6 @@ func MultiDrawElementsIndirect(mode uint32, xtype uint32, indirect unsafe.Pointe
 }
 func MultiDrawElementsIndirectCountARB(mode uint32, xtype uint32, indirect int, drawcount int, maxdrawcount int32, stride int32) {
 	C.glowMultiDrawElementsIndirectCountARB(gpMultiDrawElementsIndirectCountARB, (C.GLenum)(mode), (C.GLenum)(xtype), (C.GLintptr)(indirect), (C.GLintptr)(drawcount), (C.GLsizei)(maxdrawcount), (C.GLsizei)(stride))
-}
-func MultiTexCoord1bOES(texture uint32, s int8) {
-	C.glowMultiTexCoord1bOES(gpMultiTexCoord1bOES, (C.GLenum)(texture), (C.GLbyte)(s))
-}
-func MultiTexCoord1bvOES(texture uint32, coords *int8) {
-	C.glowMultiTexCoord1bvOES(gpMultiTexCoord1bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
 func MultiTexCoord1d(target uint32, s float64) {
 	C.glowMultiTexCoord1d(gpMultiTexCoord1d, (C.GLenum)(target), (C.GLdouble)(s))
@@ -11221,18 +9626,6 @@ func MultiTexCoord1s(target uint32, s int16) {
 func MultiTexCoord1sv(target uint32, v *int16) {
 	C.glowMultiTexCoord1sv(gpMultiTexCoord1sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-func MultiTexCoord1xOES(texture uint32, s int32) {
-	C.glowMultiTexCoord1xOES(gpMultiTexCoord1xOES, (C.GLenum)(texture), (C.GLfixed)(s))
-}
-func MultiTexCoord1xvOES(texture uint32, coords *int32) {
-	C.glowMultiTexCoord1xvOES(gpMultiTexCoord1xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func MultiTexCoord2bOES(texture uint32, s int8, t int8) {
-	C.glowMultiTexCoord2bOES(gpMultiTexCoord2bOES, (C.GLenum)(texture), (C.GLbyte)(s), (C.GLbyte)(t))
-}
-func MultiTexCoord2bvOES(texture uint32, coords *int8) {
-	C.glowMultiTexCoord2bvOES(gpMultiTexCoord2bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
-}
 func MultiTexCoord2d(target uint32, s float64, t float64) {
 	C.glowMultiTexCoord2d(gpMultiTexCoord2d, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t))
 }
@@ -11256,18 +9649,6 @@ func MultiTexCoord2s(target uint32, s int16, t int16) {
 }
 func MultiTexCoord2sv(target uint32, v *int16) {
 	C.glowMultiTexCoord2sv(gpMultiTexCoord2sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
-}
-func MultiTexCoord2xOES(texture uint32, s int32, t int32) {
-	C.glowMultiTexCoord2xOES(gpMultiTexCoord2xOES, (C.GLenum)(texture), (C.GLfixed)(s), (C.GLfixed)(t))
-}
-func MultiTexCoord2xvOES(texture uint32, coords *int32) {
-	C.glowMultiTexCoord2xvOES(gpMultiTexCoord2xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func MultiTexCoord3bOES(texture uint32, s int8, t int8, r int8) {
-	C.glowMultiTexCoord3bOES(gpMultiTexCoord3bOES, (C.GLenum)(texture), (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r))
-}
-func MultiTexCoord3bvOES(texture uint32, coords *int8) {
-	C.glowMultiTexCoord3bvOES(gpMultiTexCoord3bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
 func MultiTexCoord3d(target uint32, s float64, t float64, r float64) {
 	C.glowMultiTexCoord3d(gpMultiTexCoord3d, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
@@ -11293,18 +9674,6 @@ func MultiTexCoord3s(target uint32, s int16, t int16, r int16) {
 func MultiTexCoord3sv(target uint32, v *int16) {
 	C.glowMultiTexCoord3sv(gpMultiTexCoord3sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-func MultiTexCoord3xOES(texture uint32, s int32, t int32, r int32) {
-	C.glowMultiTexCoord3xOES(gpMultiTexCoord3xOES, (C.GLenum)(texture), (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r))
-}
-func MultiTexCoord3xvOES(texture uint32, coords *int32) {
-	C.glowMultiTexCoord3xvOES(gpMultiTexCoord3xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func MultiTexCoord4bOES(texture uint32, s int8, t int8, r int8, q int8) {
-	C.glowMultiTexCoord4bOES(gpMultiTexCoord4bOES, (C.GLenum)(texture), (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r), (C.GLbyte)(q))
-}
-func MultiTexCoord4bvOES(texture uint32, coords *int8) {
-	C.glowMultiTexCoord4bvOES(gpMultiTexCoord4bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
-}
 func MultiTexCoord4d(target uint32, s float64, t float64, r float64, q float64) {
 	C.glowMultiTexCoord4d(gpMultiTexCoord4d, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
@@ -11328,12 +9697,6 @@ func MultiTexCoord4s(target uint32, s int16, t int16, r int16, q int16) {
 }
 func MultiTexCoord4sv(target uint32, v *int16) {
 	C.glowMultiTexCoord4sv(gpMultiTexCoord4sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
-}
-func MultiTexCoord4xOES(texture uint32, s int32, t int32, r int32, q int32) {
-	C.glowMultiTexCoord4xOES(gpMultiTexCoord4xOES, (C.GLenum)(texture), (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r), (C.GLfixed)(q))
-}
-func MultiTexCoord4xvOES(texture uint32, coords *int32) {
-	C.glowMultiTexCoord4xvOES(gpMultiTexCoord4xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
 }
 
 // creates and initializes a buffer object's data     store
@@ -11437,12 +9800,6 @@ func Normal3s(nx int16, ny int16, nz int16) {
 func Normal3sv(v *int16) {
 	C.glowNormal3sv(gpNormal3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func Normal3xOES(nx int32, ny int32, nz int32) {
-	C.glowNormal3xOES(gpNormal3xOES, (C.GLfixed)(nx), (C.GLfixed)(ny), (C.GLfixed)(nz))
-}
-func Normal3xvOES(coords *int32) {
-	C.glowNormal3xvOES(gpNormal3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
 
 // define an array of normals
 func NormalPointer(xtype uint32, stride int32, pointer unsafe.Pointer) {
@@ -11469,19 +9826,10 @@ func ObjectPtrLabelKHR(ptr unsafe.Pointer, length int32, label *uint8) {
 func Ortho(left float64, right float64, bottom float64, top float64, zNear float64, zFar float64) {
 	C.glowOrtho(gpOrtho, (C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
-func OrthofOES(l float32, r float32, b float32, t float32, n float32, f float32) {
-	C.glowOrthofOES(gpOrthofOES, (C.GLfloat)(l), (C.GLfloat)(r), (C.GLfloat)(b), (C.GLfloat)(t), (C.GLfloat)(n), (C.GLfloat)(f))
-}
-func OrthoxOES(l int32, r int32, b int32, t int32, n int32, f int32) {
-	C.glowOrthoxOES(gpOrthoxOES, (C.GLfixed)(l), (C.GLfixed)(r), (C.GLfixed)(b), (C.GLfixed)(t), (C.GLfixed)(n), (C.GLfixed)(f))
-}
 
 // place a marker in the feedback buffer
 func PassThrough(token float32) {
 	C.glowPassThrough(gpPassThrough, (C.GLfloat)(token))
-}
-func PassThroughxOES(token int32) {
-	C.glowPassThroughxOES(gpPassThroughxOES, (C.GLfixed)(token))
 }
 func PatchParameterfv(pname uint32, values *float32) {
 	C.glowPatchParameterfv(gpPatchParameterfv, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(values)))
@@ -11503,17 +9851,11 @@ func PixelMapuiv(xmap uint32, mapsize int32, values *uint32) {
 func PixelMapusv(xmap uint32, mapsize int32, values *uint16) {
 	C.glowPixelMapusv(gpPixelMapusv, (C.GLenum)(xmap), (C.GLsizei)(mapsize), (*C.GLushort)(unsafe.Pointer(values)))
 }
-func PixelMapx(xmap uint32, size int32, values *int32) {
-	C.glowPixelMapx(gpPixelMapx, (C.GLenum)(xmap), (C.GLint)(size), (*C.GLfixed)(unsafe.Pointer(values)))
-}
 func PixelStoref(pname uint32, param float32) {
 	C.glowPixelStoref(gpPixelStoref, (C.GLenum)(pname), (C.GLfloat)(param))
 }
 func PixelStorei(pname uint32, param int32) {
 	C.glowPixelStorei(gpPixelStorei, (C.GLenum)(pname), (C.GLint)(param))
-}
-func PixelStorex(pname uint32, param int32) {
-	C.glowPixelStorex(gpPixelStorex, (C.GLenum)(pname), (C.GLfixed)(param))
 }
 func PixelTransferf(pname uint32, param float32) {
 	C.glowPixelTransferf(gpPixelTransferf, (C.GLenum)(pname), (C.GLfloat)(param))
@@ -11521,16 +9863,10 @@ func PixelTransferf(pname uint32, param float32) {
 func PixelTransferi(pname uint32, param int32) {
 	C.glowPixelTransferi(gpPixelTransferi, (C.GLenum)(pname), (C.GLint)(param))
 }
-func PixelTransferxOES(pname uint32, param int32) {
-	C.glowPixelTransferxOES(gpPixelTransferxOES, (C.GLenum)(pname), (C.GLfixed)(param))
-}
 
 // specify the pixel zoom factors
 func PixelZoom(xfactor float32, yfactor float32) {
 	C.glowPixelZoom(gpPixelZoom, (C.GLfloat)(xfactor), (C.GLfloat)(yfactor))
-}
-func PixelZoomxOES(xfactor int32, yfactor int32) {
-	C.glowPixelZoomxOES(gpPixelZoomxOES, (C.GLfixed)(xfactor), (C.GLfixed)(yfactor))
 }
 func PointParameterf(pname uint32, param float32) {
 	C.glowPointParameterf(gpPointParameterf, (C.GLenum)(pname), (C.GLfloat)(param))
@@ -11544,19 +9880,10 @@ func PointParameteri(pname uint32, param int32) {
 func PointParameteriv(pname uint32, params *int32) {
 	C.glowPointParameteriv(gpPointParameteriv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func PointParameterxOES(pname uint32, param int32) {
-	C.glowPointParameterxOES(gpPointParameterxOES, (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func PointParameterxvOES(pname uint32, params *int32) {
-	C.glowPointParameterxvOES(gpPointParameterxvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
-}
 
 // specify the diameter of rasterized points
 func PointSize(size float32) {
 	C.glowPointSize(gpPointSize, (C.GLfloat)(size))
-}
-func PointSizexOES(size int32) {
-	C.glowPointSizexOES(gpPointSizexOES, (C.GLfixed)(size))
 }
 
 // select a polygon rasterization mode
@@ -11567,9 +9894,6 @@ func PolygonMode(face uint32, mode uint32) {
 // set the scale and units used to calculate depth values
 func PolygonOffset(factor float32, units float32) {
 	C.glowPolygonOffset(gpPolygonOffset, (C.GLfloat)(factor), (C.GLfloat)(units))
-}
-func PolygonOffsetxOES(factor int32, units int32) {
-	C.glowPolygonOffsetxOES(gpPolygonOffsetxOES, (C.GLfixed)(factor), (C.GLfixed)(units))
 }
 
 // set the polygon stippling pattern
@@ -11590,9 +9914,6 @@ func PopDebugGroup() {
 func PopDebugGroupKHR() {
 	C.glowPopDebugGroupKHR(gpPopDebugGroupKHR)
 }
-func PopGroupMarkerEXT() {
-	C.glowPopGroupMarkerEXT(gpPopGroupMarkerEXT)
-}
 func PopMatrix() {
 	C.glowPopMatrix(gpPopMatrix)
 }
@@ -11609,9 +9930,6 @@ func PrimitiveRestartIndex(index uint32) {
 func PrioritizeTextures(n int32, textures *uint32, priorities *float32) {
 	C.glowPrioritizeTextures(gpPrioritizeTextures, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLfloat)(unsafe.Pointer(priorities)))
 }
-func PrioritizeTexturesxOES(n int32, textures *uint32, priorities *int32) {
-	C.glowPrioritizeTexturesxOES(gpPrioritizeTexturesxOES, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLfixed)(unsafe.Pointer(priorities)))
-}
 
 // load a program object with a program binary
 func ProgramBinary(program uint32, binaryFormat uint32, binary unsafe.Pointer, length int32) {
@@ -11619,9 +9937,6 @@ func ProgramBinary(program uint32, binaryFormat uint32, binary unsafe.Pointer, l
 }
 func ProgramParameteri(program uint32, pname uint32, value int32) {
 	C.glowProgramParameteri(gpProgramParameteri, (C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
-}
-func ProgramParameteriEXT(program uint32, pname uint32, value int32) {
-	C.glowProgramParameteriEXT(gpProgramParameteriEXT, (C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
 }
 func ProgramUniform1d(program uint32, location int32, v0 float64) {
 	C.glowProgramUniform1d(gpProgramUniform1d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0))
@@ -11634,48 +9949,30 @@ func ProgramUniform1dv(program uint32, location int32, count int32, value *float
 func ProgramUniform1f(program uint32, location int32, v0 float32) {
 	C.glowProgramUniform1f(gpProgramUniform1f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
 }
-func ProgramUniform1fEXT(program uint32, location int32, v0 float32) {
-	C.glowProgramUniform1fEXT(gpProgramUniform1fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform1fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform1fv(gpProgramUniform1fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniform1fvEXT(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform1fvEXT(gpProgramUniform1fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform1i(program uint32, location int32, v0 int32) {
 	C.glowProgramUniform1i(gpProgramUniform1i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
 }
-func ProgramUniform1iEXT(program uint32, location int32, v0 int32) {
-	C.glowProgramUniform1iEXT(gpProgramUniform1iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform1iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform1iv(gpProgramUniform1iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-func ProgramUniform1ivEXT(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform1ivEXT(gpProgramUniform1ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform1ui(program uint32, location int32, v0 uint32) {
 	C.glowProgramUniform1ui(gpProgramUniform1ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
 }
-func ProgramUniform1uiEXT(program uint32, location int32, v0 uint32) {
-	C.glowProgramUniform1uiEXT(gpProgramUniform1uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform1uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform1uiv(gpProgramUniform1uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-func ProgramUniform1uivEXT(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform1uivEXT(gpProgramUniform1uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
 func ProgramUniform2d(program uint32, location int32, v0 float64, v1 float64) {
 	C.glowProgramUniform2d(gpProgramUniform2d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1))
@@ -11688,48 +9985,30 @@ func ProgramUniform2dv(program uint32, location int32, count int32, value *float
 func ProgramUniform2f(program uint32, location int32, v0 float32, v1 float32) {
 	C.glowProgramUniform2f(gpProgramUniform2f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
-func ProgramUniform2fEXT(program uint32, location int32, v0 float32, v1 float32) {
-	C.glowProgramUniform2fEXT(gpProgramUniform2fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform2fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform2fv(gpProgramUniform2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniform2fvEXT(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform2fvEXT(gpProgramUniform2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform2i(program uint32, location int32, v0 int32, v1 int32) {
 	C.glowProgramUniform2i(gpProgramUniform2i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
-func ProgramUniform2iEXT(program uint32, location int32, v0 int32, v1 int32) {
-	C.glowProgramUniform2iEXT(gpProgramUniform2iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform2iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform2iv(gpProgramUniform2iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-func ProgramUniform2ivEXT(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform2ivEXT(gpProgramUniform2ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform2ui(program uint32, location int32, v0 uint32, v1 uint32) {
 	C.glowProgramUniform2ui(gpProgramUniform2ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
-func ProgramUniform2uiEXT(program uint32, location int32, v0 uint32, v1 uint32) {
-	C.glowProgramUniform2uiEXT(gpProgramUniform2uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform2uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform2uiv(gpProgramUniform2uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-func ProgramUniform2uivEXT(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform2uivEXT(gpProgramUniform2uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
 func ProgramUniform3d(program uint32, location int32, v0 float64, v1 float64, v2 float64) {
 	C.glowProgramUniform3d(gpProgramUniform3d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1), (C.GLdouble)(v2))
@@ -11742,48 +10021,30 @@ func ProgramUniform3dv(program uint32, location int32, count int32, value *float
 func ProgramUniform3f(program uint32, location int32, v0 float32, v1 float32, v2 float32) {
 	C.glowProgramUniform3f(gpProgramUniform3f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-func ProgramUniform3fEXT(program uint32, location int32, v0 float32, v1 float32, v2 float32) {
-	C.glowProgramUniform3fEXT(gpProgramUniform3fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform3fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform3fv(gpProgramUniform3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniform3fvEXT(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform3fvEXT(gpProgramUniform3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform3i(program uint32, location int32, v0 int32, v1 int32, v2 int32) {
 	C.glowProgramUniform3i(gpProgramUniform3i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
-func ProgramUniform3iEXT(program uint32, location int32, v0 int32, v1 int32, v2 int32) {
-	C.glowProgramUniform3iEXT(gpProgramUniform3iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform3iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform3iv(gpProgramUniform3iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-func ProgramUniform3ivEXT(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform3ivEXT(gpProgramUniform3ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform3ui(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32) {
 	C.glowProgramUniform3ui(gpProgramUniform3ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
-func ProgramUniform3uiEXT(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32) {
-	C.glowProgramUniform3uiEXT(gpProgramUniform3uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform3uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform3uiv(gpProgramUniform3uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-func ProgramUniform3uivEXT(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform3uivEXT(gpProgramUniform3uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
 func ProgramUniform4d(program uint32, location int32, v0 float64, v1 float64, v2 float64, v3 float64) {
 	C.glowProgramUniform4d(gpProgramUniform4d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLdouble)(v3))
@@ -11796,48 +10057,30 @@ func ProgramUniform4dv(program uint32, location int32, count int32, value *float
 func ProgramUniform4f(program uint32, location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
 	C.glowProgramUniform4f(gpProgramUniform4f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
-func ProgramUniform4fEXT(program uint32, location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
-	C.glowProgramUniform4fEXT(gpProgramUniform4fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform4fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform4fv(gpProgramUniform4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniform4fvEXT(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform4fvEXT(gpProgramUniform4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform4i(program uint32, location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 	C.glowProgramUniform4i(gpProgramUniform4i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
-func ProgramUniform4iEXT(program uint32, location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
-	C.glowProgramUniform4iEXT(gpProgramUniform4iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform4iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform4iv(gpProgramUniform4iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-func ProgramUniform4ivEXT(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform4ivEXT(gpProgramUniform4ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform4ui(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 	C.glowProgramUniform4ui(gpProgramUniform4ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
-func ProgramUniform4uiEXT(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
-	C.glowProgramUniform4uiEXT(gpProgramUniform4uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
-}
 
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniform4uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform4uiv(gpProgramUniform4uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-func ProgramUniform4uivEXT(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform4uivEXT(gpProgramUniform4uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
 func ProgramUniformHandleui64ARB(program uint32, location int32, value uint64) {
 	C.glowProgramUniformHandleui64ARB(gpProgramUniformHandleui64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(value))
@@ -11853,9 +10096,6 @@ func ProgramUniformMatrix2dv(program uint32, location int32, count int32, transp
 func ProgramUniformMatrix2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2fv(gpProgramUniformMatrix2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-func ProgramUniformMatrix2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix2fvEXT(gpProgramUniformMatrix2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix2x3dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2x3dv(gpProgramUniformMatrix2x3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -11863,9 +10103,6 @@ func ProgramUniformMatrix2x3dv(program uint32, location int32, count int32, tran
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniformMatrix2x3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x3fv(gpProgramUniformMatrix2x3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniformMatrix2x3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix2x3fvEXT(gpProgramUniformMatrix2x3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix2x4dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2x4dv(gpProgramUniformMatrix2x4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
@@ -11875,9 +10112,6 @@ func ProgramUniformMatrix2x4dv(program uint32, location int32, count int32, tran
 func ProgramUniformMatrix2x4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x4fv(gpProgramUniformMatrix2x4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-func ProgramUniformMatrix2x4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix2x4fvEXT(gpProgramUniformMatrix2x4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix3dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3dv(gpProgramUniformMatrix3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -11885,9 +10119,6 @@ func ProgramUniformMatrix3dv(program uint32, location int32, count int32, transp
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniformMatrix3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3fv(gpProgramUniformMatrix3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniformMatrix3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix3fvEXT(gpProgramUniformMatrix3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix3x2dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3x2dv(gpProgramUniformMatrix3x2dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
@@ -11897,9 +10128,6 @@ func ProgramUniformMatrix3x2dv(program uint32, location int32, count int32, tran
 func ProgramUniformMatrix3x2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x2fv(gpProgramUniformMatrix3x2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-func ProgramUniformMatrix3x2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix3x2fvEXT(gpProgramUniformMatrix3x2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix3x4dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3x4dv(gpProgramUniformMatrix3x4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -11907,9 +10135,6 @@ func ProgramUniformMatrix3x4dv(program uint32, location int32, count int32, tran
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniformMatrix3x4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x4fv(gpProgramUniformMatrix3x4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniformMatrix3x4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix3x4fvEXT(gpProgramUniformMatrix3x4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix4dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4dv(gpProgramUniformMatrix4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
@@ -11919,9 +10144,6 @@ func ProgramUniformMatrix4dv(program uint32, location int32, count int32, transp
 func ProgramUniformMatrix4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4fv(gpProgramUniformMatrix4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-func ProgramUniformMatrix4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix4fvEXT(gpProgramUniformMatrix4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix4x2dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4x2dv(gpProgramUniformMatrix4x2dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -11930,9 +10152,6 @@ func ProgramUniformMatrix4x2dv(program uint32, location int32, count int32, tran
 func ProgramUniformMatrix4x2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x2fv(gpProgramUniformMatrix4x2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-func ProgramUniformMatrix4x2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix4x2fvEXT(gpProgramUniformMatrix4x2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix4x3dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4x3dv(gpProgramUniformMatrix4x3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -11940,9 +10159,6 @@ func ProgramUniformMatrix4x3dv(program uint32, location int32, count int32, tran
 // Specify the value of a uniform variable for a specified program object
 func ProgramUniformMatrix4x3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x3fv(gpProgramUniformMatrix4x3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-func ProgramUniformMatrix4x3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix4x3fvEXT(gpProgramUniformMatrix4x3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 
 // specifiy the vertex to be used as the source of data for flat shaded varyings
@@ -11967,9 +10183,6 @@ func PushDebugGroup(source uint32, id uint32, length int32, message *uint8) {
 func PushDebugGroupKHR(source uint32, id uint32, length int32, message *uint8) {
 	C.glowPushDebugGroupKHR(gpPushDebugGroupKHR, (C.GLenum)(source), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(message)))
 }
-func PushGroupMarkerEXT(length int32, marker *uint8) {
-	C.glowPushGroupMarkerEXT(gpPushGroupMarkerEXT, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(marker)))
-}
 
 // push and pop the current matrix stack
 func PushMatrix() {
@@ -11984,10 +10197,6 @@ func PushName(name uint32) {
 // record the GL time into a query object after all previous commands have reached the GL server but have not yet necessarily executed.
 func QueryCounter(id uint32, target uint32) {
 	C.glowQueryCounter(gpQueryCounter, (C.GLuint)(id), (C.GLenum)(target))
-}
-func QueryMatrixxOES(mantissa *int32, exponent *int32) uint32 {
-	ret := C.glowQueryMatrixxOES(gpQueryMatrixxOES, (*C.GLfixed)(unsafe.Pointer(mantissa)), (*C.GLint)(unsafe.Pointer(exponent)))
-	return (uint32)(ret)
 }
 func RasterPos2d(x float64, y float64) {
 	C.glowRasterPos2d(gpRasterPos2d, (C.GLdouble)(x), (C.GLdouble)(y))
@@ -12013,12 +10222,6 @@ func RasterPos2s(x int16, y int16) {
 func RasterPos2sv(v *int16) {
 	C.glowRasterPos2sv(gpRasterPos2sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func RasterPos2xOES(x int32, y int32) {
-	C.glowRasterPos2xOES(gpRasterPos2xOES, (C.GLfixed)(x), (C.GLfixed)(y))
-}
-func RasterPos2xvOES(coords *int32) {
-	C.glowRasterPos2xvOES(gpRasterPos2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
 func RasterPos3d(x float64, y float64, z float64) {
 	C.glowRasterPos3d(gpRasterPos3d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
@@ -12043,12 +10246,6 @@ func RasterPos3s(x int16, y int16, z int16) {
 func RasterPos3sv(v *int16) {
 	C.glowRasterPos3sv(gpRasterPos3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func RasterPos3xOES(x int32, y int32, z int32) {
-	C.glowRasterPos3xOES(gpRasterPos3xOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
-}
-func RasterPos3xvOES(coords *int32) {
-	C.glowRasterPos3xvOES(gpRasterPos3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
 func RasterPos4d(x float64, y float64, z float64, w float64) {
 	C.glowRasterPos4d(gpRasterPos4d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
@@ -12072,12 +10269,6 @@ func RasterPos4s(x int16, y int16, z int16, w int16) {
 }
 func RasterPos4sv(v *int16) {
 	C.glowRasterPos4sv(gpRasterPos4sv, (*C.GLshort)(unsafe.Pointer(v)))
-}
-func RasterPos4xOES(x int32, y int32, z int32, w int32) {
-	C.glowRasterPos4xOES(gpRasterPos4xOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z), (C.GLfixed)(w))
-}
-func RasterPos4xvOES(coords *int32) {
-	C.glowRasterPos4xvOES(gpRasterPos4xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
 
 // select a color buffer source for pixels
@@ -12124,12 +10315,6 @@ func Rects(x1 int16, y1 int16, x2 int16, y2 int16) {
 func Rectsv(v1 *int16, v2 *int16) {
 	C.glowRectsv(gpRectsv, (*C.GLshort)(unsafe.Pointer(v1)), (*C.GLshort)(unsafe.Pointer(v2)))
 }
-func RectxOES(x1 int32, y1 int32, x2 int32, y2 int32) {
-	C.glowRectxOES(gpRectxOES, (C.GLfixed)(x1), (C.GLfixed)(y1), (C.GLfixed)(x2), (C.GLfixed)(y2))
-}
-func RectxvOES(v1 *int32, v2 *int32) {
-	C.glowRectxvOES(gpRectxvOES, (*C.GLfixed)(unsafe.Pointer(v1)), (*C.GLfixed)(unsafe.Pointer(v2)))
-}
 
 // release resources consumed by the implementation's shader compiler
 func ReleaseShaderCompiler() {
@@ -12162,19 +10347,10 @@ func Rotated(angle float64, x float64, y float64, z float64) {
 func Rotatef(angle float32, x float32, y float32, z float32) {
 	C.glowRotatef(gpRotatef, (C.GLfloat)(angle), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-func RotatexOES(angle int32, x int32, y int32, z int32) {
-	C.glowRotatexOES(gpRotatexOES, (C.GLfixed)(angle), (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
-}
 
 // specify multisample coverage parameters
 func SampleCoverage(value float32, invert bool) {
 	C.glowSampleCoverage(gpSampleCoverage, (C.GLfloat)(value), (C.GLboolean)(boolToInt(invert)))
-}
-func SampleCoverageOES(value int32, invert bool) {
-	C.glowSampleCoverageOES(gpSampleCoverageOES, (C.GLfixed)(value), (C.GLboolean)(boolToInt(invert)))
-}
-func SampleCoveragexOES(value int32, invert bool) {
-	C.glowSampleCoveragexOES(gpSampleCoveragexOES, (C.GLclampx)(value), (C.GLboolean)(boolToInt(invert)))
 }
 
 // set the value of a sub-word of the sample mask
@@ -12204,9 +10380,6 @@ func Scaled(x float64, y float64, z float64) {
 }
 func Scalef(x float32, y float32, z float32) {
 	C.glowScalef(gpScalef, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
-}
-func ScalexOES(x int32, y int32, z int32) {
-	C.glowScalexOES(gpScalexOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
 
 // define the scissor box
@@ -12282,12 +10455,6 @@ func SecondaryColorPointer(size int32, xtype uint32, stride int32, pointer unsaf
 func SelectBuffer(size int32, buffer *uint32) {
 	C.glowSelectBuffer(gpSelectBuffer, (C.GLsizei)(size), (*C.GLuint)(unsafe.Pointer(buffer)))
 }
-func SelectPerfMonitorCountersAMD(monitor uint32, enable bool, group uint32, numCounters int32, counterList *uint32) {
-	C.glowSelectPerfMonitorCountersAMD(gpSelectPerfMonitorCountersAMD, (C.GLuint)(monitor), (C.GLboolean)(boolToInt(enable)), (C.GLuint)(group), (C.GLint)(numCounters), (*C.GLuint)(unsafe.Pointer(counterList)))
-}
-func SetFenceNV(fence uint32, condition uint32) {
-	C.glowSetFenceNV(gpSetFenceNV, (C.GLuint)(fence), (C.GLenum)(condition))
-}
 
 // select flat or smooth shading
 func ShadeModel(mode uint32) {
@@ -12338,10 +10505,6 @@ func StencilOp(fail uint32, zfail uint32, zpass uint32) {
 func StencilOpSeparate(face uint32, sfail uint32, dpfail uint32, dppass uint32) {
 	C.glowStencilOpSeparate(gpStencilOpSeparate, (C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
 }
-func TestFenceNV(fence uint32) bool {
-	ret := C.glowTestFenceNV(gpTestFenceNV, (C.GLuint)(fence))
-	return ret == TRUE
-}
 
 // attach a buffer object's data store to a buffer texture object
 func TexBuffer(target uint32, internalformat uint32, buffer uint32) {
@@ -12351,12 +10514,6 @@ func TexBuffer(target uint32, internalformat uint32, buffer uint32) {
 // attach a range of a buffer object's data store to a buffer texture object
 func TexBufferRange(target uint32, internalformat uint32, buffer uint32, offset int, size int) {
 	C.glowTexBufferRange(gpTexBufferRange, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
-}
-func TexCoord1bOES(s int8) {
-	C.glowTexCoord1bOES(gpTexCoord1bOES, (C.GLbyte)(s))
-}
-func TexCoord1bvOES(coords *int8) {
-	C.glowTexCoord1bvOES(gpTexCoord1bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
 func TexCoord1d(s float64) {
 	C.glowTexCoord1d(gpTexCoord1d, (C.GLdouble)(s))
@@ -12382,18 +10539,6 @@ func TexCoord1s(s int16) {
 func TexCoord1sv(v *int16) {
 	C.glowTexCoord1sv(gpTexCoord1sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func TexCoord1xOES(s int32) {
-	C.glowTexCoord1xOES(gpTexCoord1xOES, (C.GLfixed)(s))
-}
-func TexCoord1xvOES(coords *int32) {
-	C.glowTexCoord1xvOES(gpTexCoord1xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func TexCoord2bOES(s int8, t int8) {
-	C.glowTexCoord2bOES(gpTexCoord2bOES, (C.GLbyte)(s), (C.GLbyte)(t))
-}
-func TexCoord2bvOES(coords *int8) {
-	C.glowTexCoord2bvOES(gpTexCoord2bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
-}
 func TexCoord2d(s float64, t float64) {
 	C.glowTexCoord2d(gpTexCoord2d, (C.GLdouble)(s), (C.GLdouble)(t))
 }
@@ -12417,18 +10562,6 @@ func TexCoord2s(s int16, t int16) {
 }
 func TexCoord2sv(v *int16) {
 	C.glowTexCoord2sv(gpTexCoord2sv, (*C.GLshort)(unsafe.Pointer(v)))
-}
-func TexCoord2xOES(s int32, t int32) {
-	C.glowTexCoord2xOES(gpTexCoord2xOES, (C.GLfixed)(s), (C.GLfixed)(t))
-}
-func TexCoord2xvOES(coords *int32) {
-	C.glowTexCoord2xvOES(gpTexCoord2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func TexCoord3bOES(s int8, t int8, r int8) {
-	C.glowTexCoord3bOES(gpTexCoord3bOES, (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r))
-}
-func TexCoord3bvOES(coords *int8) {
-	C.glowTexCoord3bvOES(gpTexCoord3bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
 func TexCoord3d(s float64, t float64, r float64) {
 	C.glowTexCoord3d(gpTexCoord3d, (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
@@ -12454,18 +10587,6 @@ func TexCoord3s(s int16, t int16, r int16) {
 func TexCoord3sv(v *int16) {
 	C.glowTexCoord3sv(gpTexCoord3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func TexCoord3xOES(s int32, t int32, r int32) {
-	C.glowTexCoord3xOES(gpTexCoord3xOES, (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r))
-}
-func TexCoord3xvOES(coords *int32) {
-	C.glowTexCoord3xvOES(gpTexCoord3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func TexCoord4bOES(s int8, t int8, r int8, q int8) {
-	C.glowTexCoord4bOES(gpTexCoord4bOES, (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r), (C.GLbyte)(q))
-}
-func TexCoord4bvOES(coords *int8) {
-	C.glowTexCoord4bvOES(gpTexCoord4bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
-}
 func TexCoord4d(s float64, t float64, r float64, q float64) {
 	C.glowTexCoord4d(gpTexCoord4d, (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
@@ -12490,12 +10611,6 @@ func TexCoord4s(s int16, t int16, r int16, q int16) {
 func TexCoord4sv(v *int16) {
 	C.glowTexCoord4sv(gpTexCoord4sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func TexCoord4xOES(s int32, t int32, r int32, q int32) {
-	C.glowTexCoord4xOES(gpTexCoord4xOES, (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r), (C.GLfixed)(q))
-}
-func TexCoord4xvOES(coords *int32) {
-	C.glowTexCoord4xvOES(gpTexCoord4xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
 
 // define an array of texture coordinates
 func TexCoordPointer(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
@@ -12512,12 +10627,6 @@ func TexEnvi(target uint32, pname uint32, param int32) {
 }
 func TexEnviv(target uint32, pname uint32, params *int32) {
 	C.glowTexEnviv(gpTexEnviv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func TexEnvxOES(target uint32, pname uint32, param int32) {
-	C.glowTexEnvxOES(gpTexEnvxOES, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func TexEnvxvOES(target uint32, pname uint32, params *int32) {
-	C.glowTexEnvxvOES(gpTexEnvxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 func TexGend(coord uint32, pname uint32, param float64) {
 	C.glowTexGend(gpTexGend, (C.GLenum)(coord), (C.GLenum)(pname), (C.GLdouble)(param))
@@ -12536,12 +10645,6 @@ func TexGeni(coord uint32, pname uint32, param int32) {
 }
 func TexGeniv(coord uint32, pname uint32, params *int32) {
 	C.glowTexGeniv(gpTexGeniv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func TexGenxOES(coord uint32, pname uint32, param int32) {
-	C.glowTexGenxOES(gpTexGenxOES, (C.GLenum)(coord), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func TexGenxvOES(coord uint32, pname uint32, params *int32) {
-	C.glowTexGenxvOES(gpTexGenxvOES, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 
 // specify a one-dimensional texture image
@@ -12588,12 +10691,6 @@ func TexParameteri(target uint32, pname uint32, param int32) {
 }
 func TexParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowTexParameteriv(gpTexParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-func TexParameterxOES(target uint32, pname uint32, param int32) {
-	C.glowTexParameterxOES(gpTexParameterxOES, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfixed)(param))
-}
-func TexParameterxvOES(target uint32, pname uint32, params *int32) {
-	C.glowTexParameterxvOES(gpTexParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
 
 // simultaneously specify storage for all levels of a one-dimensional texture
@@ -12733,9 +10830,6 @@ func Translated(x float64, y float64, z float64) {
 }
 func Translatef(x float32, y float32, z float32) {
 	C.glowTranslatef(gpTranslatef, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
-}
-func TranslatexOES(x int32, y int32, z int32) {
-	C.glowTranslatexOES(gpTranslatexOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
 func Uniform1d(location int32, x float64) {
 	C.glowUniform1d(gpUniform1d, (C.GLint)(location), (C.GLdouble)(x))
@@ -12989,12 +11083,6 @@ func UseProgram(program uint32) {
 func UseProgramStages(pipeline uint32, stages uint32, program uint32) {
 	C.glowUseProgramStages(gpUseProgramStages, (C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
 }
-func UseProgramStagesEXT(pipeline uint32, stages uint32, program uint32) {
-	C.glowUseProgramStagesEXT(gpUseProgramStagesEXT, (C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
-}
-func UseShaderProgramEXT(xtype uint32, program uint32) {
-	C.glowUseShaderProgramEXT(gpUseShaderProgramEXT, (C.GLenum)(xtype), (C.GLuint)(program))
-}
 
 // Validates a program object
 func ValidateProgram(program uint32) {
@@ -13004,15 +11092,6 @@ func ValidateProgram(program uint32) {
 // validate a program pipeline object against current GL state
 func ValidateProgramPipeline(pipeline uint32) {
 	C.glowValidateProgramPipeline(gpValidateProgramPipeline, (C.GLuint)(pipeline))
-}
-func ValidateProgramPipelineEXT(pipeline uint32) {
-	C.glowValidateProgramPipelineEXT(gpValidateProgramPipelineEXT, (C.GLuint)(pipeline))
-}
-func Vertex2bOES(x int8, y int8) {
-	C.glowVertex2bOES(gpVertex2bOES, (C.GLbyte)(x), (C.GLbyte)(y))
-}
-func Vertex2bvOES(coords *int8) {
-	C.glowVertex2bvOES(gpVertex2bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
 func Vertex2d(x float64, y float64) {
 	C.glowVertex2d(gpVertex2d, (C.GLdouble)(x), (C.GLdouble)(y))
@@ -13038,18 +11117,6 @@ func Vertex2s(x int16, y int16) {
 func Vertex2sv(v *int16) {
 	C.glowVertex2sv(gpVertex2sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func Vertex2xOES(x int32) {
-	C.glowVertex2xOES(gpVertex2xOES, (C.GLfixed)(x))
-}
-func Vertex2xvOES(coords *int32) {
-	C.glowVertex2xvOES(gpVertex2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func Vertex3bOES(x int8, y int8, z int8) {
-	C.glowVertex3bOES(gpVertex3bOES, (C.GLbyte)(x), (C.GLbyte)(y), (C.GLbyte)(z))
-}
-func Vertex3bvOES(coords *int8) {
-	C.glowVertex3bvOES(gpVertex3bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
-}
 func Vertex3d(x float64, y float64, z float64) {
 	C.glowVertex3d(gpVertex3d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
@@ -13074,18 +11141,6 @@ func Vertex3s(x int16, y int16, z int16) {
 func Vertex3sv(v *int16) {
 	C.glowVertex3sv(gpVertex3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-func Vertex3xOES(x int32, y int32) {
-	C.glowVertex3xOES(gpVertex3xOES, (C.GLfixed)(x), (C.GLfixed)(y))
-}
-func Vertex3xvOES(coords *int32) {
-	C.glowVertex3xvOES(gpVertex3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
-}
-func Vertex4bOES(x int8, y int8, z int8, w int8) {
-	C.glowVertex4bOES(gpVertex4bOES, (C.GLbyte)(x), (C.GLbyte)(y), (C.GLbyte)(z), (C.GLbyte)(w))
-}
-func Vertex4bvOES(coords *int8) {
-	C.glowVertex4bvOES(gpVertex4bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
-}
 func Vertex4d(x float64, y float64, z float64, w float64) {
 	C.glowVertex4d(gpVertex4d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
@@ -13109,12 +11164,6 @@ func Vertex4s(x int16, y int16, z int16, w int16) {
 }
 func Vertex4sv(v *int16) {
 	C.glowVertex4sv(gpVertex4sv, (*C.GLshort)(unsafe.Pointer(v)))
-}
-func Vertex4xOES(x int32, y int32, z int32) {
-	C.glowVertex4xOES(gpVertex4xOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
-}
-func Vertex4xvOES(coords *int32) {
-	C.glowVertex4xvOES(gpVertex4xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
 func VertexArrayAttribBinding(vaobj uint32, attribindex uint32, bindingindex uint32) {
 	C.glowVertexArrayAttribBinding(gpVertexArrayAttribBinding, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLuint)(bindingindex))
@@ -13490,20 +11539,14 @@ func Init() error {
 // instead.
 func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpAccum = (C.GPACCUM)(getProcAddr("glAccum"))
-	gpAccumxOES = (C.GPACCUMXOES)(getProcAddr("glAccumxOES"))
-	gpActiveProgramEXT = (C.GPACTIVEPROGRAMEXT)(getProcAddr("glActiveProgramEXT"))
 	gpActiveShaderProgram = (C.GPACTIVESHADERPROGRAM)(getProcAddr("glActiveShaderProgram"))
-	gpActiveShaderProgramEXT = (C.GPACTIVESHADERPROGRAMEXT)(getProcAddr("glActiveShaderProgramEXT"))
 	gpActiveTexture = (C.GPACTIVETEXTURE)(getProcAddr("glActiveTexture"))
 	gpAlphaFunc = (C.GPALPHAFUNC)(getProcAddr("glAlphaFunc"))
-	gpAlphaFuncxOES = (C.GPALPHAFUNCXOES)(getProcAddr("glAlphaFuncxOES"))
 	gpAreTexturesResident = (C.GPARETEXTURESRESIDENT)(getProcAddr("glAreTexturesResident"))
 	gpArrayElement = (C.GPARRAYELEMENT)(getProcAddr("glArrayElement"))
 	gpAttachShader = (C.GPATTACHSHADER)(getProcAddr("glAttachShader"))
 	gpBegin = (C.GPBEGIN)(getProcAddr("glBegin"))
 	gpBeginConditionalRender = (C.GPBEGINCONDITIONALRENDER)(getProcAddr("glBeginConditionalRender"))
-	gpBeginPerfMonitorAMD = (C.GPBEGINPERFMONITORAMD)(getProcAddr("glBeginPerfMonitorAMD"))
-	gpBeginPerfQueryINTEL = (C.GPBEGINPERFQUERYINTEL)(getProcAddr("glBeginPerfQueryINTEL"))
 	gpBeginQuery = (C.GPBEGINQUERY)(getProcAddr("glBeginQuery"))
 	gpBeginQueryIndexed = (C.GPBEGINQUERYINDEXED)(getProcAddr("glBeginQueryIndexed"))
 	gpBeginTransformFeedback = (C.GPBEGINTRANSFORMFEEDBACK)(getProcAddr("glBeginTransformFeedback"))
@@ -13519,7 +11562,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpBindImageTexture = (C.GPBINDIMAGETEXTURE)(getProcAddr("glBindImageTexture"))
 	gpBindImageTextures = (C.GPBINDIMAGETEXTURES)(getProcAddr("glBindImageTextures"))
 	gpBindProgramPipeline = (C.GPBINDPROGRAMPIPELINE)(getProcAddr("glBindProgramPipeline"))
-	gpBindProgramPipelineEXT = (C.GPBINDPROGRAMPIPELINEEXT)(getProcAddr("glBindProgramPipelineEXT"))
 	gpBindRenderbuffer = (C.GPBINDRENDERBUFFER)(getProcAddr("glBindRenderbuffer"))
 	gpBindSampler = (C.GPBINDSAMPLER)(getProcAddr("glBindSampler"))
 	gpBindSamplers = (C.GPBINDSAMPLERS)(getProcAddr("glBindSamplers"))
@@ -13531,13 +11573,8 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpBindVertexBuffer = (C.GPBINDVERTEXBUFFER)(getProcAddr("glBindVertexBuffer"))
 	gpBindVertexBuffers = (C.GPBINDVERTEXBUFFERS)(getProcAddr("glBindVertexBuffers"))
 	gpBitmap = (C.GPBITMAP)(getProcAddr("glBitmap"))
-	gpBitmapxOES = (C.GPBITMAPXOES)(getProcAddr("glBitmapxOES"))
-	gpBlendBarrierKHR = (C.GPBLENDBARRIERKHR)(getProcAddr("glBlendBarrierKHR"))
-	gpBlendBarrierNV = (C.GPBLENDBARRIERNV)(getProcAddr("glBlendBarrierNV"))
 	gpBlendColor = (C.GPBLENDCOLOR)(getProcAddr("glBlendColor"))
-	gpBlendColorxOES = (C.GPBLENDCOLORXOES)(getProcAddr("glBlendColorxOES"))
 	gpBlendEquation = (C.GPBLENDEQUATION)(getProcAddr("glBlendEquation"))
-	gpBlendEquationEXT = (C.GPBLENDEQUATIONEXT)(getProcAddr("glBlendEquationEXT"))
 	gpBlendEquationSeparate = (C.GPBLENDEQUATIONSEPARATE)(getProcAddr("glBlendEquationSeparate"))
 	gpBlendEquationSeparatei = (C.GPBLENDEQUATIONSEPARATEI)(getProcAddr("glBlendEquationSeparatei"))
 	gpBlendEquationSeparateiARB = (C.GPBLENDEQUATIONSEPARATEIARB)(getProcAddr("glBlendEquationSeparateiARB"))
@@ -13549,7 +11586,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpBlendFuncSeparateiARB = (C.GPBLENDFUNCSEPARATEIARB)(getProcAddr("glBlendFuncSeparateiARB"))
 	gpBlendFunci = (C.GPBLENDFUNCI)(getProcAddr("glBlendFunci"))
 	gpBlendFunciARB = (C.GPBLENDFUNCIARB)(getProcAddr("glBlendFunciARB"))
-	gpBlendParameteriNV = (C.GPBLENDPARAMETERINV)(getProcAddr("glBlendParameteriNV"))
 	gpBlitFramebuffer = (C.GPBLITFRAMEBUFFER)(getProcAddr("glBlitFramebuffer"))
 	gpBlitNamedFramebuffer = (C.GPBLITNAMEDFRAMEBUFFER)(getProcAddr("glBlitNamedFramebuffer"))
 	gpBufferData = (C.GPBUFFERDATA)(getProcAddr("glBufferData"))
@@ -13563,7 +11599,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpClampColor = (C.GPCLAMPCOLOR)(getProcAddr("glClampColor"))
 	gpClear = (C.GPCLEAR)(getProcAddr("glClear"))
 	gpClearAccum = (C.GPCLEARACCUM)(getProcAddr("glClearAccum"))
-	gpClearAccumxOES = (C.GPCLEARACCUMXOES)(getProcAddr("glClearAccumxOES"))
 	gpClearBufferData = (C.GPCLEARBUFFERDATA)(getProcAddr("glClearBufferData"))
 	gpClearBufferSubData = (C.GPCLEARBUFFERSUBDATA)(getProcAddr("glClearBufferSubData"))
 	gpClearBufferfi = (C.GPCLEARBUFFERFI)(getProcAddr("glClearBufferfi"))
@@ -13571,11 +11606,8 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpClearBufferiv = (C.GPCLEARBUFFERIV)(getProcAddr("glClearBufferiv"))
 	gpClearBufferuiv = (C.GPCLEARBUFFERUIV)(getProcAddr("glClearBufferuiv"))
 	gpClearColor = (C.GPCLEARCOLOR)(getProcAddr("glClearColor"))
-	gpClearColorxOES = (C.GPCLEARCOLORXOES)(getProcAddr("glClearColorxOES"))
 	gpClearDepth = (C.GPCLEARDEPTH)(getProcAddr("glClearDepth"))
 	gpClearDepthf = (C.GPCLEARDEPTHF)(getProcAddr("glClearDepthf"))
-	gpClearDepthfOES = (C.GPCLEARDEPTHFOES)(getProcAddr("glClearDepthfOES"))
-	gpClearDepthxOES = (C.GPCLEARDEPTHXOES)(getProcAddr("glClearDepthxOES"))
 	gpClearIndex = (C.GPCLEARINDEX)(getProcAddr("glClearIndex"))
 	gpClearNamedBufferData = (C.GPCLEARNAMEDBUFFERDATA)(getProcAddr("glClearNamedBufferData"))
 	gpClearNamedBufferSubData = (C.GPCLEARNAMEDBUFFERSUBDATA)(getProcAddr("glClearNamedBufferSubData"))
@@ -13590,8 +11622,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpClientWaitSync = (C.GPCLIENTWAITSYNC)(getProcAddr("glClientWaitSync"))
 	gpClipControl = (C.GPCLIPCONTROL)(getProcAddr("glClipControl"))
 	gpClipPlane = (C.GPCLIPPLANE)(getProcAddr("glClipPlane"))
-	gpClipPlanefOES = (C.GPCLIPPLANEFOES)(getProcAddr("glClipPlanefOES"))
-	gpClipPlanexOES = (C.GPCLIPPLANEXOES)(getProcAddr("glClipPlanexOES"))
 	gpColor3b = (C.GPCOLOR3B)(getProcAddr("glColor3b"))
 	gpColor3bv = (C.GPCOLOR3BV)(getProcAddr("glColor3bv"))
 	gpColor3d = (C.GPCOLOR3D)(getProcAddr("glColor3d"))
@@ -13608,8 +11638,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpColor3uiv = (C.GPCOLOR3UIV)(getProcAddr("glColor3uiv"))
 	gpColor3us = (C.GPCOLOR3US)(getProcAddr("glColor3us"))
 	gpColor3usv = (C.GPCOLOR3USV)(getProcAddr("glColor3usv"))
-	gpColor3xOES = (C.GPCOLOR3XOES)(getProcAddr("glColor3xOES"))
-	gpColor3xvOES = (C.GPCOLOR3XVOES)(getProcAddr("glColor3xvOES"))
 	gpColor4b = (C.GPCOLOR4B)(getProcAddr("glColor4b"))
 	gpColor4bv = (C.GPCOLOR4BV)(getProcAddr("glColor4bv"))
 	gpColor4d = (C.GPCOLOR4D)(getProcAddr("glColor4d"))
@@ -13626,8 +11654,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpColor4uiv = (C.GPCOLOR4UIV)(getProcAddr("glColor4uiv"))
 	gpColor4us = (C.GPCOLOR4US)(getProcAddr("glColor4us"))
 	gpColor4usv = (C.GPCOLOR4USV)(getProcAddr("glColor4usv"))
-	gpColor4xOES = (C.GPCOLOR4XOES)(getProcAddr("glColor4xOES"))
-	gpColor4xvOES = (C.GPCOLOR4XVOES)(getProcAddr("glColor4xvOES"))
 	gpColorMask = (C.GPCOLORMASK)(getProcAddr("glColorMask"))
 	gpColorMaski = (C.GPCOLORMASKI)(getProcAddr("glColorMaski"))
 	gpColorMaterial = (C.GPCOLORMATERIAL)(getProcAddr("glColorMaterial"))
@@ -13643,8 +11669,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpCompressedTextureSubImage1D = (C.GPCOMPRESSEDTEXTURESUBIMAGE1D)(getProcAddr("glCompressedTextureSubImage1D"))
 	gpCompressedTextureSubImage2D = (C.GPCOMPRESSEDTEXTURESUBIMAGE2D)(getProcAddr("glCompressedTextureSubImage2D"))
 	gpCompressedTextureSubImage3D = (C.GPCOMPRESSEDTEXTURESUBIMAGE3D)(getProcAddr("glCompressedTextureSubImage3D"))
-	gpConvolutionParameterxOES = (C.GPCONVOLUTIONPARAMETERXOES)(getProcAddr("glConvolutionParameterxOES"))
-	gpConvolutionParameterxvOES = (C.GPCONVOLUTIONPARAMETERXVOES)(getProcAddr("glConvolutionParameterxvOES"))
 	gpCopyBufferSubData = (C.GPCOPYBUFFERSUBDATA)(getProcAddr("glCopyBufferSubData"))
 	gpCopyImageSubData = (C.GPCOPYIMAGESUBDATA)(getProcAddr("glCopyImageSubData"))
 	gpCopyNamedBufferSubData = (C.GPCOPYNAMEDBUFFERSUBDATA)(getProcAddr("glCopyNamedBufferSubData"))
@@ -13659,16 +11683,13 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpCopyTextureSubImage3D = (C.GPCOPYTEXTURESUBIMAGE3D)(getProcAddr("glCopyTextureSubImage3D"))
 	gpCreateBuffers = (C.GPCREATEBUFFERS)(getProcAddr("glCreateBuffers"))
 	gpCreateFramebuffers = (C.GPCREATEFRAMEBUFFERS)(getProcAddr("glCreateFramebuffers"))
-	gpCreatePerfQueryINTEL = (C.GPCREATEPERFQUERYINTEL)(getProcAddr("glCreatePerfQueryINTEL"))
 	gpCreateProgram = (C.GPCREATEPROGRAM)(getProcAddr("glCreateProgram"))
 	gpCreateProgramPipelines = (C.GPCREATEPROGRAMPIPELINES)(getProcAddr("glCreateProgramPipelines"))
 	gpCreateQueries = (C.GPCREATEQUERIES)(getProcAddr("glCreateQueries"))
 	gpCreateRenderbuffers = (C.GPCREATERENDERBUFFERS)(getProcAddr("glCreateRenderbuffers"))
 	gpCreateSamplers = (C.GPCREATESAMPLERS)(getProcAddr("glCreateSamplers"))
 	gpCreateShader = (C.GPCREATESHADER)(getProcAddr("glCreateShader"))
-	gpCreateShaderProgramEXT = (C.GPCREATESHADERPROGRAMEXT)(getProcAddr("glCreateShaderProgramEXT"))
 	gpCreateShaderProgramv = (C.GPCREATESHADERPROGRAMV)(getProcAddr("glCreateShaderProgramv"))
-	gpCreateShaderProgramvEXT = (C.GPCREATESHADERPROGRAMVEXT)(getProcAddr("glCreateShaderProgramvEXT"))
 	gpCreateSyncFromCLeventARB = (C.GPCREATESYNCFROMCLEVENTARB)(getProcAddr("glCreateSyncFromCLeventARB"))
 	gpCreateTextures = (C.GPCREATETEXTURES)(getProcAddr("glCreateTextures"))
 	gpCreateTransformFeedbacks = (C.GPCREATETRANSFORMFEEDBACKS)(getProcAddr("glCreateTransformFeedbacks"))
@@ -13684,15 +11705,11 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDebugMessageInsertARB = (C.GPDEBUGMESSAGEINSERTARB)(getProcAddr("glDebugMessageInsertARB"))
 	gpDebugMessageInsertKHR = (C.GPDEBUGMESSAGEINSERTKHR)(getProcAddr("glDebugMessageInsertKHR"))
 	gpDeleteBuffers = (C.GPDELETEBUFFERS)(getProcAddr("glDeleteBuffers"))
-	gpDeleteFencesNV = (C.GPDELETEFENCESNV)(getProcAddr("glDeleteFencesNV"))
 	gpDeleteFramebuffers = (C.GPDELETEFRAMEBUFFERS)(getProcAddr("glDeleteFramebuffers"))
 	gpDeleteLists = (C.GPDELETELISTS)(getProcAddr("glDeleteLists"))
 	gpDeleteNamedStringARB = (C.GPDELETENAMEDSTRINGARB)(getProcAddr("glDeleteNamedStringARB"))
-	gpDeletePerfMonitorsAMD = (C.GPDELETEPERFMONITORSAMD)(getProcAddr("glDeletePerfMonitorsAMD"))
-	gpDeletePerfQueryINTEL = (C.GPDELETEPERFQUERYINTEL)(getProcAddr("glDeletePerfQueryINTEL"))
 	gpDeleteProgram = (C.GPDELETEPROGRAM)(getProcAddr("glDeleteProgram"))
 	gpDeleteProgramPipelines = (C.GPDELETEPROGRAMPIPELINES)(getProcAddr("glDeleteProgramPipelines"))
-	gpDeleteProgramPipelinesEXT = (C.GPDELETEPROGRAMPIPELINESEXT)(getProcAddr("glDeleteProgramPipelinesEXT"))
 	gpDeleteQueries = (C.GPDELETEQUERIES)(getProcAddr("glDeleteQueries"))
 	gpDeleteRenderbuffers = (C.GPDELETERENDERBUFFERS)(getProcAddr("glDeleteRenderbuffers"))
 	gpDeleteSamplers = (C.GPDELETESAMPLERS)(getProcAddr("glDeleteSamplers"))
@@ -13707,8 +11724,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDepthRangeArrayv = (C.GPDEPTHRANGEARRAYV)(getProcAddr("glDepthRangeArrayv"))
 	gpDepthRangeIndexed = (C.GPDEPTHRANGEINDEXED)(getProcAddr("glDepthRangeIndexed"))
 	gpDepthRangef = (C.GPDEPTHRANGEF)(getProcAddr("glDepthRangef"))
-	gpDepthRangefOES = (C.GPDEPTHRANGEFOES)(getProcAddr("glDepthRangefOES"))
-	gpDepthRangexOES = (C.GPDEPTHRANGEXOES)(getProcAddr("glDepthRangexOES"))
 	gpDetachShader = (C.GPDETACHSHADER)(getProcAddr("glDetachShader"))
 	gpDisable = (C.GPDISABLE)(getProcAddr("glDisable"))
 	gpDisableClientState = (C.GPDISABLECLIENTSTATE)(getProcAddr("glDisableClientState"))
@@ -13722,7 +11737,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDrawArraysIndirect = (C.GPDRAWARRAYSINDIRECT)(getProcAddr("glDrawArraysIndirect"))
 	gpDrawArraysInstanced = (C.GPDRAWARRAYSINSTANCED)(getProcAddr("glDrawArraysInstanced"))
 	gpDrawArraysInstancedBaseInstance = (C.GPDRAWARRAYSINSTANCEDBASEINSTANCE)(getProcAddr("glDrawArraysInstancedBaseInstance"))
-	gpDrawArraysInstancedEXT = (C.GPDRAWARRAYSINSTANCEDEXT)(getProcAddr("glDrawArraysInstancedEXT"))
 	gpDrawBuffer = (C.GPDRAWBUFFER)(getProcAddr("glDrawBuffer"))
 	gpDrawBuffers = (C.GPDRAWBUFFERS)(getProcAddr("glDrawBuffers"))
 	gpDrawElements = (C.GPDRAWELEMENTS)(getProcAddr("glDrawElements"))
@@ -13732,7 +11746,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDrawElementsInstancedBaseInstance = (C.GPDRAWELEMENTSINSTANCEDBASEINSTANCE)(getProcAddr("glDrawElementsInstancedBaseInstance"))
 	gpDrawElementsInstancedBaseVertex = (C.GPDRAWELEMENTSINSTANCEDBASEVERTEX)(getProcAddr("glDrawElementsInstancedBaseVertex"))
 	gpDrawElementsInstancedBaseVertexBaseInstance = (C.GPDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCE)(getProcAddr("glDrawElementsInstancedBaseVertexBaseInstance"))
-	gpDrawElementsInstancedEXT = (C.GPDRAWELEMENTSINSTANCEDEXT)(getProcAddr("glDrawElementsInstancedEXT"))
 	gpDrawPixels = (C.GPDRAWPIXELS)(getProcAddr("glDrawPixels"))
 	gpDrawRangeElements = (C.GPDRAWRANGEELEMENTS)(getProcAddr("glDrawRangeElements"))
 	gpDrawRangeElementsBaseVertex = (C.GPDRAWRANGEELEMENTSBASEVERTEX)(getProcAddr("glDrawRangeElementsBaseVertex"))
@@ -13751,8 +11764,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpEnd = (C.GPEND)(getProcAddr("glEnd"))
 	gpEndConditionalRender = (C.GPENDCONDITIONALRENDER)(getProcAddr("glEndConditionalRender"))
 	gpEndList = (C.GPENDLIST)(getProcAddr("glEndList"))
-	gpEndPerfMonitorAMD = (C.GPENDPERFMONITORAMD)(getProcAddr("glEndPerfMonitorAMD"))
-	gpEndPerfQueryINTEL = (C.GPENDPERFQUERYINTEL)(getProcAddr("glEndPerfQueryINTEL"))
 	gpEndQuery = (C.GPENDQUERY)(getProcAddr("glEndQuery"))
 	gpEndQueryIndexed = (C.GPENDQUERYINDEXED)(getProcAddr("glEndQueryIndexed"))
 	gpEndTransformFeedback = (C.GPENDTRANSFORMFEEDBACK)(getProcAddr("glEndTransformFeedback"))
@@ -13760,23 +11771,17 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpEvalCoord1dv = (C.GPEVALCOORD1DV)(getProcAddr("glEvalCoord1dv"))
 	gpEvalCoord1f = (C.GPEVALCOORD1F)(getProcAddr("glEvalCoord1f"))
 	gpEvalCoord1fv = (C.GPEVALCOORD1FV)(getProcAddr("glEvalCoord1fv"))
-	gpEvalCoord1xOES = (C.GPEVALCOORD1XOES)(getProcAddr("glEvalCoord1xOES"))
-	gpEvalCoord1xvOES = (C.GPEVALCOORD1XVOES)(getProcAddr("glEvalCoord1xvOES"))
 	gpEvalCoord2d = (C.GPEVALCOORD2D)(getProcAddr("glEvalCoord2d"))
 	gpEvalCoord2dv = (C.GPEVALCOORD2DV)(getProcAddr("glEvalCoord2dv"))
 	gpEvalCoord2f = (C.GPEVALCOORD2F)(getProcAddr("glEvalCoord2f"))
 	gpEvalCoord2fv = (C.GPEVALCOORD2FV)(getProcAddr("glEvalCoord2fv"))
-	gpEvalCoord2xOES = (C.GPEVALCOORD2XOES)(getProcAddr("glEvalCoord2xOES"))
-	gpEvalCoord2xvOES = (C.GPEVALCOORD2XVOES)(getProcAddr("glEvalCoord2xvOES"))
 	gpEvalMesh1 = (C.GPEVALMESH1)(getProcAddr("glEvalMesh1"))
 	gpEvalMesh2 = (C.GPEVALMESH2)(getProcAddr("glEvalMesh2"))
 	gpEvalPoint1 = (C.GPEVALPOINT1)(getProcAddr("glEvalPoint1"))
 	gpEvalPoint2 = (C.GPEVALPOINT2)(getProcAddr("glEvalPoint2"))
 	gpFeedbackBuffer = (C.GPFEEDBACKBUFFER)(getProcAddr("glFeedbackBuffer"))
-	gpFeedbackBufferxOES = (C.GPFEEDBACKBUFFERXOES)(getProcAddr("glFeedbackBufferxOES"))
 	gpFenceSync = (C.GPFENCESYNC)(getProcAddr("glFenceSync"))
 	gpFinish = (C.GPFINISH)(getProcAddr("glFinish"))
-	gpFinishFenceNV = (C.GPFINISHFENCENV)(getProcAddr("glFinishFenceNV"))
 	gpFlush = (C.GPFLUSH)(getProcAddr("glFlush"))
 	gpFlushMappedBufferRange = (C.GPFLUSHMAPPEDBUFFERRANGE)(getProcAddr("glFlushMappedBufferRange"))
 	gpFlushMappedNamedBufferRange = (C.GPFLUSHMAPPEDNAMEDBUFFERRANGE)(getProcAddr("glFlushMappedNamedBufferRange"))
@@ -13789,8 +11794,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpFogfv = (C.GPFOGFV)(getProcAddr("glFogfv"))
 	gpFogi = (C.GPFOGI)(getProcAddr("glFogi"))
 	gpFogiv = (C.GPFOGIV)(getProcAddr("glFogiv"))
-	gpFogxOES = (C.GPFOGXOES)(getProcAddr("glFogxOES"))
-	gpFogxvOES = (C.GPFOGXVOES)(getProcAddr("glFogxvOES"))
 	gpFramebufferParameteri = (C.GPFRAMEBUFFERPARAMETERI)(getProcAddr("glFramebufferParameteri"))
 	gpFramebufferRenderbuffer = (C.GPFRAMEBUFFERRENDERBUFFER)(getProcAddr("glFramebufferRenderbuffer"))
 	gpFramebufferTexture = (C.GPFRAMEBUFFERTEXTURE)(getProcAddr("glFramebufferTexture"))
@@ -13800,15 +11803,10 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpFramebufferTextureLayer = (C.GPFRAMEBUFFERTEXTURELAYER)(getProcAddr("glFramebufferTextureLayer"))
 	gpFrontFace = (C.GPFRONTFACE)(getProcAddr("glFrontFace"))
 	gpFrustum = (C.GPFRUSTUM)(getProcAddr("glFrustum"))
-	gpFrustumfOES = (C.GPFRUSTUMFOES)(getProcAddr("glFrustumfOES"))
-	gpFrustumxOES = (C.GPFRUSTUMXOES)(getProcAddr("glFrustumxOES"))
 	gpGenBuffers = (C.GPGENBUFFERS)(getProcAddr("glGenBuffers"))
-	gpGenFencesNV = (C.GPGENFENCESNV)(getProcAddr("glGenFencesNV"))
 	gpGenFramebuffers = (C.GPGENFRAMEBUFFERS)(getProcAddr("glGenFramebuffers"))
 	gpGenLists = (C.GPGENLISTS)(getProcAddr("glGenLists"))
-	gpGenPerfMonitorsAMD = (C.GPGENPERFMONITORSAMD)(getProcAddr("glGenPerfMonitorsAMD"))
 	gpGenProgramPipelines = (C.GPGENPROGRAMPIPELINES)(getProcAddr("glGenProgramPipelines"))
-	gpGenProgramPipelinesEXT = (C.GPGENPROGRAMPIPELINESEXT)(getProcAddr("glGenProgramPipelinesEXT"))
 	gpGenQueries = (C.GPGENQUERIES)(getProcAddr("glGenQueries"))
 	gpGenRenderbuffers = (C.GPGENRENDERBUFFERS)(getProcAddr("glGenRenderbuffers"))
 	gpGenSamplers = (C.GPGENSAMPLERS)(getProcAddr("glGenSamplers"))
@@ -13836,21 +11834,15 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpGetBufferPointerv = (C.GPGETBUFFERPOINTERV)(getProcAddr("glGetBufferPointerv"))
 	gpGetBufferSubData = (C.GPGETBUFFERSUBDATA)(getProcAddr("glGetBufferSubData"))
 	gpGetClipPlane = (C.GPGETCLIPPLANE)(getProcAddr("glGetClipPlane"))
-	gpGetClipPlanefOES = (C.GPGETCLIPPLANEFOES)(getProcAddr("glGetClipPlanefOES"))
-	gpGetClipPlanexOES = (C.GPGETCLIPPLANEXOES)(getProcAddr("glGetClipPlanexOES"))
 	gpGetCompressedTexImage = (C.GPGETCOMPRESSEDTEXIMAGE)(getProcAddr("glGetCompressedTexImage"))
 	gpGetCompressedTextureImage = (C.GPGETCOMPRESSEDTEXTUREIMAGE)(getProcAddr("glGetCompressedTextureImage"))
 	gpGetCompressedTextureSubImage = (C.GPGETCOMPRESSEDTEXTURESUBIMAGE)(getProcAddr("glGetCompressedTextureSubImage"))
-	gpGetConvolutionParameterxvOES = (C.GPGETCONVOLUTIONPARAMETERXVOES)(getProcAddr("glGetConvolutionParameterxvOES"))
 	gpGetDebugMessageLog = (C.GPGETDEBUGMESSAGELOG)(getProcAddr("glGetDebugMessageLog"))
 	gpGetDebugMessageLogARB = (C.GPGETDEBUGMESSAGELOGARB)(getProcAddr("glGetDebugMessageLogARB"))
 	gpGetDebugMessageLogKHR = (C.GPGETDEBUGMESSAGELOGKHR)(getProcAddr("glGetDebugMessageLogKHR"))
 	gpGetDoublei_v = (C.GPGETDOUBLEI_V)(getProcAddr("glGetDoublei_v"))
 	gpGetDoublev = (C.GPGETDOUBLEV)(getProcAddr("glGetDoublev"))
 	gpGetError = (C.GPGETERROR)(getProcAddr("glGetError"))
-	gpGetFenceivNV = (C.GPGETFENCEIVNV)(getProcAddr("glGetFenceivNV"))
-	gpGetFirstPerfQueryIdINTEL = (C.GPGETFIRSTPERFQUERYIDINTEL)(getProcAddr("glGetFirstPerfQueryIdINTEL"))
-	gpGetFixedvOES = (C.GPGETFIXEDVOES)(getProcAddr("glGetFixedvOES"))
 	gpGetFloati_v = (C.GPGETFLOATI_V)(getProcAddr("glGetFloati_v"))
 	gpGetFloatv = (C.GPGETFLOATV)(getProcAddr("glGetFloatv"))
 	gpGetFragDataIndex = (C.GPGETFRAGDATAINDEX)(getProcAddr("glGetFragDataIndex"))
@@ -13860,7 +11852,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpGetGraphicsResetStatus = (C.GPGETGRAPHICSRESETSTATUS)(getProcAddr("glGetGraphicsResetStatus"))
 	gpGetGraphicsResetStatusARB = (C.GPGETGRAPHICSRESETSTATUSARB)(getProcAddr("glGetGraphicsResetStatusARB"))
 	gpGetGraphicsResetStatusKHR = (C.GPGETGRAPHICSRESETSTATUSKHR)(getProcAddr("glGetGraphicsResetStatusKHR"))
-	gpGetHistogramParameterxvOES = (C.GPGETHISTOGRAMPARAMETERXVOES)(getProcAddr("glGetHistogramParameterxvOES"))
 	gpGetImageHandleARB = (C.GPGETIMAGEHANDLEARB)(getProcAddr("glGetImageHandleARB"))
 	gpGetInteger64i_v = (C.GPGETINTEGER64I_V)(getProcAddr("glGetInteger64i_v"))
 	gpGetInteger64v = (C.GPGETINTEGER64V)(getProcAddr("glGetInteger64v"))
@@ -13870,16 +11861,11 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpGetInternalformativ = (C.GPGETINTERNALFORMATIV)(getProcAddr("glGetInternalformativ"))
 	gpGetLightfv = (C.GPGETLIGHTFV)(getProcAddr("glGetLightfv"))
 	gpGetLightiv = (C.GPGETLIGHTIV)(getProcAddr("glGetLightiv"))
-	gpGetLightxOES = (C.GPGETLIGHTXOES)(getProcAddr("glGetLightxOES"))
-	gpGetLightxvOES = (C.GPGETLIGHTXVOES)(getProcAddr("glGetLightxvOES"))
 	gpGetMapdv = (C.GPGETMAPDV)(getProcAddr("glGetMapdv"))
 	gpGetMapfv = (C.GPGETMAPFV)(getProcAddr("glGetMapfv"))
 	gpGetMapiv = (C.GPGETMAPIV)(getProcAddr("glGetMapiv"))
-	gpGetMapxvOES = (C.GPGETMAPXVOES)(getProcAddr("glGetMapxvOES"))
 	gpGetMaterialfv = (C.GPGETMATERIALFV)(getProcAddr("glGetMaterialfv"))
 	gpGetMaterialiv = (C.GPGETMATERIALIV)(getProcAddr("glGetMaterialiv"))
-	gpGetMaterialxOES = (C.GPGETMATERIALXOES)(getProcAddr("glGetMaterialxOES"))
-	gpGetMaterialxvOES = (C.GPGETMATERIALXVOES)(getProcAddr("glGetMaterialxvOES"))
 	gpGetMultisamplefv = (C.GPGETMULTISAMPLEFV)(getProcAddr("glGetMultisamplefv"))
 	gpGetNamedBufferParameteri64v = (C.GPGETNAMEDBUFFERPARAMETERI64V)(getProcAddr("glGetNamedBufferParameteri64v"))
 	gpGetNamedBufferParameteriv = (C.GPGETNAMEDBUFFERPARAMETERIV)(getProcAddr("glGetNamedBufferParameteriv"))
@@ -13890,26 +11876,13 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpGetNamedRenderbufferParameteriv = (C.GPGETNAMEDRENDERBUFFERPARAMETERIV)(getProcAddr("glGetNamedRenderbufferParameteriv"))
 	gpGetNamedStringARB = (C.GPGETNAMEDSTRINGARB)(getProcAddr("glGetNamedStringARB"))
 	gpGetNamedStringivARB = (C.GPGETNAMEDSTRINGIVARB)(getProcAddr("glGetNamedStringivARB"))
-	gpGetNextPerfQueryIdINTEL = (C.GPGETNEXTPERFQUERYIDINTEL)(getProcAddr("glGetNextPerfQueryIdINTEL"))
 	gpGetObjectLabel = (C.GPGETOBJECTLABEL)(getProcAddr("glGetObjectLabel"))
-	gpGetObjectLabelEXT = (C.GPGETOBJECTLABELEXT)(getProcAddr("glGetObjectLabelEXT"))
 	gpGetObjectLabelKHR = (C.GPGETOBJECTLABELKHR)(getProcAddr("glGetObjectLabelKHR"))
 	gpGetObjectPtrLabel = (C.GPGETOBJECTPTRLABEL)(getProcAddr("glGetObjectPtrLabel"))
 	gpGetObjectPtrLabelKHR = (C.GPGETOBJECTPTRLABELKHR)(getProcAddr("glGetObjectPtrLabelKHR"))
-	gpGetPerfCounterInfoINTEL = (C.GPGETPERFCOUNTERINFOINTEL)(getProcAddr("glGetPerfCounterInfoINTEL"))
-	gpGetPerfMonitorCounterDataAMD = (C.GPGETPERFMONITORCOUNTERDATAAMD)(getProcAddr("glGetPerfMonitorCounterDataAMD"))
-	gpGetPerfMonitorCounterInfoAMD = (C.GPGETPERFMONITORCOUNTERINFOAMD)(getProcAddr("glGetPerfMonitorCounterInfoAMD"))
-	gpGetPerfMonitorCounterStringAMD = (C.GPGETPERFMONITORCOUNTERSTRINGAMD)(getProcAddr("glGetPerfMonitorCounterStringAMD"))
-	gpGetPerfMonitorCountersAMD = (C.GPGETPERFMONITORCOUNTERSAMD)(getProcAddr("glGetPerfMonitorCountersAMD"))
-	gpGetPerfMonitorGroupStringAMD = (C.GPGETPERFMONITORGROUPSTRINGAMD)(getProcAddr("glGetPerfMonitorGroupStringAMD"))
-	gpGetPerfMonitorGroupsAMD = (C.GPGETPERFMONITORGROUPSAMD)(getProcAddr("glGetPerfMonitorGroupsAMD"))
-	gpGetPerfQueryDataINTEL = (C.GPGETPERFQUERYDATAINTEL)(getProcAddr("glGetPerfQueryDataINTEL"))
-	gpGetPerfQueryIdByNameINTEL = (C.GPGETPERFQUERYIDBYNAMEINTEL)(getProcAddr("glGetPerfQueryIdByNameINTEL"))
-	gpGetPerfQueryInfoINTEL = (C.GPGETPERFQUERYINFOINTEL)(getProcAddr("glGetPerfQueryInfoINTEL"))
 	gpGetPixelMapfv = (C.GPGETPIXELMAPFV)(getProcAddr("glGetPixelMapfv"))
 	gpGetPixelMapuiv = (C.GPGETPIXELMAPUIV)(getProcAddr("glGetPixelMapuiv"))
 	gpGetPixelMapusv = (C.GPGETPIXELMAPUSV)(getProcAddr("glGetPixelMapusv"))
-	gpGetPixelMapxv = (C.GPGETPIXELMAPXV)(getProcAddr("glGetPixelMapxv"))
 	gpGetPointerv = (C.GPGETPOINTERV)(getProcAddr("glGetPointerv"))
 	gpGetPointervKHR = (C.GPGETPOINTERVKHR)(getProcAddr("glGetPointervKHR"))
 	gpGetPolygonStipple = (C.GPGETPOLYGONSTIPPLE)(getProcAddr("glGetPolygonStipple"))
@@ -13917,9 +11890,7 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpGetProgramInfoLog = (C.GPGETPROGRAMINFOLOG)(getProcAddr("glGetProgramInfoLog"))
 	gpGetProgramInterfaceiv = (C.GPGETPROGRAMINTERFACEIV)(getProcAddr("glGetProgramInterfaceiv"))
 	gpGetProgramPipelineInfoLog = (C.GPGETPROGRAMPIPELINEINFOLOG)(getProcAddr("glGetProgramPipelineInfoLog"))
-	gpGetProgramPipelineInfoLogEXT = (C.GPGETPROGRAMPIPELINEINFOLOGEXT)(getProcAddr("glGetProgramPipelineInfoLogEXT"))
 	gpGetProgramPipelineiv = (C.GPGETPROGRAMPIPELINEIV)(getProcAddr("glGetProgramPipelineiv"))
-	gpGetProgramPipelineivEXT = (C.GPGETPROGRAMPIPELINEIVEXT)(getProcAddr("glGetProgramPipelineivEXT"))
 	gpGetProgramResourceIndex = (C.GPGETPROGRAMRESOURCEINDEX)(getProcAddr("glGetProgramResourceIndex"))
 	gpGetProgramResourceLocation = (C.GPGETPROGRAMRESOURCELOCATION)(getProcAddr("glGetProgramResourceLocation"))
 	gpGetProgramResourceLocationIndex = (C.GPGETPROGRAMRESOURCELOCATIONINDEX)(getProcAddr("glGetProgramResourceLocationIndex"))
@@ -13949,20 +11920,16 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpGetSynciv = (C.GPGETSYNCIV)(getProcAddr("glGetSynciv"))
 	gpGetTexEnvfv = (C.GPGETTEXENVFV)(getProcAddr("glGetTexEnvfv"))
 	gpGetTexEnviv = (C.GPGETTEXENVIV)(getProcAddr("glGetTexEnviv"))
-	gpGetTexEnvxvOES = (C.GPGETTEXENVXVOES)(getProcAddr("glGetTexEnvxvOES"))
 	gpGetTexGendv = (C.GPGETTEXGENDV)(getProcAddr("glGetTexGendv"))
 	gpGetTexGenfv = (C.GPGETTEXGENFV)(getProcAddr("glGetTexGenfv"))
 	gpGetTexGeniv = (C.GPGETTEXGENIV)(getProcAddr("glGetTexGeniv"))
-	gpGetTexGenxvOES = (C.GPGETTEXGENXVOES)(getProcAddr("glGetTexGenxvOES"))
 	gpGetTexImage = (C.GPGETTEXIMAGE)(getProcAddr("glGetTexImage"))
 	gpGetTexLevelParameterfv = (C.GPGETTEXLEVELPARAMETERFV)(getProcAddr("glGetTexLevelParameterfv"))
 	gpGetTexLevelParameteriv = (C.GPGETTEXLEVELPARAMETERIV)(getProcAddr("glGetTexLevelParameteriv"))
-	gpGetTexLevelParameterxvOES = (C.GPGETTEXLEVELPARAMETERXVOES)(getProcAddr("glGetTexLevelParameterxvOES"))
 	gpGetTexParameterIiv = (C.GPGETTEXPARAMETERIIV)(getProcAddr("glGetTexParameterIiv"))
 	gpGetTexParameterIuiv = (C.GPGETTEXPARAMETERIUIV)(getProcAddr("glGetTexParameterIuiv"))
 	gpGetTexParameterfv = (C.GPGETTEXPARAMETERFV)(getProcAddr("glGetTexParameterfv"))
 	gpGetTexParameteriv = (C.GPGETTEXPARAMETERIV)(getProcAddr("glGetTexParameteriv"))
-	gpGetTexParameterxvOES = (C.GPGETTEXPARAMETERXVOES)(getProcAddr("glGetTexParameterxvOES"))
 	gpGetTextureHandleARB = (C.GPGETTEXTUREHANDLEARB)(getProcAddr("glGetTextureHandleARB"))
 	gpGetTextureImage = (C.GPGETTEXTUREIMAGE)(getProcAddr("glGetTextureImage"))
 	gpGetTextureLevelParameterfv = (C.GPGETTEXTURELEVELPARAMETERFV)(getProcAddr("glGetTextureLevelParameterfv"))
@@ -14024,10 +11991,7 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpIndexsv = (C.GPINDEXSV)(getProcAddr("glIndexsv"))
 	gpIndexub = (C.GPINDEXUB)(getProcAddr("glIndexub"))
 	gpIndexubv = (C.GPINDEXUBV)(getProcAddr("glIndexubv"))
-	gpIndexxOES = (C.GPINDEXXOES)(getProcAddr("glIndexxOES"))
-	gpIndexxvOES = (C.GPINDEXXVOES)(getProcAddr("glIndexxvOES"))
 	gpInitNames = (C.GPINITNAMES)(getProcAddr("glInitNames"))
-	gpInsertEventMarkerEXT = (C.GPINSERTEVENTMARKEREXT)(getProcAddr("glInsertEventMarkerEXT"))
 	gpInterleavedArrays = (C.GPINTERLEAVEDARRAYS)(getProcAddr("glInterleavedArrays"))
 	gpInvalidateBufferData = (C.GPINVALIDATEBUFFERDATA)(getProcAddr("glInvalidateBufferData"))
 	gpInvalidateBufferSubData = (C.GPINVALIDATEBUFFERSUBDATA)(getProcAddr("glInvalidateBufferSubData"))
@@ -14040,14 +12004,12 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpIsBuffer = (C.GPISBUFFER)(getProcAddr("glIsBuffer"))
 	gpIsEnabled = (C.GPISENABLED)(getProcAddr("glIsEnabled"))
 	gpIsEnabledi = (C.GPISENABLEDI)(getProcAddr("glIsEnabledi"))
-	gpIsFenceNV = (C.GPISFENCENV)(getProcAddr("glIsFenceNV"))
 	gpIsFramebuffer = (C.GPISFRAMEBUFFER)(getProcAddr("glIsFramebuffer"))
 	gpIsImageHandleResidentARB = (C.GPISIMAGEHANDLERESIDENTARB)(getProcAddr("glIsImageHandleResidentARB"))
 	gpIsList = (C.GPISLIST)(getProcAddr("glIsList"))
 	gpIsNamedStringARB = (C.GPISNAMEDSTRINGARB)(getProcAddr("glIsNamedStringARB"))
 	gpIsProgram = (C.GPISPROGRAM)(getProcAddr("glIsProgram"))
 	gpIsProgramPipeline = (C.GPISPROGRAMPIPELINE)(getProcAddr("glIsProgramPipeline"))
-	gpIsProgramPipelineEXT = (C.GPISPROGRAMPIPELINEEXT)(getProcAddr("glIsProgramPipelineEXT"))
 	gpIsQuery = (C.GPISQUERY)(getProcAddr("glIsQuery"))
 	gpIsRenderbuffer = (C.GPISRENDERBUFFER)(getProcAddr("glIsRenderbuffer"))
 	gpIsSampler = (C.GPISSAMPLER)(getProcAddr("glIsSampler"))
@@ -14057,32 +12019,24 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpIsTextureHandleResidentARB = (C.GPISTEXTUREHANDLERESIDENTARB)(getProcAddr("glIsTextureHandleResidentARB"))
 	gpIsTransformFeedback = (C.GPISTRANSFORMFEEDBACK)(getProcAddr("glIsTransformFeedback"))
 	gpIsVertexArray = (C.GPISVERTEXARRAY)(getProcAddr("glIsVertexArray"))
-	gpLabelObjectEXT = (C.GPLABELOBJECTEXT)(getProcAddr("glLabelObjectEXT"))
 	gpLightModelf = (C.GPLIGHTMODELF)(getProcAddr("glLightModelf"))
 	gpLightModelfv = (C.GPLIGHTMODELFV)(getProcAddr("glLightModelfv"))
 	gpLightModeli = (C.GPLIGHTMODELI)(getProcAddr("glLightModeli"))
 	gpLightModeliv = (C.GPLIGHTMODELIV)(getProcAddr("glLightModeliv"))
-	gpLightModelxOES = (C.GPLIGHTMODELXOES)(getProcAddr("glLightModelxOES"))
-	gpLightModelxvOES = (C.GPLIGHTMODELXVOES)(getProcAddr("glLightModelxvOES"))
 	gpLightf = (C.GPLIGHTF)(getProcAddr("glLightf"))
 	gpLightfv = (C.GPLIGHTFV)(getProcAddr("glLightfv"))
 	gpLighti = (C.GPLIGHTI)(getProcAddr("glLighti"))
 	gpLightiv = (C.GPLIGHTIV)(getProcAddr("glLightiv"))
-	gpLightxOES = (C.GPLIGHTXOES)(getProcAddr("glLightxOES"))
-	gpLightxvOES = (C.GPLIGHTXVOES)(getProcAddr("glLightxvOES"))
 	gpLineStipple = (C.GPLINESTIPPLE)(getProcAddr("glLineStipple"))
 	gpLineWidth = (C.GPLINEWIDTH)(getProcAddr("glLineWidth"))
-	gpLineWidthxOES = (C.GPLINEWIDTHXOES)(getProcAddr("glLineWidthxOES"))
 	gpLinkProgram = (C.GPLINKPROGRAM)(getProcAddr("glLinkProgram"))
 	gpListBase = (C.GPLISTBASE)(getProcAddr("glListBase"))
 	gpLoadIdentity = (C.GPLOADIDENTITY)(getProcAddr("glLoadIdentity"))
 	gpLoadMatrixd = (C.GPLOADMATRIXD)(getProcAddr("glLoadMatrixd"))
 	gpLoadMatrixf = (C.GPLOADMATRIXF)(getProcAddr("glLoadMatrixf"))
-	gpLoadMatrixxOES = (C.GPLOADMATRIXXOES)(getProcAddr("glLoadMatrixxOES"))
 	gpLoadName = (C.GPLOADNAME)(getProcAddr("glLoadName"))
 	gpLoadTransposeMatrixd = (C.GPLOADTRANSPOSEMATRIXD)(getProcAddr("glLoadTransposeMatrixd"))
 	gpLoadTransposeMatrixf = (C.GPLOADTRANSPOSEMATRIXF)(getProcAddr("glLoadTransposeMatrixf"))
-	gpLoadTransposeMatrixxOES = (C.GPLOADTRANSPOSEMATRIXXOES)(getProcAddr("glLoadTransposeMatrixxOES"))
 	gpLogicOp = (C.GPLOGICOP)(getProcAddr("glLogicOp"))
 	gpMakeImageHandleNonResidentARB = (C.GPMAKEIMAGEHANDLENONRESIDENTARB)(getProcAddr("glMakeImageHandleNonResidentARB"))
 	gpMakeImageHandleResidentARB = (C.GPMAKEIMAGEHANDLERESIDENTARB)(getProcAddr("glMakeImageHandleResidentARB"))
@@ -14090,26 +12044,20 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMakeTextureHandleResidentARB = (C.GPMAKETEXTUREHANDLERESIDENTARB)(getProcAddr("glMakeTextureHandleResidentARB"))
 	gpMap1d = (C.GPMAP1D)(getProcAddr("glMap1d"))
 	gpMap1f = (C.GPMAP1F)(getProcAddr("glMap1f"))
-	gpMap1xOES = (C.GPMAP1XOES)(getProcAddr("glMap1xOES"))
 	gpMap2d = (C.GPMAP2D)(getProcAddr("glMap2d"))
 	gpMap2f = (C.GPMAP2F)(getProcAddr("glMap2f"))
-	gpMap2xOES = (C.GPMAP2XOES)(getProcAddr("glMap2xOES"))
 	gpMapBuffer = (C.GPMAPBUFFER)(getProcAddr("glMapBuffer"))
 	gpMapBufferRange = (C.GPMAPBUFFERRANGE)(getProcAddr("glMapBufferRange"))
 	gpMapGrid1d = (C.GPMAPGRID1D)(getProcAddr("glMapGrid1d"))
 	gpMapGrid1f = (C.GPMAPGRID1F)(getProcAddr("glMapGrid1f"))
-	gpMapGrid1xOES = (C.GPMAPGRID1XOES)(getProcAddr("glMapGrid1xOES"))
 	gpMapGrid2d = (C.GPMAPGRID2D)(getProcAddr("glMapGrid2d"))
 	gpMapGrid2f = (C.GPMAPGRID2F)(getProcAddr("glMapGrid2f"))
-	gpMapGrid2xOES = (C.GPMAPGRID2XOES)(getProcAddr("glMapGrid2xOES"))
 	gpMapNamedBuffer = (C.GPMAPNAMEDBUFFER)(getProcAddr("glMapNamedBuffer"))
 	gpMapNamedBufferRange = (C.GPMAPNAMEDBUFFERRANGE)(getProcAddr("glMapNamedBufferRange"))
 	gpMaterialf = (C.GPMATERIALF)(getProcAddr("glMaterialf"))
 	gpMaterialfv = (C.GPMATERIALFV)(getProcAddr("glMaterialfv"))
 	gpMateriali = (C.GPMATERIALI)(getProcAddr("glMateriali"))
 	gpMaterialiv = (C.GPMATERIALIV)(getProcAddr("glMaterialiv"))
-	gpMaterialxOES = (C.GPMATERIALXOES)(getProcAddr("glMaterialxOES"))
-	gpMaterialxvOES = (C.GPMATERIALXVOES)(getProcAddr("glMaterialxvOES"))
 	gpMatrixMode = (C.GPMATRIXMODE)(getProcAddr("glMatrixMode"))
 	gpMemoryBarrier = (C.GPMEMORYBARRIER)(getProcAddr("glMemoryBarrier"))
 	gpMemoryBarrierByRegion = (C.GPMEMORYBARRIERBYREGION)(getProcAddr("glMemoryBarrierByRegion"))
@@ -14117,21 +12065,15 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMinSampleShadingARB = (C.GPMINSAMPLESHADINGARB)(getProcAddr("glMinSampleShadingARB"))
 	gpMultMatrixd = (C.GPMULTMATRIXD)(getProcAddr("glMultMatrixd"))
 	gpMultMatrixf = (C.GPMULTMATRIXF)(getProcAddr("glMultMatrixf"))
-	gpMultMatrixxOES = (C.GPMULTMATRIXXOES)(getProcAddr("glMultMatrixxOES"))
 	gpMultTransposeMatrixd = (C.GPMULTTRANSPOSEMATRIXD)(getProcAddr("glMultTransposeMatrixd"))
 	gpMultTransposeMatrixf = (C.GPMULTTRANSPOSEMATRIXF)(getProcAddr("glMultTransposeMatrixf"))
-	gpMultTransposeMatrixxOES = (C.GPMULTTRANSPOSEMATRIXXOES)(getProcAddr("glMultTransposeMatrixxOES"))
 	gpMultiDrawArrays = (C.GPMULTIDRAWARRAYS)(getProcAddr("glMultiDrawArrays"))
-	gpMultiDrawArraysEXT = (C.GPMULTIDRAWARRAYSEXT)(getProcAddr("glMultiDrawArraysEXT"))
 	gpMultiDrawArraysIndirect = (C.GPMULTIDRAWARRAYSINDIRECT)(getProcAddr("glMultiDrawArraysIndirect"))
 	gpMultiDrawArraysIndirectCountARB = (C.GPMULTIDRAWARRAYSINDIRECTCOUNTARB)(getProcAddr("glMultiDrawArraysIndirectCountARB"))
 	gpMultiDrawElements = (C.GPMULTIDRAWELEMENTS)(getProcAddr("glMultiDrawElements"))
 	gpMultiDrawElementsBaseVertex = (C.GPMULTIDRAWELEMENTSBASEVERTEX)(getProcAddr("glMultiDrawElementsBaseVertex"))
-	gpMultiDrawElementsEXT = (C.GPMULTIDRAWELEMENTSEXT)(getProcAddr("glMultiDrawElementsEXT"))
 	gpMultiDrawElementsIndirect = (C.GPMULTIDRAWELEMENTSINDIRECT)(getProcAddr("glMultiDrawElementsIndirect"))
 	gpMultiDrawElementsIndirectCountARB = (C.GPMULTIDRAWELEMENTSINDIRECTCOUNTARB)(getProcAddr("glMultiDrawElementsIndirectCountARB"))
-	gpMultiTexCoord1bOES = (C.GPMULTITEXCOORD1BOES)(getProcAddr("glMultiTexCoord1bOES"))
-	gpMultiTexCoord1bvOES = (C.GPMULTITEXCOORD1BVOES)(getProcAddr("glMultiTexCoord1bvOES"))
 	gpMultiTexCoord1d = (C.GPMULTITEXCOORD1D)(getProcAddr("glMultiTexCoord1d"))
 	gpMultiTexCoord1dv = (C.GPMULTITEXCOORD1DV)(getProcAddr("glMultiTexCoord1dv"))
 	gpMultiTexCoord1f = (C.GPMULTITEXCOORD1F)(getProcAddr("glMultiTexCoord1f"))
@@ -14140,10 +12082,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMultiTexCoord1iv = (C.GPMULTITEXCOORD1IV)(getProcAddr("glMultiTexCoord1iv"))
 	gpMultiTexCoord1s = (C.GPMULTITEXCOORD1S)(getProcAddr("glMultiTexCoord1s"))
 	gpMultiTexCoord1sv = (C.GPMULTITEXCOORD1SV)(getProcAddr("glMultiTexCoord1sv"))
-	gpMultiTexCoord1xOES = (C.GPMULTITEXCOORD1XOES)(getProcAddr("glMultiTexCoord1xOES"))
-	gpMultiTexCoord1xvOES = (C.GPMULTITEXCOORD1XVOES)(getProcAddr("glMultiTexCoord1xvOES"))
-	gpMultiTexCoord2bOES = (C.GPMULTITEXCOORD2BOES)(getProcAddr("glMultiTexCoord2bOES"))
-	gpMultiTexCoord2bvOES = (C.GPMULTITEXCOORD2BVOES)(getProcAddr("glMultiTexCoord2bvOES"))
 	gpMultiTexCoord2d = (C.GPMULTITEXCOORD2D)(getProcAddr("glMultiTexCoord2d"))
 	gpMultiTexCoord2dv = (C.GPMULTITEXCOORD2DV)(getProcAddr("glMultiTexCoord2dv"))
 	gpMultiTexCoord2f = (C.GPMULTITEXCOORD2F)(getProcAddr("glMultiTexCoord2f"))
@@ -14152,10 +12090,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMultiTexCoord2iv = (C.GPMULTITEXCOORD2IV)(getProcAddr("glMultiTexCoord2iv"))
 	gpMultiTexCoord2s = (C.GPMULTITEXCOORD2S)(getProcAddr("glMultiTexCoord2s"))
 	gpMultiTexCoord2sv = (C.GPMULTITEXCOORD2SV)(getProcAddr("glMultiTexCoord2sv"))
-	gpMultiTexCoord2xOES = (C.GPMULTITEXCOORD2XOES)(getProcAddr("glMultiTexCoord2xOES"))
-	gpMultiTexCoord2xvOES = (C.GPMULTITEXCOORD2XVOES)(getProcAddr("glMultiTexCoord2xvOES"))
-	gpMultiTexCoord3bOES = (C.GPMULTITEXCOORD3BOES)(getProcAddr("glMultiTexCoord3bOES"))
-	gpMultiTexCoord3bvOES = (C.GPMULTITEXCOORD3BVOES)(getProcAddr("glMultiTexCoord3bvOES"))
 	gpMultiTexCoord3d = (C.GPMULTITEXCOORD3D)(getProcAddr("glMultiTexCoord3d"))
 	gpMultiTexCoord3dv = (C.GPMULTITEXCOORD3DV)(getProcAddr("glMultiTexCoord3dv"))
 	gpMultiTexCoord3f = (C.GPMULTITEXCOORD3F)(getProcAddr("glMultiTexCoord3f"))
@@ -14164,10 +12098,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMultiTexCoord3iv = (C.GPMULTITEXCOORD3IV)(getProcAddr("glMultiTexCoord3iv"))
 	gpMultiTexCoord3s = (C.GPMULTITEXCOORD3S)(getProcAddr("glMultiTexCoord3s"))
 	gpMultiTexCoord3sv = (C.GPMULTITEXCOORD3SV)(getProcAddr("glMultiTexCoord3sv"))
-	gpMultiTexCoord3xOES = (C.GPMULTITEXCOORD3XOES)(getProcAddr("glMultiTexCoord3xOES"))
-	gpMultiTexCoord3xvOES = (C.GPMULTITEXCOORD3XVOES)(getProcAddr("glMultiTexCoord3xvOES"))
-	gpMultiTexCoord4bOES = (C.GPMULTITEXCOORD4BOES)(getProcAddr("glMultiTexCoord4bOES"))
-	gpMultiTexCoord4bvOES = (C.GPMULTITEXCOORD4BVOES)(getProcAddr("glMultiTexCoord4bvOES"))
 	gpMultiTexCoord4d = (C.GPMULTITEXCOORD4D)(getProcAddr("glMultiTexCoord4d"))
 	gpMultiTexCoord4dv = (C.GPMULTITEXCOORD4DV)(getProcAddr("glMultiTexCoord4dv"))
 	gpMultiTexCoord4f = (C.GPMULTITEXCOORD4F)(getProcAddr("glMultiTexCoord4f"))
@@ -14176,8 +12106,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMultiTexCoord4iv = (C.GPMULTITEXCOORD4IV)(getProcAddr("glMultiTexCoord4iv"))
 	gpMultiTexCoord4s = (C.GPMULTITEXCOORD4S)(getProcAddr("glMultiTexCoord4s"))
 	gpMultiTexCoord4sv = (C.GPMULTITEXCOORD4SV)(getProcAddr("glMultiTexCoord4sv"))
-	gpMultiTexCoord4xOES = (C.GPMULTITEXCOORD4XOES)(getProcAddr("glMultiTexCoord4xOES"))
-	gpMultiTexCoord4xvOES = (C.GPMULTITEXCOORD4XVOES)(getProcAddr("glMultiTexCoord4xvOES"))
 	gpNamedBufferData = (C.GPNAMEDBUFFERDATA)(getProcAddr("glNamedBufferData"))
 	gpNamedBufferPageCommitmentARB = (C.GPNAMEDBUFFERPAGECOMMITMENTARB)(getProcAddr("glNamedBufferPageCommitmentARB"))
 	gpNamedBufferPageCommitmentEXT = (C.GPNAMEDBUFFERPAGECOMMITMENTEXT)(getProcAddr("glNamedBufferPageCommitmentEXT"))
@@ -14204,153 +12132,102 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpNormal3iv = (C.GPNORMAL3IV)(getProcAddr("glNormal3iv"))
 	gpNormal3s = (C.GPNORMAL3S)(getProcAddr("glNormal3s"))
 	gpNormal3sv = (C.GPNORMAL3SV)(getProcAddr("glNormal3sv"))
-	gpNormal3xOES = (C.GPNORMAL3XOES)(getProcAddr("glNormal3xOES"))
-	gpNormal3xvOES = (C.GPNORMAL3XVOES)(getProcAddr("glNormal3xvOES"))
 	gpNormalPointer = (C.GPNORMALPOINTER)(getProcAddr("glNormalPointer"))
 	gpObjectLabel = (C.GPOBJECTLABEL)(getProcAddr("glObjectLabel"))
 	gpObjectLabelKHR = (C.GPOBJECTLABELKHR)(getProcAddr("glObjectLabelKHR"))
 	gpObjectPtrLabel = (C.GPOBJECTPTRLABEL)(getProcAddr("glObjectPtrLabel"))
 	gpObjectPtrLabelKHR = (C.GPOBJECTPTRLABELKHR)(getProcAddr("glObjectPtrLabelKHR"))
 	gpOrtho = (C.GPORTHO)(getProcAddr("glOrtho"))
-	gpOrthofOES = (C.GPORTHOFOES)(getProcAddr("glOrthofOES"))
-	gpOrthoxOES = (C.GPORTHOXOES)(getProcAddr("glOrthoxOES"))
 	gpPassThrough = (C.GPPASSTHROUGH)(getProcAddr("glPassThrough"))
-	gpPassThroughxOES = (C.GPPASSTHROUGHXOES)(getProcAddr("glPassThroughxOES"))
 	gpPatchParameterfv = (C.GPPATCHPARAMETERFV)(getProcAddr("glPatchParameterfv"))
 	gpPatchParameteri = (C.GPPATCHPARAMETERI)(getProcAddr("glPatchParameteri"))
 	gpPauseTransformFeedback = (C.GPPAUSETRANSFORMFEEDBACK)(getProcAddr("glPauseTransformFeedback"))
 	gpPixelMapfv = (C.GPPIXELMAPFV)(getProcAddr("glPixelMapfv"))
 	gpPixelMapuiv = (C.GPPIXELMAPUIV)(getProcAddr("glPixelMapuiv"))
 	gpPixelMapusv = (C.GPPIXELMAPUSV)(getProcAddr("glPixelMapusv"))
-	gpPixelMapx = (C.GPPIXELMAPX)(getProcAddr("glPixelMapx"))
 	gpPixelStoref = (C.GPPIXELSTOREF)(getProcAddr("glPixelStoref"))
 	gpPixelStorei = (C.GPPIXELSTOREI)(getProcAddr("glPixelStorei"))
-	gpPixelStorex = (C.GPPIXELSTOREX)(getProcAddr("glPixelStorex"))
 	gpPixelTransferf = (C.GPPIXELTRANSFERF)(getProcAddr("glPixelTransferf"))
 	gpPixelTransferi = (C.GPPIXELTRANSFERI)(getProcAddr("glPixelTransferi"))
-	gpPixelTransferxOES = (C.GPPIXELTRANSFERXOES)(getProcAddr("glPixelTransferxOES"))
 	gpPixelZoom = (C.GPPIXELZOOM)(getProcAddr("glPixelZoom"))
-	gpPixelZoomxOES = (C.GPPIXELZOOMXOES)(getProcAddr("glPixelZoomxOES"))
 	gpPointParameterf = (C.GPPOINTPARAMETERF)(getProcAddr("glPointParameterf"))
 	gpPointParameterfv = (C.GPPOINTPARAMETERFV)(getProcAddr("glPointParameterfv"))
 	gpPointParameteri = (C.GPPOINTPARAMETERI)(getProcAddr("glPointParameteri"))
 	gpPointParameteriv = (C.GPPOINTPARAMETERIV)(getProcAddr("glPointParameteriv"))
-	gpPointParameterxOES = (C.GPPOINTPARAMETERXOES)(getProcAddr("glPointParameterxOES"))
-	gpPointParameterxvOES = (C.GPPOINTPARAMETERXVOES)(getProcAddr("glPointParameterxvOES"))
 	gpPointSize = (C.GPPOINTSIZE)(getProcAddr("glPointSize"))
-	gpPointSizexOES = (C.GPPOINTSIZEXOES)(getProcAddr("glPointSizexOES"))
 	gpPolygonMode = (C.GPPOLYGONMODE)(getProcAddr("glPolygonMode"))
 	gpPolygonOffset = (C.GPPOLYGONOFFSET)(getProcAddr("glPolygonOffset"))
-	gpPolygonOffsetxOES = (C.GPPOLYGONOFFSETXOES)(getProcAddr("glPolygonOffsetxOES"))
 	gpPolygonStipple = (C.GPPOLYGONSTIPPLE)(getProcAddr("glPolygonStipple"))
 	gpPopAttrib = (C.GPPOPATTRIB)(getProcAddr("glPopAttrib"))
 	gpPopClientAttrib = (C.GPPOPCLIENTATTRIB)(getProcAddr("glPopClientAttrib"))
 	gpPopDebugGroup = (C.GPPOPDEBUGGROUP)(getProcAddr("glPopDebugGroup"))
 	gpPopDebugGroupKHR = (C.GPPOPDEBUGGROUPKHR)(getProcAddr("glPopDebugGroupKHR"))
-	gpPopGroupMarkerEXT = (C.GPPOPGROUPMARKEREXT)(getProcAddr("glPopGroupMarkerEXT"))
 	gpPopMatrix = (C.GPPOPMATRIX)(getProcAddr("glPopMatrix"))
 	gpPopName = (C.GPPOPNAME)(getProcAddr("glPopName"))
 	gpPrimitiveRestartIndex = (C.GPPRIMITIVERESTARTINDEX)(getProcAddr("glPrimitiveRestartIndex"))
 	gpPrioritizeTextures = (C.GPPRIORITIZETEXTURES)(getProcAddr("glPrioritizeTextures"))
-	gpPrioritizeTexturesxOES = (C.GPPRIORITIZETEXTURESXOES)(getProcAddr("glPrioritizeTexturesxOES"))
 	gpProgramBinary = (C.GPPROGRAMBINARY)(getProcAddr("glProgramBinary"))
 	gpProgramParameteri = (C.GPPROGRAMPARAMETERI)(getProcAddr("glProgramParameteri"))
-	gpProgramParameteriEXT = (C.GPPROGRAMPARAMETERIEXT)(getProcAddr("glProgramParameteriEXT"))
 	gpProgramUniform1d = (C.GPPROGRAMUNIFORM1D)(getProcAddr("glProgramUniform1d"))
 	gpProgramUniform1dv = (C.GPPROGRAMUNIFORM1DV)(getProcAddr("glProgramUniform1dv"))
 	gpProgramUniform1f = (C.GPPROGRAMUNIFORM1F)(getProcAddr("glProgramUniform1f"))
-	gpProgramUniform1fEXT = (C.GPPROGRAMUNIFORM1FEXT)(getProcAddr("glProgramUniform1fEXT"))
 	gpProgramUniform1fv = (C.GPPROGRAMUNIFORM1FV)(getProcAddr("glProgramUniform1fv"))
-	gpProgramUniform1fvEXT = (C.GPPROGRAMUNIFORM1FVEXT)(getProcAddr("glProgramUniform1fvEXT"))
 	gpProgramUniform1i = (C.GPPROGRAMUNIFORM1I)(getProcAddr("glProgramUniform1i"))
-	gpProgramUniform1iEXT = (C.GPPROGRAMUNIFORM1IEXT)(getProcAddr("glProgramUniform1iEXT"))
 	gpProgramUniform1iv = (C.GPPROGRAMUNIFORM1IV)(getProcAddr("glProgramUniform1iv"))
-	gpProgramUniform1ivEXT = (C.GPPROGRAMUNIFORM1IVEXT)(getProcAddr("glProgramUniform1ivEXT"))
 	gpProgramUniform1ui = (C.GPPROGRAMUNIFORM1UI)(getProcAddr("glProgramUniform1ui"))
-	gpProgramUniform1uiEXT = (C.GPPROGRAMUNIFORM1UIEXT)(getProcAddr("glProgramUniform1uiEXT"))
 	gpProgramUniform1uiv = (C.GPPROGRAMUNIFORM1UIV)(getProcAddr("glProgramUniform1uiv"))
-	gpProgramUniform1uivEXT = (C.GPPROGRAMUNIFORM1UIVEXT)(getProcAddr("glProgramUniform1uivEXT"))
 	gpProgramUniform2d = (C.GPPROGRAMUNIFORM2D)(getProcAddr("glProgramUniform2d"))
 	gpProgramUniform2dv = (C.GPPROGRAMUNIFORM2DV)(getProcAddr("glProgramUniform2dv"))
 	gpProgramUniform2f = (C.GPPROGRAMUNIFORM2F)(getProcAddr("glProgramUniform2f"))
-	gpProgramUniform2fEXT = (C.GPPROGRAMUNIFORM2FEXT)(getProcAddr("glProgramUniform2fEXT"))
 	gpProgramUniform2fv = (C.GPPROGRAMUNIFORM2FV)(getProcAddr("glProgramUniform2fv"))
-	gpProgramUniform2fvEXT = (C.GPPROGRAMUNIFORM2FVEXT)(getProcAddr("glProgramUniform2fvEXT"))
 	gpProgramUniform2i = (C.GPPROGRAMUNIFORM2I)(getProcAddr("glProgramUniform2i"))
-	gpProgramUniform2iEXT = (C.GPPROGRAMUNIFORM2IEXT)(getProcAddr("glProgramUniform2iEXT"))
 	gpProgramUniform2iv = (C.GPPROGRAMUNIFORM2IV)(getProcAddr("glProgramUniform2iv"))
-	gpProgramUniform2ivEXT = (C.GPPROGRAMUNIFORM2IVEXT)(getProcAddr("glProgramUniform2ivEXT"))
 	gpProgramUniform2ui = (C.GPPROGRAMUNIFORM2UI)(getProcAddr("glProgramUniform2ui"))
-	gpProgramUniform2uiEXT = (C.GPPROGRAMUNIFORM2UIEXT)(getProcAddr("glProgramUniform2uiEXT"))
 	gpProgramUniform2uiv = (C.GPPROGRAMUNIFORM2UIV)(getProcAddr("glProgramUniform2uiv"))
-	gpProgramUniform2uivEXT = (C.GPPROGRAMUNIFORM2UIVEXT)(getProcAddr("glProgramUniform2uivEXT"))
 	gpProgramUniform3d = (C.GPPROGRAMUNIFORM3D)(getProcAddr("glProgramUniform3d"))
 	gpProgramUniform3dv = (C.GPPROGRAMUNIFORM3DV)(getProcAddr("glProgramUniform3dv"))
 	gpProgramUniform3f = (C.GPPROGRAMUNIFORM3F)(getProcAddr("glProgramUniform3f"))
-	gpProgramUniform3fEXT = (C.GPPROGRAMUNIFORM3FEXT)(getProcAddr("glProgramUniform3fEXT"))
 	gpProgramUniform3fv = (C.GPPROGRAMUNIFORM3FV)(getProcAddr("glProgramUniform3fv"))
-	gpProgramUniform3fvEXT = (C.GPPROGRAMUNIFORM3FVEXT)(getProcAddr("glProgramUniform3fvEXT"))
 	gpProgramUniform3i = (C.GPPROGRAMUNIFORM3I)(getProcAddr("glProgramUniform3i"))
-	gpProgramUniform3iEXT = (C.GPPROGRAMUNIFORM3IEXT)(getProcAddr("glProgramUniform3iEXT"))
 	gpProgramUniform3iv = (C.GPPROGRAMUNIFORM3IV)(getProcAddr("glProgramUniform3iv"))
-	gpProgramUniform3ivEXT = (C.GPPROGRAMUNIFORM3IVEXT)(getProcAddr("glProgramUniform3ivEXT"))
 	gpProgramUniform3ui = (C.GPPROGRAMUNIFORM3UI)(getProcAddr("glProgramUniform3ui"))
-	gpProgramUniform3uiEXT = (C.GPPROGRAMUNIFORM3UIEXT)(getProcAddr("glProgramUniform3uiEXT"))
 	gpProgramUniform3uiv = (C.GPPROGRAMUNIFORM3UIV)(getProcAddr("glProgramUniform3uiv"))
-	gpProgramUniform3uivEXT = (C.GPPROGRAMUNIFORM3UIVEXT)(getProcAddr("glProgramUniform3uivEXT"))
 	gpProgramUniform4d = (C.GPPROGRAMUNIFORM4D)(getProcAddr("glProgramUniform4d"))
 	gpProgramUniform4dv = (C.GPPROGRAMUNIFORM4DV)(getProcAddr("glProgramUniform4dv"))
 	gpProgramUniform4f = (C.GPPROGRAMUNIFORM4F)(getProcAddr("glProgramUniform4f"))
-	gpProgramUniform4fEXT = (C.GPPROGRAMUNIFORM4FEXT)(getProcAddr("glProgramUniform4fEXT"))
 	gpProgramUniform4fv = (C.GPPROGRAMUNIFORM4FV)(getProcAddr("glProgramUniform4fv"))
-	gpProgramUniform4fvEXT = (C.GPPROGRAMUNIFORM4FVEXT)(getProcAddr("glProgramUniform4fvEXT"))
 	gpProgramUniform4i = (C.GPPROGRAMUNIFORM4I)(getProcAddr("glProgramUniform4i"))
-	gpProgramUniform4iEXT = (C.GPPROGRAMUNIFORM4IEXT)(getProcAddr("glProgramUniform4iEXT"))
 	gpProgramUniform4iv = (C.GPPROGRAMUNIFORM4IV)(getProcAddr("glProgramUniform4iv"))
-	gpProgramUniform4ivEXT = (C.GPPROGRAMUNIFORM4IVEXT)(getProcAddr("glProgramUniform4ivEXT"))
 	gpProgramUniform4ui = (C.GPPROGRAMUNIFORM4UI)(getProcAddr("glProgramUniform4ui"))
-	gpProgramUniform4uiEXT = (C.GPPROGRAMUNIFORM4UIEXT)(getProcAddr("glProgramUniform4uiEXT"))
 	gpProgramUniform4uiv = (C.GPPROGRAMUNIFORM4UIV)(getProcAddr("glProgramUniform4uiv"))
-	gpProgramUniform4uivEXT = (C.GPPROGRAMUNIFORM4UIVEXT)(getProcAddr("glProgramUniform4uivEXT"))
 	gpProgramUniformHandleui64ARB = (C.GPPROGRAMUNIFORMHANDLEUI64ARB)(getProcAddr("glProgramUniformHandleui64ARB"))
 	gpProgramUniformHandleui64vARB = (C.GPPROGRAMUNIFORMHANDLEUI64VARB)(getProcAddr("glProgramUniformHandleui64vARB"))
 	gpProgramUniformMatrix2dv = (C.GPPROGRAMUNIFORMMATRIX2DV)(getProcAddr("glProgramUniformMatrix2dv"))
 	gpProgramUniformMatrix2fv = (C.GPPROGRAMUNIFORMMATRIX2FV)(getProcAddr("glProgramUniformMatrix2fv"))
-	gpProgramUniformMatrix2fvEXT = (C.GPPROGRAMUNIFORMMATRIX2FVEXT)(getProcAddr("glProgramUniformMatrix2fvEXT"))
 	gpProgramUniformMatrix2x3dv = (C.GPPROGRAMUNIFORMMATRIX2X3DV)(getProcAddr("glProgramUniformMatrix2x3dv"))
 	gpProgramUniformMatrix2x3fv = (C.GPPROGRAMUNIFORMMATRIX2X3FV)(getProcAddr("glProgramUniformMatrix2x3fv"))
-	gpProgramUniformMatrix2x3fvEXT = (C.GPPROGRAMUNIFORMMATRIX2X3FVEXT)(getProcAddr("glProgramUniformMatrix2x3fvEXT"))
 	gpProgramUniformMatrix2x4dv = (C.GPPROGRAMUNIFORMMATRIX2X4DV)(getProcAddr("glProgramUniformMatrix2x4dv"))
 	gpProgramUniformMatrix2x4fv = (C.GPPROGRAMUNIFORMMATRIX2X4FV)(getProcAddr("glProgramUniformMatrix2x4fv"))
-	gpProgramUniformMatrix2x4fvEXT = (C.GPPROGRAMUNIFORMMATRIX2X4FVEXT)(getProcAddr("glProgramUniformMatrix2x4fvEXT"))
 	gpProgramUniformMatrix3dv = (C.GPPROGRAMUNIFORMMATRIX3DV)(getProcAddr("glProgramUniformMatrix3dv"))
 	gpProgramUniformMatrix3fv = (C.GPPROGRAMUNIFORMMATRIX3FV)(getProcAddr("glProgramUniformMatrix3fv"))
-	gpProgramUniformMatrix3fvEXT = (C.GPPROGRAMUNIFORMMATRIX3FVEXT)(getProcAddr("glProgramUniformMatrix3fvEXT"))
 	gpProgramUniformMatrix3x2dv = (C.GPPROGRAMUNIFORMMATRIX3X2DV)(getProcAddr("glProgramUniformMatrix3x2dv"))
 	gpProgramUniformMatrix3x2fv = (C.GPPROGRAMUNIFORMMATRIX3X2FV)(getProcAddr("glProgramUniformMatrix3x2fv"))
-	gpProgramUniformMatrix3x2fvEXT = (C.GPPROGRAMUNIFORMMATRIX3X2FVEXT)(getProcAddr("glProgramUniformMatrix3x2fvEXT"))
 	gpProgramUniformMatrix3x4dv = (C.GPPROGRAMUNIFORMMATRIX3X4DV)(getProcAddr("glProgramUniformMatrix3x4dv"))
 	gpProgramUniformMatrix3x4fv = (C.GPPROGRAMUNIFORMMATRIX3X4FV)(getProcAddr("glProgramUniformMatrix3x4fv"))
-	gpProgramUniformMatrix3x4fvEXT = (C.GPPROGRAMUNIFORMMATRIX3X4FVEXT)(getProcAddr("glProgramUniformMatrix3x4fvEXT"))
 	gpProgramUniformMatrix4dv = (C.GPPROGRAMUNIFORMMATRIX4DV)(getProcAddr("glProgramUniformMatrix4dv"))
 	gpProgramUniformMatrix4fv = (C.GPPROGRAMUNIFORMMATRIX4FV)(getProcAddr("glProgramUniformMatrix4fv"))
-	gpProgramUniformMatrix4fvEXT = (C.GPPROGRAMUNIFORMMATRIX4FVEXT)(getProcAddr("glProgramUniformMatrix4fvEXT"))
 	gpProgramUniformMatrix4x2dv = (C.GPPROGRAMUNIFORMMATRIX4X2DV)(getProcAddr("glProgramUniformMatrix4x2dv"))
 	gpProgramUniformMatrix4x2fv = (C.GPPROGRAMUNIFORMMATRIX4X2FV)(getProcAddr("glProgramUniformMatrix4x2fv"))
-	gpProgramUniformMatrix4x2fvEXT = (C.GPPROGRAMUNIFORMMATRIX4X2FVEXT)(getProcAddr("glProgramUniformMatrix4x2fvEXT"))
 	gpProgramUniformMatrix4x3dv = (C.GPPROGRAMUNIFORMMATRIX4X3DV)(getProcAddr("glProgramUniformMatrix4x3dv"))
 	gpProgramUniformMatrix4x3fv = (C.GPPROGRAMUNIFORMMATRIX4X3FV)(getProcAddr("glProgramUniformMatrix4x3fv"))
-	gpProgramUniformMatrix4x3fvEXT = (C.GPPROGRAMUNIFORMMATRIX4X3FVEXT)(getProcAddr("glProgramUniformMatrix4x3fvEXT"))
 	gpProvokingVertex = (C.GPPROVOKINGVERTEX)(getProcAddr("glProvokingVertex"))
 	gpPushAttrib = (C.GPPUSHATTRIB)(getProcAddr("glPushAttrib"))
 	gpPushClientAttrib = (C.GPPUSHCLIENTATTRIB)(getProcAddr("glPushClientAttrib"))
 	gpPushDebugGroup = (C.GPPUSHDEBUGGROUP)(getProcAddr("glPushDebugGroup"))
 	gpPushDebugGroupKHR = (C.GPPUSHDEBUGGROUPKHR)(getProcAddr("glPushDebugGroupKHR"))
-	gpPushGroupMarkerEXT = (C.GPPUSHGROUPMARKEREXT)(getProcAddr("glPushGroupMarkerEXT"))
 	gpPushMatrix = (C.GPPUSHMATRIX)(getProcAddr("glPushMatrix"))
 	gpPushName = (C.GPPUSHNAME)(getProcAddr("glPushName"))
 	gpQueryCounter = (C.GPQUERYCOUNTER)(getProcAddr("glQueryCounter"))
-	gpQueryMatrixxOES = (C.GPQUERYMATRIXXOES)(getProcAddr("glQueryMatrixxOES"))
 	gpRasterPos2d = (C.GPRASTERPOS2D)(getProcAddr("glRasterPos2d"))
 	gpRasterPos2dv = (C.GPRASTERPOS2DV)(getProcAddr("glRasterPos2dv"))
 	gpRasterPos2f = (C.GPRASTERPOS2F)(getProcAddr("glRasterPos2f"))
@@ -14359,8 +12236,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpRasterPos2iv = (C.GPRASTERPOS2IV)(getProcAddr("glRasterPos2iv"))
 	gpRasterPos2s = (C.GPRASTERPOS2S)(getProcAddr("glRasterPos2s"))
 	gpRasterPos2sv = (C.GPRASTERPOS2SV)(getProcAddr("glRasterPos2sv"))
-	gpRasterPos2xOES = (C.GPRASTERPOS2XOES)(getProcAddr("glRasterPos2xOES"))
-	gpRasterPos2xvOES = (C.GPRASTERPOS2XVOES)(getProcAddr("glRasterPos2xvOES"))
 	gpRasterPos3d = (C.GPRASTERPOS3D)(getProcAddr("glRasterPos3d"))
 	gpRasterPos3dv = (C.GPRASTERPOS3DV)(getProcAddr("glRasterPos3dv"))
 	gpRasterPos3f = (C.GPRASTERPOS3F)(getProcAddr("glRasterPos3f"))
@@ -14369,8 +12244,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpRasterPos3iv = (C.GPRASTERPOS3IV)(getProcAddr("glRasterPos3iv"))
 	gpRasterPos3s = (C.GPRASTERPOS3S)(getProcAddr("glRasterPos3s"))
 	gpRasterPos3sv = (C.GPRASTERPOS3SV)(getProcAddr("glRasterPos3sv"))
-	gpRasterPos3xOES = (C.GPRASTERPOS3XOES)(getProcAddr("glRasterPos3xOES"))
-	gpRasterPos3xvOES = (C.GPRASTERPOS3XVOES)(getProcAddr("glRasterPos3xvOES"))
 	gpRasterPos4d = (C.GPRASTERPOS4D)(getProcAddr("glRasterPos4d"))
 	gpRasterPos4dv = (C.GPRASTERPOS4DV)(getProcAddr("glRasterPos4dv"))
 	gpRasterPos4f = (C.GPRASTERPOS4F)(getProcAddr("glRasterPos4f"))
@@ -14379,8 +12252,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpRasterPos4iv = (C.GPRASTERPOS4IV)(getProcAddr("glRasterPos4iv"))
 	gpRasterPos4s = (C.GPRASTERPOS4S)(getProcAddr("glRasterPos4s"))
 	gpRasterPos4sv = (C.GPRASTERPOS4SV)(getProcAddr("glRasterPos4sv"))
-	gpRasterPos4xOES = (C.GPRASTERPOS4XOES)(getProcAddr("glRasterPos4xOES"))
-	gpRasterPos4xvOES = (C.GPRASTERPOS4XVOES)(getProcAddr("glRasterPos4xvOES"))
 	gpReadBuffer = (C.GPREADBUFFER)(getProcAddr("glReadBuffer"))
 	gpReadPixels = (C.GPREADPIXELS)(getProcAddr("glReadPixels"))
 	gpReadnPixels = (C.GPREADNPIXELS)(getProcAddr("glReadnPixels"))
@@ -14394,8 +12265,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpRectiv = (C.GPRECTIV)(getProcAddr("glRectiv"))
 	gpRects = (C.GPRECTS)(getProcAddr("glRects"))
 	gpRectsv = (C.GPRECTSV)(getProcAddr("glRectsv"))
-	gpRectxOES = (C.GPRECTXOES)(getProcAddr("glRectxOES"))
-	gpRectxvOES = (C.GPRECTXVOES)(getProcAddr("glRectxvOES"))
 	gpReleaseShaderCompiler = (C.GPRELEASESHADERCOMPILER)(getProcAddr("glReleaseShaderCompiler"))
 	gpRenderMode = (C.GPRENDERMODE)(getProcAddr("glRenderMode"))
 	gpRenderbufferStorage = (C.GPRENDERBUFFERSTORAGE)(getProcAddr("glRenderbufferStorage"))
@@ -14403,10 +12272,7 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpResumeTransformFeedback = (C.GPRESUMETRANSFORMFEEDBACK)(getProcAddr("glResumeTransformFeedback"))
 	gpRotated = (C.GPROTATED)(getProcAddr("glRotated"))
 	gpRotatef = (C.GPROTATEF)(getProcAddr("glRotatef"))
-	gpRotatexOES = (C.GPROTATEXOES)(getProcAddr("glRotatexOES"))
 	gpSampleCoverage = (C.GPSAMPLECOVERAGE)(getProcAddr("glSampleCoverage"))
-	gpSampleCoverageOES = (C.GPSAMPLECOVERAGEOES)(getProcAddr("glSampleCoverageOES"))
-	gpSampleCoveragexOES = (C.GPSAMPLECOVERAGEXOES)(getProcAddr("glSampleCoveragexOES"))
 	gpSampleMaski = (C.GPSAMPLEMASKI)(getProcAddr("glSampleMaski"))
 	gpSamplerParameterIiv = (C.GPSAMPLERPARAMETERIIV)(getProcAddr("glSamplerParameterIiv"))
 	gpSamplerParameterIuiv = (C.GPSAMPLERPARAMETERIUIV)(getProcAddr("glSamplerParameterIuiv"))
@@ -14416,7 +12282,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpSamplerParameteriv = (C.GPSAMPLERPARAMETERIV)(getProcAddr("glSamplerParameteriv"))
 	gpScaled = (C.GPSCALED)(getProcAddr("glScaled"))
 	gpScalef = (C.GPSCALEF)(getProcAddr("glScalef"))
-	gpScalexOES = (C.GPSCALEXOES)(getProcAddr("glScalexOES"))
 	gpScissor = (C.GPSCISSOR)(getProcAddr("glScissor"))
 	gpScissorArrayv = (C.GPSCISSORARRAYV)(getProcAddr("glScissorArrayv"))
 	gpScissorIndexed = (C.GPSCISSORINDEXED)(getProcAddr("glScissorIndexed"))
@@ -14439,8 +12304,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpSecondaryColor3usv = (C.GPSECONDARYCOLOR3USV)(getProcAddr("glSecondaryColor3usv"))
 	gpSecondaryColorPointer = (C.GPSECONDARYCOLORPOINTER)(getProcAddr("glSecondaryColorPointer"))
 	gpSelectBuffer = (C.GPSELECTBUFFER)(getProcAddr("glSelectBuffer"))
-	gpSelectPerfMonitorCountersAMD = (C.GPSELECTPERFMONITORCOUNTERSAMD)(getProcAddr("glSelectPerfMonitorCountersAMD"))
-	gpSetFenceNV = (C.GPSETFENCENV)(getProcAddr("glSetFenceNV"))
 	gpShadeModel = (C.GPSHADEMODEL)(getProcAddr("glShadeModel"))
 	gpShaderBinary = (C.GPSHADERBINARY)(getProcAddr("glShaderBinary"))
 	gpShaderSource = (C.GPSHADERSOURCE)(getProcAddr("glShaderSource"))
@@ -14451,11 +12314,8 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpStencilMaskSeparate = (C.GPSTENCILMASKSEPARATE)(getProcAddr("glStencilMaskSeparate"))
 	gpStencilOp = (C.GPSTENCILOP)(getProcAddr("glStencilOp"))
 	gpStencilOpSeparate = (C.GPSTENCILOPSEPARATE)(getProcAddr("glStencilOpSeparate"))
-	gpTestFenceNV = (C.GPTESTFENCENV)(getProcAddr("glTestFenceNV"))
 	gpTexBuffer = (C.GPTEXBUFFER)(getProcAddr("glTexBuffer"))
 	gpTexBufferRange = (C.GPTEXBUFFERRANGE)(getProcAddr("glTexBufferRange"))
-	gpTexCoord1bOES = (C.GPTEXCOORD1BOES)(getProcAddr("glTexCoord1bOES"))
-	gpTexCoord1bvOES = (C.GPTEXCOORD1BVOES)(getProcAddr("glTexCoord1bvOES"))
 	gpTexCoord1d = (C.GPTEXCOORD1D)(getProcAddr("glTexCoord1d"))
 	gpTexCoord1dv = (C.GPTEXCOORD1DV)(getProcAddr("glTexCoord1dv"))
 	gpTexCoord1f = (C.GPTEXCOORD1F)(getProcAddr("glTexCoord1f"))
@@ -14464,10 +12324,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpTexCoord1iv = (C.GPTEXCOORD1IV)(getProcAddr("glTexCoord1iv"))
 	gpTexCoord1s = (C.GPTEXCOORD1S)(getProcAddr("glTexCoord1s"))
 	gpTexCoord1sv = (C.GPTEXCOORD1SV)(getProcAddr("glTexCoord1sv"))
-	gpTexCoord1xOES = (C.GPTEXCOORD1XOES)(getProcAddr("glTexCoord1xOES"))
-	gpTexCoord1xvOES = (C.GPTEXCOORD1XVOES)(getProcAddr("glTexCoord1xvOES"))
-	gpTexCoord2bOES = (C.GPTEXCOORD2BOES)(getProcAddr("glTexCoord2bOES"))
-	gpTexCoord2bvOES = (C.GPTEXCOORD2BVOES)(getProcAddr("glTexCoord2bvOES"))
 	gpTexCoord2d = (C.GPTEXCOORD2D)(getProcAddr("glTexCoord2d"))
 	gpTexCoord2dv = (C.GPTEXCOORD2DV)(getProcAddr("glTexCoord2dv"))
 	gpTexCoord2f = (C.GPTEXCOORD2F)(getProcAddr("glTexCoord2f"))
@@ -14476,10 +12332,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpTexCoord2iv = (C.GPTEXCOORD2IV)(getProcAddr("glTexCoord2iv"))
 	gpTexCoord2s = (C.GPTEXCOORD2S)(getProcAddr("glTexCoord2s"))
 	gpTexCoord2sv = (C.GPTEXCOORD2SV)(getProcAddr("glTexCoord2sv"))
-	gpTexCoord2xOES = (C.GPTEXCOORD2XOES)(getProcAddr("glTexCoord2xOES"))
-	gpTexCoord2xvOES = (C.GPTEXCOORD2XVOES)(getProcAddr("glTexCoord2xvOES"))
-	gpTexCoord3bOES = (C.GPTEXCOORD3BOES)(getProcAddr("glTexCoord3bOES"))
-	gpTexCoord3bvOES = (C.GPTEXCOORD3BVOES)(getProcAddr("glTexCoord3bvOES"))
 	gpTexCoord3d = (C.GPTEXCOORD3D)(getProcAddr("glTexCoord3d"))
 	gpTexCoord3dv = (C.GPTEXCOORD3DV)(getProcAddr("glTexCoord3dv"))
 	gpTexCoord3f = (C.GPTEXCOORD3F)(getProcAddr("glTexCoord3f"))
@@ -14488,10 +12340,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpTexCoord3iv = (C.GPTEXCOORD3IV)(getProcAddr("glTexCoord3iv"))
 	gpTexCoord3s = (C.GPTEXCOORD3S)(getProcAddr("glTexCoord3s"))
 	gpTexCoord3sv = (C.GPTEXCOORD3SV)(getProcAddr("glTexCoord3sv"))
-	gpTexCoord3xOES = (C.GPTEXCOORD3XOES)(getProcAddr("glTexCoord3xOES"))
-	gpTexCoord3xvOES = (C.GPTEXCOORD3XVOES)(getProcAddr("glTexCoord3xvOES"))
-	gpTexCoord4bOES = (C.GPTEXCOORD4BOES)(getProcAddr("glTexCoord4bOES"))
-	gpTexCoord4bvOES = (C.GPTEXCOORD4BVOES)(getProcAddr("glTexCoord4bvOES"))
 	gpTexCoord4d = (C.GPTEXCOORD4D)(getProcAddr("glTexCoord4d"))
 	gpTexCoord4dv = (C.GPTEXCOORD4DV)(getProcAddr("glTexCoord4dv"))
 	gpTexCoord4f = (C.GPTEXCOORD4F)(getProcAddr("glTexCoord4f"))
@@ -14500,23 +12348,17 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpTexCoord4iv = (C.GPTEXCOORD4IV)(getProcAddr("glTexCoord4iv"))
 	gpTexCoord4s = (C.GPTEXCOORD4S)(getProcAddr("glTexCoord4s"))
 	gpTexCoord4sv = (C.GPTEXCOORD4SV)(getProcAddr("glTexCoord4sv"))
-	gpTexCoord4xOES = (C.GPTEXCOORD4XOES)(getProcAddr("glTexCoord4xOES"))
-	gpTexCoord4xvOES = (C.GPTEXCOORD4XVOES)(getProcAddr("glTexCoord4xvOES"))
 	gpTexCoordPointer = (C.GPTEXCOORDPOINTER)(getProcAddr("glTexCoordPointer"))
 	gpTexEnvf = (C.GPTEXENVF)(getProcAddr("glTexEnvf"))
 	gpTexEnvfv = (C.GPTEXENVFV)(getProcAddr("glTexEnvfv"))
 	gpTexEnvi = (C.GPTEXENVI)(getProcAddr("glTexEnvi"))
 	gpTexEnviv = (C.GPTEXENVIV)(getProcAddr("glTexEnviv"))
-	gpTexEnvxOES = (C.GPTEXENVXOES)(getProcAddr("glTexEnvxOES"))
-	gpTexEnvxvOES = (C.GPTEXENVXVOES)(getProcAddr("glTexEnvxvOES"))
 	gpTexGend = (C.GPTEXGEND)(getProcAddr("glTexGend"))
 	gpTexGendv = (C.GPTEXGENDV)(getProcAddr("glTexGendv"))
 	gpTexGenf = (C.GPTEXGENF)(getProcAddr("glTexGenf"))
 	gpTexGenfv = (C.GPTEXGENFV)(getProcAddr("glTexGenfv"))
 	gpTexGeni = (C.GPTEXGENI)(getProcAddr("glTexGeni"))
 	gpTexGeniv = (C.GPTEXGENIV)(getProcAddr("glTexGeniv"))
-	gpTexGenxOES = (C.GPTEXGENXOES)(getProcAddr("glTexGenxOES"))
-	gpTexGenxvOES = (C.GPTEXGENXVOES)(getProcAddr("glTexGenxvOES"))
 	gpTexImage1D = (C.GPTEXIMAGE1D)(getProcAddr("glTexImage1D"))
 	gpTexImage2D = (C.GPTEXIMAGE2D)(getProcAddr("glTexImage2D"))
 	gpTexImage2DMultisample = (C.GPTEXIMAGE2DMULTISAMPLE)(getProcAddr("glTexImage2DMultisample"))
@@ -14529,8 +12371,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpTexParameterfv = (C.GPTEXPARAMETERFV)(getProcAddr("glTexParameterfv"))
 	gpTexParameteri = (C.GPTEXPARAMETERI)(getProcAddr("glTexParameteri"))
 	gpTexParameteriv = (C.GPTEXPARAMETERIV)(getProcAddr("glTexParameteriv"))
-	gpTexParameterxOES = (C.GPTEXPARAMETERXOES)(getProcAddr("glTexParameterxOES"))
-	gpTexParameterxvOES = (C.GPTEXPARAMETERXVOES)(getProcAddr("glTexParameterxvOES"))
 	gpTexStorage1D = (C.GPTEXSTORAGE1D)(getProcAddr("glTexStorage1D"))
 	gpTexStorage2D = (C.GPTEXSTORAGE2D)(getProcAddr("glTexStorage2D"))
 	gpTexStorage2DMultisample = (C.GPTEXSTORAGE2DMULTISAMPLE)(getProcAddr("glTexStorage2DMultisample"))
@@ -14562,7 +12402,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpTransformFeedbackVaryings = (C.GPTRANSFORMFEEDBACKVARYINGS)(getProcAddr("glTransformFeedbackVaryings"))
 	gpTranslated = (C.GPTRANSLATED)(getProcAddr("glTranslated"))
 	gpTranslatef = (C.GPTRANSLATEF)(getProcAddr("glTranslatef"))
-	gpTranslatexOES = (C.GPTRANSLATEXOES)(getProcAddr("glTranslatexOES"))
 	gpUniform1d = (C.GPUNIFORM1D)(getProcAddr("glUniform1d"))
 	gpUniform1dv = (C.GPUNIFORM1DV)(getProcAddr("glUniform1dv"))
 	gpUniform1f = (C.GPUNIFORM1F)(getProcAddr("glUniform1f"))
@@ -14621,13 +12460,8 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpUnmapNamedBuffer = (C.GPUNMAPNAMEDBUFFER)(getProcAddr("glUnmapNamedBuffer"))
 	gpUseProgram = (C.GPUSEPROGRAM)(getProcAddr("glUseProgram"))
 	gpUseProgramStages = (C.GPUSEPROGRAMSTAGES)(getProcAddr("glUseProgramStages"))
-	gpUseProgramStagesEXT = (C.GPUSEPROGRAMSTAGESEXT)(getProcAddr("glUseProgramStagesEXT"))
-	gpUseShaderProgramEXT = (C.GPUSESHADERPROGRAMEXT)(getProcAddr("glUseShaderProgramEXT"))
 	gpValidateProgram = (C.GPVALIDATEPROGRAM)(getProcAddr("glValidateProgram"))
 	gpValidateProgramPipeline = (C.GPVALIDATEPROGRAMPIPELINE)(getProcAddr("glValidateProgramPipeline"))
-	gpValidateProgramPipelineEXT = (C.GPVALIDATEPROGRAMPIPELINEEXT)(getProcAddr("glValidateProgramPipelineEXT"))
-	gpVertex2bOES = (C.GPVERTEX2BOES)(getProcAddr("glVertex2bOES"))
-	gpVertex2bvOES = (C.GPVERTEX2BVOES)(getProcAddr("glVertex2bvOES"))
 	gpVertex2d = (C.GPVERTEX2D)(getProcAddr("glVertex2d"))
 	gpVertex2dv = (C.GPVERTEX2DV)(getProcAddr("glVertex2dv"))
 	gpVertex2f = (C.GPVERTEX2F)(getProcAddr("glVertex2f"))
@@ -14636,10 +12470,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpVertex2iv = (C.GPVERTEX2IV)(getProcAddr("glVertex2iv"))
 	gpVertex2s = (C.GPVERTEX2S)(getProcAddr("glVertex2s"))
 	gpVertex2sv = (C.GPVERTEX2SV)(getProcAddr("glVertex2sv"))
-	gpVertex2xOES = (C.GPVERTEX2XOES)(getProcAddr("glVertex2xOES"))
-	gpVertex2xvOES = (C.GPVERTEX2XVOES)(getProcAddr("glVertex2xvOES"))
-	gpVertex3bOES = (C.GPVERTEX3BOES)(getProcAddr("glVertex3bOES"))
-	gpVertex3bvOES = (C.GPVERTEX3BVOES)(getProcAddr("glVertex3bvOES"))
 	gpVertex3d = (C.GPVERTEX3D)(getProcAddr("glVertex3d"))
 	gpVertex3dv = (C.GPVERTEX3DV)(getProcAddr("glVertex3dv"))
 	gpVertex3f = (C.GPVERTEX3F)(getProcAddr("glVertex3f"))
@@ -14648,10 +12478,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpVertex3iv = (C.GPVERTEX3IV)(getProcAddr("glVertex3iv"))
 	gpVertex3s = (C.GPVERTEX3S)(getProcAddr("glVertex3s"))
 	gpVertex3sv = (C.GPVERTEX3SV)(getProcAddr("glVertex3sv"))
-	gpVertex3xOES = (C.GPVERTEX3XOES)(getProcAddr("glVertex3xOES"))
-	gpVertex3xvOES = (C.GPVERTEX3XVOES)(getProcAddr("glVertex3xvOES"))
-	gpVertex4bOES = (C.GPVERTEX4BOES)(getProcAddr("glVertex4bOES"))
-	gpVertex4bvOES = (C.GPVERTEX4BVOES)(getProcAddr("glVertex4bvOES"))
 	gpVertex4d = (C.GPVERTEX4D)(getProcAddr("glVertex4d"))
 	gpVertex4dv = (C.GPVERTEX4DV)(getProcAddr("glVertex4dv"))
 	gpVertex4f = (C.GPVERTEX4F)(getProcAddr("glVertex4f"))
@@ -14660,8 +12486,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpVertex4iv = (C.GPVERTEX4IV)(getProcAddr("glVertex4iv"))
 	gpVertex4s = (C.GPVERTEX4S)(getProcAddr("glVertex4s"))
 	gpVertex4sv = (C.GPVERTEX4SV)(getProcAddr("glVertex4sv"))
-	gpVertex4xOES = (C.GPVERTEX4XOES)(getProcAddr("glVertex4xOES"))
-	gpVertex4xvOES = (C.GPVERTEX4XVOES)(getProcAddr("glVertex4xvOES"))
 	gpVertexArrayAttribBinding = (C.GPVERTEXARRAYATTRIBBINDING)(getProcAddr("glVertexArrayAttribBinding"))
 	gpVertexArrayAttribFormat = (C.GPVERTEXARRAYATTRIBFORMAT)(getProcAddr("glVertexArrayAttribFormat"))
 	gpVertexArrayAttribIFormat = (C.GPVERTEXARRAYATTRIBIFORMAT)(getProcAddr("glVertexArrayAttribIFormat"))
