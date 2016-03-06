@@ -64,13 +64,13 @@ func GoStr(cstr *uint8) string {
 	return C.GoString((*C.char)(unsafe.Pointer(cstr)))
 }
 
-// Strs takes a list of null-terminated Go strings and return's their C counterpart.
+// Strs takes a list of Go strings (with or without null-termination) and
+// returns their C counterpart.
 //
-// The returned free function must be called once you are done using the strings in
-// order to free the memory.
+// The returned free function must be called once you are done using the strings
+// in order to free the memory.
 //
-// If no strings are provided as a parameter, or if any string is not null-terminated,
-// this function will panic.
+// If no strings are provided as a parameter this function will panic.
 func Strs(strs ...string) (cstrs **uint8, free func()) {
 	if len(strs) == 0 {
 		panic("Strs: expected at least 1 string")
@@ -79,9 +79,6 @@ func Strs(strs ...string) (cstrs **uint8, free func()) {
 	// Allocate a contiguous array large enough to hold all the strings' contents.
 	n := 0
 	for i := range strs {
-		if !strings.HasSuffix(strs[i], "\x00") {
-			panic("Strs: str argument missing null terminator: " + strs[i])
-		}
 		n += len(strs[i])
 	}
 	data := C.malloc(C.size_t(n))
