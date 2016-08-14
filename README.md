@@ -14,10 +14,11 @@ Requirements:
 Usage
 -----
 
-Use `go get` to download and install one of the prebuilt packages. The prebuilt packages support OpenGL versions 3.2, 3.3, 4.1, 4.4 and 4.5 across both the core and compatibility profiles and include all extensions.
+Use `go get -u` to download and install one of the prebuilt packages. The prebuilt packages support OpenGL versions 2.1, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3, 4.4 and 4.5 across both the core and compatibility profiles and include all extensions. Pick whichever one(s) you need:
 
-    go get github.com/go-gl/gl/v{3.2,3.3,4.1,4.4,4.5}-{core,compatibility}/gl
-    go get github.com/go-gl/gl/v3.3-core/gl
+    go get -u github.com/go-gl/gl/v{3.2,3.3,4.1,4.2,4.3,4.4,4.5}-{core,compatibility}/gl
+    go get -u github.com/go-gl/gl/v3.1/gles2
+    go get -u github.com/go-gl/gl/v2.1/gl
 
 Once the bindings are installed you can use them with the appropriate import statements.
 
@@ -31,7 +32,7 @@ func main() {
 	// Important! Call gl.Init only under the presence of an active OpenGL context,
 	// i.e., after MakeContextCurrent.
 	if err := gl.Init(); err != nil {
-		panic(err)
+		log.Fatalln(err)
 	}
 }
 ```
