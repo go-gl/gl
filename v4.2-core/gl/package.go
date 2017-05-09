@@ -5464,7 +5464,7 @@ func ClearTexSubImage(texture uint32, level int32, xoffset int32, yoffset int32,
 }
 
 // block and wait for a sync object to become signaled
-func ClientWaitSync(sync unsafe.Pointer, flags uint32, timeout uint64) uint32 {
+func ClientWaitSync(sync uintptr, flags uint32, timeout uint64) uint32 {
 	ret := C.glowClientWaitSync(gpClientWaitSync, (C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 	return (uint32)(ret)
 }
@@ -5635,9 +5635,9 @@ func CreateShaderProgramv(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramv(gpCreateShaderProgramv, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
 }
-func CreateSyncFromCLeventARB(context *C.struct__cl_context, event *C.struct__cl_event, flags uint32) unsafe.Pointer {
+func CreateSyncFromCLeventARB(context *C.struct__cl_context, event *C.struct__cl_event, flags uint32) uintptr {
 	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(unsafe.Pointer(context)), (*C.struct__cl_event)(unsafe.Pointer(event)), (C.GLbitfield)(flags))
-	return (unsafe.Pointer)(ret)
+	return (uintptr)(ret)
 }
 
 // create texture objects
@@ -5740,7 +5740,7 @@ func DeleteShader(shader uint32) {
 }
 
 // delete a sync object
-func DeleteSync(sync unsafe.Pointer) {
+func DeleteSync(sync uintptr) {
 	C.glowDeleteSync(gpDeleteSync, (C.GLsync)(sync))
 }
 
@@ -5945,9 +5945,9 @@ func EndTransformFeedback() {
 }
 
 // create a new sync object and insert it into the GL command stream
-func FenceSync(condition uint32, flags uint32) unsafe.Pointer {
+func FenceSync(condition uint32, flags uint32) uintptr {
 	ret := C.glowFenceSync(gpFenceSync, (C.GLenum)(condition), (C.GLbitfield)(flags))
-	return (unsafe.Pointer)(ret)
+	return (uintptr)(ret)
 }
 
 // block until all GL execution is complete
@@ -6454,7 +6454,7 @@ func GetSubroutineUniformLocation(program uint32, shadertype uint32, name *uint8
 }
 
 // query the properties of a sync object
-func GetSynciv(sync unsafe.Pointer, pname uint32, bufSize int32, length *int32, values *int32) {
+func GetSynciv(sync uintptr, pname uint32, bufSize int32, length *int32, values *int32) {
 	C.glowGetSynciv(gpGetSynciv, (C.GLsync)(sync), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(values)))
 }
 
@@ -6764,7 +6764,7 @@ func IsShader(shader uint32) bool {
 }
 
 // determine if a name corresponds to a sync object
-func IsSync(sync unsafe.Pointer) bool {
+func IsSync(sync uintptr) bool {
 	ret := C.glowIsSync(gpIsSync, (C.GLsync)(sync))
 	return ret == TRUE
 }
@@ -8166,7 +8166,7 @@ func ViewportIndexedfv(index uint32, v *float32) {
 }
 
 // instruct the GL server to block until the specified sync object becomes signaled
-func WaitSync(sync unsafe.Pointer, flags uint32, timeout uint64) {
+func WaitSync(sync uintptr, flags uint32, timeout uint64) {
 	C.glowWaitSync(gpWaitSync, (C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 }
 
