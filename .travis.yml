@@ -4,11 +4,8 @@ addons:
     - libgles2-mesa-dev
 language: go
 go:
-  - 1.4.x
-  - 1.5.x
-  - 1.6.x
-  - 1.7.x
   - 1.8.x
+  - 1.4.x
   - master
 matrix:
   allow_failures:
@@ -17,7 +14,6 @@ matrix:
 install:
   - # Do nothing. This is needed to prevent default install action "go get -t -v ./..." from happening here (we want it to happen inside script step).
 script:
-  - free -m
   - go get -t -v ./...
   - diff -u <(echo -n) <(gofmt -d -s .)
   - # vet is reporting "possible misuse of unsafe.Pointer", need to fix that.
