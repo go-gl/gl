@@ -2,7 +2,7 @@
 // correct version is chosen automatically based on build tags:
 // windows: WGL
 // darwin: CGL
-// linux: GLX
+// linux freebsd: GLX
 // Use of EGL instead of the platform's default (listed above) is made possible
 // via the "egl" build tag.
 // It is also possible to install your own function outside this package for
@@ -14,8 +14,8 @@ package gles2
 #cgo windows LDFLAGS: -lopengl32
 #cgo darwin CFLAGS: -DTAG_DARWIN
 #cgo darwin LDFLAGS: -framework OpenGL
-#cgo linux CFLAGS: -DTAG_LINUX
-#cgo linux LDFLAGS: -lGL
+#cgo linux freebsd CFLAGS: -DTAG_POSIX
+#cgo linux freebsd LDFLAGS: -lGL
 #cgo egl CFLAGS: -DTAG_EGL
 #cgo egl LDFLAGS: -lEGL
 // Check the EGL tag first as it takes priority over the platform's default
@@ -47,7 +47,7 @@ package gles2
 	void* GlowGetProcAddress(const char* name) {
 		return dlsym(RTLD_DEFAULT, name);
 	}
-#elif defined(TAG_LINUX)
+#elif defined(TAG_POSIX)
 	#include <stdlib.h>
 	#include <GL/glx.h>
 	void* GlowGetProcAddress(const char* name) {

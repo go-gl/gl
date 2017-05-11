@@ -16,9 +16,9 @@
 //  SVN revision 27695
 package gl
 
-// #cgo darwin  LDFLAGS: -framework OpenGL
-// #cgo linux   LDFLAGS: -lGL
-// #cgo windows LDFLAGS: -lopengl32
+// #cgo darwin        LDFLAGS: -framework OpenGL
+// #cgo linux freebsd LDFLAGS: -lGL
+// #cgo windows       LDFLAGS: -lopengl32
 // #if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)
 // #ifndef WIN32_LEAN_AND_MEAN
 // #define WIN32_LEAN_AND_MEAN 1
@@ -28243,10 +28243,10 @@ func WriteMaskEXT(res uint32, in uint32, outX uint32, outY uint32, outZ uint32, 
 // again after switching between OpenGL contexts may work if the contexts belong
 // to the same graphics driver/device).
 //
-// On OS X and Linux, the behavior is different, but code written compatible
-// with the Windows behavior is compatible with OS X and Linux. That is, always
-// Init under an active OpenGL context, and always re-init after switching
-// graphics contexts.
+// On macOS and the other POSIX systems, the behavior is different, but code
+// written compatible with the Windows behavior is compatible with macOS and the
+// other POSIX systems. That is, always Init under an active OpenGL context, and
+// always re-init after switching graphics contexts.
 //
 // For information about caveats of Init, you should read the "Platform Specific
 // Function Retrieval" section of https://www.opengl.org/wiki/Load_OpenGL_Functions.
