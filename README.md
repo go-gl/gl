@@ -44,7 +44,7 @@ A note about threading and goroutines. The bindings do not expose a mechanism to
 Examples
 --------
 
-Examples illustrating how to use the bindings are available in the [examples](https://github.com/go-gl/examples) repo. There are examples for [OpenGL 4.1 core](https://github.com/go-gl/examples/blob/master/glfw31-gl41core-cube) and [OpenGL 2.1](https://github.com/go-gl/examples/tree/master/glfw31-gl21-cube).
+Examples illustrating how to use the bindings are available in the [examples](https://github.com/go-gl/examples) repo. There are examples for [OpenGL 4.1 core](https://github.com/go-gl/example/tree/master/gl41core-cube) and [OpenGL 2.1](https://github.com/go-gl/example/tree/master/gl21-cube).
 
 Function Loading
 ----------------
