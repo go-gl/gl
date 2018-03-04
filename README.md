@@ -14,9 +14,9 @@ Requirements:
 Usage
 -----
 
-Use `go get -u` to download and install one of the prebuilt packages. The prebuilt packages support OpenGL versions 2.1, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3, 4.4 and 4.5 across both the core and compatibility profiles and include all extensions. Pick whichever one(s) you need:
+Use `go get -u` to download and install the prebuilt packages. The prebuilt packages support OpenGL versions 2.1, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6 across both the core and compatibility profiles and include all extensions. Pick whichever one(s) you need:
 
-    go get -u github.com/go-gl/gl/v{3.2,3.3,4.1,4.2,4.3,4.4,4.5}-{core,compatibility}/gl
+    go get -u github.com/go-gl/gl/v{3.2,3.3,4.1,4.2,4.3,4.4,4.5,4.6}-{core,compatibility}/gl
     go get -u github.com/go-gl/gl/v3.1/gles2
     go get -u github.com/go-gl/gl/v2.1/gl
 
