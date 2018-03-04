@@ -51,7 +51,7 @@ package gl
 	#include <stdlib.h>
 	#include <GL/glx.h>
 	void* GlowGetProcAddress_glcompatibility45(const char* name) {
-		return glXGetProcAddress(name);
+		return glXGetProcAddress((const GLubyte *) name);
 	}
 #endif
 */
