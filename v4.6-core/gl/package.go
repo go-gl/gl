@@ -82,6 +82,7 @@ package gl
 // typedef int GLsizei;
 // typedef float GLfloat;
 // typedef double GLdouble;
+// typedef void *GLeglImageOES;
 // typedef char GLchar;
 // typedef ptrdiff_t GLintptr;
 // typedef ptrdiff_t GLsizeiptr;
@@ -296,7 +297,7 @@ package gl
 // typedef void  (APIENTRYP GPDELETEVERTEXARRAYS)(GLsizei  n, const GLuint * arrays);
 // typedef void  (APIENTRYP GPDEPTHFUNC)(GLenum  func);
 // typedef void  (APIENTRYP GPDEPTHMASK)(GLboolean  flag);
-// typedef void  (APIENTRYP GPDEPTHRANGE)(GLdouble  xnear, GLdouble  xfar);
+// typedef void  (APIENTRYP GPDEPTHRANGE)(GLdouble  n, GLdouble  f);
 // typedef void  (APIENTRYP GPDEPTHRANGEARRAYV)(GLuint  first, GLsizei  count, const GLdouble * v);
 // typedef void  (APIENTRYP GPDEPTHRANGEINDEXED)(GLuint  index, GLdouble  n, GLdouble  f);
 // typedef void  (APIENTRYP GPDEPTHRANGEF)(GLfloat  n, GLfloat  f);
@@ -341,6 +342,8 @@ package gl
 // typedef void  (APIENTRYP GPDRAWTRANSFORMFEEDBACKSTREAM)(GLenum  mode, GLuint  id, GLuint  stream);
 // typedef void  (APIENTRYP GPDRAWTRANSFORMFEEDBACKSTREAMINSTANCED)(GLenum  mode, GLuint  id, GLuint  stream, GLsizei  instancecount);
 // typedef void  (APIENTRYP GPDRAWVKIMAGENV)(GLuint64  vkImage, GLuint  sampler, GLfloat  x0, GLfloat  y0, GLfloat  x1, GLfloat  y1, GLfloat  z, GLfloat  s0, GLfloat  t0, GLfloat  s1, GLfloat  t1);
+// typedef void  (APIENTRYP GPEGLIMAGETARGETTEXSTORAGEEXT)(GLenum  target, GLeglImageOES  image, const GLint*  attrib_list);
+// typedef void  (APIENTRYP GPEGLIMAGETARGETTEXTURESTORAGEEXT)(GLuint  texture, GLeglImageOES  image, const GLint*  attrib_list);
 // typedef void  (APIENTRYP GPEDGEFLAGFORMATNV)(GLsizei  stride);
 // typedef void  (APIENTRYP GPENABLE)(GLenum  cap);
 // typedef void  (APIENTRYP GPENABLECLIENTSTATEINDEXEDEXT)(GLenum  array, GLuint  index);
@@ -1956,8 +1959,8 @@ package gl
 // static void  glowDepthMask(GPDEPTHMASK fnptr, GLboolean  flag) {
 //   (*fnptr)(flag);
 // }
-// static void  glowDepthRange(GPDEPTHRANGE fnptr, GLdouble  xnear, GLdouble  xfar) {
-//   (*fnptr)(xnear, xfar);
+// static void  glowDepthRange(GPDEPTHRANGE fnptr, GLdouble  n, GLdouble  f) {
+//   (*fnptr)(n, f);
 // }
 // static void  glowDepthRangeArrayv(GPDEPTHRANGEARRAYV fnptr, GLuint  first, GLsizei  count, const GLdouble * v) {
 //   (*fnptr)(first, count, v);
@@ -2090,6 +2093,12 @@ package gl
 // }
 // static void  glowDrawVkImageNV(GPDRAWVKIMAGENV fnptr, GLuint64  vkImage, GLuint  sampler, GLfloat  x0, GLfloat  y0, GLfloat  x1, GLfloat  y1, GLfloat  z, GLfloat  s0, GLfloat  t0, GLfloat  s1, GLfloat  t1) {
 //   (*fnptr)(vkImage, sampler, x0, y0, x1, y1, z, s0, t0, s1, t1);
+// }
+// static void  glowEGLImageTargetTexStorageEXT(GPEGLIMAGETARGETTEXSTORAGEEXT fnptr, GLenum  target, GLeglImageOES  image, const GLint*  attrib_list) {
+//   (*fnptr)(target, image, attrib_list);
+// }
+// static void  glowEGLImageTargetTextureStorageEXT(GPEGLIMAGETARGETTEXTURESTORAGEEXT fnptr, GLuint  texture, GLeglImageOES  image, const GLint*  attrib_list) {
+//   (*fnptr)(texture, image, attrib_list);
 // }
 // static void  glowEdgeFlagFormatNV(GPEDGEFLAGFORMATNV fnptr, GLsizei  stride) {
 //   (*fnptr)(stride);
@@ -5244,6 +5253,7 @@ const (
 	BGRA                                                       = 0x80E1
 	BGRA_INTEGER                                               = 0x8D9B
 	BGR_INTEGER                                                = 0x8D9A
+	BLACKHOLE_RENDER_INTEL                                     = 0x83FC
 	BLEND                                                      = 0x0BE2
 	BLEND_ADVANCED_COHERENT_KHR                                = 0x9285
 	BLEND_ADVANCED_COHERENT_NV                                 = 0x9285
@@ -7444,6 +7454,8 @@ var (
 	gpDrawTransformFeedbackStream                    C.GPDRAWTRANSFORMFEEDBACKSTREAM
 	gpDrawTransformFeedbackStreamInstanced           C.GPDRAWTRANSFORMFEEDBACKSTREAMINSTANCED
 	gpDrawVkImageNV                                  C.GPDRAWVKIMAGENV
+	gpEGLImageTargetTexStorageEXT                    C.GPEGLIMAGETARGETTEXSTORAGEEXT
+	gpEGLImageTargetTextureStorageEXT                C.GPEGLIMAGETARGETTEXTURESTORAGEEXT
 	gpEdgeFlagFormatNV                               C.GPEDGEFLAGFORMATNV
 	gpEnable                                         C.GPENABLE
 	gpEnableClientStateIndexedEXT                    C.GPENABLECLIENTSTATEINDEXEDEXT
@@ -9293,8 +9305,8 @@ func DepthMask(flag bool) {
 }
 
 // specify mapping of depth values from normalized device coordinates to window coordinates
-func DepthRange(near float64, far float64) {
-	C.glowDepthRange(gpDepthRange, (C.GLdouble)(near), (C.GLdouble)(far))
+func DepthRange(n float64, f float64) {
+	C.glowDepthRange(gpDepthRange, (C.GLdouble)(n), (C.GLdouble)(f))
 }
 func DepthRangeArrayv(first uint32, count int32, v *float64) {
 	C.glowDepthRangeArrayv(gpDepthRangeArrayv, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
@@ -9479,6 +9491,12 @@ func DrawTransformFeedbackStreamInstanced(mode uint32, id uint32, stream uint32,
 }
 func DrawVkImageNV(vkImage uint64, sampler uint32, x0 float32, y0 float32, x1 float32, y1 float32, z float32, s0 float32, t0 float32, s1 float32, t1 float32) {
 	C.glowDrawVkImageNV(gpDrawVkImageNV, (C.GLuint64)(vkImage), (C.GLuint)(sampler), (C.GLfloat)(x0), (C.GLfloat)(y0), (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(z), (C.GLfloat)(s0), (C.GLfloat)(t0), (C.GLfloat)(s1), (C.GLfloat)(t1))
+}
+func EGLImageTargetTexStorageEXT(target uint32, image C.GLeglImageOES, attrib_list *int32) {
+	C.glowEGLImageTargetTexStorageEXT(gpEGLImageTargetTexStorageEXT, (C.GLenum)(target), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
+}
+func EGLImageTargetTextureStorageEXT(texture uint32, image C.GLeglImageOES, attrib_list *int32) {
+	C.glowEGLImageTargetTextureStorageEXT(gpEGLImageTargetTextureStorageEXT, (C.GLuint)(texture), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
 func EdgeFlagFormatNV(stride int32) {
 	C.glowEdgeFlagFormatNV(gpEdgeFlagFormatNV, (C.GLsizei)(stride))
@@ -13948,6 +13966,8 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 		return errors.New("glDrawTransformFeedbackStreamInstanced")
 	}
 	gpDrawVkImageNV = (C.GPDRAWVKIMAGENV)(getProcAddr("glDrawVkImageNV"))
+	gpEGLImageTargetTexStorageEXT = (C.GPEGLIMAGETARGETTEXSTORAGEEXT)(getProcAddr("glEGLImageTargetTexStorageEXT"))
+	gpEGLImageTargetTextureStorageEXT = (C.GPEGLIMAGETARGETTEXTURESTORAGEEXT)(getProcAddr("glEGLImageTargetTextureStorageEXT"))
 	gpEdgeFlagFormatNV = (C.GPEDGEFLAGFORMATNV)(getProcAddr("glEdgeFlagFormatNV"))
 	gpEnable = (C.GPENABLE)(getProcAddr("glEnable"))
 	if gpEnable == nil {
