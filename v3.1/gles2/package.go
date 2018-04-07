@@ -243,7 +243,9 @@ package gles2
 // typedef void  (APIENTRYP GPDRAWTRANSFORMFEEDBACKINSTANCEDEXT)(GLenum  mode, GLuint  id, GLsizei  instancecount);
 // typedef void  (APIENTRYP GPDRAWVKIMAGENV)(GLuint64  vkImage, GLuint  sampler, GLfloat  x0, GLfloat  y0, GLfloat  x1, GLfloat  y1, GLfloat  z, GLfloat  s0, GLfloat  t0, GLfloat  s1, GLfloat  t1);
 // typedef void  (APIENTRYP GPEGLIMAGETARGETRENDERBUFFERSTORAGEOES)(GLenum  target, GLeglImageOES  image);
+// typedef void  (APIENTRYP GPEGLIMAGETARGETTEXSTORAGEEXT)(GLenum  target, GLeglImageOES  image, const GLint*  attrib_list);
 // typedef void  (APIENTRYP GPEGLIMAGETARGETTEXTURE2DOES)(GLenum  target, GLeglImageOES  image);
+// typedef void  (APIENTRYP GPEGLIMAGETARGETTEXTURESTORAGEEXT)(GLuint  texture, GLeglImageOES  image, const GLint*  attrib_list);
 // typedef void  (APIENTRYP GPENABLE)(GLenum  cap);
 // typedef void  (APIENTRYP GPENABLEDRIVERCONTROLQCOM)(GLuint  driverControl);
 // typedef void  (APIENTRYP GPENABLEVERTEXATTRIBARRAY)(GLuint  index);
@@ -1437,8 +1439,14 @@ package gles2
 // static void  glowEGLImageTargetRenderbufferStorageOES(GPEGLIMAGETARGETRENDERBUFFERSTORAGEOES fnptr, GLenum  target, GLeglImageOES  image) {
 //   (*fnptr)(target, image);
 // }
+// static void  glowEGLImageTargetTexStorageEXT(GPEGLIMAGETARGETTEXSTORAGEEXT fnptr, GLenum  target, GLeglImageOES  image, const GLint*  attrib_list) {
+//   (*fnptr)(target, image, attrib_list);
+// }
 // static void  glowEGLImageTargetTexture2DOES(GPEGLIMAGETARGETTEXTURE2DOES fnptr, GLenum  target, GLeglImageOES  image) {
 //   (*fnptr)(target, image);
+// }
+// static void  glowEGLImageTargetTextureStorageEXT(GPEGLIMAGETARGETTEXTURESTORAGEEXT fnptr, GLuint  texture, GLeglImageOES  image, const GLint*  attrib_list) {
+//   (*fnptr)(texture, image, attrib_list);
 // }
 // static void  glowEnable(GPENABLE fnptr, GLenum  cap) {
 //   (*fnptr)(cap);
@@ -3440,6 +3448,7 @@ const (
 	BGRA_EXT                                                              = 0x80E1
 	BGRA_IMG                                                              = 0x80E1
 	BINNING_CONTROL_HINT_QCOM                                             = 0x8FB0
+	BLACKHOLE_RENDER_INTEL                                                = 0x83FC
 	BLEND                                                                 = 0x0BE2
 	BLEND_ADVANCED_COHERENT_KHR                                           = 0x9285
 	BLEND_ADVANCED_COHERENT_NV                                            = 0x9285
@@ -5639,7 +5648,9 @@ var (
 	gpDrawTransformFeedbackInstancedEXT              C.GPDRAWTRANSFORMFEEDBACKINSTANCEDEXT
 	gpDrawVkImageNV                                  C.GPDRAWVKIMAGENV
 	gpEGLImageTargetRenderbufferStorageOES           C.GPEGLIMAGETARGETRENDERBUFFERSTORAGEOES
+	gpEGLImageTargetTexStorageEXT                    C.GPEGLIMAGETARGETTEXSTORAGEEXT
 	gpEGLImageTargetTexture2DOES                     C.GPEGLIMAGETARGETTEXTURE2DOES
+	gpEGLImageTargetTextureStorageEXT                C.GPEGLIMAGETARGETTEXTURESTORAGEEXT
 	gpEnable                                         C.GPENABLE
 	gpEnableDriverControlQCOM                        C.GPENABLEDRIVERCONTROLQCOM
 	gpEnableVertexAttribArray                        C.GPENABLEVERTEXATTRIBARRAY
@@ -7003,8 +7014,14 @@ func DrawVkImageNV(vkImage uint64, sampler uint32, x0 float32, y0 float32, x1 fl
 func EGLImageTargetRenderbufferStorageOES(target uint32, image C.GLeglImageOES) {
 	C.glowEGLImageTargetRenderbufferStorageOES(gpEGLImageTargetRenderbufferStorageOES, (C.GLenum)(target), (C.GLeglImageOES)(image))
 }
+func EGLImageTargetTexStorageEXT(target uint32, image C.GLeglImageOES, attrib_list *int32) {
+	C.glowEGLImageTargetTexStorageEXT(gpEGLImageTargetTexStorageEXT, (C.GLenum)(target), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
+}
 func EGLImageTargetTexture2DOES(target uint32, image C.GLeglImageOES) {
 	C.glowEGLImageTargetTexture2DOES(gpEGLImageTargetTexture2DOES, (C.GLenum)(target), (C.GLeglImageOES)(image))
+}
+func EGLImageTargetTextureStorageEXT(texture uint32, image C.GLeglImageOES, attrib_list *int32) {
+	C.glowEGLImageTargetTextureStorageEXT(gpEGLImageTargetTextureStorageEXT, (C.GLuint)(texture), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
 
 // enable or disable server-side GL capabilities
@@ -9854,7 +9871,9 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDrawTransformFeedbackInstancedEXT = (C.GPDRAWTRANSFORMFEEDBACKINSTANCEDEXT)(getProcAddr("glDrawTransformFeedbackInstancedEXT"))
 	gpDrawVkImageNV = (C.GPDRAWVKIMAGENV)(getProcAddr("glDrawVkImageNV"))
 	gpEGLImageTargetRenderbufferStorageOES = (C.GPEGLIMAGETARGETRENDERBUFFERSTORAGEOES)(getProcAddr("glEGLImageTargetRenderbufferStorageOES"))
+	gpEGLImageTargetTexStorageEXT = (C.GPEGLIMAGETARGETTEXSTORAGEEXT)(getProcAddr("glEGLImageTargetTexStorageEXT"))
 	gpEGLImageTargetTexture2DOES = (C.GPEGLIMAGETARGETTEXTURE2DOES)(getProcAddr("glEGLImageTargetTexture2DOES"))
+	gpEGLImageTargetTextureStorageEXT = (C.GPEGLIMAGETARGETTEXTURESTORAGEEXT)(getProcAddr("glEGLImageTargetTextureStorageEXT"))
 	gpEnable = (C.GPENABLE)(getProcAddr("glEnable"))
 	if gpEnable == nil {
 		return errors.New("glEnable")
