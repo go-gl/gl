@@ -19793,16 +19793,13 @@ func boolToInt(b bool) int {
 func Accum(op uint32, value float32) {
 	C.glowAccum(gpAccum, (C.GLenum)(op), (C.GLfloat)(value))
 }
-
 func AccumxOES(op uint32, value int32) {
 	C.glowAccumxOES(gpAccumxOES, (C.GLenum)(op), (C.GLfixed)(value))
 }
-
 func AcquireKeyedMutexWin32EXT(memory uint32, key uint64, timeout uint32) bool {
 	ret := C.glowAcquireKeyedMutexWin32EXT(gpAcquireKeyedMutexWin32EXT, (C.GLuint)(memory), (C.GLuint64)(key), (C.GLuint)(timeout))
 	return ret == TRUE
 }
-
 func ActiveProgramEXT(program uint32) {
 	C.glowActiveProgramEXT(gpActiveProgramEXT, (C.GLuint)(program))
 }
@@ -19811,11 +19808,9 @@ func ActiveProgramEXT(program uint32) {
 func ActiveShaderProgram(pipeline uint32, program uint32) {
 	C.glowActiveShaderProgram(gpActiveShaderProgram, (C.GLuint)(pipeline), (C.GLuint)(program))
 }
-
 func ActiveShaderProgramEXT(pipeline uint32, program uint32) {
 	C.glowActiveShaderProgramEXT(gpActiveShaderProgramEXT, (C.GLuint)(pipeline), (C.GLuint)(program))
 }
-
 func ActiveStencilFaceEXT(face uint32) {
 	C.glowActiveStencilFaceEXT(gpActiveStencilFaceEXT, (C.GLenum)(face))
 }
@@ -19824,23 +19819,18 @@ func ActiveStencilFaceEXT(face uint32) {
 func ActiveTexture(texture uint32) {
 	C.glowActiveTexture(gpActiveTexture, (C.GLenum)(texture))
 }
-
 func ActiveTextureARB(texture uint32) {
 	C.glowActiveTextureARB(gpActiveTextureARB, (C.GLenum)(texture))
 }
-
 func ActiveVaryingNV(program uint32, name *uint8) {
 	C.glowActiveVaryingNV(gpActiveVaryingNV, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func AlphaFragmentOp1ATI(op uint32, dst uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32) {
 	C.glowAlphaFragmentOp1ATI(gpAlphaFragmentOp1ATI, (C.GLenum)(op), (C.GLuint)(dst), (C.GLuint)(dstMod), (C.GLuint)(arg1), (C.GLuint)(arg1Rep), (C.GLuint)(arg1Mod))
 }
-
 func AlphaFragmentOp2ATI(op uint32, dst uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32, arg2 uint32, arg2Rep uint32, arg2Mod uint32) {
 	C.glowAlphaFragmentOp2ATI(gpAlphaFragmentOp2ATI, (C.GLenum)(op), (C.GLuint)(dst), (C.GLuint)(dstMod), (C.GLuint)(arg1), (C.GLuint)(arg1Rep), (C.GLuint)(arg1Mod), (C.GLuint)(arg2), (C.GLuint)(arg2Rep), (C.GLuint)(arg2Mod))
 }
-
 func AlphaFragmentOp3ATI(op uint32, dst uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32, arg2 uint32, arg2Rep uint32, arg2Mod uint32, arg3 uint32, arg3Rep uint32, arg3Mod uint32) {
 	C.glowAlphaFragmentOp3ATI(gpAlphaFragmentOp3ATI, (C.GLenum)(op), (C.GLuint)(dst), (C.GLuint)(dstMod), (C.GLuint)(arg1), (C.GLuint)(arg1Rep), (C.GLuint)(arg1Mod), (C.GLuint)(arg2), (C.GLuint)(arg2Rep), (C.GLuint)(arg2Mod), (C.GLuint)(arg3), (C.GLuint)(arg3Rep), (C.GLuint)(arg3Mod))
 }
@@ -19849,23 +19839,18 @@ func AlphaFragmentOp3ATI(op uint32, dst uint32, dstMod uint32, arg1 uint32, arg1
 func AlphaFunc(xfunc uint32, ref float32) {
 	C.glowAlphaFunc(gpAlphaFunc, (C.GLenum)(xfunc), (C.GLfloat)(ref))
 }
-
 func AlphaFuncxOES(xfunc uint32, ref int32) {
 	C.glowAlphaFuncxOES(gpAlphaFuncxOES, (C.GLenum)(xfunc), (C.GLfixed)(ref))
 }
-
 func AlphaToCoverageDitherControlNV(mode uint32) {
 	C.glowAlphaToCoverageDitherControlNV(gpAlphaToCoverageDitherControlNV, (C.GLenum)(mode))
 }
-
 func ApplyFramebufferAttachmentCMAAINTEL() {
 	C.glowApplyFramebufferAttachmentCMAAINTEL(gpApplyFramebufferAttachmentCMAAINTEL)
 }
-
 func ApplyTextureEXT(mode uint32) {
 	C.glowApplyTextureEXT(gpApplyTextureEXT, (C.GLenum)(mode))
 }
-
 func AreProgramsResidentNV(n int32, programs *uint32, residences *bool) bool {
 	ret := C.glowAreProgramsResidentNV(gpAreProgramsResidentNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(programs)), (*C.GLboolean)(unsafe.Pointer(residences)))
 	return ret == TRUE
@@ -19876,7 +19861,6 @@ func AreTexturesResident(n int32, textures *uint32, residences *bool) bool {
 	ret := C.glowAreTexturesResident(gpAreTexturesResident, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLboolean)(unsafe.Pointer(residences)))
 	return ret == TRUE
 }
-
 func AreTexturesResidentEXT(n int32, textures *uint32, residences *bool) bool {
 	ret := C.glowAreTexturesResidentEXT(gpAreTexturesResidentEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLboolean)(unsafe.Pointer(residences)))
 	return ret == TRUE
@@ -19886,19 +19870,15 @@ func AreTexturesResidentEXT(n int32, textures *uint32, residences *bool) bool {
 func ArrayElement(i int32) {
 	C.glowArrayElement(gpArrayElement, (C.GLint)(i))
 }
-
 func ArrayElementEXT(i int32) {
 	C.glowArrayElementEXT(gpArrayElementEXT, (C.GLint)(i))
 }
-
 func ArrayObjectATI(array uint32, size int32, xtype uint32, stride int32, buffer uint32, offset uint32) {
 	C.glowArrayObjectATI(gpArrayObjectATI, (C.GLenum)(array), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLuint)(buffer), (C.GLuint)(offset))
 }
-
 func AsyncMarkerSGIX(marker uint32) {
 	C.glowAsyncMarkerSGIX(gpAsyncMarkerSGIX, (C.GLuint)(marker))
 }
-
 func AttachObjectARB(containerObj uintptr, obj uintptr) {
 	C.glowAttachObjectARB(gpAttachObjectARB, (C.GLhandleARB)(containerObj), (C.GLhandleARB)(obj))
 }
@@ -19917,27 +19897,21 @@ func Begin(mode uint32) {
 func BeginConditionalRender(id uint32, mode uint32) {
 	C.glowBeginConditionalRender(gpBeginConditionalRender, (C.GLuint)(id), (C.GLenum)(mode))
 }
-
 func BeginConditionalRenderNV(id uint32, mode uint32) {
 	C.glowBeginConditionalRenderNV(gpBeginConditionalRenderNV, (C.GLuint)(id), (C.GLenum)(mode))
 }
-
 func BeginConditionalRenderNVX(id uint32) {
 	C.glowBeginConditionalRenderNVX(gpBeginConditionalRenderNVX, (C.GLuint)(id))
 }
-
 func BeginFragmentShaderATI() {
 	C.glowBeginFragmentShaderATI(gpBeginFragmentShaderATI)
 }
-
 func BeginOcclusionQueryNV(id uint32) {
 	C.glowBeginOcclusionQueryNV(gpBeginOcclusionQueryNV, (C.GLuint)(id))
 }
-
 func BeginPerfMonitorAMD(monitor uint32) {
 	C.glowBeginPerfMonitorAMD(gpBeginPerfMonitorAMD, (C.GLuint)(monitor))
 }
-
 func BeginPerfQueryINTEL(queryHandle uint32) {
 	C.glowBeginPerfQueryINTEL(gpBeginPerfQueryINTEL, (C.GLuint)(queryHandle))
 }
@@ -19946,11 +19920,9 @@ func BeginPerfQueryINTEL(queryHandle uint32) {
 func BeginQuery(target uint32, id uint32) {
 	C.glowBeginQuery(gpBeginQuery, (C.GLenum)(target), (C.GLuint)(id))
 }
-
 func BeginQueryARB(target uint32, id uint32) {
 	C.glowBeginQueryARB(gpBeginQueryARB, (C.GLenum)(target), (C.GLuint)(id))
 }
-
 func BeginQueryIndexed(target uint32, index uint32, id uint32) {
 	C.glowBeginQueryIndexed(gpBeginQueryIndexed, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(id))
 }
@@ -19959,19 +19931,15 @@ func BeginQueryIndexed(target uint32, index uint32, id uint32) {
 func BeginTransformFeedback(primitiveMode uint32) {
 	C.glowBeginTransformFeedback(gpBeginTransformFeedback, (C.GLenum)(primitiveMode))
 }
-
 func BeginTransformFeedbackEXT(primitiveMode uint32) {
 	C.glowBeginTransformFeedbackEXT(gpBeginTransformFeedbackEXT, (C.GLenum)(primitiveMode))
 }
-
 func BeginTransformFeedbackNV(primitiveMode uint32) {
 	C.glowBeginTransformFeedbackNV(gpBeginTransformFeedbackNV, (C.GLenum)(primitiveMode))
 }
-
 func BeginVertexShaderEXT() {
 	C.glowBeginVertexShaderEXT(gpBeginVertexShaderEXT)
 }
-
 func BeginVideoCaptureNV(video_capture_slot uint32) {
 	C.glowBeginVideoCaptureNV(gpBeginVideoCaptureNV, (C.GLuint)(video_capture_slot))
 }
@@ -19980,7 +19948,6 @@ func BeginVideoCaptureNV(video_capture_slot uint32) {
 func BindAttribLocation(program uint32, index uint32, name *uint8) {
 	C.glowBindAttribLocation(gpBindAttribLocation, (C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func BindAttribLocationARB(programObj uintptr, index uint32, name *uint8) {
 	C.glowBindAttribLocationARB(gpBindAttribLocationARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
@@ -19989,7 +19956,6 @@ func BindAttribLocationARB(programObj uintptr, index uint32, name *uint8) {
 func BindBuffer(target uint32, buffer uint32) {
 	C.glowBindBuffer(gpBindBuffer, (C.GLenum)(target), (C.GLuint)(buffer))
 }
-
 func BindBufferARB(target uint32, buffer uint32) {
 	C.glowBindBufferARB(gpBindBufferARB, (C.GLenum)(target), (C.GLuint)(buffer))
 }
@@ -19998,19 +19964,15 @@ func BindBufferARB(target uint32, buffer uint32) {
 func BindBufferBase(target uint32, index uint32, buffer uint32) {
 	C.glowBindBufferBase(gpBindBufferBase, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer))
 }
-
 func BindBufferBaseEXT(target uint32, index uint32, buffer uint32) {
 	C.glowBindBufferBaseEXT(gpBindBufferBaseEXT, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer))
 }
-
 func BindBufferBaseNV(target uint32, index uint32, buffer uint32) {
 	C.glowBindBufferBaseNV(gpBindBufferBaseNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer))
 }
-
 func BindBufferOffsetEXT(target uint32, index uint32, buffer uint32, offset int) {
 	C.glowBindBufferOffsetEXT(gpBindBufferOffsetEXT, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset))
 }
-
 func BindBufferOffsetNV(target uint32, index uint32, buffer uint32, offset int) {
 	C.glowBindBufferOffsetNV(gpBindBufferOffsetNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset))
 }
@@ -20019,11 +19981,9 @@ func BindBufferOffsetNV(target uint32, index uint32, buffer uint32, offset int) 
 func BindBufferRange(target uint32, index uint32, buffer uint32, offset int, size int) {
 	C.glowBindBufferRange(gpBindBufferRange, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-
 func BindBufferRangeEXT(target uint32, index uint32, buffer uint32, offset int, size int) {
 	C.glowBindBufferRangeEXT(gpBindBufferRangeEXT, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-
 func BindBufferRangeNV(target uint32, index uint32, buffer uint32, offset int, size int) {
 	C.glowBindBufferRangeNV(gpBindBufferRangeNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
@@ -20042,7 +20002,6 @@ func BindBuffersRange(target uint32, first uint32, count int32, buffers *uint32,
 func BindFragDataLocation(program uint32, color uint32, name *uint8) {
 	C.glowBindFragDataLocation(gpBindFragDataLocation, (C.GLuint)(program), (C.GLuint)(color), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func BindFragDataLocationEXT(program uint32, color uint32, name *uint8) {
 	C.glowBindFragDataLocationEXT(gpBindFragDataLocationEXT, (C.GLuint)(program), (C.GLuint)(color), (*C.GLchar)(unsafe.Pointer(name)))
 }
@@ -20051,7 +20010,6 @@ func BindFragDataLocationEXT(program uint32, color uint32, name *uint8) {
 func BindFragDataLocationIndexed(program uint32, colorNumber uint32, index uint32, name *uint8) {
 	C.glowBindFragDataLocationIndexed(gpBindFragDataLocationIndexed, (C.GLuint)(program), (C.GLuint)(colorNumber), (C.GLuint)(index), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func BindFragmentShaderATI(id uint32) {
 	C.glowBindFragmentShaderATI(gpBindFragmentShaderATI, (C.GLuint)(id))
 }
@@ -20060,7 +20018,6 @@ func BindFragmentShaderATI(id uint32) {
 func BindFramebuffer(target uint32, framebuffer uint32) {
 	C.glowBindFramebuffer(gpBindFramebuffer, (C.GLenum)(target), (C.GLuint)(framebuffer))
 }
-
 func BindFramebufferEXT(target uint32, framebuffer uint32) {
 	C.glowBindFramebufferEXT(gpBindFramebufferEXT, (C.GLenum)(target), (C.GLuint)(framebuffer))
 }
@@ -20069,7 +20026,6 @@ func BindFramebufferEXT(target uint32, framebuffer uint32) {
 func BindImageTexture(unit uint32, texture uint32, level int32, layered bool, layer int32, access uint32, format uint32) {
 	C.glowBindImageTexture(gpBindImageTexture, (C.GLuint)(unit), (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(boolToInt(layered)), (C.GLint)(layer), (C.GLenum)(access), (C.GLenum)(format))
 }
-
 func BindImageTextureEXT(index uint32, texture uint32, level int32, layered bool, layer int32, access uint32, format int32) {
 	C.glowBindImageTextureEXT(gpBindImageTextureEXT, (C.GLuint)(index), (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(boolToInt(layered)), (C.GLint)(layer), (C.GLenum)(access), (C.GLint)(format))
 }
@@ -20078,30 +20034,24 @@ func BindImageTextureEXT(index uint32, texture uint32, level int32, layered bool
 func BindImageTextures(first uint32, count int32, textures *uint32) {
 	C.glowBindImageTextures(gpBindImageTextures, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(textures)))
 }
-
 func BindLightParameterEXT(light uint32, value uint32) uint32 {
 	ret := C.glowBindLightParameterEXT(gpBindLightParameterEXT, (C.GLenum)(light), (C.GLenum)(value))
 	return (uint32)(ret)
 }
-
 func BindMaterialParameterEXT(face uint32, value uint32) uint32 {
 	ret := C.glowBindMaterialParameterEXT(gpBindMaterialParameterEXT, (C.GLenum)(face), (C.GLenum)(value))
 	return (uint32)(ret)
 }
-
 func BindMultiTextureEXT(texunit uint32, target uint32, texture uint32) {
 	C.glowBindMultiTextureEXT(gpBindMultiTextureEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLuint)(texture))
 }
-
 func BindParameterEXT(value uint32) uint32 {
 	ret := C.glowBindParameterEXT(gpBindParameterEXT, (C.GLenum)(value))
 	return (uint32)(ret)
 }
-
 func BindProgramARB(target uint32, program uint32) {
 	C.glowBindProgramARB(gpBindProgramARB, (C.GLenum)(target), (C.GLuint)(program))
 }
-
 func BindProgramNV(target uint32, id uint32) {
 	C.glowBindProgramNV(gpBindProgramNV, (C.GLenum)(target), (C.GLuint)(id))
 }
@@ -20110,7 +20060,6 @@ func BindProgramNV(target uint32, id uint32) {
 func BindProgramPipeline(pipeline uint32) {
 	C.glowBindProgramPipeline(gpBindProgramPipeline, (C.GLuint)(pipeline))
 }
-
 func BindProgramPipelineEXT(pipeline uint32) {
 	C.glowBindProgramPipelineEXT(gpBindProgramPipelineEXT, (C.GLuint)(pipeline))
 }
@@ -20119,7 +20068,6 @@ func BindProgramPipelineEXT(pipeline uint32) {
 func BindRenderbuffer(target uint32, renderbuffer uint32) {
 	C.glowBindRenderbuffer(gpBindRenderbuffer, (C.GLenum)(target), (C.GLuint)(renderbuffer))
 }
-
 func BindRenderbufferEXT(target uint32, renderbuffer uint32) {
 	C.glowBindRenderbufferEXT(gpBindRenderbufferEXT, (C.GLenum)(target), (C.GLuint)(renderbuffer))
 }
@@ -20133,7 +20081,6 @@ func BindSampler(unit uint32, sampler uint32) {
 func BindSamplers(first uint32, count int32, samplers *uint32) {
 	C.glowBindSamplers(gpBindSamplers, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(samplers)))
 }
-
 func BindTexGenParameterEXT(unit uint32, coord uint32, value uint32) uint32 {
 	ret := C.glowBindTexGenParameterEXT(gpBindTexGenParameterEXT, (C.GLenum)(unit), (C.GLenum)(coord), (C.GLenum)(value))
 	return (uint32)(ret)
@@ -20143,7 +20090,6 @@ func BindTexGenParameterEXT(unit uint32, coord uint32, value uint32) uint32 {
 func BindTexture(target uint32, texture uint32) {
 	C.glowBindTexture(gpBindTexture, (C.GLenum)(target), (C.GLuint)(texture))
 }
-
 func BindTextureEXT(target uint32, texture uint32) {
 	C.glowBindTextureEXT(gpBindTextureEXT, (C.GLenum)(target), (C.GLuint)(texture))
 }
@@ -20152,7 +20098,6 @@ func BindTextureEXT(target uint32, texture uint32) {
 func BindTextureUnit(unit uint32, texture uint32) {
 	C.glowBindTextureUnit(gpBindTextureUnit, (C.GLuint)(unit), (C.GLuint)(texture))
 }
-
 func BindTextureUnitParameterEXT(unit uint32, value uint32) uint32 {
 	ret := C.glowBindTextureUnitParameterEXT(gpBindTextureUnitParameterEXT, (C.GLenum)(unit), (C.GLenum)(value))
 	return (uint32)(ret)
@@ -20167,7 +20112,6 @@ func BindTextures(first uint32, count int32, textures *uint32) {
 func BindTransformFeedback(target uint32, id uint32) {
 	C.glowBindTransformFeedback(gpBindTransformFeedback, (C.GLenum)(target), (C.GLuint)(id))
 }
-
 func BindTransformFeedbackNV(target uint32, id uint32) {
 	C.glowBindTransformFeedbackNV(gpBindTransformFeedbackNV, (C.GLenum)(target), (C.GLuint)(id))
 }
@@ -20176,7 +20120,6 @@ func BindTransformFeedbackNV(target uint32, id uint32) {
 func BindVertexArray(array uint32) {
 	C.glowBindVertexArray(gpBindVertexArray, (C.GLuint)(array))
 }
-
 func BindVertexArrayAPPLE(array uint32) {
 	C.glowBindVertexArrayAPPLE(gpBindVertexArrayAPPLE, (C.GLuint)(array))
 }
@@ -20190,59 +20133,45 @@ func BindVertexBuffer(bindingindex uint32, buffer uint32, offset int, stride int
 func BindVertexBuffers(first uint32, count int32, buffers *uint32, offsets *int, strides *int32) {
 	C.glowBindVertexBuffers(gpBindVertexBuffers, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(buffers)), (*C.GLintptr)(unsafe.Pointer(offsets)), (*C.GLsizei)(unsafe.Pointer(strides)))
 }
-
 func BindVertexShaderEXT(id uint32) {
 	C.glowBindVertexShaderEXT(gpBindVertexShaderEXT, (C.GLuint)(id))
 }
-
 func BindVideoCaptureStreamBufferNV(video_capture_slot uint32, stream uint32, frame_region uint32, offset int) {
 	C.glowBindVideoCaptureStreamBufferNV(gpBindVideoCaptureStreamBufferNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(frame_region), (C.GLintptrARB)(offset))
 }
-
 func BindVideoCaptureStreamTextureNV(video_capture_slot uint32, stream uint32, frame_region uint32, target uint32, texture uint32) {
 	C.glowBindVideoCaptureStreamTextureNV(gpBindVideoCaptureStreamTextureNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(frame_region), (C.GLenum)(target), (C.GLuint)(texture))
 }
-
 func Binormal3bEXT(bx int8, by int8, bz int8) {
 	C.glowBinormal3bEXT(gpBinormal3bEXT, (C.GLbyte)(bx), (C.GLbyte)(by), (C.GLbyte)(bz))
 }
-
 func Binormal3bvEXT(v *int8) {
 	C.glowBinormal3bvEXT(gpBinormal3bvEXT, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func Binormal3dEXT(bx float64, by float64, bz float64) {
 	C.glowBinormal3dEXT(gpBinormal3dEXT, (C.GLdouble)(bx), (C.GLdouble)(by), (C.GLdouble)(bz))
 }
-
 func Binormal3dvEXT(v *float64) {
 	C.glowBinormal3dvEXT(gpBinormal3dvEXT, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Binormal3fEXT(bx float32, by float32, bz float32) {
 	C.glowBinormal3fEXT(gpBinormal3fEXT, (C.GLfloat)(bx), (C.GLfloat)(by), (C.GLfloat)(bz))
 }
-
 func Binormal3fvEXT(v *float32) {
 	C.glowBinormal3fvEXT(gpBinormal3fvEXT, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Binormal3iEXT(bx int32, by int32, bz int32) {
 	C.glowBinormal3iEXT(gpBinormal3iEXT, (C.GLint)(bx), (C.GLint)(by), (C.GLint)(bz))
 }
-
 func Binormal3ivEXT(v *int32) {
 	C.glowBinormal3ivEXT(gpBinormal3ivEXT, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Binormal3sEXT(bx int16, by int16, bz int16) {
 	C.glowBinormal3sEXT(gpBinormal3sEXT, (C.GLshort)(bx), (C.GLshort)(by), (C.GLshort)(bz))
 }
-
 func Binormal3svEXT(v *int16) {
 	C.glowBinormal3svEXT(gpBinormal3svEXT, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func BinormalPointerEXT(xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowBinormalPointerEXT(gpBinormalPointerEXT, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
@@ -20251,15 +20180,12 @@ func BinormalPointerEXT(xtype uint32, stride int32, pointer unsafe.Pointer) {
 func Bitmap(width int32, height int32, xorig float32, yorig float32, xmove float32, ymove float32, bitmap *uint8) {
 	C.glowBitmap(gpBitmap, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLfloat)(xorig), (C.GLfloat)(yorig), (C.GLfloat)(xmove), (C.GLfloat)(ymove), (*C.GLubyte)(unsafe.Pointer(bitmap)))
 }
-
 func BitmapxOES(width int32, height int32, xorig int32, yorig int32, xmove int32, ymove int32, bitmap *uint8) {
 	C.glowBitmapxOES(gpBitmapxOES, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLfixed)(xorig), (C.GLfixed)(yorig), (C.GLfixed)(xmove), (C.GLfixed)(ymove), (*C.GLubyte)(unsafe.Pointer(bitmap)))
 }
-
 func BlendBarrierKHR() {
 	C.glowBlendBarrierKHR(gpBlendBarrierKHR)
 }
-
 func BlendBarrierNV() {
 	C.glowBlendBarrierNV(gpBlendBarrierNV)
 }
@@ -20268,11 +20194,9 @@ func BlendBarrierNV() {
 func BlendColor(red float32, green float32, blue float32, alpha float32) {
 	C.glowBlendColor(gpBlendColor, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-
 func BlendColorEXT(red float32, green float32, blue float32, alpha float32) {
 	C.glowBlendColorEXT(gpBlendColorEXT, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-
 func BlendColorxOES(red int32, green int32, blue int32, alpha int32) {
 	C.glowBlendColorxOES(gpBlendColorxOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
 }
@@ -20281,11 +20205,9 @@ func BlendColorxOES(red int32, green int32, blue int32, alpha int32) {
 func BlendEquation(mode uint32) {
 	C.glowBlendEquation(gpBlendEquation, (C.GLenum)(mode))
 }
-
 func BlendEquationEXT(mode uint32) {
 	C.glowBlendEquationEXT(gpBlendEquationEXT, (C.GLenum)(mode))
 }
-
 func BlendEquationIndexedAMD(buf uint32, mode uint32) {
 	C.glowBlendEquationIndexedAMD(gpBlendEquationIndexedAMD, (C.GLuint)(buf), (C.GLenum)(mode))
 }
@@ -20294,27 +20216,21 @@ func BlendEquationIndexedAMD(buf uint32, mode uint32) {
 func BlendEquationSeparate(modeRGB uint32, modeAlpha uint32) {
 	C.glowBlendEquationSeparate(gpBlendEquationSeparate, (C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-
 func BlendEquationSeparateEXT(modeRGB uint32, modeAlpha uint32) {
 	C.glowBlendEquationSeparateEXT(gpBlendEquationSeparateEXT, (C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-
 func BlendEquationSeparateIndexedAMD(buf uint32, modeRGB uint32, modeAlpha uint32) {
 	C.glowBlendEquationSeparateIndexedAMD(gpBlendEquationSeparateIndexedAMD, (C.GLuint)(buf), (C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-
 func BlendEquationSeparatei(buf uint32, modeRGB uint32, modeAlpha uint32) {
 	C.glowBlendEquationSeparatei(gpBlendEquationSeparatei, (C.GLuint)(buf), (C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-
 func BlendEquationSeparateiARB(buf uint32, modeRGB uint32, modeAlpha uint32) {
 	C.glowBlendEquationSeparateiARB(gpBlendEquationSeparateiARB, (C.GLuint)(buf), (C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-
 func BlendEquationi(buf uint32, mode uint32) {
 	C.glowBlendEquationi(gpBlendEquationi, (C.GLuint)(buf), (C.GLenum)(mode))
 }
-
 func BlendEquationiARB(buf uint32, mode uint32) {
 	C.glowBlendEquationiARB(gpBlendEquationiARB, (C.GLuint)(buf), (C.GLenum)(mode))
 }
@@ -20323,7 +20239,6 @@ func BlendEquationiARB(buf uint32, mode uint32) {
 func BlendFunc(sfactor uint32, dfactor uint32) {
 	C.glowBlendFunc(gpBlendFunc, (C.GLenum)(sfactor), (C.GLenum)(dfactor))
 }
-
 func BlendFuncIndexedAMD(buf uint32, src uint32, dst uint32) {
 	C.glowBlendFuncIndexedAMD(gpBlendFuncIndexedAMD, (C.GLuint)(buf), (C.GLenum)(src), (C.GLenum)(dst))
 }
@@ -20332,35 +20247,27 @@ func BlendFuncIndexedAMD(buf uint32, src uint32, dst uint32) {
 func BlendFuncSeparate(sfactorRGB uint32, dfactorRGB uint32, sfactorAlpha uint32, dfactorAlpha uint32) {
 	C.glowBlendFuncSeparate(gpBlendFuncSeparate, (C.GLenum)(sfactorRGB), (C.GLenum)(dfactorRGB), (C.GLenum)(sfactorAlpha), (C.GLenum)(dfactorAlpha))
 }
-
 func BlendFuncSeparateEXT(sfactorRGB uint32, dfactorRGB uint32, sfactorAlpha uint32, dfactorAlpha uint32) {
 	C.glowBlendFuncSeparateEXT(gpBlendFuncSeparateEXT, (C.GLenum)(sfactorRGB), (C.GLenum)(dfactorRGB), (C.GLenum)(sfactorAlpha), (C.GLenum)(dfactorAlpha))
 }
-
 func BlendFuncSeparateINGR(sfactorRGB uint32, dfactorRGB uint32, sfactorAlpha uint32, dfactorAlpha uint32) {
 	C.glowBlendFuncSeparateINGR(gpBlendFuncSeparateINGR, (C.GLenum)(sfactorRGB), (C.GLenum)(dfactorRGB), (C.GLenum)(sfactorAlpha), (C.GLenum)(dfactorAlpha))
 }
-
 func BlendFuncSeparateIndexedAMD(buf uint32, srcRGB uint32, dstRGB uint32, srcAlpha uint32, dstAlpha uint32) {
 	C.glowBlendFuncSeparateIndexedAMD(gpBlendFuncSeparateIndexedAMD, (C.GLuint)(buf), (C.GLenum)(srcRGB), (C.GLenum)(dstRGB), (C.GLenum)(srcAlpha), (C.GLenum)(dstAlpha))
 }
-
 func BlendFuncSeparatei(buf uint32, srcRGB uint32, dstRGB uint32, srcAlpha uint32, dstAlpha uint32) {
 	C.glowBlendFuncSeparatei(gpBlendFuncSeparatei, (C.GLuint)(buf), (C.GLenum)(srcRGB), (C.GLenum)(dstRGB), (C.GLenum)(srcAlpha), (C.GLenum)(dstAlpha))
 }
-
 func BlendFuncSeparateiARB(buf uint32, srcRGB uint32, dstRGB uint32, srcAlpha uint32, dstAlpha uint32) {
 	C.glowBlendFuncSeparateiARB(gpBlendFuncSeparateiARB, (C.GLuint)(buf), (C.GLenum)(srcRGB), (C.GLenum)(dstRGB), (C.GLenum)(srcAlpha), (C.GLenum)(dstAlpha))
 }
-
 func BlendFunci(buf uint32, src uint32, dst uint32) {
 	C.glowBlendFunci(gpBlendFunci, (C.GLuint)(buf), (C.GLenum)(src), (C.GLenum)(dst))
 }
-
 func BlendFunciARB(buf uint32, src uint32, dst uint32) {
 	C.glowBlendFunciARB(gpBlendFunciARB, (C.GLuint)(buf), (C.GLenum)(src), (C.GLenum)(dst))
 }
-
 func BlendParameteriNV(pname uint32, value int32) {
 	C.glowBlendParameteriNV(gpBlendParameteriNV, (C.GLenum)(pname), (C.GLint)(value))
 }
@@ -20369,7 +20276,6 @@ func BlendParameteriNV(pname uint32, value int32) {
 func BlitFramebuffer(srcX0 int32, srcY0 int32, srcX1 int32, srcY1 int32, dstX0 int32, dstY0 int32, dstX1 int32, dstY1 int32, mask uint32, filter uint32) {
 	C.glowBlitFramebuffer(gpBlitFramebuffer, (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
-
 func BlitFramebufferEXT(srcX0 int32, srcY0 int32, srcX1 int32, srcY1 int32, dstX0 int32, dstY0 int32, dstX1 int32, dstY1 int32, mask uint32, filter uint32) {
 	C.glowBlitFramebufferEXT(gpBlitFramebufferEXT, (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
@@ -20378,7 +20284,6 @@ func BlitFramebufferEXT(srcX0 int32, srcY0 int32, srcX1 int32, srcY1 int32, dstX
 func BlitNamedFramebuffer(readFramebuffer uint32, drawFramebuffer uint32, srcX0 int32, srcY0 int32, srcX1 int32, srcY1 int32, dstX0 int32, dstY0 int32, dstX1 int32, dstY1 int32, mask uint32, filter uint32) {
 	C.glowBlitNamedFramebuffer(gpBlitNamedFramebuffer, (C.GLuint)(readFramebuffer), (C.GLuint)(drawFramebuffer), (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
-
 func BufferAddressRangeNV(pname uint32, index uint32, address uint64, length int) {
 	C.glowBufferAddressRangeNV(gpBufferAddressRangeNV, (C.GLenum)(pname), (C.GLuint)(index), (C.GLuint64EXT)(address), (C.GLsizeiptr)(length))
 }
@@ -20387,15 +20292,12 @@ func BufferAddressRangeNV(pname uint32, index uint32, address uint64, length int
 func BufferData(target uint32, size int, data unsafe.Pointer, usage uint32) {
 	C.glowBufferData(gpBufferData, (C.GLenum)(target), (C.GLsizeiptr)(size), data, (C.GLenum)(usage))
 }
-
 func BufferDataARB(target uint32, size int, data unsafe.Pointer, usage uint32) {
 	C.glowBufferDataARB(gpBufferDataARB, (C.GLenum)(target), (C.GLsizeiptrARB)(size), data, (C.GLenum)(usage))
 }
-
 func BufferPageCommitmentARB(target uint32, offset int, size int, commit bool) {
 	C.glowBufferPageCommitmentARB(gpBufferPageCommitmentARB, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLboolean)(boolToInt(commit)))
 }
-
 func BufferParameteriAPPLE(target uint32, pname uint32, param int32) {
 	C.glowBufferParameteriAPPLE(gpBufferParameteriAPPLE, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
@@ -20409,7 +20311,6 @@ func BufferStorage(target uint32, size int, data unsafe.Pointer, flags uint32) {
 func BufferStorageExternalEXT(target uint32, offset int, size int, clientBuffer unsafe.Pointer, flags uint32) {
 	C.glowBufferStorageExternalEXT(gpBufferStorageExternalEXT, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLeglClientBufferEXT)(clientBuffer), (C.GLbitfield)(flags))
 }
-
 func BufferStorageMemEXT(target uint32, size int, memory uint32, offset uint64) {
 	C.glowBufferStorageMemEXT(gpBufferStorageMemEXT, (C.GLenum)(target), (C.GLsizeiptr)(size), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
@@ -20418,11 +20319,9 @@ func BufferStorageMemEXT(target uint32, size int, memory uint32, offset uint64) 
 func BufferSubData(target uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowBufferSubData(gpBufferSubData, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func BufferSubDataARB(target uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowBufferSubDataARB(gpBufferSubDataARB, (C.GLenum)(target), (C.GLintptrARB)(offset), (C.GLsizeiptrARB)(size), data)
 }
-
 func CallCommandListNV(list uint32) {
 	C.glowCallCommandListNV(gpCallCommandListNV, (C.GLuint)(list))
 }
@@ -20442,7 +20341,6 @@ func CheckFramebufferStatus(target uint32) uint32 {
 	ret := C.glowCheckFramebufferStatus(gpCheckFramebufferStatus, (C.GLenum)(target))
 	return (uint32)(ret)
 }
-
 func CheckFramebufferStatusEXT(target uint32) uint32 {
 	ret := C.glowCheckFramebufferStatusEXT(gpCheckFramebufferStatusEXT, (C.GLenum)(target))
 	return (uint32)(ret)
@@ -20453,7 +20351,6 @@ func CheckNamedFramebufferStatus(framebuffer uint32, target uint32) uint32 {
 	ret := C.glowCheckNamedFramebufferStatus(gpCheckNamedFramebufferStatus, (C.GLuint)(framebuffer), (C.GLenum)(target))
 	return (uint32)(ret)
 }
-
 func CheckNamedFramebufferStatusEXT(framebuffer uint32, target uint32) uint32 {
 	ret := C.glowCheckNamedFramebufferStatusEXT(gpCheckNamedFramebufferStatusEXT, (C.GLuint)(framebuffer), (C.GLenum)(target))
 	return (uint32)(ret)
@@ -20463,7 +20360,6 @@ func CheckNamedFramebufferStatusEXT(framebuffer uint32, target uint32) uint32 {
 func ClampColor(target uint32, clamp uint32) {
 	C.glowClampColor(gpClampColor, (C.GLenum)(target), (C.GLenum)(clamp))
 }
-
 func ClampColorARB(target uint32, clamp uint32) {
 	C.glowClampColorARB(gpClampColorARB, (C.GLenum)(target), (C.GLenum)(clamp))
 }
@@ -20477,7 +20373,6 @@ func Clear(mask uint32) {
 func ClearAccum(red float32, green float32, blue float32, alpha float32) {
 	C.glowClearAccum(gpClearAccum, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-
 func ClearAccumxOES(red int32, green int32, blue int32, alpha int32) {
 	C.glowClearAccumxOES(gpClearAccumxOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
 }
@@ -20491,19 +20386,15 @@ func ClearBufferData(target uint32, internalformat uint32, format uint32, xtype 
 func ClearBufferSubData(target uint32, internalformat uint32, offset int, size int, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowClearBufferSubData(gpClearBufferSubData, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
-
 func ClearBufferfi(buffer uint32, drawbuffer int32, depth float32, stencil int32) {
 	C.glowClearBufferfi(gpClearBufferfi, (C.GLenum)(buffer), (C.GLint)(drawbuffer), (C.GLfloat)(depth), (C.GLint)(stencil))
 }
-
 func ClearBufferfv(buffer uint32, drawbuffer int32, value *float32) {
 	C.glowClearBufferfv(gpClearBufferfv, (C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ClearBufferiv(buffer uint32, drawbuffer int32, value *int32) {
 	C.glowClearBufferiv(gpClearBufferiv, (C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func ClearBufferuiv(buffer uint32, drawbuffer int32, value *uint32) {
 	C.glowClearBufferuiv(gpClearBufferuiv, (C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLuint)(unsafe.Pointer(value)))
 }
@@ -20512,15 +20403,12 @@ func ClearBufferuiv(buffer uint32, drawbuffer int32, value *uint32) {
 func ClearColor(red float32, green float32, blue float32, alpha float32) {
 	C.glowClearColor(gpClearColor, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-
 func ClearColorIiEXT(red int32, green int32, blue int32, alpha int32) {
 	C.glowClearColorIiEXT(gpClearColorIiEXT, (C.GLint)(red), (C.GLint)(green), (C.GLint)(blue), (C.GLint)(alpha))
 }
-
 func ClearColorIuiEXT(red uint32, green uint32, blue uint32, alpha uint32) {
 	C.glowClearColorIuiEXT(gpClearColorIuiEXT, (C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue), (C.GLuint)(alpha))
 }
-
 func ClearColorxOES(red int32, green int32, blue int32, alpha int32) {
 	C.glowClearColorxOES(gpClearColorxOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
 }
@@ -20529,7 +20417,6 @@ func ClearColorxOES(red int32, green int32, blue int32, alpha int32) {
 func ClearDepth(depth float64) {
 	C.glowClearDepth(gpClearDepth, (C.GLdouble)(depth))
 }
-
 func ClearDepthdNV(depth float64) {
 	C.glowClearDepthdNV(gpClearDepthdNV, (C.GLdouble)(depth))
 }
@@ -20538,11 +20425,9 @@ func ClearDepthdNV(depth float64) {
 func ClearDepthf(d float32) {
 	C.glowClearDepthf(gpClearDepthf, (C.GLfloat)(d))
 }
-
 func ClearDepthfOES(depth float32) {
 	C.glowClearDepthfOES(gpClearDepthfOES, (C.GLclampf)(depth))
 }
-
 func ClearDepthxOES(depth int32) {
 	C.glowClearDepthxOES(gpClearDepthxOES, (C.GLfixed)(depth))
 }
@@ -20556,7 +20441,6 @@ func ClearIndex(c float32) {
 func ClearNamedBufferData(buffer uint32, internalformat uint32, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowClearNamedBufferData(gpClearNamedBufferData, (C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
-
 func ClearNamedBufferDataEXT(buffer uint32, internalformat uint32, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowClearNamedBufferDataEXT(gpClearNamedBufferDataEXT, (C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
@@ -20565,23 +20449,18 @@ func ClearNamedBufferDataEXT(buffer uint32, internalformat uint32, format uint32
 func ClearNamedBufferSubData(buffer uint32, internalformat uint32, offset int, size int, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowClearNamedBufferSubData(gpClearNamedBufferSubData, (C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
-
 func ClearNamedBufferSubDataEXT(buffer uint32, internalformat uint32, offset int, size int, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowClearNamedBufferSubDataEXT(gpClearNamedBufferSubDataEXT, (C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLsizeiptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
-
 func ClearNamedFramebufferfi(framebuffer uint32, buffer uint32, drawbuffer int32, depth float32, stencil int32) {
 	C.glowClearNamedFramebufferfi(gpClearNamedFramebufferfi, (C.GLuint)(framebuffer), (C.GLenum)(buffer), (C.GLint)(drawbuffer), (C.GLfloat)(depth), (C.GLint)(stencil))
 }
-
 func ClearNamedFramebufferfv(framebuffer uint32, buffer uint32, drawbuffer int32, value *float32) {
 	C.glowClearNamedFramebufferfv(gpClearNamedFramebufferfv, (C.GLuint)(framebuffer), (C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ClearNamedFramebufferiv(framebuffer uint32, buffer uint32, drawbuffer int32, value *int32) {
 	C.glowClearNamedFramebufferiv(gpClearNamedFramebufferiv, (C.GLuint)(framebuffer), (C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func ClearNamedFramebufferuiv(framebuffer uint32, buffer uint32, drawbuffer int32, value *uint32) {
 	C.glowClearNamedFramebufferuiv(gpClearNamedFramebufferuiv, (C.GLuint)(framebuffer), (C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLuint)(unsafe.Pointer(value)))
 }
@@ -20605,15 +20484,12 @@ func ClearTexSubImage(texture uint32, level int32, xoffset int32, yoffset int32,
 func ClientActiveTexture(texture uint32) {
 	C.glowClientActiveTexture(gpClientActiveTexture, (C.GLenum)(texture))
 }
-
 func ClientActiveTextureARB(texture uint32) {
 	C.glowClientActiveTextureARB(gpClientActiveTextureARB, (C.GLenum)(texture))
 }
-
 func ClientActiveVertexStreamATI(stream uint32) {
 	C.glowClientActiveVertexStreamATI(gpClientActiveVertexStreamATI, (C.GLenum)(stream))
 }
-
 func ClientAttribDefaultEXT(mask uint32) {
 	C.glowClientAttribDefaultEXT(gpClientAttribDefaultEXT, (C.GLbitfield)(mask))
 }
@@ -20633,231 +20509,174 @@ func ClipControl(origin uint32, depth uint32) {
 func ClipPlane(plane uint32, equation *float64) {
 	C.glowClipPlane(gpClipPlane, (C.GLenum)(plane), (*C.GLdouble)(unsafe.Pointer(equation)))
 }
-
 func ClipPlanefOES(plane uint32, equation *float32) {
 	C.glowClipPlanefOES(gpClipPlanefOES, (C.GLenum)(plane), (*C.GLfloat)(unsafe.Pointer(equation)))
 }
-
 func ClipPlanexOES(plane uint32, equation *int32) {
 	C.glowClipPlanexOES(gpClipPlanexOES, (C.GLenum)(plane), (*C.GLfixed)(unsafe.Pointer(equation)))
 }
-
 func Color3b(red int8, green int8, blue int8) {
 	C.glowColor3b(gpColor3b, (C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue))
 }
-
 func Color3bv(v *int8) {
 	C.glowColor3bv(gpColor3bv, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func Color3d(red float64, green float64, blue float64) {
 	C.glowColor3d(gpColor3d, (C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue))
 }
-
 func Color3dv(v *float64) {
 	C.glowColor3dv(gpColor3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Color3f(red float32, green float32, blue float32) {
 	C.glowColor3f(gpColor3f, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue))
 }
-
 func Color3fVertex3fSUN(r float32, g float32, b float32, x float32, y float32, z float32) {
 	C.glowColor3fVertex3fSUN(gpColor3fVertex3fSUN, (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func Color3fVertex3fvSUN(c *float32, v *float32) {
 	C.glowColor3fVertex3fvSUN(gpColor3fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Color3fv(v *float32) {
 	C.glowColor3fv(gpColor3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Color3hNV(red uint16, green uint16, blue uint16) {
 	C.glowColor3hNV(gpColor3hNV, (C.GLhalfNV)(red), (C.GLhalfNV)(green), (C.GLhalfNV)(blue))
 }
-
 func Color3hvNV(v *uint16) {
 	C.glowColor3hvNV(gpColor3hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func Color3i(red int32, green int32, blue int32) {
 	C.glowColor3i(gpColor3i, (C.GLint)(red), (C.GLint)(green), (C.GLint)(blue))
 }
-
 func Color3iv(v *int32) {
 	C.glowColor3iv(gpColor3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Color3s(red int16, green int16, blue int16) {
 	C.glowColor3s(gpColor3s, (C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue))
 }
-
 func Color3sv(v *int16) {
 	C.glowColor3sv(gpColor3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func Color3ub(red uint8, green uint8, blue uint8) {
 	C.glowColor3ub(gpColor3ub, (C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue))
 }
-
 func Color3ubv(v *uint8) {
 	C.glowColor3ubv(gpColor3ubv, (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func Color3ui(red uint32, green uint32, blue uint32) {
 	C.glowColor3ui(gpColor3ui, (C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue))
 }
-
 func Color3uiv(v *uint32) {
 	C.glowColor3uiv(gpColor3uiv, (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func Color3us(red uint16, green uint16, blue uint16) {
 	C.glowColor3us(gpColor3us, (C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue))
 }
-
 func Color3usv(v *uint16) {
 	C.glowColor3usv(gpColor3usv, (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func Color3xOES(red int32, green int32, blue int32) {
 	C.glowColor3xOES(gpColor3xOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue))
 }
-
 func Color3xvOES(components *int32) {
 	C.glowColor3xvOES(gpColor3xvOES, (*C.GLfixed)(unsafe.Pointer(components)))
 }
-
 func Color4b(red int8, green int8, blue int8, alpha int8) {
 	C.glowColor4b(gpColor4b, (C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue), (C.GLbyte)(alpha))
 }
-
 func Color4bv(v *int8) {
 	C.glowColor4bv(gpColor4bv, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func Color4d(red float64, green float64, blue float64, alpha float64) {
 	C.glowColor4d(gpColor4d, (C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue), (C.GLdouble)(alpha))
 }
-
 func Color4dv(v *float64) {
 	C.glowColor4dv(gpColor4dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Color4f(red float32, green float32, blue float32, alpha float32) {
 	C.glowColor4f(gpColor4f, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-
 func Color4fNormal3fVertex3fSUN(r float32, g float32, b float32, a float32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowColor4fNormal3fVertex3fSUN(gpColor4fNormal3fVertex3fSUN, (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(a), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func Color4fNormal3fVertex3fvSUN(c *float32, n *float32, v *float32) {
 	C.glowColor4fNormal3fVertex3fvSUN(gpColor4fNormal3fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Color4fv(v *float32) {
 	C.glowColor4fv(gpColor4fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Color4hNV(red uint16, green uint16, blue uint16, alpha uint16) {
 	C.glowColor4hNV(gpColor4hNV, (C.GLhalfNV)(red), (C.GLhalfNV)(green), (C.GLhalfNV)(blue), (C.GLhalfNV)(alpha))
 }
-
 func Color4hvNV(v *uint16) {
 	C.glowColor4hvNV(gpColor4hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func Color4i(red int32, green int32, blue int32, alpha int32) {
 	C.glowColor4i(gpColor4i, (C.GLint)(red), (C.GLint)(green), (C.GLint)(blue), (C.GLint)(alpha))
 }
-
 func Color4iv(v *int32) {
 	C.glowColor4iv(gpColor4iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Color4s(red int16, green int16, blue int16, alpha int16) {
 	C.glowColor4s(gpColor4s, (C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue), (C.GLshort)(alpha))
 }
-
 func Color4sv(v *int16) {
 	C.glowColor4sv(gpColor4sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func Color4ub(red uint8, green uint8, blue uint8, alpha uint8) {
 	C.glowColor4ub(gpColor4ub, (C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue), (C.GLubyte)(alpha))
 }
-
 func Color4ubVertex2fSUN(r uint8, g uint8, b uint8, a uint8, x float32, y float32) {
 	C.glowColor4ubVertex2fSUN(gpColor4ubVertex2fSUN, (C.GLubyte)(r), (C.GLubyte)(g), (C.GLubyte)(b), (C.GLubyte)(a), (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func Color4ubVertex2fvSUN(c *uint8, v *float32) {
 	C.glowColor4ubVertex2fvSUN(gpColor4ubVertex2fvSUN, (*C.GLubyte)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Color4ubVertex3fSUN(r uint8, g uint8, b uint8, a uint8, x float32, y float32, z float32) {
 	C.glowColor4ubVertex3fSUN(gpColor4ubVertex3fSUN, (C.GLubyte)(r), (C.GLubyte)(g), (C.GLubyte)(b), (C.GLubyte)(a), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func Color4ubVertex3fvSUN(c *uint8, v *float32) {
 	C.glowColor4ubVertex3fvSUN(gpColor4ubVertex3fvSUN, (*C.GLubyte)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Color4ubv(v *uint8) {
 	C.glowColor4ubv(gpColor4ubv, (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func Color4ui(red uint32, green uint32, blue uint32, alpha uint32) {
 	C.glowColor4ui(gpColor4ui, (C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue), (C.GLuint)(alpha))
 }
-
 func Color4uiv(v *uint32) {
 	C.glowColor4uiv(gpColor4uiv, (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func Color4us(red uint16, green uint16, blue uint16, alpha uint16) {
 	C.glowColor4us(gpColor4us, (C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue), (C.GLushort)(alpha))
 }
-
 func Color4usv(v *uint16) {
 	C.glowColor4usv(gpColor4usv, (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func Color4xOES(red int32, green int32, blue int32, alpha int32) {
 	C.glowColor4xOES(gpColor4xOES, (C.GLfixed)(red), (C.GLfixed)(green), (C.GLfixed)(blue), (C.GLfixed)(alpha))
 }
-
 func Color4xvOES(components *int32) {
 	C.glowColor4xvOES(gpColor4xvOES, (*C.GLfixed)(unsafe.Pointer(components)))
 }
-
 func ColorFormatNV(size int32, xtype uint32, stride int32) {
 	C.glowColorFormatNV(gpColorFormatNV, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func ColorFragmentOp1ATI(op uint32, dst uint32, dstMask uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32) {
 	C.glowColorFragmentOp1ATI(gpColorFragmentOp1ATI, (C.GLenum)(op), (C.GLuint)(dst), (C.GLuint)(dstMask), (C.GLuint)(dstMod), (C.GLuint)(arg1), (C.GLuint)(arg1Rep), (C.GLuint)(arg1Mod))
 }
-
 func ColorFragmentOp2ATI(op uint32, dst uint32, dstMask uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32, arg2 uint32, arg2Rep uint32, arg2Mod uint32) {
 	C.glowColorFragmentOp2ATI(gpColorFragmentOp2ATI, (C.GLenum)(op), (C.GLuint)(dst), (C.GLuint)(dstMask), (C.GLuint)(dstMod), (C.GLuint)(arg1), (C.GLuint)(arg1Rep), (C.GLuint)(arg1Mod), (C.GLuint)(arg2), (C.GLuint)(arg2Rep), (C.GLuint)(arg2Mod))
 }
-
 func ColorFragmentOp3ATI(op uint32, dst uint32, dstMask uint32, dstMod uint32, arg1 uint32, arg1Rep uint32, arg1Mod uint32, arg2 uint32, arg2Rep uint32, arg2Mod uint32, arg3 uint32, arg3Rep uint32, arg3Mod uint32) {
 	C.glowColorFragmentOp3ATI(gpColorFragmentOp3ATI, (C.GLenum)(op), (C.GLuint)(dst), (C.GLuint)(dstMask), (C.GLuint)(dstMod), (C.GLuint)(arg1), (C.GLuint)(arg1Rep), (C.GLuint)(arg1Mod), (C.GLuint)(arg2), (C.GLuint)(arg2Rep), (C.GLuint)(arg2Mod), (C.GLuint)(arg3), (C.GLuint)(arg3Rep), (C.GLuint)(arg3Mod))
 }
-
 func ColorMask(red bool, green bool, blue bool, alpha bool) {
 	C.glowColorMask(gpColorMask, (C.GLboolean)(boolToInt(red)), (C.GLboolean)(boolToInt(green)), (C.GLboolean)(boolToInt(blue)), (C.GLboolean)(boolToInt(alpha)))
 }
-
 func ColorMaskIndexedEXT(index uint32, r bool, g bool, b bool, a bool) {
 	C.glowColorMaskIndexedEXT(gpColorMaskIndexedEXT, (C.GLuint)(index), (C.GLboolean)(boolToInt(r)), (C.GLboolean)(boolToInt(g)), (C.GLboolean)(boolToInt(b)), (C.GLboolean)(boolToInt(a)))
 }
-
 func ColorMaski(index uint32, r bool, g bool, b bool, a bool) {
 	C.glowColorMaski(gpColorMaski, (C.GLuint)(index), (C.GLboolean)(boolToInt(r)), (C.GLboolean)(boolToInt(g)), (C.GLboolean)(boolToInt(b)), (C.GLboolean)(boolToInt(a)))
 }
@@ -20866,19 +20685,15 @@ func ColorMaski(index uint32, r bool, g bool, b bool, a bool) {
 func ColorMaterial(face uint32, mode uint32) {
 	C.glowColorMaterial(gpColorMaterial, (C.GLenum)(face), (C.GLenum)(mode))
 }
-
 func ColorP3ui(xtype uint32, color uint32) {
 	C.glowColorP3ui(gpColorP3ui, (C.GLenum)(xtype), (C.GLuint)(color))
 }
-
 func ColorP3uiv(xtype uint32, color *uint32) {
 	C.glowColorP3uiv(gpColorP3uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(color)))
 }
-
 func ColorP4ui(xtype uint32, color uint32) {
 	C.glowColorP4ui(gpColorP4ui, (C.GLenum)(xtype), (C.GLuint)(color))
 }
-
 func ColorP4uiv(xtype uint32, color *uint32) {
 	C.glowColorP4uiv(gpColorP4uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(color)))
 }
@@ -20887,15 +20702,12 @@ func ColorP4uiv(xtype uint32, color *uint32) {
 func ColorPointer(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowColorPointer(gpColorPointer, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func ColorPointerEXT(size int32, xtype uint32, stride int32, count int32, pointer unsafe.Pointer) {
 	C.glowColorPointerEXT(gpColorPointerEXT, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLsizei)(count), pointer)
 }
-
 func ColorPointerListIBM(size int32, xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowColorPointerListIBM(gpColorPointerListIBM, (C.GLint)(size), (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
-
 func ColorPointervINTEL(size int32, xtype uint32, pointer *unsafe.Pointer) {
 	C.glowColorPointervINTEL(gpColorPointervINTEL, (C.GLint)(size), (C.GLenum)(xtype), pointer)
 }
@@ -20904,7 +20716,6 @@ func ColorPointervINTEL(size int32, xtype uint32, pointer *unsafe.Pointer) {
 func ColorSubTable(target uint32, start int32, count int32, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowColorSubTable(gpColorSubTable, (C.GLenum)(target), (C.GLsizei)(start), (C.GLsizei)(count), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
-
 func ColorSubTableEXT(target uint32, start int32, count int32, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowColorSubTableEXT(gpColorSubTableEXT, (C.GLenum)(target), (C.GLsizei)(start), (C.GLsizei)(count), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
@@ -20913,63 +20724,48 @@ func ColorSubTableEXT(target uint32, start int32, count int32, format uint32, xt
 func ColorTable(target uint32, internalformat uint32, width int32, format uint32, xtype uint32, table unsafe.Pointer) {
 	C.glowColorTable(gpColorTable, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), table)
 }
-
 func ColorTableEXT(target uint32, internalFormat uint32, width int32, format uint32, xtype uint32, table unsafe.Pointer) {
 	C.glowColorTableEXT(gpColorTableEXT, (C.GLenum)(target), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), table)
 }
-
 func ColorTableParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowColorTableParameterfv(gpColorTableParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ColorTableParameterfvSGI(target uint32, pname uint32, params *float32) {
 	C.glowColorTableParameterfvSGI(gpColorTableParameterfvSGI, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ColorTableParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowColorTableParameteriv(gpColorTableParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ColorTableParameterivSGI(target uint32, pname uint32, params *int32) {
 	C.glowColorTableParameterivSGI(gpColorTableParameterivSGI, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ColorTableSGI(target uint32, internalformat uint32, width int32, format uint32, xtype uint32, table unsafe.Pointer) {
 	C.glowColorTableSGI(gpColorTableSGI, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), table)
 }
-
 func CombinerInputNV(stage uint32, portion uint32, variable uint32, input uint32, mapping uint32, componentUsage uint32) {
 	C.glowCombinerInputNV(gpCombinerInputNV, (C.GLenum)(stage), (C.GLenum)(portion), (C.GLenum)(variable), (C.GLenum)(input), (C.GLenum)(mapping), (C.GLenum)(componentUsage))
 }
-
 func CombinerOutputNV(stage uint32, portion uint32, abOutput uint32, cdOutput uint32, sumOutput uint32, scale uint32, bias uint32, abDotProduct bool, cdDotProduct bool, muxSum bool) {
 	C.glowCombinerOutputNV(gpCombinerOutputNV, (C.GLenum)(stage), (C.GLenum)(portion), (C.GLenum)(abOutput), (C.GLenum)(cdOutput), (C.GLenum)(sumOutput), (C.GLenum)(scale), (C.GLenum)(bias), (C.GLboolean)(boolToInt(abDotProduct)), (C.GLboolean)(boolToInt(cdDotProduct)), (C.GLboolean)(boolToInt(muxSum)))
 }
-
 func CombinerParameterfNV(pname uint32, param float32) {
 	C.glowCombinerParameterfNV(gpCombinerParameterfNV, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func CombinerParameterfvNV(pname uint32, params *float32) {
 	C.glowCombinerParameterfvNV(gpCombinerParameterfvNV, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func CombinerParameteriNV(pname uint32, param int32) {
 	C.glowCombinerParameteriNV(gpCombinerParameteriNV, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func CombinerParameterivNV(pname uint32, params *int32) {
 	C.glowCombinerParameterivNV(gpCombinerParameterivNV, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func CombinerStageParameterfvNV(stage uint32, pname uint32, params *float32) {
 	C.glowCombinerStageParameterfvNV(gpCombinerStageParameterfvNV, (C.GLenum)(stage), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func CommandListSegmentsNV(list uint32, segments uint32) {
 	C.glowCommandListSegmentsNV(gpCommandListSegmentsNV, (C.GLuint)(list), (C.GLuint)(segments))
 }
-
 func CompileCommandListNV(list uint32) {
 	C.glowCompileCommandListNV(gpCompileCommandListNV, (C.GLuint)(list))
 }
@@ -20978,35 +20774,27 @@ func CompileCommandListNV(list uint32) {
 func CompileShader(shader uint32) {
 	C.glowCompileShader(gpCompileShader, (C.GLuint)(shader))
 }
-
 func CompileShaderARB(shaderObj uintptr) {
 	C.glowCompileShaderARB(gpCompileShaderARB, (C.GLhandleARB)(shaderObj))
 }
-
 func CompileShaderIncludeARB(shader uint32, count int32, path **uint8, length *int32) {
 	C.glowCompileShaderIncludeARB(gpCompileShaderIncludeARB, (C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(path)), (*C.GLint)(unsafe.Pointer(length)))
 }
-
 func CompressedMultiTexImage1DEXT(texunit uint32, target uint32, level int32, internalformat uint32, width int32, border int32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedMultiTexImage1DEXT(gpCompressedMultiTexImage1DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedMultiTexImage2DEXT(texunit uint32, target uint32, level int32, internalformat uint32, width int32, height int32, border int32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedMultiTexImage2DEXT(gpCompressedMultiTexImage2DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedMultiTexImage3DEXT(texunit uint32, target uint32, level int32, internalformat uint32, width int32, height int32, depth int32, border int32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedMultiTexImage3DEXT(gpCompressedMultiTexImage3DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedMultiTexSubImage1DEXT(texunit uint32, target uint32, level int32, xoffset int32, width int32, format uint32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedMultiTexSubImage1DEXT(gpCompressedMultiTexSubImage1DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedMultiTexSubImage2DEXT(texunit uint32, target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedMultiTexSubImage2DEXT(gpCompressedMultiTexSubImage2DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedMultiTexSubImage3DEXT(texunit uint32, target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedMultiTexSubImage3DEXT(gpCompressedMultiTexSubImage3DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), bits)
 }
@@ -21015,7 +20803,6 @@ func CompressedMultiTexSubImage3DEXT(texunit uint32, target uint32, level int32,
 func CompressedTexImage1D(target uint32, level int32, internalformat uint32, width int32, border int32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexImage1D(gpCompressedTexImage1D, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTexImage1DARB(target uint32, level int32, internalformat uint32, width int32, border int32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexImage1DARB(gpCompressedTexImage1DARB, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLsizei)(imageSize), data)
 }
@@ -21024,7 +20811,6 @@ func CompressedTexImage1DARB(target uint32, level int32, internalformat uint32, 
 func CompressedTexImage2D(target uint32, level int32, internalformat uint32, width int32, height int32, border int32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexImage2D(gpCompressedTexImage2D, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTexImage2DARB(target uint32, level int32, internalformat uint32, width int32, height int32, border int32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexImage2DARB(gpCompressedTexImage2DARB, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLsizei)(imageSize), data)
 }
@@ -21033,7 +20819,6 @@ func CompressedTexImage2DARB(target uint32, level int32, internalformat uint32, 
 func CompressedTexImage3D(target uint32, level int32, internalformat uint32, width int32, height int32, depth int32, border int32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexImage3D(gpCompressedTexImage3D, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTexImage3DARB(target uint32, level int32, internalformat uint32, width int32, height int32, depth int32, border int32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexImage3DARB(gpCompressedTexImage3DARB, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLsizei)(imageSize), data)
 }
@@ -21042,7 +20827,6 @@ func CompressedTexImage3DARB(target uint32, level int32, internalformat uint32, 
 func CompressedTexSubImage1D(target uint32, level int32, xoffset int32, width int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexSubImage1D(gpCompressedTexSubImage1D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTexSubImage1DARB(target uint32, level int32, xoffset int32, width int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexSubImage1DARB(gpCompressedTexSubImage1DARB, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
@@ -21051,7 +20835,6 @@ func CompressedTexSubImage1DARB(target uint32, level int32, xoffset int32, width
 func CompressedTexSubImage2D(target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexSubImage2D(gpCompressedTexSubImage2D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTexSubImage2DARB(target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexSubImage2DARB(gpCompressedTexSubImage2DARB, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
@@ -21060,19 +20843,15 @@ func CompressedTexSubImage2DARB(target uint32, level int32, xoffset int32, yoffs
 func CompressedTexSubImage3D(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexSubImage3D(gpCompressedTexSubImage3D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTexSubImage3DARB(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTexSubImage3DARB(gpCompressedTexSubImage3DARB, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTextureImage1DEXT(texture uint32, target uint32, level int32, internalformat uint32, width int32, border int32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedTextureImage1DEXT(gpCompressedTextureImage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedTextureImage2DEXT(texture uint32, target uint32, level int32, internalformat uint32, width int32, height int32, border int32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedTextureImage2DEXT(gpCompressedTextureImage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLsizei)(imageSize), bits)
 }
-
 func CompressedTextureImage3DEXT(texture uint32, target uint32, level int32, internalformat uint32, width int32, height int32, depth int32, border int32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedTextureImage3DEXT(gpCompressedTextureImage3DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLsizei)(imageSize), bits)
 }
@@ -21081,7 +20860,6 @@ func CompressedTextureImage3DEXT(texture uint32, target uint32, level int32, int
 func CompressedTextureSubImage1D(texture uint32, level int32, xoffset int32, width int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTextureSubImage1D(gpCompressedTextureSubImage1D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTextureSubImage1DEXT(texture uint32, target uint32, level int32, xoffset int32, width int32, format uint32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedTextureSubImage1DEXT(gpCompressedTextureSubImage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), bits)
 }
@@ -21090,7 +20868,6 @@ func CompressedTextureSubImage1DEXT(texture uint32, target uint32, level int32, 
 func CompressedTextureSubImage2D(texture uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTextureSubImage2D(gpCompressedTextureSubImage2D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTextureSubImage2DEXT(texture uint32, target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedTextureSubImage2DEXT(gpCompressedTextureSubImage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), bits)
 }
@@ -21099,15 +20876,12 @@ func CompressedTextureSubImage2DEXT(texture uint32, target uint32, level int32, 
 func CompressedTextureSubImage3D(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, imageSize int32, data unsafe.Pointer) {
 	C.glowCompressedTextureSubImage3D(gpCompressedTextureSubImage3D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), data)
 }
-
 func CompressedTextureSubImage3DEXT(texture uint32, target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, imageSize int32, bits unsafe.Pointer) {
 	C.glowCompressedTextureSubImage3DEXT(gpCompressedTextureSubImage3DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), bits)
 }
-
 func ConservativeRasterParameterfNV(pname uint32, value float32) {
 	C.glowConservativeRasterParameterfNV(gpConservativeRasterParameterfNV, (C.GLenum)(pname), (C.GLfloat)(value))
 }
-
 func ConservativeRasterParameteriNV(pname uint32, param int32) {
 	C.glowConservativeRasterParameteriNV(gpConservativeRasterParameteriNV, (C.GLenum)(pname), (C.GLint)(param))
 }
@@ -21116,7 +20890,6 @@ func ConservativeRasterParameteriNV(pname uint32, param int32) {
 func ConvolutionFilter1D(target uint32, internalformat uint32, width int32, format uint32, xtype uint32, image unsafe.Pointer) {
 	C.glowConvolutionFilter1D(gpConvolutionFilter1D, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), image)
 }
-
 func ConvolutionFilter1DEXT(target uint32, internalformat uint32, width int32, format uint32, xtype uint32, image unsafe.Pointer) {
 	C.glowConvolutionFilter1DEXT(gpConvolutionFilter1DEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), image)
 }
@@ -21125,47 +20898,36 @@ func ConvolutionFilter1DEXT(target uint32, internalformat uint32, width int32, f
 func ConvolutionFilter2D(target uint32, internalformat uint32, width int32, height int32, format uint32, xtype uint32, image unsafe.Pointer) {
 	C.glowConvolutionFilter2D(gpConvolutionFilter2D, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), image)
 }
-
 func ConvolutionFilter2DEXT(target uint32, internalformat uint32, width int32, height int32, format uint32, xtype uint32, image unsafe.Pointer) {
 	C.glowConvolutionFilter2DEXT(gpConvolutionFilter2DEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), image)
 }
-
 func ConvolutionParameterf(target uint32, pname uint32, params float32) {
 	C.glowConvolutionParameterf(gpConvolutionParameterf, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(params))
 }
-
 func ConvolutionParameterfEXT(target uint32, pname uint32, params float32) {
 	C.glowConvolutionParameterfEXT(gpConvolutionParameterfEXT, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(params))
 }
-
 func ConvolutionParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowConvolutionParameterfv(gpConvolutionParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ConvolutionParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowConvolutionParameterfvEXT(gpConvolutionParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ConvolutionParameteri(target uint32, pname uint32, params int32) {
 	C.glowConvolutionParameteri(gpConvolutionParameteri, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(params))
 }
-
 func ConvolutionParameteriEXT(target uint32, pname uint32, params int32) {
 	C.glowConvolutionParameteriEXT(gpConvolutionParameteriEXT, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(params))
 }
-
 func ConvolutionParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowConvolutionParameteriv(gpConvolutionParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ConvolutionParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowConvolutionParameterivEXT(gpConvolutionParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ConvolutionParameterxOES(target uint32, pname uint32, param int32) {
 	C.glowConvolutionParameterxOES(gpConvolutionParameterxOES, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func ConvolutionParameterxvOES(target uint32, pname uint32, params *int32) {
 	C.glowConvolutionParameterxvOES(gpConvolutionParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
@@ -21179,7 +20941,6 @@ func CopyBufferSubData(readTarget uint32, writeTarget uint32, readOffset int, wr
 func CopyColorSubTable(target uint32, start int32, x int32, y int32, width int32) {
 	C.glowCopyColorSubTable(gpCopyColorSubTable, (C.GLenum)(target), (C.GLsizei)(start), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-
 func CopyColorSubTableEXT(target uint32, start int32, x int32, y int32, width int32) {
 	C.glowCopyColorSubTableEXT(gpCopyColorSubTableEXT, (C.GLenum)(target), (C.GLsizei)(start), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
@@ -21188,7 +20949,6 @@ func CopyColorSubTableEXT(target uint32, start int32, x int32, y int32, width in
 func CopyColorTable(target uint32, internalformat uint32, x int32, y int32, width int32) {
 	C.glowCopyColorTable(gpCopyColorTable, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-
 func CopyColorTableSGI(target uint32, internalformat uint32, x int32, y int32, width int32) {
 	C.glowCopyColorTableSGI(gpCopyColorTableSGI, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
@@ -21197,7 +20957,6 @@ func CopyColorTableSGI(target uint32, internalformat uint32, x int32, y int32, w
 func CopyConvolutionFilter1D(target uint32, internalformat uint32, x int32, y int32, width int32) {
 	C.glowCopyConvolutionFilter1D(gpCopyConvolutionFilter1D, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-
 func CopyConvolutionFilter1DEXT(target uint32, internalformat uint32, x int32, y int32, width int32) {
 	C.glowCopyConvolutionFilter1DEXT(gpCopyConvolutionFilter1DEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
@@ -21206,7 +20965,6 @@ func CopyConvolutionFilter1DEXT(target uint32, internalformat uint32, x int32, y
 func CopyConvolutionFilter2D(target uint32, internalformat uint32, x int32, y int32, width int32, height int32) {
 	C.glowCopyConvolutionFilter2D(gpCopyConvolutionFilter2D, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyConvolutionFilter2DEXT(target uint32, internalformat uint32, x int32, y int32, width int32, height int32) {
 	C.glowCopyConvolutionFilter2DEXT(gpCopyConvolutionFilter2DEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -21215,27 +20973,21 @@ func CopyConvolutionFilter2DEXT(target uint32, internalformat uint32, x int32, y
 func CopyImageSubData(srcName uint32, srcTarget uint32, srcLevel int32, srcX int32, srcY int32, srcZ int32, dstName uint32, dstTarget uint32, dstLevel int32, dstX int32, dstY int32, dstZ int32, srcWidth int32, srcHeight int32, srcDepth int32) {
 	C.glowCopyImageSubData(gpCopyImageSubData, (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(srcWidth), (C.GLsizei)(srcHeight), (C.GLsizei)(srcDepth))
 }
-
 func CopyImageSubDataNV(srcName uint32, srcTarget uint32, srcLevel int32, srcX int32, srcY int32, srcZ int32, dstName uint32, dstTarget uint32, dstLevel int32, dstX int32, dstY int32, dstZ int32, width int32, height int32, depth int32) {
 	C.glowCopyImageSubDataNV(gpCopyImageSubDataNV, (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-
 func CopyMultiTexImage1DEXT(texunit uint32, target uint32, level int32, internalformat uint32, x int32, y int32, width int32, border int32) {
 	C.glowCopyMultiTexImage1DEXT(gpCopyMultiTexImage1DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLint)(border))
 }
-
 func CopyMultiTexImage2DEXT(texunit uint32, target uint32, level int32, internalformat uint32, x int32, y int32, width int32, height int32, border int32) {
 	C.glowCopyMultiTexImage2DEXT(gpCopyMultiTexImage2DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border))
 }
-
 func CopyMultiTexSubImage1DEXT(texunit uint32, target uint32, level int32, xoffset int32, x int32, y int32, width int32) {
 	C.glowCopyMultiTexSubImage1DEXT(gpCopyMultiTexSubImage1DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-
 func CopyMultiTexSubImage2DEXT(texunit uint32, target uint32, level int32, xoffset int32, yoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyMultiTexSubImage2DEXT(gpCopyMultiTexSubImage2DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyMultiTexSubImage3DEXT(texunit uint32, target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyMultiTexSubImage3DEXT(gpCopyMultiTexSubImage3DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -21244,7 +20996,6 @@ func CopyMultiTexSubImage3DEXT(texunit uint32, target uint32, level int32, xoffs
 func CopyNamedBufferSubData(readBuffer uint32, writeBuffer uint32, readOffset int, writeOffset int, size int) {
 	C.glowCopyNamedBufferSubData(gpCopyNamedBufferSubData, (C.GLuint)(readBuffer), (C.GLuint)(writeBuffer), (C.GLintptr)(readOffset), (C.GLintptr)(writeOffset), (C.GLsizeiptr)(size))
 }
-
 func CopyPathNV(resultPath uint32, srcPath uint32) {
 	C.glowCopyPathNV(gpCopyPathNV, (C.GLuint)(resultPath), (C.GLuint)(srcPath))
 }
@@ -21258,7 +21009,6 @@ func CopyPixels(x int32, y int32, width int32, height int32, xtype uint32) {
 func CopyTexImage1D(target uint32, level int32, internalformat uint32, x int32, y int32, width int32, border int32) {
 	C.glowCopyTexImage1D(gpCopyTexImage1D, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLint)(border))
 }
-
 func CopyTexImage1DEXT(target uint32, level int32, internalformat uint32, x int32, y int32, width int32, border int32) {
 	C.glowCopyTexImage1DEXT(gpCopyTexImage1DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLint)(border))
 }
@@ -21267,7 +21017,6 @@ func CopyTexImage1DEXT(target uint32, level int32, internalformat uint32, x int3
 func CopyTexImage2D(target uint32, level int32, internalformat uint32, x int32, y int32, width int32, height int32, border int32) {
 	C.glowCopyTexImage2D(gpCopyTexImage2D, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border))
 }
-
 func CopyTexImage2DEXT(target uint32, level int32, internalformat uint32, x int32, y int32, width int32, height int32, border int32) {
 	C.glowCopyTexImage2DEXT(gpCopyTexImage2DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border))
 }
@@ -21276,7 +21025,6 @@ func CopyTexImage2DEXT(target uint32, level int32, internalformat uint32, x int3
 func CopyTexSubImage1D(target uint32, level int32, xoffset int32, x int32, y int32, width int32) {
 	C.glowCopyTexSubImage1D(gpCopyTexSubImage1D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-
 func CopyTexSubImage1DEXT(target uint32, level int32, xoffset int32, x int32, y int32, width int32) {
 	C.glowCopyTexSubImage1DEXT(gpCopyTexSubImage1DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
@@ -21285,7 +21033,6 @@ func CopyTexSubImage1DEXT(target uint32, level int32, xoffset int32, x int32, y 
 func CopyTexSubImage2D(target uint32, level int32, xoffset int32, yoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTexSubImage2D(gpCopyTexSubImage2D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyTexSubImage2DEXT(target uint32, level int32, xoffset int32, yoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTexSubImage2DEXT(gpCopyTexSubImage2DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -21294,15 +21041,12 @@ func CopyTexSubImage2DEXT(target uint32, level int32, xoffset int32, yoffset int
 func CopyTexSubImage3D(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTexSubImage3D(gpCopyTexSubImage3D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyTexSubImage3DEXT(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTexSubImage3DEXT(gpCopyTexSubImage3DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyTextureImage1DEXT(texture uint32, target uint32, level int32, internalformat uint32, x int32, y int32, width int32, border int32) {
 	C.glowCopyTextureImage1DEXT(gpCopyTextureImage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLint)(border))
 }
-
 func CopyTextureImage2DEXT(texture uint32, target uint32, level int32, internalformat uint32, x int32, y int32, width int32, height int32, border int32) {
 	C.glowCopyTextureImage2DEXT(gpCopyTextureImage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border))
 }
@@ -21311,7 +21055,6 @@ func CopyTextureImage2DEXT(texture uint32, target uint32, level int32, internalf
 func CopyTextureSubImage1D(texture uint32, level int32, xoffset int32, x int32, y int32, width int32) {
 	C.glowCopyTextureSubImage1D(gpCopyTextureSubImage1D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-
 func CopyTextureSubImage1DEXT(texture uint32, target uint32, level int32, xoffset int32, x int32, y int32, width int32) {
 	C.glowCopyTextureSubImage1DEXT(gpCopyTextureSubImage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
@@ -21320,7 +21063,6 @@ func CopyTextureSubImage1DEXT(texture uint32, target uint32, level int32, xoffse
 func CopyTextureSubImage2D(texture uint32, level int32, xoffset int32, yoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTextureSubImage2D(gpCopyTextureSubImage2D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyTextureSubImage2DEXT(texture uint32, target uint32, level int32, xoffset int32, yoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTextureSubImage2DEXT(gpCopyTextureSubImage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -21329,31 +21071,24 @@ func CopyTextureSubImage2DEXT(texture uint32, target uint32, level int32, xoffse
 func CopyTextureSubImage3D(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTextureSubImage3D(gpCopyTextureSubImage3D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CopyTextureSubImage3DEXT(texture uint32, target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, x int32, y int32, width int32, height int32) {
 	C.glowCopyTextureSubImage3DEXT(gpCopyTextureSubImage3DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func CoverFillPathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, coverMode uint32, transformType uint32, transformValues *float32) {
 	C.glowCoverFillPathInstancedNV(gpCoverFillPathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func CoverFillPathNV(path uint32, coverMode uint32) {
 	C.glowCoverFillPathNV(gpCoverFillPathNV, (C.GLuint)(path), (C.GLenum)(coverMode))
 }
-
 func CoverStrokePathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, coverMode uint32, transformType uint32, transformValues *float32) {
 	C.glowCoverStrokePathInstancedNV(gpCoverStrokePathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func CoverStrokePathNV(path uint32, coverMode uint32) {
 	C.glowCoverStrokePathNV(gpCoverStrokePathNV, (C.GLuint)(path), (C.GLenum)(coverMode))
 }
-
 func CoverageModulationNV(components uint32) {
 	C.glowCoverageModulationNV(gpCoverageModulationNV, (C.GLenum)(components))
 }
-
 func CoverageModulationTableNV(n int32, v *float32) {
 	C.glowCoverageModulationTableNV(gpCoverageModulationTableNV, (C.GLsizei)(n), (*C.GLfloat)(unsafe.Pointer(v)))
 }
@@ -21362,7 +21097,6 @@ func CoverageModulationTableNV(n int32, v *float32) {
 func CreateBuffers(n int32, buffers *uint32) {
 	C.glowCreateBuffers(gpCreateBuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
 }
-
 func CreateCommandListsNV(n int32, lists *uint32) {
 	C.glowCreateCommandListsNV(gpCreateCommandListsNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(lists)))
 }
@@ -21371,11 +21105,9 @@ func CreateCommandListsNV(n int32, lists *uint32) {
 func CreateFramebuffers(n int32, framebuffers *uint32) {
 	C.glowCreateFramebuffers(gpCreateFramebuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(framebuffers)))
 }
-
 func CreateMemoryObjectsEXT(n int32, memoryObjects *uint32) {
 	C.glowCreateMemoryObjectsEXT(gpCreateMemoryObjectsEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(memoryObjects)))
 }
-
 func CreatePerfQueryINTEL(queryId uint32, queryHandle *uint32) {
 	C.glowCreatePerfQueryINTEL(gpCreatePerfQueryINTEL, (C.GLuint)(queryId), (*C.GLuint)(unsafe.Pointer(queryHandle)))
 }
@@ -21385,7 +21117,6 @@ func CreateProgram() uint32 {
 	ret := C.glowCreateProgram(gpCreateProgram)
 	return (uint32)(ret)
 }
-
 func CreateProgramObjectARB() uintptr {
 	ret := C.glowCreateProgramObjectARB(gpCreateProgramObjectARB)
 	return (uintptr)(ret)
@@ -21416,12 +21147,10 @@ func CreateShader(xtype uint32) uint32 {
 	ret := C.glowCreateShader(gpCreateShader, (C.GLenum)(xtype))
 	return (uint32)(ret)
 }
-
 func CreateShaderObjectARB(shaderType uint32) uintptr {
 	ret := C.glowCreateShaderObjectARB(gpCreateShaderObjectARB, (C.GLenum)(shaderType))
 	return (uintptr)(ret)
 }
-
 func CreateShaderProgramEXT(xtype uint32, xstring *uint8) uint32 {
 	ret := C.glowCreateShaderProgramEXT(gpCreateShaderProgramEXT, (C.GLenum)(xtype), (*C.GLchar)(unsafe.Pointer(xstring)))
 	return (uint32)(ret)
@@ -21432,18 +21161,15 @@ func CreateShaderProgramv(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramv(gpCreateShaderProgramv, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
 }
-
 func CreateShaderProgramvEXT(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramvEXT(gpCreateShaderProgramvEXT, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
 }
-
 func CreateStatesNV(n int32, states *uint32) {
 	C.glowCreateStatesNV(gpCreateStatesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(states)))
 }
 
 // Parameter context has type *C.struct__cl_context.
-//
 // Parameter event has type *C.struct__cl_event.
 func CreateSyncFromCLeventARB(context unsafe.Pointer, event unsafe.Pointer, flags uint32) uintptr {
 	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(unsafe.Pointer(context)), (*C.struct__cl_event)(unsafe.Pointer(event)), (C.GLbitfield)(flags))
@@ -21469,15 +21195,12 @@ func CreateVertexArrays(n int32, arrays *uint32) {
 func CullFace(mode uint32) {
 	C.glowCullFace(gpCullFace, (C.GLenum)(mode))
 }
-
 func CullParameterdvEXT(pname uint32, params *float64) {
 	C.glowCullParameterdvEXT(gpCullParameterdvEXT, (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func CullParameterfvEXT(pname uint32, params *float32) {
 	C.glowCullParameterfvEXT(gpCullParameterfvEXT, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func CurrentPaletteMatrixARB(index int32) {
 	C.glowCurrentPaletteMatrixARB(gpCurrentPaletteMatrixARB, (C.GLint)(index))
 }
@@ -21492,12 +21215,10 @@ func DebugMessageCallback(callback DebugProc, userParam unsafe.Pointer) {
 func DebugMessageCallbackAMD(callback unsafe.Pointer, userParam unsafe.Pointer) {
 	C.glowDebugMessageCallbackAMD(gpDebugMessageCallbackAMD, (C.GLDEBUGPROCAMD)(callback), userParam)
 }
-
 func DebugMessageCallbackARB(callback DebugProc, userParam unsafe.Pointer) {
 	userDebugCallback = callback
 	C.glowDebugMessageCallbackARB(gpDebugMessageCallbackARB, (C.GLDEBUGPROCARB)(unsafe.Pointer(&callback)), userParam)
 }
-
 func DebugMessageCallbackKHR(callback DebugProc, userParam unsafe.Pointer) {
 	userDebugCallback = callback
 	C.glowDebugMessageCallbackKHR(gpDebugMessageCallbackKHR, (C.GLDEBUGPROCKHR)(unsafe.Pointer(&callback)), userParam)
@@ -21507,15 +21228,12 @@ func DebugMessageCallbackKHR(callback DebugProc, userParam unsafe.Pointer) {
 func DebugMessageControl(source uint32, xtype uint32, severity uint32, count int32, ids *uint32, enabled bool) {
 	C.glowDebugMessageControl(gpDebugMessageControl, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLenum)(severity), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(ids)), (C.GLboolean)(boolToInt(enabled)))
 }
-
 func DebugMessageControlARB(source uint32, xtype uint32, severity uint32, count int32, ids *uint32, enabled bool) {
 	C.glowDebugMessageControlARB(gpDebugMessageControlARB, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLenum)(severity), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(ids)), (C.GLboolean)(boolToInt(enabled)))
 }
-
 func DebugMessageControlKHR(source uint32, xtype uint32, severity uint32, count int32, ids *uint32, enabled bool) {
 	C.glowDebugMessageControlKHR(gpDebugMessageControlKHR, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLenum)(severity), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(ids)), (C.GLboolean)(boolToInt(enabled)))
 }
-
 func DebugMessageEnableAMD(category uint32, severity uint32, count int32, ids *uint32, enabled bool) {
 	C.glowDebugMessageEnableAMD(gpDebugMessageEnableAMD, (C.GLenum)(category), (C.GLenum)(severity), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(ids)), (C.GLboolean)(boolToInt(enabled)))
 }
@@ -21524,31 +21242,24 @@ func DebugMessageEnableAMD(category uint32, severity uint32, count int32, ids *u
 func DebugMessageInsert(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsert(gpDebugMessageInsert, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-
 func DebugMessageInsertAMD(category uint32, severity uint32, id uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsertAMD(gpDebugMessageInsertAMD, (C.GLenum)(category), (C.GLenum)(severity), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-
 func DebugMessageInsertARB(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsertARB(gpDebugMessageInsertARB, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-
 func DebugMessageInsertKHR(source uint32, xtype uint32, id uint32, severity uint32, length int32, buf *uint8) {
 	C.glowDebugMessageInsertKHR(gpDebugMessageInsertKHR, (C.GLenum)(source), (C.GLenum)(xtype), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(buf)))
 }
-
 func DeformSGIX(mask uint32) {
 	C.glowDeformSGIX(gpDeformSGIX, (C.GLbitfield)(mask))
 }
-
 func DeformationMap3dSGIX(target uint32, u1 float64, u2 float64, ustride int32, uorder int32, v1 float64, v2 float64, vstride int32, vorder int32, w1 float64, w2 float64, wstride int32, worder int32, points *float64) {
 	C.glowDeformationMap3dSGIX(gpDeformationMap3dSGIX, (C.GLenum)(target), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (C.GLdouble)(w1), (C.GLdouble)(w2), (C.GLint)(wstride), (C.GLint)(worder), (*C.GLdouble)(unsafe.Pointer(points)))
 }
-
 func DeformationMap3fSGIX(target uint32, u1 float32, u2 float32, ustride int32, uorder int32, v1 float32, v2 float32, vstride int32, vorder int32, w1 float32, w2 float32, wstride int32, worder int32, points *float32) {
 	C.glowDeformationMap3fSGIX(gpDeformationMap3fSGIX, (C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (C.GLfloat)(w1), (C.GLfloat)(w2), (C.GLint)(wstride), (C.GLint)(worder), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func DeleteAsyncMarkersSGIX(marker uint32, xrange int32) {
 	C.glowDeleteAsyncMarkersSGIX(gpDeleteAsyncMarkersSGIX, (C.GLuint)(marker), (C.GLsizei)(xrange))
 }
@@ -21557,23 +21268,18 @@ func DeleteAsyncMarkersSGIX(marker uint32, xrange int32) {
 func DeleteBuffers(n int32, buffers *uint32) {
 	C.glowDeleteBuffers(gpDeleteBuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
 }
-
 func DeleteBuffersARB(n int32, buffers *uint32) {
 	C.glowDeleteBuffersARB(gpDeleteBuffersARB, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
 }
-
 func DeleteCommandListsNV(n int32, lists *uint32) {
 	C.glowDeleteCommandListsNV(gpDeleteCommandListsNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(lists)))
 }
-
 func DeleteFencesAPPLE(n int32, fences *uint32) {
 	C.glowDeleteFencesAPPLE(gpDeleteFencesAPPLE, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(fences)))
 }
-
 func DeleteFencesNV(n int32, fences *uint32) {
 	C.glowDeleteFencesNV(gpDeleteFencesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(fences)))
 }
-
 func DeleteFragmentShaderATI(id uint32) {
 	C.glowDeleteFragmentShaderATI(gpDeleteFragmentShaderATI, (C.GLuint)(id))
 }
@@ -21582,7 +21288,6 @@ func DeleteFragmentShaderATI(id uint32) {
 func DeleteFramebuffers(n int32, framebuffers *uint32) {
 	C.glowDeleteFramebuffers(gpDeleteFramebuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(framebuffers)))
 }
-
 func DeleteFramebuffersEXT(n int32, framebuffers *uint32) {
 	C.glowDeleteFramebuffersEXT(gpDeleteFramebuffersEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(framebuffers)))
 }
@@ -21591,35 +21296,27 @@ func DeleteFramebuffersEXT(n int32, framebuffers *uint32) {
 func DeleteLists(list uint32, xrange int32) {
 	C.glowDeleteLists(gpDeleteLists, (C.GLuint)(list), (C.GLsizei)(xrange))
 }
-
 func DeleteMemoryObjectsEXT(n int32, memoryObjects *uint32) {
 	C.glowDeleteMemoryObjectsEXT(gpDeleteMemoryObjectsEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(memoryObjects)))
 }
-
 func DeleteNamedStringARB(namelen int32, name *uint8) {
 	C.glowDeleteNamedStringARB(gpDeleteNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func DeleteNamesAMD(identifier uint32, num uint32, names *uint32) {
 	C.glowDeleteNamesAMD(gpDeleteNamesAMD, (C.GLenum)(identifier), (C.GLuint)(num), (*C.GLuint)(unsafe.Pointer(names)))
 }
-
 func DeleteObjectARB(obj uintptr) {
 	C.glowDeleteObjectARB(gpDeleteObjectARB, (C.GLhandleARB)(obj))
 }
-
 func DeleteOcclusionQueriesNV(n int32, ids *uint32) {
 	C.glowDeleteOcclusionQueriesNV(gpDeleteOcclusionQueriesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func DeletePathsNV(path uint32, xrange int32) {
 	C.glowDeletePathsNV(gpDeletePathsNV, (C.GLuint)(path), (C.GLsizei)(xrange))
 }
-
 func DeletePerfMonitorsAMD(n int32, monitors *uint32) {
 	C.glowDeletePerfMonitorsAMD(gpDeletePerfMonitorsAMD, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(monitors)))
 }
-
 func DeletePerfQueryINTEL(queryHandle uint32) {
 	C.glowDeletePerfQueryINTEL(gpDeletePerfQueryINTEL, (C.GLuint)(queryHandle))
 }
@@ -21633,15 +21330,12 @@ func DeleteProgram(program uint32) {
 func DeleteProgramPipelines(n int32, pipelines *uint32) {
 	C.glowDeleteProgramPipelines(gpDeleteProgramPipelines, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
-
 func DeleteProgramPipelinesEXT(n int32, pipelines *uint32) {
 	C.glowDeleteProgramPipelinesEXT(gpDeleteProgramPipelinesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
-
 func DeleteProgramsARB(n int32, programs *uint32) {
 	C.glowDeleteProgramsARB(gpDeleteProgramsARB, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(programs)))
 }
-
 func DeleteProgramsNV(n int32, programs *uint32) {
 	C.glowDeleteProgramsNV(gpDeleteProgramsNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(programs)))
 }
@@ -21650,11 +21344,9 @@ func DeleteProgramsNV(n int32, programs *uint32) {
 func DeleteQueries(n int32, ids *uint32) {
 	C.glowDeleteQueries(gpDeleteQueries, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func DeleteQueriesARB(n int32, ids *uint32) {
 	C.glowDeleteQueriesARB(gpDeleteQueriesARB, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func DeleteQueryResourceTagNV(n int32, tagIds *int32) {
 	C.glowDeleteQueryResourceTagNV(gpDeleteQueryResourceTagNV, (C.GLsizei)(n), (*C.GLint)(unsafe.Pointer(tagIds)))
 }
@@ -21663,7 +21355,6 @@ func DeleteQueryResourceTagNV(n int32, tagIds *int32) {
 func DeleteRenderbuffers(n int32, renderbuffers *uint32) {
 	C.glowDeleteRenderbuffers(gpDeleteRenderbuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(renderbuffers)))
 }
-
 func DeleteRenderbuffersEXT(n int32, renderbuffers *uint32) {
 	C.glowDeleteRenderbuffersEXT(gpDeleteRenderbuffersEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(renderbuffers)))
 }
@@ -21672,7 +21363,6 @@ func DeleteRenderbuffersEXT(n int32, renderbuffers *uint32) {
 func DeleteSamplers(count int32, samplers *uint32) {
 	C.glowDeleteSamplers(gpDeleteSamplers, (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(samplers)))
 }
-
 func DeleteSemaphoresEXT(n int32, semaphores *uint32) {
 	C.glowDeleteSemaphoresEXT(gpDeleteSemaphoresEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(semaphores)))
 }
@@ -21681,7 +21371,6 @@ func DeleteSemaphoresEXT(n int32, semaphores *uint32) {
 func DeleteShader(shader uint32) {
 	C.glowDeleteShader(gpDeleteShader, (C.GLuint)(shader))
 }
-
 func DeleteStatesNV(n int32, states *uint32) {
 	C.glowDeleteStatesNV(gpDeleteStatesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(states)))
 }
@@ -21695,7 +21384,6 @@ func DeleteSync(sync uintptr) {
 func DeleteTextures(n int32, textures *uint32) {
 	C.glowDeleteTextures(gpDeleteTextures, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)))
 }
-
 func DeleteTexturesEXT(n int32, textures *uint32) {
 	C.glowDeleteTexturesEXT(gpDeleteTexturesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)))
 }
@@ -21704,7 +21392,6 @@ func DeleteTexturesEXT(n int32, textures *uint32) {
 func DeleteTransformFeedbacks(n int32, ids *uint32) {
 	C.glowDeleteTransformFeedbacks(gpDeleteTransformFeedbacks, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func DeleteTransformFeedbacksNV(n int32, ids *uint32) {
 	C.glowDeleteTransformFeedbacksNV(gpDeleteTransformFeedbacksNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
@@ -21713,19 +21400,15 @@ func DeleteTransformFeedbacksNV(n int32, ids *uint32) {
 func DeleteVertexArrays(n int32, arrays *uint32) {
 	C.glowDeleteVertexArrays(gpDeleteVertexArrays, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(arrays)))
 }
-
 func DeleteVertexArraysAPPLE(n int32, arrays *uint32) {
 	C.glowDeleteVertexArraysAPPLE(gpDeleteVertexArraysAPPLE, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(arrays)))
 }
-
 func DeleteVertexShaderEXT(id uint32) {
 	C.glowDeleteVertexShaderEXT(gpDeleteVertexShaderEXT, (C.GLuint)(id))
 }
-
 func DepthBoundsEXT(zmin float64, zmax float64) {
 	C.glowDepthBoundsEXT(gpDepthBoundsEXT, (C.GLclampd)(zmin), (C.GLclampd)(zmax))
 }
-
 func DepthBoundsdNV(zmin float64, zmax float64) {
 	C.glowDepthBoundsdNV(gpDepthBoundsdNV, (C.GLdouble)(zmin), (C.GLdouble)(zmax))
 }
@@ -21744,7 +21427,6 @@ func DepthMask(flag bool) {
 func DepthRange(n float64, f float64) {
 	C.glowDepthRange(gpDepthRange, (C.GLdouble)(n), (C.GLdouble)(f))
 }
-
 func DepthRangeArrayv(first uint32, count int32, v *float64) {
 	C.glowDepthRangeArrayv(gpDepthRangeArrayv, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
 }
@@ -21753,7 +21435,6 @@ func DepthRangeArrayv(first uint32, count int32, v *float64) {
 func DepthRangeIndexed(index uint32, n float64, f float64) {
 	C.glowDepthRangeIndexed(gpDepthRangeIndexed, (C.GLuint)(index), (C.GLdouble)(n), (C.GLdouble)(f))
 }
-
 func DepthRangedNV(zNear float64, zFar float64) {
 	C.glowDepthRangedNV(gpDepthRangedNV, (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
@@ -21762,15 +21443,12 @@ func DepthRangedNV(zNear float64, zFar float64) {
 func DepthRangef(n float32, f float32) {
 	C.glowDepthRangef(gpDepthRangef, (C.GLfloat)(n), (C.GLfloat)(f))
 }
-
 func DepthRangefOES(n float32, f float32) {
 	C.glowDepthRangefOES(gpDepthRangefOES, (C.GLclampf)(n), (C.GLclampf)(f))
 }
-
 func DepthRangexOES(n int32, f int32) {
 	C.glowDepthRangexOES(gpDepthRangexOES, (C.GLfixed)(n), (C.GLfixed)(f))
 }
-
 func DetachObjectARB(containerObj uintptr, attachedObj uintptr) {
 	C.glowDetachObjectARB(gpDetachObjectARB, (C.GLhandleARB)(containerObj), (C.GLhandleARB)(attachedObj))
 }
@@ -21779,31 +21457,24 @@ func DetachObjectARB(containerObj uintptr, attachedObj uintptr) {
 func DetachShader(program uint32, shader uint32) {
 	C.glowDetachShader(gpDetachShader, (C.GLuint)(program), (C.GLuint)(shader))
 }
-
 func DetailTexFuncSGIS(target uint32, n int32, points *float32) {
 	C.glowDetailTexFuncSGIS(gpDetailTexFuncSGIS, (C.GLenum)(target), (C.GLsizei)(n), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func Disable(cap uint32) {
 	C.glowDisable(gpDisable, (C.GLenum)(cap))
 }
-
 func DisableClientState(array uint32) {
 	C.glowDisableClientState(gpDisableClientState, (C.GLenum)(array))
 }
-
 func DisableClientStateIndexedEXT(array uint32, index uint32) {
 	C.glowDisableClientStateIndexedEXT(gpDisableClientStateIndexedEXT, (C.GLenum)(array), (C.GLuint)(index))
 }
-
 func DisableClientStateiEXT(array uint32, index uint32) {
 	C.glowDisableClientStateiEXT(gpDisableClientStateiEXT, (C.GLenum)(array), (C.GLuint)(index))
 }
-
 func DisableIndexedEXT(target uint32, index uint32) {
 	C.glowDisableIndexedEXT(gpDisableIndexedEXT, (C.GLenum)(target), (C.GLuint)(index))
 }
-
 func DisableVariantClientStateEXT(id uint32) {
 	C.glowDisableVariantClientStateEXT(gpDisableVariantClientStateEXT, (C.GLuint)(id))
 }
@@ -21812,15 +21483,12 @@ func DisableVariantClientStateEXT(id uint32) {
 func DisableVertexArrayAttrib(vaobj uint32, index uint32) {
 	C.glowDisableVertexArrayAttrib(gpDisableVertexArrayAttrib, (C.GLuint)(vaobj), (C.GLuint)(index))
 }
-
 func DisableVertexArrayAttribEXT(vaobj uint32, index uint32) {
 	C.glowDisableVertexArrayAttribEXT(gpDisableVertexArrayAttribEXT, (C.GLuint)(vaobj), (C.GLuint)(index))
 }
-
 func DisableVertexArrayEXT(vaobj uint32, array uint32) {
 	C.glowDisableVertexArrayEXT(gpDisableVertexArrayEXT, (C.GLuint)(vaobj), (C.GLenum)(array))
 }
-
 func DisableVertexAttribAPPLE(index uint32, pname uint32) {
 	C.glowDisableVertexAttribAPPLE(gpDisableVertexAttribAPPLE, (C.GLuint)(index), (C.GLenum)(pname))
 }
@@ -21829,11 +21497,9 @@ func DisableVertexAttribAPPLE(index uint32, pname uint32) {
 func DisableVertexAttribArray(index uint32) {
 	C.glowDisableVertexAttribArray(gpDisableVertexAttribArray, (C.GLuint)(index))
 }
-
 func DisableVertexAttribArrayARB(index uint32) {
 	C.glowDisableVertexAttribArrayARB(gpDisableVertexAttribArrayARB, (C.GLuint)(index))
 }
-
 func Disablei(target uint32, index uint32) {
 	C.glowDisablei(gpDisablei, (C.GLenum)(target), (C.GLuint)(index))
 }
@@ -21842,7 +21508,6 @@ func Disablei(target uint32, index uint32) {
 func DispatchCompute(num_groups_x uint32, num_groups_y uint32, num_groups_z uint32) {
 	C.glowDispatchCompute(gpDispatchCompute, (C.GLuint)(num_groups_x), (C.GLuint)(num_groups_y), (C.GLuint)(num_groups_z))
 }
-
 func DispatchComputeGroupSizeARB(num_groups_x uint32, num_groups_y uint32, num_groups_z uint32, group_size_x uint32, group_size_y uint32, group_size_z uint32) {
 	C.glowDispatchComputeGroupSizeARB(gpDispatchComputeGroupSizeARB, (C.GLuint)(num_groups_x), (C.GLuint)(num_groups_y), (C.GLuint)(num_groups_z), (C.GLuint)(group_size_x), (C.GLuint)(group_size_y), (C.GLuint)(group_size_z))
 }
@@ -21856,7 +21521,6 @@ func DispatchComputeIndirect(indirect int) {
 func DrawArrays(mode uint32, first int32, count int32) {
 	C.glowDrawArrays(gpDrawArrays, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count))
 }
-
 func DrawArraysEXT(mode uint32, first int32, count int32) {
 	C.glowDrawArraysEXT(gpDrawArraysEXT, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count))
 }
@@ -21870,7 +21534,6 @@ func DrawArraysIndirect(mode uint32, indirect unsafe.Pointer) {
 func DrawArraysInstanced(mode uint32, first int32, count int32, instancecount int32) {
 	C.glowDrawArraysInstanced(gpDrawArraysInstanced, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(instancecount))
 }
-
 func DrawArraysInstancedARB(mode uint32, first int32, count int32, primcount int32) {
 	C.glowDrawArraysInstancedARB(gpDrawArraysInstancedARB, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(primcount))
 }
@@ -21879,7 +21542,6 @@ func DrawArraysInstancedARB(mode uint32, first int32, count int32, primcount int
 func DrawArraysInstancedBaseInstance(mode uint32, first int32, count int32, instancecount int32, baseinstance uint32) {
 	C.glowDrawArraysInstancedBaseInstance(gpDrawArraysInstancedBaseInstance, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(instancecount), (C.GLuint)(baseinstance))
 }
-
 func DrawArraysInstancedEXT(mode uint32, start int32, count int32, primcount int32) {
 	C.glowDrawArraysInstancedEXT(gpDrawArraysInstancedEXT, (C.GLenum)(mode), (C.GLint)(start), (C.GLsizei)(count), (C.GLsizei)(primcount))
 }
@@ -21893,35 +21555,27 @@ func DrawBuffer(buf uint32) {
 func DrawBuffers(n int32, bufs *uint32) {
 	C.glowDrawBuffers(gpDrawBuffers, (C.GLsizei)(n), (*C.GLenum)(unsafe.Pointer(bufs)))
 }
-
 func DrawBuffersARB(n int32, bufs *uint32) {
 	C.glowDrawBuffersARB(gpDrawBuffersARB, (C.GLsizei)(n), (*C.GLenum)(unsafe.Pointer(bufs)))
 }
-
 func DrawBuffersATI(n int32, bufs *uint32) {
 	C.glowDrawBuffersATI(gpDrawBuffersATI, (C.GLsizei)(n), (*C.GLenum)(unsafe.Pointer(bufs)))
 }
-
 func DrawCommandsAddressNV(primitiveMode uint32, indirects *uint64, sizes *int32, count uint32) {
 	C.glowDrawCommandsAddressNV(gpDrawCommandsAddressNV, (C.GLenum)(primitiveMode), (*C.GLuint64)(unsafe.Pointer(indirects)), (*C.GLsizei)(unsafe.Pointer(sizes)), (C.GLuint)(count))
 }
-
 func DrawCommandsNV(primitiveMode uint32, buffer uint32, indirects *int, sizes *int32, count uint32) {
 	C.glowDrawCommandsNV(gpDrawCommandsNV, (C.GLenum)(primitiveMode), (C.GLuint)(buffer), (*C.GLintptr)(unsafe.Pointer(indirects)), (*C.GLsizei)(unsafe.Pointer(sizes)), (C.GLuint)(count))
 }
-
 func DrawCommandsStatesAddressNV(indirects *uint64, sizes *int32, states *uint32, fbos *uint32, count uint32) {
 	C.glowDrawCommandsStatesAddressNV(gpDrawCommandsStatesAddressNV, (*C.GLuint64)(unsafe.Pointer(indirects)), (*C.GLsizei)(unsafe.Pointer(sizes)), (*C.GLuint)(unsafe.Pointer(states)), (*C.GLuint)(unsafe.Pointer(fbos)), (C.GLuint)(count))
 }
-
 func DrawCommandsStatesNV(buffer uint32, indirects *int, sizes *int32, states *uint32, fbos *uint32, count uint32) {
 	C.glowDrawCommandsStatesNV(gpDrawCommandsStatesNV, (C.GLuint)(buffer), (*C.GLintptr)(unsafe.Pointer(indirects)), (*C.GLsizei)(unsafe.Pointer(sizes)), (*C.GLuint)(unsafe.Pointer(states)), (*C.GLuint)(unsafe.Pointer(fbos)), (C.GLuint)(count))
 }
-
 func DrawElementArrayAPPLE(mode uint32, first int32, count int32) {
 	C.glowDrawElementArrayAPPLE(gpDrawElementArrayAPPLE, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count))
 }
-
 func DrawElementArrayATI(mode uint32, count int32) {
 	C.glowDrawElementArrayATI(gpDrawElementArrayATI, (C.GLenum)(mode), (C.GLsizei)(count))
 }
@@ -21945,7 +21599,6 @@ func DrawElementsIndirect(mode uint32, xtype uint32, indirect unsafe.Pointer) {
 func DrawElementsInstanced(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, instancecount int32) {
 	C.glowDrawElementsInstanced(gpDrawElementsInstanced, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLsizei)(instancecount))
 }
-
 func DrawElementsInstancedARB(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, primcount int32) {
 	C.glowDrawElementsInstancedARB(gpDrawElementsInstancedARB, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLsizei)(primcount))
 }
@@ -21964,11 +21617,9 @@ func DrawElementsInstancedBaseVertex(mode uint32, count int32, xtype uint32, ind
 func DrawElementsInstancedBaseVertexBaseInstance(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, instancecount int32, basevertex int32, baseinstance uint32) {
 	C.glowDrawElementsInstancedBaseVertexBaseInstance(gpDrawElementsInstancedBaseVertexBaseInstance, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLsizei)(instancecount), (C.GLint)(basevertex), (C.GLuint)(baseinstance))
 }
-
 func DrawElementsInstancedEXT(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, primcount int32) {
 	C.glowDrawElementsInstancedEXT(gpDrawElementsInstancedEXT, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLsizei)(primcount))
 }
-
 func DrawMeshArraysSUN(mode uint32, first int32, count int32, width int32) {
 	C.glowDrawMeshArraysSUN(gpDrawMeshArraysSUN, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(width))
 }
@@ -21977,11 +21628,9 @@ func DrawMeshArraysSUN(mode uint32, first int32, count int32, width int32) {
 func DrawPixels(width int32, height int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowDrawPixels(gpDrawPixels, (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func DrawRangeElementArrayAPPLE(mode uint32, start uint32, end uint32, first int32, count int32) {
 	C.glowDrawRangeElementArrayAPPLE(gpDrawRangeElementArrayAPPLE, (C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLint)(first), (C.GLsizei)(count))
 }
-
 func DrawRangeElementArrayATI(mode uint32, start uint32, end uint32, count int32) {
 	C.glowDrawRangeElementArrayATI(gpDrawRangeElementArrayATI, (C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count))
 }
@@ -21995,11 +21644,9 @@ func DrawRangeElements(mode uint32, start uint32, end uint32, count int32, xtype
 func DrawRangeElementsBaseVertex(mode uint32, start uint32, end uint32, count int32, xtype uint32, indices unsafe.Pointer, basevertex int32) {
 	C.glowDrawRangeElementsBaseVertex(gpDrawRangeElementsBaseVertex, (C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLint)(basevertex))
 }
-
 func DrawRangeElementsEXT(mode uint32, start uint32, end uint32, count int32, xtype uint32, indices unsafe.Pointer) {
 	C.glowDrawRangeElementsEXT(gpDrawRangeElementsEXT, (C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(xtype), indices)
 }
-
 func DrawTextureNV(texture uint32, sampler uint32, x0 float32, y0 float32, x1 float32, y1 float32, z float32, s0 float32, t0 float32, s1 float32, t1 float32) {
 	C.glowDrawTextureNV(gpDrawTextureNV, (C.GLuint)(texture), (C.GLuint)(sampler), (C.GLfloat)(x0), (C.GLfloat)(y0), (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(z), (C.GLfloat)(s0), (C.GLfloat)(t0), (C.GLfloat)(s1), (C.GLfloat)(t1))
 }
@@ -22013,7 +21660,6 @@ func DrawTransformFeedback(mode uint32, id uint32) {
 func DrawTransformFeedbackInstanced(mode uint32, id uint32, instancecount int32) {
 	C.glowDrawTransformFeedbackInstanced(gpDrawTransformFeedbackInstanced, (C.GLenum)(mode), (C.GLuint)(id), (C.GLsizei)(instancecount))
 }
-
 func DrawTransformFeedbackNV(mode uint32, id uint32) {
 	C.glowDrawTransformFeedbackNV(gpDrawTransformFeedbackNV, (C.GLenum)(mode), (C.GLuint)(id))
 }
@@ -22027,7 +21673,6 @@ func DrawTransformFeedbackStream(mode uint32, id uint32, stream uint32) {
 func DrawTransformFeedbackStreamInstanced(mode uint32, id uint32, stream uint32, instancecount int32) {
 	C.glowDrawTransformFeedbackStreamInstanced(gpDrawTransformFeedbackStreamInstanced, (C.GLenum)(mode), (C.GLuint)(id), (C.GLuint)(stream), (C.GLsizei)(instancecount))
 }
-
 func DrawVkImageNV(vkImage uint64, sampler uint32, x0 float32, y0 float32, x1 float32, y1 float32, z float32, s0 float32, t0 float32, s1 float32, t1 float32) {
 	C.glowDrawVkImageNV(gpDrawVkImageNV, (C.GLuint64)(vkImage), (C.GLuint)(sampler), (C.GLfloat)(x0), (C.GLfloat)(y0), (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(z), (C.GLfloat)(s0), (C.GLfloat)(t0), (C.GLfloat)(s1), (C.GLfloat)(t1))
 }
@@ -22046,7 +21691,6 @@ func EGLImageTargetTextureStorageEXT(texture uint32, image unsafe.Pointer, attri
 func EdgeFlag(flag bool) {
 	C.glowEdgeFlag(gpEdgeFlag, (C.GLboolean)(boolToInt(flag)))
 }
-
 func EdgeFlagFormatNV(stride int32) {
 	C.glowEdgeFlagFormatNV(gpEdgeFlagFormatNV, (C.GLsizei)(stride))
 }
@@ -22055,23 +21699,18 @@ func EdgeFlagFormatNV(stride int32) {
 func EdgeFlagPointer(stride int32, pointer unsafe.Pointer) {
 	C.glowEdgeFlagPointer(gpEdgeFlagPointer, (C.GLsizei)(stride), pointer)
 }
-
 func EdgeFlagPointerEXT(stride int32, count int32, pointer *bool) {
 	C.glowEdgeFlagPointerEXT(gpEdgeFlagPointerEXT, (C.GLsizei)(stride), (C.GLsizei)(count), (*C.GLboolean)(unsafe.Pointer(pointer)))
 }
-
 func EdgeFlagPointerListIBM(stride int32, pointer **bool, ptrstride int32) {
 	C.glowEdgeFlagPointerListIBM(gpEdgeFlagPointerListIBM, (C.GLint)(stride), (**C.GLboolean)(unsafe.Pointer(pointer)), (C.GLint)(ptrstride))
 }
-
 func EdgeFlagv(flag *bool) {
 	C.glowEdgeFlagv(gpEdgeFlagv, (*C.GLboolean)(unsafe.Pointer(flag)))
 }
-
 func ElementPointerAPPLE(xtype uint32, pointer unsafe.Pointer) {
 	C.glowElementPointerAPPLE(gpElementPointerAPPLE, (C.GLenum)(xtype), pointer)
 }
-
 func ElementPointerATI(xtype uint32, pointer unsafe.Pointer) {
 	C.glowElementPointerATI(gpElementPointerATI, (C.GLenum)(xtype), pointer)
 }
@@ -22085,19 +21724,15 @@ func Enable(cap uint32) {
 func EnableClientState(array uint32) {
 	C.glowEnableClientState(gpEnableClientState, (C.GLenum)(array))
 }
-
 func EnableClientStateIndexedEXT(array uint32, index uint32) {
 	C.glowEnableClientStateIndexedEXT(gpEnableClientStateIndexedEXT, (C.GLenum)(array), (C.GLuint)(index))
 }
-
 func EnableClientStateiEXT(array uint32, index uint32) {
 	C.glowEnableClientStateiEXT(gpEnableClientStateiEXT, (C.GLenum)(array), (C.GLuint)(index))
 }
-
 func EnableIndexedEXT(target uint32, index uint32) {
 	C.glowEnableIndexedEXT(gpEnableIndexedEXT, (C.GLenum)(target), (C.GLuint)(index))
 }
-
 func EnableVariantClientStateEXT(id uint32) {
 	C.glowEnableVariantClientStateEXT(gpEnableVariantClientStateEXT, (C.GLuint)(id))
 }
@@ -22106,15 +21741,12 @@ func EnableVariantClientStateEXT(id uint32) {
 func EnableVertexArrayAttrib(vaobj uint32, index uint32) {
 	C.glowEnableVertexArrayAttrib(gpEnableVertexArrayAttrib, (C.GLuint)(vaobj), (C.GLuint)(index))
 }
-
 func EnableVertexArrayAttribEXT(vaobj uint32, index uint32) {
 	C.glowEnableVertexArrayAttribEXT(gpEnableVertexArrayAttribEXT, (C.GLuint)(vaobj), (C.GLuint)(index))
 }
-
 func EnableVertexArrayEXT(vaobj uint32, array uint32) {
 	C.glowEnableVertexArrayEXT(gpEnableVertexArrayEXT, (C.GLuint)(vaobj), (C.GLenum)(array))
 }
-
 func EnableVertexAttribAPPLE(index uint32, pname uint32) {
 	C.glowEnableVertexAttribAPPLE(gpEnableVertexAttribAPPLE, (C.GLuint)(index), (C.GLenum)(pname))
 }
@@ -22123,159 +21755,120 @@ func EnableVertexAttribAPPLE(index uint32, pname uint32) {
 func EnableVertexAttribArray(index uint32) {
 	C.glowEnableVertexAttribArray(gpEnableVertexAttribArray, (C.GLuint)(index))
 }
-
 func EnableVertexAttribArrayARB(index uint32) {
 	C.glowEnableVertexAttribArrayARB(gpEnableVertexAttribArrayARB, (C.GLuint)(index))
 }
-
 func Enablei(target uint32, index uint32) {
 	C.glowEnablei(gpEnablei, (C.GLenum)(target), (C.GLuint)(index))
 }
-
 func End() {
 	C.glowEnd(gpEnd)
 }
-
 func EndConditionalRender() {
 	C.glowEndConditionalRender(gpEndConditionalRender)
 }
-
 func EndConditionalRenderNV() {
 	C.glowEndConditionalRenderNV(gpEndConditionalRenderNV)
 }
-
 func EndConditionalRenderNVX() {
 	C.glowEndConditionalRenderNVX(gpEndConditionalRenderNVX)
 }
-
 func EndFragmentShaderATI() {
 	C.glowEndFragmentShaderATI(gpEndFragmentShaderATI)
 }
-
 func EndList() {
 	C.glowEndList(gpEndList)
 }
-
 func EndOcclusionQueryNV() {
 	C.glowEndOcclusionQueryNV(gpEndOcclusionQueryNV)
 }
-
 func EndPerfMonitorAMD(monitor uint32) {
 	C.glowEndPerfMonitorAMD(gpEndPerfMonitorAMD, (C.GLuint)(monitor))
 }
-
 func EndPerfQueryINTEL(queryHandle uint32) {
 	C.glowEndPerfQueryINTEL(gpEndPerfQueryINTEL, (C.GLuint)(queryHandle))
 }
-
 func EndQuery(target uint32) {
 	C.glowEndQuery(gpEndQuery, (C.GLenum)(target))
 }
-
 func EndQueryARB(target uint32) {
 	C.glowEndQueryARB(gpEndQueryARB, (C.GLenum)(target))
 }
-
 func EndQueryIndexed(target uint32, index uint32) {
 	C.glowEndQueryIndexed(gpEndQueryIndexed, (C.GLenum)(target), (C.GLuint)(index))
 }
-
 func EndTransformFeedback() {
 	C.glowEndTransformFeedback(gpEndTransformFeedback)
 }
-
 func EndTransformFeedbackEXT() {
 	C.glowEndTransformFeedbackEXT(gpEndTransformFeedbackEXT)
 }
-
 func EndTransformFeedbackNV() {
 	C.glowEndTransformFeedbackNV(gpEndTransformFeedbackNV)
 }
-
 func EndVertexShaderEXT() {
 	C.glowEndVertexShaderEXT(gpEndVertexShaderEXT)
 }
-
 func EndVideoCaptureNV(video_capture_slot uint32) {
 	C.glowEndVideoCaptureNV(gpEndVideoCaptureNV, (C.GLuint)(video_capture_slot))
 }
-
 func EvalCoord1d(u float64) {
 	C.glowEvalCoord1d(gpEvalCoord1d, (C.GLdouble)(u))
 }
-
 func EvalCoord1dv(u *float64) {
 	C.glowEvalCoord1dv(gpEvalCoord1dv, (*C.GLdouble)(unsafe.Pointer(u)))
 }
-
 func EvalCoord1f(u float32) {
 	C.glowEvalCoord1f(gpEvalCoord1f, (C.GLfloat)(u))
 }
-
 func EvalCoord1fv(u *float32) {
 	C.glowEvalCoord1fv(gpEvalCoord1fv, (*C.GLfloat)(unsafe.Pointer(u)))
 }
-
 func EvalCoord1xOES(u int32) {
 	C.glowEvalCoord1xOES(gpEvalCoord1xOES, (C.GLfixed)(u))
 }
-
 func EvalCoord1xvOES(coords *int32) {
 	C.glowEvalCoord1xvOES(gpEvalCoord1xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func EvalCoord2d(u float64, v float64) {
 	C.glowEvalCoord2d(gpEvalCoord2d, (C.GLdouble)(u), (C.GLdouble)(v))
 }
-
 func EvalCoord2dv(u *float64) {
 	C.glowEvalCoord2dv(gpEvalCoord2dv, (*C.GLdouble)(unsafe.Pointer(u)))
 }
-
 func EvalCoord2f(u float32, v float32) {
 	C.glowEvalCoord2f(gpEvalCoord2f, (C.GLfloat)(u), (C.GLfloat)(v))
 }
-
 func EvalCoord2fv(u *float32) {
 	C.glowEvalCoord2fv(gpEvalCoord2fv, (*C.GLfloat)(unsafe.Pointer(u)))
 }
-
 func EvalCoord2xOES(u int32, v int32) {
 	C.glowEvalCoord2xOES(gpEvalCoord2xOES, (C.GLfixed)(u), (C.GLfixed)(v))
 }
-
 func EvalCoord2xvOES(coords *int32) {
 	C.glowEvalCoord2xvOES(gpEvalCoord2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func EvalMapsNV(target uint32, mode uint32) {
 	C.glowEvalMapsNV(gpEvalMapsNV, (C.GLenum)(target), (C.GLenum)(mode))
 }
-
 func EvalMesh1(mode uint32, i1 int32, i2 int32) {
 	C.glowEvalMesh1(gpEvalMesh1, (C.GLenum)(mode), (C.GLint)(i1), (C.GLint)(i2))
 }
-
 func EvalMesh2(mode uint32, i1 int32, i2 int32, j1 int32, j2 int32) {
 	C.glowEvalMesh2(gpEvalMesh2, (C.GLenum)(mode), (C.GLint)(i1), (C.GLint)(i2), (C.GLint)(j1), (C.GLint)(j2))
 }
-
 func EvalPoint1(i int32) {
 	C.glowEvalPoint1(gpEvalPoint1, (C.GLint)(i))
 }
-
 func EvalPoint2(i int32, j int32) {
 	C.glowEvalPoint2(gpEvalPoint2, (C.GLint)(i), (C.GLint)(j))
 }
-
 func EvaluateDepthValuesARB() {
 	C.glowEvaluateDepthValuesARB(gpEvaluateDepthValuesARB)
 }
-
 func ExecuteProgramNV(target uint32, id uint32, params *float32) {
 	C.glowExecuteProgramNV(gpExecuteProgramNV, (C.GLenum)(target), (C.GLuint)(id), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ExtractComponentEXT(res uint32, src uint32, num uint32) {
 	C.glowExtractComponentEXT(gpExtractComponentEXT, (C.GLuint)(res), (C.GLuint)(src), (C.GLuint)(num))
 }
@@ -22284,7 +21877,6 @@ func ExtractComponentEXT(res uint32, src uint32, num uint32) {
 func FeedbackBuffer(size int32, xtype uint32, buffer *float32) {
 	C.glowFeedbackBuffer(gpFeedbackBuffer, (C.GLsizei)(size), (C.GLenum)(xtype), (*C.GLfloat)(unsafe.Pointer(buffer)))
 }
-
 func FeedbackBufferxOES(n int32, xtype uint32, buffer *int32) {
 	C.glowFeedbackBufferxOES(gpFeedbackBufferxOES, (C.GLsizei)(n), (C.GLenum)(xtype), (*C.GLfixed)(unsafe.Pointer(buffer)))
 }
@@ -22294,7 +21886,6 @@ func FenceSync(condition uint32, flags uint32) uintptr {
 	ret := C.glowFenceSync(gpFenceSync, (C.GLenum)(condition), (C.GLbitfield)(flags))
 	return (uintptr)(ret)
 }
-
 func FinalCombinerInputNV(variable uint32, input uint32, mapping uint32, componentUsage uint32) {
 	C.glowFinalCombinerInputNV(gpFinalCombinerInputNV, (C.GLenum)(variable), (C.GLenum)(input), (C.GLenum)(mapping), (C.GLenum)(componentUsage))
 }
@@ -22303,24 +21894,19 @@ func FinalCombinerInputNV(variable uint32, input uint32, mapping uint32, compone
 func Finish() {
 	C.glowFinish(gpFinish)
 }
-
 func FinishAsyncSGIX(markerp *uint32) int32 {
 	ret := C.glowFinishAsyncSGIX(gpFinishAsyncSGIX, (*C.GLuint)(unsafe.Pointer(markerp)))
 	return (int32)(ret)
 }
-
 func FinishFenceAPPLE(fence uint32) {
 	C.glowFinishFenceAPPLE(gpFinishFenceAPPLE, (C.GLuint)(fence))
 }
-
 func FinishFenceNV(fence uint32) {
 	C.glowFinishFenceNV(gpFinishFenceNV, (C.GLuint)(fence))
 }
-
 func FinishObjectAPPLE(object uint32, name int32) {
 	C.glowFinishObjectAPPLE(gpFinishObjectAPPLE, (C.GLenum)(object), (C.GLint)(name))
 }
-
 func FinishTextureSUNX() {
 	C.glowFinishTextureSUNX(gpFinishTextureSUNX)
 }
@@ -22334,7 +21920,6 @@ func Flush() {
 func FlushMappedBufferRange(target uint32, offset int, length int) {
 	C.glowFlushMappedBufferRange(gpFlushMappedBufferRange, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(length))
 }
-
 func FlushMappedBufferRangeAPPLE(target uint32, offset int, size int) {
 	C.glowFlushMappedBufferRangeAPPLE(gpFlushMappedBufferRangeAPPLE, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
@@ -22343,31 +21928,24 @@ func FlushMappedBufferRangeAPPLE(target uint32, offset int, size int) {
 func FlushMappedNamedBufferRange(buffer uint32, offset int, length int) {
 	C.glowFlushMappedNamedBufferRange(gpFlushMappedNamedBufferRange, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(length))
 }
-
 func FlushMappedNamedBufferRangeEXT(buffer uint32, offset int, length int) {
 	C.glowFlushMappedNamedBufferRangeEXT(gpFlushMappedNamedBufferRangeEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(length))
 }
-
 func FlushPixelDataRangeNV(target uint32) {
 	C.glowFlushPixelDataRangeNV(gpFlushPixelDataRangeNV, (C.GLenum)(target))
 }
-
 func FlushRasterSGIX() {
 	C.glowFlushRasterSGIX(gpFlushRasterSGIX)
 }
-
 func FlushStaticDataIBM(target uint32) {
 	C.glowFlushStaticDataIBM(gpFlushStaticDataIBM, (C.GLenum)(target))
 }
-
 func FlushVertexArrayRangeAPPLE(length int32, pointer unsafe.Pointer) {
 	C.glowFlushVertexArrayRangeAPPLE(gpFlushVertexArrayRangeAPPLE, (C.GLsizei)(length), pointer)
 }
-
 func FlushVertexArrayRangeNV() {
 	C.glowFlushVertexArrayRangeNV(gpFlushVertexArrayRangeNV)
 }
-
 func FogCoordFormatNV(xtype uint32, stride int32) {
 	C.glowFogCoordFormatNV(gpFogCoordFormatNV, (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
@@ -22376,155 +21954,117 @@ func FogCoordFormatNV(xtype uint32, stride int32) {
 func FogCoordPointer(xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowFogCoordPointer(gpFogCoordPointer, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func FogCoordPointerEXT(xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowFogCoordPointerEXT(gpFogCoordPointerEXT, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func FogCoordPointerListIBM(xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowFogCoordPointerListIBM(gpFogCoordPointerListIBM, (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
-
 func FogCoordd(coord float64) {
 	C.glowFogCoordd(gpFogCoordd, (C.GLdouble)(coord))
 }
-
 func FogCoorddEXT(coord float64) {
 	C.glowFogCoorddEXT(gpFogCoorddEXT, (C.GLdouble)(coord))
 }
-
 func FogCoorddv(coord *float64) {
 	C.glowFogCoorddv(gpFogCoorddv, (*C.GLdouble)(unsafe.Pointer(coord)))
 }
-
 func FogCoorddvEXT(coord *float64) {
 	C.glowFogCoorddvEXT(gpFogCoorddvEXT, (*C.GLdouble)(unsafe.Pointer(coord)))
 }
-
 func FogCoordf(coord float32) {
 	C.glowFogCoordf(gpFogCoordf, (C.GLfloat)(coord))
 }
-
 func FogCoordfEXT(coord float32) {
 	C.glowFogCoordfEXT(gpFogCoordfEXT, (C.GLfloat)(coord))
 }
-
 func FogCoordfv(coord *float32) {
 	C.glowFogCoordfv(gpFogCoordfv, (*C.GLfloat)(unsafe.Pointer(coord)))
 }
-
 func FogCoordfvEXT(coord *float32) {
 	C.glowFogCoordfvEXT(gpFogCoordfvEXT, (*C.GLfloat)(unsafe.Pointer(coord)))
 }
-
 func FogCoordhNV(fog uint16) {
 	C.glowFogCoordhNV(gpFogCoordhNV, (C.GLhalfNV)(fog))
 }
-
 func FogCoordhvNV(fog *uint16) {
 	C.glowFogCoordhvNV(gpFogCoordhvNV, (*C.GLhalfNV)(unsafe.Pointer(fog)))
 }
-
 func FogFuncSGIS(n int32, points *float32) {
 	C.glowFogFuncSGIS(gpFogFuncSGIS, (C.GLsizei)(n), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func Fogf(pname uint32, param float32) {
 	C.glowFogf(gpFogf, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func Fogfv(pname uint32, params *float32) {
 	C.glowFogfv(gpFogfv, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func Fogi(pname uint32, param int32) {
 	C.glowFogi(gpFogi, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func Fogiv(pname uint32, params *int32) {
 	C.glowFogiv(gpFogiv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func FogxOES(pname uint32, param int32) {
 	C.glowFogxOES(gpFogxOES, (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func FogxvOES(pname uint32, param *int32) {
 	C.glowFogxvOES(gpFogxvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(param)))
 }
-
 func FragmentColorMaterialSGIX(face uint32, mode uint32) {
 	C.glowFragmentColorMaterialSGIX(gpFragmentColorMaterialSGIX, (C.GLenum)(face), (C.GLenum)(mode))
 }
-
 func FragmentCoverageColorNV(color uint32) {
 	C.glowFragmentCoverageColorNV(gpFragmentCoverageColorNV, (C.GLuint)(color))
 }
-
 func FragmentLightModelfSGIX(pname uint32, param float32) {
 	C.glowFragmentLightModelfSGIX(gpFragmentLightModelfSGIX, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func FragmentLightModelfvSGIX(pname uint32, params *float32) {
 	C.glowFragmentLightModelfvSGIX(gpFragmentLightModelfvSGIX, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func FragmentLightModeliSGIX(pname uint32, param int32) {
 	C.glowFragmentLightModeliSGIX(gpFragmentLightModeliSGIX, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func FragmentLightModelivSGIX(pname uint32, params *int32) {
 	C.glowFragmentLightModelivSGIX(gpFragmentLightModelivSGIX, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func FragmentLightfSGIX(light uint32, pname uint32, param float32) {
 	C.glowFragmentLightfSGIX(gpFragmentLightfSGIX, (C.GLenum)(light), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func FragmentLightfvSGIX(light uint32, pname uint32, params *float32) {
 	C.glowFragmentLightfvSGIX(gpFragmentLightfvSGIX, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func FragmentLightiSGIX(light uint32, pname uint32, param int32) {
 	C.glowFragmentLightiSGIX(gpFragmentLightiSGIX, (C.GLenum)(light), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func FragmentLightivSGIX(light uint32, pname uint32, params *int32) {
 	C.glowFragmentLightivSGIX(gpFragmentLightivSGIX, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func FragmentMaterialfSGIX(face uint32, pname uint32, param float32) {
 	C.glowFragmentMaterialfSGIX(gpFragmentMaterialfSGIX, (C.GLenum)(face), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func FragmentMaterialfvSGIX(face uint32, pname uint32, params *float32) {
 	C.glowFragmentMaterialfvSGIX(gpFragmentMaterialfvSGIX, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func FragmentMaterialiSGIX(face uint32, pname uint32, param int32) {
 	C.glowFragmentMaterialiSGIX(gpFragmentMaterialiSGIX, (C.GLenum)(face), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func FragmentMaterialivSGIX(face uint32, pname uint32, params *int32) {
 	C.glowFragmentMaterialivSGIX(gpFragmentMaterialivSGIX, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func FrameTerminatorGREMEDY() {
 	C.glowFrameTerminatorGREMEDY(gpFrameTerminatorGREMEDY)
 }
-
 func FrameZoomSGIX(factor int32) {
 	C.glowFrameZoomSGIX(gpFrameZoomSGIX, (C.GLint)(factor))
 }
-
 func FramebufferDrawBufferEXT(framebuffer uint32, mode uint32) {
 	C.glowFramebufferDrawBufferEXT(gpFramebufferDrawBufferEXT, (C.GLuint)(framebuffer), (C.GLenum)(mode))
 }
-
 func FramebufferDrawBuffersEXT(framebuffer uint32, n int32, bufs *uint32) {
 	C.glowFramebufferDrawBuffersEXT(gpFramebufferDrawBuffersEXT, (C.GLuint)(framebuffer), (C.GLsizei)(n), (*C.GLenum)(unsafe.Pointer(bufs)))
 }
-
 func FramebufferFetchBarrierEXT() {
 	C.glowFramebufferFetchBarrierEXT(gpFramebufferFetchBarrierEXT)
 }
@@ -22533,7 +22073,6 @@ func FramebufferFetchBarrierEXT() {
 func FramebufferParameteri(target uint32, pname uint32, param int32) {
 	C.glowFramebufferParameteri(gpFramebufferParameteri, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func FramebufferReadBufferEXT(framebuffer uint32, mode uint32) {
 	C.glowFramebufferReadBufferEXT(gpFramebufferReadBufferEXT, (C.GLuint)(framebuffer), (C.GLenum)(mode))
 }
@@ -22542,19 +22081,15 @@ func FramebufferReadBufferEXT(framebuffer uint32, mode uint32) {
 func FramebufferRenderbuffer(target uint32, attachment uint32, renderbuffertarget uint32, renderbuffer uint32) {
 	C.glowFramebufferRenderbuffer(gpFramebufferRenderbuffer, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(renderbuffertarget), (C.GLuint)(renderbuffer))
 }
-
 func FramebufferRenderbufferEXT(target uint32, attachment uint32, renderbuffertarget uint32, renderbuffer uint32) {
 	C.glowFramebufferRenderbufferEXT(gpFramebufferRenderbufferEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(renderbuffertarget), (C.GLuint)(renderbuffer))
 }
-
 func FramebufferSampleLocationsfvARB(target uint32, start uint32, count int32, v *float32) {
 	C.glowFramebufferSampleLocationsfvARB(gpFramebufferSampleLocationsfvARB, (C.GLenum)(target), (C.GLuint)(start), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func FramebufferSampleLocationsfvNV(target uint32, start uint32, count int32, v *float32) {
 	C.glowFramebufferSampleLocationsfvNV(gpFramebufferSampleLocationsfvNV, (C.GLenum)(target), (C.GLuint)(start), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func FramebufferSamplePositionsfvAMD(target uint32, numsamples uint32, pixelindex uint32, values *float32) {
 	C.glowFramebufferSamplePositionsfvAMD(gpFramebufferSamplePositionsfvAMD, (C.GLenum)(target), (C.GLuint)(numsamples), (C.GLuint)(pixelindex), (*C.GLfloat)(unsafe.Pointer(values)))
 }
@@ -22563,11 +22098,9 @@ func FramebufferSamplePositionsfvAMD(target uint32, numsamples uint32, pixelinde
 func FramebufferTexture(target uint32, attachment uint32, texture uint32, level int32) {
 	C.glowFramebufferTexture(gpFramebufferTexture, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func FramebufferTexture1D(target uint32, attachment uint32, textarget uint32, texture uint32, level int32) {
 	C.glowFramebufferTexture1D(gpFramebufferTexture1D, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func FramebufferTexture1DEXT(target uint32, attachment uint32, textarget uint32, texture uint32, level int32) {
 	C.glowFramebufferTexture1DEXT(gpFramebufferTexture1DEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
@@ -22576,31 +22109,24 @@ func FramebufferTexture1DEXT(target uint32, attachment uint32, textarget uint32,
 func FramebufferTexture2D(target uint32, attachment uint32, textarget uint32, texture uint32, level int32) {
 	C.glowFramebufferTexture2D(gpFramebufferTexture2D, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func FramebufferTexture2DEXT(target uint32, attachment uint32, textarget uint32, texture uint32, level int32) {
 	C.glowFramebufferTexture2DEXT(gpFramebufferTexture2DEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func FramebufferTexture3D(target uint32, attachment uint32, textarget uint32, texture uint32, level int32, zoffset int32) {
 	C.glowFramebufferTexture3D(gpFramebufferTexture3D, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(zoffset))
 }
-
 func FramebufferTexture3DEXT(target uint32, attachment uint32, textarget uint32, texture uint32, level int32, zoffset int32) {
 	C.glowFramebufferTexture3DEXT(gpFramebufferTexture3DEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(zoffset))
 }
-
 func FramebufferTextureARB(target uint32, attachment uint32, texture uint32, level int32) {
 	C.glowFramebufferTextureARB(gpFramebufferTextureARB, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func FramebufferTextureEXT(target uint32, attachment uint32, texture uint32, level int32) {
 	C.glowFramebufferTextureEXT(gpFramebufferTextureEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func FramebufferTextureFaceARB(target uint32, attachment uint32, texture uint32, level int32, face uint32) {
 	C.glowFramebufferTextureFaceARB(gpFramebufferTextureFaceARB, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(face))
 }
-
 func FramebufferTextureFaceEXT(target uint32, attachment uint32, texture uint32, level int32, face uint32) {
 	C.glowFramebufferTextureFaceEXT(gpFramebufferTextureFaceEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(face))
 }
@@ -22609,19 +22135,15 @@ func FramebufferTextureFaceEXT(target uint32, attachment uint32, texture uint32,
 func FramebufferTextureLayer(target uint32, attachment uint32, texture uint32, level int32, layer int32) {
 	C.glowFramebufferTextureLayer(gpFramebufferTextureLayer, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-
 func FramebufferTextureLayerARB(target uint32, attachment uint32, texture uint32, level int32, layer int32) {
 	C.glowFramebufferTextureLayerARB(gpFramebufferTextureLayerARB, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-
 func FramebufferTextureLayerEXT(target uint32, attachment uint32, texture uint32, level int32, layer int32) {
 	C.glowFramebufferTextureLayerEXT(gpFramebufferTextureLayerEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-
 func FramebufferTextureMultiviewOVR(target uint32, attachment uint32, texture uint32, level int32, baseViewIndex int32, numViews int32) {
 	C.glowFramebufferTextureMultiviewOVR(gpFramebufferTextureMultiviewOVR, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(baseViewIndex), (C.GLsizei)(numViews))
 }
-
 func FreeObjectBufferATI(buffer uint32) {
 	C.glowFreeObjectBufferATI(gpFreeObjectBufferATI, (C.GLuint)(buffer))
 }
@@ -22635,15 +22157,12 @@ func FrontFace(mode uint32) {
 func Frustum(left float64, right float64, bottom float64, top float64, zNear float64, zFar float64) {
 	C.glowFrustum(gpFrustum, (C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
-
 func FrustumfOES(l float32, r float32, b float32, t float32, n float32, f float32) {
 	C.glowFrustumfOES(gpFrustumfOES, (C.GLfloat)(l), (C.GLfloat)(r), (C.GLfloat)(b), (C.GLfloat)(t), (C.GLfloat)(n), (C.GLfloat)(f))
 }
-
 func FrustumxOES(l int32, r int32, b int32, t int32, n int32, f int32) {
 	C.glowFrustumxOES(gpFrustumxOES, (C.GLfixed)(l), (C.GLfixed)(r), (C.GLfixed)(b), (C.GLfixed)(t), (C.GLfixed)(n), (C.GLfixed)(f))
 }
-
 func GenAsyncMarkersSGIX(xrange int32) uint32 {
 	ret := C.glowGenAsyncMarkersSGIX(gpGenAsyncMarkersSGIX, (C.GLsizei)(xrange))
 	return (uint32)(ret)
@@ -22653,19 +22172,15 @@ func GenAsyncMarkersSGIX(xrange int32) uint32 {
 func GenBuffers(n int32, buffers *uint32) {
 	C.glowGenBuffers(gpGenBuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
 }
-
 func GenBuffersARB(n int32, buffers *uint32) {
 	C.glowGenBuffersARB(gpGenBuffersARB, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(buffers)))
 }
-
 func GenFencesAPPLE(n int32, fences *uint32) {
 	C.glowGenFencesAPPLE(gpGenFencesAPPLE, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(fences)))
 }
-
 func GenFencesNV(n int32, fences *uint32) {
 	C.glowGenFencesNV(gpGenFencesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(fences)))
 }
-
 func GenFragmentShadersATI(xrange uint32) uint32 {
 	ret := C.glowGenFragmentShadersATI(gpGenFragmentShadersATI, (C.GLuint)(xrange))
 	return (uint32)(ret)
@@ -22675,7 +22190,6 @@ func GenFragmentShadersATI(xrange uint32) uint32 {
 func GenFramebuffers(n int32, framebuffers *uint32) {
 	C.glowGenFramebuffers(gpGenFramebuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(framebuffers)))
 }
-
 func GenFramebuffersEXT(n int32, framebuffers *uint32) {
 	C.glowGenFramebuffersEXT(gpGenFramebuffersEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(framebuffers)))
 }
@@ -22685,20 +22199,16 @@ func GenLists(xrange int32) uint32 {
 	ret := C.glowGenLists(gpGenLists, (C.GLsizei)(xrange))
 	return (uint32)(ret)
 }
-
 func GenNamesAMD(identifier uint32, num uint32, names *uint32) {
 	C.glowGenNamesAMD(gpGenNamesAMD, (C.GLenum)(identifier), (C.GLuint)(num), (*C.GLuint)(unsafe.Pointer(names)))
 }
-
 func GenOcclusionQueriesNV(n int32, ids *uint32) {
 	C.glowGenOcclusionQueriesNV(gpGenOcclusionQueriesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func GenPathsNV(xrange int32) uint32 {
 	ret := C.glowGenPathsNV(gpGenPathsNV, (C.GLsizei)(xrange))
 	return (uint32)(ret)
 }
-
 func GenPerfMonitorsAMD(n int32, monitors *uint32) {
 	C.glowGenPerfMonitorsAMD(gpGenPerfMonitorsAMD, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(monitors)))
 }
@@ -22707,15 +22217,12 @@ func GenPerfMonitorsAMD(n int32, monitors *uint32) {
 func GenProgramPipelines(n int32, pipelines *uint32) {
 	C.glowGenProgramPipelines(gpGenProgramPipelines, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
-
 func GenProgramPipelinesEXT(n int32, pipelines *uint32) {
 	C.glowGenProgramPipelinesEXT(gpGenProgramPipelinesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
-
 func GenProgramsARB(n int32, programs *uint32) {
 	C.glowGenProgramsARB(gpGenProgramsARB, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(programs)))
 }
-
 func GenProgramsNV(n int32, programs *uint32) {
 	C.glowGenProgramsNV(gpGenProgramsNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(programs)))
 }
@@ -22724,11 +22231,9 @@ func GenProgramsNV(n int32, programs *uint32) {
 func GenQueries(n int32, ids *uint32) {
 	C.glowGenQueries(gpGenQueries, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func GenQueriesARB(n int32, ids *uint32) {
 	C.glowGenQueriesARB(gpGenQueriesARB, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func GenQueryResourceTagNV(n int32, tagIds *int32) {
 	C.glowGenQueryResourceTagNV(gpGenQueryResourceTagNV, (C.GLsizei)(n), (*C.GLint)(unsafe.Pointer(tagIds)))
 }
@@ -22737,7 +22242,6 @@ func GenQueryResourceTagNV(n int32, tagIds *int32) {
 func GenRenderbuffers(n int32, renderbuffers *uint32) {
 	C.glowGenRenderbuffers(gpGenRenderbuffers, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(renderbuffers)))
 }
-
 func GenRenderbuffersEXT(n int32, renderbuffers *uint32) {
 	C.glowGenRenderbuffersEXT(gpGenRenderbuffersEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(renderbuffers)))
 }
@@ -22746,11 +22250,9 @@ func GenRenderbuffersEXT(n int32, renderbuffers *uint32) {
 func GenSamplers(count int32, samplers *uint32) {
 	C.glowGenSamplers(gpGenSamplers, (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(samplers)))
 }
-
 func GenSemaphoresEXT(n int32, semaphores *uint32) {
 	C.glowGenSemaphoresEXT(gpGenSemaphoresEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(semaphores)))
 }
-
 func GenSymbolsEXT(datatype uint32, storagetype uint32, xrange uint32, components uint32) uint32 {
 	ret := C.glowGenSymbolsEXT(gpGenSymbolsEXT, (C.GLenum)(datatype), (C.GLenum)(storagetype), (C.GLenum)(xrange), (C.GLuint)(components))
 	return (uint32)(ret)
@@ -22760,7 +22262,6 @@ func GenSymbolsEXT(datatype uint32, storagetype uint32, xrange uint32, component
 func GenTextures(n int32, textures *uint32) {
 	C.glowGenTextures(gpGenTextures, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)))
 }
-
 func GenTexturesEXT(n int32, textures *uint32) {
 	C.glowGenTexturesEXT(gpGenTexturesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)))
 }
@@ -22769,7 +22270,6 @@ func GenTexturesEXT(n int32, textures *uint32) {
 func GenTransformFeedbacks(n int32, ids *uint32) {
 	C.glowGenTransformFeedbacks(gpGenTransformFeedbacks, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
-
 func GenTransformFeedbacksNV(n int32, ids *uint32) {
 	C.glowGenTransformFeedbacksNV(gpGenTransformFeedbacksNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(ids)))
 }
@@ -22778,11 +22278,9 @@ func GenTransformFeedbacksNV(n int32, ids *uint32) {
 func GenVertexArrays(n int32, arrays *uint32) {
 	C.glowGenVertexArrays(gpGenVertexArrays, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(arrays)))
 }
-
 func GenVertexArraysAPPLE(n int32, arrays *uint32) {
 	C.glowGenVertexArraysAPPLE(gpGenVertexArraysAPPLE, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(arrays)))
 }
-
 func GenVertexShadersEXT(xrange uint32) uint32 {
 	ret := C.glowGenVertexShadersEXT(gpGenVertexShadersEXT, (C.GLuint)(xrange))
 	return (uint32)(ret)
@@ -22792,11 +22290,9 @@ func GenVertexShadersEXT(xrange uint32) uint32 {
 func GenerateMipmap(target uint32) {
 	C.glowGenerateMipmap(gpGenerateMipmap, (C.GLenum)(target))
 }
-
 func GenerateMipmapEXT(target uint32) {
 	C.glowGenerateMipmapEXT(gpGenerateMipmapEXT, (C.GLenum)(target))
 }
-
 func GenerateMultiTexMipmapEXT(texunit uint32, target uint32) {
 	C.glowGenerateMultiTexMipmapEXT(gpGenerateMultiTexMipmapEXT, (C.GLenum)(texunit), (C.GLenum)(target))
 }
@@ -22805,7 +22301,6 @@ func GenerateMultiTexMipmapEXT(texunit uint32, target uint32) {
 func GenerateTextureMipmap(texture uint32) {
 	C.glowGenerateTextureMipmap(gpGenerateTextureMipmap, (C.GLuint)(texture))
 }
-
 func GenerateTextureMipmapEXT(texture uint32, target uint32) {
 	C.glowGenerateTextureMipmapEXT(gpGenerateTextureMipmapEXT, (C.GLuint)(texture), (C.GLenum)(target))
 }
@@ -22819,7 +22314,6 @@ func GetActiveAtomicCounterBufferiv(program uint32, bufferIndex uint32, pname ui
 func GetActiveAttrib(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveAttrib(gpGetActiveAttrib, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetActiveAttribARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveAttribARB(gpGetActiveAttribARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
@@ -22833,7 +22327,6 @@ func GetActiveSubroutineName(program uint32, shadertype uint32, index uint32, bu
 func GetActiveSubroutineUniformName(program uint32, shadertype uint32, index uint32, bufsize int32, length *int32, name *uint8) {
 	C.glowGetActiveSubroutineUniformName(gpGetActiveSubroutineUniformName, (C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLsizei)(bufsize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetActiveSubroutineUniformiv(program uint32, shadertype uint32, index uint32, pname uint32, values *int32) {
 	C.glowGetActiveSubroutineUniformiv(gpGetActiveSubroutineUniformiv, (C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(values)))
 }
@@ -22842,7 +22335,6 @@ func GetActiveSubroutineUniformiv(program uint32, shadertype uint32, index uint3
 func GetActiveUniform(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveUniform(gpGetActiveUniform, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetActiveUniformARB(programObj uintptr, index uint32, maxLength int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveUniformARB(gpGetActiveUniformARB, (C.GLhandleARB)(programObj), (C.GLuint)(index), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLcharARB)(unsafe.Pointer(name)))
 }
@@ -22866,19 +22358,15 @@ func GetActiveUniformName(program uint32, uniformIndex uint32, bufSize int32, le
 func GetActiveUniformsiv(program uint32, uniformCount int32, uniformIndices *uint32, pname uint32, params *int32) {
 	C.glowGetActiveUniformsiv(gpGetActiveUniformsiv, (C.GLuint)(program), (C.GLsizei)(uniformCount), (*C.GLuint)(unsafe.Pointer(uniformIndices)), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetActiveVaryingNV(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetActiveVaryingNV(gpGetActiveVaryingNV, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLsizei)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetArrayObjectfvATI(array uint32, pname uint32, params *float32) {
 	C.glowGetArrayObjectfvATI(gpGetArrayObjectfvATI, (C.GLenum)(array), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetArrayObjectivATI(array uint32, pname uint32, params *int32) {
 	C.glowGetArrayObjectivATI(gpGetArrayObjectivATI, (C.GLenum)(array), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetAttachedObjectsARB(containerObj uintptr, maxCount int32, count *int32, obj *uintptr) {
 	C.glowGetAttachedObjectsARB(gpGetAttachedObjectsARB, (C.GLhandleARB)(containerObj), (C.GLsizei)(maxCount), (*C.GLsizei)(unsafe.Pointer(count)), (*C.GLhandleARB)(unsafe.Pointer(obj)))
 }
@@ -22893,20 +22381,16 @@ func GetAttribLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetAttribLocation(gpGetAttribLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetAttribLocationARB(programObj uintptr, name *uint8) int32 {
 	ret := C.glowGetAttribLocationARB(gpGetAttribLocationARB, (C.GLhandleARB)(programObj), (*C.GLcharARB)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetBooleanIndexedvEXT(target uint32, index uint32, data *bool) {
 	C.glowGetBooleanIndexedvEXT(gpGetBooleanIndexedvEXT, (C.GLenum)(target), (C.GLuint)(index), (*C.GLboolean)(unsafe.Pointer(data)))
 }
-
 func GetBooleani_v(target uint32, index uint32, data *bool) {
 	C.glowGetBooleani_v(gpGetBooleani_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLboolean)(unsafe.Pointer(data)))
 }
-
 func GetBooleanv(pname uint32, data *bool) {
 	C.glowGetBooleanv(gpGetBooleanv, (C.GLenum)(pname), (*C.GLboolean)(unsafe.Pointer(data)))
 }
@@ -22920,11 +22404,9 @@ func GetBufferParameteri64v(target uint32, pname uint32, params *int64) {
 func GetBufferParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetBufferParameteriv(gpGetBufferParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetBufferParameterivARB(target uint32, pname uint32, params *int32) {
 	C.glowGetBufferParameterivARB(gpGetBufferParameterivARB, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetBufferParameterui64vNV(target uint32, pname uint32, params *uint64) {
 	C.glowGetBufferParameterui64vNV(gpGetBufferParameterui64vNV, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint64EXT)(unsafe.Pointer(params)))
 }
@@ -22933,7 +22415,6 @@ func GetBufferParameterui64vNV(target uint32, pname uint32, params *uint64) {
 func GetBufferPointerv(target uint32, pname uint32, params *unsafe.Pointer) {
 	C.glowGetBufferPointerv(gpGetBufferPointerv, (C.GLenum)(target), (C.GLenum)(pname), params)
 }
-
 func GetBufferPointervARB(target uint32, pname uint32, params *unsafe.Pointer) {
 	C.glowGetBufferPointervARB(gpGetBufferPointervARB, (C.GLenum)(target), (C.GLenum)(pname), params)
 }
@@ -22942,7 +22423,6 @@ func GetBufferPointervARB(target uint32, pname uint32, params *unsafe.Pointer) {
 func GetBufferSubData(target uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowGetBufferSubData(gpGetBufferSubData, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func GetBufferSubDataARB(target uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowGetBufferSubDataARB(gpGetBufferSubDataARB, (C.GLenum)(target), (C.GLintptrARB)(offset), (C.GLsizeiptrARB)(size), data)
 }
@@ -22951,11 +22431,9 @@ func GetBufferSubDataARB(target uint32, offset int, size int, data unsafe.Pointe
 func GetClipPlane(plane uint32, equation *float64) {
 	C.glowGetClipPlane(gpGetClipPlane, (C.GLenum)(plane), (*C.GLdouble)(unsafe.Pointer(equation)))
 }
-
 func GetClipPlanefOES(plane uint32, equation *float32) {
 	C.glowGetClipPlanefOES(gpGetClipPlanefOES, (C.GLenum)(plane), (*C.GLfloat)(unsafe.Pointer(equation)))
 }
-
 func GetClipPlanexOES(plane uint32, equation *int32) {
 	C.glowGetClipPlanexOES(gpGetClipPlanexOES, (C.GLenum)(plane), (*C.GLfixed)(unsafe.Pointer(equation)))
 }
@@ -22964,64 +22442,49 @@ func GetClipPlanexOES(plane uint32, equation *int32) {
 func GetColorTable(target uint32, format uint32, xtype uint32, table unsafe.Pointer) {
 	C.glowGetColorTable(gpGetColorTable, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), table)
 }
-
 func GetColorTableEXT(target uint32, format uint32, xtype uint32, data unsafe.Pointer) {
 	C.glowGetColorTableEXT(gpGetColorTableEXT, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), data)
 }
-
 func GetColorTableParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowGetColorTableParameterfv(gpGetColorTableParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetColorTableParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowGetColorTableParameterfvEXT(gpGetColorTableParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetColorTableParameterfvSGI(target uint32, pname uint32, params *float32) {
 	C.glowGetColorTableParameterfvSGI(gpGetColorTableParameterfvSGI, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetColorTableParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetColorTableParameteriv(gpGetColorTableParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetColorTableParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetColorTableParameterivEXT(gpGetColorTableParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetColorTableParameterivSGI(target uint32, pname uint32, params *int32) {
 	C.glowGetColorTableParameterivSGI(gpGetColorTableParameterivSGI, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetColorTableSGI(target uint32, format uint32, xtype uint32, table unsafe.Pointer) {
 	C.glowGetColorTableSGI(gpGetColorTableSGI, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), table)
 }
-
 func GetCombinerInputParameterfvNV(stage uint32, portion uint32, variable uint32, pname uint32, params *float32) {
 	C.glowGetCombinerInputParameterfvNV(gpGetCombinerInputParameterfvNV, (C.GLenum)(stage), (C.GLenum)(portion), (C.GLenum)(variable), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetCombinerInputParameterivNV(stage uint32, portion uint32, variable uint32, pname uint32, params *int32) {
 	C.glowGetCombinerInputParameterivNV(gpGetCombinerInputParameterivNV, (C.GLenum)(stage), (C.GLenum)(portion), (C.GLenum)(variable), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetCombinerOutputParameterfvNV(stage uint32, portion uint32, pname uint32, params *float32) {
 	C.glowGetCombinerOutputParameterfvNV(gpGetCombinerOutputParameterfvNV, (C.GLenum)(stage), (C.GLenum)(portion), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetCombinerOutputParameterivNV(stage uint32, portion uint32, pname uint32, params *int32) {
 	C.glowGetCombinerOutputParameterivNV(gpGetCombinerOutputParameterivNV, (C.GLenum)(stage), (C.GLenum)(portion), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetCombinerStageParameterfvNV(stage uint32, pname uint32, params *float32) {
 	C.glowGetCombinerStageParameterfvNV(gpGetCombinerStageParameterfvNV, (C.GLenum)(stage), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetCommandHeaderNV(tokenID uint32, size uint32) uint32 {
 	ret := C.glowGetCommandHeaderNV(gpGetCommandHeaderNV, (C.GLenum)(tokenID), (C.GLuint)(size))
 	return (uint32)(ret)
 }
-
 func GetCompressedMultiTexImageEXT(texunit uint32, target uint32, lod int32, img unsafe.Pointer) {
 	C.glowGetCompressedMultiTexImageEXT(gpGetCompressedMultiTexImageEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(lod), img)
 }
@@ -23030,7 +22493,6 @@ func GetCompressedMultiTexImageEXT(texunit uint32, target uint32, lod int32, img
 func GetCompressedTexImage(target uint32, level int32, img unsafe.Pointer) {
 	C.glowGetCompressedTexImage(gpGetCompressedTexImage, (C.GLenum)(target), (C.GLint)(level), img)
 }
-
 func GetCompressedTexImageARB(target uint32, level int32, img unsafe.Pointer) {
 	C.glowGetCompressedTexImageARB(gpGetCompressedTexImageARB, (C.GLenum)(target), (C.GLint)(level), img)
 }
@@ -23039,7 +22501,6 @@ func GetCompressedTexImageARB(target uint32, level int32, img unsafe.Pointer) {
 func GetCompressedTextureImage(texture uint32, level int32, bufSize int32, pixels unsafe.Pointer) {
 	C.glowGetCompressedTextureImage(gpGetCompressedTextureImage, (C.GLuint)(texture), (C.GLint)(level), (C.GLsizei)(bufSize), pixels)
 }
-
 func GetCompressedTextureImageEXT(texture uint32, target uint32, lod int32, img unsafe.Pointer) {
 	C.glowGetCompressedTextureImageEXT(gpGetCompressedTextureImageEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(lod), img)
 }
@@ -23053,31 +22514,24 @@ func GetCompressedTextureSubImage(texture uint32, level int32, xoffset int32, yo
 func GetConvolutionFilter(target uint32, format uint32, xtype uint32, image unsafe.Pointer) {
 	C.glowGetConvolutionFilter(gpGetConvolutionFilter, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), image)
 }
-
 func GetConvolutionFilterEXT(target uint32, format uint32, xtype uint32, image unsafe.Pointer) {
 	C.glowGetConvolutionFilterEXT(gpGetConvolutionFilterEXT, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), image)
 }
-
 func GetConvolutionParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowGetConvolutionParameterfv(gpGetConvolutionParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetConvolutionParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowGetConvolutionParameterfvEXT(gpGetConvolutionParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetConvolutionParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetConvolutionParameteriv(gpGetConvolutionParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetConvolutionParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetConvolutionParameterivEXT(gpGetConvolutionParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetConvolutionParameterxvOES(target uint32, pname uint32, params *int32) {
 	C.glowGetConvolutionParameterxvOES(gpGetConvolutionParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetCoverageModulationTableNV(bufsize int32, v *float32) {
 	C.glowGetCoverageModulationTableNV(gpGetCoverageModulationTableNV, (C.GLsizei)(bufsize), (*C.GLfloat)(unsafe.Pointer(v)))
 }
@@ -23087,38 +22541,30 @@ func GetDebugMessageLog(count uint32, bufSize int32, sources *uint32, types *uin
 	ret := C.glowGetDebugMessageLog(gpGetDebugMessageLog, (C.GLuint)(count), (C.GLsizei)(bufSize), (*C.GLenum)(unsafe.Pointer(sources)), (*C.GLenum)(unsafe.Pointer(types)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLenum)(unsafe.Pointer(severities)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(messageLog)))
 	return (uint32)(ret)
 }
-
 func GetDebugMessageLogAMD(count uint32, bufsize int32, categories *uint32, severities *uint32, ids *uint32, lengths *int32, message *uint8) uint32 {
 	ret := C.glowGetDebugMessageLogAMD(gpGetDebugMessageLogAMD, (C.GLuint)(count), (C.GLsizei)(bufsize), (*C.GLenum)(unsafe.Pointer(categories)), (*C.GLuint)(unsafe.Pointer(severities)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(message)))
 	return (uint32)(ret)
 }
-
 func GetDebugMessageLogARB(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *uint8) uint32 {
 	ret := C.glowGetDebugMessageLogARB(gpGetDebugMessageLogARB, (C.GLuint)(count), (C.GLsizei)(bufSize), (*C.GLenum)(unsafe.Pointer(sources)), (*C.GLenum)(unsafe.Pointer(types)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLenum)(unsafe.Pointer(severities)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(messageLog)))
 	return (uint32)(ret)
 }
-
 func GetDebugMessageLogKHR(count uint32, bufSize int32, sources *uint32, types *uint32, ids *uint32, severities *uint32, lengths *int32, messageLog *uint8) uint32 {
 	ret := C.glowGetDebugMessageLogKHR(gpGetDebugMessageLogKHR, (C.GLuint)(count), (C.GLsizei)(bufSize), (*C.GLenum)(unsafe.Pointer(sources)), (*C.GLenum)(unsafe.Pointer(types)), (*C.GLuint)(unsafe.Pointer(ids)), (*C.GLenum)(unsafe.Pointer(severities)), (*C.GLsizei)(unsafe.Pointer(lengths)), (*C.GLchar)(unsafe.Pointer(messageLog)))
 	return (uint32)(ret)
 }
-
 func GetDetailTexFuncSGIS(target uint32, points *float32) {
 	C.glowGetDetailTexFuncSGIS(gpGetDetailTexFuncSGIS, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func GetDoubleIndexedvEXT(target uint32, index uint32, data *float64) {
 	C.glowGetDoubleIndexedvEXT(gpGetDoubleIndexedvEXT, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(data)))
 }
-
 func GetDoublei_v(target uint32, index uint32, data *float64) {
 	C.glowGetDoublei_v(gpGetDoublei_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(data)))
 }
-
 func GetDoublei_vEXT(pname uint32, index uint32, params *float64) {
 	C.glowGetDoublei_vEXT(gpGetDoublei_vEXT, (C.GLenum)(pname), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetDoublev(pname uint32, data *float64) {
 	C.glowGetDoublev(gpGetDoublev, (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(data)))
 }
@@ -23128,43 +22574,33 @@ func GetError() uint32 {
 	ret := C.glowGetError(gpGetError)
 	return (uint32)(ret)
 }
-
 func GetFenceivNV(fence uint32, pname uint32, params *int32) {
 	C.glowGetFenceivNV(gpGetFenceivNV, (C.GLuint)(fence), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetFinalCombinerInputParameterfvNV(variable uint32, pname uint32, params *float32) {
 	C.glowGetFinalCombinerInputParameterfvNV(gpGetFinalCombinerInputParameterfvNV, (C.GLenum)(variable), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetFinalCombinerInputParameterivNV(variable uint32, pname uint32, params *int32) {
 	C.glowGetFinalCombinerInputParameterivNV(gpGetFinalCombinerInputParameterivNV, (C.GLenum)(variable), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetFirstPerfQueryIdINTEL(queryId *uint32) {
 	C.glowGetFirstPerfQueryIdINTEL(gpGetFirstPerfQueryIdINTEL, (*C.GLuint)(unsafe.Pointer(queryId)))
 }
-
 func GetFixedvOES(pname uint32, params *int32) {
 	C.glowGetFixedvOES(gpGetFixedvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetFloatIndexedvEXT(target uint32, index uint32, data *float32) {
 	C.glowGetFloatIndexedvEXT(gpGetFloatIndexedvEXT, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(data)))
 }
-
 func GetFloati_v(target uint32, index uint32, data *float32) {
 	C.glowGetFloati_v(gpGetFloati_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(data)))
 }
-
 func GetFloati_vEXT(pname uint32, index uint32, params *float32) {
 	C.glowGetFloati_vEXT(gpGetFloati_vEXT, (C.GLenum)(pname), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetFloatv(pname uint32, data *float32) {
 	C.glowGetFloatv(gpGetFloatv, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(data)))
 }
-
 func GetFogFuncSGIS(points *float32) {
 	C.glowGetFogFuncSGIS(gpGetFogFuncSGIS, (*C.GLfloat)(unsafe.Pointer(points)))
 }
@@ -23180,24 +22616,19 @@ func GetFragDataLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetFragDataLocation(gpGetFragDataLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetFragDataLocationEXT(program uint32, name *uint8) int32 {
 	ret := C.glowGetFragDataLocationEXT(gpGetFragDataLocationEXT, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetFragmentLightfvSGIX(light uint32, pname uint32, params *float32) {
 	C.glowGetFragmentLightfvSGIX(gpGetFragmentLightfvSGIX, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetFragmentLightivSGIX(light uint32, pname uint32, params *int32) {
 	C.glowGetFragmentLightivSGIX(gpGetFragmentLightivSGIX, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetFragmentMaterialfvSGIX(face uint32, pname uint32, params *float32) {
 	C.glowGetFragmentMaterialfvSGIX(gpGetFragmentMaterialfvSGIX, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetFragmentMaterialivSGIX(face uint32, pname uint32, params *int32) {
 	C.glowGetFragmentMaterialivSGIX(gpGetFragmentMaterialivSGIX, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23206,11 +22637,9 @@ func GetFragmentMaterialivSGIX(face uint32, pname uint32, params *int32) {
 func GetFramebufferAttachmentParameteriv(target uint32, attachment uint32, pname uint32, params *int32) {
 	C.glowGetFramebufferAttachmentParameteriv(gpGetFramebufferAttachmentParameteriv, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetFramebufferAttachmentParameterivEXT(target uint32, attachment uint32, pname uint32, params *int32) {
 	C.glowGetFramebufferAttachmentParameterivEXT(gpGetFramebufferAttachmentParameterivEXT, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetFramebufferParameterfvAMD(target uint32, pname uint32, numsamples uint32, pixelindex uint32, size int32, values *float32) {
 	C.glowGetFramebufferParameterfvAMD(gpGetFramebufferParameterfvAMD, (C.GLenum)(target), (C.GLenum)(pname), (C.GLuint)(numsamples), (C.GLuint)(pixelindex), (C.GLsizei)(size), (*C.GLfloat)(unsafe.Pointer(values)))
 }
@@ -23219,7 +22648,6 @@ func GetFramebufferParameterfvAMD(target uint32, pname uint32, numsamples uint32
 func GetFramebufferParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetFramebufferParameteriv(gpGetFramebufferParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetFramebufferParameterivEXT(framebuffer uint32, pname uint32, params *int32) {
 	C.glowGetFramebufferParameterivEXT(gpGetFramebufferParameterivEXT, (C.GLuint)(framebuffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23229,17 +22657,14 @@ func GetGraphicsResetStatus() uint32 {
 	ret := C.glowGetGraphicsResetStatus(gpGetGraphicsResetStatus)
 	return (uint32)(ret)
 }
-
 func GetGraphicsResetStatusARB() uint32 {
 	ret := C.glowGetGraphicsResetStatusARB(gpGetGraphicsResetStatusARB)
 	return (uint32)(ret)
 }
-
 func GetGraphicsResetStatusKHR() uint32 {
 	ret := C.glowGetGraphicsResetStatusKHR(gpGetGraphicsResetStatusKHR)
 	return (uint32)(ret)
 }
-
 func GetHandleARB(pname uint32) uintptr {
 	ret := C.glowGetHandleARB(gpGetHandleARB, (C.GLenum)(pname))
 	return (uintptr)(ret)
@@ -23249,90 +22674,69 @@ func GetHandleARB(pname uint32) uintptr {
 func GetHistogram(target uint32, reset bool, format uint32, xtype uint32, values unsafe.Pointer) {
 	C.glowGetHistogram(gpGetHistogram, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), values)
 }
-
 func GetHistogramEXT(target uint32, reset bool, format uint32, xtype uint32, values unsafe.Pointer) {
 	C.glowGetHistogramEXT(gpGetHistogramEXT, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), values)
 }
-
 func GetHistogramParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowGetHistogramParameterfv(gpGetHistogramParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetHistogramParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowGetHistogramParameterfvEXT(gpGetHistogramParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetHistogramParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetHistogramParameteriv(gpGetHistogramParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetHistogramParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetHistogramParameterivEXT(gpGetHistogramParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetHistogramParameterxvOES(target uint32, pname uint32, params *int32) {
 	C.glowGetHistogramParameterxvOES(gpGetHistogramParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetImageHandleARB(texture uint32, level int32, layered bool, layer int32, format uint32) uint64 {
 	ret := C.glowGetImageHandleARB(gpGetImageHandleARB, (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(boolToInt(layered)), (C.GLint)(layer), (C.GLenum)(format))
 	return (uint64)(ret)
 }
-
 func GetImageHandleNV(texture uint32, level int32, layered bool, layer int32, format uint32) uint64 {
 	ret := C.glowGetImageHandleNV(gpGetImageHandleNV, (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(boolToInt(layered)), (C.GLint)(layer), (C.GLenum)(format))
 	return (uint64)(ret)
 }
-
 func GetImageTransformParameterfvHP(target uint32, pname uint32, params *float32) {
 	C.glowGetImageTransformParameterfvHP(gpGetImageTransformParameterfvHP, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetImageTransformParameterivHP(target uint32, pname uint32, params *int32) {
 	C.glowGetImageTransformParameterivHP(gpGetImageTransformParameterivHP, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetInfoLogARB(obj uintptr, maxLength int32, length *int32, infoLog *uint8) {
 	C.glowGetInfoLogARB(gpGetInfoLogARB, (C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLcharARB)(unsafe.Pointer(infoLog)))
 }
-
 func GetInstrumentsSGIX() int32 {
 	ret := C.glowGetInstrumentsSGIX(gpGetInstrumentsSGIX)
 	return (int32)(ret)
 }
-
 func GetInteger64i_v(target uint32, index uint32, data *int64) {
 	C.glowGetInteger64i_v(gpGetInteger64i_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint64)(unsafe.Pointer(data)))
 }
-
 func GetInteger64v(pname uint32, data *int64) {
 	C.glowGetInteger64v(gpGetInteger64v, (C.GLenum)(pname), (*C.GLint64)(unsafe.Pointer(data)))
 }
-
 func GetIntegerIndexedvEXT(target uint32, index uint32, data *int32) {
 	C.glowGetIntegerIndexedvEXT(gpGetIntegerIndexedvEXT, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(data)))
 }
-
 func GetIntegeri_v(target uint32, index uint32, data *int32) {
 	C.glowGetIntegeri_v(gpGetIntegeri_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(data)))
 }
-
 func GetIntegerui64i_vNV(value uint32, index uint32, result *uint64) {
 	C.glowGetIntegerui64i_vNV(gpGetIntegerui64i_vNV, (C.GLenum)(value), (C.GLuint)(index), (*C.GLuint64EXT)(unsafe.Pointer(result)))
 }
-
 func GetIntegerui64vNV(value uint32, result *uint64) {
 	C.glowGetIntegerui64vNV(gpGetIntegerui64vNV, (C.GLenum)(value), (*C.GLuint64EXT)(unsafe.Pointer(result)))
 }
-
 func GetIntegerv(pname uint32, data *int32) {
 	C.glowGetIntegerv(gpGetIntegerv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(data)))
 }
-
 func GetInternalformatSampleivNV(target uint32, internalformat uint32, samples int32, pname uint32, bufSize int32, params *int32) {
 	C.glowGetInternalformatSampleivNV(gpGetInternalformatSampleivNV, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(samples), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetInternalformati64v(target uint32, internalformat uint32, pname uint32, bufSize int32, params *int64) {
 	C.glowGetInternalformati64v(gpGetInternalformati64v, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint64)(unsafe.Pointer(params)))
 }
@@ -23341,107 +22745,81 @@ func GetInternalformati64v(target uint32, internalformat uint32, pname uint32, b
 func GetInternalformativ(target uint32, internalformat uint32, pname uint32, bufSize int32, params *int32) {
 	C.glowGetInternalformativ(gpGetInternalformativ, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetInvariantBooleanvEXT(id uint32, value uint32, data *bool) {
 	C.glowGetInvariantBooleanvEXT(gpGetInvariantBooleanvEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLboolean)(unsafe.Pointer(data)))
 }
-
 func GetInvariantFloatvEXT(id uint32, value uint32, data *float32) {
 	C.glowGetInvariantFloatvEXT(gpGetInvariantFloatvEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLfloat)(unsafe.Pointer(data)))
 }
-
 func GetInvariantIntegervEXT(id uint32, value uint32, data *int32) {
 	C.glowGetInvariantIntegervEXT(gpGetInvariantIntegervEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLint)(unsafe.Pointer(data)))
 }
-
 func GetLightfv(light uint32, pname uint32, params *float32) {
 	C.glowGetLightfv(gpGetLightfv, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetLightiv(light uint32, pname uint32, params *int32) {
 	C.glowGetLightiv(gpGetLightiv, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetLightxOES(light uint32, pname uint32, params *int32) {
 	C.glowGetLightxOES(gpGetLightxOES, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetLightxvOES(light uint32, pname uint32, params *int32) {
 	C.glowGetLightxvOES(gpGetLightxvOES, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetListParameterfvSGIX(list uint32, pname uint32, params *float32) {
 	C.glowGetListParameterfvSGIX(gpGetListParameterfvSGIX, (C.GLuint)(list), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetListParameterivSGIX(list uint32, pname uint32, params *int32) {
 	C.glowGetListParameterivSGIX(gpGetListParameterivSGIX, (C.GLuint)(list), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetLocalConstantBooleanvEXT(id uint32, value uint32, data *bool) {
 	C.glowGetLocalConstantBooleanvEXT(gpGetLocalConstantBooleanvEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLboolean)(unsafe.Pointer(data)))
 }
-
 func GetLocalConstantFloatvEXT(id uint32, value uint32, data *float32) {
 	C.glowGetLocalConstantFloatvEXT(gpGetLocalConstantFloatvEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLfloat)(unsafe.Pointer(data)))
 }
-
 func GetLocalConstantIntegervEXT(id uint32, value uint32, data *int32) {
 	C.glowGetLocalConstantIntegervEXT(gpGetLocalConstantIntegervEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLint)(unsafe.Pointer(data)))
 }
-
 func GetMapAttribParameterfvNV(target uint32, index uint32, pname uint32, params *float32) {
 	C.glowGetMapAttribParameterfvNV(gpGetMapAttribParameterfvNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMapAttribParameterivNV(target uint32, index uint32, pname uint32, params *int32) {
 	C.glowGetMapAttribParameterivNV(gpGetMapAttribParameterivNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMapControlPointsNV(target uint32, index uint32, xtype uint32, ustride int32, vstride int32, packed bool, points unsafe.Pointer) {
 	C.glowGetMapControlPointsNV(gpGetMapControlPointsNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(xtype), (C.GLsizei)(ustride), (C.GLsizei)(vstride), (C.GLboolean)(boolToInt(packed)), points)
 }
-
 func GetMapParameterfvNV(target uint32, pname uint32, params *float32) {
 	C.glowGetMapParameterfvNV(gpGetMapParameterfvNV, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMapParameterivNV(target uint32, pname uint32, params *int32) {
 	C.glowGetMapParameterivNV(gpGetMapParameterivNV, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMapdv(target uint32, query uint32, v *float64) {
 	C.glowGetMapdv(gpGetMapdv, (C.GLenum)(target), (C.GLenum)(query), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func GetMapfv(target uint32, query uint32, v *float32) {
 	C.glowGetMapfv(gpGetMapfv, (C.GLenum)(target), (C.GLenum)(query), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func GetMapiv(target uint32, query uint32, v *int32) {
 	C.glowGetMapiv(gpGetMapiv, (C.GLenum)(target), (C.GLenum)(query), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func GetMapxvOES(target uint32, query uint32, v *int32) {
 	C.glowGetMapxvOES(gpGetMapxvOES, (C.GLenum)(target), (C.GLenum)(query), (*C.GLfixed)(unsafe.Pointer(v)))
 }
-
 func GetMaterialfv(face uint32, pname uint32, params *float32) {
 	C.glowGetMaterialfv(gpGetMaterialfv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMaterialiv(face uint32, pname uint32, params *int32) {
 	C.glowGetMaterialiv(gpGetMaterialiv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMaterialxOES(face uint32, pname uint32, param int32) {
 	C.glowGetMaterialxOES(gpGetMaterialxOES, (C.GLenum)(face), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func GetMaterialxvOES(face uint32, pname uint32, params *int32) {
 	C.glowGetMaterialxvOES(gpGetMaterialxvOES, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetMemoryObjectParameterivEXT(memoryObject uint32, pname uint32, params *int32) {
 	C.glowGetMemoryObjectParameterivEXT(gpGetMemoryObjectParameterivEXT, (C.GLuint)(memoryObject), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23450,71 +22828,54 @@ func GetMemoryObjectParameterivEXT(memoryObject uint32, pname uint32, params *in
 func GetMinmax(target uint32, reset bool, format uint32, xtype uint32, values unsafe.Pointer) {
 	C.glowGetMinmax(gpGetMinmax, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), values)
 }
-
 func GetMinmaxEXT(target uint32, reset bool, format uint32, xtype uint32, values unsafe.Pointer) {
 	C.glowGetMinmaxEXT(gpGetMinmaxEXT, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), values)
 }
-
 func GetMinmaxParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowGetMinmaxParameterfv(gpGetMinmaxParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMinmaxParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowGetMinmaxParameterfvEXT(gpGetMinmaxParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMinmaxParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetMinmaxParameteriv(gpGetMinmaxParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMinmaxParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetMinmaxParameterivEXT(gpGetMinmaxParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexEnvfvEXT(texunit uint32, target uint32, pname uint32, params *float32) {
 	C.glowGetMultiTexEnvfvEXT(gpGetMultiTexEnvfvEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexEnvivEXT(texunit uint32, target uint32, pname uint32, params *int32) {
 	C.glowGetMultiTexEnvivEXT(gpGetMultiTexEnvivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexGendvEXT(texunit uint32, coord uint32, pname uint32, params *float64) {
 	C.glowGetMultiTexGendvEXT(gpGetMultiTexGendvEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexGenfvEXT(texunit uint32, coord uint32, pname uint32, params *float32) {
 	C.glowGetMultiTexGenfvEXT(gpGetMultiTexGenfvEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexGenivEXT(texunit uint32, coord uint32, pname uint32, params *int32) {
 	C.glowGetMultiTexGenivEXT(gpGetMultiTexGenivEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexImageEXT(texunit uint32, target uint32, level int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowGetMultiTexImageEXT(gpGetMultiTexImageEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func GetMultiTexLevelParameterfvEXT(texunit uint32, target uint32, level int32, pname uint32, params *float32) {
 	C.glowGetMultiTexLevelParameterfvEXT(gpGetMultiTexLevelParameterfvEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexLevelParameterivEXT(texunit uint32, target uint32, level int32, pname uint32, params *int32) {
 	C.glowGetMultiTexLevelParameterivEXT(gpGetMultiTexLevelParameterivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexParameterIivEXT(texunit uint32, target uint32, pname uint32, params *int32) {
 	C.glowGetMultiTexParameterIivEXT(gpGetMultiTexParameterIivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexParameterIuivEXT(texunit uint32, target uint32, pname uint32, params *uint32) {
 	C.glowGetMultiTexParameterIuivEXT(gpGetMultiTexParameterIuivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexParameterfvEXT(texunit uint32, target uint32, pname uint32, params *float32) {
 	C.glowGetMultiTexParameterfvEXT(gpGetMultiTexParameterfvEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetMultiTexParameterivEXT(texunit uint32, target uint32, pname uint32, params *int32) {
 	C.glowGetMultiTexParameterivEXT(gpGetMultiTexParameterivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23523,7 +22884,6 @@ func GetMultiTexParameterivEXT(texunit uint32, target uint32, pname uint32, para
 func GetMultisamplefv(pname uint32, index uint32, val *float32) {
 	C.glowGetMultisamplefv(gpGetMultisamplefv, (C.GLenum)(pname), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(val)))
 }
-
 func GetMultisamplefvNV(pname uint32, index uint32, val *float32) {
 	C.glowGetMultisamplefvNV(gpGetMultisamplefvNV, (C.GLenum)(pname), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(val)))
 }
@@ -23537,11 +22897,9 @@ func GetNamedBufferParameteri64v(buffer uint32, pname uint32, params *int64) {
 func GetNamedBufferParameteriv(buffer uint32, pname uint32, params *int32) {
 	C.glowGetNamedBufferParameteriv(gpGetNamedBufferParameteriv, (C.GLuint)(buffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedBufferParameterivEXT(buffer uint32, pname uint32, params *int32) {
 	C.glowGetNamedBufferParameterivEXT(gpGetNamedBufferParameterivEXT, (C.GLuint)(buffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedBufferParameterui64vNV(buffer uint32, pname uint32, params *uint64) {
 	C.glowGetNamedBufferParameterui64vNV(gpGetNamedBufferParameterui64vNV, (C.GLuint)(buffer), (C.GLenum)(pname), (*C.GLuint64EXT)(unsafe.Pointer(params)))
 }
@@ -23550,7 +22908,6 @@ func GetNamedBufferParameterui64vNV(buffer uint32, pname uint32, params *uint64)
 func GetNamedBufferPointerv(buffer uint32, pname uint32, params *unsafe.Pointer) {
 	C.glowGetNamedBufferPointerv(gpGetNamedBufferPointerv, (C.GLuint)(buffer), (C.GLenum)(pname), params)
 }
-
 func GetNamedBufferPointervEXT(buffer uint32, pname uint32, params *unsafe.Pointer) {
 	C.glowGetNamedBufferPointervEXT(gpGetNamedBufferPointervEXT, (C.GLuint)(buffer), (C.GLenum)(pname), params)
 }
@@ -23559,7 +22916,6 @@ func GetNamedBufferPointervEXT(buffer uint32, pname uint32, params *unsafe.Point
 func GetNamedBufferSubData(buffer uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowGetNamedBufferSubData(gpGetNamedBufferSubData, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func GetNamedBufferSubDataEXT(buffer uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowGetNamedBufferSubDataEXT(gpGetNamedBufferSubDataEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
@@ -23568,11 +22924,9 @@ func GetNamedBufferSubDataEXT(buffer uint32, offset int, size int, data unsafe.P
 func GetNamedFramebufferAttachmentParameteriv(framebuffer uint32, attachment uint32, pname uint32, params *int32) {
 	C.glowGetNamedFramebufferAttachmentParameteriv(gpGetNamedFramebufferAttachmentParameteriv, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedFramebufferAttachmentParameterivEXT(framebuffer uint32, attachment uint32, pname uint32, params *int32) {
 	C.glowGetNamedFramebufferAttachmentParameterivEXT(gpGetNamedFramebufferAttachmentParameterivEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedFramebufferParameterfvAMD(framebuffer uint32, pname uint32, numsamples uint32, pixelindex uint32, size int32, values *float32) {
 	C.glowGetNamedFramebufferParameterfvAMD(gpGetNamedFramebufferParameterfvAMD, (C.GLuint)(framebuffer), (C.GLenum)(pname), (C.GLuint)(numsamples), (C.GLuint)(pixelindex), (C.GLsizei)(size), (*C.GLfloat)(unsafe.Pointer(values)))
 }
@@ -23581,31 +22935,24 @@ func GetNamedFramebufferParameterfvAMD(framebuffer uint32, pname uint32, numsamp
 func GetNamedFramebufferParameteriv(framebuffer uint32, pname uint32, param *int32) {
 	C.glowGetNamedFramebufferParameteriv(gpGetNamedFramebufferParameteriv, (C.GLuint)(framebuffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func GetNamedFramebufferParameterivEXT(framebuffer uint32, pname uint32, params *int32) {
 	C.glowGetNamedFramebufferParameterivEXT(gpGetNamedFramebufferParameterivEXT, (C.GLuint)(framebuffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedProgramLocalParameterIivEXT(program uint32, target uint32, index uint32, params *int32) {
 	C.glowGetNamedProgramLocalParameterIivEXT(gpGetNamedProgramLocalParameterIivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedProgramLocalParameterIuivEXT(program uint32, target uint32, index uint32, params *uint32) {
 	C.glowGetNamedProgramLocalParameterIuivEXT(gpGetNamedProgramLocalParameterIuivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetNamedProgramLocalParameterdvEXT(program uint32, target uint32, index uint32, params *float64) {
 	C.glowGetNamedProgramLocalParameterdvEXT(gpGetNamedProgramLocalParameterdvEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetNamedProgramLocalParameterfvEXT(program uint32, target uint32, index uint32, params *float32) {
 	C.glowGetNamedProgramLocalParameterfvEXT(gpGetNamedProgramLocalParameterfvEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetNamedProgramStringEXT(program uint32, target uint32, pname uint32, xstring unsafe.Pointer) {
 	C.glowGetNamedProgramStringEXT(gpGetNamedProgramStringEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLenum)(pname), xstring)
 }
-
 func GetNamedProgramivEXT(program uint32, target uint32, pname uint32, params *int32) {
 	C.glowGetNamedProgramivEXT(gpGetNamedProgramivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23614,27 +22961,21 @@ func GetNamedProgramivEXT(program uint32, target uint32, pname uint32, params *i
 func GetNamedRenderbufferParameteriv(renderbuffer uint32, pname uint32, params *int32) {
 	C.glowGetNamedRenderbufferParameteriv(gpGetNamedRenderbufferParameteriv, (C.GLuint)(renderbuffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedRenderbufferParameterivEXT(renderbuffer uint32, pname uint32, params *int32) {
 	C.glowGetNamedRenderbufferParameterivEXT(gpGetNamedRenderbufferParameterivEXT, (C.GLuint)(renderbuffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNamedStringARB(namelen int32, name *uint8, bufSize int32, stringlen *int32, xstring *uint8) {
 	C.glowGetNamedStringARB(gpGetNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(stringlen)), (*C.GLchar)(unsafe.Pointer(xstring)))
 }
-
 func GetNamedStringivARB(namelen int32, name *uint8, pname uint32, params *int32) {
 	C.glowGetNamedStringivARB(gpGetNamedStringivARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetNextPerfQueryIdINTEL(queryId uint32, nextQueryId *uint32) {
 	C.glowGetNextPerfQueryIdINTEL(gpGetNextPerfQueryIdINTEL, (C.GLuint)(queryId), (*C.GLuint)(unsafe.Pointer(nextQueryId)))
 }
-
 func GetObjectBufferfvATI(buffer uint32, pname uint32, params *float32) {
 	C.glowGetObjectBufferfvATI(gpGetObjectBufferfvATI, (C.GLuint)(buffer), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetObjectBufferivATI(buffer uint32, pname uint32, params *int32) {
 	C.glowGetObjectBufferivATI(gpGetObjectBufferivATI, (C.GLuint)(buffer), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23643,23 +22984,18 @@ func GetObjectBufferivATI(buffer uint32, pname uint32, params *int32) {
 func GetObjectLabel(identifier uint32, name uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabel(gpGetObjectLabel, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func GetObjectLabelEXT(xtype uint32, object uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabelEXT(gpGetObjectLabelEXT, (C.GLenum)(xtype), (C.GLuint)(object), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func GetObjectLabelKHR(identifier uint32, name uint32, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectLabelKHR(gpGetObjectLabelKHR, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func GetObjectParameterfvARB(obj uintptr, pname uint32, params *float32) {
 	C.glowGetObjectParameterfvARB(gpGetObjectParameterfvARB, (C.GLhandleARB)(obj), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetObjectParameterivAPPLE(objectType uint32, name uint32, pname uint32, params *int32) {
 	C.glowGetObjectParameterivAPPLE(gpGetObjectParameterivAPPLE, (C.GLenum)(objectType), (C.GLuint)(name), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetObjectParameterivARB(obj uintptr, pname uint32, params *int32) {
 	C.glowGetObjectParameterivARB(gpGetObjectParameterivARB, (C.GLhandleARB)(obj), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23668,148 +23004,112 @@ func GetObjectParameterivARB(obj uintptr, pname uint32, params *int32) {
 func GetObjectPtrLabel(ptr unsafe.Pointer, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectPtrLabel(gpGetObjectPtrLabel, ptr, (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func GetObjectPtrLabelKHR(ptr unsafe.Pointer, bufSize int32, length *int32, label *uint8) {
 	C.glowGetObjectPtrLabelKHR(gpGetObjectPtrLabelKHR, ptr, (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func GetOcclusionQueryivNV(id uint32, pname uint32, params *int32) {
 	C.glowGetOcclusionQueryivNV(gpGetOcclusionQueryivNV, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetOcclusionQueryuivNV(id uint32, pname uint32, params *uint32) {
 	C.glowGetOcclusionQueryuivNV(gpGetOcclusionQueryuivNV, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetPathColorGenfvNV(color uint32, pname uint32, value *float32) {
 	C.glowGetPathColorGenfvNV(gpGetPathColorGenfvNV, (C.GLenum)(color), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func GetPathColorGenivNV(color uint32, pname uint32, value *int32) {
 	C.glowGetPathColorGenivNV(gpGetPathColorGenivNV, (C.GLenum)(color), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func GetPathCommandsNV(path uint32, commands *uint8) {
 	C.glowGetPathCommandsNV(gpGetPathCommandsNV, (C.GLuint)(path), (*C.GLubyte)(unsafe.Pointer(commands)))
 }
-
 func GetPathCoordsNV(path uint32, coords *float32) {
 	C.glowGetPathCoordsNV(gpGetPathCoordsNV, (C.GLuint)(path), (*C.GLfloat)(unsafe.Pointer(coords)))
 }
-
 func GetPathDashArrayNV(path uint32, dashArray *float32) {
 	C.glowGetPathDashArrayNV(gpGetPathDashArrayNV, (C.GLuint)(path), (*C.GLfloat)(unsafe.Pointer(dashArray)))
 }
-
 func GetPathLengthNV(path uint32, startSegment int32, numSegments int32) float32 {
 	ret := C.glowGetPathLengthNV(gpGetPathLengthNV, (C.GLuint)(path), (C.GLsizei)(startSegment), (C.GLsizei)(numSegments))
 	return (float32)(ret)
 }
-
 func GetPathMetricRangeNV(metricQueryMask uint32, firstPathName uint32, numPaths int32, stride int32, metrics *float32) {
 	C.glowGetPathMetricRangeNV(gpGetPathMetricRangeNV, (C.GLbitfield)(metricQueryMask), (C.GLuint)(firstPathName), (C.GLsizei)(numPaths), (C.GLsizei)(stride), (*C.GLfloat)(unsafe.Pointer(metrics)))
 }
-
 func GetPathMetricsNV(metricQueryMask uint32, numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, stride int32, metrics *float32) {
 	C.glowGetPathMetricsNV(gpGetPathMetricsNV, (C.GLbitfield)(metricQueryMask), (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLsizei)(stride), (*C.GLfloat)(unsafe.Pointer(metrics)))
 }
-
 func GetPathParameterfvNV(path uint32, pname uint32, value *float32) {
 	C.glowGetPathParameterfvNV(gpGetPathParameterfvNV, (C.GLuint)(path), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func GetPathParameterivNV(path uint32, pname uint32, value *int32) {
 	C.glowGetPathParameterivNV(gpGetPathParameterivNV, (C.GLuint)(path), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func GetPathSpacingNV(pathListMode uint32, numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, advanceScale float32, kerningScale float32, transformType uint32, returnedSpacing *float32) {
 	C.glowGetPathSpacingNV(gpGetPathSpacingNV, (C.GLenum)(pathListMode), (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLfloat)(advanceScale), (C.GLfloat)(kerningScale), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(returnedSpacing)))
 }
-
 func GetPathTexGenfvNV(texCoordSet uint32, pname uint32, value *float32) {
 	C.glowGetPathTexGenfvNV(gpGetPathTexGenfvNV, (C.GLenum)(texCoordSet), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func GetPathTexGenivNV(texCoordSet uint32, pname uint32, value *int32) {
 	C.glowGetPathTexGenivNV(gpGetPathTexGenivNV, (C.GLenum)(texCoordSet), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func GetPerfCounterInfoINTEL(queryId uint32, counterId uint32, counterNameLength uint32, counterName *uint8, counterDescLength uint32, counterDesc *uint8, counterOffset *uint32, counterDataSize *uint32, counterTypeEnum *uint32, counterDataTypeEnum *uint32, rawCounterMaxValue *uint64) {
 	C.glowGetPerfCounterInfoINTEL(gpGetPerfCounterInfoINTEL, (C.GLuint)(queryId), (C.GLuint)(counterId), (C.GLuint)(counterNameLength), (*C.GLchar)(unsafe.Pointer(counterName)), (C.GLuint)(counterDescLength), (*C.GLchar)(unsafe.Pointer(counterDesc)), (*C.GLuint)(unsafe.Pointer(counterOffset)), (*C.GLuint)(unsafe.Pointer(counterDataSize)), (*C.GLuint)(unsafe.Pointer(counterTypeEnum)), (*C.GLuint)(unsafe.Pointer(counterDataTypeEnum)), (*C.GLuint64)(unsafe.Pointer(rawCounterMaxValue)))
 }
-
 func GetPerfMonitorCounterDataAMD(monitor uint32, pname uint32, dataSize int32, data *uint32, bytesWritten *int32) {
 	C.glowGetPerfMonitorCounterDataAMD(gpGetPerfMonitorCounterDataAMD, (C.GLuint)(monitor), (C.GLenum)(pname), (C.GLsizei)(dataSize), (*C.GLuint)(unsafe.Pointer(data)), (*C.GLint)(unsafe.Pointer(bytesWritten)))
 }
-
 func GetPerfMonitorCounterInfoAMD(group uint32, counter uint32, pname uint32, data unsafe.Pointer) {
 	C.glowGetPerfMonitorCounterInfoAMD(gpGetPerfMonitorCounterInfoAMD, (C.GLuint)(group), (C.GLuint)(counter), (C.GLenum)(pname), data)
 }
-
 func GetPerfMonitorCounterStringAMD(group uint32, counter uint32, bufSize int32, length *int32, counterString *uint8) {
 	C.glowGetPerfMonitorCounterStringAMD(gpGetPerfMonitorCounterStringAMD, (C.GLuint)(group), (C.GLuint)(counter), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(counterString)))
 }
-
 func GetPerfMonitorCountersAMD(group uint32, numCounters *int32, maxActiveCounters *int32, counterSize int32, counters *uint32) {
 	C.glowGetPerfMonitorCountersAMD(gpGetPerfMonitorCountersAMD, (C.GLuint)(group), (*C.GLint)(unsafe.Pointer(numCounters)), (*C.GLint)(unsafe.Pointer(maxActiveCounters)), (C.GLsizei)(counterSize), (*C.GLuint)(unsafe.Pointer(counters)))
 }
-
 func GetPerfMonitorGroupStringAMD(group uint32, bufSize int32, length *int32, groupString *uint8) {
 	C.glowGetPerfMonitorGroupStringAMD(gpGetPerfMonitorGroupStringAMD, (C.GLuint)(group), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(groupString)))
 }
-
 func GetPerfMonitorGroupsAMD(numGroups *int32, groupsSize int32, groups *uint32) {
 	C.glowGetPerfMonitorGroupsAMD(gpGetPerfMonitorGroupsAMD, (*C.GLint)(unsafe.Pointer(numGroups)), (C.GLsizei)(groupsSize), (*C.GLuint)(unsafe.Pointer(groups)))
 }
-
 func GetPerfQueryDataINTEL(queryHandle uint32, flags uint32, dataSize int32, data unsafe.Pointer, bytesWritten *uint32) {
 	C.glowGetPerfQueryDataINTEL(gpGetPerfQueryDataINTEL, (C.GLuint)(queryHandle), (C.GLuint)(flags), (C.GLsizei)(dataSize), data, (*C.GLuint)(unsafe.Pointer(bytesWritten)))
 }
-
 func GetPerfQueryIdByNameINTEL(queryName *uint8, queryId *uint32) {
 	C.glowGetPerfQueryIdByNameINTEL(gpGetPerfQueryIdByNameINTEL, (*C.GLchar)(unsafe.Pointer(queryName)), (*C.GLuint)(unsafe.Pointer(queryId)))
 }
-
 func GetPerfQueryInfoINTEL(queryId uint32, queryNameLength uint32, queryName *uint8, dataSize *uint32, noCounters *uint32, noInstances *uint32, capsMask *uint32) {
 	C.glowGetPerfQueryInfoINTEL(gpGetPerfQueryInfoINTEL, (C.GLuint)(queryId), (C.GLuint)(queryNameLength), (*C.GLchar)(unsafe.Pointer(queryName)), (*C.GLuint)(unsafe.Pointer(dataSize)), (*C.GLuint)(unsafe.Pointer(noCounters)), (*C.GLuint)(unsafe.Pointer(noInstances)), (*C.GLuint)(unsafe.Pointer(capsMask)))
 }
-
 func GetPixelMapfv(xmap uint32, values *float32) {
 	C.glowGetPixelMapfv(gpGetPixelMapfv, (C.GLenum)(xmap), (*C.GLfloat)(unsafe.Pointer(values)))
 }
-
 func GetPixelMapuiv(xmap uint32, values *uint32) {
 	C.glowGetPixelMapuiv(gpGetPixelMapuiv, (C.GLenum)(xmap), (*C.GLuint)(unsafe.Pointer(values)))
 }
-
 func GetPixelMapusv(xmap uint32, values *uint16) {
 	C.glowGetPixelMapusv(gpGetPixelMapusv, (C.GLenum)(xmap), (*C.GLushort)(unsafe.Pointer(values)))
 }
-
 func GetPixelMapxv(xmap uint32, size int32, values *int32) {
 	C.glowGetPixelMapxv(gpGetPixelMapxv, (C.GLenum)(xmap), (C.GLint)(size), (*C.GLfixed)(unsafe.Pointer(values)))
 }
-
 func GetPixelTexGenParameterfvSGIS(pname uint32, params *float32) {
 	C.glowGetPixelTexGenParameterfvSGIS(gpGetPixelTexGenParameterfvSGIS, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetPixelTexGenParameterivSGIS(pname uint32, params *int32) {
 	C.glowGetPixelTexGenParameterivSGIS(gpGetPixelTexGenParameterivSGIS, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetPixelTransformParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowGetPixelTransformParameterfvEXT(gpGetPixelTransformParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetPixelTransformParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetPixelTransformParameterivEXT(gpGetPixelTransformParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetPointerIndexedvEXT(target uint32, index uint32, data *unsafe.Pointer) {
 	C.glowGetPointerIndexedvEXT(gpGetPointerIndexedvEXT, (C.GLenum)(target), (C.GLuint)(index), data)
 }
-
 func GetPointeri_vEXT(pname uint32, index uint32, params *unsafe.Pointer) {
 	C.glowGetPointeri_vEXT(gpGetPointeri_vEXT, (C.GLenum)(pname), (C.GLuint)(index), params)
 }
@@ -23818,11 +23118,9 @@ func GetPointeri_vEXT(pname uint32, index uint32, params *unsafe.Pointer) {
 func GetPointerv(pname uint32, params *unsafe.Pointer) {
 	C.glowGetPointerv(gpGetPointerv, (C.GLenum)(pname), params)
 }
-
 func GetPointervEXT(pname uint32, params *unsafe.Pointer) {
 	C.glowGetPointervEXT(gpGetPointervEXT, (C.GLenum)(pname), params)
 }
-
 func GetPointervKHR(pname uint32, params *unsafe.Pointer) {
 	C.glowGetPointervKHR(gpGetPointervKHR, (C.GLenum)(pname), params)
 }
@@ -23836,19 +23134,15 @@ func GetPolygonStipple(mask *uint8) {
 func GetProgramBinary(program uint32, bufSize int32, length *int32, binaryFormat *uint32, binary unsafe.Pointer) {
 	C.glowGetProgramBinary(gpGetProgramBinary, (C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLenum)(unsafe.Pointer(binaryFormat)), binary)
 }
-
 func GetProgramEnvParameterIivNV(target uint32, index uint32, params *int32) {
 	C.glowGetProgramEnvParameterIivNV(gpGetProgramEnvParameterIivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramEnvParameterIuivNV(target uint32, index uint32, params *uint32) {
 	C.glowGetProgramEnvParameterIuivNV(gpGetProgramEnvParameterIuivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetProgramEnvParameterdvARB(target uint32, index uint32, params *float64) {
 	C.glowGetProgramEnvParameterdvARB(gpGetProgramEnvParameterdvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetProgramEnvParameterfvARB(target uint32, index uint32, params *float32) {
 	C.glowGetProgramEnvParameterfvARB(gpGetProgramEnvParameterfvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
@@ -23857,39 +23151,30 @@ func GetProgramEnvParameterfvARB(target uint32, index uint32, params *float32) {
 func GetProgramInfoLog(program uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramInfoLog(gpGetProgramInfoLog, (C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-
 func GetProgramInterfaceiv(program uint32, programInterface uint32, pname uint32, params *int32) {
 	C.glowGetProgramInterfaceiv(gpGetProgramInterfaceiv, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramLocalParameterIivNV(target uint32, index uint32, params *int32) {
 	C.glowGetProgramLocalParameterIivNV(gpGetProgramLocalParameterIivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramLocalParameterIuivNV(target uint32, index uint32, params *uint32) {
 	C.glowGetProgramLocalParameterIuivNV(gpGetProgramLocalParameterIuivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetProgramLocalParameterdvARB(target uint32, index uint32, params *float64) {
 	C.glowGetProgramLocalParameterdvARB(gpGetProgramLocalParameterdvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetProgramLocalParameterfvARB(target uint32, index uint32, params *float32) {
 	C.glowGetProgramLocalParameterfvARB(gpGetProgramLocalParameterfvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetProgramNamedParameterdvNV(id uint32, len int32, name *uint8, params *float64) {
 	C.glowGetProgramNamedParameterdvNV(gpGetProgramNamedParameterdvNV, (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(name)), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetProgramNamedParameterfvNV(id uint32, len int32, name *uint8, params *float32) {
 	C.glowGetProgramNamedParameterfvNV(gpGetProgramNamedParameterfvNV, (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(name)), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetProgramParameterdvNV(target uint32, index uint32, pname uint32, params *float64) {
 	C.glowGetProgramParameterdvNV(gpGetProgramParameterdvNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetProgramParameterfvNV(target uint32, index uint32, pname uint32, params *float32) {
 	C.glowGetProgramParameterfvNV(gpGetProgramParameterfvNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
@@ -23898,15 +23183,12 @@ func GetProgramParameterfvNV(target uint32, index uint32, pname uint32, params *
 func GetProgramPipelineInfoLog(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramPipelineInfoLog(gpGetProgramPipelineInfoLog, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-
 func GetProgramPipelineInfoLogEXT(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramPipelineInfoLogEXT(gpGetProgramPipelineInfoLogEXT, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-
 func GetProgramPipelineiv(pipeline uint32, pname uint32, params *int32) {
 	C.glowGetProgramPipelineiv(gpGetProgramPipelineiv, (C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramPipelineivEXT(pipeline uint32, pname uint32, params *int32) {
 	C.glowGetProgramPipelineivEXT(gpGetProgramPipelineivEXT, (C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -23933,27 +23215,21 @@ func GetProgramResourceLocationIndex(program uint32, programInterface uint32, na
 func GetProgramResourceName(program uint32, programInterface uint32, index uint32, bufSize int32, length *int32, name *uint8) {
 	C.glowGetProgramResourceName(gpGetProgramResourceName, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetProgramResourcefvNV(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, bufSize int32, length *int32, params *float32) {
 	C.glowGetProgramResourcefvNV(gpGetProgramResourcefvNV, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(unsafe.Pointer(props)), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetProgramResourceiv(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, bufSize int32, length *int32, params *int32) {
 	C.glowGetProgramResourceiv(gpGetProgramResourceiv, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(unsafe.Pointer(props)), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramStageiv(program uint32, shadertype uint32, pname uint32, values *int32) {
 	C.glowGetProgramStageiv(gpGetProgramStageiv, (C.GLuint)(program), (C.GLenum)(shadertype), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(values)))
 }
-
 func GetProgramStringARB(target uint32, pname uint32, xstring unsafe.Pointer) {
 	C.glowGetProgramStringARB(gpGetProgramStringARB, (C.GLenum)(target), (C.GLenum)(pname), xstring)
 }
-
 func GetProgramStringNV(id uint32, pname uint32, program *uint8) {
 	C.glowGetProgramStringNV(gpGetProgramStringNV, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLubyte)(unsafe.Pointer(program)))
 }
-
 func GetProgramSubroutineParameteruivNV(target uint32, index uint32, param *uint32) {
 	C.glowGetProgramSubroutineParameteruivNV(gpGetProgramSubroutineParameteruivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(param)))
 }
@@ -23962,27 +23238,21 @@ func GetProgramSubroutineParameteruivNV(target uint32, index uint32, param *uint
 func GetProgramiv(program uint32, pname uint32, params *int32) {
 	C.glowGetProgramiv(gpGetProgramiv, (C.GLuint)(program), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramivARB(target uint32, pname uint32, params *int32) {
 	C.glowGetProgramivARB(gpGetProgramivARB, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetProgramivNV(id uint32, pname uint32, params *int32) {
 	C.glowGetProgramivNV(gpGetProgramivNV, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetQueryBufferObjecti64v(id uint32, buffer uint32, pname uint32, offset int) {
 	C.glowGetQueryBufferObjecti64v(gpGetQueryBufferObjecti64v, (C.GLuint)(id), (C.GLuint)(buffer), (C.GLenum)(pname), (C.GLintptr)(offset))
 }
-
 func GetQueryBufferObjectiv(id uint32, buffer uint32, pname uint32, offset int) {
 	C.glowGetQueryBufferObjectiv(gpGetQueryBufferObjectiv, (C.GLuint)(id), (C.GLuint)(buffer), (C.GLenum)(pname), (C.GLintptr)(offset))
 }
-
 func GetQueryBufferObjectui64v(id uint32, buffer uint32, pname uint32, offset int) {
 	C.glowGetQueryBufferObjectui64v(gpGetQueryBufferObjectui64v, (C.GLuint)(id), (C.GLuint)(buffer), (C.GLenum)(pname), (C.GLintptr)(offset))
 }
-
 func GetQueryBufferObjectuiv(id uint32, buffer uint32, pname uint32, offset int) {
 	C.glowGetQueryBufferObjectuiv(gpGetQueryBufferObjectuiv, (C.GLuint)(id), (C.GLuint)(buffer), (C.GLenum)(pname), (C.GLintptr)(offset))
 }
@@ -23991,27 +23261,21 @@ func GetQueryBufferObjectuiv(id uint32, buffer uint32, pname uint32, offset int)
 func GetQueryIndexediv(target uint32, index uint32, pname uint32, params *int32) {
 	C.glowGetQueryIndexediv(gpGetQueryIndexediv, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjecti64v(id uint32, pname uint32, params *int64) {
 	C.glowGetQueryObjecti64v(gpGetQueryObjecti64v, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint64)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjecti64vEXT(id uint32, pname uint32, params *int64) {
 	C.glowGetQueryObjecti64vEXT(gpGetQueryObjecti64vEXT, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint64)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjectiv(id uint32, pname uint32, params *int32) {
 	C.glowGetQueryObjectiv(gpGetQueryObjectiv, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjectivARB(id uint32, pname uint32, params *int32) {
 	C.glowGetQueryObjectivARB(gpGetQueryObjectivARB, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjectui64v(id uint32, pname uint32, params *uint64) {
 	C.glowGetQueryObjectui64v(gpGetQueryObjectui64v, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint64)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjectui64vEXT(id uint32, pname uint32, params *uint64) {
 	C.glowGetQueryObjectui64vEXT(gpGetQueryObjectui64vEXT, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint64)(unsafe.Pointer(params)))
 }
@@ -24020,7 +23284,6 @@ func GetQueryObjectui64vEXT(id uint32, pname uint32, params *uint64) {
 func GetQueryObjectuiv(id uint32, pname uint32, params *uint32) {
 	C.glowGetQueryObjectuiv(gpGetQueryObjectuiv, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetQueryObjectuivARB(id uint32, pname uint32, params *uint32) {
 	C.glowGetQueryObjectuivARB(gpGetQueryObjectuivARB, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
@@ -24029,7 +23292,6 @@ func GetQueryObjectuivARB(id uint32, pname uint32, params *uint32) {
 func GetQueryiv(target uint32, pname uint32, params *int32) {
 	C.glowGetQueryiv(gpGetQueryiv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetQueryivARB(target uint32, pname uint32, params *int32) {
 	C.glowGetQueryivARB(gpGetQueryivARB, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -24038,27 +23300,21 @@ func GetQueryivARB(target uint32, pname uint32, params *int32) {
 func GetRenderbufferParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetRenderbufferParameteriv(gpGetRenderbufferParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetRenderbufferParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetRenderbufferParameterivEXT(gpGetRenderbufferParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetSamplerParameterIiv(sampler uint32, pname uint32, params *int32) {
 	C.glowGetSamplerParameterIiv(gpGetSamplerParameterIiv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetSamplerParameterIuiv(sampler uint32, pname uint32, params *uint32) {
 	C.glowGetSamplerParameterIuiv(gpGetSamplerParameterIuiv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetSamplerParameterfv(sampler uint32, pname uint32, params *float32) {
 	C.glowGetSamplerParameterfv(gpGetSamplerParameterfv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetSamplerParameteriv(sampler uint32, pname uint32, params *int32) {
 	C.glowGetSamplerParameteriv(gpGetSamplerParameteriv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetSemaphoreParameterui64vEXT(semaphore uint32, pname uint32, params *uint64) {
 	C.glowGetSemaphoreParameterui64vEXT(gpGetSemaphoreParameterui64vEXT, (C.GLuint)(semaphore), (C.GLenum)(pname), (*C.GLuint64)(unsafe.Pointer(params)))
 }
@@ -24067,7 +23323,6 @@ func GetSemaphoreParameterui64vEXT(semaphore uint32, pname uint32, params *uint6
 func GetSeparableFilter(target uint32, format uint32, xtype uint32, row unsafe.Pointer, column unsafe.Pointer, span unsafe.Pointer) {
 	C.glowGetSeparableFilter(gpGetSeparableFilter, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), row, column, span)
 }
-
 func GetSeparableFilterEXT(target uint32, format uint32, xtype uint32, row unsafe.Pointer, column unsafe.Pointer, span unsafe.Pointer) {
 	C.glowGetSeparableFilterEXT(gpGetSeparableFilterEXT, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), row, column, span)
 }
@@ -24086,7 +23341,6 @@ func GetShaderPrecisionFormat(shadertype uint32, precisiontype uint32, xrange *i
 func GetShaderSource(shader uint32, bufSize int32, length *int32, source *uint8) {
 	C.glowGetShaderSource(gpGetShaderSource, (C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(source)))
 }
-
 func GetShaderSourceARB(obj uintptr, maxLength int32, length *int32, source *uint8) {
 	C.glowGetShaderSourceARB(gpGetShaderSourceARB, (C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLcharARB)(unsafe.Pointer(source)))
 }
@@ -24095,11 +23349,9 @@ func GetShaderSourceARB(obj uintptr, maxLength int32, length *int32, source *uin
 func GetShaderiv(shader uint32, pname uint32, params *int32) {
 	C.glowGetShaderiv(gpGetShaderiv, (C.GLuint)(shader), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetSharpenTexFuncSGIS(target uint32, points *float32) {
 	C.glowGetSharpenTexFuncSGIS(gpGetSharpenTexFuncSGIS, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func GetStageIndexNV(shadertype uint32) uint16 {
 	ret := C.glowGetStageIndexNV(gpGetStageIndexNV, (C.GLenum)(shadertype))
 	return (uint16)(ret)
@@ -24110,7 +23362,6 @@ func GetString(name uint32) *uint8 {
 	ret := C.glowGetString(gpGetString, (C.GLenum)(name))
 	return (*uint8)(ret)
 }
-
 func GetStringi(name uint32, index uint32) *uint8 {
 	ret := C.glowGetStringi(gpGetStringi, (C.GLenum)(name), (C.GLuint)(index))
 	return (*uint8)(ret)
@@ -24132,43 +23383,33 @@ func GetSubroutineUniformLocation(program uint32, shadertype uint32, name *uint8
 func GetSynciv(sync uintptr, pname uint32, bufSize int32, length *int32, values *int32) {
 	C.glowGetSynciv(gpGetSynciv, (C.GLsync)(sync), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(values)))
 }
-
 func GetTexBumpParameterfvATI(pname uint32, param *float32) {
 	C.glowGetTexBumpParameterfvATI(gpGetTexBumpParameterfvATI, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(param)))
 }
-
 func GetTexBumpParameterivATI(pname uint32, param *int32) {
 	C.glowGetTexBumpParameterivATI(gpGetTexBumpParameterivATI, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func GetTexEnvfv(target uint32, pname uint32, params *float32) {
 	C.glowGetTexEnvfv(gpGetTexEnvfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTexEnviv(target uint32, pname uint32, params *int32) {
 	C.glowGetTexEnviv(gpGetTexEnviv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTexEnvxvOES(target uint32, pname uint32, params *int32) {
 	C.glowGetTexEnvxvOES(gpGetTexEnvxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetTexFilterFuncSGIS(target uint32, filter uint32, weights *float32) {
 	C.glowGetTexFilterFuncSGIS(gpGetTexFilterFuncSGIS, (C.GLenum)(target), (C.GLenum)(filter), (*C.GLfloat)(unsafe.Pointer(weights)))
 }
-
 func GetTexGendv(coord uint32, pname uint32, params *float64) {
 	C.glowGetTexGendv(gpGetTexGendv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetTexGenfv(coord uint32, pname uint32, params *float32) {
 	C.glowGetTexGenfv(gpGetTexGenfv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTexGeniv(coord uint32, pname uint32, params *int32) {
 	C.glowGetTexGeniv(gpGetTexGeniv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTexGenxvOES(coord uint32, pname uint32, params *int32) {
 	C.glowGetTexGenxvOES(gpGetTexGenxvOES, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
@@ -24177,56 +23418,43 @@ func GetTexGenxvOES(coord uint32, pname uint32, params *int32) {
 func GetTexImage(target uint32, level int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowGetTexImage(gpGetTexImage, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func GetTexLevelParameterfv(target uint32, level int32, pname uint32, params *float32) {
 	C.glowGetTexLevelParameterfv(gpGetTexLevelParameterfv, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTexLevelParameteriv(target uint32, level int32, pname uint32, params *int32) {
 	C.glowGetTexLevelParameteriv(gpGetTexLevelParameteriv, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTexLevelParameterxvOES(target uint32, level int32, pname uint32, params *int32) {
 	C.glowGetTexLevelParameterxvOES(gpGetTexLevelParameterxvOES, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetTexParameterIiv(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameterIiv(gpGetTexParameterIiv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTexParameterIivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameterIivEXT(gpGetTexParameterIivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTexParameterIuiv(target uint32, pname uint32, params *uint32) {
 	C.glowGetTexParameterIuiv(gpGetTexParameterIuiv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetTexParameterIuivEXT(target uint32, pname uint32, params *uint32) {
 	C.glowGetTexParameterIuivEXT(gpGetTexParameterIuivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetTexParameterPointervAPPLE(target uint32, pname uint32, params *unsafe.Pointer) {
 	C.glowGetTexParameterPointervAPPLE(gpGetTexParameterPointervAPPLE, (C.GLenum)(target), (C.GLenum)(pname), params)
 }
-
 func GetTexParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowGetTexParameterfv(gpGetTexParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTexParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameteriv(gpGetTexParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTexParameterxvOES(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameterxvOES(gpGetTexParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func GetTextureHandleARB(texture uint32) uint64 {
 	ret := C.glowGetTextureHandleARB(gpGetTextureHandleARB, (C.GLuint)(texture))
 	return (uint64)(ret)
 }
-
 func GetTextureHandleNV(texture uint32) uint64 {
 	ret := C.glowGetTextureHandleNV(gpGetTextureHandleNV, (C.GLuint)(texture))
 	return (uint64)(ret)
@@ -24236,64 +23464,49 @@ func GetTextureHandleNV(texture uint32) uint64 {
 func GetTextureImage(texture uint32, level int32, format uint32, xtype uint32, bufSize int32, pixels unsafe.Pointer) {
 	C.glowGetTextureImage(gpGetTextureImage, (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), pixels)
 }
-
 func GetTextureImageEXT(texture uint32, target uint32, level int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowGetTextureImageEXT(gpGetTextureImageEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func GetTextureLevelParameterfv(texture uint32, level int32, pname uint32, params *float32) {
 	C.glowGetTextureLevelParameterfv(gpGetTextureLevelParameterfv, (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTextureLevelParameterfvEXT(texture uint32, target uint32, level int32, pname uint32, params *float32) {
 	C.glowGetTextureLevelParameterfvEXT(gpGetTextureLevelParameterfvEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTextureLevelParameteriv(texture uint32, level int32, pname uint32, params *int32) {
 	C.glowGetTextureLevelParameteriv(gpGetTextureLevelParameteriv, (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTextureLevelParameterivEXT(texture uint32, target uint32, level int32, pname uint32, params *int32) {
 	C.glowGetTextureLevelParameterivEXT(gpGetTextureLevelParameterivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterIiv(texture uint32, pname uint32, params *int32) {
 	C.glowGetTextureParameterIiv(gpGetTextureParameterIiv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterIivEXT(texture uint32, target uint32, pname uint32, params *int32) {
 	C.glowGetTextureParameterIivEXT(gpGetTextureParameterIivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterIuiv(texture uint32, pname uint32, params *uint32) {
 	C.glowGetTextureParameterIuiv(gpGetTextureParameterIuiv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterIuivEXT(texture uint32, target uint32, pname uint32, params *uint32) {
 	C.glowGetTextureParameterIuivEXT(gpGetTextureParameterIuivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterfv(texture uint32, pname uint32, params *float32) {
 	C.glowGetTextureParameterfv(gpGetTextureParameterfv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterfvEXT(texture uint32, target uint32, pname uint32, params *float32) {
 	C.glowGetTextureParameterfvEXT(gpGetTextureParameterfvEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameteriv(texture uint32, pname uint32, params *int32) {
 	C.glowGetTextureParameteriv(gpGetTextureParameteriv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTextureParameterivEXT(texture uint32, target uint32, pname uint32, params *int32) {
 	C.glowGetTextureParameterivEXT(gpGetTextureParameterivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetTextureSamplerHandleARB(texture uint32, sampler uint32) uint64 {
 	ret := C.glowGetTextureSamplerHandleARB(gpGetTextureSamplerHandleARB, (C.GLuint)(texture), (C.GLuint)(sampler))
 	return (uint64)(ret)
 }
-
 func GetTextureSamplerHandleNV(texture uint32, sampler uint32) uint64 {
 	ret := C.glowGetTextureSamplerHandleNV(gpGetTextureSamplerHandleNV, (C.GLuint)(texture), (C.GLuint)(sampler))
 	return (uint64)(ret)
@@ -24303,7 +23516,6 @@ func GetTextureSamplerHandleNV(texture uint32, sampler uint32) uint64 {
 func GetTextureSubImage(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, xtype uint32, bufSize int32, pixels unsafe.Pointer) {
 	C.glowGetTextureSubImage(gpGetTextureSubImage, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), pixels)
 }
-
 func GetTrackMatrixivNV(target uint32, address uint32, pname uint32, params *int32) {
 	C.glowGetTrackMatrixivNV(gpGetTrackMatrixivNV, (C.GLenum)(target), (C.GLuint)(address), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -24312,19 +23524,15 @@ func GetTrackMatrixivNV(target uint32, address uint32, pname uint32, params *int
 func GetTransformFeedbackVarying(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetTransformFeedbackVarying(gpGetTransformFeedbackVarying, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLsizei)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetTransformFeedbackVaryingEXT(program uint32, index uint32, bufSize int32, length *int32, size *int32, xtype *uint32, name *uint8) {
 	C.glowGetTransformFeedbackVaryingEXT(gpGetTransformFeedbackVaryingEXT, (C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLsizei)(unsafe.Pointer(size)), (*C.GLenum)(unsafe.Pointer(xtype)), (*C.GLchar)(unsafe.Pointer(name)))
 }
-
 func GetTransformFeedbackVaryingNV(program uint32, index uint32, location *int32) {
 	C.glowGetTransformFeedbackVaryingNV(gpGetTransformFeedbackVaryingNV, (C.GLuint)(program), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(location)))
 }
-
 func GetTransformFeedbacki64_v(xfb uint32, pname uint32, index uint32, param *int64) {
 	C.glowGetTransformFeedbacki64_v(gpGetTransformFeedbacki64_v, (C.GLuint)(xfb), (C.GLenum)(pname), (C.GLuint)(index), (*C.GLint64)(unsafe.Pointer(param)))
 }
-
 func GetTransformFeedbacki_v(xfb uint32, pname uint32, index uint32, param *int32) {
 	C.glowGetTransformFeedbacki_v(gpGetTransformFeedbacki_v, (C.GLuint)(xfb), (C.GLenum)(pname), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(param)))
 }
@@ -24339,7 +23547,6 @@ func GetUniformBlockIndex(program uint32, uniformBlockName *uint8) uint32 {
 	ret := C.glowGetUniformBlockIndex(gpGetUniformBlockIndex, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(uniformBlockName)))
 	return (uint32)(ret)
 }
-
 func GetUniformBufferSizeEXT(program uint32, location int32) int32 {
 	ret := C.glowGetUniformBufferSizeEXT(gpGetUniformBufferSizeEXT, (C.GLuint)(program), (C.GLint)(location))
 	return (int32)(ret)
@@ -24355,21 +23562,17 @@ func GetUniformLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetUniformLocation(gpGetUniformLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetUniformLocationARB(programObj uintptr, name *uint8) int32 {
 	ret := C.glowGetUniformLocationARB(gpGetUniformLocationARB, (C.GLhandleARB)(programObj), (*C.GLcharARB)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetUniformOffsetEXT(program uint32, location int32) int {
 	ret := C.glowGetUniformOffsetEXT(gpGetUniformOffsetEXT, (C.GLuint)(program), (C.GLint)(location))
 	return (int)(ret)
 }
-
 func GetUniformSubroutineuiv(shadertype uint32, location int32, params *uint32) {
 	C.glowGetUniformSubroutineuiv(gpGetUniformSubroutineuiv, (C.GLenum)(shadertype), (C.GLint)(location), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetUniformdv(program uint32, location int32, params *float64) {
 	C.glowGetUniformdv(gpGetUniformdv, (C.GLuint)(program), (C.GLint)(location), (*C.GLdouble)(unsafe.Pointer(params)))
 }
@@ -24378,15 +23581,12 @@ func GetUniformdv(program uint32, location int32, params *float64) {
 func GetUniformfv(program uint32, location int32, params *float32) {
 	C.glowGetUniformfv(gpGetUniformfv, (C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetUniformfvARB(programObj uintptr, location int32, params *float32) {
 	C.glowGetUniformfvARB(gpGetUniformfvARB, (C.GLhandleARB)(programObj), (C.GLint)(location), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetUniformi64vARB(program uint32, location int32, params *int64) {
 	C.glowGetUniformi64vARB(gpGetUniformi64vARB, (C.GLuint)(program), (C.GLint)(location), (*C.GLint64)(unsafe.Pointer(params)))
 }
-
 func GetUniformi64vNV(program uint32, location int32, params *int64) {
 	C.glowGetUniformi64vNV(gpGetUniformi64vNV, (C.GLuint)(program), (C.GLint)(location), (*C.GLint64EXT)(unsafe.Pointer(params)))
 }
@@ -24395,84 +23595,64 @@ func GetUniformi64vNV(program uint32, location int32, params *int64) {
 func GetUniformiv(program uint32, location int32, params *int32) {
 	C.glowGetUniformiv(gpGetUniformiv, (C.GLuint)(program), (C.GLint)(location), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetUniformivARB(programObj uintptr, location int32, params *int32) {
 	C.glowGetUniformivARB(gpGetUniformivARB, (C.GLhandleARB)(programObj), (C.GLint)(location), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetUniformui64vARB(program uint32, location int32, params *uint64) {
 	C.glowGetUniformui64vARB(gpGetUniformui64vARB, (C.GLuint)(program), (C.GLint)(location), (*C.GLuint64)(unsafe.Pointer(params)))
 }
-
 func GetUniformui64vNV(program uint32, location int32, params *uint64) {
 	C.glowGetUniformui64vNV(gpGetUniformui64vNV, (C.GLuint)(program), (C.GLint)(location), (*C.GLuint64EXT)(unsafe.Pointer(params)))
 }
-
 func GetUniformuiv(program uint32, location int32, params *uint32) {
 	C.glowGetUniformuiv(gpGetUniformuiv, (C.GLuint)(program), (C.GLint)(location), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetUniformuivEXT(program uint32, location int32, params *uint32) {
 	C.glowGetUniformuivEXT(gpGetUniformuivEXT, (C.GLuint)(program), (C.GLint)(location), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetUnsignedBytei_vEXT(target uint32, index uint32, data *uint8) {
 	C.glowGetUnsignedBytei_vEXT(gpGetUnsignedBytei_vEXT, (C.GLenum)(target), (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(data)))
 }
-
 func GetUnsignedBytevEXT(pname uint32, data *uint8) {
 	C.glowGetUnsignedBytevEXT(gpGetUnsignedBytevEXT, (C.GLenum)(pname), (*C.GLubyte)(unsafe.Pointer(data)))
 }
-
 func GetVariantArrayObjectfvATI(id uint32, pname uint32, params *float32) {
 	C.glowGetVariantArrayObjectfvATI(gpGetVariantArrayObjectfvATI, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetVariantArrayObjectivATI(id uint32, pname uint32, params *int32) {
 	C.glowGetVariantArrayObjectivATI(gpGetVariantArrayObjectivATI, (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVariantBooleanvEXT(id uint32, value uint32, data *bool) {
 	C.glowGetVariantBooleanvEXT(gpGetVariantBooleanvEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLboolean)(unsafe.Pointer(data)))
 }
-
 func GetVariantFloatvEXT(id uint32, value uint32, data *float32) {
 	C.glowGetVariantFloatvEXT(gpGetVariantFloatvEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLfloat)(unsafe.Pointer(data)))
 }
-
 func GetVariantIntegervEXT(id uint32, value uint32, data *int32) {
 	C.glowGetVariantIntegervEXT(gpGetVariantIntegervEXT, (C.GLuint)(id), (C.GLenum)(value), (*C.GLint)(unsafe.Pointer(data)))
 }
-
 func GetVariantPointervEXT(id uint32, value uint32, data *unsafe.Pointer) {
 	C.glowGetVariantPointervEXT(gpGetVariantPointervEXT, (C.GLuint)(id), (C.GLenum)(value), data)
 }
-
 func GetVaryingLocationNV(program uint32, name *uint8) int32 {
 	ret := C.glowGetVaryingLocationNV(gpGetVaryingLocationNV, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
 func GetVertexArrayIndexed64iv(vaobj uint32, index uint32, pname uint32, param *int64) {
 	C.glowGetVertexArrayIndexed64iv(gpGetVertexArrayIndexed64iv, (C.GLuint)(vaobj), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint64)(unsafe.Pointer(param)))
 }
-
 func GetVertexArrayIndexediv(vaobj uint32, index uint32, pname uint32, param *int32) {
 	C.glowGetVertexArrayIndexediv(gpGetVertexArrayIndexediv, (C.GLuint)(vaobj), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func GetVertexArrayIntegeri_vEXT(vaobj uint32, index uint32, pname uint32, param *int32) {
 	C.glowGetVertexArrayIntegeri_vEXT(gpGetVertexArrayIntegeri_vEXT, (C.GLuint)(vaobj), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func GetVertexArrayIntegervEXT(vaobj uint32, pname uint32, param *int32) {
 	C.glowGetVertexArrayIntegervEXT(gpGetVertexArrayIntegervEXT, (C.GLuint)(vaobj), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func GetVertexArrayPointeri_vEXT(vaobj uint32, index uint32, pname uint32, param *unsafe.Pointer) {
 	C.glowGetVertexArrayPointeri_vEXT(gpGetVertexArrayPointeri_vEXT, (C.GLuint)(vaobj), (C.GLuint)(index), (C.GLenum)(pname), param)
 }
-
 func GetVertexArrayPointervEXT(vaobj uint32, pname uint32, param *unsafe.Pointer) {
 	C.glowGetVertexArrayPointervEXT(gpGetVertexArrayPointervEXT, (C.GLuint)(vaobj), (C.GLenum)(pname), param)
 }
@@ -24481,11 +23661,9 @@ func GetVertexArrayPointervEXT(vaobj uint32, pname uint32, param *unsafe.Pointer
 func GetVertexArrayiv(vaobj uint32, pname uint32, param *int32) {
 	C.glowGetVertexArrayiv(gpGetVertexArrayiv, (C.GLuint)(vaobj), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func GetVertexAttribArrayObjectfvATI(index uint32, pname uint32, params *float32) {
 	C.glowGetVertexAttribArrayObjectfvATI(gpGetVertexAttribArrayObjectfvATI, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribArrayObjectivATI(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribArrayObjectivATI(gpGetVertexAttribArrayObjectivATI, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -24494,7 +23672,6 @@ func GetVertexAttribArrayObjectivATI(index uint32, pname uint32, params *int32) 
 func GetVertexAttribIiv(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribIiv(gpGetVertexAttribIiv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribIivEXT(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribIivEXT(gpGetVertexAttribIivEXT, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -24503,7 +23680,6 @@ func GetVertexAttribIivEXT(index uint32, pname uint32, params *int32) {
 func GetVertexAttribIuiv(index uint32, pname uint32, params *uint32) {
 	C.glowGetVertexAttribIuiv(gpGetVertexAttribIuiv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribIuivEXT(index uint32, pname uint32, params *uint32) {
 	C.glowGetVertexAttribIuivEXT(gpGetVertexAttribIuivEXT, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
@@ -24512,19 +23688,15 @@ func GetVertexAttribIuivEXT(index uint32, pname uint32, params *uint32) {
 func GetVertexAttribLdv(index uint32, pname uint32, params *float64) {
 	C.glowGetVertexAttribLdv(gpGetVertexAttribLdv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribLdvEXT(index uint32, pname uint32, params *float64) {
 	C.glowGetVertexAttribLdvEXT(gpGetVertexAttribLdvEXT, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribLi64vNV(index uint32, pname uint32, params *int64) {
 	C.glowGetVertexAttribLi64vNV(gpGetVertexAttribLi64vNV, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint64EXT)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribLui64vARB(index uint32, pname uint32, params *uint64) {
 	C.glowGetVertexAttribLui64vARB(gpGetVertexAttribLui64vARB, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLuint64EXT)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribLui64vNV(index uint32, pname uint32, params *uint64) {
 	C.glowGetVertexAttribLui64vNV(gpGetVertexAttribLui64vNV, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLuint64EXT)(unsafe.Pointer(params)))
 }
@@ -24533,11 +23705,9 @@ func GetVertexAttribLui64vNV(index uint32, pname uint32, params *uint64) {
 func GetVertexAttribPointerv(index uint32, pname uint32, pointer *unsafe.Pointer) {
 	C.glowGetVertexAttribPointerv(gpGetVertexAttribPointerv, (C.GLuint)(index), (C.GLenum)(pname), pointer)
 }
-
 func GetVertexAttribPointervARB(index uint32, pname uint32, pointer *unsafe.Pointer) {
 	C.glowGetVertexAttribPointervARB(gpGetVertexAttribPointervARB, (C.GLuint)(index), (C.GLenum)(pname), pointer)
 }
-
 func GetVertexAttribPointervNV(index uint32, pname uint32, pointer *unsafe.Pointer) {
 	C.glowGetVertexAttribPointervNV(gpGetVertexAttribPointervNV, (C.GLuint)(index), (C.GLenum)(pname), pointer)
 }
@@ -24546,11 +23716,9 @@ func GetVertexAttribPointervNV(index uint32, pname uint32, pointer *unsafe.Point
 func GetVertexAttribdv(index uint32, pname uint32, params *float64) {
 	C.glowGetVertexAttribdv(gpGetVertexAttribdv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribdvARB(index uint32, pname uint32, params *float64) {
 	C.glowGetVertexAttribdvARB(gpGetVertexAttribdvARB, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribdvNV(index uint32, pname uint32, params *float64) {
 	C.glowGetVertexAttribdvNV(gpGetVertexAttribdvNV, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
@@ -24559,11 +23727,9 @@ func GetVertexAttribdvNV(index uint32, pname uint32, params *float64) {
 func GetVertexAttribfv(index uint32, pname uint32, params *float32) {
 	C.glowGetVertexAttribfv(gpGetVertexAttribfv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribfvARB(index uint32, pname uint32, params *float32) {
 	C.glowGetVertexAttribfvARB(gpGetVertexAttribfvARB, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribfvNV(index uint32, pname uint32, params *float32) {
 	C.glowGetVertexAttribfvNV(gpGetVertexAttribfvNV, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
@@ -24572,43 +23738,33 @@ func GetVertexAttribfvNV(index uint32, pname uint32, params *float32) {
 func GetVertexAttribiv(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribiv(gpGetVertexAttribiv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribivARB(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribivARB(gpGetVertexAttribivARB, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVertexAttribivNV(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribivNV(gpGetVertexAttribivNV, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVideoCaptureStreamdvNV(video_capture_slot uint32, stream uint32, pname uint32, params *float64) {
 	C.glowGetVideoCaptureStreamdvNV(gpGetVideoCaptureStreamdvNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetVideoCaptureStreamfvNV(video_capture_slot uint32, stream uint32, pname uint32, params *float32) {
 	C.glowGetVideoCaptureStreamfvNV(gpGetVideoCaptureStreamfvNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetVideoCaptureStreamivNV(video_capture_slot uint32, stream uint32, pname uint32, params *int32) {
 	C.glowGetVideoCaptureStreamivNV(gpGetVideoCaptureStreamivNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVideoCaptureivNV(video_capture_slot uint32, pname uint32, params *int32) {
 	C.glowGetVideoCaptureivNV(gpGetVideoCaptureivNV, (C.GLuint)(video_capture_slot), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVideoi64vNV(video_slot uint32, pname uint32, params *int64) {
 	C.glowGetVideoi64vNV(gpGetVideoi64vNV, (C.GLuint)(video_slot), (C.GLenum)(pname), (*C.GLint64EXT)(unsafe.Pointer(params)))
 }
-
 func GetVideoivNV(video_slot uint32, pname uint32, params *int32) {
 	C.glowGetVideoivNV(gpGetVideoivNV, (C.GLuint)(video_slot), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetVideoui64vNV(video_slot uint32, pname uint32, params *uint64) {
 	C.glowGetVideoui64vNV(gpGetVideoui64vNV, (C.GLuint)(video_slot), (C.GLenum)(pname), (*C.GLuint64EXT)(unsafe.Pointer(params)))
 }
-
 func GetVideouivNV(video_slot uint32, pname uint32, params *uint32) {
 	C.glowGetVideouivNV(gpGetVideouivNV, (C.GLuint)(video_slot), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
@@ -24618,11 +23774,9 @@ func GetVkProcAddrNV(name *uint8) unsafe.Pointer {
 	ret := C.glowGetVkProcAddrNV(gpGetVkProcAddrNV, (*C.GLchar)(unsafe.Pointer(name)))
 	return (unsafe.Pointer)(ret)
 }
-
 func GetnColorTable(target uint32, format uint32, xtype uint32, bufSize int32, table unsafe.Pointer) {
 	C.glowGetnColorTable(gpGetnColorTable, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), table)
 }
-
 func GetnColorTableARB(target uint32, format uint32, xtype uint32, bufSize int32, table unsafe.Pointer) {
 	C.glowGetnColorTableARB(gpGetnColorTableARB, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), table)
 }
@@ -24631,95 +23785,72 @@ func GetnColorTableARB(target uint32, format uint32, xtype uint32, bufSize int32
 func GetnCompressedTexImage(target uint32, lod int32, bufSize int32, pixels unsafe.Pointer) {
 	C.glowGetnCompressedTexImage(gpGetnCompressedTexImage, (C.GLenum)(target), (C.GLint)(lod), (C.GLsizei)(bufSize), pixels)
 }
-
 func GetnCompressedTexImageARB(target uint32, lod int32, bufSize int32, img unsafe.Pointer) {
 	C.glowGetnCompressedTexImageARB(gpGetnCompressedTexImageARB, (C.GLenum)(target), (C.GLint)(lod), (C.GLsizei)(bufSize), img)
 }
-
 func GetnConvolutionFilter(target uint32, format uint32, xtype uint32, bufSize int32, image unsafe.Pointer) {
 	C.glowGetnConvolutionFilter(gpGetnConvolutionFilter, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), image)
 }
-
 func GetnConvolutionFilterARB(target uint32, format uint32, xtype uint32, bufSize int32, image unsafe.Pointer) {
 	C.glowGetnConvolutionFilterARB(gpGetnConvolutionFilterARB, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), image)
 }
-
 func GetnHistogram(target uint32, reset bool, format uint32, xtype uint32, bufSize int32, values unsafe.Pointer) {
 	C.glowGetnHistogram(gpGetnHistogram, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), values)
 }
-
 func GetnHistogramARB(target uint32, reset bool, format uint32, xtype uint32, bufSize int32, values unsafe.Pointer) {
 	C.glowGetnHistogramARB(gpGetnHistogramARB, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), values)
 }
-
 func GetnMapdv(target uint32, query uint32, bufSize int32, v *float64) {
 	C.glowGetnMapdv(gpGetnMapdv, (C.GLenum)(target), (C.GLenum)(query), (C.GLsizei)(bufSize), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func GetnMapdvARB(target uint32, query uint32, bufSize int32, v *float64) {
 	C.glowGetnMapdvARB(gpGetnMapdvARB, (C.GLenum)(target), (C.GLenum)(query), (C.GLsizei)(bufSize), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func GetnMapfv(target uint32, query uint32, bufSize int32, v *float32) {
 	C.glowGetnMapfv(gpGetnMapfv, (C.GLenum)(target), (C.GLenum)(query), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func GetnMapfvARB(target uint32, query uint32, bufSize int32, v *float32) {
 	C.glowGetnMapfvARB(gpGetnMapfvARB, (C.GLenum)(target), (C.GLenum)(query), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func GetnMapiv(target uint32, query uint32, bufSize int32, v *int32) {
 	C.glowGetnMapiv(gpGetnMapiv, (C.GLenum)(target), (C.GLenum)(query), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func GetnMapivARB(target uint32, query uint32, bufSize int32, v *int32) {
 	C.glowGetnMapivARB(gpGetnMapivARB, (C.GLenum)(target), (C.GLenum)(query), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func GetnMinmax(target uint32, reset bool, format uint32, xtype uint32, bufSize int32, values unsafe.Pointer) {
 	C.glowGetnMinmax(gpGetnMinmax, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), values)
 }
-
 func GetnMinmaxARB(target uint32, reset bool, format uint32, xtype uint32, bufSize int32, values unsafe.Pointer) {
 	C.glowGetnMinmaxARB(gpGetnMinmaxARB, (C.GLenum)(target), (C.GLboolean)(boolToInt(reset)), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), values)
 }
-
 func GetnPixelMapfv(xmap uint32, bufSize int32, values *float32) {
 	C.glowGetnPixelMapfv(gpGetnPixelMapfv, (C.GLenum)(xmap), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(values)))
 }
-
 func GetnPixelMapfvARB(xmap uint32, bufSize int32, values *float32) {
 	C.glowGetnPixelMapfvARB(gpGetnPixelMapfvARB, (C.GLenum)(xmap), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(values)))
 }
-
 func GetnPixelMapuiv(xmap uint32, bufSize int32, values *uint32) {
 	C.glowGetnPixelMapuiv(gpGetnPixelMapuiv, (C.GLenum)(xmap), (C.GLsizei)(bufSize), (*C.GLuint)(unsafe.Pointer(values)))
 }
-
 func GetnPixelMapuivARB(xmap uint32, bufSize int32, values *uint32) {
 	C.glowGetnPixelMapuivARB(gpGetnPixelMapuivARB, (C.GLenum)(xmap), (C.GLsizei)(bufSize), (*C.GLuint)(unsafe.Pointer(values)))
 }
-
 func GetnPixelMapusv(xmap uint32, bufSize int32, values *uint16) {
 	C.glowGetnPixelMapusv(gpGetnPixelMapusv, (C.GLenum)(xmap), (C.GLsizei)(bufSize), (*C.GLushort)(unsafe.Pointer(values)))
 }
-
 func GetnPixelMapusvARB(xmap uint32, bufSize int32, values *uint16) {
 	C.glowGetnPixelMapusvARB(gpGetnPixelMapusvARB, (C.GLenum)(xmap), (C.GLsizei)(bufSize), (*C.GLushort)(unsafe.Pointer(values)))
 }
-
 func GetnPolygonStipple(bufSize int32, pattern *uint8) {
 	C.glowGetnPolygonStipple(gpGetnPolygonStipple, (C.GLsizei)(bufSize), (*C.GLubyte)(unsafe.Pointer(pattern)))
 }
-
 func GetnPolygonStippleARB(bufSize int32, pattern *uint8) {
 	C.glowGetnPolygonStippleARB(gpGetnPolygonStippleARB, (C.GLsizei)(bufSize), (*C.GLubyte)(unsafe.Pointer(pattern)))
 }
-
 func GetnSeparableFilter(target uint32, format uint32, xtype uint32, rowBufSize int32, row unsafe.Pointer, columnBufSize int32, column unsafe.Pointer, span unsafe.Pointer) {
 	C.glowGetnSeparableFilter(gpGetnSeparableFilter, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(rowBufSize), row, (C.GLsizei)(columnBufSize), column, span)
 }
-
 func GetnSeparableFilterARB(target uint32, format uint32, xtype uint32, rowBufSize int32, row unsafe.Pointer, columnBufSize int32, column unsafe.Pointer, span unsafe.Pointer) {
 	C.glowGetnSeparableFilterARB(gpGetnSeparableFilterARB, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(rowBufSize), row, (C.GLsizei)(columnBufSize), column, span)
 }
@@ -24728,91 +23859,69 @@ func GetnSeparableFilterARB(target uint32, format uint32, xtype uint32, rowBufSi
 func GetnTexImage(target uint32, level int32, format uint32, xtype uint32, bufSize int32, pixels unsafe.Pointer) {
 	C.glowGetnTexImage(gpGetnTexImage, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), pixels)
 }
-
 func GetnTexImageARB(target uint32, level int32, format uint32, xtype uint32, bufSize int32, img unsafe.Pointer) {
 	C.glowGetnTexImageARB(gpGetnTexImageARB, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), img)
 }
-
 func GetnUniformdv(program uint32, location int32, bufSize int32, params *float64) {
 	C.glowGetnUniformdv(gpGetnUniformdv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetnUniformdvARB(program uint32, location int32, bufSize int32, params *float64) {
 	C.glowGetnUniformdvARB(gpGetnUniformdvARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func GetnUniformfv(program uint32, location int32, bufSize int32, params *float32) {
 	C.glowGetnUniformfv(gpGetnUniformfv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetnUniformfvARB(program uint32, location int32, bufSize int32, params *float32) {
 	C.glowGetnUniformfvARB(gpGetnUniformfvARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetnUniformfvKHR(program uint32, location int32, bufSize int32, params *float32) {
 	C.glowGetnUniformfvKHR(gpGetnUniformfvKHR, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func GetnUniformi64vARB(program uint32, location int32, bufSize int32, params *int64) {
 	C.glowGetnUniformi64vARB(gpGetnUniformi64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLint64)(unsafe.Pointer(params)))
 }
-
 func GetnUniformiv(program uint32, location int32, bufSize int32, params *int32) {
 	C.glowGetnUniformiv(gpGetnUniformiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetnUniformivARB(program uint32, location int32, bufSize int32, params *int32) {
 	C.glowGetnUniformivARB(gpGetnUniformivARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetnUniformivKHR(program uint32, location int32, bufSize int32, params *int32) {
 	C.glowGetnUniformivKHR(gpGetnUniformivKHR, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func GetnUniformui64vARB(program uint32, location int32, bufSize int32, params *uint64) {
 	C.glowGetnUniformui64vARB(gpGetnUniformui64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLuint64)(unsafe.Pointer(params)))
 }
-
 func GetnUniformuiv(program uint32, location int32, bufSize int32, params *uint32) {
 	C.glowGetnUniformuiv(gpGetnUniformuiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetnUniformuivARB(program uint32, location int32, bufSize int32, params *uint32) {
 	C.glowGetnUniformuivARB(gpGetnUniformuivARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GetnUniformuivKHR(program uint32, location int32, bufSize int32, params *uint32) {
 	C.glowGetnUniformuivKHR(gpGetnUniformuivKHR, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func GlobalAlphaFactorbSUN(factor int8) {
 	C.glowGlobalAlphaFactorbSUN(gpGlobalAlphaFactorbSUN, (C.GLbyte)(factor))
 }
-
 func GlobalAlphaFactordSUN(factor float64) {
 	C.glowGlobalAlphaFactordSUN(gpGlobalAlphaFactordSUN, (C.GLdouble)(factor))
 }
-
 func GlobalAlphaFactorfSUN(factor float32) {
 	C.glowGlobalAlphaFactorfSUN(gpGlobalAlphaFactorfSUN, (C.GLfloat)(factor))
 }
-
 func GlobalAlphaFactoriSUN(factor int32) {
 	C.glowGlobalAlphaFactoriSUN(gpGlobalAlphaFactoriSUN, (C.GLint)(factor))
 }
-
 func GlobalAlphaFactorsSUN(factor int16) {
 	C.glowGlobalAlphaFactorsSUN(gpGlobalAlphaFactorsSUN, (C.GLshort)(factor))
 }
-
 func GlobalAlphaFactorubSUN(factor uint8) {
 	C.glowGlobalAlphaFactorubSUN(gpGlobalAlphaFactorubSUN, (C.GLubyte)(factor))
 }
-
 func GlobalAlphaFactoruiSUN(factor uint32) {
 	C.glowGlobalAlphaFactoruiSUN(gpGlobalAlphaFactoruiSUN, (C.GLuint)(factor))
 }
-
 func GlobalAlphaFactorusSUN(factor uint16) {
 	C.glowGlobalAlphaFactorusSUN(gpGlobalAlphaFactorusSUN, (C.GLushort)(factor))
 }
@@ -24821,7 +23930,6 @@ func GlobalAlphaFactorusSUN(factor uint16) {
 func Hint(target uint32, mode uint32) {
 	C.glowHint(gpHint, (C.GLenum)(target), (C.GLenum)(mode))
 }
-
 func HintPGI(target uint32, mode int32) {
 	C.glowHintPGI(gpHintPGI, (C.GLenum)(target), (C.GLint)(mode))
 }
@@ -24830,64 +23938,49 @@ func HintPGI(target uint32, mode int32) {
 func Histogram(target uint32, width int32, internalformat uint32, sink bool) {
 	C.glowHistogram(gpHistogram, (C.GLenum)(target), (C.GLsizei)(width), (C.GLenum)(internalformat), (C.GLboolean)(boolToInt(sink)))
 }
-
 func HistogramEXT(target uint32, width int32, internalformat uint32, sink bool) {
 	C.glowHistogramEXT(gpHistogramEXT, (C.GLenum)(target), (C.GLsizei)(width), (C.GLenum)(internalformat), (C.GLboolean)(boolToInt(sink)))
 }
-
 func IglooInterfaceSGIX(pname uint32, params unsafe.Pointer) {
 	C.glowIglooInterfaceSGIX(gpIglooInterfaceSGIX, (C.GLenum)(pname), params)
 }
-
 func ImageTransformParameterfHP(target uint32, pname uint32, param float32) {
 	C.glowImageTransformParameterfHP(gpImageTransformParameterfHP, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func ImageTransformParameterfvHP(target uint32, pname uint32, params *float32) {
 	C.glowImageTransformParameterfvHP(gpImageTransformParameterfvHP, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ImageTransformParameteriHP(target uint32, pname uint32, param int32) {
 	C.glowImageTransformParameteriHP(gpImageTransformParameteriHP, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func ImageTransformParameterivHP(target uint32, pname uint32, params *int32) {
 	C.glowImageTransformParameterivHP(gpImageTransformParameterivHP, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ImportMemoryFdEXT(memory uint32, size uint64, handleType uint32, fd int32) {
 	C.glowImportMemoryFdEXT(gpImportMemoryFdEXT, (C.GLuint)(memory), (C.GLuint64)(size), (C.GLenum)(handleType), (C.GLint)(fd))
 }
-
 func ImportMemoryWin32HandleEXT(memory uint32, size uint64, handleType uint32, handle unsafe.Pointer) {
 	C.glowImportMemoryWin32HandleEXT(gpImportMemoryWin32HandleEXT, (C.GLuint)(memory), (C.GLuint64)(size), (C.GLenum)(handleType), handle)
 }
-
 func ImportMemoryWin32NameEXT(memory uint32, size uint64, handleType uint32, name unsafe.Pointer) {
 	C.glowImportMemoryWin32NameEXT(gpImportMemoryWin32NameEXT, (C.GLuint)(memory), (C.GLuint64)(size), (C.GLenum)(handleType), name)
 }
-
 func ImportSemaphoreFdEXT(semaphore uint32, handleType uint32, fd int32) {
 	C.glowImportSemaphoreFdEXT(gpImportSemaphoreFdEXT, (C.GLuint)(semaphore), (C.GLenum)(handleType), (C.GLint)(fd))
 }
-
 func ImportSemaphoreWin32HandleEXT(semaphore uint32, handleType uint32, handle unsafe.Pointer) {
 	C.glowImportSemaphoreWin32HandleEXT(gpImportSemaphoreWin32HandleEXT, (C.GLuint)(semaphore), (C.GLenum)(handleType), handle)
 }
-
 func ImportSemaphoreWin32NameEXT(semaphore uint32, handleType uint32, name unsafe.Pointer) {
 	C.glowImportSemaphoreWin32NameEXT(gpImportSemaphoreWin32NameEXT, (C.GLuint)(semaphore), (C.GLenum)(handleType), name)
 }
-
 func ImportSyncEXT(external_sync_type uint32, external_sync int, flags uint32) uintptr {
 	ret := C.glowImportSyncEXT(gpImportSyncEXT, (C.GLenum)(external_sync_type), (C.GLintptr)(external_sync), (C.GLbitfield)(flags))
 	return (uintptr)(ret)
 }
-
 func IndexFormatNV(xtype uint32, stride int32) {
 	C.glowIndexFormatNV(gpIndexFormatNV, (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func IndexFuncEXT(xfunc uint32, ref float32) {
 	C.glowIndexFuncEXT(gpIndexFuncEXT, (C.GLenum)(xfunc), (C.GLclampf)(ref))
 }
@@ -24896,7 +23989,6 @@ func IndexFuncEXT(xfunc uint32, ref float32) {
 func IndexMask(mask uint32) {
 	C.glowIndexMask(gpIndexMask, (C.GLuint)(mask))
 }
-
 func IndexMaterialEXT(face uint32, mode uint32) {
 	C.glowIndexMaterialEXT(gpIndexMaterialEXT, (C.GLenum)(face), (C.GLenum)(mode))
 }
@@ -24905,59 +23997,45 @@ func IndexMaterialEXT(face uint32, mode uint32) {
 func IndexPointer(xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowIndexPointer(gpIndexPointer, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func IndexPointerEXT(xtype uint32, stride int32, count int32, pointer unsafe.Pointer) {
 	C.glowIndexPointerEXT(gpIndexPointerEXT, (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLsizei)(count), pointer)
 }
-
 func IndexPointerListIBM(xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowIndexPointerListIBM(gpIndexPointerListIBM, (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
-
 func Indexd(c float64) {
 	C.glowIndexd(gpIndexd, (C.GLdouble)(c))
 }
-
 func Indexdv(c *float64) {
 	C.glowIndexdv(gpIndexdv, (*C.GLdouble)(unsafe.Pointer(c)))
 }
-
 func Indexf(c float32) {
 	C.glowIndexf(gpIndexf, (C.GLfloat)(c))
 }
-
 func Indexfv(c *float32) {
 	C.glowIndexfv(gpIndexfv, (*C.GLfloat)(unsafe.Pointer(c)))
 }
-
 func Indexi(c int32) {
 	C.glowIndexi(gpIndexi, (C.GLint)(c))
 }
-
 func Indexiv(c *int32) {
 	C.glowIndexiv(gpIndexiv, (*C.GLint)(unsafe.Pointer(c)))
 }
-
 func Indexs(c int16) {
 	C.glowIndexs(gpIndexs, (C.GLshort)(c))
 }
-
 func Indexsv(c *int16) {
 	C.glowIndexsv(gpIndexsv, (*C.GLshort)(unsafe.Pointer(c)))
 }
-
 func Indexub(c uint8) {
 	C.glowIndexub(gpIndexub, (C.GLubyte)(c))
 }
-
 func Indexubv(c *uint8) {
 	C.glowIndexubv(gpIndexubv, (*C.GLubyte)(unsafe.Pointer(c)))
 }
-
 func IndexxOES(component int32) {
 	C.glowIndexxOES(gpIndexxOES, (C.GLfixed)(component))
 }
-
 func IndexxvOES(component *int32) {
 	C.glowIndexxvOES(gpIndexxvOES, (*C.GLfixed)(unsafe.Pointer(component)))
 }
@@ -24966,15 +24044,12 @@ func IndexxvOES(component *int32) {
 func InitNames() {
 	C.glowInitNames(gpInitNames)
 }
-
 func InsertComponentEXT(res uint32, src uint32, num uint32) {
 	C.glowInsertComponentEXT(gpInsertComponentEXT, (C.GLuint)(res), (C.GLuint)(src), (C.GLuint)(num))
 }
-
 func InsertEventMarkerEXT(length int32, marker *uint8) {
 	C.glowInsertEventMarkerEXT(gpInsertEventMarkerEXT, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(marker)))
 }
-
 func InstrumentsBufferSGIX(size int32, buffer *int32) {
 	C.glowInstrumentsBufferSGIX(gpInstrumentsBufferSGIX, (C.GLsizei)(size), (*C.GLint)(unsafe.Pointer(buffer)))
 }
@@ -24983,7 +24058,6 @@ func InstrumentsBufferSGIX(size int32, buffer *int32) {
 func InterleavedArrays(format uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowInterleavedArrays(gpInterleavedArrays, (C.GLenum)(format), (C.GLsizei)(stride), pointer)
 }
-
 func InterpolatePathsNV(resultPath uint32, pathA uint32, pathB uint32, weight float32) {
 	C.glowInterpolatePathsNV(gpInterpolatePathsNV, (C.GLuint)(resultPath), (C.GLuint)(pathA), (C.GLuint)(pathB), (C.GLfloat)(weight))
 }
@@ -25027,7 +24101,6 @@ func InvalidateTexImage(texture uint32, level int32) {
 func InvalidateTexSubImage(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32) {
 	C.glowInvalidateTexSubImage(gpInvalidateTexSubImage, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-
 func IsAsyncMarkerSGIX(marker uint32) bool {
 	ret := C.glowIsAsyncMarkerSGIX(gpIsAsyncMarkerSGIX, (C.GLuint)(marker))
 	return ret == TRUE
@@ -25038,42 +24111,34 @@ func IsBuffer(buffer uint32) bool {
 	ret := C.glowIsBuffer(gpIsBuffer, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-
 func IsBufferARB(buffer uint32) bool {
 	ret := C.glowIsBufferARB(gpIsBufferARB, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-
 func IsBufferResidentNV(target uint32) bool {
 	ret := C.glowIsBufferResidentNV(gpIsBufferResidentNV, (C.GLenum)(target))
 	return ret == TRUE
 }
-
 func IsCommandListNV(list uint32) bool {
 	ret := C.glowIsCommandListNV(gpIsCommandListNV, (C.GLuint)(list))
 	return ret == TRUE
 }
-
 func IsEnabled(cap uint32) bool {
 	ret := C.glowIsEnabled(gpIsEnabled, (C.GLenum)(cap))
 	return ret == TRUE
 }
-
 func IsEnabledIndexedEXT(target uint32, index uint32) bool {
 	ret := C.glowIsEnabledIndexedEXT(gpIsEnabledIndexedEXT, (C.GLenum)(target), (C.GLuint)(index))
 	return ret == TRUE
 }
-
 func IsEnabledi(target uint32, index uint32) bool {
 	ret := C.glowIsEnabledi(gpIsEnabledi, (C.GLenum)(target), (C.GLuint)(index))
 	return ret == TRUE
 }
-
 func IsFenceAPPLE(fence uint32) bool {
 	ret := C.glowIsFenceAPPLE(gpIsFenceAPPLE, (C.GLuint)(fence))
 	return ret == TRUE
 }
-
 func IsFenceNV(fence uint32) bool {
 	ret := C.glowIsFenceNV(gpIsFenceNV, (C.GLuint)(fence))
 	return ret == TRUE
@@ -25084,17 +24149,14 @@ func IsFramebuffer(framebuffer uint32) bool {
 	ret := C.glowIsFramebuffer(gpIsFramebuffer, (C.GLuint)(framebuffer))
 	return ret == TRUE
 }
-
 func IsFramebufferEXT(framebuffer uint32) bool {
 	ret := C.glowIsFramebufferEXT(gpIsFramebufferEXT, (C.GLuint)(framebuffer))
 	return ret == TRUE
 }
-
 func IsImageHandleResidentARB(handle uint64) bool {
 	ret := C.glowIsImageHandleResidentARB(gpIsImageHandleResidentARB, (C.GLuint64)(handle))
 	return ret == TRUE
 }
-
 func IsImageHandleResidentNV(handle uint64) bool {
 	ret := C.glowIsImageHandleResidentNV(gpIsImageHandleResidentNV, (C.GLuint64)(handle))
 	return ret == TRUE
@@ -25105,47 +24167,38 @@ func IsList(list uint32) bool {
 	ret := C.glowIsList(gpIsList, (C.GLuint)(list))
 	return ret == TRUE
 }
-
 func IsMemoryObjectEXT(memoryObject uint32) bool {
 	ret := C.glowIsMemoryObjectEXT(gpIsMemoryObjectEXT, (C.GLuint)(memoryObject))
 	return ret == TRUE
 }
-
 func IsNameAMD(identifier uint32, name uint32) bool {
 	ret := C.glowIsNameAMD(gpIsNameAMD, (C.GLenum)(identifier), (C.GLuint)(name))
 	return ret == TRUE
 }
-
 func IsNamedBufferResidentNV(buffer uint32) bool {
 	ret := C.glowIsNamedBufferResidentNV(gpIsNamedBufferResidentNV, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-
 func IsNamedStringARB(namelen int32, name *uint8) bool {
 	ret := C.glowIsNamedStringARB(gpIsNamedStringARB, (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)))
 	return ret == TRUE
 }
-
 func IsObjectBufferATI(buffer uint32) bool {
 	ret := C.glowIsObjectBufferATI(gpIsObjectBufferATI, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-
 func IsOcclusionQueryNV(id uint32) bool {
 	ret := C.glowIsOcclusionQueryNV(gpIsOcclusionQueryNV, (C.GLuint)(id))
 	return ret == TRUE
 }
-
 func IsPathNV(path uint32) bool {
 	ret := C.glowIsPathNV(gpIsPathNV, (C.GLuint)(path))
 	return ret == TRUE
 }
-
 func IsPointInFillPathNV(path uint32, mask uint32, x float32, y float32) bool {
 	ret := C.glowIsPointInFillPathNV(gpIsPointInFillPathNV, (C.GLuint)(path), (C.GLuint)(mask), (C.GLfloat)(x), (C.GLfloat)(y))
 	return ret == TRUE
 }
-
 func IsPointInStrokePathNV(path uint32, x float32, y float32) bool {
 	ret := C.glowIsPointInStrokePathNV(gpIsPointInStrokePathNV, (C.GLuint)(path), (C.GLfloat)(x), (C.GLfloat)(y))
 	return ret == TRUE
@@ -25156,12 +24209,10 @@ func IsProgram(program uint32) bool {
 	ret := C.glowIsProgram(gpIsProgram, (C.GLuint)(program))
 	return ret == TRUE
 }
-
 func IsProgramARB(program uint32) bool {
 	ret := C.glowIsProgramARB(gpIsProgramARB, (C.GLuint)(program))
 	return ret == TRUE
 }
-
 func IsProgramNV(id uint32) bool {
 	ret := C.glowIsProgramNV(gpIsProgramNV, (C.GLuint)(id))
 	return ret == TRUE
@@ -25172,7 +24223,6 @@ func IsProgramPipeline(pipeline uint32) bool {
 	ret := C.glowIsProgramPipeline(gpIsProgramPipeline, (C.GLuint)(pipeline))
 	return ret == TRUE
 }
-
 func IsProgramPipelineEXT(pipeline uint32) bool {
 	ret := C.glowIsProgramPipelineEXT(gpIsProgramPipelineEXT, (C.GLuint)(pipeline))
 	return ret == TRUE
@@ -25183,7 +24233,6 @@ func IsQuery(id uint32) bool {
 	ret := C.glowIsQuery(gpIsQuery, (C.GLuint)(id))
 	return ret == TRUE
 }
-
 func IsQueryARB(id uint32) bool {
 	ret := C.glowIsQueryARB(gpIsQueryARB, (C.GLuint)(id))
 	return ret == TRUE
@@ -25194,7 +24243,6 @@ func IsRenderbuffer(renderbuffer uint32) bool {
 	ret := C.glowIsRenderbuffer(gpIsRenderbuffer, (C.GLuint)(renderbuffer))
 	return ret == TRUE
 }
-
 func IsRenderbufferEXT(renderbuffer uint32) bool {
 	ret := C.glowIsRenderbufferEXT(gpIsRenderbufferEXT, (C.GLuint)(renderbuffer))
 	return ret == TRUE
@@ -25205,7 +24253,6 @@ func IsSampler(sampler uint32) bool {
 	ret := C.glowIsSampler(gpIsSampler, (C.GLuint)(sampler))
 	return ret == TRUE
 }
-
 func IsSemaphoreEXT(semaphore uint32) bool {
 	ret := C.glowIsSemaphoreEXT(gpIsSemaphoreEXT, (C.GLuint)(semaphore))
 	return ret == TRUE
@@ -25216,7 +24263,6 @@ func IsShader(shader uint32) bool {
 	ret := C.glowIsShader(gpIsShader, (C.GLuint)(shader))
 	return ret == TRUE
 }
-
 func IsStateNV(state uint32) bool {
 	ret := C.glowIsStateNV(gpIsStateNV, (C.GLuint)(state))
 	return ret == TRUE
@@ -25233,17 +24279,14 @@ func IsTexture(texture uint32) bool {
 	ret := C.glowIsTexture(gpIsTexture, (C.GLuint)(texture))
 	return ret == TRUE
 }
-
 func IsTextureEXT(texture uint32) bool {
 	ret := C.glowIsTextureEXT(gpIsTextureEXT, (C.GLuint)(texture))
 	return ret == TRUE
 }
-
 func IsTextureHandleResidentARB(handle uint64) bool {
 	ret := C.glowIsTextureHandleResidentARB(gpIsTextureHandleResidentARB, (C.GLuint64)(handle))
 	return ret == TRUE
 }
-
 func IsTextureHandleResidentNV(handle uint64) bool {
 	ret := C.glowIsTextureHandleResidentNV(gpIsTextureHandleResidentNV, (C.GLuint64)(handle))
 	return ret == TRUE
@@ -25254,12 +24297,10 @@ func IsTransformFeedback(id uint32) bool {
 	ret := C.glowIsTransformFeedback(gpIsTransformFeedback, (C.GLuint)(id))
 	return ret == TRUE
 }
-
 func IsTransformFeedbackNV(id uint32) bool {
 	ret := C.glowIsTransformFeedbackNV(gpIsTransformFeedbackNV, (C.GLuint)(id))
 	return ret == TRUE
 }
-
 func IsVariantEnabledEXT(id uint32, cap uint32) bool {
 	ret := C.glowIsVariantEnabledEXT(gpIsVariantEnabledEXT, (C.GLuint)(id), (C.GLenum)(cap))
 	return ret == TRUE
@@ -25270,81 +24311,62 @@ func IsVertexArray(array uint32) bool {
 	ret := C.glowIsVertexArray(gpIsVertexArray, (C.GLuint)(array))
 	return ret == TRUE
 }
-
 func IsVertexArrayAPPLE(array uint32) bool {
 	ret := C.glowIsVertexArrayAPPLE(gpIsVertexArrayAPPLE, (C.GLuint)(array))
 	return ret == TRUE
 }
-
 func IsVertexAttribEnabledAPPLE(index uint32, pname uint32) bool {
 	ret := C.glowIsVertexAttribEnabledAPPLE(gpIsVertexAttribEnabledAPPLE, (C.GLuint)(index), (C.GLenum)(pname))
 	return ret == TRUE
 }
-
 func LGPUCopyImageSubDataNVX(sourceGpu uint32, destinationGpuMask uint32, srcName uint32, srcTarget uint32, srcLevel int32, srcX int32, srxY int32, srcZ int32, dstName uint32, dstTarget uint32, dstLevel int32, dstX int32, dstY int32, dstZ int32, width int32, height int32, depth int32) {
 	C.glowLGPUCopyImageSubDataNVX(gpLGPUCopyImageSubDataNVX, (C.GLuint)(sourceGpu), (C.GLbitfield)(destinationGpuMask), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srxY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-
 func LGPUInterlockNVX() {
 	C.glowLGPUInterlockNVX(gpLGPUInterlockNVX)
 }
-
 func LGPUNamedBufferSubDataNVX(gpuMask uint32, buffer uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowLGPUNamedBufferSubDataNVX(gpLGPUNamedBufferSubDataNVX, (C.GLbitfield)(gpuMask), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func LabelObjectEXT(xtype uint32, object uint32, length int32, label *uint8) {
 	C.glowLabelObjectEXT(gpLabelObjectEXT, (C.GLenum)(xtype), (C.GLuint)(object), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func LightEnviSGIX(pname uint32, param int32) {
 	C.glowLightEnviSGIX(gpLightEnviSGIX, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func LightModelf(pname uint32, param float32) {
 	C.glowLightModelf(gpLightModelf, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func LightModelfv(pname uint32, params *float32) {
 	C.glowLightModelfv(gpLightModelfv, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func LightModeli(pname uint32, param int32) {
 	C.glowLightModeli(gpLightModeli, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func LightModeliv(pname uint32, params *int32) {
 	C.glowLightModeliv(gpLightModeliv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func LightModelxOES(pname uint32, param int32) {
 	C.glowLightModelxOES(gpLightModelxOES, (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func LightModelxvOES(pname uint32, param *int32) {
 	C.glowLightModelxvOES(gpLightModelxvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(param)))
 }
-
 func Lightf(light uint32, pname uint32, param float32) {
 	C.glowLightf(gpLightf, (C.GLenum)(light), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func Lightfv(light uint32, pname uint32, params *float32) {
 	C.glowLightfv(gpLightfv, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func Lighti(light uint32, pname uint32, param int32) {
 	C.glowLighti(gpLighti, (C.GLenum)(light), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func Lightiv(light uint32, pname uint32, params *int32) {
 	C.glowLightiv(gpLightiv, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func LightxOES(light uint32, pname uint32, param int32) {
 	C.glowLightxOES(gpLightxOES, (C.GLenum)(light), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func LightxvOES(light uint32, pname uint32, params *int32) {
 	C.glowLightxvOES(gpLightxvOES, (C.GLenum)(light), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
@@ -25358,7 +24380,6 @@ func LineStipple(factor int32, pattern uint16) {
 func LineWidth(width float32) {
 	C.glowLineWidth(gpLineWidth, (C.GLfloat)(width))
 }
-
 func LineWidthxOES(width int32) {
 	C.glowLineWidthxOES(gpLineWidthxOES, (C.GLfixed)(width))
 }
@@ -25367,7 +24388,6 @@ func LineWidthxOES(width int32) {
 func LinkProgram(program uint32) {
 	C.glowLinkProgram(gpLinkProgram, (C.GLuint)(program))
 }
-
 func LinkProgramARB(programObj uintptr) {
 	C.glowLinkProgramARB(gpLinkProgramARB, (C.GLhandleARB)(programObj))
 }
@@ -25376,23 +24396,18 @@ func LinkProgramARB(programObj uintptr) {
 func ListBase(base uint32) {
 	C.glowListBase(gpListBase, (C.GLuint)(base))
 }
-
 func ListDrawCommandsStatesClientNV(list uint32, segment uint32, indirects *unsafe.Pointer, sizes *int32, states *uint32, fbos *uint32, count uint32) {
 	C.glowListDrawCommandsStatesClientNV(gpListDrawCommandsStatesClientNV, (C.GLuint)(list), (C.GLuint)(segment), indirects, (*C.GLsizei)(unsafe.Pointer(sizes)), (*C.GLuint)(unsafe.Pointer(states)), (*C.GLuint)(unsafe.Pointer(fbos)), (C.GLuint)(count))
 }
-
 func ListParameterfSGIX(list uint32, pname uint32, param float32) {
 	C.glowListParameterfSGIX(gpListParameterfSGIX, (C.GLuint)(list), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func ListParameterfvSGIX(list uint32, pname uint32, params *float32) {
 	C.glowListParameterfvSGIX(gpListParameterfvSGIX, (C.GLuint)(list), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ListParameteriSGIX(list uint32, pname uint32, param int32) {
 	C.glowListParameteriSGIX(gpListParameteriSGIX, (C.GLuint)(list), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func ListParameterivSGIX(list uint32, pname uint32, params *int32) {
 	C.glowListParameterivSGIX(gpListParameterivSGIX, (C.GLuint)(list), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -25401,19 +24416,15 @@ func ListParameterivSGIX(list uint32, pname uint32, params *int32) {
 func LoadIdentity() {
 	C.glowLoadIdentity(gpLoadIdentity)
 }
-
 func LoadIdentityDeformationMapSGIX(mask uint32) {
 	C.glowLoadIdentityDeformationMapSGIX(gpLoadIdentityDeformationMapSGIX, (C.GLbitfield)(mask))
 }
-
 func LoadMatrixd(m *float64) {
 	C.glowLoadMatrixd(gpLoadMatrixd, (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func LoadMatrixf(m *float32) {
 	C.glowLoadMatrixf(gpLoadMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func LoadMatrixxOES(m *int32) {
 	C.glowLoadMatrixxOES(gpLoadMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
 }
@@ -25422,31 +24433,24 @@ func LoadMatrixxOES(m *int32) {
 func LoadName(name uint32) {
 	C.glowLoadName(gpLoadName, (C.GLuint)(name))
 }
-
 func LoadProgramNV(target uint32, id uint32, len int32, program *uint8) {
 	C.glowLoadProgramNV(gpLoadProgramNV, (C.GLenum)(target), (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(program)))
 }
-
 func LoadTransposeMatrixd(m *float64) {
 	C.glowLoadTransposeMatrixd(gpLoadTransposeMatrixd, (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func LoadTransposeMatrixdARB(m *float64) {
 	C.glowLoadTransposeMatrixdARB(gpLoadTransposeMatrixdARB, (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func LoadTransposeMatrixf(m *float32) {
 	C.glowLoadTransposeMatrixf(gpLoadTransposeMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func LoadTransposeMatrixfARB(m *float32) {
 	C.glowLoadTransposeMatrixfARB(gpLoadTransposeMatrixfARB, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func LoadTransposeMatrixxOES(m *int32) {
 	C.glowLoadTransposeMatrixxOES(gpLoadTransposeMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
 }
-
 func LockArraysEXT(first int32, count int32) {
 	C.glowLockArraysEXT(gpLockArraysEXT, (C.GLint)(first), (C.GLsizei)(count))
 }
@@ -25455,75 +24459,57 @@ func LockArraysEXT(first int32, count int32) {
 func LogicOp(opcode uint32) {
 	C.glowLogicOp(gpLogicOp, (C.GLenum)(opcode))
 }
-
 func MakeBufferNonResidentNV(target uint32) {
 	C.glowMakeBufferNonResidentNV(gpMakeBufferNonResidentNV, (C.GLenum)(target))
 }
-
 func MakeBufferResidentNV(target uint32, access uint32) {
 	C.glowMakeBufferResidentNV(gpMakeBufferResidentNV, (C.GLenum)(target), (C.GLenum)(access))
 }
-
 func MakeImageHandleNonResidentARB(handle uint64) {
 	C.glowMakeImageHandleNonResidentARB(gpMakeImageHandleNonResidentARB, (C.GLuint64)(handle))
 }
-
 func MakeImageHandleNonResidentNV(handle uint64) {
 	C.glowMakeImageHandleNonResidentNV(gpMakeImageHandleNonResidentNV, (C.GLuint64)(handle))
 }
-
 func MakeImageHandleResidentARB(handle uint64, access uint32) {
 	C.glowMakeImageHandleResidentARB(gpMakeImageHandleResidentARB, (C.GLuint64)(handle), (C.GLenum)(access))
 }
-
 func MakeImageHandleResidentNV(handle uint64, access uint32) {
 	C.glowMakeImageHandleResidentNV(gpMakeImageHandleResidentNV, (C.GLuint64)(handle), (C.GLenum)(access))
 }
-
 func MakeNamedBufferNonResidentNV(buffer uint32) {
 	C.glowMakeNamedBufferNonResidentNV(gpMakeNamedBufferNonResidentNV, (C.GLuint)(buffer))
 }
-
 func MakeNamedBufferResidentNV(buffer uint32, access uint32) {
 	C.glowMakeNamedBufferResidentNV(gpMakeNamedBufferResidentNV, (C.GLuint)(buffer), (C.GLenum)(access))
 }
-
 func MakeTextureHandleNonResidentARB(handle uint64) {
 	C.glowMakeTextureHandleNonResidentARB(gpMakeTextureHandleNonResidentARB, (C.GLuint64)(handle))
 }
-
 func MakeTextureHandleNonResidentNV(handle uint64) {
 	C.glowMakeTextureHandleNonResidentNV(gpMakeTextureHandleNonResidentNV, (C.GLuint64)(handle))
 }
-
 func MakeTextureHandleResidentARB(handle uint64) {
 	C.glowMakeTextureHandleResidentARB(gpMakeTextureHandleResidentARB, (C.GLuint64)(handle))
 }
-
 func MakeTextureHandleResidentNV(handle uint64) {
 	C.glowMakeTextureHandleResidentNV(gpMakeTextureHandleResidentNV, (C.GLuint64)(handle))
 }
-
 func Map1d(target uint32, u1 float64, u2 float64, stride int32, order int32, points *float64) {
 	C.glowMap1d(gpMap1d, (C.GLenum)(target), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLdouble)(unsafe.Pointer(points)))
 }
-
 func Map1f(target uint32, u1 float32, u2 float32, stride int32, order int32, points *float32) {
 	C.glowMap1f(gpMap1f, (C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func Map1xOES(target uint32, u1 int32, u2 int32, stride int32, order int32, points int32) {
 	C.glowMap1xOES(gpMap1xOES, (C.GLenum)(target), (C.GLfixed)(u1), (C.GLfixed)(u2), (C.GLint)(stride), (C.GLint)(order), (C.GLfixed)(points))
 }
-
 func Map2d(target uint32, u1 float64, u2 float64, ustride int32, uorder int32, v1 float64, v2 float64, vstride int32, vorder int32, points *float64) {
 	C.glowMap2d(gpMap2d, (C.GLenum)(target), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLdouble)(unsafe.Pointer(points)))
 }
-
 func Map2f(target uint32, u1 float32, u2 float32, ustride int32, uorder int32, v1 float32, v2 float32, vstride int32, vorder int32, points *float32) {
 	C.glowMap2f(gpMap2f, (C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func Map2xOES(target uint32, u1 int32, u2 int32, ustride int32, uorder int32, v1 int32, v2 int32, vstride int32, vorder int32, points int32) {
 	C.glowMap2xOES(gpMap2xOES, (C.GLenum)(target), (C.GLfixed)(u1), (C.GLfixed)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfixed)(v1), (C.GLfixed)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (C.GLfixed)(points))
 }
@@ -25533,7 +24519,6 @@ func MapBuffer(target uint32, access uint32) unsafe.Pointer {
 	ret := C.glowMapBuffer(gpMapBuffer, (C.GLenum)(target), (C.GLenum)(access))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapBufferARB(target uint32, access uint32) unsafe.Pointer {
 	ret := C.glowMapBufferARB(gpMapBufferARB, (C.GLenum)(target), (C.GLenum)(access))
 	return (unsafe.Pointer)(ret)
@@ -25544,31 +24529,24 @@ func MapBufferRange(target uint32, offset int, length int, access uint32) unsafe
 	ret := C.glowMapBufferRange(gpMapBufferRange, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(length), (C.GLbitfield)(access))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapControlPointsNV(target uint32, index uint32, xtype uint32, ustride int32, vstride int32, uorder int32, vorder int32, packed bool, points unsafe.Pointer) {
 	C.glowMapControlPointsNV(gpMapControlPointsNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(xtype), (C.GLsizei)(ustride), (C.GLsizei)(vstride), (C.GLint)(uorder), (C.GLint)(vorder), (C.GLboolean)(boolToInt(packed)), points)
 }
-
 func MapGrid1d(un int32, u1 float64, u2 float64) {
 	C.glowMapGrid1d(gpMapGrid1d, (C.GLint)(un), (C.GLdouble)(u1), (C.GLdouble)(u2))
 }
-
 func MapGrid1f(un int32, u1 float32, u2 float32) {
 	C.glowMapGrid1f(gpMapGrid1f, (C.GLint)(un), (C.GLfloat)(u1), (C.GLfloat)(u2))
 }
-
 func MapGrid1xOES(n int32, u1 int32, u2 int32) {
 	C.glowMapGrid1xOES(gpMapGrid1xOES, (C.GLint)(n), (C.GLfixed)(u1), (C.GLfixed)(u2))
 }
-
 func MapGrid2d(un int32, u1 float64, u2 float64, vn int32, v1 float64, v2 float64) {
 	C.glowMapGrid2d(gpMapGrid2d, (C.GLint)(un), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(vn), (C.GLdouble)(v1), (C.GLdouble)(v2))
 }
-
 func MapGrid2f(un int32, u1 float32, u2 float32, vn int32, v1 float32, v2 float32) {
 	C.glowMapGrid2f(gpMapGrid2f, (C.GLint)(un), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(vn), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-
 func MapGrid2xOES(n int32, u1 int32, u2 int32, v1 int32, v2 int32) {
 	C.glowMapGrid2xOES(gpMapGrid2xOES, (C.GLint)(n), (C.GLfixed)(u1), (C.GLfixed)(u2), (C.GLfixed)(v1), (C.GLfixed)(v2))
 }
@@ -25578,7 +24556,6 @@ func MapNamedBuffer(buffer uint32, access uint32) unsafe.Pointer {
 	ret := C.glowMapNamedBuffer(gpMapNamedBuffer, (C.GLuint)(buffer), (C.GLenum)(access))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapNamedBufferEXT(buffer uint32, access uint32) unsafe.Pointer {
 	ret := C.glowMapNamedBufferEXT(gpMapNamedBufferEXT, (C.GLuint)(buffer), (C.GLenum)(access))
 	return (unsafe.Pointer)(ret)
@@ -25589,118 +24566,90 @@ func MapNamedBufferRange(buffer uint32, offset int, length int, access uint32) u
 	ret := C.glowMapNamedBufferRange(gpMapNamedBufferRange, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(length), (C.GLbitfield)(access))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapNamedBufferRangeEXT(buffer uint32, offset int, length int, access uint32) unsafe.Pointer {
 	ret := C.glowMapNamedBufferRangeEXT(gpMapNamedBufferRangeEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(length), (C.GLbitfield)(access))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapObjectBufferATI(buffer uint32) unsafe.Pointer {
 	ret := C.glowMapObjectBufferATI(gpMapObjectBufferATI, (C.GLuint)(buffer))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapParameterfvNV(target uint32, pname uint32, params *float32) {
 	C.glowMapParameterfvNV(gpMapParameterfvNV, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func MapParameterivNV(target uint32, pname uint32, params *int32) {
 	C.glowMapParameterivNV(gpMapParameterivNV, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MapTexture2DINTEL(texture uint32, level int32, access uint32, stride *int32, layout *uint32) unsafe.Pointer {
 	ret := C.glowMapTexture2DINTEL(gpMapTexture2DINTEL, (C.GLuint)(texture), (C.GLint)(level), (C.GLbitfield)(access), (*C.GLint)(unsafe.Pointer(stride)), (*C.GLenum)(unsafe.Pointer(layout)))
 	return (unsafe.Pointer)(ret)
 }
-
 func MapVertexAttrib1dAPPLE(index uint32, size uint32, u1 float64, u2 float64, stride int32, order int32, points *float64) {
 	C.glowMapVertexAttrib1dAPPLE(gpMapVertexAttrib1dAPPLE, (C.GLuint)(index), (C.GLuint)(size), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLdouble)(unsafe.Pointer(points)))
 }
-
 func MapVertexAttrib1fAPPLE(index uint32, size uint32, u1 float32, u2 float32, stride int32, order int32, points *float32) {
 	C.glowMapVertexAttrib1fAPPLE(gpMapVertexAttrib1fAPPLE, (C.GLuint)(index), (C.GLuint)(size), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func MapVertexAttrib2dAPPLE(index uint32, size uint32, u1 float64, u2 float64, ustride int32, uorder int32, v1 float64, v2 float64, vstride int32, vorder int32, points *float64) {
 	C.glowMapVertexAttrib2dAPPLE(gpMapVertexAttrib2dAPPLE, (C.GLuint)(index), (C.GLuint)(size), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLdouble)(unsafe.Pointer(points)))
 }
-
 func MapVertexAttrib2fAPPLE(index uint32, size uint32, u1 float32, u2 float32, ustride int32, uorder int32, v1 float32, v2 float32, vstride int32, vorder int32, points *float32) {
 	C.glowMapVertexAttrib2fAPPLE(gpMapVertexAttrib2fAPPLE, (C.GLuint)(index), (C.GLuint)(size), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func Materialf(face uint32, pname uint32, param float32) {
 	C.glowMaterialf(gpMaterialf, (C.GLenum)(face), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func Materialfv(face uint32, pname uint32, params *float32) {
 	C.glowMaterialfv(gpMaterialfv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func Materiali(face uint32, pname uint32, param int32) {
 	C.glowMateriali(gpMateriali, (C.GLenum)(face), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func Materialiv(face uint32, pname uint32, params *int32) {
 	C.glowMaterialiv(gpMaterialiv, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MaterialxOES(face uint32, pname uint32, param int32) {
 	C.glowMaterialxOES(gpMaterialxOES, (C.GLenum)(face), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func MaterialxvOES(face uint32, pname uint32, param *int32) {
 	C.glowMaterialxvOES(gpMaterialxvOES, (C.GLenum)(face), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(param)))
 }
-
 func MatrixFrustumEXT(mode uint32, left float64, right float64, bottom float64, top float64, zNear float64, zFar float64) {
 	C.glowMatrixFrustumEXT(gpMatrixFrustumEXT, (C.GLenum)(mode), (C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
-
 func MatrixIndexPointerARB(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowMatrixIndexPointerARB(gpMatrixIndexPointerARB, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func MatrixIndexubvARB(size int32, indices *uint8) {
 	C.glowMatrixIndexubvARB(gpMatrixIndexubvARB, (C.GLint)(size), (*C.GLubyte)(unsafe.Pointer(indices)))
 }
-
 func MatrixIndexuivARB(size int32, indices *uint32) {
 	C.glowMatrixIndexuivARB(gpMatrixIndexuivARB, (C.GLint)(size), (*C.GLuint)(unsafe.Pointer(indices)))
 }
-
 func MatrixIndexusvARB(size int32, indices *uint16) {
 	C.glowMatrixIndexusvARB(gpMatrixIndexusvARB, (C.GLint)(size), (*C.GLushort)(unsafe.Pointer(indices)))
 }
-
 func MatrixLoad3x2fNV(matrixMode uint32, m *float32) {
 	C.glowMatrixLoad3x2fNV(gpMatrixLoad3x2fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixLoad3x3fNV(matrixMode uint32, m *float32) {
 	C.glowMatrixLoad3x3fNV(gpMatrixLoad3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixLoadIdentityEXT(mode uint32) {
 	C.glowMatrixLoadIdentityEXT(gpMatrixLoadIdentityEXT, (C.GLenum)(mode))
 }
-
 func MatrixLoadTranspose3x3fNV(matrixMode uint32, m *float32) {
 	C.glowMatrixLoadTranspose3x3fNV(gpMatrixLoadTranspose3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixLoadTransposedEXT(mode uint32, m *float64) {
 	C.glowMatrixLoadTransposedEXT(gpMatrixLoadTransposedEXT, (C.GLenum)(mode), (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MatrixLoadTransposefEXT(mode uint32, m *float32) {
 	C.glowMatrixLoadTransposefEXT(gpMatrixLoadTransposefEXT, (C.GLenum)(mode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixLoaddEXT(mode uint32, m *float64) {
 	C.glowMatrixLoaddEXT(gpMatrixLoaddEXT, (C.GLenum)(mode), (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MatrixLoadfEXT(mode uint32, m *float32) {
 	C.glowMatrixLoadfEXT(gpMatrixLoadfEXT, (C.GLenum)(mode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
@@ -25709,75 +24658,57 @@ func MatrixLoadfEXT(mode uint32, m *float32) {
 func MatrixMode(mode uint32) {
 	C.glowMatrixMode(gpMatrixMode, (C.GLenum)(mode))
 }
-
 func MatrixMult3x2fNV(matrixMode uint32, m *float32) {
 	C.glowMatrixMult3x2fNV(gpMatrixMult3x2fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixMult3x3fNV(matrixMode uint32, m *float32) {
 	C.glowMatrixMult3x3fNV(gpMatrixMult3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixMultTranspose3x3fNV(matrixMode uint32, m *float32) {
 	C.glowMatrixMultTranspose3x3fNV(gpMatrixMultTranspose3x3fNV, (C.GLenum)(matrixMode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixMultTransposedEXT(mode uint32, m *float64) {
 	C.glowMatrixMultTransposedEXT(gpMatrixMultTransposedEXT, (C.GLenum)(mode), (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MatrixMultTransposefEXT(mode uint32, m *float32) {
 	C.glowMatrixMultTransposefEXT(gpMatrixMultTransposefEXT, (C.GLenum)(mode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixMultdEXT(mode uint32, m *float64) {
 	C.glowMatrixMultdEXT(gpMatrixMultdEXT, (C.GLenum)(mode), (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MatrixMultfEXT(mode uint32, m *float32) {
 	C.glowMatrixMultfEXT(gpMatrixMultfEXT, (C.GLenum)(mode), (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MatrixOrthoEXT(mode uint32, left float64, right float64, bottom float64, top float64, zNear float64, zFar float64) {
 	C.glowMatrixOrthoEXT(gpMatrixOrthoEXT, (C.GLenum)(mode), (C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
-
 func MatrixPopEXT(mode uint32) {
 	C.glowMatrixPopEXT(gpMatrixPopEXT, (C.GLenum)(mode))
 }
-
 func MatrixPushEXT(mode uint32) {
 	C.glowMatrixPushEXT(gpMatrixPushEXT, (C.GLenum)(mode))
 }
-
 func MatrixRotatedEXT(mode uint32, angle float64, x float64, y float64, z float64) {
 	C.glowMatrixRotatedEXT(gpMatrixRotatedEXT, (C.GLenum)(mode), (C.GLdouble)(angle), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func MatrixRotatefEXT(mode uint32, angle float32, x float32, y float32, z float32) {
 	C.glowMatrixRotatefEXT(gpMatrixRotatefEXT, (C.GLenum)(mode), (C.GLfloat)(angle), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func MatrixScaledEXT(mode uint32, x float64, y float64, z float64) {
 	C.glowMatrixScaledEXT(gpMatrixScaledEXT, (C.GLenum)(mode), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func MatrixScalefEXT(mode uint32, x float32, y float32, z float32) {
 	C.glowMatrixScalefEXT(gpMatrixScalefEXT, (C.GLenum)(mode), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func MatrixTranslatedEXT(mode uint32, x float64, y float64, z float64) {
 	C.glowMatrixTranslatedEXT(gpMatrixTranslatedEXT, (C.GLenum)(mode), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func MatrixTranslatefEXT(mode uint32, x float32, y float32, z float32) {
 	C.glowMatrixTranslatefEXT(gpMatrixTranslatefEXT, (C.GLenum)(mode), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func MaxShaderCompilerThreadsARB(count uint32) {
 	C.glowMaxShaderCompilerThreadsARB(gpMaxShaderCompilerThreadsARB, (C.GLuint)(count))
 }
-
 func MaxShaderCompilerThreadsKHR(count uint32) {
 	C.glowMaxShaderCompilerThreadsKHR(gpMaxShaderCompilerThreadsKHR, (C.GLuint)(count))
 }
@@ -25786,15 +24717,12 @@ func MaxShaderCompilerThreadsKHR(count uint32) {
 func MemoryBarrier(barriers uint32) {
 	C.glowMemoryBarrier(gpMemoryBarrier, (C.GLbitfield)(barriers))
 }
-
 func MemoryBarrierByRegion(barriers uint32) {
 	C.glowMemoryBarrierByRegion(gpMemoryBarrierByRegion, (C.GLbitfield)(barriers))
 }
-
 func MemoryBarrierEXT(barriers uint32) {
 	C.glowMemoryBarrierEXT(gpMemoryBarrierEXT, (C.GLbitfield)(barriers))
 }
-
 func MemoryObjectParameterivEXT(memoryObject uint32, pname uint32, params *int32) {
 	C.glowMemoryObjectParameterivEXT(gpMemoryObjectParameterivEXT, (C.GLuint)(memoryObject), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -25803,7 +24731,6 @@ func MemoryObjectParameterivEXT(memoryObject uint32, pname uint32, params *int32
 func MinSampleShading(value float32) {
 	C.glowMinSampleShading(gpMinSampleShading, (C.GLfloat)(value))
 }
-
 func MinSampleShadingARB(value float32) {
 	C.glowMinSampleShadingARB(gpMinSampleShadingARB, (C.GLfloat)(value))
 }
@@ -25812,39 +24739,30 @@ func MinSampleShadingARB(value float32) {
 func Minmax(target uint32, internalformat uint32, sink bool) {
 	C.glowMinmax(gpMinmax, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLboolean)(boolToInt(sink)))
 }
-
 func MinmaxEXT(target uint32, internalformat uint32, sink bool) {
 	C.glowMinmaxEXT(gpMinmaxEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLboolean)(boolToInt(sink)))
 }
-
 func MultMatrixd(m *float64) {
 	C.glowMultMatrixd(gpMultMatrixd, (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MultMatrixf(m *float32) {
 	C.glowMultMatrixf(gpMultMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MultMatrixxOES(m *int32) {
 	C.glowMultMatrixxOES(gpMultMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
 }
-
 func MultTransposeMatrixd(m *float64) {
 	C.glowMultTransposeMatrixd(gpMultTransposeMatrixd, (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MultTransposeMatrixdARB(m *float64) {
 	C.glowMultTransposeMatrixdARB(gpMultTransposeMatrixdARB, (*C.GLdouble)(unsafe.Pointer(m)))
 }
-
 func MultTransposeMatrixf(m *float32) {
 	C.glowMultTransposeMatrixf(gpMultTransposeMatrixf, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MultTransposeMatrixfARB(m *float32) {
 	C.glowMultTransposeMatrixfARB(gpMultTransposeMatrixfARB, (*C.GLfloat)(unsafe.Pointer(m)))
 }
-
 func MultTransposeMatrixxOES(m *int32) {
 	C.glowMultTransposeMatrixxOES(gpMultTransposeMatrixxOES, (*C.GLfixed)(unsafe.Pointer(m)))
 }
@@ -25853,7 +24771,6 @@ func MultTransposeMatrixxOES(m *int32) {
 func MultiDrawArrays(mode uint32, first *int32, count *int32, drawcount int32) {
 	C.glowMultiDrawArrays(gpMultiDrawArrays, (C.GLenum)(mode), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(drawcount))
 }
-
 func MultiDrawArraysEXT(mode uint32, first *int32, count *int32, primcount int32) {
 	C.glowMultiDrawArraysEXT(gpMultiDrawArraysEXT, (C.GLenum)(mode), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(primcount))
 }
@@ -25862,23 +24779,18 @@ func MultiDrawArraysEXT(mode uint32, first *int32, count *int32, primcount int32
 func MultiDrawArraysIndirect(mode uint32, indirect unsafe.Pointer, drawcount int32, stride int32) {
 	C.glowMultiDrawArraysIndirect(gpMultiDrawArraysIndirect, (C.GLenum)(mode), indirect, (C.GLsizei)(drawcount), (C.GLsizei)(stride))
 }
-
 func MultiDrawArraysIndirectAMD(mode uint32, indirect unsafe.Pointer, primcount int32, stride int32) {
 	C.glowMultiDrawArraysIndirectAMD(gpMultiDrawArraysIndirectAMD, (C.GLenum)(mode), indirect, (C.GLsizei)(primcount), (C.GLsizei)(stride))
 }
-
 func MultiDrawArraysIndirectBindlessCountNV(mode uint32, indirect unsafe.Pointer, drawCount int32, maxDrawCount int32, stride int32, vertexBufferCount int32) {
 	C.glowMultiDrawArraysIndirectBindlessCountNV(gpMultiDrawArraysIndirectBindlessCountNV, (C.GLenum)(mode), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(maxDrawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
 }
-
 func MultiDrawArraysIndirectBindlessNV(mode uint32, indirect unsafe.Pointer, drawCount int32, stride int32, vertexBufferCount int32) {
 	C.glowMultiDrawArraysIndirectBindlessNV(gpMultiDrawArraysIndirectBindlessNV, (C.GLenum)(mode), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
 }
-
 func MultiDrawArraysIndirectCountARB(mode uint32, indirect unsafe.Pointer, drawcount int, maxdrawcount int32, stride int32) {
 	C.glowMultiDrawArraysIndirectCountARB(gpMultiDrawArraysIndirectCountARB, (C.GLenum)(mode), indirect, (C.GLintptr)(drawcount), (C.GLsizei)(maxdrawcount), (C.GLsizei)(stride))
 }
-
 func MultiDrawElementArrayAPPLE(mode uint32, first *int32, count *int32, primcount int32) {
 	C.glowMultiDrawElementArrayAPPLE(gpMultiDrawElementArrayAPPLE, (C.GLenum)(mode), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(primcount))
 }
@@ -25892,7 +24804,6 @@ func MultiDrawElements(mode uint32, count *int32, xtype uint32, indices *unsafe.
 func MultiDrawElementsBaseVertex(mode uint32, count *int32, xtype uint32, indices *unsafe.Pointer, drawcount int32, basevertex *int32) {
 	C.glowMultiDrawElementsBaseVertex(gpMultiDrawElementsBaseVertex, (C.GLenum)(mode), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLenum)(xtype), indices, (C.GLsizei)(drawcount), (*C.GLint)(unsafe.Pointer(basevertex)))
 }
-
 func MultiDrawElementsEXT(mode uint32, count *int32, xtype uint32, indices *unsafe.Pointer, primcount int32) {
 	C.glowMultiDrawElementsEXT(gpMultiDrawElementsEXT, (C.GLenum)(mode), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLenum)(xtype), indices, (C.GLsizei)(primcount))
 }
@@ -25901,559 +24812,420 @@ func MultiDrawElementsEXT(mode uint32, count *int32, xtype uint32, indices *unsa
 func MultiDrawElementsIndirect(mode uint32, xtype uint32, indirect unsafe.Pointer, drawcount int32, stride int32) {
 	C.glowMultiDrawElementsIndirect(gpMultiDrawElementsIndirect, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(drawcount), (C.GLsizei)(stride))
 }
-
 func MultiDrawElementsIndirectAMD(mode uint32, xtype uint32, indirect unsafe.Pointer, primcount int32, stride int32) {
 	C.glowMultiDrawElementsIndirectAMD(gpMultiDrawElementsIndirectAMD, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(primcount), (C.GLsizei)(stride))
 }
-
 func MultiDrawElementsIndirectBindlessCountNV(mode uint32, xtype uint32, indirect unsafe.Pointer, drawCount int32, maxDrawCount int32, stride int32, vertexBufferCount int32) {
 	C.glowMultiDrawElementsIndirectBindlessCountNV(gpMultiDrawElementsIndirectBindlessCountNV, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(maxDrawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
 }
-
 func MultiDrawElementsIndirectBindlessNV(mode uint32, xtype uint32, indirect unsafe.Pointer, drawCount int32, stride int32, vertexBufferCount int32) {
 	C.glowMultiDrawElementsIndirectBindlessNV(gpMultiDrawElementsIndirectBindlessNV, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(drawCount), (C.GLsizei)(stride), (C.GLint)(vertexBufferCount))
 }
-
 func MultiDrawElementsIndirectCountARB(mode uint32, xtype uint32, indirect unsafe.Pointer, drawcount int, maxdrawcount int32, stride int32) {
 	C.glowMultiDrawElementsIndirectCountARB(gpMultiDrawElementsIndirectCountARB, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLintptr)(drawcount), (C.GLsizei)(maxdrawcount), (C.GLsizei)(stride))
 }
-
 func MultiDrawRangeElementArrayAPPLE(mode uint32, start uint32, end uint32, first *int32, count *int32, primcount int32) {
 	C.glowMultiDrawRangeElementArrayAPPLE(gpMultiDrawRangeElementArrayAPPLE, (C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(primcount))
 }
-
 func MultiModeDrawArraysIBM(mode *uint32, first *int32, count *int32, primcount int32, modestride int32) {
 	C.glowMultiModeDrawArraysIBM(gpMultiModeDrawArraysIBM, (*C.GLenum)(unsafe.Pointer(mode)), (*C.GLint)(unsafe.Pointer(first)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLsizei)(primcount), (C.GLint)(modestride))
 }
-
 func MultiModeDrawElementsIBM(mode *uint32, count *int32, xtype uint32, indices *unsafe.Pointer, primcount int32, modestride int32) {
 	C.glowMultiModeDrawElementsIBM(gpMultiModeDrawElementsIBM, (*C.GLenum)(unsafe.Pointer(mode)), (*C.GLsizei)(unsafe.Pointer(count)), (C.GLenum)(xtype), indices, (C.GLsizei)(primcount), (C.GLint)(modestride))
 }
-
 func MultiTexBufferEXT(texunit uint32, target uint32, internalformat uint32, buffer uint32) {
 	C.glowMultiTexBufferEXT(gpMultiTexBufferEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-
 func MultiTexCoord1bOES(texture uint32, s int8) {
 	C.glowMultiTexCoord1bOES(gpMultiTexCoord1bOES, (C.GLenum)(texture), (C.GLbyte)(s))
 }
-
 func MultiTexCoord1bvOES(texture uint32, coords *int8) {
 	C.glowMultiTexCoord1bvOES(gpMultiTexCoord1bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord1d(target uint32, s float64) {
 	C.glowMultiTexCoord1d(gpMultiTexCoord1d, (C.GLenum)(target), (C.GLdouble)(s))
 }
-
 func MultiTexCoord1dARB(target uint32, s float64) {
 	C.glowMultiTexCoord1dARB(gpMultiTexCoord1dARB, (C.GLenum)(target), (C.GLdouble)(s))
 }
-
 func MultiTexCoord1dv(target uint32, v *float64) {
 	C.glowMultiTexCoord1dv(gpMultiTexCoord1dv, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1dvARB(target uint32, v *float64) {
 	C.glowMultiTexCoord1dvARB(gpMultiTexCoord1dvARB, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1f(target uint32, s float32) {
 	C.glowMultiTexCoord1f(gpMultiTexCoord1f, (C.GLenum)(target), (C.GLfloat)(s))
 }
-
 func MultiTexCoord1fARB(target uint32, s float32) {
 	C.glowMultiTexCoord1fARB(gpMultiTexCoord1fARB, (C.GLenum)(target), (C.GLfloat)(s))
 }
-
 func MultiTexCoord1fv(target uint32, v *float32) {
 	C.glowMultiTexCoord1fv(gpMultiTexCoord1fv, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1fvARB(target uint32, v *float32) {
 	C.glowMultiTexCoord1fvARB(gpMultiTexCoord1fvARB, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1hNV(target uint32, s uint16) {
 	C.glowMultiTexCoord1hNV(gpMultiTexCoord1hNV, (C.GLenum)(target), (C.GLhalfNV)(s))
 }
-
 func MultiTexCoord1hvNV(target uint32, v *uint16) {
 	C.glowMultiTexCoord1hvNV(gpMultiTexCoord1hvNV, (C.GLenum)(target), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1i(target uint32, s int32) {
 	C.glowMultiTexCoord1i(gpMultiTexCoord1i, (C.GLenum)(target), (C.GLint)(s))
 }
-
 func MultiTexCoord1iARB(target uint32, s int32) {
 	C.glowMultiTexCoord1iARB(gpMultiTexCoord1iARB, (C.GLenum)(target), (C.GLint)(s))
 }
-
 func MultiTexCoord1iv(target uint32, v *int32) {
 	C.glowMultiTexCoord1iv(gpMultiTexCoord1iv, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1ivARB(target uint32, v *int32) {
 	C.glowMultiTexCoord1ivARB(gpMultiTexCoord1ivARB, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1s(target uint32, s int16) {
 	C.glowMultiTexCoord1s(gpMultiTexCoord1s, (C.GLenum)(target), (C.GLshort)(s))
 }
-
 func MultiTexCoord1sARB(target uint32, s int16) {
 	C.glowMultiTexCoord1sARB(gpMultiTexCoord1sARB, (C.GLenum)(target), (C.GLshort)(s))
 }
-
 func MultiTexCoord1sv(target uint32, v *int16) {
 	C.glowMultiTexCoord1sv(gpMultiTexCoord1sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1svARB(target uint32, v *int16) {
 	C.glowMultiTexCoord1svARB(gpMultiTexCoord1svARB, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord1xOES(texture uint32, s int32) {
 	C.glowMultiTexCoord1xOES(gpMultiTexCoord1xOES, (C.GLenum)(texture), (C.GLfixed)(s))
 }
-
 func MultiTexCoord1xvOES(texture uint32, coords *int32) {
 	C.glowMultiTexCoord1xvOES(gpMultiTexCoord1xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord2bOES(texture uint32, s int8, t int8) {
 	C.glowMultiTexCoord2bOES(gpMultiTexCoord2bOES, (C.GLenum)(texture), (C.GLbyte)(s), (C.GLbyte)(t))
 }
-
 func MultiTexCoord2bvOES(texture uint32, coords *int8) {
 	C.glowMultiTexCoord2bvOES(gpMultiTexCoord2bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord2d(target uint32, s float64, t float64) {
 	C.glowMultiTexCoord2d(gpMultiTexCoord2d, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t))
 }
-
 func MultiTexCoord2dARB(target uint32, s float64, t float64) {
 	C.glowMultiTexCoord2dARB(gpMultiTexCoord2dARB, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t))
 }
-
 func MultiTexCoord2dv(target uint32, v *float64) {
 	C.glowMultiTexCoord2dv(gpMultiTexCoord2dv, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2dvARB(target uint32, v *float64) {
 	C.glowMultiTexCoord2dvARB(gpMultiTexCoord2dvARB, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2f(target uint32, s float32, t float32) {
 	C.glowMultiTexCoord2f(gpMultiTexCoord2f, (C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t))
 }
-
 func MultiTexCoord2fARB(target uint32, s float32, t float32) {
 	C.glowMultiTexCoord2fARB(gpMultiTexCoord2fARB, (C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t))
 }
-
 func MultiTexCoord2fv(target uint32, v *float32) {
 	C.glowMultiTexCoord2fv(gpMultiTexCoord2fv, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2fvARB(target uint32, v *float32) {
 	C.glowMultiTexCoord2fvARB(gpMultiTexCoord2fvARB, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2hNV(target uint32, s uint16, t uint16) {
 	C.glowMultiTexCoord2hNV(gpMultiTexCoord2hNV, (C.GLenum)(target), (C.GLhalfNV)(s), (C.GLhalfNV)(t))
 }
-
 func MultiTexCoord2hvNV(target uint32, v *uint16) {
 	C.glowMultiTexCoord2hvNV(gpMultiTexCoord2hvNV, (C.GLenum)(target), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2i(target uint32, s int32, t int32) {
 	C.glowMultiTexCoord2i(gpMultiTexCoord2i, (C.GLenum)(target), (C.GLint)(s), (C.GLint)(t))
 }
-
 func MultiTexCoord2iARB(target uint32, s int32, t int32) {
 	C.glowMultiTexCoord2iARB(gpMultiTexCoord2iARB, (C.GLenum)(target), (C.GLint)(s), (C.GLint)(t))
 }
-
 func MultiTexCoord2iv(target uint32, v *int32) {
 	C.glowMultiTexCoord2iv(gpMultiTexCoord2iv, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2ivARB(target uint32, v *int32) {
 	C.glowMultiTexCoord2ivARB(gpMultiTexCoord2ivARB, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2s(target uint32, s int16, t int16) {
 	C.glowMultiTexCoord2s(gpMultiTexCoord2s, (C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t))
 }
-
 func MultiTexCoord2sARB(target uint32, s int16, t int16) {
 	C.glowMultiTexCoord2sARB(gpMultiTexCoord2sARB, (C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t))
 }
-
 func MultiTexCoord2sv(target uint32, v *int16) {
 	C.glowMultiTexCoord2sv(gpMultiTexCoord2sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2svARB(target uint32, v *int16) {
 	C.glowMultiTexCoord2svARB(gpMultiTexCoord2svARB, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord2xOES(texture uint32, s int32, t int32) {
 	C.glowMultiTexCoord2xOES(gpMultiTexCoord2xOES, (C.GLenum)(texture), (C.GLfixed)(s), (C.GLfixed)(t))
 }
-
 func MultiTexCoord2xvOES(texture uint32, coords *int32) {
 	C.glowMultiTexCoord2xvOES(gpMultiTexCoord2xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord3bOES(texture uint32, s int8, t int8, r int8) {
 	C.glowMultiTexCoord3bOES(gpMultiTexCoord3bOES, (C.GLenum)(texture), (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r))
 }
-
 func MultiTexCoord3bvOES(texture uint32, coords *int8) {
 	C.glowMultiTexCoord3bvOES(gpMultiTexCoord3bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord3d(target uint32, s float64, t float64, r float64) {
 	C.glowMultiTexCoord3d(gpMultiTexCoord3d, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
 }
-
 func MultiTexCoord3dARB(target uint32, s float64, t float64, r float64) {
 	C.glowMultiTexCoord3dARB(gpMultiTexCoord3dARB, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
 }
-
 func MultiTexCoord3dv(target uint32, v *float64) {
 	C.glowMultiTexCoord3dv(gpMultiTexCoord3dv, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3dvARB(target uint32, v *float64) {
 	C.glowMultiTexCoord3dvARB(gpMultiTexCoord3dvARB, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3f(target uint32, s float32, t float32, r float32) {
 	C.glowMultiTexCoord3f(gpMultiTexCoord3f, (C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r))
 }
-
 func MultiTexCoord3fARB(target uint32, s float32, t float32, r float32) {
 	C.glowMultiTexCoord3fARB(gpMultiTexCoord3fARB, (C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r))
 }
-
 func MultiTexCoord3fv(target uint32, v *float32) {
 	C.glowMultiTexCoord3fv(gpMultiTexCoord3fv, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3fvARB(target uint32, v *float32) {
 	C.glowMultiTexCoord3fvARB(gpMultiTexCoord3fvARB, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3hNV(target uint32, s uint16, t uint16, r uint16) {
 	C.glowMultiTexCoord3hNV(gpMultiTexCoord3hNV, (C.GLenum)(target), (C.GLhalfNV)(s), (C.GLhalfNV)(t), (C.GLhalfNV)(r))
 }
-
 func MultiTexCoord3hvNV(target uint32, v *uint16) {
 	C.glowMultiTexCoord3hvNV(gpMultiTexCoord3hvNV, (C.GLenum)(target), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3i(target uint32, s int32, t int32, r int32) {
 	C.glowMultiTexCoord3i(gpMultiTexCoord3i, (C.GLenum)(target), (C.GLint)(s), (C.GLint)(t), (C.GLint)(r))
 }
-
 func MultiTexCoord3iARB(target uint32, s int32, t int32, r int32) {
 	C.glowMultiTexCoord3iARB(gpMultiTexCoord3iARB, (C.GLenum)(target), (C.GLint)(s), (C.GLint)(t), (C.GLint)(r))
 }
-
 func MultiTexCoord3iv(target uint32, v *int32) {
 	C.glowMultiTexCoord3iv(gpMultiTexCoord3iv, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3ivARB(target uint32, v *int32) {
 	C.glowMultiTexCoord3ivARB(gpMultiTexCoord3ivARB, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3s(target uint32, s int16, t int16, r int16) {
 	C.glowMultiTexCoord3s(gpMultiTexCoord3s, (C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r))
 }
-
 func MultiTexCoord3sARB(target uint32, s int16, t int16, r int16) {
 	C.glowMultiTexCoord3sARB(gpMultiTexCoord3sARB, (C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r))
 }
-
 func MultiTexCoord3sv(target uint32, v *int16) {
 	C.glowMultiTexCoord3sv(gpMultiTexCoord3sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3svARB(target uint32, v *int16) {
 	C.glowMultiTexCoord3svARB(gpMultiTexCoord3svARB, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord3xOES(texture uint32, s int32, t int32, r int32) {
 	C.glowMultiTexCoord3xOES(gpMultiTexCoord3xOES, (C.GLenum)(texture), (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r))
 }
-
 func MultiTexCoord3xvOES(texture uint32, coords *int32) {
 	C.glowMultiTexCoord3xvOES(gpMultiTexCoord3xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord4bOES(texture uint32, s int8, t int8, r int8, q int8) {
 	C.glowMultiTexCoord4bOES(gpMultiTexCoord4bOES, (C.GLenum)(texture), (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r), (C.GLbyte)(q))
 }
-
 func MultiTexCoord4bvOES(texture uint32, coords *int8) {
 	C.glowMultiTexCoord4bvOES(gpMultiTexCoord4bvOES, (C.GLenum)(texture), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoord4d(target uint32, s float64, t float64, r float64, q float64) {
 	C.glowMultiTexCoord4d(gpMultiTexCoord4d, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
-
 func MultiTexCoord4dARB(target uint32, s float64, t float64, r float64, q float64) {
 	C.glowMultiTexCoord4dARB(gpMultiTexCoord4dARB, (C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
-
 func MultiTexCoord4dv(target uint32, v *float64) {
 	C.glowMultiTexCoord4dv(gpMultiTexCoord4dv, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4dvARB(target uint32, v *float64) {
 	C.glowMultiTexCoord4dvARB(gpMultiTexCoord4dvARB, (C.GLenum)(target), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4f(target uint32, s float32, t float32, r float32, q float32) {
 	C.glowMultiTexCoord4f(gpMultiTexCoord4f, (C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(q))
 }
-
 func MultiTexCoord4fARB(target uint32, s float32, t float32, r float32, q float32) {
 	C.glowMultiTexCoord4fARB(gpMultiTexCoord4fARB, (C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(q))
 }
-
 func MultiTexCoord4fv(target uint32, v *float32) {
 	C.glowMultiTexCoord4fv(gpMultiTexCoord4fv, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4fvARB(target uint32, v *float32) {
 	C.glowMultiTexCoord4fvARB(gpMultiTexCoord4fvARB, (C.GLenum)(target), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4hNV(target uint32, s uint16, t uint16, r uint16, q uint16) {
 	C.glowMultiTexCoord4hNV(gpMultiTexCoord4hNV, (C.GLenum)(target), (C.GLhalfNV)(s), (C.GLhalfNV)(t), (C.GLhalfNV)(r), (C.GLhalfNV)(q))
 }
-
 func MultiTexCoord4hvNV(target uint32, v *uint16) {
 	C.glowMultiTexCoord4hvNV(gpMultiTexCoord4hvNV, (C.GLenum)(target), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4i(target uint32, s int32, t int32, r int32, q int32) {
 	C.glowMultiTexCoord4i(gpMultiTexCoord4i, (C.GLenum)(target), (C.GLint)(s), (C.GLint)(t), (C.GLint)(r), (C.GLint)(q))
 }
-
 func MultiTexCoord4iARB(target uint32, s int32, t int32, r int32, q int32) {
 	C.glowMultiTexCoord4iARB(gpMultiTexCoord4iARB, (C.GLenum)(target), (C.GLint)(s), (C.GLint)(t), (C.GLint)(r), (C.GLint)(q))
 }
-
 func MultiTexCoord4iv(target uint32, v *int32) {
 	C.glowMultiTexCoord4iv(gpMultiTexCoord4iv, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4ivARB(target uint32, v *int32) {
 	C.glowMultiTexCoord4ivARB(gpMultiTexCoord4ivARB, (C.GLenum)(target), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4s(target uint32, s int16, t int16, r int16, q int16) {
 	C.glowMultiTexCoord4s(gpMultiTexCoord4s, (C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r), (C.GLshort)(q))
 }
-
 func MultiTexCoord4sARB(target uint32, s int16, t int16, r int16, q int16) {
 	C.glowMultiTexCoord4sARB(gpMultiTexCoord4sARB, (C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r), (C.GLshort)(q))
 }
-
 func MultiTexCoord4sv(target uint32, v *int16) {
 	C.glowMultiTexCoord4sv(gpMultiTexCoord4sv, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4svARB(target uint32, v *int16) {
 	C.glowMultiTexCoord4svARB(gpMultiTexCoord4svARB, (C.GLenum)(target), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func MultiTexCoord4xOES(texture uint32, s int32, t int32, r int32, q int32) {
 	C.glowMultiTexCoord4xOES(gpMultiTexCoord4xOES, (C.GLenum)(texture), (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r), (C.GLfixed)(q))
 }
-
 func MultiTexCoord4xvOES(texture uint32, coords *int32) {
 	C.glowMultiTexCoord4xvOES(gpMultiTexCoord4xvOES, (C.GLenum)(texture), (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoordP1ui(texture uint32, xtype uint32, coords uint32) {
 	C.glowMultiTexCoordP1ui(gpMultiTexCoordP1ui, (C.GLenum)(texture), (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func MultiTexCoordP1uiv(texture uint32, xtype uint32, coords *uint32) {
 	C.glowMultiTexCoordP1uiv(gpMultiTexCoordP1uiv, (C.GLenum)(texture), (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoordP2ui(texture uint32, xtype uint32, coords uint32) {
 	C.glowMultiTexCoordP2ui(gpMultiTexCoordP2ui, (C.GLenum)(texture), (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func MultiTexCoordP2uiv(texture uint32, xtype uint32, coords *uint32) {
 	C.glowMultiTexCoordP2uiv(gpMultiTexCoordP2uiv, (C.GLenum)(texture), (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoordP3ui(texture uint32, xtype uint32, coords uint32) {
 	C.glowMultiTexCoordP3ui(gpMultiTexCoordP3ui, (C.GLenum)(texture), (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func MultiTexCoordP3uiv(texture uint32, xtype uint32, coords *uint32) {
 	C.glowMultiTexCoordP3uiv(gpMultiTexCoordP3uiv, (C.GLenum)(texture), (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoordP4ui(texture uint32, xtype uint32, coords uint32) {
 	C.glowMultiTexCoordP4ui(gpMultiTexCoordP4ui, (C.GLenum)(texture), (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func MultiTexCoordP4uiv(texture uint32, xtype uint32, coords *uint32) {
 	C.glowMultiTexCoordP4uiv(gpMultiTexCoordP4uiv, (C.GLenum)(texture), (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func MultiTexCoordPointerEXT(texunit uint32, size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowMultiTexCoordPointerEXT(gpMultiTexCoordPointerEXT, (C.GLenum)(texunit), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func MultiTexEnvfEXT(texunit uint32, target uint32, pname uint32, param float32) {
 	C.glowMultiTexEnvfEXT(gpMultiTexEnvfEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func MultiTexEnvfvEXT(texunit uint32, target uint32, pname uint32, params *float32) {
 	C.glowMultiTexEnvfvEXT(gpMultiTexEnvfvEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func MultiTexEnviEXT(texunit uint32, target uint32, pname uint32, param int32) {
 	C.glowMultiTexEnviEXT(gpMultiTexEnviEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func MultiTexEnvivEXT(texunit uint32, target uint32, pname uint32, params *int32) {
 	C.glowMultiTexEnvivEXT(gpMultiTexEnvivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MultiTexGendEXT(texunit uint32, coord uint32, pname uint32, param float64) {
 	C.glowMultiTexGendEXT(gpMultiTexGendEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (C.GLdouble)(param))
 }
-
 func MultiTexGendvEXT(texunit uint32, coord uint32, pname uint32, params *float64) {
 	C.glowMultiTexGendvEXT(gpMultiTexGendvEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func MultiTexGenfEXT(texunit uint32, coord uint32, pname uint32, param float32) {
 	C.glowMultiTexGenfEXT(gpMultiTexGenfEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func MultiTexGenfvEXT(texunit uint32, coord uint32, pname uint32, params *float32) {
 	C.glowMultiTexGenfvEXT(gpMultiTexGenfvEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func MultiTexGeniEXT(texunit uint32, coord uint32, pname uint32, param int32) {
 	C.glowMultiTexGeniEXT(gpMultiTexGeniEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func MultiTexGenivEXT(texunit uint32, coord uint32, pname uint32, params *int32) {
 	C.glowMultiTexGenivEXT(gpMultiTexGenivEXT, (C.GLenum)(texunit), (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MultiTexImage1DEXT(texunit uint32, target uint32, level int32, internalformat int32, width int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowMultiTexImage1DEXT(gpMultiTexImage1DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func MultiTexImage2DEXT(texunit uint32, target uint32, level int32, internalformat int32, width int32, height int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowMultiTexImage2DEXT(gpMultiTexImage2DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func MultiTexImage3DEXT(texunit uint32, target uint32, level int32, internalformat int32, width int32, height int32, depth int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowMultiTexImage3DEXT(gpMultiTexImage3DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func MultiTexParameterIivEXT(texunit uint32, target uint32, pname uint32, params *int32) {
 	C.glowMultiTexParameterIivEXT(gpMultiTexParameterIivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MultiTexParameterIuivEXT(texunit uint32, target uint32, pname uint32, params *uint32) {
 	C.glowMultiTexParameterIuivEXT(gpMultiTexParameterIuivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func MultiTexParameterfEXT(texunit uint32, target uint32, pname uint32, param float32) {
 	C.glowMultiTexParameterfEXT(gpMultiTexParameterfEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func MultiTexParameterfvEXT(texunit uint32, target uint32, pname uint32, params *float32) {
 	C.glowMultiTexParameterfvEXT(gpMultiTexParameterfvEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func MultiTexParameteriEXT(texunit uint32, target uint32, pname uint32, param int32) {
 	C.glowMultiTexParameteriEXT(gpMultiTexParameteriEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func MultiTexParameterivEXT(texunit uint32, target uint32, pname uint32, params *int32) {
 	C.glowMultiTexParameterivEXT(gpMultiTexParameterivEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MultiTexRenderbufferEXT(texunit uint32, target uint32, renderbuffer uint32) {
 	C.glowMultiTexRenderbufferEXT(gpMultiTexRenderbufferEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLuint)(renderbuffer))
 }
-
 func MultiTexSubImage1DEXT(texunit uint32, target uint32, level int32, xoffset int32, width int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowMultiTexSubImage1DEXT(gpMultiTexSubImage1DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func MultiTexSubImage2DEXT(texunit uint32, target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowMultiTexSubImage2DEXT(gpMultiTexSubImage2DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func MultiTexSubImage3DEXT(texunit uint32, target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowMultiTexSubImage3DEXT(gpMultiTexSubImage3DEXT, (C.GLenum)(texunit), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func MulticastBarrierNV() {
 	C.glowMulticastBarrierNV(gpMulticastBarrierNV)
 }
-
 func MulticastBlitFramebufferNV(srcGpu uint32, dstGpu uint32, srcX0 int32, srcY0 int32, srcX1 int32, srcY1 int32, dstX0 int32, dstY0 int32, dstX1 int32, dstY1 int32, mask uint32, filter uint32) {
 	C.glowMulticastBlitFramebufferNV(gpMulticastBlitFramebufferNV, (C.GLuint)(srcGpu), (C.GLuint)(dstGpu), (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
-
 func MulticastBufferSubDataNV(gpuMask uint32, buffer uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowMulticastBufferSubDataNV(gpMulticastBufferSubDataNV, (C.GLbitfield)(gpuMask), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func MulticastCopyBufferSubDataNV(readGpu uint32, writeGpuMask uint32, readBuffer uint32, writeBuffer uint32, readOffset int, writeOffset int, size int) {
 	C.glowMulticastCopyBufferSubDataNV(gpMulticastCopyBufferSubDataNV, (C.GLuint)(readGpu), (C.GLbitfield)(writeGpuMask), (C.GLuint)(readBuffer), (C.GLuint)(writeBuffer), (C.GLintptr)(readOffset), (C.GLintptr)(writeOffset), (C.GLsizeiptr)(size))
 }
-
 func MulticastCopyImageSubDataNV(srcGpu uint32, dstGpuMask uint32, srcName uint32, srcTarget uint32, srcLevel int32, srcX int32, srcY int32, srcZ int32, dstName uint32, dstTarget uint32, dstLevel int32, dstX int32, dstY int32, dstZ int32, srcWidth int32, srcHeight int32, srcDepth int32) {
 	C.glowMulticastCopyImageSubDataNV(gpMulticastCopyImageSubDataNV, (C.GLuint)(srcGpu), (C.GLbitfield)(dstGpuMask), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(srcWidth), (C.GLsizei)(srcHeight), (C.GLsizei)(srcDepth))
 }
-
 func MulticastFramebufferSampleLocationsfvNV(gpu uint32, framebuffer uint32, start uint32, count int32, v *float32) {
 	C.glowMulticastFramebufferSampleLocationsfvNV(gpMulticastFramebufferSampleLocationsfvNV, (C.GLuint)(gpu), (C.GLuint)(framebuffer), (C.GLuint)(start), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func MulticastGetQueryObjecti64vNV(gpu uint32, id uint32, pname uint32, params *int64) {
 	C.glowMulticastGetQueryObjecti64vNV(gpMulticastGetQueryObjecti64vNV, (C.GLuint)(gpu), (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint64)(unsafe.Pointer(params)))
 }
-
 func MulticastGetQueryObjectivNV(gpu uint32, id uint32, pname uint32, params *int32) {
 	C.glowMulticastGetQueryObjectivNV(gpMulticastGetQueryObjectivNV, (C.GLuint)(gpu), (C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func MulticastGetQueryObjectui64vNV(gpu uint32, id uint32, pname uint32, params *uint64) {
 	C.glowMulticastGetQueryObjectui64vNV(gpMulticastGetQueryObjectui64vNV, (C.GLuint)(gpu), (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint64)(unsafe.Pointer(params)))
 }
-
 func MulticastGetQueryObjectuivNV(gpu uint32, id uint32, pname uint32, params *uint32) {
 	C.glowMulticastGetQueryObjectuivNV(gpMulticastGetQueryObjectuivNV, (C.GLuint)(gpu), (C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func MulticastWaitSyncNV(signalGpu uint32, waitGpuMask uint32) {
 	C.glowMulticastWaitSyncNV(gpMulticastWaitSyncNV, (C.GLuint)(signalGpu), (C.GLbitfield)(waitGpuMask))
 }
@@ -26462,15 +25234,12 @@ func MulticastWaitSyncNV(signalGpu uint32, waitGpuMask uint32) {
 func NamedBufferData(buffer uint32, size int, data unsafe.Pointer, usage uint32) {
 	C.glowNamedBufferData(gpNamedBufferData, (C.GLuint)(buffer), (C.GLsizeiptr)(size), data, (C.GLenum)(usage))
 }
-
 func NamedBufferDataEXT(buffer uint32, size int, data unsafe.Pointer, usage uint32) {
 	C.glowNamedBufferDataEXT(gpNamedBufferDataEXT, (C.GLuint)(buffer), (C.GLsizeiptr)(size), data, (C.GLenum)(usage))
 }
-
 func NamedBufferPageCommitmentARB(buffer uint32, offset int, size int, commit bool) {
 	C.glowNamedBufferPageCommitmentARB(gpNamedBufferPageCommitmentARB, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLboolean)(boolToInt(commit)))
 }
-
 func NamedBufferPageCommitmentEXT(buffer uint32, offset int, size int, commit bool) {
 	C.glowNamedBufferPageCommitmentEXT(gpNamedBufferPageCommitmentEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLboolean)(boolToInt(commit)))
 }
@@ -26479,7 +25248,6 @@ func NamedBufferPageCommitmentEXT(buffer uint32, offset int, size int, commit bo
 func NamedBufferStorage(buffer uint32, size int, data unsafe.Pointer, flags uint32) {
 	C.glowNamedBufferStorage(gpNamedBufferStorage, (C.GLuint)(buffer), (C.GLsizeiptr)(size), data, (C.GLbitfield)(flags))
 }
-
 func NamedBufferStorageEXT(buffer uint32, size int, data unsafe.Pointer, flags uint32) {
 	C.glowNamedBufferStorageEXT(gpNamedBufferStorageEXT, (C.GLuint)(buffer), (C.GLsizeiptr)(size), data, (C.GLbitfield)(flags))
 }
@@ -26488,7 +25256,6 @@ func NamedBufferStorageEXT(buffer uint32, size int, data unsafe.Pointer, flags u
 func NamedBufferStorageExternalEXT(buffer uint32, offset int, size int, clientBuffer unsafe.Pointer, flags uint32) {
 	C.glowNamedBufferStorageExternalEXT(gpNamedBufferStorageExternalEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLeglClientBufferEXT)(clientBuffer), (C.GLbitfield)(flags))
 }
-
 func NamedBufferStorageMemEXT(buffer uint32, size int, memory uint32, offset uint64) {
 	C.glowNamedBufferStorageMemEXT(gpNamedBufferStorageMemEXT, (C.GLuint)(buffer), (C.GLsizeiptr)(size), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
@@ -26497,11 +25264,9 @@ func NamedBufferStorageMemEXT(buffer uint32, size int, memory uint32, offset uin
 func NamedBufferSubData(buffer uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowNamedBufferSubData(gpNamedBufferSubData, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func NamedBufferSubDataEXT(buffer uint32, offset int, size int, data unsafe.Pointer) {
 	C.glowNamedBufferSubDataEXT(gpNamedBufferSubDataEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), data)
 }
-
 func NamedCopyBufferSubDataEXT(readBuffer uint32, writeBuffer uint32, readOffset int, writeOffset int, size int) {
 	C.glowNamedCopyBufferSubDataEXT(gpNamedCopyBufferSubDataEXT, (C.GLuint)(readBuffer), (C.GLuint)(writeBuffer), (C.GLintptr)(readOffset), (C.GLintptr)(writeOffset), (C.GLsizeiptr)(size))
 }
@@ -26520,7 +25285,6 @@ func NamedFramebufferDrawBuffers(framebuffer uint32, n int32, bufs *uint32) {
 func NamedFramebufferParameteri(framebuffer uint32, pname uint32, param int32) {
 	C.glowNamedFramebufferParameteri(gpNamedFramebufferParameteri, (C.GLuint)(framebuffer), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func NamedFramebufferParameteriEXT(framebuffer uint32, pname uint32, param int32) {
 	C.glowNamedFramebufferParameteriEXT(gpNamedFramebufferParameteriEXT, (C.GLuint)(framebuffer), (C.GLenum)(pname), (C.GLint)(param))
 }
@@ -26534,43 +25298,33 @@ func NamedFramebufferReadBuffer(framebuffer uint32, src uint32) {
 func NamedFramebufferRenderbuffer(framebuffer uint32, attachment uint32, renderbuffertarget uint32, renderbuffer uint32) {
 	C.glowNamedFramebufferRenderbuffer(gpNamedFramebufferRenderbuffer, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(renderbuffertarget), (C.GLuint)(renderbuffer))
 }
-
 func NamedFramebufferRenderbufferEXT(framebuffer uint32, attachment uint32, renderbuffertarget uint32, renderbuffer uint32) {
 	C.glowNamedFramebufferRenderbufferEXT(gpNamedFramebufferRenderbufferEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(renderbuffertarget), (C.GLuint)(renderbuffer))
 }
-
 func NamedFramebufferSampleLocationsfvARB(framebuffer uint32, start uint32, count int32, v *float32) {
 	C.glowNamedFramebufferSampleLocationsfvARB(gpNamedFramebufferSampleLocationsfvARB, (C.GLuint)(framebuffer), (C.GLuint)(start), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func NamedFramebufferSampleLocationsfvNV(framebuffer uint32, start uint32, count int32, v *float32) {
 	C.glowNamedFramebufferSampleLocationsfvNV(gpNamedFramebufferSampleLocationsfvNV, (C.GLuint)(framebuffer), (C.GLuint)(start), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func NamedFramebufferSamplePositionsfvAMD(framebuffer uint32, numsamples uint32, pixelindex uint32, values *float32) {
 	C.glowNamedFramebufferSamplePositionsfvAMD(gpNamedFramebufferSamplePositionsfvAMD, (C.GLuint)(framebuffer), (C.GLuint)(numsamples), (C.GLuint)(pixelindex), (*C.GLfloat)(unsafe.Pointer(values)))
 }
-
 func NamedFramebufferTexture(framebuffer uint32, attachment uint32, texture uint32, level int32) {
 	C.glowNamedFramebufferTexture(gpNamedFramebufferTexture, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func NamedFramebufferTexture1DEXT(framebuffer uint32, attachment uint32, textarget uint32, texture uint32, level int32) {
 	C.glowNamedFramebufferTexture1DEXT(gpNamedFramebufferTexture1DEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func NamedFramebufferTexture2DEXT(framebuffer uint32, attachment uint32, textarget uint32, texture uint32, level int32) {
 	C.glowNamedFramebufferTexture2DEXT(gpNamedFramebufferTexture2DEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func NamedFramebufferTexture3DEXT(framebuffer uint32, attachment uint32, textarget uint32, texture uint32, level int32, zoffset int32) {
 	C.glowNamedFramebufferTexture3DEXT(gpNamedFramebufferTexture3DEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(zoffset))
 }
-
 func NamedFramebufferTextureEXT(framebuffer uint32, attachment uint32, texture uint32, level int32) {
 	C.glowNamedFramebufferTextureEXT(gpNamedFramebufferTextureEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func NamedFramebufferTextureFaceEXT(framebuffer uint32, attachment uint32, texture uint32, level int32, face uint32) {
 	C.glowNamedFramebufferTextureFaceEXT(gpNamedFramebufferTextureFaceEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(face))
 }
@@ -26579,55 +25333,42 @@ func NamedFramebufferTextureFaceEXT(framebuffer uint32, attachment uint32, textu
 func NamedFramebufferTextureLayer(framebuffer uint32, attachment uint32, texture uint32, level int32, layer int32) {
 	C.glowNamedFramebufferTextureLayer(gpNamedFramebufferTextureLayer, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-
 func NamedFramebufferTextureLayerEXT(framebuffer uint32, attachment uint32, texture uint32, level int32, layer int32) {
 	C.glowNamedFramebufferTextureLayerEXT(gpNamedFramebufferTextureLayerEXT, (C.GLuint)(framebuffer), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-
 func NamedProgramLocalParameter4dEXT(program uint32, target uint32, index uint32, x float64, y float64, z float64, w float64) {
 	C.glowNamedProgramLocalParameter4dEXT(gpNamedProgramLocalParameter4dEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func NamedProgramLocalParameter4dvEXT(program uint32, target uint32, index uint32, params *float64) {
 	C.glowNamedProgramLocalParameter4dvEXT(gpNamedProgramLocalParameter4dvEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func NamedProgramLocalParameter4fEXT(program uint32, target uint32, index uint32, x float32, y float32, z float32, w float32) {
 	C.glowNamedProgramLocalParameter4fEXT(gpNamedProgramLocalParameter4fEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func NamedProgramLocalParameter4fvEXT(program uint32, target uint32, index uint32, params *float32) {
 	C.glowNamedProgramLocalParameter4fvEXT(gpNamedProgramLocalParameter4fvEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func NamedProgramLocalParameterI4iEXT(program uint32, target uint32, index uint32, x int32, y int32, z int32, w int32) {
 	C.glowNamedProgramLocalParameterI4iEXT(gpNamedProgramLocalParameterI4iEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func NamedProgramLocalParameterI4ivEXT(program uint32, target uint32, index uint32, params *int32) {
 	C.glowNamedProgramLocalParameterI4ivEXT(gpNamedProgramLocalParameterI4ivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func NamedProgramLocalParameterI4uiEXT(program uint32, target uint32, index uint32, x uint32, y uint32, z uint32, w uint32) {
 	C.glowNamedProgramLocalParameterI4uiEXT(gpNamedProgramLocalParameterI4uiEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z), (C.GLuint)(w))
 }
-
 func NamedProgramLocalParameterI4uivEXT(program uint32, target uint32, index uint32, params *uint32) {
 	C.glowNamedProgramLocalParameterI4uivEXT(gpNamedProgramLocalParameterI4uivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func NamedProgramLocalParameters4fvEXT(program uint32, target uint32, index uint32, count int32, params *float32) {
 	C.glowNamedProgramLocalParameters4fvEXT(gpNamedProgramLocalParameters4fvEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func NamedProgramLocalParametersI4ivEXT(program uint32, target uint32, index uint32, count int32, params *int32) {
 	C.glowNamedProgramLocalParametersI4ivEXT(gpNamedProgramLocalParametersI4ivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func NamedProgramLocalParametersI4uivEXT(program uint32, target uint32, index uint32, count int32, params *uint32) {
 	C.glowNamedProgramLocalParametersI4uivEXT(gpNamedProgramLocalParametersI4uivEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func NamedProgramStringEXT(program uint32, target uint32, format uint32, len int32, xstring unsafe.Pointer) {
 	C.glowNamedProgramStringEXT(gpNamedProgramStringEXT, (C.GLuint)(program), (C.GLenum)(target), (C.GLenum)(format), (C.GLsizei)(len), xstring)
 }
@@ -26636,7 +25377,6 @@ func NamedProgramStringEXT(program uint32, target uint32, format uint32, len int
 func NamedRenderbufferStorage(renderbuffer uint32, internalformat uint32, width int32, height int32) {
 	C.glowNamedRenderbufferStorage(gpNamedRenderbufferStorage, (C.GLuint)(renderbuffer), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func NamedRenderbufferStorageEXT(renderbuffer uint32, internalformat uint32, width int32, height int32) {
 	C.glowNamedRenderbufferStorageEXT(gpNamedRenderbufferStorageEXT, (C.GLuint)(renderbuffer), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -26645,15 +25385,12 @@ func NamedRenderbufferStorageEXT(renderbuffer uint32, internalformat uint32, wid
 func NamedRenderbufferStorageMultisample(renderbuffer uint32, samples int32, internalformat uint32, width int32, height int32) {
 	C.glowNamedRenderbufferStorageMultisample(gpNamedRenderbufferStorageMultisample, (C.GLuint)(renderbuffer), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func NamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer uint32, coverageSamples int32, colorSamples int32, internalformat uint32, width int32, height int32) {
 	C.glowNamedRenderbufferStorageMultisampleCoverageEXT(gpNamedRenderbufferStorageMultisampleCoverageEXT, (C.GLuint)(renderbuffer), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func NamedRenderbufferStorageMultisampleEXT(renderbuffer uint32, samples int32, internalformat uint32, width int32, height int32) {
 	C.glowNamedRenderbufferStorageMultisampleEXT(gpNamedRenderbufferStorageMultisampleEXT, (C.GLuint)(renderbuffer), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func NamedStringARB(xtype uint32, namelen int32, name *uint8, stringlen int32, xstring *uint8) {
 	C.glowNamedStringARB(gpNamedStringARB, (C.GLenum)(xtype), (C.GLint)(namelen), (*C.GLchar)(unsafe.Pointer(name)), (C.GLint)(stringlen), (*C.GLchar)(unsafe.Pointer(xstring)))
 }
@@ -26662,84 +25399,64 @@ func NamedStringARB(xtype uint32, namelen int32, name *uint8, stringlen int32, x
 func NewList(list uint32, mode uint32) {
 	C.glowNewList(gpNewList, (C.GLuint)(list), (C.GLenum)(mode))
 }
-
 func NewObjectBufferATI(size int32, pointer unsafe.Pointer, usage uint32) uint32 {
 	ret := C.glowNewObjectBufferATI(gpNewObjectBufferATI, (C.GLsizei)(size), pointer, (C.GLenum)(usage))
 	return (uint32)(ret)
 }
-
 func Normal3b(nx int8, ny int8, nz int8) {
 	C.glowNormal3b(gpNormal3b, (C.GLbyte)(nx), (C.GLbyte)(ny), (C.GLbyte)(nz))
 }
-
 func Normal3bv(v *int8) {
 	C.glowNormal3bv(gpNormal3bv, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func Normal3d(nx float64, ny float64, nz float64) {
 	C.glowNormal3d(gpNormal3d, (C.GLdouble)(nx), (C.GLdouble)(ny), (C.GLdouble)(nz))
 }
-
 func Normal3dv(v *float64) {
 	C.glowNormal3dv(gpNormal3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Normal3f(nx float32, ny float32, nz float32) {
 	C.glowNormal3f(gpNormal3f, (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz))
 }
-
 func Normal3fVertex3fSUN(nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowNormal3fVertex3fSUN(gpNormal3fVertex3fSUN, (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func Normal3fVertex3fvSUN(n *float32, v *float32) {
 	C.glowNormal3fVertex3fvSUN(gpNormal3fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Normal3fv(v *float32) {
 	C.glowNormal3fv(gpNormal3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Normal3hNV(nx uint16, ny uint16, nz uint16) {
 	C.glowNormal3hNV(gpNormal3hNV, (C.GLhalfNV)(nx), (C.GLhalfNV)(ny), (C.GLhalfNV)(nz))
 }
-
 func Normal3hvNV(v *uint16) {
 	C.glowNormal3hvNV(gpNormal3hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func Normal3i(nx int32, ny int32, nz int32) {
 	C.glowNormal3i(gpNormal3i, (C.GLint)(nx), (C.GLint)(ny), (C.GLint)(nz))
 }
-
 func Normal3iv(v *int32) {
 	C.glowNormal3iv(gpNormal3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Normal3s(nx int16, ny int16, nz int16) {
 	C.glowNormal3s(gpNormal3s, (C.GLshort)(nx), (C.GLshort)(ny), (C.GLshort)(nz))
 }
-
 func Normal3sv(v *int16) {
 	C.glowNormal3sv(gpNormal3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func Normal3xOES(nx int32, ny int32, nz int32) {
 	C.glowNormal3xOES(gpNormal3xOES, (C.GLfixed)(nx), (C.GLfixed)(ny), (C.GLfixed)(nz))
 }
-
 func Normal3xvOES(coords *int32) {
 	C.glowNormal3xvOES(gpNormal3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func NormalFormatNV(xtype uint32, stride int32) {
 	C.glowNormalFormatNV(gpNormalFormatNV, (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func NormalP3ui(xtype uint32, coords uint32) {
 	C.glowNormalP3ui(gpNormalP3ui, (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func NormalP3uiv(xtype uint32, coords *uint32) {
 	C.glowNormalP3uiv(gpNormalP3uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
@@ -26748,55 +25465,42 @@ func NormalP3uiv(xtype uint32, coords *uint32) {
 func NormalPointer(xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowNormalPointer(gpNormalPointer, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func NormalPointerEXT(xtype uint32, stride int32, count int32, pointer unsafe.Pointer) {
 	C.glowNormalPointerEXT(gpNormalPointerEXT, (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLsizei)(count), pointer)
 }
-
 func NormalPointerListIBM(xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowNormalPointerListIBM(gpNormalPointerListIBM, (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
-
 func NormalPointervINTEL(xtype uint32, pointer *unsafe.Pointer) {
 	C.glowNormalPointervINTEL(gpNormalPointervINTEL, (C.GLenum)(xtype), pointer)
 }
-
 func NormalStream3bATI(stream uint32, nx int8, ny int8, nz int8) {
 	C.glowNormalStream3bATI(gpNormalStream3bATI, (C.GLenum)(stream), (C.GLbyte)(nx), (C.GLbyte)(ny), (C.GLbyte)(nz))
 }
-
 func NormalStream3bvATI(stream uint32, coords *int8) {
 	C.glowNormalStream3bvATI(gpNormalStream3bvATI, (C.GLenum)(stream), (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func NormalStream3dATI(stream uint32, nx float64, ny float64, nz float64) {
 	C.glowNormalStream3dATI(gpNormalStream3dATI, (C.GLenum)(stream), (C.GLdouble)(nx), (C.GLdouble)(ny), (C.GLdouble)(nz))
 }
-
 func NormalStream3dvATI(stream uint32, coords *float64) {
 	C.glowNormalStream3dvATI(gpNormalStream3dvATI, (C.GLenum)(stream), (*C.GLdouble)(unsafe.Pointer(coords)))
 }
-
 func NormalStream3fATI(stream uint32, nx float32, ny float32, nz float32) {
 	C.glowNormalStream3fATI(gpNormalStream3fATI, (C.GLenum)(stream), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz))
 }
-
 func NormalStream3fvATI(stream uint32, coords *float32) {
 	C.glowNormalStream3fvATI(gpNormalStream3fvATI, (C.GLenum)(stream), (*C.GLfloat)(unsafe.Pointer(coords)))
 }
-
 func NormalStream3iATI(stream uint32, nx int32, ny int32, nz int32) {
 	C.glowNormalStream3iATI(gpNormalStream3iATI, (C.GLenum)(stream), (C.GLint)(nx), (C.GLint)(ny), (C.GLint)(nz))
 }
-
 func NormalStream3ivATI(stream uint32, coords *int32) {
 	C.glowNormalStream3ivATI(gpNormalStream3ivATI, (C.GLenum)(stream), (*C.GLint)(unsafe.Pointer(coords)))
 }
-
 func NormalStream3sATI(stream uint32, nx int16, ny int16, nz int16) {
 	C.glowNormalStream3sATI(gpNormalStream3sATI, (C.GLenum)(stream), (C.GLshort)(nx), (C.GLshort)(ny), (C.GLshort)(nz))
 }
-
 func NormalStream3svATI(stream uint32, coords *int16) {
 	C.glowNormalStream3svATI(gpNormalStream3svATI, (C.GLenum)(stream), (*C.GLshort)(unsafe.Pointer(coords)))
 }
@@ -26805,7 +25509,6 @@ func NormalStream3svATI(stream uint32, coords *int16) {
 func ObjectLabel(identifier uint32, name uint32, length int32, label *uint8) {
 	C.glowObjectLabel(gpObjectLabel, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func ObjectLabelKHR(identifier uint32, name uint32, length int32, label *uint8) {
 	C.glowObjectLabelKHR(gpObjectLabelKHR, (C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
@@ -26814,16 +25517,13 @@ func ObjectLabelKHR(identifier uint32, name uint32, length int32, label *uint8) 
 func ObjectPtrLabel(ptr unsafe.Pointer, length int32, label *uint8) {
 	C.glowObjectPtrLabel(gpObjectPtrLabel, ptr, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func ObjectPtrLabelKHR(ptr unsafe.Pointer, length int32, label *uint8) {
 	C.glowObjectPtrLabelKHR(gpObjectPtrLabelKHR, ptr, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(label)))
 }
-
 func ObjectPurgeableAPPLE(objectType uint32, name uint32, option uint32) uint32 {
 	ret := C.glowObjectPurgeableAPPLE(gpObjectPurgeableAPPLE, (C.GLenum)(objectType), (C.GLuint)(name), (C.GLenum)(option))
 	return (uint32)(ret)
 }
-
 func ObjectUnpurgeableAPPLE(objectType uint32, name uint32, option uint32) uint32 {
 	ret := C.glowObjectUnpurgeableAPPLE(gpObjectUnpurgeableAPPLE, (C.GLenum)(objectType), (C.GLuint)(name), (C.GLenum)(option))
 	return (uint32)(ret)
@@ -26833,23 +25533,18 @@ func ObjectUnpurgeableAPPLE(objectType uint32, name uint32, option uint32) uint3
 func Ortho(left float64, right float64, bottom float64, top float64, zNear float64, zFar float64) {
 	C.glowOrtho(gpOrtho, (C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
-
 func OrthofOES(l float32, r float32, b float32, t float32, n float32, f float32) {
 	C.glowOrthofOES(gpOrthofOES, (C.GLfloat)(l), (C.GLfloat)(r), (C.GLfloat)(b), (C.GLfloat)(t), (C.GLfloat)(n), (C.GLfloat)(f))
 }
-
 func OrthoxOES(l int32, r int32, b int32, t int32, n int32, f int32) {
 	C.glowOrthoxOES(gpOrthoxOES, (C.GLfixed)(l), (C.GLfixed)(r), (C.GLfixed)(b), (C.GLfixed)(t), (C.GLfixed)(n), (C.GLfixed)(f))
 }
-
 func PNTrianglesfATI(pname uint32, param float32) {
 	C.glowPNTrianglesfATI(gpPNTrianglesfATI, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PNTrianglesiATI(pname uint32, param int32) {
 	C.glowPNTrianglesiATI(gpPNTrianglesiATI, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PassTexCoordATI(dst uint32, coord uint32, swizzle uint32) {
 	C.glowPassTexCoordATI(gpPassTexCoordATI, (C.GLuint)(dst), (C.GLuint)(coord), (C.GLenum)(swizzle))
 }
@@ -26858,11 +25553,9 @@ func PassTexCoordATI(dst uint32, coord uint32, swizzle uint32) {
 func PassThrough(token float32) {
 	C.glowPassThrough(gpPassThrough, (C.GLfloat)(token))
 }
-
 func PassThroughxOES(token int32) {
 	C.glowPassThroughxOES(gpPassThroughxOES, (C.GLfixed)(token))
 }
-
 func PatchParameterfv(pname uint32, values *float32) {
 	C.glowPatchParameterfv(gpPatchParameterfv, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(values)))
 }
@@ -26871,90 +25564,69 @@ func PatchParameterfv(pname uint32, values *float32) {
 func PatchParameteri(pname uint32, value int32) {
 	C.glowPatchParameteri(gpPatchParameteri, (C.GLenum)(pname), (C.GLint)(value))
 }
-
 func PathColorGenNV(color uint32, genMode uint32, colorFormat uint32, coeffs *float32) {
 	C.glowPathColorGenNV(gpPathColorGenNV, (C.GLenum)(color), (C.GLenum)(genMode), (C.GLenum)(colorFormat), (*C.GLfloat)(unsafe.Pointer(coeffs)))
 }
-
 func PathCommandsNV(path uint32, numCommands int32, commands *uint8, numCoords int32, coordType uint32, coords unsafe.Pointer) {
 	C.glowPathCommandsNV(gpPathCommandsNV, (C.GLuint)(path), (C.GLsizei)(numCommands), (*C.GLubyte)(unsafe.Pointer(commands)), (C.GLsizei)(numCoords), (C.GLenum)(coordType), coords)
 }
-
 func PathCoordsNV(path uint32, numCoords int32, coordType uint32, coords unsafe.Pointer) {
 	C.glowPathCoordsNV(gpPathCoordsNV, (C.GLuint)(path), (C.GLsizei)(numCoords), (C.GLenum)(coordType), coords)
 }
-
 func PathCoverDepthFuncNV(xfunc uint32) {
 	C.glowPathCoverDepthFuncNV(gpPathCoverDepthFuncNV, (C.GLenum)(xfunc))
 }
-
 func PathDashArrayNV(path uint32, dashCount int32, dashArray *float32) {
 	C.glowPathDashArrayNV(gpPathDashArrayNV, (C.GLuint)(path), (C.GLsizei)(dashCount), (*C.GLfloat)(unsafe.Pointer(dashArray)))
 }
-
 func PathFogGenNV(genMode uint32) {
 	C.glowPathFogGenNV(gpPathFogGenNV, (C.GLenum)(genMode))
 }
-
 func PathGlyphIndexArrayNV(firstPathName uint32, fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, firstGlyphIndex uint32, numGlyphs int32, pathParameterTemplate uint32, emScale float32) uint32 {
 	ret := C.glowPathGlyphIndexArrayNV(gpPathGlyphIndexArrayNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLuint)(firstGlyphIndex), (C.GLsizei)(numGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
 	return (uint32)(ret)
 }
-
 func PathGlyphIndexRangeNV(fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, pathParameterTemplate uint32, emScale float32, baseAndCount *uint32) uint32 {
 	ret := C.glowPathGlyphIndexRangeNV(gpPathGlyphIndexRangeNV, (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale), (*C.GLuint)(unsafe.Pointer(baseAndCount)))
 	return (uint32)(ret)
 }
-
 func PathGlyphRangeNV(firstPathName uint32, fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, firstGlyph uint32, numGlyphs int32, handleMissingGlyphs uint32, pathParameterTemplate uint32, emScale float32) {
 	C.glowPathGlyphRangeNV(gpPathGlyphRangeNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLuint)(firstGlyph), (C.GLsizei)(numGlyphs), (C.GLenum)(handleMissingGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
 }
-
 func PathGlyphsNV(firstPathName uint32, fontTarget uint32, fontName unsafe.Pointer, fontStyle uint32, numGlyphs int32, xtype uint32, charcodes unsafe.Pointer, handleMissingGlyphs uint32, pathParameterTemplate uint32, emScale float32) {
 	C.glowPathGlyphsNV(gpPathGlyphsNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), fontName, (C.GLbitfield)(fontStyle), (C.GLsizei)(numGlyphs), (C.GLenum)(xtype), charcodes, (C.GLenum)(handleMissingGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
 }
-
 func PathMemoryGlyphIndexArrayNV(firstPathName uint32, fontTarget uint32, fontSize int, fontData unsafe.Pointer, faceIndex int32, firstGlyphIndex uint32, numGlyphs int32, pathParameterTemplate uint32, emScale float32) uint32 {
 	ret := C.glowPathMemoryGlyphIndexArrayNV(gpPathMemoryGlyphIndexArrayNV, (C.GLuint)(firstPathName), (C.GLenum)(fontTarget), (C.GLsizeiptr)(fontSize), fontData, (C.GLsizei)(faceIndex), (C.GLuint)(firstGlyphIndex), (C.GLsizei)(numGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
 	return (uint32)(ret)
 }
-
 func PathParameterfNV(path uint32, pname uint32, value float32) {
 	C.glowPathParameterfNV(gpPathParameterfNV, (C.GLuint)(path), (C.GLenum)(pname), (C.GLfloat)(value))
 }
-
 func PathParameterfvNV(path uint32, pname uint32, value *float32) {
 	C.glowPathParameterfvNV(gpPathParameterfvNV, (C.GLuint)(path), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func PathParameteriNV(path uint32, pname uint32, value int32) {
 	C.glowPathParameteriNV(gpPathParameteriNV, (C.GLuint)(path), (C.GLenum)(pname), (C.GLint)(value))
 }
-
 func PathParameterivNV(path uint32, pname uint32, value *int32) {
 	C.glowPathParameterivNV(gpPathParameterivNV, (C.GLuint)(path), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func PathStencilDepthOffsetNV(factor float32, units float32) {
 	C.glowPathStencilDepthOffsetNV(gpPathStencilDepthOffsetNV, (C.GLfloat)(factor), (C.GLfloat)(units))
 }
-
 func PathStencilFuncNV(xfunc uint32, ref int32, mask uint32) {
 	C.glowPathStencilFuncNV(gpPathStencilFuncNV, (C.GLenum)(xfunc), (C.GLint)(ref), (C.GLuint)(mask))
 }
-
 func PathStringNV(path uint32, format uint32, length int32, pathString unsafe.Pointer) {
 	C.glowPathStringNV(gpPathStringNV, (C.GLuint)(path), (C.GLenum)(format), (C.GLsizei)(length), pathString)
 }
-
 func PathSubCommandsNV(path uint32, commandStart int32, commandsToDelete int32, numCommands int32, commands *uint8, numCoords int32, coordType uint32, coords unsafe.Pointer) {
 	C.glowPathSubCommandsNV(gpPathSubCommandsNV, (C.GLuint)(path), (C.GLsizei)(commandStart), (C.GLsizei)(commandsToDelete), (C.GLsizei)(numCommands), (*C.GLubyte)(unsafe.Pointer(commands)), (C.GLsizei)(numCoords), (C.GLenum)(coordType), coords)
 }
-
 func PathSubCoordsNV(path uint32, coordStart int32, numCoords int32, coordType uint32, coords unsafe.Pointer) {
 	C.glowPathSubCoordsNV(gpPathSubCoordsNV, (C.GLuint)(path), (C.GLsizei)(coordStart), (C.GLsizei)(numCoords), (C.GLenum)(coordType), coords)
 }
-
 func PathTexGenNV(texCoordSet uint32, genMode uint32, components int32, coeffs *float32) {
 	C.glowPathTexGenNV(gpPathTexGenNV, (C.GLenum)(texCoordSet), (C.GLenum)(genMode), (C.GLint)(components), (*C.GLfloat)(unsafe.Pointer(coeffs)))
 }
@@ -26963,31 +25635,24 @@ func PathTexGenNV(texCoordSet uint32, genMode uint32, components int32, coeffs *
 func PauseTransformFeedback() {
 	C.glowPauseTransformFeedback(gpPauseTransformFeedback)
 }
-
 func PauseTransformFeedbackNV() {
 	C.glowPauseTransformFeedbackNV(gpPauseTransformFeedbackNV)
 }
-
 func PixelDataRangeNV(target uint32, length int32, pointer unsafe.Pointer) {
 	C.glowPixelDataRangeNV(gpPixelDataRangeNV, (C.GLenum)(target), (C.GLsizei)(length), pointer)
 }
-
 func PixelMapfv(xmap uint32, mapsize int32, values *float32) {
 	C.glowPixelMapfv(gpPixelMapfv, (C.GLenum)(xmap), (C.GLsizei)(mapsize), (*C.GLfloat)(unsafe.Pointer(values)))
 }
-
 func PixelMapuiv(xmap uint32, mapsize int32, values *uint32) {
 	C.glowPixelMapuiv(gpPixelMapuiv, (C.GLenum)(xmap), (C.GLsizei)(mapsize), (*C.GLuint)(unsafe.Pointer(values)))
 }
-
 func PixelMapusv(xmap uint32, mapsize int32, values *uint16) {
 	C.glowPixelMapusv(gpPixelMapusv, (C.GLenum)(xmap), (C.GLsizei)(mapsize), (*C.GLushort)(unsafe.Pointer(values)))
 }
-
 func PixelMapx(xmap uint32, size int32, values *int32) {
 	C.glowPixelMapx(gpPixelMapx, (C.GLenum)(xmap), (C.GLint)(size), (*C.GLfixed)(unsafe.Pointer(values)))
 }
-
 func PixelStoref(pname uint32, param float32) {
 	C.glowPixelStoref(gpPixelStoref, (C.GLenum)(pname), (C.GLfloat)(param))
 }
@@ -26996,55 +25661,42 @@ func PixelStoref(pname uint32, param float32) {
 func PixelStorei(pname uint32, param int32) {
 	C.glowPixelStorei(gpPixelStorei, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PixelStorex(pname uint32, param int32) {
 	C.glowPixelStorex(gpPixelStorex, (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func PixelTexGenParameterfSGIS(pname uint32, param float32) {
 	C.glowPixelTexGenParameterfSGIS(gpPixelTexGenParameterfSGIS, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PixelTexGenParameterfvSGIS(pname uint32, params *float32) {
 	C.glowPixelTexGenParameterfvSGIS(gpPixelTexGenParameterfvSGIS, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func PixelTexGenParameteriSGIS(pname uint32, param int32) {
 	C.glowPixelTexGenParameteriSGIS(gpPixelTexGenParameteriSGIS, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PixelTexGenParameterivSGIS(pname uint32, params *int32) {
 	C.glowPixelTexGenParameterivSGIS(gpPixelTexGenParameterivSGIS, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func PixelTexGenSGIX(mode uint32) {
 	C.glowPixelTexGenSGIX(gpPixelTexGenSGIX, (C.GLenum)(mode))
 }
-
 func PixelTransferf(pname uint32, param float32) {
 	C.glowPixelTransferf(gpPixelTransferf, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PixelTransferi(pname uint32, param int32) {
 	C.glowPixelTransferi(gpPixelTransferi, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PixelTransferxOES(pname uint32, param int32) {
 	C.glowPixelTransferxOES(gpPixelTransferxOES, (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func PixelTransformParameterfEXT(target uint32, pname uint32, param float32) {
 	C.glowPixelTransformParameterfEXT(gpPixelTransformParameterfEXT, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PixelTransformParameterfvEXT(target uint32, pname uint32, params *float32) {
 	C.glowPixelTransformParameterfvEXT(gpPixelTransformParameterfvEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func PixelTransformParameteriEXT(target uint32, pname uint32, param int32) {
 	C.glowPixelTransformParameteriEXT(gpPixelTransformParameteriEXT, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PixelTransformParameterivEXT(target uint32, pname uint32, params *int32) {
 	C.glowPixelTransformParameterivEXT(gpPixelTransformParameterivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -27053,68 +25705,52 @@ func PixelTransformParameterivEXT(target uint32, pname uint32, params *int32) {
 func PixelZoom(xfactor float32, yfactor float32) {
 	C.glowPixelZoom(gpPixelZoom, (C.GLfloat)(xfactor), (C.GLfloat)(yfactor))
 }
-
 func PixelZoomxOES(xfactor int32, yfactor int32) {
 	C.glowPixelZoomxOES(gpPixelZoomxOES, (C.GLfixed)(xfactor), (C.GLfixed)(yfactor))
 }
-
 func PointAlongPathNV(path uint32, startSegment int32, numSegments int32, distance float32, x *float32, y *float32, tangentX *float32, tangentY *float32) bool {
 	ret := C.glowPointAlongPathNV(gpPointAlongPathNV, (C.GLuint)(path), (C.GLsizei)(startSegment), (C.GLsizei)(numSegments), (C.GLfloat)(distance), (*C.GLfloat)(unsafe.Pointer(x)), (*C.GLfloat)(unsafe.Pointer(y)), (*C.GLfloat)(unsafe.Pointer(tangentX)), (*C.GLfloat)(unsafe.Pointer(tangentY)))
 	return ret == TRUE
 }
-
 func PointParameterf(pname uint32, param float32) {
 	C.glowPointParameterf(gpPointParameterf, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PointParameterfARB(pname uint32, param float32) {
 	C.glowPointParameterfARB(gpPointParameterfARB, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PointParameterfEXT(pname uint32, param float32) {
 	C.glowPointParameterfEXT(gpPointParameterfEXT, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PointParameterfSGIS(pname uint32, param float32) {
 	C.glowPointParameterfSGIS(gpPointParameterfSGIS, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func PointParameterfv(pname uint32, params *float32) {
 	C.glowPointParameterfv(gpPointParameterfv, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func PointParameterfvARB(pname uint32, params *float32) {
 	C.glowPointParameterfvARB(gpPointParameterfvARB, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func PointParameterfvEXT(pname uint32, params *float32) {
 	C.glowPointParameterfvEXT(gpPointParameterfvEXT, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func PointParameterfvSGIS(pname uint32, params *float32) {
 	C.glowPointParameterfvSGIS(gpPointParameterfvSGIS, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func PointParameteri(pname uint32, param int32) {
 	C.glowPointParameteri(gpPointParameteri, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PointParameteriNV(pname uint32, param int32) {
 	C.glowPointParameteriNV(gpPointParameteriNV, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func PointParameteriv(pname uint32, params *int32) {
 	C.glowPointParameteriv(gpPointParameteriv, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func PointParameterivNV(pname uint32, params *int32) {
 	C.glowPointParameterivNV(gpPointParameterivNV, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func PointParameterxOES(pname uint32, param int32) {
 	C.glowPointParameterxOES(gpPointParameterxOES, (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func PointParameterxvOES(pname uint32, params *int32) {
 	C.glowPointParameterxvOES(gpPointParameterxvOES, (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
@@ -27123,16 +25759,13 @@ func PointParameterxvOES(pname uint32, params *int32) {
 func PointSize(size float32) {
 	C.glowPointSize(gpPointSize, (C.GLfloat)(size))
 }
-
 func PointSizexOES(size int32) {
 	C.glowPointSizexOES(gpPointSizexOES, (C.GLfixed)(size))
 }
-
 func PollAsyncSGIX(markerp *uint32) int32 {
 	ret := C.glowPollAsyncSGIX(gpPollAsyncSGIX, (*C.GLuint)(unsafe.Pointer(markerp)))
 	return (int32)(ret)
 }
-
 func PollInstrumentsSGIX(marker_p *int32) int32 {
 	ret := C.glowPollInstrumentsSGIX(gpPollInstrumentsSGIX, (*C.GLint)(unsafe.Pointer(marker_p)))
 	return (int32)(ret)
@@ -27147,19 +25780,15 @@ func PolygonMode(face uint32, mode uint32) {
 func PolygonOffset(factor float32, units float32) {
 	C.glowPolygonOffset(gpPolygonOffset, (C.GLfloat)(factor), (C.GLfloat)(units))
 }
-
 func PolygonOffsetClamp(factor float32, units float32, clamp float32) {
 	C.glowPolygonOffsetClamp(gpPolygonOffsetClamp, (C.GLfloat)(factor), (C.GLfloat)(units), (C.GLfloat)(clamp))
 }
-
 func PolygonOffsetClampEXT(factor float32, units float32, clamp float32) {
 	C.glowPolygonOffsetClampEXT(gpPolygonOffsetClampEXT, (C.GLfloat)(factor), (C.GLfloat)(units), (C.GLfloat)(clamp))
 }
-
 func PolygonOffsetEXT(factor float32, bias float32) {
 	C.glowPolygonOffsetEXT(gpPolygonOffsetEXT, (C.GLfloat)(factor), (C.GLfloat)(bias))
 }
-
 func PolygonOffsetxOES(factor int32, units int32) {
 	C.glowPolygonOffsetxOES(gpPolygonOffsetxOES, (C.GLfixed)(factor), (C.GLfixed)(units))
 }
@@ -27168,11 +25797,9 @@ func PolygonOffsetxOES(factor int32, units int32) {
 func PolygonStipple(mask *uint8) {
 	C.glowPolygonStipple(gpPolygonStipple, (*C.GLubyte)(unsafe.Pointer(mask)))
 }
-
 func PopAttrib() {
 	C.glowPopAttrib(gpPopAttrib)
 }
-
 func PopClientAttrib() {
 	C.glowPopClientAttrib(gpPopClientAttrib)
 }
@@ -27181,31 +25808,24 @@ func PopClientAttrib() {
 func PopDebugGroup() {
 	C.glowPopDebugGroup(gpPopDebugGroup)
 }
-
 func PopDebugGroupKHR() {
 	C.glowPopDebugGroupKHR(gpPopDebugGroupKHR)
 }
-
 func PopGroupMarkerEXT() {
 	C.glowPopGroupMarkerEXT(gpPopGroupMarkerEXT)
 }
-
 func PopMatrix() {
 	C.glowPopMatrix(gpPopMatrix)
 }
-
 func PopName() {
 	C.glowPopName(gpPopName)
 }
-
 func PresentFrameDualFillNV(video_slot uint32, minPresentTime uint64, beginPresentTimeId uint32, presentDurationId uint32, xtype uint32, target0 uint32, fill0 uint32, target1 uint32, fill1 uint32, target2 uint32, fill2 uint32, target3 uint32, fill3 uint32) {
 	C.glowPresentFrameDualFillNV(gpPresentFrameDualFillNV, (C.GLuint)(video_slot), (C.GLuint64EXT)(minPresentTime), (C.GLuint)(beginPresentTimeId), (C.GLuint)(presentDurationId), (C.GLenum)(xtype), (C.GLenum)(target0), (C.GLuint)(fill0), (C.GLenum)(target1), (C.GLuint)(fill1), (C.GLenum)(target2), (C.GLuint)(fill2), (C.GLenum)(target3), (C.GLuint)(fill3))
 }
-
 func PresentFrameKeyedNV(video_slot uint32, minPresentTime uint64, beginPresentTimeId uint32, presentDurationId uint32, xtype uint32, target0 uint32, fill0 uint32, key0 uint32, target1 uint32, fill1 uint32, key1 uint32) {
 	C.glowPresentFrameKeyedNV(gpPresentFrameKeyedNV, (C.GLuint)(video_slot), (C.GLuint64EXT)(minPresentTime), (C.GLuint)(beginPresentTimeId), (C.GLuint)(presentDurationId), (C.GLenum)(xtype), (C.GLenum)(target0), (C.GLuint)(fill0), (C.GLuint)(key0), (C.GLenum)(target1), (C.GLuint)(fill1), (C.GLuint)(key1))
 }
-
 func PrimitiveBoundingBoxARB(minX float32, minY float32, minZ float32, minW float32, maxX float32, maxY float32, maxZ float32, maxW float32) {
 	C.glowPrimitiveBoundingBoxARB(gpPrimitiveBoundingBoxARB, (C.GLfloat)(minX), (C.GLfloat)(minY), (C.GLfloat)(minZ), (C.GLfloat)(minW), (C.GLfloat)(maxX), (C.GLfloat)(maxY), (C.GLfloat)(maxZ), (C.GLfloat)(maxW))
 }
@@ -27214,11 +25834,9 @@ func PrimitiveBoundingBoxARB(minX float32, minY float32, minZ float32, minW floa
 func PrimitiveRestartIndex(index uint32) {
 	C.glowPrimitiveRestartIndex(gpPrimitiveRestartIndex, (C.GLuint)(index))
 }
-
 func PrimitiveRestartIndexNV(index uint32) {
 	C.glowPrimitiveRestartIndexNV(gpPrimitiveRestartIndexNV, (C.GLuint)(index))
 }
-
 func PrimitiveRestartNV() {
 	C.glowPrimitiveRestartNV(gpPrimitiveRestartNV)
 }
@@ -27227,11 +25845,9 @@ func PrimitiveRestartNV() {
 func PrioritizeTextures(n int32, textures *uint32, priorities *float32) {
 	C.glowPrioritizeTextures(gpPrioritizeTextures, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLfloat)(unsafe.Pointer(priorities)))
 }
-
 func PrioritizeTexturesEXT(n int32, textures *uint32, priorities *float32) {
 	C.glowPrioritizeTexturesEXT(gpPrioritizeTexturesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLclampf)(unsafe.Pointer(priorities)))
 }
-
 func PrioritizeTexturesxOES(n int32, textures *uint32, priorities *int32) {
 	C.glowPrioritizeTexturesxOES(gpPrioritizeTexturesxOES, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLfixed)(unsafe.Pointer(priorities)))
 }
@@ -27240,135 +25856,102 @@ func PrioritizeTexturesxOES(n int32, textures *uint32, priorities *int32) {
 func ProgramBinary(program uint32, binaryFormat uint32, binary unsafe.Pointer, length int32) {
 	C.glowProgramBinary(gpProgramBinary, (C.GLuint)(program), (C.GLenum)(binaryFormat), binary, (C.GLsizei)(length))
 }
-
 func ProgramBufferParametersIivNV(target uint32, bindingIndex uint32, wordIndex uint32, count int32, params *int32) {
 	C.glowProgramBufferParametersIivNV(gpProgramBufferParametersIivNV, (C.GLenum)(target), (C.GLuint)(bindingIndex), (C.GLuint)(wordIndex), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ProgramBufferParametersIuivNV(target uint32, bindingIndex uint32, wordIndex uint32, count int32, params *uint32) {
 	C.glowProgramBufferParametersIuivNV(gpProgramBufferParametersIuivNV, (C.GLenum)(target), (C.GLuint)(bindingIndex), (C.GLuint)(wordIndex), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func ProgramBufferParametersfvNV(target uint32, bindingIndex uint32, wordIndex uint32, count int32, params *float32) {
 	C.glowProgramBufferParametersfvNV(gpProgramBufferParametersfvNV, (C.GLenum)(target), (C.GLuint)(bindingIndex), (C.GLuint)(wordIndex), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParameter4dARB(target uint32, index uint32, x float64, y float64, z float64, w float64) {
 	C.glowProgramEnvParameter4dARB(gpProgramEnvParameter4dARB, (C.GLenum)(target), (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func ProgramEnvParameter4dvARB(target uint32, index uint32, params *float64) {
 	C.glowProgramEnvParameter4dvARB(gpProgramEnvParameter4dvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParameter4fARB(target uint32, index uint32, x float32, y float32, z float32, w float32) {
 	C.glowProgramEnvParameter4fARB(gpProgramEnvParameter4fARB, (C.GLenum)(target), (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func ProgramEnvParameter4fvARB(target uint32, index uint32, params *float32) {
 	C.glowProgramEnvParameter4fvARB(gpProgramEnvParameter4fvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParameterI4iNV(target uint32, index uint32, x int32, y int32, z int32, w int32) {
 	C.glowProgramEnvParameterI4iNV(gpProgramEnvParameterI4iNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func ProgramEnvParameterI4ivNV(target uint32, index uint32, params *int32) {
 	C.glowProgramEnvParameterI4ivNV(gpProgramEnvParameterI4ivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParameterI4uiNV(target uint32, index uint32, x uint32, y uint32, z uint32, w uint32) {
 	C.glowProgramEnvParameterI4uiNV(gpProgramEnvParameterI4uiNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z), (C.GLuint)(w))
 }
-
 func ProgramEnvParameterI4uivNV(target uint32, index uint32, params *uint32) {
 	C.glowProgramEnvParameterI4uivNV(gpProgramEnvParameterI4uivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParameters4fvEXT(target uint32, index uint32, count int32, params *float32) {
 	C.glowProgramEnvParameters4fvEXT(gpProgramEnvParameters4fvEXT, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParametersI4ivNV(target uint32, index uint32, count int32, params *int32) {
 	C.glowProgramEnvParametersI4ivNV(gpProgramEnvParametersI4ivNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ProgramEnvParametersI4uivNV(target uint32, index uint32, count int32, params *uint32) {
 	C.glowProgramEnvParametersI4uivNV(gpProgramEnvParametersI4uivNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParameter4dARB(target uint32, index uint32, x float64, y float64, z float64, w float64) {
 	C.glowProgramLocalParameter4dARB(gpProgramLocalParameter4dARB, (C.GLenum)(target), (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func ProgramLocalParameter4dvARB(target uint32, index uint32, params *float64) {
 	C.glowProgramLocalParameter4dvARB(gpProgramLocalParameter4dvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParameter4fARB(target uint32, index uint32, x float32, y float32, z float32, w float32) {
 	C.glowProgramLocalParameter4fARB(gpProgramLocalParameter4fARB, (C.GLenum)(target), (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func ProgramLocalParameter4fvARB(target uint32, index uint32, params *float32) {
 	C.glowProgramLocalParameter4fvARB(gpProgramLocalParameter4fvARB, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParameterI4iNV(target uint32, index uint32, x int32, y int32, z int32, w int32) {
 	C.glowProgramLocalParameterI4iNV(gpProgramLocalParameterI4iNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func ProgramLocalParameterI4ivNV(target uint32, index uint32, params *int32) {
 	C.glowProgramLocalParameterI4ivNV(gpProgramLocalParameterI4ivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParameterI4uiNV(target uint32, index uint32, x uint32, y uint32, z uint32, w uint32) {
 	C.glowProgramLocalParameterI4uiNV(gpProgramLocalParameterI4uiNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z), (C.GLuint)(w))
 }
-
 func ProgramLocalParameterI4uivNV(target uint32, index uint32, params *uint32) {
 	C.glowProgramLocalParameterI4uivNV(gpProgramLocalParameterI4uivNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParameters4fvEXT(target uint32, index uint32, count int32, params *float32) {
 	C.glowProgramLocalParameters4fvEXT(gpProgramLocalParameters4fvEXT, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParametersI4ivNV(target uint32, index uint32, count int32, params *int32) {
 	C.glowProgramLocalParametersI4ivNV(gpProgramLocalParametersI4ivNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func ProgramLocalParametersI4uivNV(target uint32, index uint32, count int32, params *uint32) {
 	C.glowProgramLocalParametersI4uivNV(gpProgramLocalParametersI4uivNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func ProgramNamedParameter4dNV(id uint32, len int32, name *uint8, x float64, y float64, z float64, w float64) {
 	C.glowProgramNamedParameter4dNV(gpProgramNamedParameter4dNV, (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(name)), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func ProgramNamedParameter4dvNV(id uint32, len int32, name *uint8, v *float64) {
 	C.glowProgramNamedParameter4dvNV(gpProgramNamedParameter4dvNV, (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(name)), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func ProgramNamedParameter4fNV(id uint32, len int32, name *uint8, x float32, y float32, z float32, w float32) {
 	C.glowProgramNamedParameter4fNV(gpProgramNamedParameter4fNV, (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(name)), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func ProgramNamedParameter4fvNV(id uint32, len int32, name *uint8, v *float32) {
 	C.glowProgramNamedParameter4fvNV(gpProgramNamedParameter4fvNV, (C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(unsafe.Pointer(name)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ProgramParameter4dNV(target uint32, index uint32, x float64, y float64, z float64, w float64) {
 	C.glowProgramParameter4dNV(gpProgramParameter4dNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func ProgramParameter4dvNV(target uint32, index uint32, v *float64) {
 	C.glowProgramParameter4dvNV(gpProgramParameter4dvNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func ProgramParameter4fNV(target uint32, index uint32, x float32, y float32, z float32, w float32) {
 	C.glowProgramParameter4fNV(gpProgramParameter4fNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func ProgramParameter4fvNV(target uint32, index uint32, v *float32) {
 	C.glowProgramParameter4fvNV(gpProgramParameter4fvNV, (C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
@@ -27377,47 +25960,36 @@ func ProgramParameter4fvNV(target uint32, index uint32, v *float32) {
 func ProgramParameteri(program uint32, pname uint32, value int32) {
 	C.glowProgramParameteri(gpProgramParameteri, (C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
 }
-
 func ProgramParameteriARB(program uint32, pname uint32, value int32) {
 	C.glowProgramParameteriARB(gpProgramParameteriARB, (C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
 }
-
 func ProgramParameteriEXT(program uint32, pname uint32, value int32) {
 	C.glowProgramParameteriEXT(gpProgramParameteriEXT, (C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
 }
-
 func ProgramParameters4dvNV(target uint32, index uint32, count int32, v *float64) {
 	C.glowProgramParameters4dvNV(gpProgramParameters4dvNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func ProgramParameters4fvNV(target uint32, index uint32, count int32, v *float32) {
 	C.glowProgramParameters4fvNV(gpProgramParameters4fvNV, (C.GLenum)(target), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ProgramPathFragmentInputGenNV(program uint32, location int32, genMode uint32, components int32, coeffs *float32) {
 	C.glowProgramPathFragmentInputGenNV(gpProgramPathFragmentInputGenNV, (C.GLuint)(program), (C.GLint)(location), (C.GLenum)(genMode), (C.GLint)(components), (*C.GLfloat)(unsafe.Pointer(coeffs)))
 }
-
 func ProgramStringARB(target uint32, format uint32, len int32, xstring unsafe.Pointer) {
 	C.glowProgramStringARB(gpProgramStringARB, (C.GLenum)(target), (C.GLenum)(format), (C.GLsizei)(len), xstring)
 }
-
 func ProgramSubroutineParametersuivNV(target uint32, count int32, params *uint32) {
 	C.glowProgramSubroutineParametersuivNV(gpProgramSubroutineParametersuivNV, (C.GLenum)(target), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func ProgramUniform1d(program uint32, location int32, v0 float64) {
 	C.glowProgramUniform1d(gpProgramUniform1d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0))
 }
-
 func ProgramUniform1dEXT(program uint32, location int32, x float64) {
 	C.glowProgramUniform1dEXT(gpProgramUniform1dEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(x))
 }
-
 func ProgramUniform1dv(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform1dv(gpProgramUniform1dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1dvEXT(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform1dvEXT(gpProgramUniform1dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27426,7 +25998,6 @@ func ProgramUniform1dvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform1f(program uint32, location int32, v0 float32) {
 	C.glowProgramUniform1f(gpProgramUniform1f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
 }
-
 func ProgramUniform1fEXT(program uint32, location int32, v0 float32) {
 	C.glowProgramUniform1fEXT(gpProgramUniform1fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
 }
@@ -27435,7 +26006,6 @@ func ProgramUniform1fEXT(program uint32, location int32, v0 float32) {
 func ProgramUniform1fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform1fv(gpProgramUniform1fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform1fvEXT(gpProgramUniform1fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -27444,23 +26014,18 @@ func ProgramUniform1fvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform1i(program uint32, location int32, v0 int32) {
 	C.glowProgramUniform1i(gpProgramUniform1i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
 }
-
 func ProgramUniform1i64ARB(program uint32, location int32, x int64) {
 	C.glowProgramUniform1i64ARB(gpProgramUniform1i64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLint64)(x))
 }
-
 func ProgramUniform1i64NV(program uint32, location int32, x int64) {
 	C.glowProgramUniform1i64NV(gpProgramUniform1i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x))
 }
-
 func ProgramUniform1i64vARB(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform1i64vARB(gpProgramUniform1i64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1i64vNV(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform1i64vNV(gpProgramUniform1i64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1iEXT(program uint32, location int32, v0 int32) {
 	C.glowProgramUniform1iEXT(gpProgramUniform1iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
 }
@@ -27469,7 +26034,6 @@ func ProgramUniform1iEXT(program uint32, location int32, v0 int32) {
 func ProgramUniform1iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform1iv(gpProgramUniform1iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform1ivEXT(gpProgramUniform1ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -27478,23 +26042,18 @@ func ProgramUniform1ivEXT(program uint32, location int32, count int32, value *in
 func ProgramUniform1ui(program uint32, location int32, v0 uint32) {
 	C.glowProgramUniform1ui(gpProgramUniform1ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
 }
-
 func ProgramUniform1ui64ARB(program uint32, location int32, x uint64) {
 	C.glowProgramUniform1ui64ARB(gpProgramUniform1ui64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(x))
 }
-
 func ProgramUniform1ui64NV(program uint32, location int32, x uint64) {
 	C.glowProgramUniform1ui64NV(gpProgramUniform1ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x))
 }
-
 func ProgramUniform1ui64vARB(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform1ui64vARB(gpProgramUniform1ui64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1ui64vNV(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform1ui64vNV(gpProgramUniform1ui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1uiEXT(program uint32, location int32, v0 uint32) {
 	C.glowProgramUniform1uiEXT(gpProgramUniform1uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
 }
@@ -27503,23 +26062,18 @@ func ProgramUniform1uiEXT(program uint32, location int32, v0 uint32) {
 func ProgramUniform1uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform1uiv(gpProgramUniform1uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform1uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform1uivEXT(gpProgramUniform1uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2d(program uint32, location int32, v0 float64, v1 float64) {
 	C.glowProgramUniform2d(gpProgramUniform2d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1))
 }
-
 func ProgramUniform2dEXT(program uint32, location int32, x float64, y float64) {
 	C.glowProgramUniform2dEXT(gpProgramUniform2dEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func ProgramUniform2dv(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform2dv(gpProgramUniform2dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2dvEXT(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform2dvEXT(gpProgramUniform2dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27528,7 +26082,6 @@ func ProgramUniform2dvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform2f(program uint32, location int32, v0 float32, v1 float32) {
 	C.glowProgramUniform2f(gpProgramUniform2f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
-
 func ProgramUniform2fEXT(program uint32, location int32, v0 float32, v1 float32) {
 	C.glowProgramUniform2fEXT(gpProgramUniform2fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
@@ -27537,7 +26090,6 @@ func ProgramUniform2fEXT(program uint32, location int32, v0 float32, v1 float32)
 func ProgramUniform2fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform2fv(gpProgramUniform2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform2fvEXT(gpProgramUniform2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -27546,23 +26098,18 @@ func ProgramUniform2fvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform2i(program uint32, location int32, v0 int32, v1 int32) {
 	C.glowProgramUniform2i(gpProgramUniform2i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
-
 func ProgramUniform2i64ARB(program uint32, location int32, x int64, y int64) {
 	C.glowProgramUniform2i64ARB(gpProgramUniform2i64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLint64)(x), (C.GLint64)(y))
 }
-
 func ProgramUniform2i64NV(program uint32, location int32, x int64, y int64) {
 	C.glowProgramUniform2i64NV(gpProgramUniform2i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y))
 }
-
 func ProgramUniform2i64vARB(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform2i64vARB(gpProgramUniform2i64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2i64vNV(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform2i64vNV(gpProgramUniform2i64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2iEXT(program uint32, location int32, v0 int32, v1 int32) {
 	C.glowProgramUniform2iEXT(gpProgramUniform2iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
@@ -27571,7 +26118,6 @@ func ProgramUniform2iEXT(program uint32, location int32, v0 int32, v1 int32) {
 func ProgramUniform2iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform2iv(gpProgramUniform2iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform2ivEXT(gpProgramUniform2ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -27580,23 +26126,18 @@ func ProgramUniform2ivEXT(program uint32, location int32, count int32, value *in
 func ProgramUniform2ui(program uint32, location int32, v0 uint32, v1 uint32) {
 	C.glowProgramUniform2ui(gpProgramUniform2ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
-
 func ProgramUniform2ui64ARB(program uint32, location int32, x uint64, y uint64) {
 	C.glowProgramUniform2ui64ARB(gpProgramUniform2ui64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(x), (C.GLuint64)(y))
 }
-
 func ProgramUniform2ui64NV(program uint32, location int32, x uint64, y uint64) {
 	C.glowProgramUniform2ui64NV(gpProgramUniform2ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y))
 }
-
 func ProgramUniform2ui64vARB(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform2ui64vARB(gpProgramUniform2ui64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2ui64vNV(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform2ui64vNV(gpProgramUniform2ui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2uiEXT(program uint32, location int32, v0 uint32, v1 uint32) {
 	C.glowProgramUniform2uiEXT(gpProgramUniform2uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
@@ -27605,23 +26146,18 @@ func ProgramUniform2uiEXT(program uint32, location int32, v0 uint32, v1 uint32) 
 func ProgramUniform2uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform2uiv(gpProgramUniform2uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform2uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform2uivEXT(gpProgramUniform2uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3d(program uint32, location int32, v0 float64, v1 float64, v2 float64) {
 	C.glowProgramUniform3d(gpProgramUniform3d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1), (C.GLdouble)(v2))
 }
-
 func ProgramUniform3dEXT(program uint32, location int32, x float64, y float64, z float64) {
 	C.glowProgramUniform3dEXT(gpProgramUniform3dEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func ProgramUniform3dv(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform3dv(gpProgramUniform3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3dvEXT(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform3dvEXT(gpProgramUniform3dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27630,7 +26166,6 @@ func ProgramUniform3dvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform3f(program uint32, location int32, v0 float32, v1 float32, v2 float32) {
 	C.glowProgramUniform3f(gpProgramUniform3f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-
 func ProgramUniform3fEXT(program uint32, location int32, v0 float32, v1 float32, v2 float32) {
 	C.glowProgramUniform3fEXT(gpProgramUniform3fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
@@ -27639,7 +26174,6 @@ func ProgramUniform3fEXT(program uint32, location int32, v0 float32, v1 float32,
 func ProgramUniform3fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform3fv(gpProgramUniform3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform3fvEXT(gpProgramUniform3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -27648,23 +26182,18 @@ func ProgramUniform3fvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform3i(program uint32, location int32, v0 int32, v1 int32, v2 int32) {
 	C.glowProgramUniform3i(gpProgramUniform3i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
-
 func ProgramUniform3i64ARB(program uint32, location int32, x int64, y int64, z int64) {
 	C.glowProgramUniform3i64ARB(gpProgramUniform3i64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLint64)(x), (C.GLint64)(y), (C.GLint64)(z))
 }
-
 func ProgramUniform3i64NV(program uint32, location int32, x int64, y int64, z int64) {
 	C.glowProgramUniform3i64NV(gpProgramUniform3i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z))
 }
-
 func ProgramUniform3i64vARB(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform3i64vARB(gpProgramUniform3i64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3i64vNV(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform3i64vNV(gpProgramUniform3i64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3iEXT(program uint32, location int32, v0 int32, v1 int32, v2 int32) {
 	C.glowProgramUniform3iEXT(gpProgramUniform3iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
@@ -27673,7 +26202,6 @@ func ProgramUniform3iEXT(program uint32, location int32, v0 int32, v1 int32, v2 
 func ProgramUniform3iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform3iv(gpProgramUniform3iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform3ivEXT(gpProgramUniform3ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -27682,23 +26210,18 @@ func ProgramUniform3ivEXT(program uint32, location int32, count int32, value *in
 func ProgramUniform3ui(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32) {
 	C.glowProgramUniform3ui(gpProgramUniform3ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
-
 func ProgramUniform3ui64ARB(program uint32, location int32, x uint64, y uint64, z uint64) {
 	C.glowProgramUniform3ui64ARB(gpProgramUniform3ui64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(x), (C.GLuint64)(y), (C.GLuint64)(z))
 }
-
 func ProgramUniform3ui64NV(program uint32, location int32, x uint64, y uint64, z uint64) {
 	C.glowProgramUniform3ui64NV(gpProgramUniform3ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z))
 }
-
 func ProgramUniform3ui64vARB(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform3ui64vARB(gpProgramUniform3ui64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3ui64vNV(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform3ui64vNV(gpProgramUniform3ui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3uiEXT(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32) {
 	C.glowProgramUniform3uiEXT(gpProgramUniform3uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
@@ -27707,23 +26230,18 @@ func ProgramUniform3uiEXT(program uint32, location int32, v0 uint32, v1 uint32, 
 func ProgramUniform3uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform3uiv(gpProgramUniform3uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform3uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform3uivEXT(gpProgramUniform3uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4d(program uint32, location int32, v0 float64, v1 float64, v2 float64, v3 float64) {
 	C.glowProgramUniform4d(gpProgramUniform4d, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLdouble)(v3))
 }
-
 func ProgramUniform4dEXT(program uint32, location int32, x float64, y float64, z float64, w float64) {
 	C.glowProgramUniform4dEXT(gpProgramUniform4dEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func ProgramUniform4dv(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform4dv(gpProgramUniform4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4dvEXT(program uint32, location int32, count int32, value *float64) {
 	C.glowProgramUniform4dvEXT(gpProgramUniform4dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27732,7 +26250,6 @@ func ProgramUniform4dvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform4f(program uint32, location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
 	C.glowProgramUniform4f(gpProgramUniform4f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
-
 func ProgramUniform4fEXT(program uint32, location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
 	C.glowProgramUniform4fEXT(gpProgramUniform4fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
@@ -27741,7 +26258,6 @@ func ProgramUniform4fEXT(program uint32, location int32, v0 float32, v1 float32,
 func ProgramUniform4fv(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform4fv(gpProgramUniform4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform4fvEXT(gpProgramUniform4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -27750,23 +26266,18 @@ func ProgramUniform4fvEXT(program uint32, location int32, count int32, value *fl
 func ProgramUniform4i(program uint32, location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 	C.glowProgramUniform4i(gpProgramUniform4i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
-
 func ProgramUniform4i64ARB(program uint32, location int32, x int64, y int64, z int64, w int64) {
 	C.glowProgramUniform4i64ARB(gpProgramUniform4i64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLint64)(x), (C.GLint64)(y), (C.GLint64)(z), (C.GLint64)(w))
 }
-
 func ProgramUniform4i64NV(program uint32, location int32, x int64, y int64, z int64, w int64) {
 	C.glowProgramUniform4i64NV(gpProgramUniform4i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z), (C.GLint64EXT)(w))
 }
-
 func ProgramUniform4i64vARB(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform4i64vARB(gpProgramUniform4i64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4i64vNV(program uint32, location int32, count int32, value *int64) {
 	C.glowProgramUniform4i64vNV(gpProgramUniform4i64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4iEXT(program uint32, location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 	C.glowProgramUniform4iEXT(gpProgramUniform4iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
@@ -27775,7 +26286,6 @@ func ProgramUniform4iEXT(program uint32, location int32, v0 int32, v1 int32, v2 
 func ProgramUniform4iv(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform4iv(gpProgramUniform4iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform4ivEXT(gpProgramUniform4ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -27784,23 +26294,18 @@ func ProgramUniform4ivEXT(program uint32, location int32, count int32, value *in
 func ProgramUniform4ui(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 	C.glowProgramUniform4ui(gpProgramUniform4ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
-
 func ProgramUniform4ui64ARB(program uint32, location int32, x uint64, y uint64, z uint64, w uint64) {
 	C.glowProgramUniform4ui64ARB(gpProgramUniform4ui64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(x), (C.GLuint64)(y), (C.GLuint64)(z), (C.GLuint64)(w))
 }
-
 func ProgramUniform4ui64NV(program uint32, location int32, x uint64, y uint64, z uint64, w uint64) {
 	C.glowProgramUniform4ui64NV(gpProgramUniform4ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z), (C.GLuint64EXT)(w))
 }
-
 func ProgramUniform4ui64vARB(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform4ui64vARB(gpProgramUniform4ui64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4ui64vNV(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniform4ui64vNV(gpProgramUniform4ui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4uiEXT(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 	C.glowProgramUniform4uiEXT(gpProgramUniform4uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
@@ -27809,31 +26314,24 @@ func ProgramUniform4uiEXT(program uint32, location int32, v0 uint32, v1 uint32, 
 func ProgramUniform4uiv(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform4uiv(gpProgramUniform4uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniform4uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform4uivEXT(gpProgramUniform4uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformHandleui64ARB(program uint32, location int32, value uint64) {
 	C.glowProgramUniformHandleui64ARB(gpProgramUniformHandleui64ARB, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(value))
 }
-
 func ProgramUniformHandleui64NV(program uint32, location int32, value uint64) {
 	C.glowProgramUniformHandleui64NV(gpProgramUniformHandleui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(value))
 }
-
 func ProgramUniformHandleui64vARB(program uint32, location int32, count int32, values *uint64) {
 	C.glowProgramUniformHandleui64vARB(gpProgramUniformHandleui64vARB, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(values)))
 }
-
 func ProgramUniformHandleui64vNV(program uint32, location int32, count int32, values *uint64) {
 	C.glowProgramUniformHandleui64vNV(gpProgramUniformHandleui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(values)))
 }
-
 func ProgramUniformMatrix2dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2dv(gpProgramUniformMatrix2dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2dvEXT(gpProgramUniformMatrix2dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27842,15 +26340,12 @@ func ProgramUniformMatrix2dvEXT(program uint32, location int32, count int32, tra
 func ProgramUniformMatrix2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2fv(gpProgramUniformMatrix2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2fvEXT(gpProgramUniformMatrix2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2x3dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2x3dv(gpProgramUniformMatrix2x3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2x3dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2x3dvEXT(gpProgramUniformMatrix2x3dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27859,15 +26354,12 @@ func ProgramUniformMatrix2x3dvEXT(program uint32, location int32, count int32, t
 func ProgramUniformMatrix2x3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x3fv(gpProgramUniformMatrix2x3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2x3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x3fvEXT(gpProgramUniformMatrix2x3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2x4dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2x4dv(gpProgramUniformMatrix2x4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2x4dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix2x4dvEXT(gpProgramUniformMatrix2x4dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27876,15 +26368,12 @@ func ProgramUniformMatrix2x4dvEXT(program uint32, location int32, count int32, t
 func ProgramUniformMatrix2x4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x4fv(gpProgramUniformMatrix2x4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix2x4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x4fvEXT(gpProgramUniformMatrix2x4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3dv(gpProgramUniformMatrix3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3dvEXT(gpProgramUniformMatrix3dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27893,15 +26382,12 @@ func ProgramUniformMatrix3dvEXT(program uint32, location int32, count int32, tra
 func ProgramUniformMatrix3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3fv(gpProgramUniformMatrix3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3fvEXT(gpProgramUniformMatrix3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3x2dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3x2dv(gpProgramUniformMatrix3x2dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3x2dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3x2dvEXT(gpProgramUniformMatrix3x2dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27910,15 +26396,12 @@ func ProgramUniformMatrix3x2dvEXT(program uint32, location int32, count int32, t
 func ProgramUniformMatrix3x2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x2fv(gpProgramUniformMatrix3x2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3x2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x2fvEXT(gpProgramUniformMatrix3x2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3x4dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3x4dv(gpProgramUniformMatrix3x4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3x4dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix3x4dvEXT(gpProgramUniformMatrix3x4dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27927,15 +26410,12 @@ func ProgramUniformMatrix3x4dvEXT(program uint32, location int32, count int32, t
 func ProgramUniformMatrix3x4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x4fv(gpProgramUniformMatrix3x4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix3x4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x4fvEXT(gpProgramUniformMatrix3x4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4dv(gpProgramUniformMatrix4dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4dvEXT(gpProgramUniformMatrix4dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27944,15 +26424,12 @@ func ProgramUniformMatrix4dvEXT(program uint32, location int32, count int32, tra
 func ProgramUniformMatrix4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4fv(gpProgramUniformMatrix4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4fvEXT(gpProgramUniformMatrix4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4x2dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4x2dv(gpProgramUniformMatrix4x2dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4x2dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4x2dvEXT(gpProgramUniformMatrix4x2dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27961,15 +26438,12 @@ func ProgramUniformMatrix4x2dvEXT(program uint32, location int32, count int32, t
 func ProgramUniformMatrix4x2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x2fv(gpProgramUniformMatrix4x2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4x2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x2fvEXT(gpProgramUniformMatrix4x2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4x3dv(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4x3dv(gpProgramUniformMatrix4x3dv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4x3dvEXT(program uint32, location int32, count int32, transpose bool, value *float64) {
 	C.glowProgramUniformMatrix4x3dvEXT(gpProgramUniformMatrix4x3dvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -27978,19 +26452,15 @@ func ProgramUniformMatrix4x3dvEXT(program uint32, location int32, count int32, t
 func ProgramUniformMatrix4x3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x3fv(gpProgramUniformMatrix4x3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformMatrix4x3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x3fvEXT(gpProgramUniformMatrix4x3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func ProgramUniformui64NV(program uint32, location int32, value uint64) {
 	C.glowProgramUniformui64NV(gpProgramUniformui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(value))
 }
-
 func ProgramUniformui64vNV(program uint32, location int32, count int32, value *uint64) {
 	C.glowProgramUniformui64vNV(gpProgramUniformui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func ProgramVertexLimitNV(target uint32, limit int32) {
 	C.glowProgramVertexLimitNV(gpProgramVertexLimitNV, (C.GLenum)(target), (C.GLint)(limit))
 }
@@ -27999,7 +26469,6 @@ func ProgramVertexLimitNV(target uint32, limit int32) {
 func ProvokingVertex(mode uint32) {
 	C.glowProvokingVertex(gpProvokingVertex, (C.GLenum)(mode))
 }
-
 func ProvokingVertexEXT(mode uint32) {
 	C.glowProvokingVertexEXT(gpProvokingVertexEXT, (C.GLenum)(mode))
 }
@@ -28013,7 +26482,6 @@ func PushAttrib(mask uint32) {
 func PushClientAttrib(mask uint32) {
 	C.glowPushClientAttrib(gpPushClientAttrib, (C.GLbitfield)(mask))
 }
-
 func PushClientAttribDefaultEXT(mask uint32) {
 	C.glowPushClientAttribDefaultEXT(gpPushClientAttribDefaultEXT, (C.GLbitfield)(mask))
 }
@@ -28022,11 +26490,9 @@ func PushClientAttribDefaultEXT(mask uint32) {
 func PushDebugGroup(source uint32, id uint32, length int32, message *uint8) {
 	C.glowPushDebugGroup(gpPushDebugGroup, (C.GLenum)(source), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(message)))
 }
-
 func PushDebugGroupKHR(source uint32, id uint32, length int32, message *uint8) {
 	C.glowPushDebugGroupKHR(gpPushDebugGroupKHR, (C.GLenum)(source), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(message)))
 }
-
 func PushGroupMarkerEXT(length int32, marker *uint8) {
 	C.glowPushGroupMarkerEXT(gpPushGroupMarkerEXT, (C.GLsizei)(length), (*C.GLchar)(unsafe.Pointer(marker)))
 }
@@ -28051,140 +26517,106 @@ func QueryMatrixxOES(mantissa *int32, exponent *int32) uint32 {
 	ret := C.glowQueryMatrixxOES(gpQueryMatrixxOES, (*C.GLfixed)(unsafe.Pointer(mantissa)), (*C.GLint)(unsafe.Pointer(exponent)))
 	return (uint32)(ret)
 }
-
 func QueryObjectParameteruiAMD(target uint32, id uint32, pname uint32, param uint32) {
 	C.glowQueryObjectParameteruiAMD(gpQueryObjectParameteruiAMD, (C.GLenum)(target), (C.GLuint)(id), (C.GLenum)(pname), (C.GLuint)(param))
 }
-
 func QueryResourceNV(queryType uint32, tagId int32, bufSize uint32, buffer *int32) int32 {
 	ret := C.glowQueryResourceNV(gpQueryResourceNV, (C.GLenum)(queryType), (C.GLint)(tagId), (C.GLuint)(bufSize), (*C.GLint)(unsafe.Pointer(buffer)))
 	return (int32)(ret)
 }
-
 func QueryResourceTagNV(tagId int32, tagString *uint8) {
 	C.glowQueryResourceTagNV(gpQueryResourceTagNV, (C.GLint)(tagId), (*C.GLchar)(unsafe.Pointer(tagString)))
 }
-
 func RasterPos2d(x float64, y float64) {
 	C.glowRasterPos2d(gpRasterPos2d, (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func RasterPos2dv(v *float64) {
 	C.glowRasterPos2dv(gpRasterPos2dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func RasterPos2f(x float32, y float32) {
 	C.glowRasterPos2f(gpRasterPos2f, (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func RasterPos2fv(v *float32) {
 	C.glowRasterPos2fv(gpRasterPos2fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func RasterPos2i(x int32, y int32) {
 	C.glowRasterPos2i(gpRasterPos2i, (C.GLint)(x), (C.GLint)(y))
 }
-
 func RasterPos2iv(v *int32) {
 	C.glowRasterPos2iv(gpRasterPos2iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func RasterPos2s(x int16, y int16) {
 	C.glowRasterPos2s(gpRasterPos2s, (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func RasterPos2sv(v *int16) {
 	C.glowRasterPos2sv(gpRasterPos2sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func RasterPos2xOES(x int32, y int32) {
 	C.glowRasterPos2xOES(gpRasterPos2xOES, (C.GLfixed)(x), (C.GLfixed)(y))
 }
-
 func RasterPos2xvOES(coords *int32) {
 	C.glowRasterPos2xvOES(gpRasterPos2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func RasterPos3d(x float64, y float64, z float64) {
 	C.glowRasterPos3d(gpRasterPos3d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func RasterPos3dv(v *float64) {
 	C.glowRasterPos3dv(gpRasterPos3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func RasterPos3f(x float32, y float32, z float32) {
 	C.glowRasterPos3f(gpRasterPos3f, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func RasterPos3fv(v *float32) {
 	C.glowRasterPos3fv(gpRasterPos3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func RasterPos3i(x int32, y int32, z int32) {
 	C.glowRasterPos3i(gpRasterPos3i, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func RasterPos3iv(v *int32) {
 	C.glowRasterPos3iv(gpRasterPos3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func RasterPos3s(x int16, y int16, z int16) {
 	C.glowRasterPos3s(gpRasterPos3s, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func RasterPos3sv(v *int16) {
 	C.glowRasterPos3sv(gpRasterPos3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func RasterPos3xOES(x int32, y int32, z int32) {
 	C.glowRasterPos3xOES(gpRasterPos3xOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
-
 func RasterPos3xvOES(coords *int32) {
 	C.glowRasterPos3xvOES(gpRasterPos3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func RasterPos4d(x float64, y float64, z float64, w float64) {
 	C.glowRasterPos4d(gpRasterPos4d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func RasterPos4dv(v *float64) {
 	C.glowRasterPos4dv(gpRasterPos4dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func RasterPos4f(x float32, y float32, z float32, w float32) {
 	C.glowRasterPos4f(gpRasterPos4f, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func RasterPos4fv(v *float32) {
 	C.glowRasterPos4fv(gpRasterPos4fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func RasterPos4i(x int32, y int32, z int32, w int32) {
 	C.glowRasterPos4i(gpRasterPos4i, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func RasterPos4iv(v *int32) {
 	C.glowRasterPos4iv(gpRasterPos4iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func RasterPos4s(x int16, y int16, z int16, w int16) {
 	C.glowRasterPos4s(gpRasterPos4s, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func RasterPos4sv(v *int16) {
 	C.glowRasterPos4sv(gpRasterPos4sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func RasterPos4xOES(x int32, y int32, z int32, w int32) {
 	C.glowRasterPos4xOES(gpRasterPos4xOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z), (C.GLfixed)(w))
 }
-
 func RasterPos4xvOES(coords *int32) {
 	C.glowRasterPos4xvOES(gpRasterPos4xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func RasterSamplesEXT(samples uint32, fixedsamplelocations bool) {
 	C.glowRasterSamplesEXT(gpRasterSamplesEXT, (C.GLuint)(samples), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
@@ -28193,7 +26625,6 @@ func RasterSamplesEXT(samples uint32, fixedsamplelocations bool) {
 func ReadBuffer(src uint32) {
 	C.glowReadBuffer(gpReadBuffer, (C.GLenum)(src))
 }
-
 func ReadInstrumentsSGIX(marker int32) {
 	C.glowReadInstrumentsSGIX(gpReadInstrumentsSGIX, (C.GLint)(marker))
 }
@@ -28207,59 +26638,45 @@ func ReadPixels(x int32, y int32, width int32, height int32, format uint32, xtyp
 func ReadnPixels(x int32, y int32, width int32, height int32, format uint32, xtype uint32, bufSize int32, data unsafe.Pointer) {
 	C.glowReadnPixels(gpReadnPixels, (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), data)
 }
-
 func ReadnPixelsARB(x int32, y int32, width int32, height int32, format uint32, xtype uint32, bufSize int32, data unsafe.Pointer) {
 	C.glowReadnPixelsARB(gpReadnPixelsARB, (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), data)
 }
-
 func ReadnPixelsKHR(x int32, y int32, width int32, height int32, format uint32, xtype uint32, bufSize int32, data unsafe.Pointer) {
 	C.glowReadnPixelsKHR(gpReadnPixelsKHR, (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), data)
 }
-
 func Rectd(x1 float64, y1 float64, x2 float64, y2 float64) {
 	C.glowRectd(gpRectd, (C.GLdouble)(x1), (C.GLdouble)(y1), (C.GLdouble)(x2), (C.GLdouble)(y2))
 }
-
 func Rectdv(v1 *float64, v2 *float64) {
 	C.glowRectdv(gpRectdv, (*C.GLdouble)(unsafe.Pointer(v1)), (*C.GLdouble)(unsafe.Pointer(v2)))
 }
-
 func Rectf(x1 float32, y1 float32, x2 float32, y2 float32) {
 	C.glowRectf(gpRectf, (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(x2), (C.GLfloat)(y2))
 }
-
 func Rectfv(v1 *float32, v2 *float32) {
 	C.glowRectfv(gpRectfv, (*C.GLfloat)(unsafe.Pointer(v1)), (*C.GLfloat)(unsafe.Pointer(v2)))
 }
-
 func Recti(x1 int32, y1 int32, x2 int32, y2 int32) {
 	C.glowRecti(gpRecti, (C.GLint)(x1), (C.GLint)(y1), (C.GLint)(x2), (C.GLint)(y2))
 }
-
 func Rectiv(v1 *int32, v2 *int32) {
 	C.glowRectiv(gpRectiv, (*C.GLint)(unsafe.Pointer(v1)), (*C.GLint)(unsafe.Pointer(v2)))
 }
-
 func Rects(x1 int16, y1 int16, x2 int16, y2 int16) {
 	C.glowRects(gpRects, (C.GLshort)(x1), (C.GLshort)(y1), (C.GLshort)(x2), (C.GLshort)(y2))
 }
-
 func Rectsv(v1 *int16, v2 *int16) {
 	C.glowRectsv(gpRectsv, (*C.GLshort)(unsafe.Pointer(v1)), (*C.GLshort)(unsafe.Pointer(v2)))
 }
-
 func RectxOES(x1 int32, y1 int32, x2 int32, y2 int32) {
 	C.glowRectxOES(gpRectxOES, (C.GLfixed)(x1), (C.GLfixed)(y1), (C.GLfixed)(x2), (C.GLfixed)(y2))
 }
-
 func RectxvOES(v1 *int32, v2 *int32) {
 	C.glowRectxvOES(gpRectxvOES, (*C.GLfixed)(unsafe.Pointer(v1)), (*C.GLfixed)(unsafe.Pointer(v2)))
 }
-
 func ReferencePlaneSGIX(equation *float64) {
 	C.glowReferencePlaneSGIX(gpReferencePlaneSGIX, (*C.GLdouble)(unsafe.Pointer(equation)))
 }
-
 func ReleaseKeyedMutexWin32EXT(memory uint32, key uint64) bool {
 	ret := C.glowReleaseKeyedMutexWin32EXT(gpReleaseKeyedMutexWin32EXT, (C.GLuint)(memory), (C.GLuint64)(key))
 	return ret == TRUE
@@ -28269,7 +26686,6 @@ func ReleaseKeyedMutexWin32EXT(memory uint32, key uint64) bool {
 func ReleaseShaderCompiler() {
 	C.glowReleaseShaderCompiler(gpReleaseShaderCompiler)
 }
-
 func RenderGpuMaskNV(mask uint32) {
 	C.glowRenderGpuMaskNV(gpRenderGpuMaskNV, (C.GLbitfield)(mask))
 }
@@ -28284,7 +26700,6 @@ func RenderMode(mode uint32) int32 {
 func RenderbufferStorage(target uint32, internalformat uint32, width int32, height int32) {
 	C.glowRenderbufferStorage(gpRenderbufferStorage, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func RenderbufferStorageEXT(target uint32, internalformat uint32, width int32, height int32) {
 	C.glowRenderbufferStorageEXT(gpRenderbufferStorageEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -28293,107 +26708,81 @@ func RenderbufferStorageEXT(target uint32, internalformat uint32, width int32, h
 func RenderbufferStorageMultisample(target uint32, samples int32, internalformat uint32, width int32, height int32) {
 	C.glowRenderbufferStorageMultisample(gpRenderbufferStorageMultisample, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func RenderbufferStorageMultisampleCoverageNV(target uint32, coverageSamples int32, colorSamples int32, internalformat uint32, width int32, height int32) {
 	C.glowRenderbufferStorageMultisampleCoverageNV(gpRenderbufferStorageMultisampleCoverageNV, (C.GLenum)(target), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func RenderbufferStorageMultisampleEXT(target uint32, samples int32, internalformat uint32, width int32, height int32) {
 	C.glowRenderbufferStorageMultisampleEXT(gpRenderbufferStorageMultisampleEXT, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func ReplacementCodePointerSUN(xtype uint32, stride int32, pointer *unsafe.Pointer) {
 	C.glowReplacementCodePointerSUN(gpReplacementCodePointerSUN, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func ReplacementCodeubSUN(code uint8) {
 	C.glowReplacementCodeubSUN(gpReplacementCodeubSUN, (C.GLubyte)(code))
 }
-
 func ReplacementCodeubvSUN(code *uint8) {
 	C.glowReplacementCodeubvSUN(gpReplacementCodeubvSUN, (*C.GLubyte)(unsafe.Pointer(code)))
 }
-
 func ReplacementCodeuiColor3fVertex3fSUN(rc uint32, r float32, g float32, b float32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiColor3fVertex3fSUN(gpReplacementCodeuiColor3fVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiColor3fVertex3fvSUN(rc *uint32, c *float32, v *float32) {
 	C.glowReplacementCodeuiColor3fVertex3fvSUN(gpReplacementCodeuiColor3fVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiColor4fNormal3fVertex3fSUN(rc uint32, r float32, g float32, b float32, a float32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiColor4fNormal3fVertex3fSUN(gpReplacementCodeuiColor4fNormal3fVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(a), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiColor4fNormal3fVertex3fvSUN(rc *uint32, c *float32, n *float32, v *float32) {
 	C.glowReplacementCodeuiColor4fNormal3fVertex3fvSUN(gpReplacementCodeuiColor4fNormal3fVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiColor4ubVertex3fSUN(rc uint32, r uint8, g uint8, b uint8, a uint8, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiColor4ubVertex3fSUN(gpReplacementCodeuiColor4ubVertex3fSUN, (C.GLuint)(rc), (C.GLubyte)(r), (C.GLubyte)(g), (C.GLubyte)(b), (C.GLubyte)(a), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiColor4ubVertex3fvSUN(rc *uint32, c *uint8, v *float32) {
 	C.glowReplacementCodeuiColor4ubVertex3fvSUN(gpReplacementCodeuiColor4ubVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLubyte)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiNormal3fVertex3fSUN(rc uint32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiNormal3fVertex3fSUN(gpReplacementCodeuiNormal3fVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiNormal3fVertex3fvSUN(rc *uint32, n *float32, v *float32) {
 	C.glowReplacementCodeuiNormal3fVertex3fvSUN(gpReplacementCodeuiNormal3fVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiSUN(code uint32) {
 	C.glowReplacementCodeuiSUN(gpReplacementCodeuiSUN, (C.GLuint)(code))
 }
-
 func ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(rc uint32, s float32, t float32, r float32, g float32, b float32, a float32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(gpReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(a), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(rc *uint32, tc *float32, c *float32, n *float32, v *float32) {
 	C.glowReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(gpReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(rc uint32, s float32, t float32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(gpReplacementCodeuiTexCoord2fNormal3fVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(rc *uint32, tc *float32, n *float32, v *float32) {
 	C.glowReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(gpReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiTexCoord2fVertex3fSUN(rc uint32, s float32, t float32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiTexCoord2fVertex3fSUN(gpReplacementCodeuiTexCoord2fVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiTexCoord2fVertex3fvSUN(rc *uint32, tc *float32, v *float32) {
 	C.glowReplacementCodeuiTexCoord2fVertex3fvSUN(gpReplacementCodeuiTexCoord2fVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuiVertex3fSUN(rc uint32, x float32, y float32, z float32) {
 	C.glowReplacementCodeuiVertex3fSUN(gpReplacementCodeuiVertex3fSUN, (C.GLuint)(rc), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ReplacementCodeuiVertex3fvSUN(rc *uint32, v *float32) {
 	C.glowReplacementCodeuiVertex3fvSUN(gpReplacementCodeuiVertex3fvSUN, (*C.GLuint)(unsafe.Pointer(rc)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ReplacementCodeuivSUN(code *uint32) {
 	C.glowReplacementCodeuivSUN(gpReplacementCodeuivSUN, (*C.GLuint)(unsafe.Pointer(code)))
 }
-
 func ReplacementCodeusSUN(code uint16) {
 	C.glowReplacementCodeusSUN(gpReplacementCodeusSUN, (C.GLushort)(code))
 }
-
 func ReplacementCodeusvSUN(code *uint16) {
 	C.glowReplacementCodeusvSUN(gpReplacementCodeusvSUN, (*C.GLushort)(unsafe.Pointer(code)))
 }
-
 func RequestResidentProgramsNV(n int32, programs *uint32) {
 	C.glowRequestResidentProgramsNV(gpRequestResidentProgramsNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(programs)))
 }
@@ -28402,7 +26791,6 @@ func RequestResidentProgramsNV(n int32, programs *uint32) {
 func ResetHistogram(target uint32) {
 	C.glowResetHistogram(gpResetHistogram, (C.GLenum)(target))
 }
-
 func ResetHistogramEXT(target uint32) {
 	C.glowResetHistogramEXT(gpResetHistogramEXT, (C.GLenum)(target))
 }
@@ -28411,15 +26799,12 @@ func ResetHistogramEXT(target uint32) {
 func ResetMinmax(target uint32) {
 	C.glowResetMinmax(gpResetMinmax, (C.GLenum)(target))
 }
-
 func ResetMinmaxEXT(target uint32) {
 	C.glowResetMinmaxEXT(gpResetMinmaxEXT, (C.GLenum)(target))
 }
-
 func ResizeBuffersMESA() {
 	C.glowResizeBuffersMESA(gpResizeBuffersMESA)
 }
-
 func ResolveDepthValuesNV() {
 	C.glowResolveDepthValuesNV(gpResolveDepthValuesNV)
 }
@@ -28428,19 +26813,15 @@ func ResolveDepthValuesNV() {
 func ResumeTransformFeedback() {
 	C.glowResumeTransformFeedback(gpResumeTransformFeedback)
 }
-
 func ResumeTransformFeedbackNV() {
 	C.glowResumeTransformFeedbackNV(gpResumeTransformFeedbackNV)
 }
-
 func Rotated(angle float64, x float64, y float64, z float64) {
 	C.glowRotated(gpRotated, (C.GLdouble)(angle), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func Rotatef(angle float32, x float32, y float32, z float32) {
 	C.glowRotatef(gpRotatef, (C.GLfloat)(angle), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func RotatexOES(angle int32, x int32, y int32, z int32) {
 	C.glowRotatexOES(gpRotatexOES, (C.GLfixed)(angle), (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
@@ -28449,27 +26830,21 @@ func RotatexOES(angle int32, x int32, y int32, z int32) {
 func SampleCoverage(value float32, invert bool) {
 	C.glowSampleCoverage(gpSampleCoverage, (C.GLfloat)(value), (C.GLboolean)(boolToInt(invert)))
 }
-
 func SampleCoverageARB(value float32, invert bool) {
 	C.glowSampleCoverageARB(gpSampleCoverageARB, (C.GLfloat)(value), (C.GLboolean)(boolToInt(invert)))
 }
-
 func SampleCoveragexOES(value int32, invert bool) {
 	C.glowSampleCoveragexOES(gpSampleCoveragexOES, (C.GLclampx)(value), (C.GLboolean)(boolToInt(invert)))
 }
-
 func SampleMapATI(dst uint32, interp uint32, swizzle uint32) {
 	C.glowSampleMapATI(gpSampleMapATI, (C.GLuint)(dst), (C.GLuint)(interp), (C.GLenum)(swizzle))
 }
-
 func SampleMaskEXT(value float32, invert bool) {
 	C.glowSampleMaskEXT(gpSampleMaskEXT, (C.GLclampf)(value), (C.GLboolean)(boolToInt(invert)))
 }
-
 func SampleMaskIndexedNV(index uint32, mask uint32) {
 	C.glowSampleMaskIndexedNV(gpSampleMaskIndexedNV, (C.GLuint)(index), (C.GLbitfield)(mask))
 }
-
 func SampleMaskSGIS(value float32, invert bool) {
 	C.glowSampleMaskSGIS(gpSampleMaskSGIS, (C.GLclampf)(value), (C.GLboolean)(boolToInt(invert)))
 }
@@ -28478,47 +26853,36 @@ func SampleMaskSGIS(value float32, invert bool) {
 func SampleMaski(maskNumber uint32, mask uint32) {
 	C.glowSampleMaski(gpSampleMaski, (C.GLuint)(maskNumber), (C.GLbitfield)(mask))
 }
-
 func SamplePatternEXT(pattern uint32) {
 	C.glowSamplePatternEXT(gpSamplePatternEXT, (C.GLenum)(pattern))
 }
-
 func SamplePatternSGIS(pattern uint32) {
 	C.glowSamplePatternSGIS(gpSamplePatternSGIS, (C.GLenum)(pattern))
 }
-
 func SamplerParameterIiv(sampler uint32, pname uint32, param *int32) {
 	C.glowSamplerParameterIiv(gpSamplerParameterIiv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func SamplerParameterIuiv(sampler uint32, pname uint32, param *uint32) {
 	C.glowSamplerParameterIuiv(gpSamplerParameterIuiv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(param)))
 }
-
 func SamplerParameterf(sampler uint32, pname uint32, param float32) {
 	C.glowSamplerParameterf(gpSamplerParameterf, (C.GLuint)(sampler), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func SamplerParameterfv(sampler uint32, pname uint32, param *float32) {
 	C.glowSamplerParameterfv(gpSamplerParameterfv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(param)))
 }
-
 func SamplerParameteri(sampler uint32, pname uint32, param int32) {
 	C.glowSamplerParameteri(gpSamplerParameteri, (C.GLuint)(sampler), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func SamplerParameteriv(sampler uint32, pname uint32, param *int32) {
 	C.glowSamplerParameteriv(gpSamplerParameteriv, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func Scaled(x float64, y float64, z float64) {
 	C.glowScaled(gpScaled, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func Scalef(x float32, y float32, z float32) {
 	C.glowScalef(gpScalef, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func ScalexOES(x int32, y int32, z int32) {
 	C.glowScalexOES(gpScalexOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
@@ -28527,7 +26891,6 @@ func ScalexOES(x int32, y int32, z int32) {
 func Scissor(x int32, y int32, width int32, height int32) {
 	C.glowScissor(gpScissor, (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func ScissorArrayv(first uint32, count int32, v *int32) {
 	C.glowScissorArrayv(gpScissorArrayv, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(v)))
 }
@@ -28536,155 +26899,117 @@ func ScissorArrayv(first uint32, count int32, v *int32) {
 func ScissorIndexed(index uint32, left int32, bottom int32, width int32, height int32) {
 	C.glowScissorIndexed(gpScissorIndexed, (C.GLuint)(index), (C.GLint)(left), (C.GLint)(bottom), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func ScissorIndexedv(index uint32, v *int32) {
 	C.glowScissorIndexedv(gpScissorIndexedv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3b(red int8, green int8, blue int8) {
 	C.glowSecondaryColor3b(gpSecondaryColor3b, (C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue))
 }
-
 func SecondaryColor3bEXT(red int8, green int8, blue int8) {
 	C.glowSecondaryColor3bEXT(gpSecondaryColor3bEXT, (C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue))
 }
-
 func SecondaryColor3bv(v *int8) {
 	C.glowSecondaryColor3bv(gpSecondaryColor3bv, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3bvEXT(v *int8) {
 	C.glowSecondaryColor3bvEXT(gpSecondaryColor3bvEXT, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3d(red float64, green float64, blue float64) {
 	C.glowSecondaryColor3d(gpSecondaryColor3d, (C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue))
 }
-
 func SecondaryColor3dEXT(red float64, green float64, blue float64) {
 	C.glowSecondaryColor3dEXT(gpSecondaryColor3dEXT, (C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue))
 }
-
 func SecondaryColor3dv(v *float64) {
 	C.glowSecondaryColor3dv(gpSecondaryColor3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3dvEXT(v *float64) {
 	C.glowSecondaryColor3dvEXT(gpSecondaryColor3dvEXT, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3f(red float32, green float32, blue float32) {
 	C.glowSecondaryColor3f(gpSecondaryColor3f, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue))
 }
-
 func SecondaryColor3fEXT(red float32, green float32, blue float32) {
 	C.glowSecondaryColor3fEXT(gpSecondaryColor3fEXT, (C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue))
 }
-
 func SecondaryColor3fv(v *float32) {
 	C.glowSecondaryColor3fv(gpSecondaryColor3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3fvEXT(v *float32) {
 	C.glowSecondaryColor3fvEXT(gpSecondaryColor3fvEXT, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3hNV(red uint16, green uint16, blue uint16) {
 	C.glowSecondaryColor3hNV(gpSecondaryColor3hNV, (C.GLhalfNV)(red), (C.GLhalfNV)(green), (C.GLhalfNV)(blue))
 }
-
 func SecondaryColor3hvNV(v *uint16) {
 	C.glowSecondaryColor3hvNV(gpSecondaryColor3hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3i(red int32, green int32, blue int32) {
 	C.glowSecondaryColor3i(gpSecondaryColor3i, (C.GLint)(red), (C.GLint)(green), (C.GLint)(blue))
 }
-
 func SecondaryColor3iEXT(red int32, green int32, blue int32) {
 	C.glowSecondaryColor3iEXT(gpSecondaryColor3iEXT, (C.GLint)(red), (C.GLint)(green), (C.GLint)(blue))
 }
-
 func SecondaryColor3iv(v *int32) {
 	C.glowSecondaryColor3iv(gpSecondaryColor3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3ivEXT(v *int32) {
 	C.glowSecondaryColor3ivEXT(gpSecondaryColor3ivEXT, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3s(red int16, green int16, blue int16) {
 	C.glowSecondaryColor3s(gpSecondaryColor3s, (C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue))
 }
-
 func SecondaryColor3sEXT(red int16, green int16, blue int16) {
 	C.glowSecondaryColor3sEXT(gpSecondaryColor3sEXT, (C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue))
 }
-
 func SecondaryColor3sv(v *int16) {
 	C.glowSecondaryColor3sv(gpSecondaryColor3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3svEXT(v *int16) {
 	C.glowSecondaryColor3svEXT(gpSecondaryColor3svEXT, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3ub(red uint8, green uint8, blue uint8) {
 	C.glowSecondaryColor3ub(gpSecondaryColor3ub, (C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue))
 }
-
 func SecondaryColor3ubEXT(red uint8, green uint8, blue uint8) {
 	C.glowSecondaryColor3ubEXT(gpSecondaryColor3ubEXT, (C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue))
 }
-
 func SecondaryColor3ubv(v *uint8) {
 	C.glowSecondaryColor3ubv(gpSecondaryColor3ubv, (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3ubvEXT(v *uint8) {
 	C.glowSecondaryColor3ubvEXT(gpSecondaryColor3ubvEXT, (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3ui(red uint32, green uint32, blue uint32) {
 	C.glowSecondaryColor3ui(gpSecondaryColor3ui, (C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue))
 }
-
 func SecondaryColor3uiEXT(red uint32, green uint32, blue uint32) {
 	C.glowSecondaryColor3uiEXT(gpSecondaryColor3uiEXT, (C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue))
 }
-
 func SecondaryColor3uiv(v *uint32) {
 	C.glowSecondaryColor3uiv(gpSecondaryColor3uiv, (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3uivEXT(v *uint32) {
 	C.glowSecondaryColor3uivEXT(gpSecondaryColor3uivEXT, (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3us(red uint16, green uint16, blue uint16) {
 	C.glowSecondaryColor3us(gpSecondaryColor3us, (C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue))
 }
-
 func SecondaryColor3usEXT(red uint16, green uint16, blue uint16) {
 	C.glowSecondaryColor3usEXT(gpSecondaryColor3usEXT, (C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue))
 }
-
 func SecondaryColor3usv(v *uint16) {
 	C.glowSecondaryColor3usv(gpSecondaryColor3usv, (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func SecondaryColor3usvEXT(v *uint16) {
 	C.glowSecondaryColor3usvEXT(gpSecondaryColor3usvEXT, (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func SecondaryColorFormatNV(size int32, xtype uint32, stride int32) {
 	C.glowSecondaryColorFormatNV(gpSecondaryColorFormatNV, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func SecondaryColorP3ui(xtype uint32, color uint32) {
 	C.glowSecondaryColorP3ui(gpSecondaryColorP3ui, (C.GLenum)(xtype), (C.GLuint)(color))
 }
-
 func SecondaryColorP3uiv(xtype uint32, color *uint32) {
 	C.glowSecondaryColorP3uiv(gpSecondaryColorP3uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(color)))
 }
@@ -28693,11 +27018,9 @@ func SecondaryColorP3uiv(xtype uint32, color *uint32) {
 func SecondaryColorPointer(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowSecondaryColorPointer(gpSecondaryColorPointer, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func SecondaryColorPointerEXT(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowSecondaryColorPointerEXT(gpSecondaryColorPointerEXT, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func SecondaryColorPointerListIBM(size int32, xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowSecondaryColorPointerListIBM(gpSecondaryColorPointerListIBM, (C.GLint)(size), (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
@@ -28706,11 +27029,9 @@ func SecondaryColorPointerListIBM(size int32, xtype uint32, stride int32, pointe
 func SelectBuffer(size int32, buffer *uint32) {
 	C.glowSelectBuffer(gpSelectBuffer, (C.GLsizei)(size), (*C.GLuint)(unsafe.Pointer(buffer)))
 }
-
 func SelectPerfMonitorCountersAMD(monitor uint32, enable bool, group uint32, numCounters int32, counterList *uint32) {
 	C.glowSelectPerfMonitorCountersAMD(gpSelectPerfMonitorCountersAMD, (C.GLuint)(monitor), (C.GLboolean)(boolToInt(enable)), (C.GLuint)(group), (C.GLint)(numCounters), (*C.GLuint)(unsafe.Pointer(counterList)))
 }
-
 func SemaphoreParameterui64vEXT(semaphore uint32, pname uint32, params *uint64) {
 	C.glowSemaphoreParameterui64vEXT(gpSemaphoreParameterui64vEXT, (C.GLuint)(semaphore), (C.GLenum)(pname), (*C.GLuint64)(unsafe.Pointer(params)))
 }
@@ -28719,31 +27040,24 @@ func SemaphoreParameterui64vEXT(semaphore uint32, pname uint32, params *uint64) 
 func SeparableFilter2D(target uint32, internalformat uint32, width int32, height int32, format uint32, xtype uint32, row unsafe.Pointer, column unsafe.Pointer) {
 	C.glowSeparableFilter2D(gpSeparableFilter2D, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), row, column)
 }
-
 func SeparableFilter2DEXT(target uint32, internalformat uint32, width int32, height int32, format uint32, xtype uint32, row unsafe.Pointer, column unsafe.Pointer) {
 	C.glowSeparableFilter2DEXT(gpSeparableFilter2DEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), row, column)
 }
-
 func SetFenceAPPLE(fence uint32) {
 	C.glowSetFenceAPPLE(gpSetFenceAPPLE, (C.GLuint)(fence))
 }
-
 func SetFenceNV(fence uint32, condition uint32) {
 	C.glowSetFenceNV(gpSetFenceNV, (C.GLuint)(fence), (C.GLenum)(condition))
 }
-
 func SetFragmentShaderConstantATI(dst uint32, value *float32) {
 	C.glowSetFragmentShaderConstantATI(gpSetFragmentShaderConstantATI, (C.GLuint)(dst), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func SetInvariantEXT(id uint32, xtype uint32, addr unsafe.Pointer) {
 	C.glowSetInvariantEXT(gpSetInvariantEXT, (C.GLuint)(id), (C.GLenum)(xtype), addr)
 }
-
 func SetLocalConstantEXT(id uint32, xtype uint32, addr unsafe.Pointer) {
 	C.glowSetLocalConstantEXT(gpSetLocalConstantEXT, (C.GLuint)(id), (C.GLenum)(xtype), addr)
 }
-
 func SetMultisamplefvAMD(pname uint32, index uint32, val *float32) {
 	C.glowSetMultisamplefvAMD(gpSetMultisamplefvAMD, (C.GLenum)(pname), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(val)))
 }
@@ -28757,15 +27071,12 @@ func ShadeModel(mode uint32) {
 func ShaderBinary(count int32, shaders *uint32, binaryformat uint32, binary unsafe.Pointer, length int32) {
 	C.glowShaderBinary(gpShaderBinary, (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(shaders)), (C.GLenum)(binaryformat), binary, (C.GLsizei)(length))
 }
-
 func ShaderOp1EXT(op uint32, res uint32, arg1 uint32) {
 	C.glowShaderOp1EXT(gpShaderOp1EXT, (C.GLenum)(op), (C.GLuint)(res), (C.GLuint)(arg1))
 }
-
 func ShaderOp2EXT(op uint32, res uint32, arg1 uint32, arg2 uint32) {
 	C.glowShaderOp2EXT(gpShaderOp2EXT, (C.GLenum)(op), (C.GLuint)(res), (C.GLuint)(arg1), (C.GLuint)(arg2))
 }
-
 func ShaderOp3EXT(op uint32, res uint32, arg1 uint32, arg2 uint32, arg3 uint32) {
 	C.glowShaderOp3EXT(gpShaderOp3EXT, (C.GLenum)(op), (C.GLuint)(res), (C.GLuint)(arg1), (C.GLuint)(arg2), (C.GLuint)(arg3))
 }
@@ -28774,7 +27085,6 @@ func ShaderOp3EXT(op uint32, res uint32, arg1 uint32, arg2 uint32, arg3 uint32) 
 func ShaderSource(shader uint32, count int32, xstring **uint8, length *int32) {
 	C.glowShaderSource(gpShaderSource, (C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(xstring)), (*C.GLint)(unsafe.Pointer(length)))
 }
-
 func ShaderSourceARB(shaderObj uintptr, count int32, xstring **uint8, length *int32) {
 	C.glowShaderSourceARB(gpShaderSourceARB, (C.GLhandleARB)(shaderObj), (C.GLsizei)(count), (**C.GLcharARB)(unsafe.Pointer(xstring)), (*C.GLint)(unsafe.Pointer(length)))
 }
@@ -28783,59 +27093,45 @@ func ShaderSourceARB(shaderObj uintptr, count int32, xstring **uint8, length *in
 func ShaderStorageBlockBinding(program uint32, storageBlockIndex uint32, storageBlockBinding uint32) {
 	C.glowShaderStorageBlockBinding(gpShaderStorageBlockBinding, (C.GLuint)(program), (C.GLuint)(storageBlockIndex), (C.GLuint)(storageBlockBinding))
 }
-
 func SharpenTexFuncSGIS(target uint32, n int32, points *float32) {
 	C.glowSharpenTexFuncSGIS(gpSharpenTexFuncSGIS, (C.GLenum)(target), (C.GLsizei)(n), (*C.GLfloat)(unsafe.Pointer(points)))
 }
-
 func SignalSemaphoreEXT(semaphore uint32, numBufferBarriers uint32, buffers *uint32, numTextureBarriers uint32, textures *uint32, dstLayouts *uint32) {
 	C.glowSignalSemaphoreEXT(gpSignalSemaphoreEXT, (C.GLuint)(semaphore), (C.GLuint)(numBufferBarriers), (*C.GLuint)(unsafe.Pointer(buffers)), (C.GLuint)(numTextureBarriers), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLenum)(unsafe.Pointer(dstLayouts)))
 }
-
 func SignalVkFenceNV(vkFence uint64) {
 	C.glowSignalVkFenceNV(gpSignalVkFenceNV, (C.GLuint64)(vkFence))
 }
-
 func SignalVkSemaphoreNV(vkSemaphore uint64) {
 	C.glowSignalVkSemaphoreNV(gpSignalVkSemaphoreNV, (C.GLuint64)(vkSemaphore))
 }
-
 func SpecializeShaderARB(shader uint32, pEntryPoint *uint8, numSpecializationConstants uint32, pConstantIndex *uint32, pConstantValue *uint32) {
 	C.glowSpecializeShaderARB(gpSpecializeShaderARB, (C.GLuint)(shader), (*C.GLchar)(unsafe.Pointer(pEntryPoint)), (C.GLuint)(numSpecializationConstants), (*C.GLuint)(unsafe.Pointer(pConstantIndex)), (*C.GLuint)(unsafe.Pointer(pConstantValue)))
 }
-
 func SpriteParameterfSGIX(pname uint32, param float32) {
 	C.glowSpriteParameterfSGIX(gpSpriteParameterfSGIX, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func SpriteParameterfvSGIX(pname uint32, params *float32) {
 	C.glowSpriteParameterfvSGIX(gpSpriteParameterfvSGIX, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func SpriteParameteriSGIX(pname uint32, param int32) {
 	C.glowSpriteParameteriSGIX(gpSpriteParameteriSGIX, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func SpriteParameterivSGIX(pname uint32, params *int32) {
 	C.glowSpriteParameterivSGIX(gpSpriteParameterivSGIX, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func StartInstrumentsSGIX() {
 	C.glowStartInstrumentsSGIX(gpStartInstrumentsSGIX)
 }
-
 func StateCaptureNV(state uint32, mode uint32) {
 	C.glowStateCaptureNV(gpStateCaptureNV, (C.GLuint)(state), (C.GLenum)(mode))
 }
-
 func StencilClearTagEXT(stencilTagBits int32, stencilClearTag uint32) {
 	C.glowStencilClearTagEXT(gpStencilClearTagEXT, (C.GLsizei)(stencilTagBits), (C.GLuint)(stencilClearTag))
 }
-
 func StencilFillPathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, fillMode uint32, mask uint32, transformType uint32, transformValues *float32) {
 	C.glowStencilFillPathInstancedNV(gpStencilFillPathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLenum)(fillMode), (C.GLuint)(mask), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func StencilFillPathNV(path uint32, fillMode uint32, mask uint32) {
 	C.glowStencilFillPathNV(gpStencilFillPathNV, (C.GLuint)(path), (C.GLenum)(fillMode), (C.GLuint)(mask))
 }
@@ -28849,7 +27145,6 @@ func StencilFunc(xfunc uint32, ref int32, mask uint32) {
 func StencilFuncSeparate(face uint32, xfunc uint32, ref int32, mask uint32) {
 	C.glowStencilFuncSeparate(gpStencilFuncSeparate, (C.GLenum)(face), (C.GLenum)(xfunc), (C.GLint)(ref), (C.GLuint)(mask))
 }
-
 func StencilFuncSeparateATI(frontfunc uint32, backfunc uint32, ref int32, mask uint32) {
 	C.glowStencilFuncSeparateATI(gpStencilFuncSeparateATI, (C.GLenum)(frontfunc), (C.GLenum)(backfunc), (C.GLint)(ref), (C.GLuint)(mask))
 }
@@ -28873,129 +27168,98 @@ func StencilOp(fail uint32, zfail uint32, zpass uint32) {
 func StencilOpSeparate(face uint32, sfail uint32, dpfail uint32, dppass uint32) {
 	C.glowStencilOpSeparate(gpStencilOpSeparate, (C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
 }
-
 func StencilOpSeparateATI(face uint32, sfail uint32, dpfail uint32, dppass uint32) {
 	C.glowStencilOpSeparateATI(gpStencilOpSeparateATI, (C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
 }
-
 func StencilOpValueAMD(face uint32, value uint32) {
 	C.glowStencilOpValueAMD(gpStencilOpValueAMD, (C.GLenum)(face), (C.GLuint)(value))
 }
-
 func StencilStrokePathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, reference int32, mask uint32, transformType uint32, transformValues *float32) {
 	C.glowStencilStrokePathInstancedNV(gpStencilStrokePathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLint)(reference), (C.GLuint)(mask), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func StencilStrokePathNV(path uint32, reference int32, mask uint32) {
 	C.glowStencilStrokePathNV(gpStencilStrokePathNV, (C.GLuint)(path), (C.GLint)(reference), (C.GLuint)(mask))
 }
-
 func StencilThenCoverFillPathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, fillMode uint32, mask uint32, coverMode uint32, transformType uint32, transformValues *float32) {
 	C.glowStencilThenCoverFillPathInstancedNV(gpStencilThenCoverFillPathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLenum)(fillMode), (C.GLuint)(mask), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func StencilThenCoverFillPathNV(path uint32, fillMode uint32, mask uint32, coverMode uint32) {
 	C.glowStencilThenCoverFillPathNV(gpStencilThenCoverFillPathNV, (C.GLuint)(path), (C.GLenum)(fillMode), (C.GLuint)(mask), (C.GLenum)(coverMode))
 }
-
 func StencilThenCoverStrokePathInstancedNV(numPaths int32, pathNameType uint32, paths unsafe.Pointer, pathBase uint32, reference int32, mask uint32, coverMode uint32, transformType uint32, transformValues *float32) {
 	C.glowStencilThenCoverStrokePathInstancedNV(gpStencilThenCoverStrokePathInstancedNV, (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), paths, (C.GLuint)(pathBase), (C.GLint)(reference), (C.GLuint)(mask), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func StencilThenCoverStrokePathNV(path uint32, reference int32, mask uint32, coverMode uint32) {
 	C.glowStencilThenCoverStrokePathNV(gpStencilThenCoverStrokePathNV, (C.GLuint)(path), (C.GLint)(reference), (C.GLuint)(mask), (C.GLenum)(coverMode))
 }
-
 func StopInstrumentsSGIX(marker int32) {
 	C.glowStopInstrumentsSGIX(gpStopInstrumentsSGIX, (C.GLint)(marker))
 }
-
 func StringMarkerGREMEDY(len int32, xstring unsafe.Pointer) {
 	C.glowStringMarkerGREMEDY(gpStringMarkerGREMEDY, (C.GLsizei)(len), xstring)
 }
-
 func SubpixelPrecisionBiasNV(xbits uint32, ybits uint32) {
 	C.glowSubpixelPrecisionBiasNV(gpSubpixelPrecisionBiasNV, (C.GLuint)(xbits), (C.GLuint)(ybits))
 }
-
 func SwizzleEXT(res uint32, in uint32, outX uint32, outY uint32, outZ uint32, outW uint32) {
 	C.glowSwizzleEXT(gpSwizzleEXT, (C.GLuint)(res), (C.GLuint)(in), (C.GLenum)(outX), (C.GLenum)(outY), (C.GLenum)(outZ), (C.GLenum)(outW))
 }
-
 func SyncTextureINTEL(texture uint32) {
 	C.glowSyncTextureINTEL(gpSyncTextureINTEL, (C.GLuint)(texture))
 }
-
 func TagSampleBufferSGIX() {
 	C.glowTagSampleBufferSGIX(gpTagSampleBufferSGIX)
 }
-
 func Tangent3bEXT(tx int8, ty int8, tz int8) {
 	C.glowTangent3bEXT(gpTangent3bEXT, (C.GLbyte)(tx), (C.GLbyte)(ty), (C.GLbyte)(tz))
 }
-
 func Tangent3bvEXT(v *int8) {
 	C.glowTangent3bvEXT(gpTangent3bvEXT, (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func Tangent3dEXT(tx float64, ty float64, tz float64) {
 	C.glowTangent3dEXT(gpTangent3dEXT, (C.GLdouble)(tx), (C.GLdouble)(ty), (C.GLdouble)(tz))
 }
-
 func Tangent3dvEXT(v *float64) {
 	C.glowTangent3dvEXT(gpTangent3dvEXT, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Tangent3fEXT(tx float32, ty float32, tz float32) {
 	C.glowTangent3fEXT(gpTangent3fEXT, (C.GLfloat)(tx), (C.GLfloat)(ty), (C.GLfloat)(tz))
 }
-
 func Tangent3fvEXT(v *float32) {
 	C.glowTangent3fvEXT(gpTangent3fvEXT, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Tangent3iEXT(tx int32, ty int32, tz int32) {
 	C.glowTangent3iEXT(gpTangent3iEXT, (C.GLint)(tx), (C.GLint)(ty), (C.GLint)(tz))
 }
-
 func Tangent3ivEXT(v *int32) {
 	C.glowTangent3ivEXT(gpTangent3ivEXT, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Tangent3sEXT(tx int16, ty int16, tz int16) {
 	C.glowTangent3sEXT(gpTangent3sEXT, (C.GLshort)(tx), (C.GLshort)(ty), (C.GLshort)(tz))
 }
-
 func Tangent3svEXT(v *int16) {
 	C.glowTangent3svEXT(gpTangent3svEXT, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func TangentPointerEXT(xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowTangentPointerEXT(gpTangentPointerEXT, (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func TbufferMask3DFX(mask uint32) {
 	C.glowTbufferMask3DFX(gpTbufferMask3DFX, (C.GLuint)(mask))
 }
-
 func TessellationFactorAMD(factor float32) {
 	C.glowTessellationFactorAMD(gpTessellationFactorAMD, (C.GLfloat)(factor))
 }
-
 func TessellationModeAMD(mode uint32) {
 	C.glowTessellationModeAMD(gpTessellationModeAMD, (C.GLenum)(mode))
 }
-
 func TestFenceAPPLE(fence uint32) bool {
 	ret := C.glowTestFenceAPPLE(gpTestFenceAPPLE, (C.GLuint)(fence))
 	return ret == TRUE
 }
-
 func TestFenceNV(fence uint32) bool {
 	ret := C.glowTestFenceNV(gpTestFenceNV, (C.GLuint)(fence))
 	return ret == TRUE
 }
-
 func TestObjectAPPLE(object uint32, name uint32) bool {
 	ret := C.glowTestObjectAPPLE(gpTestObjectAPPLE, (C.GLenum)(object), (C.GLuint)(name))
 	return ret == TRUE
@@ -29005,11 +27269,9 @@ func TestObjectAPPLE(object uint32, name uint32) bool {
 func TexBuffer(target uint32, internalformat uint32, buffer uint32) {
 	C.glowTexBuffer(gpTexBuffer, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-
 func TexBufferARB(target uint32, internalformat uint32, buffer uint32) {
 	C.glowTexBufferARB(gpTexBufferARB, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-
 func TexBufferEXT(target uint32, internalformat uint32, buffer uint32) {
 	C.glowTexBufferEXT(gpTexBufferEXT, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
@@ -29018,327 +27280,246 @@ func TexBufferEXT(target uint32, internalformat uint32, buffer uint32) {
 func TexBufferRange(target uint32, internalformat uint32, buffer uint32, offset int, size int) {
 	C.glowTexBufferRange(gpTexBufferRange, (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-
 func TexBumpParameterfvATI(pname uint32, param *float32) {
 	C.glowTexBumpParameterfvATI(gpTexBumpParameterfvATI, (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(param)))
 }
-
 func TexBumpParameterivATI(pname uint32, param *int32) {
 	C.glowTexBumpParameterivATI(gpTexBumpParameterivATI, (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func TexCoord1bOES(s int8) {
 	C.glowTexCoord1bOES(gpTexCoord1bOES, (C.GLbyte)(s))
 }
-
 func TexCoord1bvOES(coords *int8) {
 	C.glowTexCoord1bvOES(gpTexCoord1bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func TexCoord1d(s float64) {
 	C.glowTexCoord1d(gpTexCoord1d, (C.GLdouble)(s))
 }
-
 func TexCoord1dv(v *float64) {
 	C.glowTexCoord1dv(gpTexCoord1dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func TexCoord1f(s float32) {
 	C.glowTexCoord1f(gpTexCoord1f, (C.GLfloat)(s))
 }
-
 func TexCoord1fv(v *float32) {
 	C.glowTexCoord1fv(gpTexCoord1fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord1hNV(s uint16) {
 	C.glowTexCoord1hNV(gpTexCoord1hNV, (C.GLhalfNV)(s))
 }
-
 func TexCoord1hvNV(v *uint16) {
 	C.glowTexCoord1hvNV(gpTexCoord1hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func TexCoord1i(s int32) {
 	C.glowTexCoord1i(gpTexCoord1i, (C.GLint)(s))
 }
-
 func TexCoord1iv(v *int32) {
 	C.glowTexCoord1iv(gpTexCoord1iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func TexCoord1s(s int16) {
 	C.glowTexCoord1s(gpTexCoord1s, (C.GLshort)(s))
 }
-
 func TexCoord1sv(v *int16) {
 	C.glowTexCoord1sv(gpTexCoord1sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func TexCoord1xOES(s int32) {
 	C.glowTexCoord1xOES(gpTexCoord1xOES, (C.GLfixed)(s))
 }
-
 func TexCoord1xvOES(coords *int32) {
 	C.glowTexCoord1xvOES(gpTexCoord1xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func TexCoord2bOES(s int8, t int8) {
 	C.glowTexCoord2bOES(gpTexCoord2bOES, (C.GLbyte)(s), (C.GLbyte)(t))
 }
-
 func TexCoord2bvOES(coords *int8) {
 	C.glowTexCoord2bvOES(gpTexCoord2bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func TexCoord2d(s float64, t float64) {
 	C.glowTexCoord2d(gpTexCoord2d, (C.GLdouble)(s), (C.GLdouble)(t))
 }
-
 func TexCoord2dv(v *float64) {
 	C.glowTexCoord2dv(gpTexCoord2dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func TexCoord2f(s float32, t float32) {
 	C.glowTexCoord2f(gpTexCoord2f, (C.GLfloat)(s), (C.GLfloat)(t))
 }
-
 func TexCoord2fColor3fVertex3fSUN(s float32, t float32, r float32, g float32, b float32, x float32, y float32, z float32) {
 	C.glowTexCoord2fColor3fVertex3fSUN(gpTexCoord2fColor3fVertex3fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func TexCoord2fColor3fVertex3fvSUN(tc *float32, c *float32, v *float32) {
 	C.glowTexCoord2fColor3fVertex3fvSUN(gpTexCoord2fColor3fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord2fColor4fNormal3fVertex3fSUN(s float32, t float32, r float32, g float32, b float32, a float32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowTexCoord2fColor4fNormal3fVertex3fSUN(gpTexCoord2fColor4fNormal3fVertex3fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(a), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func TexCoord2fColor4fNormal3fVertex3fvSUN(tc *float32, c *float32, n *float32, v *float32) {
 	C.glowTexCoord2fColor4fNormal3fVertex3fvSUN(gpTexCoord2fColor4fNormal3fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord2fColor4ubVertex3fSUN(s float32, t float32, r uint8, g uint8, b uint8, a uint8, x float32, y float32, z float32) {
 	C.glowTexCoord2fColor4ubVertex3fSUN(gpTexCoord2fColor4ubVertex3fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLubyte)(r), (C.GLubyte)(g), (C.GLubyte)(b), (C.GLubyte)(a), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func TexCoord2fColor4ubVertex3fvSUN(tc *float32, c *uint8, v *float32) {
 	C.glowTexCoord2fColor4ubVertex3fvSUN(gpTexCoord2fColor4ubVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLubyte)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord2fNormal3fVertex3fSUN(s float32, t float32, nx float32, ny float32, nz float32, x float32, y float32, z float32) {
 	C.glowTexCoord2fNormal3fVertex3fSUN(gpTexCoord2fNormal3fVertex3fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func TexCoord2fNormal3fVertex3fvSUN(tc *float32, n *float32, v *float32) {
 	C.glowTexCoord2fNormal3fVertex3fvSUN(gpTexCoord2fNormal3fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord2fVertex3fSUN(s float32, t float32, x float32, y float32, z float32) {
 	C.glowTexCoord2fVertex3fSUN(gpTexCoord2fVertex3fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func TexCoord2fVertex3fvSUN(tc *float32, v *float32) {
 	C.glowTexCoord2fVertex3fvSUN(gpTexCoord2fVertex3fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord2fv(v *float32) {
 	C.glowTexCoord2fv(gpTexCoord2fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord2hNV(s uint16, t uint16) {
 	C.glowTexCoord2hNV(gpTexCoord2hNV, (C.GLhalfNV)(s), (C.GLhalfNV)(t))
 }
-
 func TexCoord2hvNV(v *uint16) {
 	C.glowTexCoord2hvNV(gpTexCoord2hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func TexCoord2i(s int32, t int32) {
 	C.glowTexCoord2i(gpTexCoord2i, (C.GLint)(s), (C.GLint)(t))
 }
-
 func TexCoord2iv(v *int32) {
 	C.glowTexCoord2iv(gpTexCoord2iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func TexCoord2s(s int16, t int16) {
 	C.glowTexCoord2s(gpTexCoord2s, (C.GLshort)(s), (C.GLshort)(t))
 }
-
 func TexCoord2sv(v *int16) {
 	C.glowTexCoord2sv(gpTexCoord2sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func TexCoord2xOES(s int32, t int32) {
 	C.glowTexCoord2xOES(gpTexCoord2xOES, (C.GLfixed)(s), (C.GLfixed)(t))
 }
-
 func TexCoord2xvOES(coords *int32) {
 	C.glowTexCoord2xvOES(gpTexCoord2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func TexCoord3bOES(s int8, t int8, r int8) {
 	C.glowTexCoord3bOES(gpTexCoord3bOES, (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r))
 }
-
 func TexCoord3bvOES(coords *int8) {
 	C.glowTexCoord3bvOES(gpTexCoord3bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func TexCoord3d(s float64, t float64, r float64) {
 	C.glowTexCoord3d(gpTexCoord3d, (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
 }
-
 func TexCoord3dv(v *float64) {
 	C.glowTexCoord3dv(gpTexCoord3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func TexCoord3f(s float32, t float32, r float32) {
 	C.glowTexCoord3f(gpTexCoord3f, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r))
 }
-
 func TexCoord3fv(v *float32) {
 	C.glowTexCoord3fv(gpTexCoord3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord3hNV(s uint16, t uint16, r uint16) {
 	C.glowTexCoord3hNV(gpTexCoord3hNV, (C.GLhalfNV)(s), (C.GLhalfNV)(t), (C.GLhalfNV)(r))
 }
-
 func TexCoord3hvNV(v *uint16) {
 	C.glowTexCoord3hvNV(gpTexCoord3hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func TexCoord3i(s int32, t int32, r int32) {
 	C.glowTexCoord3i(gpTexCoord3i, (C.GLint)(s), (C.GLint)(t), (C.GLint)(r))
 }
-
 func TexCoord3iv(v *int32) {
 	C.glowTexCoord3iv(gpTexCoord3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func TexCoord3s(s int16, t int16, r int16) {
 	C.glowTexCoord3s(gpTexCoord3s, (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r))
 }
-
 func TexCoord3sv(v *int16) {
 	C.glowTexCoord3sv(gpTexCoord3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func TexCoord3xOES(s int32, t int32, r int32) {
 	C.glowTexCoord3xOES(gpTexCoord3xOES, (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r))
 }
-
 func TexCoord3xvOES(coords *int32) {
 	C.glowTexCoord3xvOES(gpTexCoord3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func TexCoord4bOES(s int8, t int8, r int8, q int8) {
 	C.glowTexCoord4bOES(gpTexCoord4bOES, (C.GLbyte)(s), (C.GLbyte)(t), (C.GLbyte)(r), (C.GLbyte)(q))
 }
-
 func TexCoord4bvOES(coords *int8) {
 	C.glowTexCoord4bvOES(gpTexCoord4bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func TexCoord4d(s float64, t float64, r float64, q float64) {
 	C.glowTexCoord4d(gpTexCoord4d, (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
-
 func TexCoord4dv(v *float64) {
 	C.glowTexCoord4dv(gpTexCoord4dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func TexCoord4f(s float32, t float32, r float32, q float32) {
 	C.glowTexCoord4f(gpTexCoord4f, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(q))
 }
-
 func TexCoord4fColor4fNormal3fVertex4fSUN(s float32, t float32, p float32, q float32, r float32, g float32, b float32, a float32, nx float32, ny float32, nz float32, x float32, y float32, z float32, w float32) {
 	C.glowTexCoord4fColor4fNormal3fVertex4fSUN(gpTexCoord4fColor4fNormal3fVertex4fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(p), (C.GLfloat)(q), (C.GLfloat)(r), (C.GLfloat)(g), (C.GLfloat)(b), (C.GLfloat)(a), (C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func TexCoord4fColor4fNormal3fVertex4fvSUN(tc *float32, c *float32, n *float32, v *float32) {
 	C.glowTexCoord4fColor4fNormal3fVertex4fvSUN(gpTexCoord4fColor4fNormal3fVertex4fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(c)), (*C.GLfloat)(unsafe.Pointer(n)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord4fVertex4fSUN(s float32, t float32, p float32, q float32, x float32, y float32, z float32, w float32) {
 	C.glowTexCoord4fVertex4fSUN(gpTexCoord4fVertex4fSUN, (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(p), (C.GLfloat)(q), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func TexCoord4fVertex4fvSUN(tc *float32, v *float32) {
 	C.glowTexCoord4fVertex4fvSUN(gpTexCoord4fVertex4fvSUN, (*C.GLfloat)(unsafe.Pointer(tc)), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord4fv(v *float32) {
 	C.glowTexCoord4fv(gpTexCoord4fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func TexCoord4hNV(s uint16, t uint16, r uint16, q uint16) {
 	C.glowTexCoord4hNV(gpTexCoord4hNV, (C.GLhalfNV)(s), (C.GLhalfNV)(t), (C.GLhalfNV)(r), (C.GLhalfNV)(q))
 }
-
 func TexCoord4hvNV(v *uint16) {
 	C.glowTexCoord4hvNV(gpTexCoord4hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func TexCoord4i(s int32, t int32, r int32, q int32) {
 	C.glowTexCoord4i(gpTexCoord4i, (C.GLint)(s), (C.GLint)(t), (C.GLint)(r), (C.GLint)(q))
 }
-
 func TexCoord4iv(v *int32) {
 	C.glowTexCoord4iv(gpTexCoord4iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func TexCoord4s(s int16, t int16, r int16, q int16) {
 	C.glowTexCoord4s(gpTexCoord4s, (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r), (C.GLshort)(q))
 }
-
 func TexCoord4sv(v *int16) {
 	C.glowTexCoord4sv(gpTexCoord4sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func TexCoord4xOES(s int32, t int32, r int32, q int32) {
 	C.glowTexCoord4xOES(gpTexCoord4xOES, (C.GLfixed)(s), (C.GLfixed)(t), (C.GLfixed)(r), (C.GLfixed)(q))
 }
-
 func TexCoord4xvOES(coords *int32) {
 	C.glowTexCoord4xvOES(gpTexCoord4xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func TexCoordFormatNV(size int32, xtype uint32, stride int32) {
 	C.glowTexCoordFormatNV(gpTexCoordFormatNV, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func TexCoordP1ui(xtype uint32, coords uint32) {
 	C.glowTexCoordP1ui(gpTexCoordP1ui, (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func TexCoordP1uiv(xtype uint32, coords *uint32) {
 	C.glowTexCoordP1uiv(gpTexCoordP1uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func TexCoordP2ui(xtype uint32, coords uint32) {
 	C.glowTexCoordP2ui(gpTexCoordP2ui, (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func TexCoordP2uiv(xtype uint32, coords *uint32) {
 	C.glowTexCoordP2uiv(gpTexCoordP2uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func TexCoordP3ui(xtype uint32, coords uint32) {
 	C.glowTexCoordP3ui(gpTexCoordP3ui, (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func TexCoordP3uiv(xtype uint32, coords *uint32) {
 	C.glowTexCoordP3uiv(gpTexCoordP3uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
-
 func TexCoordP4ui(xtype uint32, coords uint32) {
 	C.glowTexCoordP4ui(gpTexCoordP4ui, (C.GLenum)(xtype), (C.GLuint)(coords))
 }
-
 func TexCoordP4uiv(xtype uint32, coords *uint32) {
 	C.glowTexCoordP4uiv(gpTexCoordP4uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(coords)))
 }
@@ -29347,75 +27528,57 @@ func TexCoordP4uiv(xtype uint32, coords *uint32) {
 func TexCoordPointer(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowTexCoordPointer(gpTexCoordPointer, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func TexCoordPointerEXT(size int32, xtype uint32, stride int32, count int32, pointer unsafe.Pointer) {
 	C.glowTexCoordPointerEXT(gpTexCoordPointerEXT, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLsizei)(count), pointer)
 }
-
 func TexCoordPointerListIBM(size int32, xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowTexCoordPointerListIBM(gpTexCoordPointerListIBM, (C.GLint)(size), (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
-
 func TexCoordPointervINTEL(size int32, xtype uint32, pointer *unsafe.Pointer) {
 	C.glowTexCoordPointervINTEL(gpTexCoordPointervINTEL, (C.GLint)(size), (C.GLenum)(xtype), pointer)
 }
-
 func TexEnvf(target uint32, pname uint32, param float32) {
 	C.glowTexEnvf(gpTexEnvf, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func TexEnvfv(target uint32, pname uint32, params *float32) {
 	C.glowTexEnvfv(gpTexEnvfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func TexEnvi(target uint32, pname uint32, param int32) {
 	C.glowTexEnvi(gpTexEnvi, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func TexEnviv(target uint32, pname uint32, params *int32) {
 	C.glowTexEnviv(gpTexEnviv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TexEnvxOES(target uint32, pname uint32, param int32) {
 	C.glowTexEnvxOES(gpTexEnvxOES, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func TexEnvxvOES(target uint32, pname uint32, params *int32) {
 	C.glowTexEnvxvOES(gpTexEnvxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func TexFilterFuncSGIS(target uint32, filter uint32, n int32, weights *float32) {
 	C.glowTexFilterFuncSGIS(gpTexFilterFuncSGIS, (C.GLenum)(target), (C.GLenum)(filter), (C.GLsizei)(n), (*C.GLfloat)(unsafe.Pointer(weights)))
 }
-
 func TexGend(coord uint32, pname uint32, param float64) {
 	C.glowTexGend(gpTexGend, (C.GLenum)(coord), (C.GLenum)(pname), (C.GLdouble)(param))
 }
-
 func TexGendv(coord uint32, pname uint32, params *float64) {
 	C.glowTexGendv(gpTexGendv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func TexGenf(coord uint32, pname uint32, param float32) {
 	C.glowTexGenf(gpTexGenf, (C.GLenum)(coord), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func TexGenfv(coord uint32, pname uint32, params *float32) {
 	C.glowTexGenfv(gpTexGenfv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func TexGeni(coord uint32, pname uint32, param int32) {
 	C.glowTexGeni(gpTexGeni, (C.GLenum)(coord), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func TexGeniv(coord uint32, pname uint32, params *int32) {
 	C.glowTexGeniv(gpTexGeniv, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TexGenxOES(coord uint32, pname uint32, param int32) {
 	C.glowTexGenxOES(gpTexGenxOES, (C.GLenum)(coord), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func TexGenxvOES(coord uint32, pname uint32, params *int32) {
 	C.glowTexGenxvOES(gpTexGenxvOES, (C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
@@ -29434,7 +27597,6 @@ func TexImage2D(target uint32, level int32, internalformat int32, width int32, h
 func TexImage2DMultisample(target uint32, samples int32, internalformat uint32, width int32, height int32, fixedsamplelocations bool) {
 	C.glowTexImage2DMultisample(gpTexImage2DMultisample, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
-
 func TexImage2DMultisampleCoverageNV(target uint32, coverageSamples int32, colorSamples int32, internalFormat int32, width int32, height int32, fixedSampleLocations bool) {
 	C.glowTexImage2DMultisampleCoverageNV(gpTexImage2DMultisampleCoverageNV, (C.GLenum)(target), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedSampleLocations)))
 }
@@ -29443,7 +27605,6 @@ func TexImage2DMultisampleCoverageNV(target uint32, coverageSamples int32, color
 func TexImage3D(target uint32, level int32, internalformat int32, width int32, height int32, depth int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexImage3D(gpTexImage3D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TexImage3DEXT(target uint32, level int32, internalformat uint32, width int32, height int32, depth int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexImage3DEXT(gpTexImage3DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29452,59 +27613,45 @@ func TexImage3DEXT(target uint32, level int32, internalformat uint32, width int3
 func TexImage3DMultisample(target uint32, samples int32, internalformat uint32, width int32, height int32, depth int32, fixedsamplelocations bool) {
 	C.glowTexImage3DMultisample(gpTexImage3DMultisample, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
-
 func TexImage3DMultisampleCoverageNV(target uint32, coverageSamples int32, colorSamples int32, internalFormat int32, width int32, height int32, depth int32, fixedSampleLocations bool) {
 	C.glowTexImage3DMultisampleCoverageNV(gpTexImage3DMultisampleCoverageNV, (C.GLenum)(target), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedSampleLocations)))
 }
-
 func TexImage4DSGIS(target uint32, level int32, internalformat uint32, width int32, height int32, depth int32, size4d int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexImage4DSGIS(gpTexImage4DSGIS, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLsizei)(size4d), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TexPageCommitmentARB(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, commit bool) {
 	C.glowTexPageCommitmentARB(gpTexPageCommitmentARB, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(commit)))
 }
-
 func TexParameterIiv(target uint32, pname uint32, params *int32) {
 	C.glowTexParameterIiv(gpTexParameterIiv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TexParameterIivEXT(target uint32, pname uint32, params *int32) {
 	C.glowTexParameterIivEXT(gpTexParameterIivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TexParameterIuiv(target uint32, pname uint32, params *uint32) {
 	C.glowTexParameterIuiv(gpTexParameterIuiv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func TexParameterIuivEXT(target uint32, pname uint32, params *uint32) {
 	C.glowTexParameterIuivEXT(gpTexParameterIuivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func TexParameterf(target uint32, pname uint32, param float32) {
 	C.glowTexParameterf(gpTexParameterf, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func TexParameterfv(target uint32, pname uint32, params *float32) {
 	C.glowTexParameterfv(gpTexParameterfv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func TexParameteri(target uint32, pname uint32, param int32) {
 	C.glowTexParameteri(gpTexParameteri, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func TexParameteriv(target uint32, pname uint32, params *int32) {
 	C.glowTexParameteriv(gpTexParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TexParameterxOES(target uint32, pname uint32, param int32) {
 	C.glowTexParameterxOES(gpTexParameterxOES, (C.GLenum)(target), (C.GLenum)(pname), (C.GLfixed)(param))
 }
-
 func TexParameterxvOES(target uint32, pname uint32, params *int32) {
 	C.glowTexParameterxvOES(gpTexParameterxvOES, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfixed)(unsafe.Pointer(params)))
 }
-
 func TexRenderbufferNV(target uint32, renderbuffer uint32) {
 	C.glowTexRenderbufferNV(gpTexRenderbufferNV, (C.GLenum)(target), (C.GLuint)(renderbuffer))
 }
@@ -29533,27 +27680,21 @@ func TexStorage3D(target uint32, levels int32, internalformat uint32, width int3
 func TexStorage3DMultisample(target uint32, samples int32, internalformat uint32, width int32, height int32, depth int32, fixedsamplelocations bool) {
 	C.glowTexStorage3DMultisample(gpTexStorage3DMultisample, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
-
 func TexStorageMem1DEXT(target uint32, levels int32, internalFormat uint32, width int32, memory uint32, offset uint64) {
 	C.glowTexStorageMem1DEXT(gpTexStorageMem1DEXT, (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TexStorageMem2DEXT(target uint32, levels int32, internalFormat uint32, width int32, height int32, memory uint32, offset uint64) {
 	C.glowTexStorageMem2DEXT(gpTexStorageMem2DEXT, (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TexStorageMem2DMultisampleEXT(target uint32, samples int32, internalFormat uint32, width int32, height int32, fixedSampleLocations bool, memory uint32, offset uint64) {
 	C.glowTexStorageMem2DMultisampleEXT(gpTexStorageMem2DMultisampleEXT, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedSampleLocations)), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TexStorageMem3DEXT(target uint32, levels int32, internalFormat uint32, width int32, height int32, depth int32, memory uint32, offset uint64) {
 	C.glowTexStorageMem3DEXT(gpTexStorageMem3DEXT, (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TexStorageMem3DMultisampleEXT(target uint32, samples int32, internalFormat uint32, width int32, height int32, depth int32, fixedSampleLocations bool, memory uint32, offset uint64) {
 	C.glowTexStorageMem3DMultisampleEXT(gpTexStorageMem3DMultisampleEXT, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedSampleLocations)), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TexStorageSparseAMD(target uint32, internalFormat uint32, width int32, height int32, depth int32, layers int32, flags uint32) {
 	C.glowTexStorageSparseAMD(gpTexStorageSparseAMD, (C.GLenum)(target), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLsizei)(layers), (C.GLbitfield)(flags))
 }
@@ -29562,7 +27703,6 @@ func TexStorageSparseAMD(target uint32, internalFormat uint32, width int32, heig
 func TexSubImage1D(target uint32, level int32, xoffset int32, width int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage1D(gpTexSubImage1D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TexSubImage1DEXT(target uint32, level int32, xoffset int32, width int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage1DEXT(gpTexSubImage1DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29571,7 +27711,6 @@ func TexSubImage1DEXT(target uint32, level int32, xoffset int32, width int32, fo
 func TexSubImage2D(target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage2D(gpTexSubImage2D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TexSubImage2DEXT(target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage2DEXT(gpTexSubImage2DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29580,11 +27719,9 @@ func TexSubImage2DEXT(target uint32, level int32, xoffset int32, yoffset int32, 
 func TexSubImage3D(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage3D(gpTexSubImage3D, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TexSubImage3DEXT(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage3DEXT(gpTexSubImage3DEXT, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TexSubImage4DSGIS(target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, woffset int32, width int32, height int32, depth int32, size4d int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTexSubImage4DSGIS(gpTexSubImage4DSGIS, (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(woffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLsizei)(size4d), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29593,7 +27730,6 @@ func TexSubImage4DSGIS(target uint32, level int32, xoffset int32, yoffset int32,
 func TextureBarrier() {
 	C.glowTextureBarrier(gpTextureBarrier)
 }
-
 func TextureBarrierNV() {
 	C.glowTextureBarrierNV(gpTextureBarrierNV)
 }
@@ -29602,7 +27738,6 @@ func TextureBarrierNV() {
 func TextureBuffer(texture uint32, internalformat uint32, buffer uint32) {
 	C.glowTextureBuffer(gpTextureBuffer, (C.GLuint)(texture), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-
 func TextureBufferEXT(texture uint32, target uint32, internalformat uint32, buffer uint32) {
 	C.glowTextureBufferEXT(gpTextureBufferEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
@@ -29611,111 +27746,84 @@ func TextureBufferEXT(texture uint32, target uint32, internalformat uint32, buff
 func TextureBufferRange(texture uint32, internalformat uint32, buffer uint32, offset int, size int) {
 	C.glowTextureBufferRange(gpTextureBufferRange, (C.GLuint)(texture), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-
 func TextureBufferRangeEXT(texture uint32, target uint32, internalformat uint32, buffer uint32, offset int, size int) {
 	C.glowTextureBufferRangeEXT(gpTextureBufferRangeEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-
 func TextureColorMaskSGIS(red bool, green bool, blue bool, alpha bool) {
 	C.glowTextureColorMaskSGIS(gpTextureColorMaskSGIS, (C.GLboolean)(boolToInt(red)), (C.GLboolean)(boolToInt(green)), (C.GLboolean)(boolToInt(blue)), (C.GLboolean)(boolToInt(alpha)))
 }
-
 func TextureImage1DEXT(texture uint32, target uint32, level int32, internalformat int32, width int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureImage1DEXT(gpTextureImage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TextureImage2DEXT(texture uint32, target uint32, level int32, internalformat int32, width int32, height int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureImage2DEXT(gpTextureImage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TextureImage2DMultisampleCoverageNV(texture uint32, target uint32, coverageSamples int32, colorSamples int32, internalFormat int32, width int32, height int32, fixedSampleLocations bool) {
 	C.glowTextureImage2DMultisampleCoverageNV(gpTextureImage2DMultisampleCoverageNV, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedSampleLocations)))
 }
-
 func TextureImage2DMultisampleNV(texture uint32, target uint32, samples int32, internalFormat int32, width int32, height int32, fixedSampleLocations bool) {
 	C.glowTextureImage2DMultisampleNV(gpTextureImage2DMultisampleNV, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedSampleLocations)))
 }
-
 func TextureImage3DEXT(texture uint32, target uint32, level int32, internalformat int32, width int32, height int32, depth int32, border int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureImage3DEXT(gpTextureImage3DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TextureImage3DMultisampleCoverageNV(texture uint32, target uint32, coverageSamples int32, colorSamples int32, internalFormat int32, width int32, height int32, depth int32, fixedSampleLocations bool) {
 	C.glowTextureImage3DMultisampleCoverageNV(gpTextureImage3DMultisampleCoverageNV, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedSampleLocations)))
 }
-
 func TextureImage3DMultisampleNV(texture uint32, target uint32, samples int32, internalFormat int32, width int32, height int32, depth int32, fixedSampleLocations bool) {
 	C.glowTextureImage3DMultisampleNV(gpTextureImage3DMultisampleNV, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedSampleLocations)))
 }
-
 func TextureLightEXT(pname uint32) {
 	C.glowTextureLightEXT(gpTextureLightEXT, (C.GLenum)(pname))
 }
-
 func TextureMaterialEXT(face uint32, mode uint32) {
 	C.glowTextureMaterialEXT(gpTextureMaterialEXT, (C.GLenum)(face), (C.GLenum)(mode))
 }
-
 func TextureNormalEXT(mode uint32) {
 	C.glowTextureNormalEXT(gpTextureNormalEXT, (C.GLenum)(mode))
 }
-
 func TexturePageCommitmentEXT(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, commit bool) {
 	C.glowTexturePageCommitmentEXT(gpTexturePageCommitmentEXT, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(commit)))
 }
-
 func TextureParameterIiv(texture uint32, pname uint32, params *int32) {
 	C.glowTextureParameterIiv(gpTextureParameterIiv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TextureParameterIivEXT(texture uint32, target uint32, pname uint32, params *int32) {
 	C.glowTextureParameterIivEXT(gpTextureParameterIivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TextureParameterIuiv(texture uint32, pname uint32, params *uint32) {
 	C.glowTextureParameterIuiv(gpTextureParameterIuiv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func TextureParameterIuivEXT(texture uint32, target uint32, pname uint32, params *uint32) {
 	C.glowTextureParameterIuivEXT(gpTextureParameterIuivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-
 func TextureParameterf(texture uint32, pname uint32, param float32) {
 	C.glowTextureParameterf(gpTextureParameterf, (C.GLuint)(texture), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func TextureParameterfEXT(texture uint32, target uint32, pname uint32, param float32) {
 	C.glowTextureParameterfEXT(gpTextureParameterfEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func TextureParameterfv(texture uint32, pname uint32, param *float32) {
 	C.glowTextureParameterfv(gpTextureParameterfv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(param)))
 }
-
 func TextureParameterfvEXT(texture uint32, target uint32, pname uint32, params *float32) {
 	C.glowTextureParameterfvEXT(gpTextureParameterfvEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func TextureParameteri(texture uint32, pname uint32, param int32) {
 	C.glowTextureParameteri(gpTextureParameteri, (C.GLuint)(texture), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func TextureParameteriEXT(texture uint32, target uint32, pname uint32, param int32) {
 	C.glowTextureParameteriEXT(gpTextureParameteriEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func TextureParameteriv(texture uint32, pname uint32, param *int32) {
 	C.glowTextureParameteriv(gpTextureParameteriv, (C.GLuint)(texture), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
 }
-
 func TextureParameterivEXT(texture uint32, target uint32, pname uint32, params *int32) {
 	C.glowTextureParameterivEXT(gpTextureParameterivEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
 func TextureRangeAPPLE(target uint32, length int32, pointer unsafe.Pointer) {
 	C.glowTextureRangeAPPLE(gpTextureRangeAPPLE, (C.GLenum)(target), (C.GLsizei)(length), pointer)
 }
-
 func TextureRenderbufferEXT(texture uint32, target uint32, renderbuffer uint32) {
 	C.glowTextureRenderbufferEXT(gpTextureRenderbufferEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLuint)(renderbuffer))
 }
@@ -29724,7 +27832,6 @@ func TextureRenderbufferEXT(texture uint32, target uint32, renderbuffer uint32) 
 func TextureStorage1D(texture uint32, levels int32, internalformat uint32, width int32) {
 	C.glowTextureStorage1D(gpTextureStorage1D, (C.GLuint)(texture), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width))
 }
-
 func TextureStorage1DEXT(texture uint32, target uint32, levels int32, internalformat uint32, width int32) {
 	C.glowTextureStorage1DEXT(gpTextureStorage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width))
 }
@@ -29733,7 +27840,6 @@ func TextureStorage1DEXT(texture uint32, target uint32, levels int32, internalfo
 func TextureStorage2D(texture uint32, levels int32, internalformat uint32, width int32, height int32) {
 	C.glowTextureStorage2D(gpTextureStorage2D, (C.GLuint)(texture), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func TextureStorage2DEXT(texture uint32, target uint32, levels int32, internalformat uint32, width int32, height int32) {
 	C.glowTextureStorage2DEXT(gpTextureStorage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
@@ -29742,7 +27848,6 @@ func TextureStorage2DEXT(texture uint32, target uint32, levels int32, internalfo
 func TextureStorage2DMultisample(texture uint32, samples int32, internalformat uint32, width int32, height int32, fixedsamplelocations bool) {
 	C.glowTextureStorage2DMultisample(gpTextureStorage2DMultisample, (C.GLuint)(texture), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
-
 func TextureStorage2DMultisampleEXT(texture uint32, target uint32, samples int32, internalformat uint32, width int32, height int32, fixedsamplelocations bool) {
 	C.glowTextureStorage2DMultisampleEXT(gpTextureStorage2DMultisampleEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
@@ -29751,7 +27856,6 @@ func TextureStorage2DMultisampleEXT(texture uint32, target uint32, samples int32
 func TextureStorage3D(texture uint32, levels int32, internalformat uint32, width int32, height int32, depth int32) {
 	C.glowTextureStorage3D(gpTextureStorage3D, (C.GLuint)(texture), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-
 func TextureStorage3DEXT(texture uint32, target uint32, levels int32, internalformat uint32, width int32, height int32, depth int32) {
 	C.glowTextureStorage3DEXT(gpTextureStorage3DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
@@ -29760,31 +27864,24 @@ func TextureStorage3DEXT(texture uint32, target uint32, levels int32, internalfo
 func TextureStorage3DMultisample(texture uint32, samples int32, internalformat uint32, width int32, height int32, depth int32, fixedsamplelocations bool) {
 	C.glowTextureStorage3DMultisample(gpTextureStorage3DMultisample, (C.GLuint)(texture), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
-
 func TextureStorage3DMultisampleEXT(texture uint32, target uint32, samples int32, internalformat uint32, width int32, height int32, depth int32, fixedsamplelocations bool) {
 	C.glowTextureStorage3DMultisampleEXT(gpTextureStorage3DMultisampleEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
-
 func TextureStorageMem1DEXT(texture uint32, levels int32, internalFormat uint32, width int32, memory uint32, offset uint64) {
 	C.glowTextureStorageMem1DEXT(gpTextureStorageMem1DEXT, (C.GLuint)(texture), (C.GLsizei)(levels), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TextureStorageMem2DEXT(texture uint32, levels int32, internalFormat uint32, width int32, height int32, memory uint32, offset uint64) {
 	C.glowTextureStorageMem2DEXT(gpTextureStorageMem2DEXT, (C.GLuint)(texture), (C.GLsizei)(levels), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TextureStorageMem2DMultisampleEXT(texture uint32, samples int32, internalFormat uint32, width int32, height int32, fixedSampleLocations bool, memory uint32, offset uint64) {
 	C.glowTextureStorageMem2DMultisampleEXT(gpTextureStorageMem2DMultisampleEXT, (C.GLuint)(texture), (C.GLsizei)(samples), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedSampleLocations)), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TextureStorageMem3DEXT(texture uint32, levels int32, internalFormat uint32, width int32, height int32, depth int32, memory uint32, offset uint64) {
 	C.glowTextureStorageMem3DEXT(gpTextureStorageMem3DEXT, (C.GLuint)(texture), (C.GLsizei)(levels), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TextureStorageMem3DMultisampleEXT(texture uint32, samples int32, internalFormat uint32, width int32, height int32, depth int32, fixedSampleLocations bool, memory uint32, offset uint64) {
 	C.glowTextureStorageMem3DMultisampleEXT(gpTextureStorageMem3DMultisampleEXT, (C.GLuint)(texture), (C.GLsizei)(samples), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(boolToInt(fixedSampleLocations)), (C.GLuint)(memory), (C.GLuint64)(offset))
 }
-
 func TextureStorageSparseAMD(texture uint32, target uint32, internalFormat uint32, width int32, height int32, depth int32, layers int32, flags uint32) {
 	C.glowTextureStorageSparseAMD(gpTextureStorageSparseAMD, (C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLsizei)(layers), (C.GLbitfield)(flags))
 }
@@ -29793,7 +27890,6 @@ func TextureStorageSparseAMD(texture uint32, target uint32, internalFormat uint3
 func TextureSubImage1D(texture uint32, level int32, xoffset int32, width int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureSubImage1D(gpTextureSubImage1D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TextureSubImage1DEXT(texture uint32, target uint32, level int32, xoffset int32, width int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureSubImage1DEXT(gpTextureSubImage1DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29802,7 +27898,6 @@ func TextureSubImage1DEXT(texture uint32, target uint32, level int32, xoffset in
 func TextureSubImage2D(texture uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureSubImage2D(gpTextureSubImage2D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TextureSubImage2DEXT(texture uint32, target uint32, level int32, xoffset int32, yoffset int32, width int32, height int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureSubImage2DEXT(gpTextureSubImage2DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29811,7 +27906,6 @@ func TextureSubImage2DEXT(texture uint32, target uint32, level int32, xoffset in
 func TextureSubImage3D(texture uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureSubImage3D(gpTextureSubImage3D, (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
-
 func TextureSubImage3DEXT(texture uint32, target uint32, level int32, xoffset int32, yoffset int32, zoffset int32, width int32, height int32, depth int32, format uint32, xtype uint32, pixels unsafe.Pointer) {
 	C.glowTextureSubImage3DEXT(gpTextureSubImage3DEXT, (C.GLuint)(texture), (C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(xtype), pixels)
 }
@@ -29820,11 +27914,9 @@ func TextureSubImage3DEXT(texture uint32, target uint32, level int32, xoffset in
 func TextureView(texture uint32, target uint32, origtexture uint32, internalformat uint32, minlevel uint32, numlevels uint32, minlayer uint32, numlayers uint32) {
 	C.glowTextureView(gpTextureView, (C.GLuint)(texture), (C.GLenum)(target), (C.GLuint)(origtexture), (C.GLenum)(internalformat), (C.GLuint)(minlevel), (C.GLuint)(numlevels), (C.GLuint)(minlayer), (C.GLuint)(numlayers))
 }
-
 func TrackMatrixNV(target uint32, address uint32, matrix uint32, transform uint32) {
 	C.glowTrackMatrixNV(gpTrackMatrixNV, (C.GLenum)(target), (C.GLuint)(address), (C.GLenum)(matrix), (C.GLenum)(transform))
 }
-
 func TransformFeedbackAttribsNV(count int32, attribs *int32, bufferMode uint32) {
 	C.glowTransformFeedbackAttribsNV(gpTransformFeedbackAttribsNV, (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(attribs)), (C.GLenum)(bufferMode))
 }
@@ -29838,7 +27930,6 @@ func TransformFeedbackBufferBase(xfb uint32, index uint32, buffer uint32) {
 func TransformFeedbackBufferRange(xfb uint32, index uint32, buffer uint32, offset int, size int) {
 	C.glowTransformFeedbackBufferRange(gpTransformFeedbackBufferRange, (C.GLuint)(xfb), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-
 func TransformFeedbackStreamAttribsNV(count int32, attribs *int32, nbuffers int32, bufstreams *int32, bufferMode uint32) {
 	C.glowTransformFeedbackStreamAttribsNV(gpTransformFeedbackStreamAttribsNV, (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(attribs)), (C.GLsizei)(nbuffers), (*C.GLint)(unsafe.Pointer(bufstreams)), (C.GLenum)(bufferMode))
 }
@@ -29847,35 +27938,27 @@ func TransformFeedbackStreamAttribsNV(count int32, attribs *int32, nbuffers int3
 func TransformFeedbackVaryings(program uint32, count int32, varyings **uint8, bufferMode uint32) {
 	C.glowTransformFeedbackVaryings(gpTransformFeedbackVaryings, (C.GLuint)(program), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(varyings)), (C.GLenum)(bufferMode))
 }
-
 func TransformFeedbackVaryingsEXT(program uint32, count int32, varyings **uint8, bufferMode uint32) {
 	C.glowTransformFeedbackVaryingsEXT(gpTransformFeedbackVaryingsEXT, (C.GLuint)(program), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(varyings)), (C.GLenum)(bufferMode))
 }
-
 func TransformFeedbackVaryingsNV(program uint32, count int32, locations *int32, bufferMode uint32) {
 	C.glowTransformFeedbackVaryingsNV(gpTransformFeedbackVaryingsNV, (C.GLuint)(program), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(locations)), (C.GLenum)(bufferMode))
 }
-
 func TransformPathNV(resultPath uint32, srcPath uint32, transformType uint32, transformValues *float32) {
 	C.glowTransformPathNV(gpTransformPathNV, (C.GLuint)(resultPath), (C.GLuint)(srcPath), (C.GLenum)(transformType), (*C.GLfloat)(unsafe.Pointer(transformValues)))
 }
-
 func Translated(x float64, y float64, z float64) {
 	C.glowTranslated(gpTranslated, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func Translatef(x float32, y float32, z float32) {
 	C.glowTranslatef(gpTranslatef, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func TranslatexOES(x int32, y int32, z int32) {
 	C.glowTranslatexOES(gpTranslatexOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
-
 func Uniform1d(location int32, x float64) {
 	C.glowUniform1d(gpUniform1d, (C.GLint)(location), (C.GLdouble)(x))
 }
-
 func Uniform1dv(location int32, count int32, value *float64) {
 	C.glowUniform1dv(gpUniform1dv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -29884,7 +27967,6 @@ func Uniform1dv(location int32, count int32, value *float64) {
 func Uniform1f(location int32, v0 float32) {
 	C.glowUniform1f(gpUniform1f, (C.GLint)(location), (C.GLfloat)(v0))
 }
-
 func Uniform1fARB(location int32, v0 float32) {
 	C.glowUniform1fARB(gpUniform1fARB, (C.GLint)(location), (C.GLfloat)(v0))
 }
@@ -29893,7 +27975,6 @@ func Uniform1fARB(location int32, v0 float32) {
 func Uniform1fv(location int32, count int32, value *float32) {
 	C.glowUniform1fv(gpUniform1fv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func Uniform1fvARB(location int32, count int32, value *float32) {
 	C.glowUniform1fvARB(gpUniform1fvARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -29902,23 +27983,18 @@ func Uniform1fvARB(location int32, count int32, value *float32) {
 func Uniform1i(location int32, v0 int32) {
 	C.glowUniform1i(gpUniform1i, (C.GLint)(location), (C.GLint)(v0))
 }
-
 func Uniform1i64ARB(location int32, x int64) {
 	C.glowUniform1i64ARB(gpUniform1i64ARB, (C.GLint)(location), (C.GLint64)(x))
 }
-
 func Uniform1i64NV(location int32, x int64) {
 	C.glowUniform1i64NV(gpUniform1i64NV, (C.GLint)(location), (C.GLint64EXT)(x))
 }
-
 func Uniform1i64vARB(location int32, count int32, value *int64) {
 	C.glowUniform1i64vARB(gpUniform1i64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func Uniform1i64vNV(location int32, count int32, value *int64) {
 	C.glowUniform1i64vNV(gpUniform1i64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform1iARB(location int32, v0 int32) {
 	C.glowUniform1iARB(gpUniform1iARB, (C.GLint)(location), (C.GLint)(v0))
 }
@@ -29927,7 +28003,6 @@ func Uniform1iARB(location int32, v0 int32) {
 func Uniform1iv(location int32, count int32, value *int32) {
 	C.glowUniform1iv(gpUniform1iv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func Uniform1ivARB(location int32, count int32, value *int32) {
 	C.glowUniform1ivARB(gpUniform1ivARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -29936,23 +28011,18 @@ func Uniform1ivARB(location int32, count int32, value *int32) {
 func Uniform1ui(location int32, v0 uint32) {
 	C.glowUniform1ui(gpUniform1ui, (C.GLint)(location), (C.GLuint)(v0))
 }
-
 func Uniform1ui64ARB(location int32, x uint64) {
 	C.glowUniform1ui64ARB(gpUniform1ui64ARB, (C.GLint)(location), (C.GLuint64)(x))
 }
-
 func Uniform1ui64NV(location int32, x uint64) {
 	C.glowUniform1ui64NV(gpUniform1ui64NV, (C.GLint)(location), (C.GLuint64EXT)(x))
 }
-
 func Uniform1ui64vARB(location int32, count int32, value *uint64) {
 	C.glowUniform1ui64vARB(gpUniform1ui64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func Uniform1ui64vNV(location int32, count int32, value *uint64) {
 	C.glowUniform1ui64vNV(gpUniform1ui64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform1uiEXT(location int32, v0 uint32) {
 	C.glowUniform1uiEXT(gpUniform1uiEXT, (C.GLint)(location), (C.GLuint)(v0))
 }
@@ -29961,15 +28031,12 @@ func Uniform1uiEXT(location int32, v0 uint32) {
 func Uniform1uiv(location int32, count int32, value *uint32) {
 	C.glowUniform1uiv(gpUniform1uiv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform1uivEXT(location int32, count int32, value *uint32) {
 	C.glowUniform1uivEXT(gpUniform1uivEXT, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform2d(location int32, x float64, y float64) {
 	C.glowUniform2d(gpUniform2d, (C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func Uniform2dv(location int32, count int32, value *float64) {
 	C.glowUniform2dv(gpUniform2dv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -29978,7 +28045,6 @@ func Uniform2dv(location int32, count int32, value *float64) {
 func Uniform2f(location int32, v0 float32, v1 float32) {
 	C.glowUniform2f(gpUniform2f, (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
-
 func Uniform2fARB(location int32, v0 float32, v1 float32) {
 	C.glowUniform2fARB(gpUniform2fARB, (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
@@ -29987,7 +28053,6 @@ func Uniform2fARB(location int32, v0 float32, v1 float32) {
 func Uniform2fv(location int32, count int32, value *float32) {
 	C.glowUniform2fv(gpUniform2fv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func Uniform2fvARB(location int32, count int32, value *float32) {
 	C.glowUniform2fvARB(gpUniform2fvARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -29996,23 +28061,18 @@ func Uniform2fvARB(location int32, count int32, value *float32) {
 func Uniform2i(location int32, v0 int32, v1 int32) {
 	C.glowUniform2i(gpUniform2i, (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
-
 func Uniform2i64ARB(location int32, x int64, y int64) {
 	C.glowUniform2i64ARB(gpUniform2i64ARB, (C.GLint)(location), (C.GLint64)(x), (C.GLint64)(y))
 }
-
 func Uniform2i64NV(location int32, x int64, y int64) {
 	C.glowUniform2i64NV(gpUniform2i64NV, (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y))
 }
-
 func Uniform2i64vARB(location int32, count int32, value *int64) {
 	C.glowUniform2i64vARB(gpUniform2i64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func Uniform2i64vNV(location int32, count int32, value *int64) {
 	C.glowUniform2i64vNV(gpUniform2i64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform2iARB(location int32, v0 int32, v1 int32) {
 	C.glowUniform2iARB(gpUniform2iARB, (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
@@ -30021,7 +28081,6 @@ func Uniform2iARB(location int32, v0 int32, v1 int32) {
 func Uniform2iv(location int32, count int32, value *int32) {
 	C.glowUniform2iv(gpUniform2iv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func Uniform2ivARB(location int32, count int32, value *int32) {
 	C.glowUniform2ivARB(gpUniform2ivARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -30030,23 +28089,18 @@ func Uniform2ivARB(location int32, count int32, value *int32) {
 func Uniform2ui(location int32, v0 uint32, v1 uint32) {
 	C.glowUniform2ui(gpUniform2ui, (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
-
 func Uniform2ui64ARB(location int32, x uint64, y uint64) {
 	C.glowUniform2ui64ARB(gpUniform2ui64ARB, (C.GLint)(location), (C.GLuint64)(x), (C.GLuint64)(y))
 }
-
 func Uniform2ui64NV(location int32, x uint64, y uint64) {
 	C.glowUniform2ui64NV(gpUniform2ui64NV, (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y))
 }
-
 func Uniform2ui64vARB(location int32, count int32, value *uint64) {
 	C.glowUniform2ui64vARB(gpUniform2ui64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func Uniform2ui64vNV(location int32, count int32, value *uint64) {
 	C.glowUniform2ui64vNV(gpUniform2ui64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform2uiEXT(location int32, v0 uint32, v1 uint32) {
 	C.glowUniform2uiEXT(gpUniform2uiEXT, (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
@@ -30055,15 +28109,12 @@ func Uniform2uiEXT(location int32, v0 uint32, v1 uint32) {
 func Uniform2uiv(location int32, count int32, value *uint32) {
 	C.glowUniform2uiv(gpUniform2uiv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform2uivEXT(location int32, count int32, value *uint32) {
 	C.glowUniform2uivEXT(gpUniform2uivEXT, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform3d(location int32, x float64, y float64, z float64) {
 	C.glowUniform3d(gpUniform3d, (C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func Uniform3dv(location int32, count int32, value *float64) {
 	C.glowUniform3dv(gpUniform3dv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30072,7 +28123,6 @@ func Uniform3dv(location int32, count int32, value *float64) {
 func Uniform3f(location int32, v0 float32, v1 float32, v2 float32) {
 	C.glowUniform3f(gpUniform3f, (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-
 func Uniform3fARB(location int32, v0 float32, v1 float32, v2 float32) {
 	C.glowUniform3fARB(gpUniform3fARB, (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
@@ -30081,7 +28131,6 @@ func Uniform3fARB(location int32, v0 float32, v1 float32, v2 float32) {
 func Uniform3fv(location int32, count int32, value *float32) {
 	C.glowUniform3fv(gpUniform3fv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func Uniform3fvARB(location int32, count int32, value *float32) {
 	C.glowUniform3fvARB(gpUniform3fvARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -30090,23 +28139,18 @@ func Uniform3fvARB(location int32, count int32, value *float32) {
 func Uniform3i(location int32, v0 int32, v1 int32, v2 int32) {
 	C.glowUniform3i(gpUniform3i, (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
-
 func Uniform3i64ARB(location int32, x int64, y int64, z int64) {
 	C.glowUniform3i64ARB(gpUniform3i64ARB, (C.GLint)(location), (C.GLint64)(x), (C.GLint64)(y), (C.GLint64)(z))
 }
-
 func Uniform3i64NV(location int32, x int64, y int64, z int64) {
 	C.glowUniform3i64NV(gpUniform3i64NV, (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z))
 }
-
 func Uniform3i64vARB(location int32, count int32, value *int64) {
 	C.glowUniform3i64vARB(gpUniform3i64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func Uniform3i64vNV(location int32, count int32, value *int64) {
 	C.glowUniform3i64vNV(gpUniform3i64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform3iARB(location int32, v0 int32, v1 int32, v2 int32) {
 	C.glowUniform3iARB(gpUniform3iARB, (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
@@ -30115,7 +28159,6 @@ func Uniform3iARB(location int32, v0 int32, v1 int32, v2 int32) {
 func Uniform3iv(location int32, count int32, value *int32) {
 	C.glowUniform3iv(gpUniform3iv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func Uniform3ivARB(location int32, count int32, value *int32) {
 	C.glowUniform3ivARB(gpUniform3ivARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -30124,23 +28167,18 @@ func Uniform3ivARB(location int32, count int32, value *int32) {
 func Uniform3ui(location int32, v0 uint32, v1 uint32, v2 uint32) {
 	C.glowUniform3ui(gpUniform3ui, (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
-
 func Uniform3ui64ARB(location int32, x uint64, y uint64, z uint64) {
 	C.glowUniform3ui64ARB(gpUniform3ui64ARB, (C.GLint)(location), (C.GLuint64)(x), (C.GLuint64)(y), (C.GLuint64)(z))
 }
-
 func Uniform3ui64NV(location int32, x uint64, y uint64, z uint64) {
 	C.glowUniform3ui64NV(gpUniform3ui64NV, (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z))
 }
-
 func Uniform3ui64vARB(location int32, count int32, value *uint64) {
 	C.glowUniform3ui64vARB(gpUniform3ui64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func Uniform3ui64vNV(location int32, count int32, value *uint64) {
 	C.glowUniform3ui64vNV(gpUniform3ui64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform3uiEXT(location int32, v0 uint32, v1 uint32, v2 uint32) {
 	C.glowUniform3uiEXT(gpUniform3uiEXT, (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
@@ -30149,15 +28187,12 @@ func Uniform3uiEXT(location int32, v0 uint32, v1 uint32, v2 uint32) {
 func Uniform3uiv(location int32, count int32, value *uint32) {
 	C.glowUniform3uiv(gpUniform3uiv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform3uivEXT(location int32, count int32, value *uint32) {
 	C.glowUniform3uivEXT(gpUniform3uivEXT, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform4d(location int32, x float64, y float64, z float64, w float64) {
 	C.glowUniform4d(gpUniform4d, (C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func Uniform4dv(location int32, count int32, value *float64) {
 	C.glowUniform4dv(gpUniform4dv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30166,7 +28201,6 @@ func Uniform4dv(location int32, count int32, value *float64) {
 func Uniform4f(location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
 	C.glowUniform4f(gpUniform4f, (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
-
 func Uniform4fARB(location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
 	C.glowUniform4fARB(gpUniform4fARB, (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
@@ -30175,7 +28209,6 @@ func Uniform4fARB(location int32, v0 float32, v1 float32, v2 float32, v3 float32
 func Uniform4fv(location int32, count int32, value *float32) {
 	C.glowUniform4fv(gpUniform4fv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func Uniform4fvARB(location int32, count int32, value *float32) {
 	C.glowUniform4fvARB(gpUniform4fvARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
 }
@@ -30184,23 +28217,18 @@ func Uniform4fvARB(location int32, count int32, value *float32) {
 func Uniform4i(location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 	C.glowUniform4i(gpUniform4i, (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
-
 func Uniform4i64ARB(location int32, x int64, y int64, z int64, w int64) {
 	C.glowUniform4i64ARB(gpUniform4i64ARB, (C.GLint)(location), (C.GLint64)(x), (C.GLint64)(y), (C.GLint64)(z), (C.GLint64)(w))
 }
-
 func Uniform4i64NV(location int32, x int64, y int64, z int64, w int64) {
 	C.glowUniform4i64NV(gpUniform4i64NV, (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z), (C.GLint64EXT)(w))
 }
-
 func Uniform4i64vARB(location int32, count int32, value *int64) {
 	C.glowUniform4i64vARB(gpUniform4i64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64)(unsafe.Pointer(value)))
 }
-
 func Uniform4i64vNV(location int32, count int32, value *int64) {
 	C.glowUniform4i64vNV(gpUniform4i64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform4iARB(location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 	C.glowUniform4iARB(gpUniform4iARB, (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
@@ -30209,7 +28237,6 @@ func Uniform4iARB(location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 func Uniform4iv(location int32, count int32, value *int32) {
 	C.glowUniform4iv(gpUniform4iv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
-
 func Uniform4ivARB(location int32, count int32, value *int32) {
 	C.glowUniform4ivARB(gpUniform4ivARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
 }
@@ -30218,23 +28245,18 @@ func Uniform4ivARB(location int32, count int32, value *int32) {
 func Uniform4ui(location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 	C.glowUniform4ui(gpUniform4ui, (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
-
 func Uniform4ui64ARB(location int32, x uint64, y uint64, z uint64, w uint64) {
 	C.glowUniform4ui64ARB(gpUniform4ui64ARB, (C.GLint)(location), (C.GLuint64)(x), (C.GLuint64)(y), (C.GLuint64)(z), (C.GLuint64)(w))
 }
-
 func Uniform4ui64NV(location int32, x uint64, y uint64, z uint64, w uint64) {
 	C.glowUniform4ui64NV(gpUniform4ui64NV, (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z), (C.GLuint64EXT)(w))
 }
-
 func Uniform4ui64vARB(location int32, count int32, value *uint64) {
 	C.glowUniform4ui64vARB(gpUniform4ui64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func Uniform4ui64vNV(location int32, count int32, value *uint64) {
 	C.glowUniform4ui64vNV(gpUniform4ui64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func Uniform4uiEXT(location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 	C.glowUniform4uiEXT(gpUniform4uiEXT, (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
@@ -30243,7 +28265,6 @@ func Uniform4uiEXT(location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 func Uniform4uiv(location int32, count int32, value *uint32) {
 	C.glowUniform4uiv(gpUniform4uiv, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func Uniform4uivEXT(location int32, count int32, value *uint32) {
 	C.glowUniform4uivEXT(gpUniform4uivEXT, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
@@ -30252,27 +28273,21 @@ func Uniform4uivEXT(location int32, count int32, value *uint32) {
 func UniformBlockBinding(program uint32, uniformBlockIndex uint32, uniformBlockBinding uint32) {
 	C.glowUniformBlockBinding(gpUniformBlockBinding, (C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLuint)(uniformBlockBinding))
 }
-
 func UniformBufferEXT(program uint32, location int32, buffer uint32) {
 	C.glowUniformBufferEXT(gpUniformBufferEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(buffer))
 }
-
 func UniformHandleui64ARB(location int32, value uint64) {
 	C.glowUniformHandleui64ARB(gpUniformHandleui64ARB, (C.GLint)(location), (C.GLuint64)(value))
 }
-
 func UniformHandleui64NV(location int32, value uint64) {
 	C.glowUniformHandleui64NV(gpUniformHandleui64NV, (C.GLint)(location), (C.GLuint64)(value))
 }
-
 func UniformHandleui64vARB(location int32, count int32, value *uint64) {
 	C.glowUniformHandleui64vARB(gpUniformHandleui64vARB, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func UniformHandleui64vNV(location int32, count int32, value *uint64) {
 	C.glowUniformHandleui64vNV(gpUniformHandleui64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix2dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix2dv(gpUniformMatrix2dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30281,11 +28296,9 @@ func UniformMatrix2dv(location int32, count int32, transpose bool, value *float6
 func UniformMatrix2fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix2fv(gpUniformMatrix2fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix2fvARB(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix2fvARB(gpUniformMatrix2fvARB, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix2x3dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix2x3dv(gpUniformMatrix2x3dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30294,7 +28307,6 @@ func UniformMatrix2x3dv(location int32, count int32, transpose bool, value *floa
 func UniformMatrix2x3fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix2x3fv(gpUniformMatrix2x3fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix2x4dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix2x4dv(gpUniformMatrix2x4dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30303,7 +28315,6 @@ func UniformMatrix2x4dv(location int32, count int32, transpose bool, value *floa
 func UniformMatrix2x4fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix2x4fv(gpUniformMatrix2x4fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix3dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix3dv(gpUniformMatrix3dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30312,11 +28323,9 @@ func UniformMatrix3dv(location int32, count int32, transpose bool, value *float6
 func UniformMatrix3fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix3fv(gpUniformMatrix3fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix3fvARB(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix3fvARB(gpUniformMatrix3fvARB, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix3x2dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix3x2dv(gpUniformMatrix3x2dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30325,7 +28334,6 @@ func UniformMatrix3x2dv(location int32, count int32, transpose bool, value *floa
 func UniformMatrix3x2fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix3x2fv(gpUniformMatrix3x2fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix3x4dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix3x4dv(gpUniformMatrix3x4dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30334,7 +28342,6 @@ func UniformMatrix3x4dv(location int32, count int32, transpose bool, value *floa
 func UniformMatrix3x4fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix3x4fv(gpUniformMatrix3x4fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix4dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix4dv(gpUniformMatrix4dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30343,11 +28350,9 @@ func UniformMatrix4dv(location int32, count int32, transpose bool, value *float6
 func UniformMatrix4fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix4fv(gpUniformMatrix4fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix4fvARB(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix4fvARB(gpUniformMatrix4fvARB, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix4x2dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix4x2dv(gpUniformMatrix4x2dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30356,7 +28361,6 @@ func UniformMatrix4x2dv(location int32, count int32, transpose bool, value *floa
 func UniformMatrix4x2fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix4x2fv(gpUniformMatrix4x2fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformMatrix4x3dv(location int32, count int32, transpose bool, value *float64) {
 	C.glowUniformMatrix4x3dv(gpUniformMatrix4x3dv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLdouble)(unsafe.Pointer(value)))
 }
@@ -30365,19 +28369,15 @@ func UniformMatrix4x3dv(location int32, count int32, transpose bool, value *floa
 func UniformMatrix4x3fv(location int32, count int32, transpose bool, value *float32) {
 	C.glowUniformMatrix4x3fv(gpUniformMatrix4x3fv, (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
 func UniformSubroutinesuiv(shadertype uint32, count int32, indices *uint32) {
 	C.glowUniformSubroutinesuiv(gpUniformSubroutinesuiv, (C.GLenum)(shadertype), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(indices)))
 }
-
 func Uniformui64NV(location int32, value uint64) {
 	C.glowUniformui64NV(gpUniformui64NV, (C.GLint)(location), (C.GLuint64EXT)(value))
 }
-
 func Uniformui64vNV(location int32, count int32, value *uint64) {
 	C.glowUniformui64vNV(gpUniformui64vNV, (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(unsafe.Pointer(value)))
 }
-
 func UnlockArraysEXT() {
 	C.glowUnlockArraysEXT(gpUnlockArraysEXT)
 }
@@ -30387,7 +28387,6 @@ func UnmapBuffer(target uint32) bool {
 	ret := C.glowUnmapBuffer(gpUnmapBuffer, (C.GLenum)(target))
 	return ret == TRUE
 }
-
 func UnmapBufferARB(target uint32) bool {
 	ret := C.glowUnmapBufferARB(gpUnmapBufferARB, (C.GLenum)(target))
 	return ret == TRUE
@@ -30398,20 +28397,16 @@ func UnmapNamedBuffer(buffer uint32) bool {
 	ret := C.glowUnmapNamedBuffer(gpUnmapNamedBuffer, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-
 func UnmapNamedBufferEXT(buffer uint32) bool {
 	ret := C.glowUnmapNamedBufferEXT(gpUnmapNamedBufferEXT, (C.GLuint)(buffer))
 	return ret == TRUE
 }
-
 func UnmapObjectBufferATI(buffer uint32) {
 	C.glowUnmapObjectBufferATI(gpUnmapObjectBufferATI, (C.GLuint)(buffer))
 }
-
 func UnmapTexture2DINTEL(texture uint32, level int32) {
 	C.glowUnmapTexture2DINTEL(gpUnmapTexture2DINTEL, (C.GLuint)(texture), (C.GLint)(level))
 }
-
 func UpdateObjectBufferATI(buffer uint32, offset uint32, size int32, pointer unsafe.Pointer, preserve uint32) {
 	C.glowUpdateObjectBufferATI(gpUpdateObjectBufferATI, (C.GLuint)(buffer), (C.GLuint)(offset), (C.GLsizei)(size), pointer, (C.GLenum)(preserve))
 }
@@ -30420,7 +28415,6 @@ func UpdateObjectBufferATI(buffer uint32, offset uint32, size int32, pointer uns
 func UseProgram(program uint32) {
 	C.glowUseProgram(gpUseProgram, (C.GLuint)(program))
 }
-
 func UseProgramObjectARB(programObj uintptr) {
 	C.glowUseProgramObjectARB(gpUseProgramObjectARB, (C.GLhandleARB)(programObj))
 }
@@ -30429,54 +28423,42 @@ func UseProgramObjectARB(programObj uintptr) {
 func UseProgramStages(pipeline uint32, stages uint32, program uint32) {
 	C.glowUseProgramStages(gpUseProgramStages, (C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
 }
-
 func UseProgramStagesEXT(pipeline uint32, stages uint32, program uint32) {
 	C.glowUseProgramStagesEXT(gpUseProgramStagesEXT, (C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
 }
-
 func UseShaderProgramEXT(xtype uint32, program uint32) {
 	C.glowUseShaderProgramEXT(gpUseShaderProgramEXT, (C.GLenum)(xtype), (C.GLuint)(program))
 }
-
 func VDPAUFiniNV() {
 	C.glowVDPAUFiniNV(gpVDPAUFiniNV)
 }
-
 func VDPAUGetSurfaceivNV(surface uintptr, pname uint32, bufSize int32, length *int32, values *int32) {
 	C.glowVDPAUGetSurfaceivNV(gpVDPAUGetSurfaceivNV, (C.GLvdpauSurfaceNV)(surface), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(values)))
 }
-
 func VDPAUInitNV(vdpDevice unsafe.Pointer, getProcAddress unsafe.Pointer) {
 	C.glowVDPAUInitNV(gpVDPAUInitNV, vdpDevice, getProcAddress)
 }
-
 func VDPAUIsSurfaceNV(surface uintptr) bool {
 	ret := C.glowVDPAUIsSurfaceNV(gpVDPAUIsSurfaceNV, (C.GLvdpauSurfaceNV)(surface))
 	return ret == TRUE
 }
-
 func VDPAUMapSurfacesNV(numSurfaces int32, surfaces *uintptr) {
 	C.glowVDPAUMapSurfacesNV(gpVDPAUMapSurfacesNV, (C.GLsizei)(numSurfaces), (*C.GLvdpauSurfaceNV)(unsafe.Pointer(surfaces)))
 }
-
 func VDPAURegisterOutputSurfaceNV(vdpSurface unsafe.Pointer, target uint32, numTextureNames int32, textureNames *uint32) uintptr {
 	ret := C.glowVDPAURegisterOutputSurfaceNV(gpVDPAURegisterOutputSurfaceNV, vdpSurface, (C.GLenum)(target), (C.GLsizei)(numTextureNames), (*C.GLuint)(unsafe.Pointer(textureNames)))
 	return (uintptr)(ret)
 }
-
 func VDPAURegisterVideoSurfaceNV(vdpSurface unsafe.Pointer, target uint32, numTextureNames int32, textureNames *uint32) uintptr {
 	ret := C.glowVDPAURegisterVideoSurfaceNV(gpVDPAURegisterVideoSurfaceNV, vdpSurface, (C.GLenum)(target), (C.GLsizei)(numTextureNames), (*C.GLuint)(unsafe.Pointer(textureNames)))
 	return (uintptr)(ret)
 }
-
 func VDPAUSurfaceAccessNV(surface uintptr, access uint32) {
 	C.glowVDPAUSurfaceAccessNV(gpVDPAUSurfaceAccessNV, (C.GLvdpauSurfaceNV)(surface), (C.GLenum)(access))
 }
-
 func VDPAUUnmapSurfacesNV(numSurface int32, surfaces *uintptr) {
 	C.glowVDPAUUnmapSurfacesNV(gpVDPAUUnmapSurfacesNV, (C.GLsizei)(numSurface), (*C.GLvdpauSurfaceNV)(unsafe.Pointer(surfaces)))
 }
-
 func VDPAUUnregisterSurfaceNV(surface uintptr) {
 	C.glowVDPAUUnregisterSurfaceNV(gpVDPAUUnregisterSurfaceNV, (C.GLvdpauSurfaceNV)(surface))
 }
@@ -30485,7 +28467,6 @@ func VDPAUUnregisterSurfaceNV(surface uintptr) {
 func ValidateProgram(program uint32) {
 	C.glowValidateProgram(gpValidateProgram, (C.GLuint)(program))
 }
-
 func ValidateProgramARB(programObj uintptr) {
 	C.glowValidateProgramARB(gpValidateProgramARB, (C.GLhandleARB)(programObj))
 }
@@ -30494,219 +28475,165 @@ func ValidateProgramARB(programObj uintptr) {
 func ValidateProgramPipeline(pipeline uint32) {
 	C.glowValidateProgramPipeline(gpValidateProgramPipeline, (C.GLuint)(pipeline))
 }
-
 func ValidateProgramPipelineEXT(pipeline uint32) {
 	C.glowValidateProgramPipelineEXT(gpValidateProgramPipelineEXT, (C.GLuint)(pipeline))
 }
-
 func VariantArrayObjectATI(id uint32, xtype uint32, stride int32, buffer uint32, offset uint32) {
 	C.glowVariantArrayObjectATI(gpVariantArrayObjectATI, (C.GLuint)(id), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLuint)(buffer), (C.GLuint)(offset))
 }
-
 func VariantPointerEXT(id uint32, xtype uint32, stride uint32, addr unsafe.Pointer) {
 	C.glowVariantPointerEXT(gpVariantPointerEXT, (C.GLuint)(id), (C.GLenum)(xtype), (C.GLuint)(stride), addr)
 }
-
 func VariantbvEXT(id uint32, addr *int8) {
 	C.glowVariantbvEXT(gpVariantbvEXT, (C.GLuint)(id), (*C.GLbyte)(unsafe.Pointer(addr)))
 }
-
 func VariantdvEXT(id uint32, addr *float64) {
 	C.glowVariantdvEXT(gpVariantdvEXT, (C.GLuint)(id), (*C.GLdouble)(unsafe.Pointer(addr)))
 }
-
 func VariantfvEXT(id uint32, addr *float32) {
 	C.glowVariantfvEXT(gpVariantfvEXT, (C.GLuint)(id), (*C.GLfloat)(unsafe.Pointer(addr)))
 }
-
 func VariantivEXT(id uint32, addr *int32) {
 	C.glowVariantivEXT(gpVariantivEXT, (C.GLuint)(id), (*C.GLint)(unsafe.Pointer(addr)))
 }
-
 func VariantsvEXT(id uint32, addr *int16) {
 	C.glowVariantsvEXT(gpVariantsvEXT, (C.GLuint)(id), (*C.GLshort)(unsafe.Pointer(addr)))
 }
-
 func VariantubvEXT(id uint32, addr *uint8) {
 	C.glowVariantubvEXT(gpVariantubvEXT, (C.GLuint)(id), (*C.GLubyte)(unsafe.Pointer(addr)))
 }
-
 func VariantuivEXT(id uint32, addr *uint32) {
 	C.glowVariantuivEXT(gpVariantuivEXT, (C.GLuint)(id), (*C.GLuint)(unsafe.Pointer(addr)))
 }
-
 func VariantusvEXT(id uint32, addr *uint16) {
 	C.glowVariantusvEXT(gpVariantusvEXT, (C.GLuint)(id), (*C.GLushort)(unsafe.Pointer(addr)))
 }
-
 func Vertex2bOES(x int8, y int8) {
 	C.glowVertex2bOES(gpVertex2bOES, (C.GLbyte)(x), (C.GLbyte)(y))
 }
-
 func Vertex2bvOES(coords *int8) {
 	C.glowVertex2bvOES(gpVertex2bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func Vertex2d(x float64, y float64) {
 	C.glowVertex2d(gpVertex2d, (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func Vertex2dv(v *float64) {
 	C.glowVertex2dv(gpVertex2dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Vertex2f(x float32, y float32) {
 	C.glowVertex2f(gpVertex2f, (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func Vertex2fv(v *float32) {
 	C.glowVertex2fv(gpVertex2fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Vertex2hNV(x uint16, y uint16) {
 	C.glowVertex2hNV(gpVertex2hNV, (C.GLhalfNV)(x), (C.GLhalfNV)(y))
 }
-
 func Vertex2hvNV(v *uint16) {
 	C.glowVertex2hvNV(gpVertex2hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func Vertex2i(x int32, y int32) {
 	C.glowVertex2i(gpVertex2i, (C.GLint)(x), (C.GLint)(y))
 }
-
 func Vertex2iv(v *int32) {
 	C.glowVertex2iv(gpVertex2iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Vertex2s(x int16, y int16) {
 	C.glowVertex2s(gpVertex2s, (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func Vertex2sv(v *int16) {
 	C.glowVertex2sv(gpVertex2sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func Vertex2xOES(x int32) {
 	C.glowVertex2xOES(gpVertex2xOES, (C.GLfixed)(x))
 }
-
 func Vertex2xvOES(coords *int32) {
 	C.glowVertex2xvOES(gpVertex2xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func Vertex3bOES(x int8, y int8, z int8) {
 	C.glowVertex3bOES(gpVertex3bOES, (C.GLbyte)(x), (C.GLbyte)(y), (C.GLbyte)(z))
 }
-
 func Vertex3bvOES(coords *int8) {
 	C.glowVertex3bvOES(gpVertex3bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func Vertex3d(x float64, y float64, z float64) {
 	C.glowVertex3d(gpVertex3d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func Vertex3dv(v *float64) {
 	C.glowVertex3dv(gpVertex3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Vertex3f(x float32, y float32, z float32) {
 	C.glowVertex3f(gpVertex3f, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func Vertex3fv(v *float32) {
 	C.glowVertex3fv(gpVertex3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Vertex3hNV(x uint16, y uint16, z uint16) {
 	C.glowVertex3hNV(gpVertex3hNV, (C.GLhalfNV)(x), (C.GLhalfNV)(y), (C.GLhalfNV)(z))
 }
-
 func Vertex3hvNV(v *uint16) {
 	C.glowVertex3hvNV(gpVertex3hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func Vertex3i(x int32, y int32, z int32) {
 	C.glowVertex3i(gpVertex3i, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func Vertex3iv(v *int32) {
 	C.glowVertex3iv(gpVertex3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Vertex3s(x int16, y int16, z int16) {
 	C.glowVertex3s(gpVertex3s, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func Vertex3sv(v *int16) {
 	C.glowVertex3sv(gpVertex3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func Vertex3xOES(x int32, y int32) {
 	C.glowVertex3xOES(gpVertex3xOES, (C.GLfixed)(x), (C.GLfixed)(y))
 }
-
 func Vertex3xvOES(coords *int32) {
 	C.glowVertex3xvOES(gpVertex3xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func Vertex4bOES(x int8, y int8, z int8, w int8) {
 	C.glowVertex4bOES(gpVertex4bOES, (C.GLbyte)(x), (C.GLbyte)(y), (C.GLbyte)(z), (C.GLbyte)(w))
 }
-
 func Vertex4bvOES(coords *int8) {
 	C.glowVertex4bvOES(gpVertex4bvOES, (*C.GLbyte)(unsafe.Pointer(coords)))
 }
-
 func Vertex4d(x float64, y float64, z float64, w float64) {
 	C.glowVertex4d(gpVertex4d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func Vertex4dv(v *float64) {
 	C.glowVertex4dv(gpVertex4dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func Vertex4f(x float32, y float32, z float32, w float32) {
 	C.glowVertex4f(gpVertex4f, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func Vertex4fv(v *float32) {
 	C.glowVertex4fv(gpVertex4fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func Vertex4hNV(x uint16, y uint16, z uint16, w uint16) {
 	C.glowVertex4hNV(gpVertex4hNV, (C.GLhalfNV)(x), (C.GLhalfNV)(y), (C.GLhalfNV)(z), (C.GLhalfNV)(w))
 }
-
 func Vertex4hvNV(v *uint16) {
 	C.glowVertex4hvNV(gpVertex4hvNV, (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func Vertex4i(x int32, y int32, z int32, w int32) {
 	C.glowVertex4i(gpVertex4i, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func Vertex4iv(v *int32) {
 	C.glowVertex4iv(gpVertex4iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func Vertex4s(x int16, y int16, z int16, w int16) {
 	C.glowVertex4s(gpVertex4s, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func Vertex4sv(v *int16) {
 	C.glowVertex4sv(gpVertex4sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func Vertex4xOES(x int32, y int32, z int32) {
 	C.glowVertex4xOES(gpVertex4xOES, (C.GLfixed)(x), (C.GLfixed)(y), (C.GLfixed)(z))
 }
-
 func Vertex4xvOES(coords *int32) {
 	C.glowVertex4xvOES(gpVertex4xvOES, (*C.GLfixed)(unsafe.Pointer(coords)))
 }
-
 func VertexArrayAttribBinding(vaobj uint32, attribindex uint32, bindingindex uint32) {
 	C.glowVertexArrayAttribBinding(gpVertexArrayAttribBinding, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLuint)(bindingindex))
 }
@@ -30715,15 +28642,12 @@ func VertexArrayAttribBinding(vaobj uint32, attribindex uint32, bindingindex uin
 func VertexArrayAttribFormat(vaobj uint32, attribindex uint32, size int32, xtype uint32, normalized bool, relativeoffset uint32) {
 	C.glowVertexArrayAttribFormat(gpVertexArrayAttribFormat, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(relativeoffset))
 }
-
 func VertexArrayAttribIFormat(vaobj uint32, attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
 	C.glowVertexArrayAttribIFormat(gpVertexArrayAttribIFormat, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
-
 func VertexArrayAttribLFormat(vaobj uint32, attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
 	C.glowVertexArrayAttribLFormat(gpVertexArrayAttribLFormat, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
-
 func VertexArrayBindVertexBufferEXT(vaobj uint32, bindingindex uint32, buffer uint32, offset int, stride int32) {
 	C.glowVertexArrayBindVertexBufferEXT(gpVertexArrayBindVertexBufferEXT, (C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizei)(stride))
 }
@@ -30732,11 +28656,9 @@ func VertexArrayBindVertexBufferEXT(vaobj uint32, bindingindex uint32, buffer ui
 func VertexArrayBindingDivisor(vaobj uint32, bindingindex uint32, divisor uint32) {
 	C.glowVertexArrayBindingDivisor(gpVertexArrayBindingDivisor, (C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(divisor))
 }
-
 func VertexArrayColorOffsetEXT(vaobj uint32, buffer uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayColorOffsetEXT(gpVertexArrayColorOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayEdgeFlagOffsetEXT(vaobj uint32, buffer uint32, stride int32, offset int) {
 	C.glowVertexArrayEdgeFlagOffsetEXT(gpVertexArrayEdgeFlagOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
@@ -30745,75 +28667,57 @@ func VertexArrayEdgeFlagOffsetEXT(vaobj uint32, buffer uint32, stride int32, off
 func VertexArrayElementBuffer(vaobj uint32, buffer uint32) {
 	C.glowVertexArrayElementBuffer(gpVertexArrayElementBuffer, (C.GLuint)(vaobj), (C.GLuint)(buffer))
 }
-
 func VertexArrayFogCoordOffsetEXT(vaobj uint32, buffer uint32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayFogCoordOffsetEXT(gpVertexArrayFogCoordOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayIndexOffsetEXT(vaobj uint32, buffer uint32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayIndexOffsetEXT(gpVertexArrayIndexOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayMultiTexCoordOffsetEXT(vaobj uint32, buffer uint32, texunit uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayMultiTexCoordOffsetEXT(gpVertexArrayMultiTexCoordOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLenum)(texunit), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayNormalOffsetEXT(vaobj uint32, buffer uint32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayNormalOffsetEXT(gpVertexArrayNormalOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayParameteriAPPLE(pname uint32, param int32) {
 	C.glowVertexArrayParameteriAPPLE(gpVertexArrayParameteriAPPLE, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func VertexArrayRangeAPPLE(length int32, pointer unsafe.Pointer) {
 	C.glowVertexArrayRangeAPPLE(gpVertexArrayRangeAPPLE, (C.GLsizei)(length), pointer)
 }
-
 func VertexArrayRangeNV(length int32, pointer unsafe.Pointer) {
 	C.glowVertexArrayRangeNV(gpVertexArrayRangeNV, (C.GLsizei)(length), pointer)
 }
-
 func VertexArraySecondaryColorOffsetEXT(vaobj uint32, buffer uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArraySecondaryColorOffsetEXT(gpVertexArraySecondaryColorOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayTexCoordOffsetEXT(vaobj uint32, buffer uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayTexCoordOffsetEXT(gpVertexArrayTexCoordOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayVertexAttribBindingEXT(vaobj uint32, attribindex uint32, bindingindex uint32) {
 	C.glowVertexArrayVertexAttribBindingEXT(gpVertexArrayVertexAttribBindingEXT, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLuint)(bindingindex))
 }
-
 func VertexArrayVertexAttribDivisorEXT(vaobj uint32, index uint32, divisor uint32) {
 	C.glowVertexArrayVertexAttribDivisorEXT(gpVertexArrayVertexAttribDivisorEXT, (C.GLuint)(vaobj), (C.GLuint)(index), (C.GLuint)(divisor))
 }
-
 func VertexArrayVertexAttribFormatEXT(vaobj uint32, attribindex uint32, size int32, xtype uint32, normalized bool, relativeoffset uint32) {
 	C.glowVertexArrayVertexAttribFormatEXT(gpVertexArrayVertexAttribFormatEXT, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(relativeoffset))
 }
-
 func VertexArrayVertexAttribIFormatEXT(vaobj uint32, attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
 	C.glowVertexArrayVertexAttribIFormatEXT(gpVertexArrayVertexAttribIFormatEXT, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
-
 func VertexArrayVertexAttribIOffsetEXT(vaobj uint32, buffer uint32, index uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayVertexAttribIOffsetEXT(gpVertexArrayVertexAttribIOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayVertexAttribLFormatEXT(vaobj uint32, attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
 	C.glowVertexArrayVertexAttribLFormatEXT(gpVertexArrayVertexAttribLFormatEXT, (C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
-
 func VertexArrayVertexAttribLOffsetEXT(vaobj uint32, buffer uint32, index uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayVertexAttribLOffsetEXT(gpVertexArrayVertexAttribLOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayVertexAttribOffsetEXT(vaobj uint32, buffer uint32, index uint32, size int32, xtype uint32, normalized bool, stride int32, offset int) {
 	C.glowVertexArrayVertexAttribOffsetEXT(gpVertexArrayVertexAttribOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexArrayVertexBindingDivisorEXT(vaobj uint32, bindingindex uint32, divisor uint32) {
 	C.glowVertexArrayVertexBindingDivisorEXT(gpVertexArrayVertexBindingDivisorEXT, (C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(divisor))
 }
@@ -30827,435 +28731,327 @@ func VertexArrayVertexBuffer(vaobj uint32, bindingindex uint32, buffer uint32, o
 func VertexArrayVertexBuffers(vaobj uint32, first uint32, count int32, buffers *uint32, offsets *int, strides *int32) {
 	C.glowVertexArrayVertexBuffers(gpVertexArrayVertexBuffers, (C.GLuint)(vaobj), (C.GLuint)(first), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(buffers)), (*C.GLintptr)(unsafe.Pointer(offsets)), (*C.GLsizei)(unsafe.Pointer(strides)))
 }
-
 func VertexArrayVertexOffsetEXT(vaobj uint32, buffer uint32, size int32, xtype uint32, stride int32, offset int) {
 	C.glowVertexArrayVertexOffsetEXT(gpVertexArrayVertexOffsetEXT, (C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-
 func VertexAttrib1d(index uint32, x float64) {
 	C.glowVertexAttrib1d(gpVertexAttrib1d, (C.GLuint)(index), (C.GLdouble)(x))
 }
-
 func VertexAttrib1dARB(index uint32, x float64) {
 	C.glowVertexAttrib1dARB(gpVertexAttrib1dARB, (C.GLuint)(index), (C.GLdouble)(x))
 }
-
 func VertexAttrib1dNV(index uint32, x float64) {
 	C.glowVertexAttrib1dNV(gpVertexAttrib1dNV, (C.GLuint)(index), (C.GLdouble)(x))
 }
-
 func VertexAttrib1dv(index uint32, v *float64) {
 	C.glowVertexAttrib1dv(gpVertexAttrib1dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1dvARB(index uint32, v *float64) {
 	C.glowVertexAttrib1dvARB(gpVertexAttrib1dvARB, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1dvNV(index uint32, v *float64) {
 	C.glowVertexAttrib1dvNV(gpVertexAttrib1dvNV, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1f(index uint32, x float32) {
 	C.glowVertexAttrib1f(gpVertexAttrib1f, (C.GLuint)(index), (C.GLfloat)(x))
 }
-
 func VertexAttrib1fARB(index uint32, x float32) {
 	C.glowVertexAttrib1fARB(gpVertexAttrib1fARB, (C.GLuint)(index), (C.GLfloat)(x))
 }
-
 func VertexAttrib1fNV(index uint32, x float32) {
 	C.glowVertexAttrib1fNV(gpVertexAttrib1fNV, (C.GLuint)(index), (C.GLfloat)(x))
 }
-
 func VertexAttrib1fv(index uint32, v *float32) {
 	C.glowVertexAttrib1fv(gpVertexAttrib1fv, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1fvARB(index uint32, v *float32) {
 	C.glowVertexAttrib1fvARB(gpVertexAttrib1fvARB, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1fvNV(index uint32, v *float32) {
 	C.glowVertexAttrib1fvNV(gpVertexAttrib1fvNV, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1hNV(index uint32, x uint16) {
 	C.glowVertexAttrib1hNV(gpVertexAttrib1hNV, (C.GLuint)(index), (C.GLhalfNV)(x))
 }
-
 func VertexAttrib1hvNV(index uint32, v *uint16) {
 	C.glowVertexAttrib1hvNV(gpVertexAttrib1hvNV, (C.GLuint)(index), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1s(index uint32, x int16) {
 	C.glowVertexAttrib1s(gpVertexAttrib1s, (C.GLuint)(index), (C.GLshort)(x))
 }
-
 func VertexAttrib1sARB(index uint32, x int16) {
 	C.glowVertexAttrib1sARB(gpVertexAttrib1sARB, (C.GLuint)(index), (C.GLshort)(x))
 }
-
 func VertexAttrib1sNV(index uint32, x int16) {
 	C.glowVertexAttrib1sNV(gpVertexAttrib1sNV, (C.GLuint)(index), (C.GLshort)(x))
 }
-
 func VertexAttrib1sv(index uint32, v *int16) {
 	C.glowVertexAttrib1sv(gpVertexAttrib1sv, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1svARB(index uint32, v *int16) {
 	C.glowVertexAttrib1svARB(gpVertexAttrib1svARB, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib1svNV(index uint32, v *int16) {
 	C.glowVertexAttrib1svNV(gpVertexAttrib1svNV, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2d(index uint32, x float64, y float64) {
 	C.glowVertexAttrib2d(gpVertexAttrib2d, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func VertexAttrib2dARB(index uint32, x float64, y float64) {
 	C.glowVertexAttrib2dARB(gpVertexAttrib2dARB, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func VertexAttrib2dNV(index uint32, x float64, y float64) {
 	C.glowVertexAttrib2dNV(gpVertexAttrib2dNV, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func VertexAttrib2dv(index uint32, v *float64) {
 	C.glowVertexAttrib2dv(gpVertexAttrib2dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2dvARB(index uint32, v *float64) {
 	C.glowVertexAttrib2dvARB(gpVertexAttrib2dvARB, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2dvNV(index uint32, v *float64) {
 	C.glowVertexAttrib2dvNV(gpVertexAttrib2dvNV, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2f(index uint32, x float32, y float32) {
 	C.glowVertexAttrib2f(gpVertexAttrib2f, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func VertexAttrib2fARB(index uint32, x float32, y float32) {
 	C.glowVertexAttrib2fARB(gpVertexAttrib2fARB, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func VertexAttrib2fNV(index uint32, x float32, y float32) {
 	C.glowVertexAttrib2fNV(gpVertexAttrib2fNV, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func VertexAttrib2fv(index uint32, v *float32) {
 	C.glowVertexAttrib2fv(gpVertexAttrib2fv, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2fvARB(index uint32, v *float32) {
 	C.glowVertexAttrib2fvARB(gpVertexAttrib2fvARB, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2fvNV(index uint32, v *float32) {
 	C.glowVertexAttrib2fvNV(gpVertexAttrib2fvNV, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2hNV(index uint32, x uint16, y uint16) {
 	C.glowVertexAttrib2hNV(gpVertexAttrib2hNV, (C.GLuint)(index), (C.GLhalfNV)(x), (C.GLhalfNV)(y))
 }
-
 func VertexAttrib2hvNV(index uint32, v *uint16) {
 	C.glowVertexAttrib2hvNV(gpVertexAttrib2hvNV, (C.GLuint)(index), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2s(index uint32, x int16, y int16) {
 	C.glowVertexAttrib2s(gpVertexAttrib2s, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func VertexAttrib2sARB(index uint32, x int16, y int16) {
 	C.glowVertexAttrib2sARB(gpVertexAttrib2sARB, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func VertexAttrib2sNV(index uint32, x int16, y int16) {
 	C.glowVertexAttrib2sNV(gpVertexAttrib2sNV, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func VertexAttrib2sv(index uint32, v *int16) {
 	C.glowVertexAttrib2sv(gpVertexAttrib2sv, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2svARB(index uint32, v *int16) {
 	C.glowVertexAttrib2svARB(gpVertexAttrib2svARB, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib2svNV(index uint32, v *int16) {
 	C.glowVertexAttrib2svNV(gpVertexAttrib2svNV, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3d(index uint32, x float64, y float64, z float64) {
 	C.glowVertexAttrib3d(gpVertexAttrib3d, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func VertexAttrib3dARB(index uint32, x float64, y float64, z float64) {
 	C.glowVertexAttrib3dARB(gpVertexAttrib3dARB, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func VertexAttrib3dNV(index uint32, x float64, y float64, z float64) {
 	C.glowVertexAttrib3dNV(gpVertexAttrib3dNV, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func VertexAttrib3dv(index uint32, v *float64) {
 	C.glowVertexAttrib3dv(gpVertexAttrib3dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3dvARB(index uint32, v *float64) {
 	C.glowVertexAttrib3dvARB(gpVertexAttrib3dvARB, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3dvNV(index uint32, v *float64) {
 	C.glowVertexAttrib3dvNV(gpVertexAttrib3dvNV, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3f(index uint32, x float32, y float32, z float32) {
 	C.glowVertexAttrib3f(gpVertexAttrib3f, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func VertexAttrib3fARB(index uint32, x float32, y float32, z float32) {
 	C.glowVertexAttrib3fARB(gpVertexAttrib3fARB, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func VertexAttrib3fNV(index uint32, x float32, y float32, z float32) {
 	C.glowVertexAttrib3fNV(gpVertexAttrib3fNV, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func VertexAttrib3fv(index uint32, v *float32) {
 	C.glowVertexAttrib3fv(gpVertexAttrib3fv, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3fvARB(index uint32, v *float32) {
 	C.glowVertexAttrib3fvARB(gpVertexAttrib3fvARB, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3fvNV(index uint32, v *float32) {
 	C.glowVertexAttrib3fvNV(gpVertexAttrib3fvNV, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3hNV(index uint32, x uint16, y uint16, z uint16) {
 	C.glowVertexAttrib3hNV(gpVertexAttrib3hNV, (C.GLuint)(index), (C.GLhalfNV)(x), (C.GLhalfNV)(y), (C.GLhalfNV)(z))
 }
-
 func VertexAttrib3hvNV(index uint32, v *uint16) {
 	C.glowVertexAttrib3hvNV(gpVertexAttrib3hvNV, (C.GLuint)(index), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3s(index uint32, x int16, y int16, z int16) {
 	C.glowVertexAttrib3s(gpVertexAttrib3s, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func VertexAttrib3sARB(index uint32, x int16, y int16, z int16) {
 	C.glowVertexAttrib3sARB(gpVertexAttrib3sARB, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func VertexAttrib3sNV(index uint32, x int16, y int16, z int16) {
 	C.glowVertexAttrib3sNV(gpVertexAttrib3sNV, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func VertexAttrib3sv(index uint32, v *int16) {
 	C.glowVertexAttrib3sv(gpVertexAttrib3sv, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3svARB(index uint32, v *int16) {
 	C.glowVertexAttrib3svARB(gpVertexAttrib3svARB, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib3svNV(index uint32, v *int16) {
 	C.glowVertexAttrib3svNV(gpVertexAttrib3svNV, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4Nbv(index uint32, v *int8) {
 	C.glowVertexAttrib4Nbv(gpVertexAttrib4Nbv, (C.GLuint)(index), (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4NbvARB(index uint32, v *int8) {
 	C.glowVertexAttrib4NbvARB(gpVertexAttrib4NbvARB, (C.GLuint)(index), (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4Niv(index uint32, v *int32) {
 	C.glowVertexAttrib4Niv(gpVertexAttrib4Niv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4NivARB(index uint32, v *int32) {
 	C.glowVertexAttrib4NivARB(gpVertexAttrib4NivARB, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4Nsv(index uint32, v *int16) {
 	C.glowVertexAttrib4Nsv(gpVertexAttrib4Nsv, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4NsvARB(index uint32, v *int16) {
 	C.glowVertexAttrib4NsvARB(gpVertexAttrib4NsvARB, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4Nub(index uint32, x uint8, y uint8, z uint8, w uint8) {
 	C.glowVertexAttrib4Nub(gpVertexAttrib4Nub, (C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
 }
-
 func VertexAttrib4NubARB(index uint32, x uint8, y uint8, z uint8, w uint8) {
 	C.glowVertexAttrib4NubARB(gpVertexAttrib4NubARB, (C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
 }
-
 func VertexAttrib4Nubv(index uint32, v *uint8) {
 	C.glowVertexAttrib4Nubv(gpVertexAttrib4Nubv, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4NubvARB(index uint32, v *uint8) {
 	C.glowVertexAttrib4NubvARB(gpVertexAttrib4NubvARB, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4Nuiv(index uint32, v *uint32) {
 	C.glowVertexAttrib4Nuiv(gpVertexAttrib4Nuiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4NuivARB(index uint32, v *uint32) {
 	C.glowVertexAttrib4NuivARB(gpVertexAttrib4NuivARB, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4Nusv(index uint32, v *uint16) {
 	C.glowVertexAttrib4Nusv(gpVertexAttrib4Nusv, (C.GLuint)(index), (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4NusvARB(index uint32, v *uint16) {
 	C.glowVertexAttrib4NusvARB(gpVertexAttrib4NusvARB, (C.GLuint)(index), (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4bv(index uint32, v *int8) {
 	C.glowVertexAttrib4bv(gpVertexAttrib4bv, (C.GLuint)(index), (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4bvARB(index uint32, v *int8) {
 	C.glowVertexAttrib4bvARB(gpVertexAttrib4bvARB, (C.GLuint)(index), (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4d(index uint32, x float64, y float64, z float64, w float64) {
 	C.glowVertexAttrib4d(gpVertexAttrib4d, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func VertexAttrib4dARB(index uint32, x float64, y float64, z float64, w float64) {
 	C.glowVertexAttrib4dARB(gpVertexAttrib4dARB, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func VertexAttrib4dNV(index uint32, x float64, y float64, z float64, w float64) {
 	C.glowVertexAttrib4dNV(gpVertexAttrib4dNV, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func VertexAttrib4dv(index uint32, v *float64) {
 	C.glowVertexAttrib4dv(gpVertexAttrib4dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4dvARB(index uint32, v *float64) {
 	C.glowVertexAttrib4dvARB(gpVertexAttrib4dvARB, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4dvNV(index uint32, v *float64) {
 	C.glowVertexAttrib4dvNV(gpVertexAttrib4dvNV, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4f(index uint32, x float32, y float32, z float32, w float32) {
 	C.glowVertexAttrib4f(gpVertexAttrib4f, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func VertexAttrib4fARB(index uint32, x float32, y float32, z float32, w float32) {
 	C.glowVertexAttrib4fARB(gpVertexAttrib4fARB, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func VertexAttrib4fNV(index uint32, x float32, y float32, z float32, w float32) {
 	C.glowVertexAttrib4fNV(gpVertexAttrib4fNV, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func VertexAttrib4fv(index uint32, v *float32) {
 	C.glowVertexAttrib4fv(gpVertexAttrib4fv, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4fvARB(index uint32, v *float32) {
 	C.glowVertexAttrib4fvARB(gpVertexAttrib4fvARB, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4fvNV(index uint32, v *float32) {
 	C.glowVertexAttrib4fvNV(gpVertexAttrib4fvNV, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4hNV(index uint32, x uint16, y uint16, z uint16, w uint16) {
 	C.glowVertexAttrib4hNV(gpVertexAttrib4hNV, (C.GLuint)(index), (C.GLhalfNV)(x), (C.GLhalfNV)(y), (C.GLhalfNV)(z), (C.GLhalfNV)(w))
 }
-
 func VertexAttrib4hvNV(index uint32, v *uint16) {
 	C.glowVertexAttrib4hvNV(gpVertexAttrib4hvNV, (C.GLuint)(index), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4iv(index uint32, v *int32) {
 	C.glowVertexAttrib4iv(gpVertexAttrib4iv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4ivARB(index uint32, v *int32) {
 	C.glowVertexAttrib4ivARB(gpVertexAttrib4ivARB, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4s(index uint32, x int16, y int16, z int16, w int16) {
 	C.glowVertexAttrib4s(gpVertexAttrib4s, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func VertexAttrib4sARB(index uint32, x int16, y int16, z int16, w int16) {
 	C.glowVertexAttrib4sARB(gpVertexAttrib4sARB, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func VertexAttrib4sNV(index uint32, x int16, y int16, z int16, w int16) {
 	C.glowVertexAttrib4sNV(gpVertexAttrib4sNV, (C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func VertexAttrib4sv(index uint32, v *int16) {
 	C.glowVertexAttrib4sv(gpVertexAttrib4sv, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4svARB(index uint32, v *int16) {
 	C.glowVertexAttrib4svARB(gpVertexAttrib4svARB, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4svNV(index uint32, v *int16) {
 	C.glowVertexAttrib4svNV(gpVertexAttrib4svNV, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4ubNV(index uint32, x uint8, y uint8, z uint8, w uint8) {
 	C.glowVertexAttrib4ubNV(gpVertexAttrib4ubNV, (C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
 }
-
 func VertexAttrib4ubv(index uint32, v *uint8) {
 	C.glowVertexAttrib4ubv(gpVertexAttrib4ubv, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4ubvARB(index uint32, v *uint8) {
 	C.glowVertexAttrib4ubvARB(gpVertexAttrib4ubvARB, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4ubvNV(index uint32, v *uint8) {
 	C.glowVertexAttrib4ubvNV(gpVertexAttrib4ubvNV, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4uiv(index uint32, v *uint32) {
 	C.glowVertexAttrib4uiv(gpVertexAttrib4uiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4uivARB(index uint32, v *uint32) {
 	C.glowVertexAttrib4uivARB(gpVertexAttrib4uivARB, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4usv(index uint32, v *uint16) {
 	C.glowVertexAttrib4usv(gpVertexAttrib4usv, (C.GLuint)(index), (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func VertexAttrib4usvARB(index uint32, v *uint16) {
 	C.glowVertexAttrib4usvARB(gpVertexAttrib4usvARB, (C.GLuint)(index), (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribArrayObjectATI(index uint32, size int32, xtype uint32, normalized bool, stride int32, buffer uint32, offset uint32) {
 	C.glowVertexAttribArrayObjectATI(gpVertexAttribArrayObjectATI, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLsizei)(stride), (C.GLuint)(buffer), (C.GLuint)(offset))
 }
@@ -31269,7 +29065,6 @@ func VertexAttribBinding(attribindex uint32, bindingindex uint32) {
 func VertexAttribDivisor(index uint32, divisor uint32) {
 	C.glowVertexAttribDivisor(gpVertexAttribDivisor, (C.GLuint)(index), (C.GLuint)(divisor))
 }
-
 func VertexAttribDivisorARB(index uint32, divisor uint32) {
 	C.glowVertexAttribDivisorARB(gpVertexAttribDivisorARB, (C.GLuint)(index), (C.GLuint)(divisor))
 }
@@ -31278,371 +29073,279 @@ func VertexAttribDivisorARB(index uint32, divisor uint32) {
 func VertexAttribFormat(attribindex uint32, size int32, xtype uint32, normalized bool, relativeoffset uint32) {
 	C.glowVertexAttribFormat(gpVertexAttribFormat, (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(relativeoffset))
 }
-
 func VertexAttribFormatNV(index uint32, size int32, xtype uint32, normalized bool, stride int32) {
 	C.glowVertexAttribFormatNV(gpVertexAttribFormatNV, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLsizei)(stride))
 }
-
 func VertexAttribI1i(index uint32, x int32) {
 	C.glowVertexAttribI1i(gpVertexAttribI1i, (C.GLuint)(index), (C.GLint)(x))
 }
-
 func VertexAttribI1iEXT(index uint32, x int32) {
 	C.glowVertexAttribI1iEXT(gpVertexAttribI1iEXT, (C.GLuint)(index), (C.GLint)(x))
 }
-
 func VertexAttribI1iv(index uint32, v *int32) {
 	C.glowVertexAttribI1iv(gpVertexAttribI1iv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI1ivEXT(index uint32, v *int32) {
 	C.glowVertexAttribI1ivEXT(gpVertexAttribI1ivEXT, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI1ui(index uint32, x uint32) {
 	C.glowVertexAttribI1ui(gpVertexAttribI1ui, (C.GLuint)(index), (C.GLuint)(x))
 }
-
 func VertexAttribI1uiEXT(index uint32, x uint32) {
 	C.glowVertexAttribI1uiEXT(gpVertexAttribI1uiEXT, (C.GLuint)(index), (C.GLuint)(x))
 }
-
 func VertexAttribI1uiv(index uint32, v *uint32) {
 	C.glowVertexAttribI1uiv(gpVertexAttribI1uiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI1uivEXT(index uint32, v *uint32) {
 	C.glowVertexAttribI1uivEXT(gpVertexAttribI1uivEXT, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI2i(index uint32, x int32, y int32) {
 	C.glowVertexAttribI2i(gpVertexAttribI2i, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y))
 }
-
 func VertexAttribI2iEXT(index uint32, x int32, y int32) {
 	C.glowVertexAttribI2iEXT(gpVertexAttribI2iEXT, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y))
 }
-
 func VertexAttribI2iv(index uint32, v *int32) {
 	C.glowVertexAttribI2iv(gpVertexAttribI2iv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI2ivEXT(index uint32, v *int32) {
 	C.glowVertexAttribI2ivEXT(gpVertexAttribI2ivEXT, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI2ui(index uint32, x uint32, y uint32) {
 	C.glowVertexAttribI2ui(gpVertexAttribI2ui, (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y))
 }
-
 func VertexAttribI2uiEXT(index uint32, x uint32, y uint32) {
 	C.glowVertexAttribI2uiEXT(gpVertexAttribI2uiEXT, (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y))
 }
-
 func VertexAttribI2uiv(index uint32, v *uint32) {
 	C.glowVertexAttribI2uiv(gpVertexAttribI2uiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI2uivEXT(index uint32, v *uint32) {
 	C.glowVertexAttribI2uivEXT(gpVertexAttribI2uivEXT, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI3i(index uint32, x int32, y int32, z int32) {
 	C.glowVertexAttribI3i(gpVertexAttribI3i, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func VertexAttribI3iEXT(index uint32, x int32, y int32, z int32) {
 	C.glowVertexAttribI3iEXT(gpVertexAttribI3iEXT, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func VertexAttribI3iv(index uint32, v *int32) {
 	C.glowVertexAttribI3iv(gpVertexAttribI3iv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI3ivEXT(index uint32, v *int32) {
 	C.glowVertexAttribI3ivEXT(gpVertexAttribI3ivEXT, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI3ui(index uint32, x uint32, y uint32, z uint32) {
 	C.glowVertexAttribI3ui(gpVertexAttribI3ui, (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z))
 }
-
 func VertexAttribI3uiEXT(index uint32, x uint32, y uint32, z uint32) {
 	C.glowVertexAttribI3uiEXT(gpVertexAttribI3uiEXT, (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z))
 }
-
 func VertexAttribI3uiv(index uint32, v *uint32) {
 	C.glowVertexAttribI3uiv(gpVertexAttribI3uiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI3uivEXT(index uint32, v *uint32) {
 	C.glowVertexAttribI3uivEXT(gpVertexAttribI3uivEXT, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4bv(index uint32, v *int8) {
 	C.glowVertexAttribI4bv(gpVertexAttribI4bv, (C.GLuint)(index), (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4bvEXT(index uint32, v *int8) {
 	C.glowVertexAttribI4bvEXT(gpVertexAttribI4bvEXT, (C.GLuint)(index), (*C.GLbyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4i(index uint32, x int32, y int32, z int32, w int32) {
 	C.glowVertexAttribI4i(gpVertexAttribI4i, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func VertexAttribI4iEXT(index uint32, x int32, y int32, z int32, w int32) {
 	C.glowVertexAttribI4iEXT(gpVertexAttribI4iEXT, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func VertexAttribI4iv(index uint32, v *int32) {
 	C.glowVertexAttribI4iv(gpVertexAttribI4iv, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4ivEXT(index uint32, v *int32) {
 	C.glowVertexAttribI4ivEXT(gpVertexAttribI4ivEXT, (C.GLuint)(index), (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4sv(index uint32, v *int16) {
 	C.glowVertexAttribI4sv(gpVertexAttribI4sv, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4svEXT(index uint32, v *int16) {
 	C.glowVertexAttribI4svEXT(gpVertexAttribI4svEXT, (C.GLuint)(index), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4ubv(index uint32, v *uint8) {
 	C.glowVertexAttribI4ubv(gpVertexAttribI4ubv, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4ubvEXT(index uint32, v *uint8) {
 	C.glowVertexAttribI4ubvEXT(gpVertexAttribI4ubvEXT, (C.GLuint)(index), (*C.GLubyte)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4ui(index uint32, x uint32, y uint32, z uint32, w uint32) {
 	C.glowVertexAttribI4ui(gpVertexAttribI4ui, (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z), (C.GLuint)(w))
 }
-
 func VertexAttribI4uiEXT(index uint32, x uint32, y uint32, z uint32, w uint32) {
 	C.glowVertexAttribI4uiEXT(gpVertexAttribI4uiEXT, (C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z), (C.GLuint)(w))
 }
-
 func VertexAttribI4uiv(index uint32, v *uint32) {
 	C.glowVertexAttribI4uiv(gpVertexAttribI4uiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4uivEXT(index uint32, v *uint32) {
 	C.glowVertexAttribI4uivEXT(gpVertexAttribI4uivEXT, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4usv(index uint32, v *uint16) {
 	C.glowVertexAttribI4usv(gpVertexAttribI4usv, (C.GLuint)(index), (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribI4usvEXT(index uint32, v *uint16) {
 	C.glowVertexAttribI4usvEXT(gpVertexAttribI4usvEXT, (C.GLuint)(index), (*C.GLushort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribIFormat(attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
 	C.glowVertexAttribIFormat(gpVertexAttribIFormat, (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
-
 func VertexAttribIFormatNV(index uint32, size int32, xtype uint32, stride int32) {
 	C.glowVertexAttribIFormatNV(gpVertexAttribIFormatNV, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func VertexAttribIPointer(index uint32, size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribIPointer(gpVertexAttribIPointer, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribIPointerEXT(index uint32, size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribIPointerEXT(gpVertexAttribIPointerEXT, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribL1d(index uint32, x float64) {
 	C.glowVertexAttribL1d(gpVertexAttribL1d, (C.GLuint)(index), (C.GLdouble)(x))
 }
-
 func VertexAttribL1dEXT(index uint32, x float64) {
 	C.glowVertexAttribL1dEXT(gpVertexAttribL1dEXT, (C.GLuint)(index), (C.GLdouble)(x))
 }
-
 func VertexAttribL1dv(index uint32, v *float64) {
 	C.glowVertexAttribL1dv(gpVertexAttribL1dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL1dvEXT(index uint32, v *float64) {
 	C.glowVertexAttribL1dvEXT(gpVertexAttribL1dvEXT, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL1i64NV(index uint32, x int64) {
 	C.glowVertexAttribL1i64NV(gpVertexAttribL1i64NV, (C.GLuint)(index), (C.GLint64EXT)(x))
 }
-
 func VertexAttribL1i64vNV(index uint32, v *int64) {
 	C.glowVertexAttribL1i64vNV(gpVertexAttribL1i64vNV, (C.GLuint)(index), (*C.GLint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL1ui64ARB(index uint32, x uint64) {
 	C.glowVertexAttribL1ui64ARB(gpVertexAttribL1ui64ARB, (C.GLuint)(index), (C.GLuint64EXT)(x))
 }
-
 func VertexAttribL1ui64NV(index uint32, x uint64) {
 	C.glowVertexAttribL1ui64NV(gpVertexAttribL1ui64NV, (C.GLuint)(index), (C.GLuint64EXT)(x))
 }
-
 func VertexAttribL1ui64vARB(index uint32, v *uint64) {
 	C.glowVertexAttribL1ui64vARB(gpVertexAttribL1ui64vARB, (C.GLuint)(index), (*C.GLuint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL1ui64vNV(index uint32, v *uint64) {
 	C.glowVertexAttribL1ui64vNV(gpVertexAttribL1ui64vNV, (C.GLuint)(index), (*C.GLuint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL2d(index uint32, x float64, y float64) {
 	C.glowVertexAttribL2d(gpVertexAttribL2d, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func VertexAttribL2dEXT(index uint32, x float64, y float64) {
 	C.glowVertexAttribL2dEXT(gpVertexAttribL2dEXT, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func VertexAttribL2dv(index uint32, v *float64) {
 	C.glowVertexAttribL2dv(gpVertexAttribL2dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL2dvEXT(index uint32, v *float64) {
 	C.glowVertexAttribL2dvEXT(gpVertexAttribL2dvEXT, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL2i64NV(index uint32, x int64, y int64) {
 	C.glowVertexAttribL2i64NV(gpVertexAttribL2i64NV, (C.GLuint)(index), (C.GLint64EXT)(x), (C.GLint64EXT)(y))
 }
-
 func VertexAttribL2i64vNV(index uint32, v *int64) {
 	C.glowVertexAttribL2i64vNV(gpVertexAttribL2i64vNV, (C.GLuint)(index), (*C.GLint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL2ui64NV(index uint32, x uint64, y uint64) {
 	C.glowVertexAttribL2ui64NV(gpVertexAttribL2ui64NV, (C.GLuint)(index), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y))
 }
-
 func VertexAttribL2ui64vNV(index uint32, v *uint64) {
 	C.glowVertexAttribL2ui64vNV(gpVertexAttribL2ui64vNV, (C.GLuint)(index), (*C.GLuint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL3d(index uint32, x float64, y float64, z float64) {
 	C.glowVertexAttribL3d(gpVertexAttribL3d, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func VertexAttribL3dEXT(index uint32, x float64, y float64, z float64) {
 	C.glowVertexAttribL3dEXT(gpVertexAttribL3dEXT, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func VertexAttribL3dv(index uint32, v *float64) {
 	C.glowVertexAttribL3dv(gpVertexAttribL3dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL3dvEXT(index uint32, v *float64) {
 	C.glowVertexAttribL3dvEXT(gpVertexAttribL3dvEXT, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL3i64NV(index uint32, x int64, y int64, z int64) {
 	C.glowVertexAttribL3i64NV(gpVertexAttribL3i64NV, (C.GLuint)(index), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z))
 }
-
 func VertexAttribL3i64vNV(index uint32, v *int64) {
 	C.glowVertexAttribL3i64vNV(gpVertexAttribL3i64vNV, (C.GLuint)(index), (*C.GLint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL3ui64NV(index uint32, x uint64, y uint64, z uint64) {
 	C.glowVertexAttribL3ui64NV(gpVertexAttribL3ui64NV, (C.GLuint)(index), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z))
 }
-
 func VertexAttribL3ui64vNV(index uint32, v *uint64) {
 	C.glowVertexAttribL3ui64vNV(gpVertexAttribL3ui64vNV, (C.GLuint)(index), (*C.GLuint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL4d(index uint32, x float64, y float64, z float64, w float64) {
 	C.glowVertexAttribL4d(gpVertexAttribL4d, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func VertexAttribL4dEXT(index uint32, x float64, y float64, z float64, w float64) {
 	C.glowVertexAttribL4dEXT(gpVertexAttribL4dEXT, (C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func VertexAttribL4dv(index uint32, v *float64) {
 	C.glowVertexAttribL4dv(gpVertexAttribL4dv, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL4dvEXT(index uint32, v *float64) {
 	C.glowVertexAttribL4dvEXT(gpVertexAttribL4dvEXT, (C.GLuint)(index), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL4i64NV(index uint32, x int64, y int64, z int64, w int64) {
 	C.glowVertexAttribL4i64NV(gpVertexAttribL4i64NV, (C.GLuint)(index), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z), (C.GLint64EXT)(w))
 }
-
 func VertexAttribL4i64vNV(index uint32, v *int64) {
 	C.glowVertexAttribL4i64vNV(gpVertexAttribL4i64vNV, (C.GLuint)(index), (*C.GLint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribL4ui64NV(index uint32, x uint64, y uint64, z uint64, w uint64) {
 	C.glowVertexAttribL4ui64NV(gpVertexAttribL4ui64NV, (C.GLuint)(index), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z), (C.GLuint64EXT)(w))
 }
-
 func VertexAttribL4ui64vNV(index uint32, v *uint64) {
 	C.glowVertexAttribL4ui64vNV(gpVertexAttribL4ui64vNV, (C.GLuint)(index), (*C.GLuint64EXT)(unsafe.Pointer(v)))
 }
-
 func VertexAttribLFormat(attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
 	C.glowVertexAttribLFormat(gpVertexAttribLFormat, (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
-
 func VertexAttribLFormatNV(index uint32, size int32, xtype uint32, stride int32) {
 	C.glowVertexAttribLFormatNV(gpVertexAttribLFormatNV, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func VertexAttribLPointer(index uint32, size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribLPointer(gpVertexAttribLPointer, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribLPointerEXT(index uint32, size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribLPointerEXT(gpVertexAttribLPointerEXT, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribP1ui(index uint32, xtype uint32, normalized bool, value uint32) {
 	C.glowVertexAttribP1ui(gpVertexAttribP1ui, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(value))
 }
-
 func VertexAttribP1uiv(index uint32, xtype uint32, normalized bool, value *uint32) {
 	C.glowVertexAttribP1uiv(gpVertexAttribP1uiv, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func VertexAttribP2ui(index uint32, xtype uint32, normalized bool, value uint32) {
 	C.glowVertexAttribP2ui(gpVertexAttribP2ui, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(value))
 }
-
 func VertexAttribP2uiv(index uint32, xtype uint32, normalized bool, value *uint32) {
 	C.glowVertexAttribP2uiv(gpVertexAttribP2uiv, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func VertexAttribP3ui(index uint32, xtype uint32, normalized bool, value uint32) {
 	C.glowVertexAttribP3ui(gpVertexAttribP3ui, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(value))
 }
-
 func VertexAttribP3uiv(index uint32, xtype uint32, normalized bool, value *uint32) {
 	C.glowVertexAttribP3uiv(gpVertexAttribP3uiv, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func VertexAttribP4ui(index uint32, xtype uint32, normalized bool, value uint32) {
 	C.glowVertexAttribP4ui(gpVertexAttribP4ui, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(value))
 }
-
 func VertexAttribP4uiv(index uint32, xtype uint32, normalized bool, value *uint32) {
 	C.glowVertexAttribP4uiv(gpVertexAttribP4uiv, (C.GLuint)(index), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func VertexAttribParameteriAMD(index uint32, pname uint32, param int32) {
 	C.glowVertexAttribParameteriAMD(gpVertexAttribParameteriAMD, (C.GLuint)(index), (C.GLenum)(pname), (C.GLint)(param))
 }
@@ -31651,79 +29354,60 @@ func VertexAttribParameteriAMD(index uint32, pname uint32, param int32) {
 func VertexAttribPointer(index uint32, size int32, xtype uint32, normalized bool, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribPointer(gpVertexAttribPointer, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribPointerARB(index uint32, size int32, xtype uint32, normalized bool, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribPointerARB(gpVertexAttribPointerARB, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribPointerNV(index uint32, fsize int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribPointerNV(gpVertexAttribPointerNV, (C.GLuint)(index), (C.GLint)(fsize), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexAttribs1dvNV(index uint32, count int32, v *float64) {
 	C.glowVertexAttribs1dvNV(gpVertexAttribs1dvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs1fvNV(index uint32, count int32, v *float32) {
 	C.glowVertexAttribs1fvNV(gpVertexAttribs1fvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs1hvNV(index uint32, n int32, v *uint16) {
 	C.glowVertexAttribs1hvNV(gpVertexAttribs1hvNV, (C.GLuint)(index), (C.GLsizei)(n), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs1svNV(index uint32, count int32, v *int16) {
 	C.glowVertexAttribs1svNV(gpVertexAttribs1svNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs2dvNV(index uint32, count int32, v *float64) {
 	C.glowVertexAttribs2dvNV(gpVertexAttribs2dvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs2fvNV(index uint32, count int32, v *float32) {
 	C.glowVertexAttribs2fvNV(gpVertexAttribs2fvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs2hvNV(index uint32, n int32, v *uint16) {
 	C.glowVertexAttribs2hvNV(gpVertexAttribs2hvNV, (C.GLuint)(index), (C.GLsizei)(n), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs2svNV(index uint32, count int32, v *int16) {
 	C.glowVertexAttribs2svNV(gpVertexAttribs2svNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs3dvNV(index uint32, count int32, v *float64) {
 	C.glowVertexAttribs3dvNV(gpVertexAttribs3dvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs3fvNV(index uint32, count int32, v *float32) {
 	C.glowVertexAttribs3fvNV(gpVertexAttribs3fvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs3hvNV(index uint32, n int32, v *uint16) {
 	C.glowVertexAttribs3hvNV(gpVertexAttribs3hvNV, (C.GLuint)(index), (C.GLsizei)(n), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs3svNV(index uint32, count int32, v *int16) {
 	C.glowVertexAttribs3svNV(gpVertexAttribs3svNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs4dvNV(index uint32, count int32, v *float64) {
 	C.glowVertexAttribs4dvNV(gpVertexAttribs4dvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs4fvNV(index uint32, count int32, v *float32) {
 	C.glowVertexAttribs4fvNV(gpVertexAttribs4fvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs4hvNV(index uint32, n int32, v *uint16) {
 	C.glowVertexAttribs4hvNV(gpVertexAttribs4hvNV, (C.GLuint)(index), (C.GLsizei)(n), (*C.GLhalfNV)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs4svNV(index uint32, count int32, v *int16) {
 	C.glowVertexAttribs4svNV(gpVertexAttribs4svNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func VertexAttribs4ubvNV(index uint32, count int32, v *uint8) {
 	C.glowVertexAttribs4ubvNV(gpVertexAttribs4ubvNV, (C.GLuint)(index), (C.GLsizei)(count), (*C.GLubyte)(unsafe.Pointer(v)))
 }
@@ -31732,43 +29416,33 @@ func VertexAttribs4ubvNV(index uint32, count int32, v *uint8) {
 func VertexBindingDivisor(bindingindex uint32, divisor uint32) {
 	C.glowVertexBindingDivisor(gpVertexBindingDivisor, (C.GLuint)(bindingindex), (C.GLuint)(divisor))
 }
-
 func VertexBlendARB(count int32) {
 	C.glowVertexBlendARB(gpVertexBlendARB, (C.GLint)(count))
 }
-
 func VertexBlendEnvfATI(pname uint32, param float32) {
 	C.glowVertexBlendEnvfATI(gpVertexBlendEnvfATI, (C.GLenum)(pname), (C.GLfloat)(param))
 }
-
 func VertexBlendEnviATI(pname uint32, param int32) {
 	C.glowVertexBlendEnviATI(gpVertexBlendEnviATI, (C.GLenum)(pname), (C.GLint)(param))
 }
-
 func VertexFormatNV(size int32, xtype uint32, stride int32) {
 	C.glowVertexFormatNV(gpVertexFormatNV, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride))
 }
-
 func VertexP2ui(xtype uint32, value uint32) {
 	C.glowVertexP2ui(gpVertexP2ui, (C.GLenum)(xtype), (C.GLuint)(value))
 }
-
 func VertexP2uiv(xtype uint32, value *uint32) {
 	C.glowVertexP2uiv(gpVertexP2uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func VertexP3ui(xtype uint32, value uint32) {
 	C.glowVertexP3ui(gpVertexP3ui, (C.GLenum)(xtype), (C.GLuint)(value))
 }
-
 func VertexP3uiv(xtype uint32, value *uint32) {
 	C.glowVertexP3uiv(gpVertexP3uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(value)))
 }
-
 func VertexP4ui(xtype uint32, value uint32) {
 	C.glowVertexP4ui(gpVertexP4ui, (C.GLenum)(xtype), (C.GLuint)(value))
 }
-
 func VertexP4uiv(xtype uint32, value *uint32) {
 	C.glowVertexP4uiv(gpVertexP4uiv, (C.GLenum)(xtype), (*C.GLuint)(unsafe.Pointer(value)))
 }
@@ -31777,180 +29451,136 @@ func VertexP4uiv(xtype uint32, value *uint32) {
 func VertexPointer(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexPointer(gpVertexPointer, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexPointerEXT(size int32, xtype uint32, stride int32, count int32, pointer unsafe.Pointer) {
 	C.glowVertexPointerEXT(gpVertexPointerEXT, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), (C.GLsizei)(count), pointer)
 }
-
 func VertexPointerListIBM(size int32, xtype uint32, stride int32, pointer *unsafe.Pointer, ptrstride int32) {
 	C.glowVertexPointerListIBM(gpVertexPointerListIBM, (C.GLint)(size), (C.GLenum)(xtype), (C.GLint)(stride), pointer, (C.GLint)(ptrstride))
 }
-
 func VertexPointervINTEL(size int32, xtype uint32, pointer *unsafe.Pointer) {
 	C.glowVertexPointervINTEL(gpVertexPointervINTEL, (C.GLint)(size), (C.GLenum)(xtype), pointer)
 }
-
 func VertexStream1dATI(stream uint32, x float64) {
 	C.glowVertexStream1dATI(gpVertexStream1dATI, (C.GLenum)(stream), (C.GLdouble)(x))
 }
-
 func VertexStream1dvATI(stream uint32, coords *float64) {
 	C.glowVertexStream1dvATI(gpVertexStream1dvATI, (C.GLenum)(stream), (*C.GLdouble)(unsafe.Pointer(coords)))
 }
-
 func VertexStream1fATI(stream uint32, x float32) {
 	C.glowVertexStream1fATI(gpVertexStream1fATI, (C.GLenum)(stream), (C.GLfloat)(x))
 }
-
 func VertexStream1fvATI(stream uint32, coords *float32) {
 	C.glowVertexStream1fvATI(gpVertexStream1fvATI, (C.GLenum)(stream), (*C.GLfloat)(unsafe.Pointer(coords)))
 }
-
 func VertexStream1iATI(stream uint32, x int32) {
 	C.glowVertexStream1iATI(gpVertexStream1iATI, (C.GLenum)(stream), (C.GLint)(x))
 }
-
 func VertexStream1ivATI(stream uint32, coords *int32) {
 	C.glowVertexStream1ivATI(gpVertexStream1ivATI, (C.GLenum)(stream), (*C.GLint)(unsafe.Pointer(coords)))
 }
-
 func VertexStream1sATI(stream uint32, x int16) {
 	C.glowVertexStream1sATI(gpVertexStream1sATI, (C.GLenum)(stream), (C.GLshort)(x))
 }
-
 func VertexStream1svATI(stream uint32, coords *int16) {
 	C.glowVertexStream1svATI(gpVertexStream1svATI, (C.GLenum)(stream), (*C.GLshort)(unsafe.Pointer(coords)))
 }
-
 func VertexStream2dATI(stream uint32, x float64, y float64) {
 	C.glowVertexStream2dATI(gpVertexStream2dATI, (C.GLenum)(stream), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func VertexStream2dvATI(stream uint32, coords *float64) {
 	C.glowVertexStream2dvATI(gpVertexStream2dvATI, (C.GLenum)(stream), (*C.GLdouble)(unsafe.Pointer(coords)))
 }
-
 func VertexStream2fATI(stream uint32, x float32, y float32) {
 	C.glowVertexStream2fATI(gpVertexStream2fATI, (C.GLenum)(stream), (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func VertexStream2fvATI(stream uint32, coords *float32) {
 	C.glowVertexStream2fvATI(gpVertexStream2fvATI, (C.GLenum)(stream), (*C.GLfloat)(unsafe.Pointer(coords)))
 }
-
 func VertexStream2iATI(stream uint32, x int32, y int32) {
 	C.glowVertexStream2iATI(gpVertexStream2iATI, (C.GLenum)(stream), (C.GLint)(x), (C.GLint)(y))
 }
-
 func VertexStream2ivATI(stream uint32, coords *int32) {
 	C.glowVertexStream2ivATI(gpVertexStream2ivATI, (C.GLenum)(stream), (*C.GLint)(unsafe.Pointer(coords)))
 }
-
 func VertexStream2sATI(stream uint32, x int16, y int16) {
 	C.glowVertexStream2sATI(gpVertexStream2sATI, (C.GLenum)(stream), (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func VertexStream2svATI(stream uint32, coords *int16) {
 	C.glowVertexStream2svATI(gpVertexStream2svATI, (C.GLenum)(stream), (*C.GLshort)(unsafe.Pointer(coords)))
 }
-
 func VertexStream3dATI(stream uint32, x float64, y float64, z float64) {
 	C.glowVertexStream3dATI(gpVertexStream3dATI, (C.GLenum)(stream), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func VertexStream3dvATI(stream uint32, coords *float64) {
 	C.glowVertexStream3dvATI(gpVertexStream3dvATI, (C.GLenum)(stream), (*C.GLdouble)(unsafe.Pointer(coords)))
 }
-
 func VertexStream3fATI(stream uint32, x float32, y float32, z float32) {
 	C.glowVertexStream3fATI(gpVertexStream3fATI, (C.GLenum)(stream), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func VertexStream3fvATI(stream uint32, coords *float32) {
 	C.glowVertexStream3fvATI(gpVertexStream3fvATI, (C.GLenum)(stream), (*C.GLfloat)(unsafe.Pointer(coords)))
 }
-
 func VertexStream3iATI(stream uint32, x int32, y int32, z int32) {
 	C.glowVertexStream3iATI(gpVertexStream3iATI, (C.GLenum)(stream), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func VertexStream3ivATI(stream uint32, coords *int32) {
 	C.glowVertexStream3ivATI(gpVertexStream3ivATI, (C.GLenum)(stream), (*C.GLint)(unsafe.Pointer(coords)))
 }
-
 func VertexStream3sATI(stream uint32, x int16, y int16, z int16) {
 	C.glowVertexStream3sATI(gpVertexStream3sATI, (C.GLenum)(stream), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func VertexStream3svATI(stream uint32, coords *int16) {
 	C.glowVertexStream3svATI(gpVertexStream3svATI, (C.GLenum)(stream), (*C.GLshort)(unsafe.Pointer(coords)))
 }
-
 func VertexStream4dATI(stream uint32, x float64, y float64, z float64, w float64) {
 	C.glowVertexStream4dATI(gpVertexStream4dATI, (C.GLenum)(stream), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func VertexStream4dvATI(stream uint32, coords *float64) {
 	C.glowVertexStream4dvATI(gpVertexStream4dvATI, (C.GLenum)(stream), (*C.GLdouble)(unsafe.Pointer(coords)))
 }
-
 func VertexStream4fATI(stream uint32, x float32, y float32, z float32, w float32) {
 	C.glowVertexStream4fATI(gpVertexStream4fATI, (C.GLenum)(stream), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func VertexStream4fvATI(stream uint32, coords *float32) {
 	C.glowVertexStream4fvATI(gpVertexStream4fvATI, (C.GLenum)(stream), (*C.GLfloat)(unsafe.Pointer(coords)))
 }
-
 func VertexStream4iATI(stream uint32, x int32, y int32, z int32, w int32) {
 	C.glowVertexStream4iATI(gpVertexStream4iATI, (C.GLenum)(stream), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func VertexStream4ivATI(stream uint32, coords *int32) {
 	C.glowVertexStream4ivATI(gpVertexStream4ivATI, (C.GLenum)(stream), (*C.GLint)(unsafe.Pointer(coords)))
 }
-
 func VertexStream4sATI(stream uint32, x int16, y int16, z int16, w int16) {
 	C.glowVertexStream4sATI(gpVertexStream4sATI, (C.GLenum)(stream), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func VertexStream4svATI(stream uint32, coords *int16) {
 	C.glowVertexStream4svATI(gpVertexStream4svATI, (C.GLenum)(stream), (*C.GLshort)(unsafe.Pointer(coords)))
 }
-
 func VertexWeightPointerEXT(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexWeightPointerEXT(gpVertexWeightPointerEXT, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func VertexWeightfEXT(weight float32) {
 	C.glowVertexWeightfEXT(gpVertexWeightfEXT, (C.GLfloat)(weight))
 }
-
 func VertexWeightfvEXT(weight *float32) {
 	C.glowVertexWeightfvEXT(gpVertexWeightfvEXT, (*C.GLfloat)(unsafe.Pointer(weight)))
 }
-
 func VertexWeighthNV(weight uint16) {
 	C.glowVertexWeighthNV(gpVertexWeighthNV, (C.GLhalfNV)(weight))
 }
-
 func VertexWeighthvNV(weight *uint16) {
 	C.glowVertexWeighthvNV(gpVertexWeighthvNV, (*C.GLhalfNV)(unsafe.Pointer(weight)))
 }
-
 func VideoCaptureNV(video_capture_slot uint32, sequence_num *uint32, capture_time *uint64) uint32 {
 	ret := C.glowVideoCaptureNV(gpVideoCaptureNV, (C.GLuint)(video_capture_slot), (*C.GLuint)(unsafe.Pointer(sequence_num)), (*C.GLuint64EXT)(unsafe.Pointer(capture_time)))
 	return (uint32)(ret)
 }
-
 func VideoCaptureStreamParameterdvNV(video_capture_slot uint32, stream uint32, pname uint32, params *float64) {
 	C.glowVideoCaptureStreamParameterdvNV(gpVideoCaptureStreamParameterdvNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLdouble)(unsafe.Pointer(params)))
 }
-
 func VideoCaptureStreamParameterfvNV(video_capture_slot uint32, stream uint32, pname uint32, params *float32) {
 	C.glowVideoCaptureStreamParameterfvNV(gpVideoCaptureStreamParameterfvNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
 }
-
 func VideoCaptureStreamParameterivNV(video_capture_slot uint32, stream uint32, pname uint32, params *int32) {
 	C.glowVideoCaptureStreamParameterivNV(gpVideoCaptureStreamParameterivNV, (C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -31959,27 +29589,21 @@ func VideoCaptureStreamParameterivNV(video_capture_slot uint32, stream uint32, p
 func Viewport(x int32, y int32, width int32, height int32) {
 	C.glowViewport(gpViewport, (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-
 func ViewportArrayv(first uint32, count int32, v *float32) {
 	C.glowViewportArrayv(gpViewportArrayv, (C.GLuint)(first), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ViewportIndexedf(index uint32, x float32, y float32, w float32, h float32) {
 	C.glowViewportIndexedf(gpViewportIndexedf, (C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(w), (C.GLfloat)(h))
 }
-
 func ViewportIndexedfv(index uint32, v *float32) {
 	C.glowViewportIndexedfv(gpViewportIndexedfv, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func ViewportPositionWScaleNV(index uint32, xcoeff float32, ycoeff float32) {
 	C.glowViewportPositionWScaleNV(gpViewportPositionWScaleNV, (C.GLuint)(index), (C.GLfloat)(xcoeff), (C.GLfloat)(ycoeff))
 }
-
 func ViewportSwizzleNV(index uint32, swizzlex uint32, swizzley uint32, swizzlez uint32, swizzlew uint32) {
 	C.glowViewportSwizzleNV(gpViewportSwizzleNV, (C.GLuint)(index), (C.GLenum)(swizzlex), (C.GLenum)(swizzley), (C.GLenum)(swizzlez), (C.GLenum)(swizzlew))
 }
-
 func WaitSemaphoreEXT(semaphore uint32, numBufferBarriers uint32, buffers *uint32, numTextureBarriers uint32, textures *uint32, srcLayouts *uint32) {
 	C.glowWaitSemaphoreEXT(gpWaitSemaphoreEXT, (C.GLuint)(semaphore), (C.GLuint)(numBufferBarriers), (*C.GLuint)(unsafe.Pointer(buffers)), (C.GLuint)(numTextureBarriers), (*C.GLuint)(unsafe.Pointer(textures)), (*C.GLenum)(unsafe.Pointer(srcLayouts)))
 }
@@ -31988,279 +29612,210 @@ func WaitSemaphoreEXT(semaphore uint32, numBufferBarriers uint32, buffers *uint3
 func WaitSync(sync uintptr, flags uint32, timeout uint64) {
 	C.glowWaitSync(gpWaitSync, (C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 }
-
 func WaitVkSemaphoreNV(vkSemaphore uint64) {
 	C.glowWaitVkSemaphoreNV(gpWaitVkSemaphoreNV, (C.GLuint64)(vkSemaphore))
 }
-
 func WeightPathsNV(resultPath uint32, numPaths int32, paths *uint32, weights *float32) {
 	C.glowWeightPathsNV(gpWeightPathsNV, (C.GLuint)(resultPath), (C.GLsizei)(numPaths), (*C.GLuint)(unsafe.Pointer(paths)), (*C.GLfloat)(unsafe.Pointer(weights)))
 }
-
 func WeightPointerARB(size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowWeightPointerARB(gpWeightPointerARB, (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
 }
-
 func WeightbvARB(size int32, weights *int8) {
 	C.glowWeightbvARB(gpWeightbvARB, (C.GLint)(size), (*C.GLbyte)(unsafe.Pointer(weights)))
 }
-
 func WeightdvARB(size int32, weights *float64) {
 	C.glowWeightdvARB(gpWeightdvARB, (C.GLint)(size), (*C.GLdouble)(unsafe.Pointer(weights)))
 }
-
 func WeightfvARB(size int32, weights *float32) {
 	C.glowWeightfvARB(gpWeightfvARB, (C.GLint)(size), (*C.GLfloat)(unsafe.Pointer(weights)))
 }
-
 func WeightivARB(size int32, weights *int32) {
 	C.glowWeightivARB(gpWeightivARB, (C.GLint)(size), (*C.GLint)(unsafe.Pointer(weights)))
 }
-
 func WeightsvARB(size int32, weights *int16) {
 	C.glowWeightsvARB(gpWeightsvARB, (C.GLint)(size), (*C.GLshort)(unsafe.Pointer(weights)))
 }
-
 func WeightubvARB(size int32, weights *uint8) {
 	C.glowWeightubvARB(gpWeightubvARB, (C.GLint)(size), (*C.GLubyte)(unsafe.Pointer(weights)))
 }
-
 func WeightuivARB(size int32, weights *uint32) {
 	C.glowWeightuivARB(gpWeightuivARB, (C.GLint)(size), (*C.GLuint)(unsafe.Pointer(weights)))
 }
-
 func WeightusvARB(size int32, weights *uint16) {
 	C.glowWeightusvARB(gpWeightusvARB, (C.GLint)(size), (*C.GLushort)(unsafe.Pointer(weights)))
 }
-
 func WindowPos2d(x float64, y float64) {
 	C.glowWindowPos2d(gpWindowPos2d, (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func WindowPos2dARB(x float64, y float64) {
 	C.glowWindowPos2dARB(gpWindowPos2dARB, (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func WindowPos2dMESA(x float64, y float64) {
 	C.glowWindowPos2dMESA(gpWindowPos2dMESA, (C.GLdouble)(x), (C.GLdouble)(y))
 }
-
 func WindowPos2dv(v *float64) {
 	C.glowWindowPos2dv(gpWindowPos2dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos2dvARB(v *float64) {
 	C.glowWindowPos2dvARB(gpWindowPos2dvARB, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos2dvMESA(v *float64) {
 	C.glowWindowPos2dvMESA(gpWindowPos2dvMESA, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos2f(x float32, y float32) {
 	C.glowWindowPos2f(gpWindowPos2f, (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func WindowPos2fARB(x float32, y float32) {
 	C.glowWindowPos2fARB(gpWindowPos2fARB, (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func WindowPos2fMESA(x float32, y float32) {
 	C.glowWindowPos2fMESA(gpWindowPos2fMESA, (C.GLfloat)(x), (C.GLfloat)(y))
 }
-
 func WindowPos2fv(v *float32) {
 	C.glowWindowPos2fv(gpWindowPos2fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos2fvARB(v *float32) {
 	C.glowWindowPos2fvARB(gpWindowPos2fvARB, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos2fvMESA(v *float32) {
 	C.glowWindowPos2fvMESA(gpWindowPos2fvMESA, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos2i(x int32, y int32) {
 	C.glowWindowPos2i(gpWindowPos2i, (C.GLint)(x), (C.GLint)(y))
 }
-
 func WindowPos2iARB(x int32, y int32) {
 	C.glowWindowPos2iARB(gpWindowPos2iARB, (C.GLint)(x), (C.GLint)(y))
 }
-
 func WindowPos2iMESA(x int32, y int32) {
 	C.glowWindowPos2iMESA(gpWindowPos2iMESA, (C.GLint)(x), (C.GLint)(y))
 }
-
 func WindowPos2iv(v *int32) {
 	C.glowWindowPos2iv(gpWindowPos2iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos2ivARB(v *int32) {
 	C.glowWindowPos2ivARB(gpWindowPos2ivARB, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos2ivMESA(v *int32) {
 	C.glowWindowPos2ivMESA(gpWindowPos2ivMESA, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos2s(x int16, y int16) {
 	C.glowWindowPos2s(gpWindowPos2s, (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func WindowPos2sARB(x int16, y int16) {
 	C.glowWindowPos2sARB(gpWindowPos2sARB, (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func WindowPos2sMESA(x int16, y int16) {
 	C.glowWindowPos2sMESA(gpWindowPos2sMESA, (C.GLshort)(x), (C.GLshort)(y))
 }
-
 func WindowPos2sv(v *int16) {
 	C.glowWindowPos2sv(gpWindowPos2sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowPos2svARB(v *int16) {
 	C.glowWindowPos2svARB(gpWindowPos2svARB, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowPos2svMESA(v *int16) {
 	C.glowWindowPos2svMESA(gpWindowPos2svMESA, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowPos3d(x float64, y float64, z float64) {
 	C.glowWindowPos3d(gpWindowPos3d, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func WindowPos3dARB(x float64, y float64, z float64) {
 	C.glowWindowPos3dARB(gpWindowPos3dARB, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func WindowPos3dMESA(x float64, y float64, z float64) {
 	C.glowWindowPos3dMESA(gpWindowPos3dMESA, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-
 func WindowPos3dv(v *float64) {
 	C.glowWindowPos3dv(gpWindowPos3dv, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos3dvARB(v *float64) {
 	C.glowWindowPos3dvARB(gpWindowPos3dvARB, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos3dvMESA(v *float64) {
 	C.glowWindowPos3dvMESA(gpWindowPos3dvMESA, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos3f(x float32, y float32, z float32) {
 	C.glowWindowPos3f(gpWindowPos3f, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func WindowPos3fARB(x float32, y float32, z float32) {
 	C.glowWindowPos3fARB(gpWindowPos3fARB, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func WindowPos3fMESA(x float32, y float32, z float32) {
 	C.glowWindowPos3fMESA(gpWindowPos3fMESA, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
-
 func WindowPos3fv(v *float32) {
 	C.glowWindowPos3fv(gpWindowPos3fv, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos3fvARB(v *float32) {
 	C.glowWindowPos3fvARB(gpWindowPos3fvARB, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos3fvMESA(v *float32) {
 	C.glowWindowPos3fvMESA(gpWindowPos3fvMESA, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos3i(x int32, y int32, z int32) {
 	C.glowWindowPos3i(gpWindowPos3i, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func WindowPos3iARB(x int32, y int32, z int32) {
 	C.glowWindowPos3iARB(gpWindowPos3iARB, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func WindowPos3iMESA(x int32, y int32, z int32) {
 	C.glowWindowPos3iMESA(gpWindowPos3iMESA, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-
 func WindowPos3iv(v *int32) {
 	C.glowWindowPos3iv(gpWindowPos3iv, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos3ivARB(v *int32) {
 	C.glowWindowPos3ivARB(gpWindowPos3ivARB, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos3ivMESA(v *int32) {
 	C.glowWindowPos3ivMESA(gpWindowPos3ivMESA, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos3s(x int16, y int16, z int16) {
 	C.glowWindowPos3s(gpWindowPos3s, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func WindowPos3sARB(x int16, y int16, z int16) {
 	C.glowWindowPos3sARB(gpWindowPos3sARB, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func WindowPos3sMESA(x int16, y int16, z int16) {
 	C.glowWindowPos3sMESA(gpWindowPos3sMESA, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
-
 func WindowPos3sv(v *int16) {
 	C.glowWindowPos3sv(gpWindowPos3sv, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowPos3svARB(v *int16) {
 	C.glowWindowPos3svARB(gpWindowPos3svARB, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowPos3svMESA(v *int16) {
 	C.glowWindowPos3svMESA(gpWindowPos3svMESA, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowPos4dMESA(x float64, y float64, z float64, w float64) {
 	C.glowWindowPos4dMESA(gpWindowPos4dMESA, (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-
 func WindowPos4dvMESA(v *float64) {
 	C.glowWindowPos4dvMESA(gpWindowPos4dvMESA, (*C.GLdouble)(unsafe.Pointer(v)))
 }
-
 func WindowPos4fMESA(x float32, y float32, z float32, w float32) {
 	C.glowWindowPos4fMESA(gpWindowPos4fMESA, (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
-
 func WindowPos4fvMESA(v *float32) {
 	C.glowWindowPos4fvMESA(gpWindowPos4fvMESA, (*C.GLfloat)(unsafe.Pointer(v)))
 }
-
 func WindowPos4iMESA(x int32, y int32, z int32, w int32) {
 	C.glowWindowPos4iMESA(gpWindowPos4iMESA, (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-
 func WindowPos4ivMESA(v *int32) {
 	C.glowWindowPos4ivMESA(gpWindowPos4ivMESA, (*C.GLint)(unsafe.Pointer(v)))
 }
-
 func WindowPos4sMESA(x int16, y int16, z int16, w int16) {
 	C.glowWindowPos4sMESA(gpWindowPos4sMESA, (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
-
 func WindowPos4svMESA(v *int16) {
 	C.glowWindowPos4svMESA(gpWindowPos4svMESA, (*C.GLshort)(unsafe.Pointer(v)))
 }
-
 func WindowRectanglesEXT(mode uint32, count int32, box *int32) {
 	C.glowWindowRectanglesEXT(gpWindowRectanglesEXT, (C.GLenum)(mode), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(box)))
 }
-
 func WriteMaskEXT(res uint32, in uint32, outX uint32, outY uint32, outZ uint32, outW uint32) {
 	C.glowWriteMaskEXT(gpWriteMaskEXT, (C.GLuint)(res), (C.GLuint)(in), (C.GLenum)(outX), (C.GLenum)(outY), (C.GLenum)(outZ), (C.GLenum)(outW))
 }
