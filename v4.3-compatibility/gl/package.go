@@ -21093,7 +21093,7 @@ func CreateStatesNV(n int32, states *uint32) {
 // Parameter context has type *C.struct__cl_context.
 // Parameter event has type *C.struct__cl_event.
 func CreateSyncFromCLeventARB(context unsafe.Pointer, event unsafe.Pointer, flags uint32) uintptr {
-	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(unsafe.Pointer(context)), (*C.struct__cl_event)(unsafe.Pointer(event)), (C.GLbitfield)(flags))
+	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(context), (*C.struct__cl_event)(event), (C.GLbitfield)(flags))
 	return (uintptr)(ret)
 }
 
