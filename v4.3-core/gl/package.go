@@ -9103,8 +9103,11 @@ func CreateShaderProgramvEXT(xtype uint32, count int32, strings **uint8) uint32 
 func CreateStatesNV(n int32, states *uint32) {
 	C.glowCreateStatesNV(gpCreateStatesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(states)))
 }
-func CreateSyncFromCLeventARB(context *C.struct__cl_context, event *C.struct__cl_event, flags uint32) uintptr {
-	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(unsafe.Pointer(context)), (*C.struct__cl_event)(unsafe.Pointer(event)), (C.GLbitfield)(flags))
+
+// Parameter context has type *C.struct__cl_context.
+// Parameter event has type *C.struct__cl_event.
+func CreateSyncFromCLeventARB(context unsafe.Pointer, event unsafe.Pointer, flags uint32) uintptr {
+	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(context), (*C.struct__cl_event)(event), (C.GLbitfield)(flags))
 	return (uintptr)(ret)
 }
 
@@ -9443,10 +9446,14 @@ func DrawTransformFeedbackStreamInstanced(mode uint32, id uint32, stream uint32,
 func DrawVkImageNV(vkImage uint64, sampler uint32, x0 float32, y0 float32, x1 float32, y1 float32, z float32, s0 float32, t0 float32, s1 float32, t1 float32) {
 	C.glowDrawVkImageNV(gpDrawVkImageNV, (C.GLuint64)(vkImage), (C.GLuint)(sampler), (C.GLfloat)(x0), (C.GLfloat)(y0), (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(z), (C.GLfloat)(s0), (C.GLfloat)(t0), (C.GLfloat)(s1), (C.GLfloat)(t1))
 }
-func EGLImageTargetTexStorageEXT(target uint32, image C.GLeglImageOES, attrib_list *int32) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTexStorageEXT(target uint32, image unsafe.Pointer, attrib_list *int32) {
 	C.glowEGLImageTargetTexStorageEXT(gpEGLImageTargetTexStorageEXT, (C.GLenum)(target), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
-func EGLImageTargetTextureStorageEXT(texture uint32, image C.GLeglImageOES, attrib_list *int32) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTextureStorageEXT(texture uint32, image unsafe.Pointer, attrib_list *int32) {
 	C.glowEGLImageTargetTextureStorageEXT(gpEGLImageTargetTextureStorageEXT, (C.GLuint)(texture), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
 func EdgeFlagFormatNV(stride int32) {
@@ -10528,9 +10535,11 @@ func GetVertexAttribfv(index uint32, pname uint32, params *float32) {
 func GetVertexAttribiv(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribiv(gpGetVertexAttribiv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetVkProcAddrNV(name *uint8) C.GLVULKANPROCNV {
+
+// Return value has type C.GLVULKANPROCNV.
+func GetVkProcAddrNV(name *uint8) unsafe.Pointer {
 	ret := C.glowGetVkProcAddrNV(gpGetVkProcAddrNV, (*C.GLchar)(unsafe.Pointer(name)))
-	return (C.GLVULKANPROCNV)(ret)
+	return (unsafe.Pointer)(ret)
 }
 func GetnCompressedTexImageARB(target uint32, lod int32, bufSize int32, img unsafe.Pointer) {
 	C.glowGetnCompressedTexImageARB(gpGetnCompressedTexImageARB, (C.GLenum)(target), (C.GLint)(lod), (C.GLsizei)(bufSize), img)

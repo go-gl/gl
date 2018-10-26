@@ -6516,7 +6516,9 @@ func BufferData(target uint32, size int, data unsafe.Pointer, usage uint32) {
 func BufferStorageEXT(target uint32, size int, data unsafe.Pointer, flags uint32) {
 	C.glowBufferStorageEXT(gpBufferStorageEXT, (C.GLenum)(target), (C.GLsizeiptr)(size), data, (C.GLbitfield)(flags))
 }
-func BufferStorageExternalEXT(target uint32, offset int, size int, clientBuffer C.GLeglClientBufferEXT, flags uint32) {
+
+// Parameter clientBuffer has type C.GLeglClientBufferEXT.
+func BufferStorageExternalEXT(target uint32, offset int, size int, clientBuffer unsafe.Pointer, flags uint32) {
 	C.glowBufferStorageExternalEXT(gpBufferStorageExternalEXT, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLeglClientBufferEXT)(clientBuffer), (C.GLbitfield)(flags))
 }
 func BufferStorageMemEXT(target uint32, size int, memory uint32, offset uint64) {
@@ -7013,16 +7015,24 @@ func DrawTransformFeedbackInstancedEXT(mode uint32, id uint32, instancecount int
 func DrawVkImageNV(vkImage uint64, sampler uint32, x0 float32, y0 float32, x1 float32, y1 float32, z float32, s0 float32, t0 float32, s1 float32, t1 float32) {
 	C.glowDrawVkImageNV(gpDrawVkImageNV, (C.GLuint64)(vkImage), (C.GLuint)(sampler), (C.GLfloat)(x0), (C.GLfloat)(y0), (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(z), (C.GLfloat)(s0), (C.GLfloat)(t0), (C.GLfloat)(s1), (C.GLfloat)(t1))
 }
-func EGLImageTargetRenderbufferStorageOES(target uint32, image C.GLeglImageOES) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetRenderbufferStorageOES(target uint32, image unsafe.Pointer) {
 	C.glowEGLImageTargetRenderbufferStorageOES(gpEGLImageTargetRenderbufferStorageOES, (C.GLenum)(target), (C.GLeglImageOES)(image))
 }
-func EGLImageTargetTexStorageEXT(target uint32, image C.GLeglImageOES, attrib_list *int32) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTexStorageEXT(target uint32, image unsafe.Pointer, attrib_list *int32) {
 	C.glowEGLImageTargetTexStorageEXT(gpEGLImageTargetTexStorageEXT, (C.GLenum)(target), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
-func EGLImageTargetTexture2DOES(target uint32, image C.GLeglImageOES) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTexture2DOES(target uint32, image unsafe.Pointer) {
 	C.glowEGLImageTargetTexture2DOES(gpEGLImageTargetTexture2DOES, (C.GLenum)(target), (C.GLeglImageOES)(image))
 }
-func EGLImageTargetTextureStorageEXT(texture uint32, image C.GLeglImageOES, attrib_list *int32) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTextureStorageEXT(texture uint32, image unsafe.Pointer, attrib_list *int32) {
 	C.glowEGLImageTargetTextureStorageEXT(gpEGLImageTargetTextureStorageEXT, (C.GLuint)(texture), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
 
@@ -7808,9 +7818,11 @@ func GetVertexAttribfv(index uint32, pname uint32, params *float32) {
 func GetVertexAttribiv(index uint32, pname uint32, params *int32) {
 	C.glowGetVertexAttribiv(gpGetVertexAttribiv, (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-func GetVkProcAddrNV(name *uint8) C.GLVULKANPROCNV {
+
+// Return value has type C.GLVULKANPROCNV.
+func GetVkProcAddrNV(name *uint8) unsafe.Pointer {
 	ret := C.glowGetVkProcAddrNV(gpGetVkProcAddrNV, (*C.GLchar)(unsafe.Pointer(name)))
-	return (C.GLVULKANPROCNV)(ret)
+	return (unsafe.Pointer)(ret)
 }
 func GetnUniformfv(program uint32, location int32, bufSize int32, params *float32) {
 	C.glowGetnUniformfv(gpGetnUniformfv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(bufSize), (*C.GLfloat)(unsafe.Pointer(params)))
@@ -8157,7 +8169,9 @@ func MultiDrawElementsEXT(mode uint32, count *int32, xtype uint32, indices *unsa
 func MultiDrawElementsIndirectEXT(mode uint32, xtype uint32, indirect unsafe.Pointer, drawcount int32, stride int32) {
 	C.glowMultiDrawElementsIndirectEXT(gpMultiDrawElementsIndirectEXT, (C.GLenum)(mode), (C.GLenum)(xtype), indirect, (C.GLsizei)(drawcount), (C.GLsizei)(stride))
 }
-func NamedBufferStorageExternalEXT(buffer uint32, offset int, size int, clientBuffer C.GLeglClientBufferEXT, flags uint32) {
+
+// Parameter clientBuffer has type C.GLeglClientBufferEXT.
+func NamedBufferStorageExternalEXT(buffer uint32, offset int, size int, clientBuffer unsafe.Pointer, flags uint32) {
 	C.glowNamedBufferStorageExternalEXT(gpNamedBufferStorageExternalEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLeglClientBufferEXT)(clientBuffer), (C.GLbitfield)(flags))
 }
 func NamedBufferStorageMemEXT(buffer uint32, size int, memory uint32, offset uint64) {

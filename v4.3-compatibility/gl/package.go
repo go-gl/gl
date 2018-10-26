@@ -20227,7 +20227,9 @@ func BufferParameteriAPPLE(target uint32, pname uint32, param int32) {
 func BufferStorage(target uint32, size int, data unsafe.Pointer, flags uint32) {
 	C.glowBufferStorage(gpBufferStorage, (C.GLenum)(target), (C.GLsizeiptr)(size), data, (C.GLbitfield)(flags))
 }
-func BufferStorageExternalEXT(target uint32, offset int, size int, clientBuffer C.GLeglClientBufferEXT, flags uint32) {
+
+// Parameter clientBuffer has type C.GLeglClientBufferEXT.
+func BufferStorageExternalEXT(target uint32, offset int, size int, clientBuffer unsafe.Pointer, flags uint32) {
 	C.glowBufferStorageExternalEXT(gpBufferStorageExternalEXT, (C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLeglClientBufferEXT)(clientBuffer), (C.GLbitfield)(flags))
 }
 func BufferStorageMemEXT(target uint32, size int, memory uint32, offset uint64) {
@@ -21087,8 +21089,11 @@ func CreateShaderProgramvEXT(xtype uint32, count int32, strings **uint8) uint32 
 func CreateStatesNV(n int32, states *uint32) {
 	C.glowCreateStatesNV(gpCreateStatesNV, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(states)))
 }
-func CreateSyncFromCLeventARB(context *C.struct__cl_context, event *C.struct__cl_event, flags uint32) uintptr {
-	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(unsafe.Pointer(context)), (*C.struct__cl_event)(unsafe.Pointer(event)), (C.GLbitfield)(flags))
+
+// Parameter context has type *C.struct__cl_context.
+// Parameter event has type *C.struct__cl_event.
+func CreateSyncFromCLeventARB(context unsafe.Pointer, event unsafe.Pointer, flags uint32) uintptr {
+	ret := C.glowCreateSyncFromCLeventARB(gpCreateSyncFromCLeventARB, (*C.struct__cl_context)(context), (*C.struct__cl_event)(event), (C.GLbitfield)(flags))
 	return (uintptr)(ret)
 }
 
@@ -21126,7 +21131,9 @@ func DebugMessageCallback(callback DebugProc, userParam unsafe.Pointer) {
 	userDebugCallback = callback
 	C.glowDebugMessageCallback(gpDebugMessageCallback, (C.GLDEBUGPROC)(unsafe.Pointer(&callback)), userParam)
 }
-func DebugMessageCallbackAMD(callback C.GLDEBUGPROCAMD, userParam unsafe.Pointer) {
+
+// Parameter callback has type C.GLDEBUGPROCAMD.
+func DebugMessageCallbackAMD(callback unsafe.Pointer, userParam unsafe.Pointer) {
 	C.glowDebugMessageCallbackAMD(gpDebugMessageCallbackAMD, (C.GLDEBUGPROCAMD)(callback), userParam)
 }
 func DebugMessageCallbackARB(callback DebugProc, userParam unsafe.Pointer) {
@@ -21590,10 +21597,14 @@ func DrawTransformFeedbackStreamInstanced(mode uint32, id uint32, stream uint32,
 func DrawVkImageNV(vkImage uint64, sampler uint32, x0 float32, y0 float32, x1 float32, y1 float32, z float32, s0 float32, t0 float32, s1 float32, t1 float32) {
 	C.glowDrawVkImageNV(gpDrawVkImageNV, (C.GLuint64)(vkImage), (C.GLuint)(sampler), (C.GLfloat)(x0), (C.GLfloat)(y0), (C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(z), (C.GLfloat)(s0), (C.GLfloat)(t0), (C.GLfloat)(s1), (C.GLfloat)(t1))
 }
-func EGLImageTargetTexStorageEXT(target uint32, image C.GLeglImageOES, attrib_list *int32) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTexStorageEXT(target uint32, image unsafe.Pointer, attrib_list *int32) {
 	C.glowEGLImageTargetTexStorageEXT(gpEGLImageTargetTexStorageEXT, (C.GLenum)(target), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
-func EGLImageTargetTextureStorageEXT(texture uint32, image C.GLeglImageOES, attrib_list *int32) {
+
+// Parameter image has type C.GLeglImageOES.
+func EGLImageTargetTextureStorageEXT(texture uint32, image unsafe.Pointer, attrib_list *int32) {
 	C.glowEGLImageTargetTextureStorageEXT(gpEGLImageTargetTextureStorageEXT, (C.GLuint)(texture), (C.GLeglImageOES)(image), (*C.GLint)(unsafe.Pointer(attrib_list)))
 }
 
@@ -23678,9 +23689,11 @@ func GetVideoui64vNV(video_slot uint32, pname uint32, params *uint64) {
 func GetVideouivNV(video_slot uint32, pname uint32, params *uint32) {
 	C.glowGetVideouivNV(gpGetVideouivNV, (C.GLuint)(video_slot), (C.GLenum)(pname), (*C.GLuint)(unsafe.Pointer(params)))
 }
-func GetVkProcAddrNV(name *uint8) C.GLVULKANPROCNV {
+
+// Return value has type C.GLVULKANPROCNV.
+func GetVkProcAddrNV(name *uint8) unsafe.Pointer {
 	ret := C.glowGetVkProcAddrNV(gpGetVkProcAddrNV, (*C.GLchar)(unsafe.Pointer(name)))
-	return (C.GLVULKANPROCNV)(ret)
+	return (unsafe.Pointer)(ret)
 }
 func GetnColorTableARB(target uint32, format uint32, xtype uint32, bufSize int32, table unsafe.Pointer) {
 	C.glowGetnColorTableARB(gpGetnColorTableARB, (C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(xtype), (C.GLsizei)(bufSize), table)
@@ -25110,7 +25123,9 @@ func NamedBufferStorage(buffer uint32, size int, data unsafe.Pointer, flags uint
 func NamedBufferStorageEXT(buffer uint32, size int, data unsafe.Pointer, flags uint32) {
 	C.glowNamedBufferStorageEXT(gpNamedBufferStorageEXT, (C.GLuint)(buffer), (C.GLsizeiptr)(size), data, (C.GLbitfield)(flags))
 }
-func NamedBufferStorageExternalEXT(buffer uint32, offset int, size int, clientBuffer C.GLeglClientBufferEXT, flags uint32) {
+
+// Parameter clientBuffer has type C.GLeglClientBufferEXT.
+func NamedBufferStorageExternalEXT(buffer uint32, offset int, size int, clientBuffer unsafe.Pointer, flags uint32) {
 	C.glowNamedBufferStorageExternalEXT(gpNamedBufferStorageExternalEXT, (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLeglClientBufferEXT)(clientBuffer), (C.GLbitfield)(flags))
 }
 func NamedBufferStorageMemEXT(buffer uint32, size int, memory uint32, offset uint64) {
