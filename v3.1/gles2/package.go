@@ -16,7 +16,8 @@
 //
 package gles2
 
-// #cgo darwin        LDFLAGS: -framework OpenGL
+// #cgo !gles2,darwin        LDFLAGS: -framework OpenGL
+// #cgo gles2,darwin         LDFLAGS: -lGLESv2
 // #cgo !gles2,windows       LDFLAGS: -lopengl32
 // #cgo gles2,windows        LDFLAGS: -lGLESv2
 // #cgo !egl,linux !egl,freebsd !egl,openbsd pkg-config: gl

@@ -20,12 +20,14 @@ package gles2
 #cgo !gles2,windows       LDFLAGS: -lopengl32
 #cgo gles2,windows        LDFLAGS: -lGLESv2
 #cgo darwin CFLAGS: -DTAG_DARWIN
-#cgo darwin LDFLAGS: -framework OpenGL
+#cgo !gles2,darwin LDFLAGS: -framework OpenGL
+#cgo gles2,darwin  LDFLAGS: -lGLESv2
 #cgo linux freebsd openbsd CFLAGS: -DTAG_POSIX
 #cgo !egl,linux !egl,freebsd !egl,openbsd pkg-config: gl
 #cgo egl,linux egl,freebsd egl,openbsd egl,windows CFLAGS: -DTAG_EGL
 #cgo egl,linux egl,freebsd egl,openbsd pkg-config: egl
 #cgo egl,windows LDFLAGS: -lEGL
+#cgo egl,darwin  LDFLAGS: -lEGL
 // Check the EGL tag first as it takes priority over the platform's default
 // configuration of WGL/GLX/CGL.
 #if defined(TAG_EGL)
