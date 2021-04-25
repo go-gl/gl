@@ -56,10 +56,17 @@ Generating
 
 These gl bindings are generated using the [Glow](https://github.com/go-gl/glow) generator. Only developers of this repository need to do this step.
 
-It is required to have `glow` source in the same Go workspace (since relative paths are used) and the `glow` binary should be in your `$PATH`. Doable with `go get -u github.com/go-gl/glow` if your `$GOPATH/bin` is in your `$PATH`.
+It is required to have `glow` source in a sibling directory to `go-gl/gl` since relative paths are used for generation (see `generate.go`).
+For non-module-aware cases, this means `glow` needs to be in the same Go workspace as `go-gl/gl`.
+For module-aware cases, `go-gl/glow` needs to be checked out parallel to `go-gl/gl`. 
+
+In either case, the `glow` binary must be in your `$PATH`. Doable with `go get -u github.com/go-gl/glow` if your `$GOPATH/bin` is in your `$PATH`.
+
+Perform generation with the following:
 
 ```bash
-go generate -tags=gen github.com/go-gl/gl
+cd path/to/go-gl/gl
+go generate -tags=gen .
 ```
 
 More information about these bindings can be found in the [Glow repository](https://github.com/go-gl/glow).
