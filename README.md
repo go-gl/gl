@@ -1,4 +1,4 @@
-# gl [![Build Status](https://travis-ci.org/go-gl/gl.svg?branch=master)](https://travis-ci.org/go-gl/gl) [![GoDoc](https://godoc.org/github.com/go-gl/gl?status.svg)](https://godoc.org/github.com/go-gl/gl)
+# gl [![Build Status](https://github.com/go-gl/gl/actions/workflows/main/badge.svg)](https://travis-ci.org/go-gl/gl) [![Go Reference](https://pkg.go.dev/badge/github.com/go-gl/gl.svg)](https://pkg.go.dev/github.com/go-gl/gl)
 
 This repository holds Go bindings to various OpenGL versions. They are auto-generated using [Glow](https://github.com/go-gl/glow).
 
