@@ -1,3 +1,3 @@
 module github.com/go-gl/gl
 
-go 1.9
+go 1.12
