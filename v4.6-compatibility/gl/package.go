@@ -21,7 +21,7 @@ package gl
 // #cgo !gles2,windows       LDFLAGS: -lopengl32
 // #cgo gles2,windows        LDFLAGS: -lGLESv2
 // #cgo !egl,linux !egl,freebsd !egl,netbsd !egl,openbsd pkg-config: gl
-// #cgo egl,linux egl,freebsd !egl,netbsd egl,openbsd    pkg-config: egl
+// #cgo egl,linux egl,freebsd egl,netbsd egl,openbsd    pkg-config: egl
 // #if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)
 // #ifndef WIN32_LEAN_AND_MEAN
 // #define WIN32_LEAN_AND_MEAN 1
