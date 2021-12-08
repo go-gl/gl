@@ -61,13 +61,12 @@ package gles2
 // typedef void (APIENTRY *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);
 // typedef void (APIENTRY *GLDEBUGPROCKHR)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);
 // typedef void (APIENTRY *GLVULKANPROCNV)(void);
-// extern void glowDebugCallback_gles231(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);
+// extern void glowDebugCallback_gles230(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);
 // static void APIENTRY glowCDebugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam) {
-//   glowDebugCallback_gles231(source, type, id, severity, length, message, userParam);
+//   glowDebugCallback_gles230(source, type, id, severity, length, message, userParam);
 // }
 // typedef GLboolean  (APIENTRYP GPACQUIREKEYEDMUTEXWIN32EXT)(GLuint  memory, GLuint64  key, GLuint  timeout);
 // typedef void  (APIENTRYP GPACTIVEPROGRAMEXT)(GLuint  program);
-// typedef void  (APIENTRYP GPACTIVESHADERPROGRAM)(GLuint  pipeline, GLuint  program);
 // typedef void  (APIENTRYP GPACTIVESHADERPROGRAMEXT)(GLuint  pipeline, GLuint  program);
 // typedef void  (APIENTRYP GPACTIVETEXTURE)(GLenum  texture);
 // typedef void  (APIENTRYP GPALPHAFUNCQCOM)(GLenum  func, GLclampf  ref);
@@ -86,8 +85,6 @@ package gles2
 // typedef void  (APIENTRYP GPBINDFRAGDATALOCATIONEXT)(GLuint  program, GLuint  color, const GLchar * name);
 // typedef void  (APIENTRYP GPBINDFRAGDATALOCATIONINDEXEDEXT)(GLuint  program, GLuint  colorNumber, GLuint  index, const GLchar * name);
 // typedef void  (APIENTRYP GPBINDFRAMEBUFFER)(GLenum  target, GLuint  framebuffer);
-// typedef void  (APIENTRYP GPBINDIMAGETEXTURE)(GLuint  unit, GLuint  texture, GLint  level, GLboolean  layered, GLint  layer, GLenum  access, GLenum  format);
-// typedef void  (APIENTRYP GPBINDPROGRAMPIPELINE)(GLuint  pipeline);
 // typedef void  (APIENTRYP GPBINDPROGRAMPIPELINEEXT)(GLuint  pipeline);
 // typedef void  (APIENTRYP GPBINDRENDERBUFFER)(GLenum  target, GLuint  renderbuffer);
 // typedef void  (APIENTRYP GPBINDSAMPLER)(GLuint  unit, GLuint  sampler);
@@ -96,7 +93,6 @@ package gles2
 // typedef void  (APIENTRYP GPBINDTRANSFORMFEEDBACK)(GLenum  target, GLuint  id);
 // typedef void  (APIENTRYP GPBINDVERTEXARRAY)(GLuint  array);
 // typedef void  (APIENTRYP GPBINDVERTEXARRAYOES)(GLuint  array);
-// typedef void  (APIENTRYP GPBINDVERTEXBUFFER)(GLuint  bindingindex, GLuint  buffer, GLintptr  offset, GLsizei  stride);
 // typedef void  (APIENTRYP GPBLENDBARRIERKHR)();
 // typedef void  (APIENTRYP GPBLENDBARRIERNV)();
 // typedef void  (APIENTRYP GPBLENDCOLOR)(GLfloat  red, GLfloat  green, GLfloat  blue, GLfloat  alpha);
@@ -174,7 +170,6 @@ package gles2
 // typedef void  (APIENTRYP GPCREATESEMAPHORESNV)(GLsizei  n, GLuint * semaphores);
 // typedef GLuint  (APIENTRYP GPCREATESHADER)(GLenum  type);
 // typedef GLuint  (APIENTRYP GPCREATESHADERPROGRAMEXT)(GLenum  type, const GLchar * string);
-// typedef GLuint  (APIENTRYP GPCREATESHADERPROGRAMV)(GLenum  type, GLsizei  count, const GLchar *const* strings);
 // typedef GLuint  (APIENTRYP GPCREATESHADERPROGRAMVEXT)(GLenum  type, GLsizei  count, const GLchar ** strings);
 // typedef void  (APIENTRYP GPCULLFACE)(GLenum  mode);
 // typedef void  (APIENTRYP GPDEBUGMESSAGECALLBACK)(GLDEBUGPROC  callback, const void * userParam);
@@ -191,7 +186,6 @@ package gles2
 // typedef void  (APIENTRYP GPDELETEPERFMONITORSAMD)(GLsizei  n, GLuint * monitors);
 // typedef void  (APIENTRYP GPDELETEPERFQUERYINTEL)(GLuint  queryHandle);
 // typedef void  (APIENTRYP GPDELETEPROGRAM)(GLuint  program);
-// typedef void  (APIENTRYP GPDELETEPROGRAMPIPELINES)(GLsizei  n, const GLuint * pipelines);
 // typedef void  (APIENTRYP GPDELETEPROGRAMPIPELINESEXT)(GLsizei  n, const GLuint * pipelines);
 // typedef void  (APIENTRYP GPDELETEQUERIES)(GLsizei  n, const GLuint * ids);
 // typedef void  (APIENTRYP GPDELETEQUERIESEXT)(GLsizei  n, const GLuint * ids);
@@ -220,10 +214,7 @@ package gles2
 // typedef void  (APIENTRYP GPDISABLEINV)(GLenum  target, GLuint  index);
 // typedef void  (APIENTRYP GPDISABLEIOES)(GLenum  target, GLuint  index);
 // typedef void  (APIENTRYP GPDISCARDFRAMEBUFFEREXT)(GLenum  target, GLsizei  numAttachments, const GLenum * attachments);
-// typedef void  (APIENTRYP GPDISPATCHCOMPUTE)(GLuint  num_groups_x, GLuint  num_groups_y, GLuint  num_groups_z);
-// typedef void  (APIENTRYP GPDISPATCHCOMPUTEINDIRECT)(GLintptr  indirect);
 // typedef void  (APIENTRYP GPDRAWARRAYS)(GLenum  mode, GLint  first, GLsizei  count);
-// typedef void  (APIENTRYP GPDRAWARRAYSINDIRECT)(GLenum  mode, const void * indirect);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCED)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDANGLE)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  primcount);
 // typedef void  (APIENTRYP GPDRAWARRAYSINSTANCEDBASEINSTANCEEXT)(GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount, GLuint  baseinstance);
@@ -236,7 +227,6 @@ package gles2
 // typedef void  (APIENTRYP GPDRAWELEMENTS)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices);
 // typedef void  (APIENTRYP GPDRAWELEMENTSBASEVERTEXEXT)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLint  basevertex);
 // typedef void  (APIENTRYP GPDRAWELEMENTSBASEVERTEXOES)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLint  basevertex);
-// typedef void  (APIENTRYP GPDRAWELEMENTSINDIRECT)(GLenum  mode, GLenum  type, const void * indirect);
 // typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCED)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount);
 // typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCEDANGLE)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  primcount);
 // typedef void  (APIENTRYP GPDRAWELEMENTSINSTANCEDBASEINSTANCEEXT)(GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount, GLuint  baseinstance);
@@ -295,7 +285,6 @@ package gles2
 // typedef void  (APIENTRYP GPFRAMEBUFFERFETCHBARRIERQCOM)();
 // typedef void  (APIENTRYP GPFRAMEBUFFERFOVEATIONCONFIGQCOM)(GLuint  framebuffer, GLuint  numLayers, GLuint  focalPointsPerLayer, GLuint  requestedFeatures, GLuint * providedFeatures);
 // typedef void  (APIENTRYP GPFRAMEBUFFERFOVEATIONPARAMETERSQCOM)(GLuint  framebuffer, GLuint  layer, GLuint  focalPoint, GLfloat  focalX, GLfloat  focalY, GLfloat  gainX, GLfloat  gainY, GLfloat  foveaArea);
-// typedef void  (APIENTRYP GPFRAMEBUFFERPARAMETERI)(GLenum  target, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPFRAMEBUFFERPARAMETERIMESA)(GLenum  target, GLenum  pname, GLint  param);
 // typedef void  (APIENTRYP GPFRAMEBUFFERPIXELLOCALSTORAGESIZEEXT)(GLuint  target, GLsizei  size);
 // typedef void  (APIENTRYP GPFRAMEBUFFERRENDERBUFFER)(GLenum  target, GLenum  attachment, GLenum  renderbuffertarget, GLuint  renderbuffer);
@@ -317,7 +306,6 @@ package gles2
 // typedef void  (APIENTRYP GPGENFRAMEBUFFERS)(GLsizei  n, GLuint * framebuffers);
 // typedef GLuint  (APIENTRYP GPGENPATHSNV)(GLsizei  range);
 // typedef void  (APIENTRYP GPGENPERFMONITORSAMD)(GLsizei  n, GLuint * monitors);
-// typedef void  (APIENTRYP GPGENPROGRAMPIPELINES)(GLsizei  n, GLuint * pipelines);
 // typedef void  (APIENTRYP GPGENPROGRAMPIPELINESEXT)(GLsizei  n, GLuint * pipelines);
 // typedef void  (APIENTRYP GPGENQUERIES)(GLsizei  n, GLuint * ids);
 // typedef void  (APIENTRYP GPGENQUERIESEXT)(GLsizei  n, GLuint * ids);
@@ -336,7 +324,6 @@ package gles2
 // typedef void  (APIENTRYP GPGETACTIVEUNIFORMSIV)(GLuint  program, GLsizei  uniformCount, const GLuint * uniformIndices, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETATTACHEDSHADERS)(GLuint  program, GLsizei  maxCount, GLsizei * count, GLuint * shaders);
 // typedef GLint  (APIENTRYP GPGETATTRIBLOCATION)(GLuint  program, const GLchar * name);
-// typedef void  (APIENTRYP GPGETBOOLEANI_V)(GLenum  target, GLuint  index, GLboolean * data);
 // typedef void  (APIENTRYP GPGETBOOLEANV)(GLenum  pname, GLboolean * data);
 // typedef void  (APIENTRYP GPGETBUFFERPARAMETERI64V)(GLenum  target, GLenum  pname, GLint64 * params);
 // typedef void  (APIENTRYP GPGETBUFFERPARAMETERIV)(GLenum  target, GLenum  pname, GLint * params);
@@ -356,7 +343,6 @@ package gles2
 // typedef GLint  (APIENTRYP GPGETFRAGDATAINDEXEXT)(GLuint  program, const GLchar * name);
 // typedef GLint  (APIENTRYP GPGETFRAGDATALOCATION)(GLuint  program, const GLchar * name);
 // typedef void  (APIENTRYP GPGETFRAMEBUFFERATTACHMENTPARAMETERIV)(GLenum  target, GLenum  attachment, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETFRAMEBUFFERPARAMETERIV)(GLenum  target, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETFRAMEBUFFERPARAMETERIVMESA)(GLenum  target, GLenum  pname, GLint * params);
 // typedef GLsizei  (APIENTRYP GPGETFRAMEBUFFERPIXELLOCALSTORAGESIZEEXT)(GLuint  target);
 // typedef GLenum  (APIENTRYP GPGETGRAPHICSRESETSTATUS)();
@@ -374,7 +360,6 @@ package gles2
 // typedef void  (APIENTRYP GPGETINTERNALFORMATIV)(GLenum  target, GLenum  internalformat, GLenum  pname, GLsizei  count, GLint * params);
 // typedef void  (APIENTRYP GPGETMEMORYOBJECTDETACHEDRESOURCESUIVNV)(GLuint  memory, GLenum  pname, GLint  first, GLsizei  count, GLuint * params);
 // typedef void  (APIENTRYP GPGETMEMORYOBJECTPARAMETERIVEXT)(GLuint  memoryObject, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETMULTISAMPLEFV)(GLenum  pname, GLuint  index, GLfloat * val);
 // typedef void  (APIENTRYP GPGETNEXTPERFQUERYIDINTEL)(GLuint  queryId, GLuint * nextQueryId);
 // typedef void  (APIENTRYP GPGETOBJECTLABEL)(GLenum  identifier, GLuint  name, GLsizei  bufSize, GLsizei * length, GLchar * label);
 // typedef void  (APIENTRYP GPGETOBJECTLABELEXT)(GLenum  type, GLuint  object, GLsizei  bufSize, GLsizei * length, GLchar * label);
@@ -405,17 +390,10 @@ package gles2
 // typedef void  (APIENTRYP GPGETPROGRAMBINARY)(GLuint  program, GLsizei  bufSize, GLsizei * length, GLenum * binaryFormat, void * binary);
 // typedef void  (APIENTRYP GPGETPROGRAMBINARYOES)(GLuint  program, GLsizei  bufSize, GLsizei * length, GLenum * binaryFormat, void * binary);
 // typedef void  (APIENTRYP GPGETPROGRAMINFOLOG)(GLuint  program, GLsizei  bufSize, GLsizei * length, GLchar * infoLog);
-// typedef void  (APIENTRYP GPGETPROGRAMINTERFACEIV)(GLuint  program, GLenum  programInterface, GLenum  pname, GLint * params);
-// typedef void  (APIENTRYP GPGETPROGRAMPIPELINEINFOLOG)(GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog);
 // typedef void  (APIENTRYP GPGETPROGRAMPIPELINEINFOLOGEXT)(GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog);
-// typedef void  (APIENTRYP GPGETPROGRAMPIPELINEIV)(GLuint  pipeline, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETPROGRAMPIPELINEIVEXT)(GLuint  pipeline, GLenum  pname, GLint * params);
-// typedef GLuint  (APIENTRYP GPGETPROGRAMRESOURCEINDEX)(GLuint  program, GLenum  programInterface, const GLchar * name);
-// typedef GLint  (APIENTRYP GPGETPROGRAMRESOURCELOCATION)(GLuint  program, GLenum  programInterface, const GLchar * name);
 // typedef GLint  (APIENTRYP GPGETPROGRAMRESOURCELOCATIONINDEXEXT)(GLuint  program, GLenum  programInterface, const GLchar * name);
-// typedef void  (APIENTRYP GPGETPROGRAMRESOURCENAME)(GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  bufSize, GLsizei * length, GLchar * name);
 // typedef void  (APIENTRYP GPGETPROGRAMRESOURCEFVNV)(GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  count, GLsizei * length, GLfloat * params);
-// typedef void  (APIENTRYP GPGETPROGRAMRESOURCEIV)(GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  count, GLsizei * length, GLint * params);
 // typedef void  (APIENTRYP GPGETPROGRAMIV)(GLuint  program, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETQUERYOBJECTI64VEXT)(GLuint  id, GLenum  pname, GLint64 * params);
 // typedef void  (APIENTRYP GPGETQUERYOBJECTIVEXT)(GLuint  id, GLenum  pname, GLint * params);
@@ -443,8 +421,6 @@ package gles2
 // typedef const GLubyte * (APIENTRYP GPGETSTRINGI)(GLenum  name, GLuint  index);
 // typedef void  (APIENTRYP GPGETSYNCIV)(GLsync  sync, GLenum  pname, GLsizei  count, GLsizei * length, GLint * values);
 // typedef void  (APIENTRYP GPGETSYNCIVAPPLE)(GLsync  sync, GLenum  pname, GLsizei  count, GLsizei * length, GLint * values);
-// typedef void  (APIENTRYP GPGETTEXLEVELPARAMETERFV)(GLenum  target, GLint  level, GLenum  pname, GLfloat * params);
-// typedef void  (APIENTRYP GPGETTEXLEVELPARAMETERIV)(GLenum  target, GLint  level, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERIIVEXT)(GLenum  target, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERIIVOES)(GLenum  target, GLenum  pname, GLint * params);
 // typedef void  (APIENTRYP GPGETTEXPARAMETERIUIVEXT)(GLenum  target, GLenum  pname, GLuint * params);
@@ -504,7 +480,6 @@ package gles2
 // typedef GLboolean  (APIENTRYP GPISPOINTINFILLPATHNV)(GLuint  path, GLuint  mask, GLfloat  x, GLfloat  y);
 // typedef GLboolean  (APIENTRYP GPISPOINTINSTROKEPATHNV)(GLuint  path, GLfloat  x, GLfloat  y);
 // typedef GLboolean  (APIENTRYP GPISPROGRAM)(GLuint  program);
-// typedef GLboolean  (APIENTRYP GPISPROGRAMPIPELINE)(GLuint  pipeline);
 // typedef GLboolean  (APIENTRYP GPISPROGRAMPIPELINEEXT)(GLuint  pipeline);
 // typedef GLboolean  (APIENTRYP GPISQUERY)(GLuint  id);
 // typedef GLboolean  (APIENTRYP GPISQUERYEXT)(GLuint  id);
@@ -555,8 +530,6 @@ package gles2
 // typedef void  (APIENTRYP GPMATRIXTRANSLATEDEXT)(GLenum  mode, GLdouble  x, GLdouble  y, GLdouble  z);
 // typedef void  (APIENTRYP GPMATRIXTRANSLATEFEXT)(GLenum  mode, GLfloat  x, GLfloat  y, GLfloat  z);
 // typedef void  (APIENTRYP GPMAXSHADERCOMPILERTHREADSKHR)(GLuint  count);
-// typedef void  (APIENTRYP GPMEMORYBARRIER)(GLbitfield  barriers);
-// typedef void  (APIENTRYP GPMEMORYBARRIERBYREGION)(GLbitfield  barriers);
 // typedef void  (APIENTRYP GPMEMORYOBJECTPARAMETERIVEXT)(GLuint  memoryObject, GLenum  pname, const GLint * params);
 // typedef void  (APIENTRYP GPMINSAMPLESHADINGOES)(GLfloat  value);
 // typedef void  (APIENTRYP GPMULTIDRAWARRAYSEXT)(GLenum  mode, const GLint * first, const GLsizei * count, GLsizei  primcount);
@@ -612,91 +585,58 @@ package gles2
 // typedef void  (APIENTRYP GPPROGRAMPARAMETERI)(GLuint  program, GLenum  pname, GLint  value);
 // typedef void  (APIENTRYP GPPROGRAMPARAMETERIEXT)(GLuint  program, GLenum  pname, GLint  value);
 // typedef void  (APIENTRYP GPPROGRAMPATHFRAGMENTINPUTGENNV)(GLuint  program, GLint  location, GLenum  genMode, GLint  components, const GLfloat * coeffs);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1F)(GLuint  program, GLint  location, GLfloat  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1FEXT)(GLuint  program, GLint  location, GLfloat  v0);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1I)(GLuint  program, GLint  location, GLint  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1I64NV)(GLuint  program, GLint  location, GLint64EXT  x);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1I64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1IEXT)(GLuint  program, GLint  location, GLint  v0);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1UI)(GLuint  program, GLint  location, GLuint  v0);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1UI64NV)(GLuint  program, GLint  location, GLuint64EXT  x);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1UI64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLuint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1UIEXT)(GLuint  program, GLint  location, GLuint  v0);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM1UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM1UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2F)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2FEXT)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2I)(GLuint  program, GLint  location, GLint  v0, GLint  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2I64NV)(GLuint  program, GLint  location, GLint64EXT  x, GLint64EXT  y);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2I64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2IEXT)(GLuint  program, GLint  location, GLint  v0, GLint  v1);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2UI)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2UI64NV)(GLuint  program, GLint  location, GLuint64EXT  x, GLuint64EXT  y);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2UI64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLuint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2UIEXT)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM2UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM2UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3F)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3FEXT)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3I)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3I64NV)(GLuint  program, GLint  location, GLint64EXT  x, GLint64EXT  y, GLint64EXT  z);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3I64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3IEXT)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3UI)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3UI64NV)(GLuint  program, GLint  location, GLuint64EXT  x, GLuint64EXT  y, GLuint64EXT  z);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3UI64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLuint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3UIEXT)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM3UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM3UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4F)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4FEXT)(GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4FV)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4FVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4I)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4I64NV)(GLuint  program, GLint  location, GLint64EXT  x, GLint64EXT  y, GLint64EXT  z, GLint64EXT  w);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4I64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4IEXT)(GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4IV)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4IVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLint * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4UI)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4UI64NV)(GLuint  program, GLint  location, GLuint64EXT  x, GLuint64EXT  y, GLuint64EXT  z, GLuint64EXT  w);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4UI64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLuint64EXT * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4UIEXT)(GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORM4UIV)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORM4UIVEXT)(GLuint  program, GLint  location, GLsizei  count, const GLuint * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMHANDLEUI64IMG)(GLuint  program, GLint  location, GLuint64  value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMHANDLEUI64NV)(GLuint  program, GLint  location, GLuint64  value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMHANDLEUI64VIMG)(GLuint  program, GLint  location, GLsizei  count, const GLuint64 * values);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMHANDLEUI64VNV)(GLuint  program, GLint  location, GLsizei  count, const GLuint64 * values);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X3FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X3FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X4FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX2X4FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X2FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X2FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X4FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX3X4FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X2FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X2FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
-// typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X3FV)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPROGRAMUNIFORMMATRIX4X3FVEXT)(GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value);
 // typedef void  (APIENTRYP GPPUSHDEBUGGROUP)(GLenum  source, GLuint  id, GLsizei  length, const GLchar * message);
 // typedef void  (APIENTRYP GPPUSHDEBUGGROUPKHR)(GLenum  source, GLuint  id, GLsizei  length, const GLchar * message);
@@ -725,7 +665,6 @@ package gles2
 // typedef void  (APIENTRYP GPRESOLVEMULTISAMPLEFRAMEBUFFERAPPLE)();
 // typedef void  (APIENTRYP GPRESUMETRANSFORMFEEDBACK)();
 // typedef void  (APIENTRYP GPSAMPLECOVERAGE)(GLfloat  value, GLboolean  invert);
-// typedef void  (APIENTRYP GPSAMPLEMASKI)(GLuint  maskNumber, GLbitfield  mask);
 // typedef void  (APIENTRYP GPSAMPLERPARAMETERIIVEXT)(GLuint  sampler, GLenum  pname, const GLint * param);
 // typedef void  (APIENTRYP GPSAMPLERPARAMETERIIVOES)(GLuint  sampler, GLenum  pname, const GLint * param);
 // typedef void  (APIENTRYP GPSAMPLERPARAMETERIUIVEXT)(GLuint  sampler, GLenum  pname, const GLuint * param);
@@ -797,7 +736,6 @@ package gles2
 // typedef void  (APIENTRYP GPTEXSTORAGE1DEXT)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width);
 // typedef void  (APIENTRYP GPTEXSTORAGE2D)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height);
 // typedef void  (APIENTRYP GPTEXSTORAGE2DEXT)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height);
-// typedef void  (APIENTRYP GPTEXSTORAGE2DMULTISAMPLE)(GLenum  target, GLsizei  samples, GLenum  internalformat, GLsizei  width, GLsizei  height, GLboolean  fixedsamplelocations);
 // typedef void  (APIENTRYP GPTEXSTORAGE3D)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height, GLsizei  depth);
 // typedef void  (APIENTRYP GPTEXSTORAGE3DEXT)(GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height, GLsizei  depth);
 // typedef void  (APIENTRYP GPTEXSTORAGE3DMULTISAMPLEOES)(GLenum  target, GLsizei  samples, GLenum  internalformat, GLsizei  width, GLsizei  height, GLsizei  depth, GLboolean  fixedsamplelocations);
@@ -887,11 +825,9 @@ package gles2
 // typedef GLboolean  (APIENTRYP GPUNMAPBUFFER)(GLenum  target);
 // typedef GLboolean  (APIENTRYP GPUNMAPBUFFEROES)(GLenum  target);
 // typedef void  (APIENTRYP GPUSEPROGRAM)(GLuint  program);
-// typedef void  (APIENTRYP GPUSEPROGRAMSTAGES)(GLuint  pipeline, GLbitfield  stages, GLuint  program);
 // typedef void  (APIENTRYP GPUSEPROGRAMSTAGESEXT)(GLuint  pipeline, GLbitfield  stages, GLuint  program);
 // typedef void  (APIENTRYP GPUSESHADERPROGRAMEXT)(GLenum  type, GLuint  program);
 // typedef void  (APIENTRYP GPVALIDATEPROGRAM)(GLuint  program);
-// typedef void  (APIENTRYP GPVALIDATEPROGRAMPIPELINE)(GLuint  pipeline);
 // typedef void  (APIENTRYP GPVALIDATEPROGRAMPIPELINEEXT)(GLuint  pipeline);
 // typedef void  (APIENTRYP GPVERTEXATTRIB1F)(GLuint  index, GLfloat  x);
 // typedef void  (APIENTRYP GPVERTEXATTRIB1FV)(GLuint  index, const GLfloat * v);
@@ -901,20 +837,16 @@ package gles2
 // typedef void  (APIENTRYP GPVERTEXATTRIB3FV)(GLuint  index, const GLfloat * v);
 // typedef void  (APIENTRYP GPVERTEXATTRIB4F)(GLuint  index, GLfloat  x, GLfloat  y, GLfloat  z, GLfloat  w);
 // typedef void  (APIENTRYP GPVERTEXATTRIB4FV)(GLuint  index, const GLfloat * v);
-// typedef void  (APIENTRYP GPVERTEXATTRIBBINDING)(GLuint  attribindex, GLuint  bindingindex);
 // typedef void  (APIENTRYP GPVERTEXATTRIBDIVISOR)(GLuint  index, GLuint  divisor);
 // typedef void  (APIENTRYP GPVERTEXATTRIBDIVISORANGLE)(GLuint  index, GLuint  divisor);
 // typedef void  (APIENTRYP GPVERTEXATTRIBDIVISOREXT)(GLuint  index, GLuint  divisor);
 // typedef void  (APIENTRYP GPVERTEXATTRIBDIVISORNV)(GLuint  index, GLuint  divisor);
-// typedef void  (APIENTRYP GPVERTEXATTRIBFORMAT)(GLuint  attribindex, GLint  size, GLenum  type, GLboolean  normalized, GLuint  relativeoffset);
 // typedef void  (APIENTRYP GPVERTEXATTRIBI4I)(GLuint  index, GLint  x, GLint  y, GLint  z, GLint  w);
 // typedef void  (APIENTRYP GPVERTEXATTRIBI4IV)(GLuint  index, const GLint * v);
 // typedef void  (APIENTRYP GPVERTEXATTRIBI4UI)(GLuint  index, GLuint  x, GLuint  y, GLuint  z, GLuint  w);
 // typedef void  (APIENTRYP GPVERTEXATTRIBI4UIV)(GLuint  index, const GLuint * v);
-// typedef void  (APIENTRYP GPVERTEXATTRIBIFORMAT)(GLuint  attribindex, GLint  size, GLenum  type, GLuint  relativeoffset);
 // typedef void  (APIENTRYP GPVERTEXATTRIBIPOINTER)(GLuint  index, GLint  size, GLenum  type, GLsizei  stride, const void * pointer);
 // typedef void  (APIENTRYP GPVERTEXATTRIBPOINTER)(GLuint  index, GLint  size, GLenum  type, GLboolean  normalized, GLsizei  stride, const void * pointer);
-// typedef void  (APIENTRYP GPVERTEXBINDINGDIVISOR)(GLuint  bindingindex, GLuint  divisor);
 // typedef void  (APIENTRYP GPVIEWPORT)(GLint  x, GLint  y, GLsizei  width, GLsizei  height);
 // typedef void  (APIENTRYP GPVIEWPORTARRAYVNV)(GLuint  first, GLsizei  count, const GLfloat * v);
 // typedef void  (APIENTRYP GPVIEWPORTARRAYVOES)(GLuint  first, GLsizei  count, const GLfloat * v);
@@ -935,9 +867,6 @@ package gles2
 // }
 // static void  glowActiveProgramEXT(GPACTIVEPROGRAMEXT fnptr, GLuint  program) {
 //   (*fnptr)(program);
-// }
-// static void  glowActiveShaderProgram(GPACTIVESHADERPROGRAM fnptr, GLuint  pipeline, GLuint  program) {
-//   (*fnptr)(pipeline, program);
 // }
 // static void  glowActiveShaderProgramEXT(GPACTIVESHADERPROGRAMEXT fnptr, GLuint  pipeline, GLuint  program) {
 //   (*fnptr)(pipeline, program);
@@ -993,12 +922,6 @@ package gles2
 // static void  glowBindFramebuffer(GPBINDFRAMEBUFFER fnptr, GLenum  target, GLuint  framebuffer) {
 //   (*fnptr)(target, framebuffer);
 // }
-// static void  glowBindImageTexture(GPBINDIMAGETEXTURE fnptr, GLuint  unit, GLuint  texture, GLint  level, GLboolean  layered, GLint  layer, GLenum  access, GLenum  format) {
-//   (*fnptr)(unit, texture, level, layered, layer, access, format);
-// }
-// static void  glowBindProgramPipeline(GPBINDPROGRAMPIPELINE fnptr, GLuint  pipeline) {
-//   (*fnptr)(pipeline);
-// }
 // static void  glowBindProgramPipelineEXT(GPBINDPROGRAMPIPELINEEXT fnptr, GLuint  pipeline) {
 //   (*fnptr)(pipeline);
 // }
@@ -1022,9 +945,6 @@ package gles2
 // }
 // static void  glowBindVertexArrayOES(GPBINDVERTEXARRAYOES fnptr, GLuint  array) {
 //   (*fnptr)(array);
-// }
-// static void  glowBindVertexBuffer(GPBINDVERTEXBUFFER fnptr, GLuint  bindingindex, GLuint  buffer, GLintptr  offset, GLsizei  stride) {
-//   (*fnptr)(bindingindex, buffer, offset, stride);
 // }
 // static void  glowBlendBarrierKHR(GPBLENDBARRIERKHR fnptr) {
 //   (*fnptr)();
@@ -1257,9 +1177,6 @@ package gles2
 // static GLuint  glowCreateShaderProgramEXT(GPCREATESHADERPROGRAMEXT fnptr, GLenum  type, const GLchar * string) {
 //   return (*fnptr)(type, string);
 // }
-// static GLuint  glowCreateShaderProgramv(GPCREATESHADERPROGRAMV fnptr, GLenum  type, GLsizei  count, const GLchar *const* strings) {
-//   return (*fnptr)(type, count, strings);
-// }
 // static GLuint  glowCreateShaderProgramvEXT(GPCREATESHADERPROGRAMVEXT fnptr, GLenum  type, GLsizei  count, const GLchar ** strings) {
 //   return (*fnptr)(type, count, strings);
 // }
@@ -1307,9 +1224,6 @@ package gles2
 // }
 // static void  glowDeleteProgram(GPDELETEPROGRAM fnptr, GLuint  program) {
 //   (*fnptr)(program);
-// }
-// static void  glowDeleteProgramPipelines(GPDELETEPROGRAMPIPELINES fnptr, GLsizei  n, const GLuint * pipelines) {
-//   (*fnptr)(n, pipelines);
 // }
 // static void  glowDeleteProgramPipelinesEXT(GPDELETEPROGRAMPIPELINESEXT fnptr, GLsizei  n, const GLuint * pipelines) {
 //   (*fnptr)(n, pipelines);
@@ -1395,17 +1309,8 @@ package gles2
 // static void  glowDiscardFramebufferEXT(GPDISCARDFRAMEBUFFEREXT fnptr, GLenum  target, GLsizei  numAttachments, const GLenum * attachments) {
 //   (*fnptr)(target, numAttachments, attachments);
 // }
-// static void  glowDispatchCompute(GPDISPATCHCOMPUTE fnptr, GLuint  num_groups_x, GLuint  num_groups_y, GLuint  num_groups_z) {
-//   (*fnptr)(num_groups_x, num_groups_y, num_groups_z);
-// }
-// static void  glowDispatchComputeIndirect(GPDISPATCHCOMPUTEINDIRECT fnptr, GLintptr  indirect) {
-//   (*fnptr)(indirect);
-// }
 // static void  glowDrawArrays(GPDRAWARRAYS fnptr, GLenum  mode, GLint  first, GLsizei  count) {
 //   (*fnptr)(mode, first, count);
-// }
-// static void  glowDrawArraysIndirect(GPDRAWARRAYSINDIRECT fnptr, GLenum  mode, const void * indirect) {
-//   (*fnptr)(mode, indirect);
 // }
 // static void  glowDrawArraysInstanced(GPDRAWARRAYSINSTANCED fnptr, GLenum  mode, GLint  first, GLsizei  count, GLsizei  instancecount) {
 //   (*fnptr)(mode, first, count, instancecount);
@@ -1445,9 +1350,6 @@ package gles2
 // }
 // static void  glowDrawElementsBaseVertexOES(GPDRAWELEMENTSBASEVERTEXOES fnptr, GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLint  basevertex) {
 //   (*fnptr)(mode, count, type, indices, basevertex);
-// }
-// static void  glowDrawElementsIndirect(GPDRAWELEMENTSINDIRECT fnptr, GLenum  mode, GLenum  type, const void * indirect) {
-//   (*fnptr)(mode, type, indirect);
 // }
 // static void  glowDrawElementsInstanced(GPDRAWELEMENTSINSTANCED fnptr, GLenum  mode, GLsizei  count, GLenum  type, const void * indices, GLsizei  instancecount) {
 //   (*fnptr)(mode, count, type, indices, instancecount);
@@ -1623,9 +1525,6 @@ package gles2
 // static void  glowFramebufferFoveationParametersQCOM(GPFRAMEBUFFERFOVEATIONPARAMETERSQCOM fnptr, GLuint  framebuffer, GLuint  layer, GLuint  focalPoint, GLfloat  focalX, GLfloat  focalY, GLfloat  gainX, GLfloat  gainY, GLfloat  foveaArea) {
 //   (*fnptr)(framebuffer, layer, focalPoint, focalX, focalY, gainX, gainY, foveaArea);
 // }
-// static void  glowFramebufferParameteri(GPFRAMEBUFFERPARAMETERI fnptr, GLenum  target, GLenum  pname, GLint  param) {
-//   (*fnptr)(target, pname, param);
-// }
 // static void  glowFramebufferParameteriMESA(GPFRAMEBUFFERPARAMETERIMESA fnptr, GLenum  target, GLenum  pname, GLint  param) {
 //   (*fnptr)(target, pname, param);
 // }
@@ -1689,9 +1588,6 @@ package gles2
 // static void  glowGenPerfMonitorsAMD(GPGENPERFMONITORSAMD fnptr, GLsizei  n, GLuint * monitors) {
 //   (*fnptr)(n, monitors);
 // }
-// static void  glowGenProgramPipelines(GPGENPROGRAMPIPELINES fnptr, GLsizei  n, GLuint * pipelines) {
-//   (*fnptr)(n, pipelines);
-// }
 // static void  glowGenProgramPipelinesEXT(GPGENPROGRAMPIPELINESEXT fnptr, GLsizei  n, GLuint * pipelines) {
 //   (*fnptr)(n, pipelines);
 // }
@@ -1745,9 +1641,6 @@ package gles2
 // }
 // static GLint  glowGetAttribLocation(GPGETATTRIBLOCATION fnptr, GLuint  program, const GLchar * name) {
 //   return (*fnptr)(program, name);
-// }
-// static void  glowGetBooleani_v(GPGETBOOLEANI_V fnptr, GLenum  target, GLuint  index, GLboolean * data) {
-//   (*fnptr)(target, index, data);
 // }
 // static void  glowGetBooleanv(GPGETBOOLEANV fnptr, GLenum  pname, GLboolean * data) {
 //   (*fnptr)(pname, data);
@@ -1806,9 +1699,6 @@ package gles2
 // static void  glowGetFramebufferAttachmentParameteriv(GPGETFRAMEBUFFERATTACHMENTPARAMETERIV fnptr, GLenum  target, GLenum  attachment, GLenum  pname, GLint * params) {
 //   (*fnptr)(target, attachment, pname, params);
 // }
-// static void  glowGetFramebufferParameteriv(GPGETFRAMEBUFFERPARAMETERIV fnptr, GLenum  target, GLenum  pname, GLint * params) {
-//   (*fnptr)(target, pname, params);
-// }
 // static void  glowGetFramebufferParameterivMESA(GPGETFRAMEBUFFERPARAMETERIVMESA fnptr, GLenum  target, GLenum  pname, GLint * params) {
 //   (*fnptr)(target, pname, params);
 // }
@@ -1859,9 +1749,6 @@ package gles2
 // }
 // static void  glowGetMemoryObjectParameterivEXT(GPGETMEMORYOBJECTPARAMETERIVEXT fnptr, GLuint  memoryObject, GLenum  pname, GLint * params) {
 //   (*fnptr)(memoryObject, pname, params);
-// }
-// static void  glowGetMultisamplefv(GPGETMULTISAMPLEFV fnptr, GLenum  pname, GLuint  index, GLfloat * val) {
-//   (*fnptr)(pname, index, val);
 // }
 // static void  glowGetNextPerfQueryIdINTEL(GPGETNEXTPERFQUERYIDINTEL fnptr, GLuint  queryId, GLuint * nextQueryId) {
 //   (*fnptr)(queryId, nextQueryId);
@@ -1953,37 +1840,16 @@ package gles2
 // static void  glowGetProgramInfoLog(GPGETPROGRAMINFOLOG fnptr, GLuint  program, GLsizei  bufSize, GLsizei * length, GLchar * infoLog) {
 //   (*fnptr)(program, bufSize, length, infoLog);
 // }
-// static void  glowGetProgramInterfaceiv(GPGETPROGRAMINTERFACEIV fnptr, GLuint  program, GLenum  programInterface, GLenum  pname, GLint * params) {
-//   (*fnptr)(program, programInterface, pname, params);
-// }
-// static void  glowGetProgramPipelineInfoLog(GPGETPROGRAMPIPELINEINFOLOG fnptr, GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog) {
-//   (*fnptr)(pipeline, bufSize, length, infoLog);
-// }
 // static void  glowGetProgramPipelineInfoLogEXT(GPGETPROGRAMPIPELINEINFOLOGEXT fnptr, GLuint  pipeline, GLsizei  bufSize, GLsizei * length, GLchar * infoLog) {
 //   (*fnptr)(pipeline, bufSize, length, infoLog);
-// }
-// static void  glowGetProgramPipelineiv(GPGETPROGRAMPIPELINEIV fnptr, GLuint  pipeline, GLenum  pname, GLint * params) {
-//   (*fnptr)(pipeline, pname, params);
 // }
 // static void  glowGetProgramPipelineivEXT(GPGETPROGRAMPIPELINEIVEXT fnptr, GLuint  pipeline, GLenum  pname, GLint * params) {
 //   (*fnptr)(pipeline, pname, params);
 // }
-// static GLuint  glowGetProgramResourceIndex(GPGETPROGRAMRESOURCEINDEX fnptr, GLuint  program, GLenum  programInterface, const GLchar * name) {
-//   return (*fnptr)(program, programInterface, name);
-// }
-// static GLint  glowGetProgramResourceLocation(GPGETPROGRAMRESOURCELOCATION fnptr, GLuint  program, GLenum  programInterface, const GLchar * name) {
-//   return (*fnptr)(program, programInterface, name);
-// }
 // static GLint  glowGetProgramResourceLocationIndexEXT(GPGETPROGRAMRESOURCELOCATIONINDEXEXT fnptr, GLuint  program, GLenum  programInterface, const GLchar * name) {
 //   return (*fnptr)(program, programInterface, name);
 // }
-// static void  glowGetProgramResourceName(GPGETPROGRAMRESOURCENAME fnptr, GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  bufSize, GLsizei * length, GLchar * name) {
-//   (*fnptr)(program, programInterface, index, bufSize, length, name);
-// }
 // static void  glowGetProgramResourcefvNV(GPGETPROGRAMRESOURCEFVNV fnptr, GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  count, GLsizei * length, GLfloat * params) {
-//   (*fnptr)(program, programInterface, index, propCount, props, count, length, params);
-// }
-// static void  glowGetProgramResourceiv(GPGETPROGRAMRESOURCEIV fnptr, GLuint  program, GLenum  programInterface, GLuint  index, GLsizei  propCount, const GLenum * props, GLsizei  count, GLsizei * length, GLint * params) {
 //   (*fnptr)(program, programInterface, index, propCount, props, count, length, params);
 // }
 // static void  glowGetProgramiv(GPGETPROGRAMIV fnptr, GLuint  program, GLenum  pname, GLint * params) {
@@ -2066,12 +1932,6 @@ package gles2
 // }
 // static void  glowGetSyncivAPPLE(GPGETSYNCIVAPPLE fnptr, GLsync  sync, GLenum  pname, GLsizei  count, GLsizei * length, GLint * values) {
 //   (*fnptr)(sync, pname, count, length, values);
-// }
-// static void  glowGetTexLevelParameterfv(GPGETTEXLEVELPARAMETERFV fnptr, GLenum  target, GLint  level, GLenum  pname, GLfloat * params) {
-//   (*fnptr)(target, level, pname, params);
-// }
-// static void  glowGetTexLevelParameteriv(GPGETTEXLEVELPARAMETERIV fnptr, GLenum  target, GLint  level, GLenum  pname, GLint * params) {
-//   (*fnptr)(target, level, pname, params);
 // }
 // static void  glowGetTexParameterIivEXT(GPGETTEXPARAMETERIIVEXT fnptr, GLenum  target, GLenum  pname, GLint * params) {
 //   (*fnptr)(target, pname, params);
@@ -2253,9 +2113,6 @@ package gles2
 // static GLboolean  glowIsProgram(GPISPROGRAM fnptr, GLuint  program) {
 //   return (*fnptr)(program);
 // }
-// static GLboolean  glowIsProgramPipeline(GPISPROGRAMPIPELINE fnptr, GLuint  pipeline) {
-//   return (*fnptr)(pipeline);
-// }
 // static GLboolean  glowIsProgramPipelineEXT(GPISPROGRAMPIPELINEEXT fnptr, GLuint  pipeline) {
 //   return (*fnptr)(pipeline);
 // }
@@ -2405,12 +2262,6 @@ package gles2
 // }
 // static void  glowMaxShaderCompilerThreadsKHR(GPMAXSHADERCOMPILERTHREADSKHR fnptr, GLuint  count) {
 //   (*fnptr)(count);
-// }
-// static void  glowMemoryBarrier(GPMEMORYBARRIER fnptr, GLbitfield  barriers) {
-//   (*fnptr)(barriers);
-// }
-// static void  glowMemoryBarrierByRegion(GPMEMORYBARRIERBYREGION fnptr, GLbitfield  barriers) {
-//   (*fnptr)(barriers);
 // }
 // static void  glowMemoryObjectParameterivEXT(GPMEMORYOBJECTPARAMETERIVEXT fnptr, GLuint  memoryObject, GLenum  pname, const GLint * params) {
 //   (*fnptr)(memoryObject, pname, params);
@@ -2577,20 +2428,11 @@ package gles2
 // static void  glowProgramPathFragmentInputGenNV(GPPROGRAMPATHFRAGMENTINPUTGENNV fnptr, GLuint  program, GLint  location, GLenum  genMode, GLint  components, const GLfloat * coeffs) {
 //   (*fnptr)(program, location, genMode, components, coeffs);
 // }
-// static void  glowProgramUniform1f(GPPROGRAMUNIFORM1F fnptr, GLuint  program, GLint  location, GLfloat  v0) {
-//   (*fnptr)(program, location, v0);
-// }
 // static void  glowProgramUniform1fEXT(GPPROGRAMUNIFORM1FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0) {
 //   (*fnptr)(program, location, v0);
 // }
-// static void  glowProgramUniform1fv(GPPROGRAMUNIFORM1FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform1fvEXT(GPPROGRAMUNIFORM1FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform1i(GPPROGRAMUNIFORM1I fnptr, GLuint  program, GLint  location, GLint  v0) {
-//   (*fnptr)(program, location, v0);
 // }
 // static void  glowProgramUniform1i64NV(GPPROGRAMUNIFORM1I64NV fnptr, GLuint  program, GLint  location, GLint64EXT  x) {
 //   (*fnptr)(program, location, x);
@@ -2601,14 +2443,8 @@ package gles2
 // static void  glowProgramUniform1iEXT(GPPROGRAMUNIFORM1IEXT fnptr, GLuint  program, GLint  location, GLint  v0) {
 //   (*fnptr)(program, location, v0);
 // }
-// static void  glowProgramUniform1iv(GPPROGRAMUNIFORM1IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform1ivEXT(GPPROGRAMUNIFORM1IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform1ui(GPPROGRAMUNIFORM1UI fnptr, GLuint  program, GLint  location, GLuint  v0) {
-//   (*fnptr)(program, location, v0);
 // }
 // static void  glowProgramUniform1ui64NV(GPPROGRAMUNIFORM1UI64NV fnptr, GLuint  program, GLint  location, GLuint64EXT  x) {
 //   (*fnptr)(program, location, x);
@@ -2619,26 +2455,14 @@ package gles2
 // static void  glowProgramUniform1uiEXT(GPPROGRAMUNIFORM1UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0) {
 //   (*fnptr)(program, location, v0);
 // }
-// static void  glowProgramUniform1uiv(GPPROGRAMUNIFORM1UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform1uivEXT(GPPROGRAMUNIFORM1UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform2f(GPPROGRAMUNIFORM2F fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1) {
-//   (*fnptr)(program, location, v0, v1);
 // }
 // static void  glowProgramUniform2fEXT(GPPROGRAMUNIFORM2FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1) {
 //   (*fnptr)(program, location, v0, v1);
 // }
-// static void  glowProgramUniform2fv(GPPROGRAMUNIFORM2FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform2fvEXT(GPPROGRAMUNIFORM2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform2i(GPPROGRAMUNIFORM2I fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1) {
-//   (*fnptr)(program, location, v0, v1);
 // }
 // static void  glowProgramUniform2i64NV(GPPROGRAMUNIFORM2I64NV fnptr, GLuint  program, GLint  location, GLint64EXT  x, GLint64EXT  y) {
 //   (*fnptr)(program, location, x, y);
@@ -2649,14 +2473,8 @@ package gles2
 // static void  glowProgramUniform2iEXT(GPPROGRAMUNIFORM2IEXT fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1) {
 //   (*fnptr)(program, location, v0, v1);
 // }
-// static void  glowProgramUniform2iv(GPPROGRAMUNIFORM2IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform2ivEXT(GPPROGRAMUNIFORM2IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform2ui(GPPROGRAMUNIFORM2UI fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1) {
-//   (*fnptr)(program, location, v0, v1);
 // }
 // static void  glowProgramUniform2ui64NV(GPPROGRAMUNIFORM2UI64NV fnptr, GLuint  program, GLint  location, GLuint64EXT  x, GLuint64EXT  y) {
 //   (*fnptr)(program, location, x, y);
@@ -2667,26 +2485,14 @@ package gles2
 // static void  glowProgramUniform2uiEXT(GPPROGRAMUNIFORM2UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1) {
 //   (*fnptr)(program, location, v0, v1);
 // }
-// static void  glowProgramUniform2uiv(GPPROGRAMUNIFORM2UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform2uivEXT(GPPROGRAMUNIFORM2UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform3f(GPPROGRAMUNIFORM3F fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2) {
-//   (*fnptr)(program, location, v0, v1, v2);
 // }
 // static void  glowProgramUniform3fEXT(GPPROGRAMUNIFORM3FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2) {
 //   (*fnptr)(program, location, v0, v1, v2);
 // }
-// static void  glowProgramUniform3fv(GPPROGRAMUNIFORM3FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform3fvEXT(GPPROGRAMUNIFORM3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform3i(GPPROGRAMUNIFORM3I fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2) {
-//   (*fnptr)(program, location, v0, v1, v2);
 // }
 // static void  glowProgramUniform3i64NV(GPPROGRAMUNIFORM3I64NV fnptr, GLuint  program, GLint  location, GLint64EXT  x, GLint64EXT  y, GLint64EXT  z) {
 //   (*fnptr)(program, location, x, y, z);
@@ -2697,14 +2503,8 @@ package gles2
 // static void  glowProgramUniform3iEXT(GPPROGRAMUNIFORM3IEXT fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2) {
 //   (*fnptr)(program, location, v0, v1, v2);
 // }
-// static void  glowProgramUniform3iv(GPPROGRAMUNIFORM3IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform3ivEXT(GPPROGRAMUNIFORM3IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform3ui(GPPROGRAMUNIFORM3UI fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2) {
-//   (*fnptr)(program, location, v0, v1, v2);
 // }
 // static void  glowProgramUniform3ui64NV(GPPROGRAMUNIFORM3UI64NV fnptr, GLuint  program, GLint  location, GLuint64EXT  x, GLuint64EXT  y, GLuint64EXT  z) {
 //   (*fnptr)(program, location, x, y, z);
@@ -2715,26 +2515,14 @@ package gles2
 // static void  glowProgramUniform3uiEXT(GPPROGRAMUNIFORM3UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2) {
 //   (*fnptr)(program, location, v0, v1, v2);
 // }
-// static void  glowProgramUniform3uiv(GPPROGRAMUNIFORM3UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform3uivEXT(GPPROGRAMUNIFORM3UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform4f(GPPROGRAMUNIFORM4F fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3) {
-//   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
 // static void  glowProgramUniform4fEXT(GPPROGRAMUNIFORM4FEXT fnptr, GLuint  program, GLint  location, GLfloat  v0, GLfloat  v1, GLfloat  v2, GLfloat  v3) {
 //   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
-// static void  glowProgramUniform4fv(GPPROGRAMUNIFORM4FV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform4fvEXT(GPPROGRAMUNIFORM4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLfloat * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform4i(GPPROGRAMUNIFORM4I fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3) {
-//   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
 // static void  glowProgramUniform4i64NV(GPPROGRAMUNIFORM4I64NV fnptr, GLuint  program, GLint  location, GLint64EXT  x, GLint64EXT  y, GLint64EXT  z, GLint64EXT  w) {
 //   (*fnptr)(program, location, x, y, z, w);
@@ -2745,14 +2533,8 @@ package gles2
 // static void  glowProgramUniform4iEXT(GPPROGRAMUNIFORM4IEXT fnptr, GLuint  program, GLint  location, GLint  v0, GLint  v1, GLint  v2, GLint  v3) {
 //   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
-// static void  glowProgramUniform4iv(GPPROGRAMUNIFORM4IV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
-//   (*fnptr)(program, location, count, value);
-// }
 // static void  glowProgramUniform4ivEXT(GPPROGRAMUNIFORM4IVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLint * value) {
 //   (*fnptr)(program, location, count, value);
-// }
-// static void  glowProgramUniform4ui(GPPROGRAMUNIFORM4UI fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3) {
-//   (*fnptr)(program, location, v0, v1, v2, v3);
 // }
 // static void  glowProgramUniform4ui64NV(GPPROGRAMUNIFORM4UI64NV fnptr, GLuint  program, GLint  location, GLuint64EXT  x, GLuint64EXT  y, GLuint64EXT  z, GLuint64EXT  w) {
 //   (*fnptr)(program, location, x, y, z, w);
@@ -2762,9 +2544,6 @@ package gles2
 // }
 // static void  glowProgramUniform4uiEXT(GPPROGRAMUNIFORM4UIEXT fnptr, GLuint  program, GLint  location, GLuint  v0, GLuint  v1, GLuint  v2, GLuint  v3) {
 //   (*fnptr)(program, location, v0, v1, v2, v3);
-// }
-// static void  glowProgramUniform4uiv(GPPROGRAMUNIFORM4UIV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
-//   (*fnptr)(program, location, count, value);
 // }
 // static void  glowProgramUniform4uivEXT(GPPROGRAMUNIFORM4UIVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint * value) {
 //   (*fnptr)(program, location, count, value);
@@ -2781,55 +2560,28 @@ package gles2
 // static void  glowProgramUniformHandleui64vNV(GPPROGRAMUNIFORMHANDLEUI64VNV fnptr, GLuint  program, GLint  location, GLsizei  count, const GLuint64 * values) {
 //   (*fnptr)(program, location, count, values);
 // }
-// static void  glowProgramUniformMatrix2fv(GPPROGRAMUNIFORMMATRIX2FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix2fvEXT(GPPROGRAMUNIFORMMATRIX2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix2x3fv(GPPROGRAMUNIFORMMATRIX2X3FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix2x3fvEXT(GPPROGRAMUNIFORMMATRIX2X3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix2x4fv(GPPROGRAMUNIFORMMATRIX2X4FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix2x4fvEXT(GPPROGRAMUNIFORMMATRIX2X4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix3fv(GPPROGRAMUNIFORMMATRIX3FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix3fvEXT(GPPROGRAMUNIFORMMATRIX3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix3x2fv(GPPROGRAMUNIFORMMATRIX3X2FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix3x2fvEXT(GPPROGRAMUNIFORMMATRIX3X2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix3x4fv(GPPROGRAMUNIFORMMATRIX3X4FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix3x4fvEXT(GPPROGRAMUNIFORMMATRIX3X4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix4fv(GPPROGRAMUNIFORMMATRIX4FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix4fvEXT(GPPROGRAMUNIFORMMATRIX4FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
-// static void  glowProgramUniformMatrix4x2fv(GPPROGRAMUNIFORMMATRIX4X2FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
 // static void  glowProgramUniformMatrix4x2fvEXT(GPPROGRAMUNIFORMMATRIX4X2FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
-//   (*fnptr)(program, location, count, transpose, value);
-// }
-// static void  glowProgramUniformMatrix4x3fv(GPPROGRAMUNIFORMMATRIX4X3FV fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
 //   (*fnptr)(program, location, count, transpose, value);
 // }
 // static void  glowProgramUniformMatrix4x3fvEXT(GPPROGRAMUNIFORMMATRIX4X3FVEXT fnptr, GLuint  program, GLint  location, GLsizei  count, GLboolean  transpose, const GLfloat * value) {
@@ -2915,9 +2667,6 @@ package gles2
 // }
 // static void  glowSampleCoverage(GPSAMPLECOVERAGE fnptr, GLfloat  value, GLboolean  invert) {
 //   (*fnptr)(value, invert);
-// }
-// static void  glowSampleMaski(GPSAMPLEMASKI fnptr, GLuint  maskNumber, GLbitfield  mask) {
-//   (*fnptr)(maskNumber, mask);
 // }
 // static void  glowSamplerParameterIivEXT(GPSAMPLERPARAMETERIIVEXT fnptr, GLuint  sampler, GLenum  pname, const GLint * param) {
 //   (*fnptr)(sampler, pname, param);
@@ -3131,9 +2880,6 @@ package gles2
 // }
 // static void  glowTexStorage2DEXT(GPTEXSTORAGE2DEXT fnptr, GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height) {
 //   (*fnptr)(target, levels, internalformat, width, height);
-// }
-// static void  glowTexStorage2DMultisample(GPTEXSTORAGE2DMULTISAMPLE fnptr, GLenum  target, GLsizei  samples, GLenum  internalformat, GLsizei  width, GLsizei  height, GLboolean  fixedsamplelocations) {
-//   (*fnptr)(target, samples, internalformat, width, height, fixedsamplelocations);
 // }
 // static void  glowTexStorage3D(GPTEXSTORAGE3D fnptr, GLenum  target, GLsizei  levels, GLenum  internalformat, GLsizei  width, GLsizei  height, GLsizei  depth) {
 //   (*fnptr)(target, levels, internalformat, width, height, depth);
@@ -3402,9 +3148,6 @@ package gles2
 // static void  glowUseProgram(GPUSEPROGRAM fnptr, GLuint  program) {
 //   (*fnptr)(program);
 // }
-// static void  glowUseProgramStages(GPUSEPROGRAMSTAGES fnptr, GLuint  pipeline, GLbitfield  stages, GLuint  program) {
-//   (*fnptr)(pipeline, stages, program);
-// }
 // static void  glowUseProgramStagesEXT(GPUSEPROGRAMSTAGESEXT fnptr, GLuint  pipeline, GLbitfield  stages, GLuint  program) {
 //   (*fnptr)(pipeline, stages, program);
 // }
@@ -3413,9 +3156,6 @@ package gles2
 // }
 // static void  glowValidateProgram(GPVALIDATEPROGRAM fnptr, GLuint  program) {
 //   (*fnptr)(program);
-// }
-// static void  glowValidateProgramPipeline(GPVALIDATEPROGRAMPIPELINE fnptr, GLuint  pipeline) {
-//   (*fnptr)(pipeline);
 // }
 // static void  glowValidateProgramPipelineEXT(GPVALIDATEPROGRAMPIPELINEEXT fnptr, GLuint  pipeline) {
 //   (*fnptr)(pipeline);
@@ -3444,9 +3184,6 @@ package gles2
 // static void  glowVertexAttrib4fv(GPVERTEXATTRIB4FV fnptr, GLuint  index, const GLfloat * v) {
 //   (*fnptr)(index, v);
 // }
-// static void  glowVertexAttribBinding(GPVERTEXATTRIBBINDING fnptr, GLuint  attribindex, GLuint  bindingindex) {
-//   (*fnptr)(attribindex, bindingindex);
-// }
 // static void  glowVertexAttribDivisor(GPVERTEXATTRIBDIVISOR fnptr, GLuint  index, GLuint  divisor) {
 //   (*fnptr)(index, divisor);
 // }
@@ -3458,9 +3195,6 @@ package gles2
 // }
 // static void  glowVertexAttribDivisorNV(GPVERTEXATTRIBDIVISORNV fnptr, GLuint  index, GLuint  divisor) {
 //   (*fnptr)(index, divisor);
-// }
-// static void  glowVertexAttribFormat(GPVERTEXATTRIBFORMAT fnptr, GLuint  attribindex, GLint  size, GLenum  type, GLboolean  normalized, GLuint  relativeoffset) {
-//   (*fnptr)(attribindex, size, type, normalized, relativeoffset);
 // }
 // static void  glowVertexAttribI4i(GPVERTEXATTRIBI4I fnptr, GLuint  index, GLint  x, GLint  y, GLint  z, GLint  w) {
 //   (*fnptr)(index, x, y, z, w);
@@ -3474,9 +3208,6 @@ package gles2
 // static void  glowVertexAttribI4uiv(GPVERTEXATTRIBI4UIV fnptr, GLuint  index, const GLuint * v) {
 //   (*fnptr)(index, v);
 // }
-// static void  glowVertexAttribIFormat(GPVERTEXATTRIBIFORMAT fnptr, GLuint  attribindex, GLint  size, GLenum  type, GLuint  relativeoffset) {
-//   (*fnptr)(attribindex, size, type, relativeoffset);
-// }
 // static void  glowVertexAttribIPointer(GPVERTEXATTRIBIPOINTER fnptr, GLuint  index, GLint  size, GLenum  type, GLsizei  stride, const void * pointer) {
 //   (*fnptr)(index, size, type, stride, pointer);
 // }
@@ -3488,9 +3219,6 @@ package gles2
 // }
 // static void  glowVertexAttribPointerWithOffset(GPVERTEXATTRIBPOINTER fnptr, GLuint  index, GLint  size, GLenum  type, GLboolean  normalized, GLsizei  stride, uintptr_t offset) {
 //   (*fnptr)(index, size, type, normalized, stride, (const void *)(offset));
-// }
-// static void  glowVertexBindingDivisor(GPVERTEXBINDINGDIVISOR fnptr, GLuint  bindingindex, GLuint  divisor) {
-//   (*fnptr)(bindingindex, divisor);
 // }
 // static void  glowViewport(GPVIEWPORT fnptr, GLint  x, GLint  y, GLsizei  width, GLsizei  height) {
 //   (*fnptr)(x, y, width, height);
@@ -3547,26 +3275,20 @@ const (
 	GL_3DC_XY_AMD                                                         = 0x87FA
 	GL_3DC_X_AMD                                                          = 0x87F9
 	ACCUM_ADJACENT_PAIRS_NV                                               = 0x90AD
-	ACTIVE_ATOMIC_COUNTER_BUFFERS                                         = 0x92D9
 	ACTIVE_ATTRIBUTES                                                     = 0x8B89
 	ACTIVE_ATTRIBUTE_MAX_LENGTH                                           = 0x8B8A
-	ACTIVE_PROGRAM                                                        = 0x8259
 	ACTIVE_PROGRAM_EXT                                                    = 0x8259
-	ACTIVE_RESOURCES                                                      = 0x92F5
 	ACTIVE_TEXTURE                                                        = 0x84E0
 	ACTIVE_UNIFORMS                                                       = 0x8B86
 	ACTIVE_UNIFORM_BLOCKS                                                 = 0x8A36
 	ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH                                  = 0x8A35
 	ACTIVE_UNIFORM_MAX_LENGTH                                             = 0x8B87
-	ACTIVE_VARIABLES                                                      = 0x9305
 	ADJACENT_PAIRS_NV                                                     = 0x90AE
 	AFFINE_2D_NV                                                          = 0x9092
 	AFFINE_3D_NV                                                          = 0x9094
 	ALIASED_LINE_WIDTH_RANGE                                              = 0x846E
 	ALIASED_POINT_SIZE_RANGE                                              = 0x846D
-	ALL_BARRIER_BITS                                                      = 0xFFFFFFFF
 	ALL_COMPLETED_NV                                                      = 0x84F2
-	ALL_SHADER_BITS                                                       = 0xFFFFFFFF
 	ALL_SHADER_BITS_EXT                                                   = 0xFFFFFFFF
 	ALPHA                                                                 = 0x1906
 	ALPHA16F_EXT                                                          = 0x881C
@@ -3587,19 +3309,11 @@ const (
 	ARC_TO_NV                                                             = 0xFE
 	ARRAY_BUFFER                                                          = 0x8892
 	ARRAY_BUFFER_BINDING                                                  = 0x8894
-	ARRAY_SIZE                                                            = 0x92FB
-	ARRAY_STRIDE                                                          = 0x92FE
 	ATC_RGBA_EXPLICIT_ALPHA_AMD                                           = 0x8C93
 	ATC_RGBA_INTERPOLATED_ALPHA_AMD                                       = 0x87EE
 	ATC_RGB_AMD                                                           = 0x8C92
-	ATOMIC_COUNTER_BARRIER_BIT                                            = 0x00001000
-	ATOMIC_COUNTER_BUFFER                                                 = 0x92C0
-	ATOMIC_COUNTER_BUFFER_BINDING                                         = 0x92C1
-	ATOMIC_COUNTER_BUFFER_INDEX                                           = 0x9301
 	ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_NV                    = 0x959E
 	ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_NV                    = 0x959F
-	ATOMIC_COUNTER_BUFFER_SIZE                                            = 0x92C3
-	ATOMIC_COUNTER_BUFFER_START                                           = 0x92C2
 	ATTACHED_MEMORY_OBJECT_NV                                             = 0x95A4
 	ATTACHED_MEMORY_OFFSET_NV                                             = 0x95A5
 	ATTACHED_SHADERS                                                      = 0x8B85
@@ -3624,7 +3338,6 @@ const (
 	BLEND_PREMULTIPLIED_SRC_NV                                            = 0x9280
 	BLEND_SRC_ALPHA                                                       = 0x80CB
 	BLEND_SRC_RGB                                                         = 0x80C9
-	BLOCK_INDEX                                                           = 0x92FD
 	BLUE                                                                  = 0x1905
 	BLUE_BITS                                                             = 0x0D54
 	BLUE_NV                                                               = 0x1905
@@ -3638,8 +3351,6 @@ const (
 	BUFFER                                                                = 0x82E0
 	BUFFER_ACCESS_FLAGS                                                   = 0x911F
 	BUFFER_ACCESS_OES                                                     = 0x88BB
-	BUFFER_BINDING                                                        = 0x9302
-	BUFFER_DATA_SIZE                                                      = 0x9303
 	BUFFER_IMMUTABLE_STORAGE_EXT                                          = 0x821F
 	BUFFER_KHR                                                            = 0x82E0
 	BUFFER_MAPPED                                                         = 0x88BC
@@ -3651,9 +3362,7 @@ const (
 	BUFFER_OBJECT_EXT                                                     = 0x9151
 	BUFFER_SIZE                                                           = 0x8764
 	BUFFER_STORAGE_FLAGS_EXT                                              = 0x8220
-	BUFFER_UPDATE_BARRIER_BIT                                             = 0x00000200
 	BUFFER_USAGE                                                          = 0x8765
-	BUFFER_VARIABLE                                                       = 0x92E5
 	BYTE                                                                  = 0x1400
 	CCW                                                                   = 0x0901
 	CIRCULAR_CCW_ARC_TO_NV                                                = 0xF8
@@ -3767,7 +3476,6 @@ const (
 	COLOR_EXT                                                             = 0x1800
 	COLOR_SAMPLES_NV                                                      = 0x8E20
 	COLOR_WRITEMASK                                                       = 0x0C23
-	COMMAND_BARRIER_BIT                                                   = 0x00000040
 	COMPARE_REF_TO_TEXTURE                                                = 0x884E
 	COMPARE_REF_TO_TEXTURE_EXT                                            = 0x884E
 	COMPILE_STATUS                                                        = 0x8B81
@@ -3865,9 +3573,6 @@ const (
 	COMPRESSED_SRGB_S3TC_DXT1_EXT                                         = 0x8C4C
 	COMPRESSED_SRGB_S3TC_DXT1_NV                                          = 0x8C4C
 	COMPRESSED_TEXTURE_FORMATS                                            = 0x86A3
-	COMPUTE_SHADER                                                        = 0x91B9
-	COMPUTE_SHADER_BIT                                                    = 0x00000020
-	COMPUTE_WORK_GROUP_SIZE                                               = 0x8267
 	CONDITION_SATISFIED                                                   = 0x911C
 	CONDITION_SATISFIED_APPLE                                             = 0x911C
 	CONFORMANT_NV                                                         = 0x9374
@@ -4022,7 +3727,6 @@ const (
 	DEPTH_STENCIL                                                         = 0x84F9
 	DEPTH_STENCIL_ATTACHMENT                                              = 0x821A
 	DEPTH_STENCIL_OES                                                     = 0x84F9
-	DEPTH_STENCIL_TEXTURE_MODE                                            = 0x90EA
 	DEPTH_TEST                                                            = 0x0B71
 	DEPTH_WRITEMASK                                                       = 0x0B72
 	DETACHED_BUFFERS_NV                                                   = 0x95AB
@@ -4034,8 +3738,6 @@ const (
 	DIFFERENCE_KHR                                                        = 0x929E
 	DIFFERENCE_NV                                                         = 0x929E
 	DISJOINT_NV                                                           = 0x9283
-	DISPATCH_INDIRECT_BUFFER                                              = 0x90EE
-	DISPATCH_INDIRECT_BUFFER_BINDING                                      = 0x90EF
 	DITHER                                                                = 0x0BD0
 	DMP_PROGRAM_BINARY_DMP                                                = 0x9253
 	DONT_CARE                                                             = 0x1100
@@ -4097,8 +3799,6 @@ const (
 	DRAW_FRAMEBUFFER_BINDING_APPLE                                        = 0x8CA6
 	DRAW_FRAMEBUFFER_BINDING_NV                                           = 0x8CA6
 	DRAW_FRAMEBUFFER_NV                                                   = 0x8CA9
-	DRAW_INDIRECT_BUFFER                                                  = 0x8F3F
-	DRAW_INDIRECT_BUFFER_BINDING                                          = 0x8F43
 	DRIVER_UUID_EXT                                                       = 0x9598
 	DST_ALPHA                                                             = 0x0304
 	DST_ATOP_NV                                                           = 0x928F
@@ -4114,7 +3814,6 @@ const (
 	DYNAMIC_READ                                                          = 0x88E9
 	DYNAMIC_STORAGE_BIT_EXT                                               = 0x0100
 	EFFECTIVE_RASTER_SAMPLES_EXT                                          = 0x932C
-	ELEMENT_ARRAY_BARRIER_BIT                                             = 0x00000002
 	ELEMENT_ARRAY_BUFFER                                                  = 0x8893
 	ELEMENT_ARRAY_BUFFER_BINDING                                          = 0x8895
 	EQUAL                                                                 = 0x0202
@@ -4192,7 +3891,6 @@ const (
 	FRAGMENT_INPUT_NV                                                     = 0x936D
 	FRAGMENT_INTERPOLATION_OFFSET_BITS_OES                                = 0x8E5D
 	FRAGMENT_SHADER                                                       = 0x8B30
-	FRAGMENT_SHADER_BIT                                                   = 0x00000002
 	FRAGMENT_SHADER_BIT_EXT                                               = 0x00000002
 	FRAGMENT_SHADER_DERIVATIVE_HINT                                       = 0x8B8B
 	FRAGMENT_SHADER_DERIVATIVE_HINT_OES                                   = 0x8B8B
@@ -4222,16 +3920,11 @@ const (
 	FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR                          = 0x9630
 	FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT                            = 0x8D6C
 	FRAMEBUFFER_ATTACHMENT_TEXTURE_SCALE_IMG                              = 0x913F
-	FRAMEBUFFER_BARRIER_BIT                                               = 0x00000400
 	FRAMEBUFFER_BINDING                                                   = 0x8CA6
 	FRAMEBUFFER_COMPLETE                                                  = 0x8CD5
 	FRAMEBUFFER_DEFAULT                                                   = 0x8218
-	FRAMEBUFFER_DEFAULT_FIXED_SAMPLE_LOCATIONS                            = 0x9314
-	FRAMEBUFFER_DEFAULT_HEIGHT                                            = 0x9311
 	FRAMEBUFFER_DEFAULT_LAYERS_EXT                                        = 0x9312
 	FRAMEBUFFER_DEFAULT_LAYERS_OES                                        = 0x9312
-	FRAMEBUFFER_DEFAULT_SAMPLES                                           = 0x9313
-	FRAMEBUFFER_DEFAULT_WIDTH                                             = 0x9310
 	FRAMEBUFFER_FETCH_NONCOHERENT_QCOM                                    = 0x96A2
 	FRAMEBUFFER_FLIP_X_MESA                                               = 0x8BBC
 	FRAMEBUFFER_FLIP_Y_MESA                                               = 0x8BBB
@@ -4321,23 +4014,10 @@ const (
 	HSL_LUMINOSITY_NV                                                     = 0x92B0
 	HSL_SATURATION_KHR                                                    = 0x92AE
 	HSL_SATURATION_NV                                                     = 0x92AE
-	IMAGE_2D                                                              = 0x904D
-	IMAGE_2D_ARRAY                                                        = 0x9053
-	IMAGE_3D                                                              = 0x904E
-	IMAGE_BINDING_ACCESS                                                  = 0x8F3E
-	IMAGE_BINDING_FORMAT                                                  = 0x906E
-	IMAGE_BINDING_LAYER                                                   = 0x8F3D
-	IMAGE_BINDING_LAYERED                                                 = 0x8F3C
-	IMAGE_BINDING_LEVEL                                                   = 0x8F3B
-	IMAGE_BINDING_NAME                                                    = 0x8F3A
 	IMAGE_BUFFER_EXT                                                      = 0x9051
 	IMAGE_BUFFER_OES                                                      = 0x9051
-	IMAGE_CUBE                                                            = 0x9050
 	IMAGE_CUBE_MAP_ARRAY_EXT                                              = 0x9054
 	IMAGE_CUBE_MAP_ARRAY_OES                                              = 0x9054
-	IMAGE_FORMAT_COMPATIBILITY_BY_CLASS                                   = 0x90C9
-	IMAGE_FORMAT_COMPATIBILITY_BY_SIZE                                    = 0x90C8
-	IMAGE_FORMAT_COMPATIBILITY_TYPE                                       = 0x90C7
 	IMPLEMENTATION_COLOR_READ_FORMAT                                      = 0x8B9B
 	IMPLEMENTATION_COLOR_READ_TYPE                                        = 0x8B9A
 	INCLUSIVE_EXT                                                         = 0x8F10
@@ -4363,17 +4043,12 @@ const (
 	INTERLEAVED_ATTRIBS                                                   = 0x8C8C
 	INT_10_10_10_2_OES                                                    = 0x8DF7
 	INT_2_10_10_10_REV                                                    = 0x8D9F
-	INT_IMAGE_2D                                                          = 0x9058
-	INT_IMAGE_2D_ARRAY                                                    = 0x905E
-	INT_IMAGE_3D                                                          = 0x9059
 	INT_IMAGE_BUFFER_EXT                                                  = 0x905C
 	INT_IMAGE_BUFFER_OES                                                  = 0x905C
-	INT_IMAGE_CUBE                                                        = 0x905B
 	INT_IMAGE_CUBE_MAP_ARRAY_EXT                                          = 0x905F
 	INT_IMAGE_CUBE_MAP_ARRAY_OES                                          = 0x905F
 	INT_SAMPLER_2D                                                        = 0x8DCA
 	INT_SAMPLER_2D_ARRAY                                                  = 0x8DCF
-	INT_SAMPLER_2D_MULTISAMPLE                                            = 0x9109
 	INT_SAMPLER_2D_MULTISAMPLE_ARRAY_OES                                  = 0x910C
 	INT_SAMPLER_3D                                                        = 0x8DCB
 	INT_SAMPLER_BUFFER_EXT                                                = 0x8DD0
@@ -4396,7 +4071,6 @@ const (
 	ISOLINES_OES                                                          = 0x8E7A
 	IS_PER_PATCH_EXT                                                      = 0x92E7
 	IS_PER_PATCH_OES                                                      = 0x92E7
-	IS_ROW_MAJOR                                                          = 0x9300
 	ITALIC_BIT_NV                                                         = 0x02
 	KEEP                                                                  = 0x1E00
 	LARGE_CCW_ARC_TO_NV                                                   = 0x16
@@ -4436,7 +4110,6 @@ const (
 	LINE_TO_NV                                                            = 0x04
 	LINE_WIDTH                                                            = 0x0B21
 	LINK_STATUS                                                           = 0x8B82
-	LOCATION                                                              = 0x930E
 	LOCATION_INDEX_EXT                                                    = 0x930F
 	LOSE_CONTEXT_ON_RESET                                                 = 0x8252
 	LOSE_CONTEXT_ON_RESET_EXT                                             = 0x8252
@@ -4473,13 +4146,10 @@ const (
 	MAP_UNSYNCHRONIZED_BIT_EXT                                            = 0x0020
 	MAP_WRITE_BIT                                                         = 0x0002
 	MAP_WRITE_BIT_EXT                                                     = 0x0002
-	MATRIX_STRIDE                                                         = 0x92FF
 	MAX                                                                   = 0x8008
 	MAX_3D_TEXTURE_SIZE                                                   = 0x8073
 	MAX_3D_TEXTURE_SIZE_OES                                               = 0x8073
 	MAX_ARRAY_TEXTURE_LAYERS                                              = 0x88FF
-	MAX_ATOMIC_COUNTER_BUFFER_BINDINGS                                    = 0x92DC
-	MAX_ATOMIC_COUNTER_BUFFER_SIZE                                        = 0x92D8
 	MAX_CLIP_DISTANCES_APPLE                                              = 0x0D32
 	MAX_CLIP_DISTANCES_EXT                                                = 0x0D32
 	MAX_COARSE_FRAGMENT_SAMPLES_NV                                        = 0x955F
@@ -4488,18 +4158,11 @@ const (
 	MAX_COLOR_ATTACHMENTS_NV                                              = 0x8CDF
 	MAX_COLOR_FRAMEBUFFER_SAMPLES_AMD                                     = 0x91B3
 	MAX_COLOR_FRAMEBUFFER_STORAGE_SAMPLES_AMD                             = 0x91B4
-	MAX_COLOR_TEXTURE_SAMPLES                                             = 0x910E
-	MAX_COMBINED_ATOMIC_COUNTERS                                          = 0x92D7
-	MAX_COMBINED_ATOMIC_COUNTER_BUFFERS                                   = 0x92D1
 	MAX_COMBINED_CLIP_AND_CULL_DISTANCES_EXT                              = 0x82FA
-	MAX_COMBINED_COMPUTE_UNIFORM_COMPONENTS                               = 0x8266
 	MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS                              = 0x8A33
 	MAX_COMBINED_GEOMETRY_UNIFORM_COMPONENTS_EXT                          = 0x8A32
 	MAX_COMBINED_GEOMETRY_UNIFORM_COMPONENTS_OES                          = 0x8A32
-	MAX_COMBINED_IMAGE_UNIFORMS                                           = 0x90CF
 	MAX_COMBINED_MESH_UNIFORM_COMPONENTS_NV                               = 0x8E67
-	MAX_COMBINED_SHADER_OUTPUT_RESOURCES                                  = 0x8F39
-	MAX_COMBINED_SHADER_STORAGE_BLOCKS                                    = 0x90DC
 	MAX_COMBINED_TASK_UNIFORM_COMPONENTS_NV                               = 0x8E6F
 	MAX_COMBINED_TESS_CONTROL_UNIFORM_COMPONENTS_EXT                      = 0x8E1E
 	MAX_COMBINED_TESS_CONTROL_UNIFORM_COMPONENTS_OES                      = 0x8E1E
@@ -4508,17 +4171,6 @@ const (
 	MAX_COMBINED_TEXTURE_IMAGE_UNITS                                      = 0x8B4D
 	MAX_COMBINED_UNIFORM_BLOCKS                                           = 0x8A2E
 	MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS                                = 0x8A31
-	MAX_COMPUTE_ATOMIC_COUNTERS                                           = 0x8265
-	MAX_COMPUTE_ATOMIC_COUNTER_BUFFERS                                    = 0x8264
-	MAX_COMPUTE_IMAGE_UNIFORMS                                            = 0x91BD
-	MAX_COMPUTE_SHADER_STORAGE_BLOCKS                                     = 0x90DB
-	MAX_COMPUTE_SHARED_MEMORY_SIZE                                        = 0x8262
-	MAX_COMPUTE_TEXTURE_IMAGE_UNITS                                       = 0x91BC
-	MAX_COMPUTE_UNIFORM_BLOCKS                                            = 0x91BB
-	MAX_COMPUTE_UNIFORM_COMPONENTS                                        = 0x8263
-	MAX_COMPUTE_WORK_GROUP_COUNT                                          = 0x91BE
-	MAX_COMPUTE_WORK_GROUP_INVOCATIONS                                    = 0x90EB
-	MAX_COMPUTE_WORK_GROUP_SIZE                                           = 0x91BF
 	MAX_CUBE_MAP_TEXTURE_SIZE                                             = 0x851C
 	MAX_CULL_DISTANCES_EXT                                                = 0x82F9
 	MAX_DEBUG_GROUP_STACK_DEPTH                                           = 0x826C
@@ -4528,7 +4180,6 @@ const (
 	MAX_DEBUG_MESSAGE_LENGTH                                              = 0x9143
 	MAX_DEBUG_MESSAGE_LENGTH_KHR                                          = 0x9143
 	MAX_DEPTH_STENCIL_FRAMEBUFFER_SAMPLES_AMD                             = 0x91B5
-	MAX_DEPTH_TEXTURE_SAMPLES                                             = 0x910F
 	MAX_DETACHED_BUFFERS_NV                                               = 0x95AD
 	MAX_DETACHED_TEXTURES_NV                                              = 0x95AC
 	MAX_DRAW_BUFFERS                                                      = 0x8824
@@ -4540,20 +4191,13 @@ const (
 	MAX_ELEMENTS_VERTICES                                                 = 0x80E8
 	MAX_ELEMENT_INDEX                                                     = 0x8D6B
 	MAX_EXT                                                               = 0x8008
-	MAX_FRAGMENT_ATOMIC_COUNTERS                                          = 0x92D6
-	MAX_FRAGMENT_ATOMIC_COUNTER_BUFFERS                                   = 0x92D0
-	MAX_FRAGMENT_IMAGE_UNIFORMS                                           = 0x90CE
 	MAX_FRAGMENT_INPUT_COMPONENTS                                         = 0x9125
 	MAX_FRAGMENT_INTERPOLATION_OFFSET_OES                                 = 0x8E5C
-	MAX_FRAGMENT_SHADER_STORAGE_BLOCKS                                    = 0x90DA
 	MAX_FRAGMENT_UNIFORM_BLOCKS                                           = 0x8A2D
 	MAX_FRAGMENT_UNIFORM_COMPONENTS                                       = 0x8B49
 	MAX_FRAGMENT_UNIFORM_VECTORS                                          = 0x8DFD
-	MAX_FRAMEBUFFER_HEIGHT                                                = 0x9316
 	MAX_FRAMEBUFFER_LAYERS_EXT                                            = 0x9317
 	MAX_FRAMEBUFFER_LAYERS_OES                                            = 0x9317
-	MAX_FRAMEBUFFER_SAMPLES                                               = 0x9318
-	MAX_FRAMEBUFFER_WIDTH                                                 = 0x9315
 	MAX_GEOMETRY_ATOMIC_COUNTERS_EXT                                      = 0x92D5
 	MAX_GEOMETRY_ATOMIC_COUNTERS_OES                                      = 0x92D5
 	MAX_GEOMETRY_ATOMIC_COUNTER_BUFFERS_EXT                               = 0x92CF
@@ -4578,8 +4222,6 @@ const (
 	MAX_GEOMETRY_UNIFORM_BLOCKS_OES                                       = 0x8A2C
 	MAX_GEOMETRY_UNIFORM_COMPONENTS_EXT                                   = 0x8DDF
 	MAX_GEOMETRY_UNIFORM_COMPONENTS_OES                                   = 0x8DDF
-	MAX_IMAGE_UNITS                                                       = 0x8F38
-	MAX_INTEGER_SAMPLES                                                   = 0x9110
 	MAX_LABEL_LENGTH                                                      = 0x82E8
 	MAX_LABEL_LENGTH_KHR                                                  = 0x82E8
 	MAX_MESH_ATOMIC_COUNTERS_NV                                           = 0x8E65
@@ -4596,12 +4238,9 @@ const (
 	MAX_MESH_WORK_GROUP_INVOCATIONS_NV                                    = 0x95A2
 	MAX_MESH_WORK_GROUP_SIZE_NV                                           = 0x953B
 	MAX_MULTIVIEW_BUFFERS_EXT                                             = 0x90F2
-	MAX_NAME_LENGTH                                                       = 0x92F6
-	MAX_NUM_ACTIVE_VARIABLES                                              = 0x92F7
 	MAX_PATCH_VERTICES_EXT                                                = 0x8E7D
 	MAX_PATCH_VERTICES_OES                                                = 0x8E7D
 	MAX_PROGRAM_TEXEL_OFFSET                                              = 0x8905
-	MAX_PROGRAM_TEXTURE_GATHER_OFFSET                                     = 0x8E5F
 	MAX_RASTER_SAMPLES_EXT                                                = 0x9329
 	MAX_RENDERBUFFER_SIZE                                                 = 0x84E8
 	MAX_SAMPLES                                                           = 0x8D57
@@ -4610,7 +4249,6 @@ const (
 	MAX_SAMPLES_EXT                                                       = 0x8D57
 	MAX_SAMPLES_IMG                                                       = 0x9135
 	MAX_SAMPLES_NV                                                        = 0x8D57
-	MAX_SAMPLE_MASK_WORDS                                                 = 0x8E59
 	MAX_SERVER_WAIT_TIMEOUT                                               = 0x9111
 	MAX_SERVER_WAIT_TIMEOUT_APPLE                                         = 0x9111
 	MAX_SHADER_COMBINED_LOCAL_STORAGE_FAST_SIZE_EXT                       = 0x9650
@@ -4618,8 +4256,6 @@ const (
 	MAX_SHADER_COMPILER_THREADS_KHR                                       = 0x91B0
 	MAX_SHADER_PIXEL_LOCAL_STORAGE_FAST_SIZE_EXT                          = 0x8F63
 	MAX_SHADER_PIXEL_LOCAL_STORAGE_SIZE_EXT                               = 0x8F67
-	MAX_SHADER_STORAGE_BLOCK_SIZE                                         = 0x90DE
-	MAX_SHADER_STORAGE_BUFFER_BINDINGS                                    = 0x90DD
 	MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM                                = 0x8FA1
 	MAX_SPARSE_3D_TEXTURE_SIZE_EXT                                        = 0x9199
 	MAX_SPARSE_ARRAY_TEXTURE_LAYERS_EXT                                   = 0x919A
@@ -4690,18 +4326,10 @@ const (
 	MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS                            = 0x8C80
 	MAX_UNIFORM_BLOCK_SIZE                                                = 0x8A30
 	MAX_UNIFORM_BUFFER_BINDINGS                                           = 0x8A2F
-	MAX_UNIFORM_LOCATIONS                                                 = 0x826E
 	MAX_VARYING_COMPONENTS                                                = 0x8B4B
 	MAX_VARYING_VECTORS                                                   = 0x8DFC
-	MAX_VERTEX_ATOMIC_COUNTERS                                            = 0x92D2
-	MAX_VERTEX_ATOMIC_COUNTER_BUFFERS                                     = 0x92CC
 	MAX_VERTEX_ATTRIBS                                                    = 0x8869
-	MAX_VERTEX_ATTRIB_BINDINGS                                            = 0x82DA
-	MAX_VERTEX_ATTRIB_RELATIVE_OFFSET                                     = 0x82D9
-	MAX_VERTEX_ATTRIB_STRIDE                                              = 0x82E5
-	MAX_VERTEX_IMAGE_UNIFORMS                                             = 0x90CA
 	MAX_VERTEX_OUTPUT_COMPONENTS                                          = 0x9122
-	MAX_VERTEX_SHADER_STORAGE_BLOCKS                                      = 0x90D6
 	MAX_VERTEX_TEXTURE_IMAGE_UNITS                                        = 0x8B4C
 	MAX_VERTEX_UNIFORM_BLOCKS                                             = 0x8A2B
 	MAX_VERTEX_UNIFORM_COMPONENTS                                         = 0x8B4A
@@ -4733,7 +4361,6 @@ const (
 	MIN_EXT                                                               = 0x8007
 	MIN_FRAGMENT_INTERPOLATION_OFFSET_OES                                 = 0x8E5B
 	MIN_PROGRAM_TEXEL_OFFSET                                              = 0x8904
-	MIN_PROGRAM_TEXTURE_GATHER_OFFSET                                     = 0x8E5E
 	MIN_SAMPLE_SHADING_VALUE_OES                                          = 0x8C37
 	MIRRORED_REPEAT                                                       = 0x8370
 	MIRROR_CLAMP_TO_EDGE_EXT                                              = 0x8743
@@ -4760,7 +4387,6 @@ const (
 	MULTISAMPLE_EXT                                                       = 0x809D
 	MULTISAMPLE_RASTERIZATION_ALLOWED_EXT                                 = 0x932B
 	MULTIVIEW_EXT                                                         = 0x90F1
-	NAME_LENGTH                                                           = 0x92F9
 	NEAREST                                                               = 0x2600
 	NEAREST_MIPMAP_LINEAR                                                 = 0x2702
 	NEAREST_MIPMAP_NEAREST                                                = 0x2700
@@ -4773,7 +4399,6 @@ const (
 	NO_RESET_NOTIFICATION                                                 = 0x8261
 	NO_RESET_NOTIFICATION_EXT                                             = 0x8261
 	NO_RESET_NOTIFICATION_KHR                                             = 0x8261
-	NUM_ACTIVE_VARIABLES                                                  = 0x9304
 	NUM_COMPRESSED_TEXTURE_FORMATS                                        = 0x86A2
 	NUM_DEVICE_UUIDS_EXT                                                  = 0x9596
 	NUM_DOWNSAMPLE_SCALES_IMG                                             = 0x913D
@@ -4789,7 +4414,6 @@ const (
 	NUM_WINDOW_RECTANGLES_EXT                                             = 0x8F15
 	OBJECT_TYPE                                                           = 0x9112
 	OBJECT_TYPE_APPLE                                                     = 0x9112
-	OFFSET                                                                = 0x92FC
 	ONE                                                                   = 1
 	ONE_MINUS_CONSTANT_ALPHA                                              = 0x8004
 	ONE_MINUS_CONSTANT_COLOR                                              = 0x8002
@@ -4895,7 +4519,6 @@ const (
 	PERFQUERY_SINGLE_CONTEXT_INTEL                                        = 0x00000000
 	PERFQUERY_WAIT_INTEL                                                  = 0x83FB
 	PINLIGHT_NV                                                           = 0x92A8
-	PIXEL_BUFFER_BARRIER_BIT                                              = 0x00000080
 	PIXEL_PACK_BUFFER                                                     = 0x88EB
 	PIXEL_PACK_BUFFER_BINDING                                             = 0x88ED
 	PIXEL_PACK_BUFFER_BINDING_NV                                          = 0x88ED
@@ -4934,16 +4557,12 @@ const (
 	PROGRAM_BINARY_LENGTH                                                 = 0x8741
 	PROGRAM_BINARY_LENGTH_OES                                             = 0x8741
 	PROGRAM_BINARY_RETRIEVABLE_HINT                                       = 0x8257
-	PROGRAM_INPUT                                                         = 0x92E3
 	PROGRAM_KHR                                                           = 0x82E2
 	PROGRAM_OBJECT_EXT                                                    = 0x8B40
-	PROGRAM_OUTPUT                                                        = 0x92E4
 	PROGRAM_PIPELINE                                                      = 0x82E4
-	PROGRAM_PIPELINE_BINDING                                              = 0x825A
 	PROGRAM_PIPELINE_BINDING_EXT                                          = 0x825A
 	PROGRAM_PIPELINE_KHR                                                  = 0x82E4
 	PROGRAM_PIPELINE_OBJECT_EXT                                           = 0x8A4F
-	PROGRAM_SEPARABLE                                                     = 0x8258
 	PROGRAM_SEPARABLE_EXT                                                 = 0x8258
 	PROTECTED_MEMORY_OBJECT_EXT                                           = 0x959B
 	QUADRATIC_CURVE_TO_NV                                                 = 0x0A
@@ -4993,16 +4612,12 @@ const (
 	READ_FRAMEBUFFER_BINDING_APPLE                                        = 0x8CAA
 	READ_FRAMEBUFFER_BINDING_NV                                           = 0x8CAA
 	READ_FRAMEBUFFER_NV                                                   = 0x8CA8
-	READ_ONLY                                                             = 0x88B8
-	READ_WRITE                                                            = 0x88BA
 	RECT_NV                                                               = 0xF6
 	RED                                                                   = 0x1903
 	RED_BITS                                                              = 0x0D52
 	RED_EXT                                                               = 0x1903
 	RED_INTEGER                                                           = 0x8D94
 	RED_NV                                                                = 0x1903
-	REFERENCED_BY_COMPUTE_SHADER                                          = 0x930B
-	REFERENCED_BY_FRAGMENT_SHADER                                         = 0x930A
 	REFERENCED_BY_GEOMETRY_SHADER_EXT                                     = 0x9309
 	REFERENCED_BY_GEOMETRY_SHADER_OES                                     = 0x9309
 	REFERENCED_BY_MESH_SHADER_NV                                          = 0x95A0
@@ -5011,7 +4626,6 @@ const (
 	REFERENCED_BY_TESS_CONTROL_SHADER_OES                                 = 0x9307
 	REFERENCED_BY_TESS_EVALUATION_SHADER_EXT                              = 0x9308
 	REFERENCED_BY_TESS_EVALUATION_SHADER_OES                              = 0x9308
-	REFERENCED_BY_VERTEX_SHADER                                           = 0x9306
 	RELATIVE_ARC_TO_NV                                                    = 0xFF
 	RELATIVE_CONIC_CURVE_TO_NV                                            = 0x1B
 	RELATIVE_CUBIC_CURVE_TO_NV                                            = 0x0D
@@ -5135,7 +4749,6 @@ const (
 	SAMPLER_2D_ARRAY                                                      = 0x8DC1
 	SAMPLER_2D_ARRAY_SHADOW                                               = 0x8DC4
 	SAMPLER_2D_ARRAY_SHADOW_NV                                            = 0x8DC4
-	SAMPLER_2D_MULTISAMPLE                                                = 0x9108
 	SAMPLER_2D_MULTISAMPLE_ARRAY_OES                                      = 0x910B
 	SAMPLER_2D_SHADOW                                                     = 0x8B62
 	SAMPLER_2D_SHADOW_EXT                                                 = 0x8B62
@@ -5165,9 +4778,6 @@ const (
 	SAMPLE_LOCATION_PIXEL_GRID_HEIGHT_NV                                  = 0x933F
 	SAMPLE_LOCATION_PIXEL_GRID_WIDTH_NV                                   = 0x933E
 	SAMPLE_LOCATION_SUBPIXEL_BITS_NV                                      = 0x933D
-	SAMPLE_MASK                                                           = 0x8E51
-	SAMPLE_MASK_VALUE                                                     = 0x8E52
-	SAMPLE_POSITION                                                       = 0x8E50
 	SAMPLE_SHADING_OES                                                    = 0x8C36
 	SCISSOR_BOX                                                           = 0x0C10
 	SCISSOR_BOX_EXCLUSIVE_NV                                              = 0x9556
@@ -5186,18 +4796,10 @@ const (
 	SHADER_BINARY_FORMATS                                                 = 0x8DF8
 	SHADER_BINARY_VIV                                                     = 0x8FC4
 	SHADER_COMPILER                                                       = 0x8DFA
-	SHADER_IMAGE_ACCESS_BARRIER_BIT                                       = 0x00000020
 	SHADER_KHR                                                            = 0x82E1
 	SHADER_OBJECT_EXT                                                     = 0x8B48
 	SHADER_PIXEL_LOCAL_STORAGE_EXT                                        = 0x8F64
 	SHADER_SOURCE_LENGTH                                                  = 0x8B88
-	SHADER_STORAGE_BARRIER_BIT                                            = 0x00002000
-	SHADER_STORAGE_BLOCK                                                  = 0x92E6
-	SHADER_STORAGE_BUFFER                                                 = 0x90D2
-	SHADER_STORAGE_BUFFER_BINDING                                         = 0x90D3
-	SHADER_STORAGE_BUFFER_OFFSET_ALIGNMENT                                = 0x90DF
-	SHADER_STORAGE_BUFFER_SIZE                                            = 0x90D5
-	SHADER_STORAGE_BUFFER_START                                           = 0x90D4
 	SHADER_TYPE                                                           = 0x8B4F
 	SHADING_LANGUAGE_VERSION                                              = 0x8B8C
 	SHADING_RATE_16_INVOCATIONS_PER_PIXEL_NV                              = 0x956F
@@ -5304,7 +4906,6 @@ const (
 	STENCIL_EXT                                                           = 0x1802
 	STENCIL_FAIL                                                          = 0x0B94
 	STENCIL_FUNC                                                          = 0x0B92
-	STENCIL_INDEX                                                         = 0x1901
 	STENCIL_INDEX1_OES                                                    = 0x8D46
 	STENCIL_INDEX4_OES                                                    = 0x8D47
 	STENCIL_INDEX8                                                        = 0x8D48
@@ -5416,13 +5017,10 @@ const (
 	TEXTURE_2D_MULTISAMPLE_ARRAY_OES                                      = 0x9102
 	TEXTURE_3D                                                            = 0x806F
 	TEXTURE_3D_OES                                                        = 0x806F
-	TEXTURE_ALPHA_SIZE                                                    = 0x805F
-	TEXTURE_ALPHA_TYPE                                                    = 0x8C13
 	TEXTURE_ASTC_DECODE_PRECISION_EXT                                     = 0x8F69
 	TEXTURE_BASE_LEVEL                                                    = 0x813C
 	TEXTURE_BINDING_2D                                                    = 0x8069
 	TEXTURE_BINDING_2D_ARRAY                                              = 0x8C1D
-	TEXTURE_BINDING_2D_MULTISAMPLE                                        = 0x9104
 	TEXTURE_BINDING_2D_MULTISAMPLE_ARRAY_OES                              = 0x9105
 	TEXTURE_BINDING_3D                                                    = 0x806A
 	TEXTURE_BINDING_3D_OES                                                = 0x806A
@@ -5432,8 +5030,6 @@ const (
 	TEXTURE_BINDING_CUBE_MAP_ARRAY_EXT                                    = 0x900A
 	TEXTURE_BINDING_CUBE_MAP_ARRAY_OES                                    = 0x900A
 	TEXTURE_BINDING_EXTERNAL_OES                                          = 0x8D67
-	TEXTURE_BLUE_SIZE                                                     = 0x805E
-	TEXTURE_BLUE_TYPE                                                     = 0x8C12
 	TEXTURE_BORDER_COLOR_EXT                                              = 0x1004
 	TEXTURE_BORDER_COLOR_NV                                               = 0x1004
 	TEXTURE_BORDER_COLOR_OES                                              = 0x1004
@@ -5453,7 +5049,6 @@ const (
 	TEXTURE_COMPARE_FUNC_EXT                                              = 0x884D
 	TEXTURE_COMPARE_MODE                                                  = 0x884C
 	TEXTURE_COMPARE_MODE_EXT                                              = 0x884C
-	TEXTURE_COMPRESSED                                                    = 0x86A1
 	TEXTURE_CUBE_MAP                                                      = 0x8513
 	TEXTURE_CUBE_MAP_ARRAY_EXT                                            = 0x9009
 	TEXTURE_CUBE_MAP_ARRAY_OES                                            = 0x9009
@@ -5463,13 +5058,8 @@ const (
 	TEXTURE_CUBE_MAP_POSITIVE_X                                           = 0x8515
 	TEXTURE_CUBE_MAP_POSITIVE_Y                                           = 0x8517
 	TEXTURE_CUBE_MAP_POSITIVE_Z                                           = 0x8519
-	TEXTURE_DEPTH                                                         = 0x8071
 	TEXTURE_DEPTH_QCOM                                                    = 0x8BD4
-	TEXTURE_DEPTH_SIZE                                                    = 0x884A
-	TEXTURE_DEPTH_TYPE                                                    = 0x8C16
 	TEXTURE_EXTERNAL_OES                                                  = 0x8D65
-	TEXTURE_FETCH_BARRIER_BIT                                             = 0x00000008
-	TEXTURE_FIXED_SAMPLE_LOCATIONS                                        = 0x9107
 	TEXTURE_FORMAT_QCOM                                                   = 0x8BD6
 	TEXTURE_FORMAT_SRGB_OVERRIDE_EXT                                      = 0x8FBF
 	TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM                                  = 0x96A0
@@ -5477,15 +5067,11 @@ const (
 	TEXTURE_FOVEATED_FEATURE_QUERY_QCOM                                   = 0x8BFD
 	TEXTURE_FOVEATED_MIN_PIXEL_DENSITY_QCOM                               = 0x8BFC
 	TEXTURE_FOVEATED_NUM_FOCAL_POINTS_QUERY_QCOM                          = 0x8BFE
-	TEXTURE_GREEN_SIZE                                                    = 0x805D
-	TEXTURE_GREEN_TYPE                                                    = 0x8C11
-	TEXTURE_HEIGHT                                                        = 0x1001
 	TEXTURE_HEIGHT_QCOM                                                   = 0x8BD3
 	TEXTURE_IMAGE_VALID_QCOM                                              = 0x8BD8
 	TEXTURE_IMMUTABLE_FORMAT                                              = 0x912F
 	TEXTURE_IMMUTABLE_FORMAT_EXT                                          = 0x912F
 	TEXTURE_IMMUTABLE_LEVELS                                              = 0x82DF
-	TEXTURE_INTERNAL_FORMAT                                               = 0x1003
 	TEXTURE_INTERNAL_FORMAT_QCOM                                          = 0x8BD5
 	TEXTURE_MAG_FILTER                                                    = 0x2800
 	TEXTURE_MAX_ANISOTROPY_EXT                                            = 0x84FE
@@ -5498,14 +5084,9 @@ const (
 	TEXTURE_OBJECT_VALID_QCOM                                             = 0x8BDB
 	TEXTURE_PROTECTED_EXT                                                 = 0x8BFA
 	TEXTURE_REDUCTION_MODE_EXT                                            = 0x9366
-	TEXTURE_RED_SIZE                                                      = 0x805C
-	TEXTURE_RED_TYPE                                                      = 0x8C10
-	TEXTURE_SAMPLES                                                       = 0x9106
 	TEXTURE_SAMPLES_IMG                                                   = 0x9136
-	TEXTURE_SHARED_SIZE                                                   = 0x8C3F
 	TEXTURE_SPARSE_EXT                                                    = 0x91A6
 	TEXTURE_SRGB_DECODE_EXT                                               = 0x8A48
-	TEXTURE_STENCIL_SIZE                                                  = 0x88F1
 	TEXTURE_SWIZZLE_A                                                     = 0x8E45
 	TEXTURE_SWIZZLE_B                                                     = 0x8E44
 	TEXTURE_SWIZZLE_G                                                     = 0x8E43
@@ -5514,7 +5095,6 @@ const (
 	TEXTURE_TILING_EXT                                                    = 0x9580
 	TEXTURE_TYPE_QCOM                                                     = 0x8BD7
 	TEXTURE_UNNORMALIZED_COORDINATES_ARM                                  = 0x8F6A
-	TEXTURE_UPDATE_BARRIER_BIT                                            = 0x00000100
 	TEXTURE_USAGE_ANGLE                                                   = 0x93A2
 	TEXTURE_VIEW_MIN_LAYER_EXT                                            = 0x82DD
 	TEXTURE_VIEW_MIN_LAYER_OES                                            = 0x82DD
@@ -5524,7 +5104,6 @@ const (
 	TEXTURE_VIEW_NUM_LAYERS_OES                                           = 0x82DE
 	TEXTURE_VIEW_NUM_LEVELS_EXT                                           = 0x82DC
 	TEXTURE_VIEW_NUM_LEVELS_OES                                           = 0x82DC
-	TEXTURE_WIDTH                                                         = 0x1000
 	TEXTURE_WIDTH_QCOM                                                    = 0x8BD2
 	TEXTURE_WRAP_R                                                        = 0x8072
 	TEXTURE_WRAP_R_OES                                                    = 0x8072
@@ -5538,11 +5117,8 @@ const (
 	TIMEOUT_IGNORED_APPLE                                                 = 0xFFFFFFFFFFFFFFFF
 	TIMESTAMP_EXT                                                         = 0x8E28
 	TIME_ELAPSED_EXT                                                      = 0x88BF
-	TOP_LEVEL_ARRAY_SIZE                                                  = 0x930C
-	TOP_LEVEL_ARRAY_STRIDE                                                = 0x930D
 	TRANSFORM_FEEDBACK                                                    = 0x8E22
 	TRANSFORM_FEEDBACK_ACTIVE                                             = 0x8E24
-	TRANSFORM_FEEDBACK_BARRIER_BIT                                        = 0x00000800
 	TRANSFORM_FEEDBACK_BINDING                                            = 0x8E25
 	TRANSFORM_FEEDBACK_BUFFER                                             = 0x8C8E
 	TRANSFORM_FEEDBACK_BUFFER_BINDING                                     = 0x8C8F
@@ -5551,7 +5127,6 @@ const (
 	TRANSFORM_FEEDBACK_BUFFER_START                                       = 0x8C84
 	TRANSFORM_FEEDBACK_PAUSED                                             = 0x8E23
 	TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN                                 = 0x8C88
-	TRANSFORM_FEEDBACK_VARYING                                            = 0x92F4
 	TRANSFORM_FEEDBACK_VARYINGS                                           = 0x8C83
 	TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH                                 = 0x8C76
 	TRANSLATED_SHADER_SOURCE_LENGTH_ANGLE                                 = 0x93A0
@@ -5570,14 +5145,10 @@ const (
 	TRIANGLE_STRIP_ADJACENCY_OES                                          = 0x000D
 	TRIANGULAR_NV                                                         = 0x90A5
 	TRUE                                                                  = 1
-	TYPE                                                                  = 0x92FA
 	UNCORRELATED_NV                                                       = 0x9282
 	UNDEFINED_VERTEX_EXT                                                  = 0x8260
 	UNDEFINED_VERTEX_OES                                                  = 0x8260
-	UNIFORM                                                               = 0x92E1
 	UNIFORM_ARRAY_STRIDE                                                  = 0x8A3C
-	UNIFORM_BARRIER_BIT                                                   = 0x00000004
-	UNIFORM_BLOCK                                                         = 0x92E2
 	UNIFORM_BLOCK_ACTIVE_UNIFORMS                                         = 0x8A42
 	UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES                                  = 0x8A43
 	UNIFORM_BLOCK_BINDING                                                 = 0x8A3F
@@ -5637,18 +5208,12 @@ const (
 	UNSIGNED_INT_2_10_10_10_REV_EXT                                       = 0x8368
 	UNSIGNED_INT_5_9_9_9_REV                                              = 0x8C3E
 	UNSIGNED_INT_5_9_9_9_REV_APPLE                                        = 0x8C3E
-	UNSIGNED_INT_ATOMIC_COUNTER                                           = 0x92DB
-	UNSIGNED_INT_IMAGE_2D                                                 = 0x9063
-	UNSIGNED_INT_IMAGE_2D_ARRAY                                           = 0x9069
-	UNSIGNED_INT_IMAGE_3D                                                 = 0x9064
 	UNSIGNED_INT_IMAGE_BUFFER_EXT                                         = 0x9067
 	UNSIGNED_INT_IMAGE_BUFFER_OES                                         = 0x9067
-	UNSIGNED_INT_IMAGE_CUBE                                               = 0x9066
 	UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY_EXT                                 = 0x906A
 	UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY_OES                                 = 0x906A
 	UNSIGNED_INT_SAMPLER_2D                                               = 0x8DD2
 	UNSIGNED_INT_SAMPLER_2D_ARRAY                                         = 0x8DD7
-	UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE                                   = 0x910A
 	UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY_OES                         = 0x910D
 	UNSIGNED_INT_SAMPLER_3D                                               = 0x8DD3
 	UNSIGNED_INT_SAMPLER_BUFFER_EXT                                       = 0x8DD8
@@ -5683,7 +5248,6 @@ const (
 	VERTEX_ARRAY_BINDING_OES                                              = 0x85B5
 	VERTEX_ARRAY_KHR                                                      = 0x8074
 	VERTEX_ARRAY_OBJECT_EXT                                               = 0x9154
-	VERTEX_ATTRIB_ARRAY_BARRIER_BIT                                       = 0x00000001
 	VERTEX_ATTRIB_ARRAY_BUFFER_BINDING                                    = 0x889F
 	VERTEX_ATTRIB_ARRAY_DIVISOR                                           = 0x88FE
 	VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE                                     = 0x88FE
@@ -5696,14 +5260,7 @@ const (
 	VERTEX_ATTRIB_ARRAY_SIZE                                              = 0x8623
 	VERTEX_ATTRIB_ARRAY_STRIDE                                            = 0x8624
 	VERTEX_ATTRIB_ARRAY_TYPE                                              = 0x8625
-	VERTEX_ATTRIB_BINDING                                                 = 0x82D4
-	VERTEX_ATTRIB_RELATIVE_OFFSET                                         = 0x82D5
-	VERTEX_BINDING_BUFFER                                                 = 0x8F4F
-	VERTEX_BINDING_DIVISOR                                                = 0x82D6
-	VERTEX_BINDING_OFFSET                                                 = 0x82D7
-	VERTEX_BINDING_STRIDE                                                 = 0x82D8
 	VERTEX_SHADER                                                         = 0x8B31
-	VERTEX_SHADER_BIT                                                     = 0x00000001
 	VERTEX_SHADER_BIT_EXT                                                 = 0x00000001
 	VERTICAL_LINE_TO_NV                                                   = 0x08
 	VIEWPORT                                                              = 0x0BA2
@@ -5739,7 +5296,6 @@ const (
 	WINDOW_RECTANGLE_EXT                                                  = 0x8F12
 	WINDOW_RECTANGLE_MODE_EXT                                             = 0x8F13
 	WRITEONLY_RENDERING_QCOM                                              = 0x8823
-	WRITE_ONLY                                                            = 0x88B9
 	WRITE_ONLY_OES                                                        = 0x88B9
 	XOR_NV                                                                = 0x1506
 	Z400_BINARY_AMD                                                       = 0x8740
@@ -5750,7 +5306,6 @@ const (
 var (
 	gpAcquireKeyedMutexWin32EXT                      C.GPACQUIREKEYEDMUTEXWIN32EXT
 	gpActiveProgramEXT                               C.GPACTIVEPROGRAMEXT
-	gpActiveShaderProgram                            C.GPACTIVESHADERPROGRAM
 	gpActiveShaderProgramEXT                         C.GPACTIVESHADERPROGRAMEXT
 	gpActiveTexture                                  C.GPACTIVETEXTURE
 	gpAlphaFuncQCOM                                  C.GPALPHAFUNCQCOM
@@ -5769,8 +5324,6 @@ var (
 	gpBindFragDataLocationEXT                        C.GPBINDFRAGDATALOCATIONEXT
 	gpBindFragDataLocationIndexedEXT                 C.GPBINDFRAGDATALOCATIONINDEXEDEXT
 	gpBindFramebuffer                                C.GPBINDFRAMEBUFFER
-	gpBindImageTexture                               C.GPBINDIMAGETEXTURE
-	gpBindProgramPipeline                            C.GPBINDPROGRAMPIPELINE
 	gpBindProgramPipelineEXT                         C.GPBINDPROGRAMPIPELINEEXT
 	gpBindRenderbuffer                               C.GPBINDRENDERBUFFER
 	gpBindSampler                                    C.GPBINDSAMPLER
@@ -5779,7 +5332,6 @@ var (
 	gpBindTransformFeedback                          C.GPBINDTRANSFORMFEEDBACK
 	gpBindVertexArray                                C.GPBINDVERTEXARRAY
 	gpBindVertexArrayOES                             C.GPBINDVERTEXARRAYOES
-	gpBindVertexBuffer                               C.GPBINDVERTEXBUFFER
 	gpBlendBarrierKHR                                C.GPBLENDBARRIERKHR
 	gpBlendBarrierNV                                 C.GPBLENDBARRIERNV
 	gpBlendColor                                     C.GPBLENDCOLOR
@@ -5857,7 +5409,6 @@ var (
 	gpCreateSemaphoresNV                             C.GPCREATESEMAPHORESNV
 	gpCreateShader                                   C.GPCREATESHADER
 	gpCreateShaderProgramEXT                         C.GPCREATESHADERPROGRAMEXT
-	gpCreateShaderProgramv                           C.GPCREATESHADERPROGRAMV
 	gpCreateShaderProgramvEXT                        C.GPCREATESHADERPROGRAMVEXT
 	gpCullFace                                       C.GPCULLFACE
 	gpDebugMessageCallback                           C.GPDEBUGMESSAGECALLBACK
@@ -5874,7 +5425,6 @@ var (
 	gpDeletePerfMonitorsAMD                          C.GPDELETEPERFMONITORSAMD
 	gpDeletePerfQueryINTEL                           C.GPDELETEPERFQUERYINTEL
 	gpDeleteProgram                                  C.GPDELETEPROGRAM
-	gpDeleteProgramPipelines                         C.GPDELETEPROGRAMPIPELINES
 	gpDeleteProgramPipelinesEXT                      C.GPDELETEPROGRAMPIPELINESEXT
 	gpDeleteQueries                                  C.GPDELETEQUERIES
 	gpDeleteQueriesEXT                               C.GPDELETEQUERIESEXT
@@ -5903,10 +5453,7 @@ var (
 	gpDisableiNV                                     C.GPDISABLEINV
 	gpDisableiOES                                    C.GPDISABLEIOES
 	gpDiscardFramebufferEXT                          C.GPDISCARDFRAMEBUFFEREXT
-	gpDispatchCompute                                C.GPDISPATCHCOMPUTE
-	gpDispatchComputeIndirect                        C.GPDISPATCHCOMPUTEINDIRECT
 	gpDrawArrays                                     C.GPDRAWARRAYS
-	gpDrawArraysIndirect                             C.GPDRAWARRAYSINDIRECT
 	gpDrawArraysInstanced                            C.GPDRAWARRAYSINSTANCED
 	gpDrawArraysInstancedANGLE                       C.GPDRAWARRAYSINSTANCEDANGLE
 	gpDrawArraysInstancedBaseInstanceEXT             C.GPDRAWARRAYSINSTANCEDBASEINSTANCEEXT
@@ -5919,7 +5466,6 @@ var (
 	gpDrawElements                                   C.GPDRAWELEMENTS
 	gpDrawElementsBaseVertexEXT                      C.GPDRAWELEMENTSBASEVERTEXEXT
 	gpDrawElementsBaseVertexOES                      C.GPDRAWELEMENTSBASEVERTEXOES
-	gpDrawElementsIndirect                           C.GPDRAWELEMENTSINDIRECT
 	gpDrawElementsInstanced                          C.GPDRAWELEMENTSINSTANCED
 	gpDrawElementsInstancedANGLE                     C.GPDRAWELEMENTSINSTANCEDANGLE
 	gpDrawElementsInstancedBaseInstanceEXT           C.GPDRAWELEMENTSINSTANCEDBASEINSTANCEEXT
@@ -5978,7 +5524,6 @@ var (
 	gpFramebufferFetchBarrierQCOM                    C.GPFRAMEBUFFERFETCHBARRIERQCOM
 	gpFramebufferFoveationConfigQCOM                 C.GPFRAMEBUFFERFOVEATIONCONFIGQCOM
 	gpFramebufferFoveationParametersQCOM             C.GPFRAMEBUFFERFOVEATIONPARAMETERSQCOM
-	gpFramebufferParameteri                          C.GPFRAMEBUFFERPARAMETERI
 	gpFramebufferParameteriMESA                      C.GPFRAMEBUFFERPARAMETERIMESA
 	gpFramebufferPixelLocalStorageSizeEXT            C.GPFRAMEBUFFERPIXELLOCALSTORAGESIZEEXT
 	gpFramebufferRenderbuffer                        C.GPFRAMEBUFFERRENDERBUFFER
@@ -6000,7 +5545,6 @@ var (
 	gpGenFramebuffers                                C.GPGENFRAMEBUFFERS
 	gpGenPathsNV                                     C.GPGENPATHSNV
 	gpGenPerfMonitorsAMD                             C.GPGENPERFMONITORSAMD
-	gpGenProgramPipelines                            C.GPGENPROGRAMPIPELINES
 	gpGenProgramPipelinesEXT                         C.GPGENPROGRAMPIPELINESEXT
 	gpGenQueries                                     C.GPGENQUERIES
 	gpGenQueriesEXT                                  C.GPGENQUERIESEXT
@@ -6019,7 +5563,6 @@ var (
 	gpGetActiveUniformsiv                            C.GPGETACTIVEUNIFORMSIV
 	gpGetAttachedShaders                             C.GPGETATTACHEDSHADERS
 	gpGetAttribLocation                              C.GPGETATTRIBLOCATION
-	gpGetBooleani_v                                  C.GPGETBOOLEANI_V
 	gpGetBooleanv                                    C.GPGETBOOLEANV
 	gpGetBufferParameteri64v                         C.GPGETBUFFERPARAMETERI64V
 	gpGetBufferParameteriv                           C.GPGETBUFFERPARAMETERIV
@@ -6039,7 +5582,6 @@ var (
 	gpGetFragDataIndexEXT                            C.GPGETFRAGDATAINDEXEXT
 	gpGetFragDataLocation                            C.GPGETFRAGDATALOCATION
 	gpGetFramebufferAttachmentParameteriv            C.GPGETFRAMEBUFFERATTACHMENTPARAMETERIV
-	gpGetFramebufferParameteriv                      C.GPGETFRAMEBUFFERPARAMETERIV
 	gpGetFramebufferParameterivMESA                  C.GPGETFRAMEBUFFERPARAMETERIVMESA
 	gpGetFramebufferPixelLocalStorageSizeEXT         C.GPGETFRAMEBUFFERPIXELLOCALSTORAGESIZEEXT
 	gpGetGraphicsResetStatus                         C.GPGETGRAPHICSRESETSTATUS
@@ -6057,7 +5599,6 @@ var (
 	gpGetInternalformativ                            C.GPGETINTERNALFORMATIV
 	gpGetMemoryObjectDetachedResourcesuivNV          C.GPGETMEMORYOBJECTDETACHEDRESOURCESUIVNV
 	gpGetMemoryObjectParameterivEXT                  C.GPGETMEMORYOBJECTPARAMETERIVEXT
-	gpGetMultisamplefv                               C.GPGETMULTISAMPLEFV
 	gpGetNextPerfQueryIdINTEL                        C.GPGETNEXTPERFQUERYIDINTEL
 	gpGetObjectLabel                                 C.GPGETOBJECTLABEL
 	gpGetObjectLabelEXT                              C.GPGETOBJECTLABELEXT
@@ -6088,17 +5629,10 @@ var (
 	gpGetProgramBinary                               C.GPGETPROGRAMBINARY
 	gpGetProgramBinaryOES                            C.GPGETPROGRAMBINARYOES
 	gpGetProgramInfoLog                              C.GPGETPROGRAMINFOLOG
-	gpGetProgramInterfaceiv                          C.GPGETPROGRAMINTERFACEIV
-	gpGetProgramPipelineInfoLog                      C.GPGETPROGRAMPIPELINEINFOLOG
 	gpGetProgramPipelineInfoLogEXT                   C.GPGETPROGRAMPIPELINEINFOLOGEXT
-	gpGetProgramPipelineiv                           C.GPGETPROGRAMPIPELINEIV
 	gpGetProgramPipelineivEXT                        C.GPGETPROGRAMPIPELINEIVEXT
-	gpGetProgramResourceIndex                        C.GPGETPROGRAMRESOURCEINDEX
-	gpGetProgramResourceLocation                     C.GPGETPROGRAMRESOURCELOCATION
 	gpGetProgramResourceLocationIndexEXT             C.GPGETPROGRAMRESOURCELOCATIONINDEXEXT
-	gpGetProgramResourceName                         C.GPGETPROGRAMRESOURCENAME
 	gpGetProgramResourcefvNV                         C.GPGETPROGRAMRESOURCEFVNV
-	gpGetProgramResourceiv                           C.GPGETPROGRAMRESOURCEIV
 	gpGetProgramiv                                   C.GPGETPROGRAMIV
 	gpGetQueryObjecti64vEXT                          C.GPGETQUERYOBJECTI64VEXT
 	gpGetQueryObjectivEXT                            C.GPGETQUERYOBJECTIVEXT
@@ -6126,8 +5660,6 @@ var (
 	gpGetStringi                                     C.GPGETSTRINGI
 	gpGetSynciv                                      C.GPGETSYNCIV
 	gpGetSyncivAPPLE                                 C.GPGETSYNCIVAPPLE
-	gpGetTexLevelParameterfv                         C.GPGETTEXLEVELPARAMETERFV
-	gpGetTexLevelParameteriv                         C.GPGETTEXLEVELPARAMETERIV
 	gpGetTexParameterIivEXT                          C.GPGETTEXPARAMETERIIVEXT
 	gpGetTexParameterIivOES                          C.GPGETTEXPARAMETERIIVOES
 	gpGetTexParameterIuivEXT                         C.GPGETTEXPARAMETERIUIVEXT
@@ -6187,7 +5719,6 @@ var (
 	gpIsPointInFillPathNV                            C.GPISPOINTINFILLPATHNV
 	gpIsPointInStrokePathNV                          C.GPISPOINTINSTROKEPATHNV
 	gpIsProgram                                      C.GPISPROGRAM
-	gpIsProgramPipeline                              C.GPISPROGRAMPIPELINE
 	gpIsProgramPipelineEXT                           C.GPISPROGRAMPIPELINEEXT
 	gpIsQuery                                        C.GPISQUERY
 	gpIsQueryEXT                                     C.GPISQUERYEXT
@@ -6238,8 +5769,6 @@ var (
 	gpMatrixTranslatedEXT                            C.GPMATRIXTRANSLATEDEXT
 	gpMatrixTranslatefEXT                            C.GPMATRIXTRANSLATEFEXT
 	gpMaxShaderCompilerThreadsKHR                    C.GPMAXSHADERCOMPILERTHREADSKHR
-	gpMemoryBarrier                                  C.GPMEMORYBARRIER
-	gpMemoryBarrierByRegion                          C.GPMEMORYBARRIERBYREGION
 	gpMemoryObjectParameterivEXT                     C.GPMEMORYOBJECTPARAMETERIVEXT
 	gpMinSampleShadingOES                            C.GPMINSAMPLESHADINGOES
 	gpMultiDrawArraysEXT                             C.GPMULTIDRAWARRAYSEXT
@@ -6295,91 +5824,58 @@ var (
 	gpProgramParameteri                              C.GPPROGRAMPARAMETERI
 	gpProgramParameteriEXT                           C.GPPROGRAMPARAMETERIEXT
 	gpProgramPathFragmentInputGenNV                  C.GPPROGRAMPATHFRAGMENTINPUTGENNV
-	gpProgramUniform1f                               C.GPPROGRAMUNIFORM1F
 	gpProgramUniform1fEXT                            C.GPPROGRAMUNIFORM1FEXT
-	gpProgramUniform1fv                              C.GPPROGRAMUNIFORM1FV
 	gpProgramUniform1fvEXT                           C.GPPROGRAMUNIFORM1FVEXT
-	gpProgramUniform1i                               C.GPPROGRAMUNIFORM1I
 	gpProgramUniform1i64NV                           C.GPPROGRAMUNIFORM1I64NV
 	gpProgramUniform1i64vNV                          C.GPPROGRAMUNIFORM1I64VNV
 	gpProgramUniform1iEXT                            C.GPPROGRAMUNIFORM1IEXT
-	gpProgramUniform1iv                              C.GPPROGRAMUNIFORM1IV
 	gpProgramUniform1ivEXT                           C.GPPROGRAMUNIFORM1IVEXT
-	gpProgramUniform1ui                              C.GPPROGRAMUNIFORM1UI
 	gpProgramUniform1ui64NV                          C.GPPROGRAMUNIFORM1UI64NV
 	gpProgramUniform1ui64vNV                         C.GPPROGRAMUNIFORM1UI64VNV
 	gpProgramUniform1uiEXT                           C.GPPROGRAMUNIFORM1UIEXT
-	gpProgramUniform1uiv                             C.GPPROGRAMUNIFORM1UIV
 	gpProgramUniform1uivEXT                          C.GPPROGRAMUNIFORM1UIVEXT
-	gpProgramUniform2f                               C.GPPROGRAMUNIFORM2F
 	gpProgramUniform2fEXT                            C.GPPROGRAMUNIFORM2FEXT
-	gpProgramUniform2fv                              C.GPPROGRAMUNIFORM2FV
 	gpProgramUniform2fvEXT                           C.GPPROGRAMUNIFORM2FVEXT
-	gpProgramUniform2i                               C.GPPROGRAMUNIFORM2I
 	gpProgramUniform2i64NV                           C.GPPROGRAMUNIFORM2I64NV
 	gpProgramUniform2i64vNV                          C.GPPROGRAMUNIFORM2I64VNV
 	gpProgramUniform2iEXT                            C.GPPROGRAMUNIFORM2IEXT
-	gpProgramUniform2iv                              C.GPPROGRAMUNIFORM2IV
 	gpProgramUniform2ivEXT                           C.GPPROGRAMUNIFORM2IVEXT
-	gpProgramUniform2ui                              C.GPPROGRAMUNIFORM2UI
 	gpProgramUniform2ui64NV                          C.GPPROGRAMUNIFORM2UI64NV
 	gpProgramUniform2ui64vNV                         C.GPPROGRAMUNIFORM2UI64VNV
 	gpProgramUniform2uiEXT                           C.GPPROGRAMUNIFORM2UIEXT
-	gpProgramUniform2uiv                             C.GPPROGRAMUNIFORM2UIV
 	gpProgramUniform2uivEXT                          C.GPPROGRAMUNIFORM2UIVEXT
-	gpProgramUniform3f                               C.GPPROGRAMUNIFORM3F
 	gpProgramUniform3fEXT                            C.GPPROGRAMUNIFORM3FEXT
-	gpProgramUniform3fv                              C.GPPROGRAMUNIFORM3FV
 	gpProgramUniform3fvEXT                           C.GPPROGRAMUNIFORM3FVEXT
-	gpProgramUniform3i                               C.GPPROGRAMUNIFORM3I
 	gpProgramUniform3i64NV                           C.GPPROGRAMUNIFORM3I64NV
 	gpProgramUniform3i64vNV                          C.GPPROGRAMUNIFORM3I64VNV
 	gpProgramUniform3iEXT                            C.GPPROGRAMUNIFORM3IEXT
-	gpProgramUniform3iv                              C.GPPROGRAMUNIFORM3IV
 	gpProgramUniform3ivEXT                           C.GPPROGRAMUNIFORM3IVEXT
-	gpProgramUniform3ui                              C.GPPROGRAMUNIFORM3UI
 	gpProgramUniform3ui64NV                          C.GPPROGRAMUNIFORM3UI64NV
 	gpProgramUniform3ui64vNV                         C.GPPROGRAMUNIFORM3UI64VNV
 	gpProgramUniform3uiEXT                           C.GPPROGRAMUNIFORM3UIEXT
-	gpProgramUniform3uiv                             C.GPPROGRAMUNIFORM3UIV
 	gpProgramUniform3uivEXT                          C.GPPROGRAMUNIFORM3UIVEXT
-	gpProgramUniform4f                               C.GPPROGRAMUNIFORM4F
 	gpProgramUniform4fEXT                            C.GPPROGRAMUNIFORM4FEXT
-	gpProgramUniform4fv                              C.GPPROGRAMUNIFORM4FV
 	gpProgramUniform4fvEXT                           C.GPPROGRAMUNIFORM4FVEXT
-	gpProgramUniform4i                               C.GPPROGRAMUNIFORM4I
 	gpProgramUniform4i64NV                           C.GPPROGRAMUNIFORM4I64NV
 	gpProgramUniform4i64vNV                          C.GPPROGRAMUNIFORM4I64VNV
 	gpProgramUniform4iEXT                            C.GPPROGRAMUNIFORM4IEXT
-	gpProgramUniform4iv                              C.GPPROGRAMUNIFORM4IV
 	gpProgramUniform4ivEXT                           C.GPPROGRAMUNIFORM4IVEXT
-	gpProgramUniform4ui                              C.GPPROGRAMUNIFORM4UI
 	gpProgramUniform4ui64NV                          C.GPPROGRAMUNIFORM4UI64NV
 	gpProgramUniform4ui64vNV                         C.GPPROGRAMUNIFORM4UI64VNV
 	gpProgramUniform4uiEXT                           C.GPPROGRAMUNIFORM4UIEXT
-	gpProgramUniform4uiv                             C.GPPROGRAMUNIFORM4UIV
 	gpProgramUniform4uivEXT                          C.GPPROGRAMUNIFORM4UIVEXT
 	gpProgramUniformHandleui64IMG                    C.GPPROGRAMUNIFORMHANDLEUI64IMG
 	gpProgramUniformHandleui64NV                     C.GPPROGRAMUNIFORMHANDLEUI64NV
 	gpProgramUniformHandleui64vIMG                   C.GPPROGRAMUNIFORMHANDLEUI64VIMG
 	gpProgramUniformHandleui64vNV                    C.GPPROGRAMUNIFORMHANDLEUI64VNV
-	gpProgramUniformMatrix2fv                        C.GPPROGRAMUNIFORMMATRIX2FV
 	gpProgramUniformMatrix2fvEXT                     C.GPPROGRAMUNIFORMMATRIX2FVEXT
-	gpProgramUniformMatrix2x3fv                      C.GPPROGRAMUNIFORMMATRIX2X3FV
 	gpProgramUniformMatrix2x3fvEXT                   C.GPPROGRAMUNIFORMMATRIX2X3FVEXT
-	gpProgramUniformMatrix2x4fv                      C.GPPROGRAMUNIFORMMATRIX2X4FV
 	gpProgramUniformMatrix2x4fvEXT                   C.GPPROGRAMUNIFORMMATRIX2X4FVEXT
-	gpProgramUniformMatrix3fv                        C.GPPROGRAMUNIFORMMATRIX3FV
 	gpProgramUniformMatrix3fvEXT                     C.GPPROGRAMUNIFORMMATRIX3FVEXT
-	gpProgramUniformMatrix3x2fv                      C.GPPROGRAMUNIFORMMATRIX3X2FV
 	gpProgramUniformMatrix3x2fvEXT                   C.GPPROGRAMUNIFORMMATRIX3X2FVEXT
-	gpProgramUniformMatrix3x4fv                      C.GPPROGRAMUNIFORMMATRIX3X4FV
 	gpProgramUniformMatrix3x4fvEXT                   C.GPPROGRAMUNIFORMMATRIX3X4FVEXT
-	gpProgramUniformMatrix4fv                        C.GPPROGRAMUNIFORMMATRIX4FV
 	gpProgramUniformMatrix4fvEXT                     C.GPPROGRAMUNIFORMMATRIX4FVEXT
-	gpProgramUniformMatrix4x2fv                      C.GPPROGRAMUNIFORMMATRIX4X2FV
 	gpProgramUniformMatrix4x2fvEXT                   C.GPPROGRAMUNIFORMMATRIX4X2FVEXT
-	gpProgramUniformMatrix4x3fv                      C.GPPROGRAMUNIFORMMATRIX4X3FV
 	gpProgramUniformMatrix4x3fvEXT                   C.GPPROGRAMUNIFORMMATRIX4X3FVEXT
 	gpPushDebugGroup                                 C.GPPUSHDEBUGGROUP
 	gpPushDebugGroupKHR                              C.GPPUSHDEBUGGROUPKHR
@@ -6408,7 +5904,6 @@ var (
 	gpResolveMultisampleFramebufferAPPLE             C.GPRESOLVEMULTISAMPLEFRAMEBUFFERAPPLE
 	gpResumeTransformFeedback                        C.GPRESUMETRANSFORMFEEDBACK
 	gpSampleCoverage                                 C.GPSAMPLECOVERAGE
-	gpSampleMaski                                    C.GPSAMPLEMASKI
 	gpSamplerParameterIivEXT                         C.GPSAMPLERPARAMETERIIVEXT
 	gpSamplerParameterIivOES                         C.GPSAMPLERPARAMETERIIVOES
 	gpSamplerParameterIuivEXT                        C.GPSAMPLERPARAMETERIUIVEXT
@@ -6480,7 +5975,6 @@ var (
 	gpTexStorage1DEXT                                C.GPTEXSTORAGE1DEXT
 	gpTexStorage2D                                   C.GPTEXSTORAGE2D
 	gpTexStorage2DEXT                                C.GPTEXSTORAGE2DEXT
-	gpTexStorage2DMultisample                        C.GPTEXSTORAGE2DMULTISAMPLE
 	gpTexStorage3D                                   C.GPTEXSTORAGE3D
 	gpTexStorage3DEXT                                C.GPTEXSTORAGE3DEXT
 	gpTexStorage3DMultisampleOES                     C.GPTEXSTORAGE3DMULTISAMPLEOES
@@ -6570,11 +6064,9 @@ var (
 	gpUnmapBuffer                                    C.GPUNMAPBUFFER
 	gpUnmapBufferOES                                 C.GPUNMAPBUFFEROES
 	gpUseProgram                                     C.GPUSEPROGRAM
-	gpUseProgramStages                               C.GPUSEPROGRAMSTAGES
 	gpUseProgramStagesEXT                            C.GPUSEPROGRAMSTAGESEXT
 	gpUseShaderProgramEXT                            C.GPUSESHADERPROGRAMEXT
 	gpValidateProgram                                C.GPVALIDATEPROGRAM
-	gpValidateProgramPipeline                        C.GPVALIDATEPROGRAMPIPELINE
 	gpValidateProgramPipelineEXT                     C.GPVALIDATEPROGRAMPIPELINEEXT
 	gpVertexAttrib1f                                 C.GPVERTEXATTRIB1F
 	gpVertexAttrib1fv                                C.GPVERTEXATTRIB1FV
@@ -6584,20 +6076,16 @@ var (
 	gpVertexAttrib3fv                                C.GPVERTEXATTRIB3FV
 	gpVertexAttrib4f                                 C.GPVERTEXATTRIB4F
 	gpVertexAttrib4fv                                C.GPVERTEXATTRIB4FV
-	gpVertexAttribBinding                            C.GPVERTEXATTRIBBINDING
 	gpVertexAttribDivisor                            C.GPVERTEXATTRIBDIVISOR
 	gpVertexAttribDivisorANGLE                       C.GPVERTEXATTRIBDIVISORANGLE
 	gpVertexAttribDivisorEXT                         C.GPVERTEXATTRIBDIVISOREXT
 	gpVertexAttribDivisorNV                          C.GPVERTEXATTRIBDIVISORNV
-	gpVertexAttribFormat                             C.GPVERTEXATTRIBFORMAT
 	gpVertexAttribI4i                                C.GPVERTEXATTRIBI4I
 	gpVertexAttribI4iv                               C.GPVERTEXATTRIBI4IV
 	gpVertexAttribI4ui                               C.GPVERTEXATTRIBI4UI
 	gpVertexAttribI4uiv                              C.GPVERTEXATTRIBI4UIV
-	gpVertexAttribIFormat                            C.GPVERTEXATTRIBIFORMAT
 	gpVertexAttribIPointer                           C.GPVERTEXATTRIBIPOINTER
 	gpVertexAttribPointer                            C.GPVERTEXATTRIBPOINTER
-	gpVertexBindingDivisor                           C.GPVERTEXBINDINGDIVISOR
 	gpViewport                                       C.GPVIEWPORT
 	gpViewportArrayvNV                               C.GPVIEWPORTARRAYVNV
 	gpViewportArrayvOES                              C.GPVIEWPORTARRAYVOES
@@ -6628,11 +6116,6 @@ func AcquireKeyedMutexWin32EXT(memory uint32, key uint64, timeout uint32) bool {
 }
 func ActiveProgramEXT(program uint32) {
 	C.glowActiveProgramEXT(gpActiveProgramEXT, (C.GLuint)(program))
-}
-
-// set the active program object for a program pipeline object
-func ActiveShaderProgram(pipeline uint32, program uint32) {
-	C.glowActiveShaderProgram(gpActiveShaderProgram, (C.GLuint)(pipeline), (C.GLuint)(program))
 }
 func ActiveShaderProgramEXT(pipeline uint32, program uint32) {
 	C.glowActiveShaderProgramEXT(gpActiveShaderProgramEXT, (C.GLuint)(pipeline), (C.GLuint)(program))
@@ -6706,16 +6189,6 @@ func BindFragDataLocationIndexedEXT(program uint32, colorNumber uint32, index ui
 func BindFramebuffer(target uint32, framebuffer uint32) {
 	C.glowBindFramebuffer(gpBindFramebuffer, (C.GLenum)(target), (C.GLuint)(framebuffer))
 }
-
-// bind a level of a texture to an image unit
-func BindImageTexture(unit uint32, texture uint32, level int32, layered bool, layer int32, access uint32, format uint32) {
-	C.glowBindImageTexture(gpBindImageTexture, (C.GLuint)(unit), (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(boolToInt(layered)), (C.GLint)(layer), (C.GLenum)(access), (C.GLenum)(format))
-}
-
-// bind a program pipeline to the current context
-func BindProgramPipeline(pipeline uint32) {
-	C.glowBindProgramPipeline(gpBindProgramPipeline, (C.GLuint)(pipeline))
-}
 func BindProgramPipelineEXT(pipeline uint32) {
 	C.glowBindProgramPipelineEXT(gpBindProgramPipelineEXT, (C.GLuint)(pipeline))
 }
@@ -6749,11 +6222,6 @@ func BindVertexArray(array uint32) {
 }
 func BindVertexArrayOES(array uint32) {
 	C.glowBindVertexArrayOES(gpBindVertexArrayOES, (C.GLuint)(array))
-}
-
-// bind a buffer to a vertex buffer bind point
-func BindVertexBuffer(bindingindex uint32, buffer uint32, offset int, stride int32) {
-	C.glowBindVertexBuffer(gpBindVertexBuffer, (C.GLuint)(bindingindex), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizei)(stride))
 }
 func BlendBarrierKHR() {
 	C.glowBlendBarrierKHR(gpBlendBarrierKHR)
@@ -7044,12 +6512,6 @@ func CreateShaderProgramEXT(xtype uint32, xstring *uint8) uint32 {
 	ret := C.glowCreateShaderProgramEXT(gpCreateShaderProgramEXT, (C.GLenum)(xtype), (*C.GLchar)(unsafe.Pointer(xstring)))
 	return (uint32)(ret)
 }
-
-// create a stand-alone program from an array of null-terminated source code strings
-func CreateShaderProgramv(xtype uint32, count int32, strings **uint8) uint32 {
-	ret := C.glowCreateShaderProgramv(gpCreateShaderProgramv, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
-	return (uint32)(ret)
-}
 func CreateShaderProgramvEXT(xtype uint32, count int32, strings **uint8) uint32 {
 	ret := C.glowCreateShaderProgramvEXT(gpCreateShaderProgramvEXT, (C.GLenum)(xtype), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings)))
 	return (uint32)(ret)
@@ -7114,11 +6576,6 @@ func DeletePerfQueryINTEL(queryHandle uint32) {
 // Deletes a program object
 func DeleteProgram(program uint32) {
 	C.glowDeleteProgram(gpDeleteProgram, (C.GLuint)(program))
-}
-
-// delete program pipeline objects
-func DeleteProgramPipelines(n int32, pipelines *uint32) {
-	C.glowDeleteProgramPipelines(gpDeleteProgramPipelines, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
 func DeleteProgramPipelinesEXT(n int32, pipelines *uint32) {
 	C.glowDeleteProgramPipelinesEXT(gpDeleteProgramPipelinesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
@@ -7231,24 +6688,9 @@ func DiscardFramebufferEXT(target uint32, numAttachments int32, attachments *uin
 	C.glowDiscardFramebufferEXT(gpDiscardFramebufferEXT, (C.GLenum)(target), (C.GLsizei)(numAttachments), (*C.GLenum)(unsafe.Pointer(attachments)))
 }
 
-// launch one or more compute work groups
-func DispatchCompute(num_groups_x uint32, num_groups_y uint32, num_groups_z uint32) {
-	C.glowDispatchCompute(gpDispatchCompute, (C.GLuint)(num_groups_x), (C.GLuint)(num_groups_y), (C.GLuint)(num_groups_z))
-}
-
-// launch one or more compute work groups using parameters stored in a buffer
-func DispatchComputeIndirect(indirect int) {
-	C.glowDispatchComputeIndirect(gpDispatchComputeIndirect, (C.GLintptr)(indirect))
-}
-
 // render primitives from array data
 func DrawArrays(mode uint32, first int32, count int32) {
 	C.glowDrawArrays(gpDrawArrays, (C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count))
-}
-
-// render primitives from array data, taking parameters from memory
-func DrawArraysIndirect(mode uint32, indirect unsafe.Pointer) {
-	C.glowDrawArraysIndirect(gpDrawArraysIndirect, (C.GLenum)(mode), indirect)
 }
 
 // draw multiple instances of a range of elements
@@ -7294,11 +6736,6 @@ func DrawElementsBaseVertexEXT(mode uint32, count int32, xtype uint32, indices u
 }
 func DrawElementsBaseVertexOES(mode uint32, count int32, xtype uint32, indices unsafe.Pointer, basevertex int32) {
 	C.glowDrawElementsBaseVertexOES(gpDrawElementsBaseVertexOES, (C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(xtype), indices, (C.GLint)(basevertex))
-}
-
-// render indexed primitives from array data, taking parameters from memory
-func DrawElementsIndirect(mode uint32, xtype uint32, indirect unsafe.Pointer) {
-	C.glowDrawElementsIndirect(gpDrawElementsIndirect, (C.GLenum)(mode), (C.GLenum)(xtype), indirect)
 }
 
 // draw multiple instances of a set of elements
@@ -7501,11 +6938,6 @@ func FramebufferFoveationConfigQCOM(framebuffer uint32, numLayers uint32, focalP
 func FramebufferFoveationParametersQCOM(framebuffer uint32, layer uint32, focalPoint uint32, focalX float32, focalY float32, gainX float32, gainY float32, foveaArea float32) {
 	C.glowFramebufferFoveationParametersQCOM(gpFramebufferFoveationParametersQCOM, (C.GLuint)(framebuffer), (C.GLuint)(layer), (C.GLuint)(focalPoint), (C.GLfloat)(focalX), (C.GLfloat)(focalY), (C.GLfloat)(gainX), (C.GLfloat)(gainY), (C.GLfloat)(foveaArea))
 }
-
-// set a named parameter of a framebuffer object
-func FramebufferParameteri(target uint32, pname uint32, param int32) {
-	C.glowFramebufferParameteri(gpFramebufferParameteri, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
-}
 func FramebufferParameteriMESA(target uint32, pname uint32, param int32) {
 	C.glowFramebufferParameteriMESA(gpFramebufferParameteriMESA, (C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
@@ -7581,11 +7013,6 @@ func GenPathsNV(xrange int32) uint32 {
 }
 func GenPerfMonitorsAMD(n int32, monitors *uint32) {
 	C.glowGenPerfMonitorsAMD(gpGenPerfMonitorsAMD, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(monitors)))
-}
-
-// reserve program pipeline object names
-func GenProgramPipelines(n int32, pipelines *uint32) {
-	C.glowGenProgramPipelines(gpGenProgramPipelines, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
 }
 func GenProgramPipelinesEXT(n int32, pipelines *uint32) {
 	C.glowGenProgramPipelinesEXT(gpGenProgramPipelinesEXT, (C.GLsizei)(n), (*C.GLuint)(unsafe.Pointer(pipelines)))
@@ -7670,9 +7097,6 @@ func GetAttribLocation(program uint32, name *uint8) int32 {
 	ret := C.glowGetAttribLocation(gpGetAttribLocation, (C.GLuint)(program), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-func GetBooleani_v(target uint32, index uint32, data *bool) {
-	C.glowGetBooleani_v(gpGetBooleani_v, (C.GLenum)(target), (C.GLuint)(index), (*C.GLboolean)(unsafe.Pointer(data)))
-}
 func GetBooleanv(pname uint32, data *bool) {
 	C.glowGetBooleanv(gpGetBooleanv, (C.GLenum)(pname), (*C.GLboolean)(unsafe.Pointer(data)))
 }
@@ -7749,11 +7173,6 @@ func GetFragDataLocation(program uint32, name *uint8) int32 {
 func GetFramebufferAttachmentParameteriv(target uint32, attachment uint32, pname uint32, params *int32) {
 	C.glowGetFramebufferAttachmentParameteriv(gpGetFramebufferAttachmentParameteriv, (C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
-
-// retrieve a named parameter from a framebuffer
-func GetFramebufferParameteriv(target uint32, pname uint32, params *int32) {
-	C.glowGetFramebufferParameteriv(gpGetFramebufferParameteriv, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
 func GetFramebufferParameterivMESA(target uint32, pname uint32, params *int32) {
 	C.glowGetFramebufferParameterivMESA(gpGetFramebufferParameterivMESA, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -7813,11 +7232,6 @@ func GetMemoryObjectDetachedResourcesuivNV(memory uint32, pname uint32, first in
 }
 func GetMemoryObjectParameterivEXT(memoryObject uint32, pname uint32, params *int32) {
 	C.glowGetMemoryObjectParameterivEXT(gpGetMemoryObjectParameterivEXT, (C.GLuint)(memoryObject), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-
-// retrieve the location of a sample
-func GetMultisamplefv(pname uint32, index uint32, val *float32) {
-	C.glowGetMultisamplefv(gpGetMultisamplefv, (C.GLenum)(pname), (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(val)))
 }
 func GetNextPerfQueryIdINTEL(queryId uint32, nextQueryId *uint32) {
 	C.glowGetNextPerfQueryIdINTEL(gpGetNextPerfQueryIdINTEL, (C.GLuint)(queryId), (*C.GLuint)(unsafe.Pointer(nextQueryId)))
@@ -7920,49 +7334,18 @@ func GetProgramBinaryOES(program uint32, bufSize int32, length *int32, binaryFor
 func GetProgramInfoLog(program uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramInfoLog(gpGetProgramInfoLog, (C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-func GetProgramInterfaceiv(program uint32, programInterface uint32, pname uint32, params *int32) {
-	C.glowGetProgramInterfaceiv(gpGetProgramInterfaceiv, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-
-// retrieve the info log string from a program pipeline object
-func GetProgramPipelineInfoLog(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
-	C.glowGetProgramPipelineInfoLog(gpGetProgramPipelineInfoLog, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
-}
 func GetProgramPipelineInfoLogEXT(pipeline uint32, bufSize int32, length *int32, infoLog *uint8) {
 	C.glowGetProgramPipelineInfoLogEXT(gpGetProgramPipelineInfoLogEXT, (C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(infoLog)))
 }
-func GetProgramPipelineiv(pipeline uint32, pname uint32, params *int32) {
-	C.glowGetProgramPipelineiv(gpGetProgramPipelineiv, (C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
 func GetProgramPipelineivEXT(pipeline uint32, pname uint32, params *int32) {
 	C.glowGetProgramPipelineivEXT(gpGetProgramPipelineivEXT, (C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
-}
-
-// query the index of a named resource within a program
-func GetProgramResourceIndex(program uint32, programInterface uint32, name *uint8) uint32 {
-	ret := C.glowGetProgramResourceIndex(gpGetProgramResourceIndex, (C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(unsafe.Pointer(name)))
-	return (uint32)(ret)
-}
-
-// query the location of a named resource within a program
-func GetProgramResourceLocation(program uint32, programInterface uint32, name *uint8) int32 {
-	ret := C.glowGetProgramResourceLocation(gpGetProgramResourceLocation, (C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(unsafe.Pointer(name)))
-	return (int32)(ret)
 }
 func GetProgramResourceLocationIndexEXT(program uint32, programInterface uint32, name *uint8) int32 {
 	ret := C.glowGetProgramResourceLocationIndexEXT(gpGetProgramResourceLocationIndexEXT, (C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(unsafe.Pointer(name)))
 	return (int32)(ret)
 }
-
-// query the name of an indexed resource within a program
-func GetProgramResourceName(program uint32, programInterface uint32, index uint32, bufSize int32, length *int32, name *uint8) {
-	C.glowGetProgramResourceName(gpGetProgramResourceName, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLchar)(unsafe.Pointer(name)))
-}
 func GetProgramResourcefvNV(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, count int32, length *int32, params *float32) {
 	C.glowGetProgramResourcefvNV(gpGetProgramResourcefvNV, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(unsafe.Pointer(props)), (C.GLsizei)(count), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLfloat)(unsafe.Pointer(params)))
-}
-func GetProgramResourceiv(program uint32, programInterface uint32, index uint32, propCount int32, props *uint32, count int32, length *int32, params *int32) {
-	C.glowGetProgramResourceiv(gpGetProgramResourceiv, (C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(unsafe.Pointer(props)), (C.GLsizei)(count), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(params)))
 }
 
 // Returns a parameter from a program object
@@ -8066,12 +7449,6 @@ func GetSynciv(sync uintptr, pname uint32, count int32, length *int32, values *i
 }
 func GetSyncivAPPLE(sync uintptr, pname uint32, count int32, length *int32, values *int32) {
 	C.glowGetSyncivAPPLE(gpGetSyncivAPPLE, (C.GLsync)(sync), (C.GLenum)(pname), (C.GLsizei)(count), (*C.GLsizei)(unsafe.Pointer(length)), (*C.GLint)(unsafe.Pointer(values)))
-}
-func GetTexLevelParameterfv(target uint32, level int32, pname uint32, params *float32) {
-	C.glowGetTexLevelParameterfv(gpGetTexLevelParameterfv, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(unsafe.Pointer(params)))
-}
-func GetTexLevelParameteriv(target uint32, level int32, pname uint32, params *int32) {
-	C.glowGetTexLevelParameteriv(gpGetTexLevelParameteriv, (C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
 func GetTexParameterIivEXT(target uint32, pname uint32, params *int32) {
 	C.glowGetTexParameterIivEXT(gpGetTexParameterIivEXT, (C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
@@ -8309,12 +7686,6 @@ func IsProgram(program uint32) bool {
 	ret := C.glowIsProgram(gpIsProgram, (C.GLuint)(program))
 	return ret == TRUE
 }
-
-// determine if a name corresponds to a program pipeline object
-func IsProgramPipeline(pipeline uint32) bool {
-	ret := C.glowIsProgramPipeline(gpIsProgramPipeline, (C.GLuint)(pipeline))
-	return ret == TRUE
-}
 func IsProgramPipelineEXT(pipeline uint32) bool {
 	ret := C.glowIsProgramPipelineEXT(gpIsProgramPipelineEXT, (C.GLuint)(pipeline))
 	return ret == TRUE
@@ -8504,14 +7875,6 @@ func MatrixTranslatefEXT(mode uint32, x float32, y float32, z float32) {
 func MaxShaderCompilerThreadsKHR(count uint32) {
 	C.glowMaxShaderCompilerThreadsKHR(gpMaxShaderCompilerThreadsKHR, (C.GLuint)(count))
 }
-
-// defines a barrier ordering memory transactions
-func MemoryBarrier(barriers uint32) {
-	C.glowMemoryBarrier(gpMemoryBarrier, (C.GLbitfield)(barriers))
-}
-func MemoryBarrierByRegion(barriers uint32) {
-	C.glowMemoryBarrierByRegion(gpMemoryBarrierByRegion, (C.GLbitfield)(barriers))
-}
 func MemoryObjectParameterivEXT(memoryObject uint32, pname uint32, params *int32) {
 	C.glowMemoryObjectParameterivEXT(gpMemoryObjectParameterivEXT, (C.GLuint)(memoryObject), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(params)))
 }
@@ -8699,26 +8062,11 @@ func ProgramParameteriEXT(program uint32, pname uint32, value int32) {
 func ProgramPathFragmentInputGenNV(program uint32, location int32, genMode uint32, components int32, coeffs *float32) {
 	C.glowProgramPathFragmentInputGenNV(gpProgramPathFragmentInputGenNV, (C.GLuint)(program), (C.GLint)(location), (C.GLenum)(genMode), (C.GLint)(components), (*C.GLfloat)(unsafe.Pointer(coeffs)))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform1f(program uint32, location int32, v0 float32) {
-	C.glowProgramUniform1f(gpProgramUniform1f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
-}
 func ProgramUniform1fEXT(program uint32, location int32, v0 float32) {
 	C.glowProgramUniform1fEXT(gpProgramUniform1fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform1fv(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform1fv(gpProgramUniform1fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniform1fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform1fvEXT(gpProgramUniform1fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform1i(program uint32, location int32, v0 int32) {
-	C.glowProgramUniform1i(gpProgramUniform1i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
 }
 func ProgramUniform1i64NV(program uint32, location int32, x int64) {
 	C.glowProgramUniform1i64NV(gpProgramUniform1i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x))
@@ -8729,18 +8077,8 @@ func ProgramUniform1i64vNV(program uint32, location int32, count int32, value *i
 func ProgramUniform1iEXT(program uint32, location int32, v0 int32) {
 	C.glowProgramUniform1iEXT(gpProgramUniform1iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform1iv(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform1iv(gpProgramUniform1iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
 func ProgramUniform1ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform1ivEXT(gpProgramUniform1ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform1ui(program uint32, location int32, v0 uint32) {
-	C.glowProgramUniform1ui(gpProgramUniform1ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
 }
 func ProgramUniform1ui64NV(program uint32, location int32, x uint64) {
 	C.glowProgramUniform1ui64NV(gpProgramUniform1ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x))
@@ -8751,34 +8089,14 @@ func ProgramUniform1ui64vNV(program uint32, location int32, count int32, value *
 func ProgramUniform1uiEXT(program uint32, location int32, v0 uint32) {
 	C.glowProgramUniform1uiEXT(gpProgramUniform1uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform1uiv(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform1uiv(gpProgramUniform1uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
 func ProgramUniform1uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform1uivEXT(gpProgramUniform1uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform2f(program uint32, location int32, v0 float32, v1 float32) {
-	C.glowProgramUniform2f(gpProgramUniform2f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
 func ProgramUniform2fEXT(program uint32, location int32, v0 float32, v1 float32) {
 	C.glowProgramUniform2fEXT(gpProgramUniform2fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform2fv(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform2fv(gpProgramUniform2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniform2fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform2fvEXT(gpProgramUniform2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform2i(program uint32, location int32, v0 int32, v1 int32) {
-	C.glowProgramUniform2i(gpProgramUniform2i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
 func ProgramUniform2i64NV(program uint32, location int32, x int64, y int64) {
 	C.glowProgramUniform2i64NV(gpProgramUniform2i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y))
@@ -8789,18 +8107,8 @@ func ProgramUniform2i64vNV(program uint32, location int32, count int32, value *i
 func ProgramUniform2iEXT(program uint32, location int32, v0 int32, v1 int32) {
 	C.glowProgramUniform2iEXT(gpProgramUniform2iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform2iv(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform2iv(gpProgramUniform2iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
 func ProgramUniform2ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform2ivEXT(gpProgramUniform2ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform2ui(program uint32, location int32, v0 uint32, v1 uint32) {
-	C.glowProgramUniform2ui(gpProgramUniform2ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
 func ProgramUniform2ui64NV(program uint32, location int32, x uint64, y uint64) {
 	C.glowProgramUniform2ui64NV(gpProgramUniform2ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y))
@@ -8811,34 +8119,14 @@ func ProgramUniform2ui64vNV(program uint32, location int32, count int32, value *
 func ProgramUniform2uiEXT(program uint32, location int32, v0 uint32, v1 uint32) {
 	C.glowProgramUniform2uiEXT(gpProgramUniform2uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform2uiv(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform2uiv(gpProgramUniform2uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
 func ProgramUniform2uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform2uivEXT(gpProgramUniform2uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform3f(program uint32, location int32, v0 float32, v1 float32, v2 float32) {
-	C.glowProgramUniform3f(gpProgramUniform3f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
 func ProgramUniform3fEXT(program uint32, location int32, v0 float32, v1 float32, v2 float32) {
 	C.glowProgramUniform3fEXT(gpProgramUniform3fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform3fv(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform3fv(gpProgramUniform3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniform3fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform3fvEXT(gpProgramUniform3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform3i(program uint32, location int32, v0 int32, v1 int32, v2 int32) {
-	C.glowProgramUniform3i(gpProgramUniform3i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
 func ProgramUniform3i64NV(program uint32, location int32, x int64, y int64, z int64) {
 	C.glowProgramUniform3i64NV(gpProgramUniform3i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z))
@@ -8849,18 +8137,8 @@ func ProgramUniform3i64vNV(program uint32, location int32, count int32, value *i
 func ProgramUniform3iEXT(program uint32, location int32, v0 int32, v1 int32, v2 int32) {
 	C.glowProgramUniform3iEXT(gpProgramUniform3iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform3iv(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform3iv(gpProgramUniform3iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
 func ProgramUniform3ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform3ivEXT(gpProgramUniform3ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform3ui(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32) {
-	C.glowProgramUniform3ui(gpProgramUniform3ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
 func ProgramUniform3ui64NV(program uint32, location int32, x uint64, y uint64, z uint64) {
 	C.glowProgramUniform3ui64NV(gpProgramUniform3ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z))
@@ -8871,34 +8149,14 @@ func ProgramUniform3ui64vNV(program uint32, location int32, count int32, value *
 func ProgramUniform3uiEXT(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32) {
 	C.glowProgramUniform3uiEXT(gpProgramUniform3uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform3uiv(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform3uiv(gpProgramUniform3uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
 func ProgramUniform3uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform3uivEXT(gpProgramUniform3uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform4f(program uint32, location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
-	C.glowProgramUniform4f(gpProgramUniform4f, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
 func ProgramUniform4fEXT(program uint32, location int32, v0 float32, v1 float32, v2 float32, v3 float32) {
 	C.glowProgramUniform4fEXT(gpProgramUniform4fEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform4fv(program uint32, location int32, count int32, value *float32) {
-	C.glowProgramUniform4fv(gpProgramUniform4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniform4fvEXT(program uint32, location int32, count int32, value *float32) {
 	C.glowProgramUniform4fvEXT(gpProgramUniform4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform4i(program uint32, location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
-	C.glowProgramUniform4i(gpProgramUniform4i, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
 func ProgramUniform4i64NV(program uint32, location int32, x int64, y int64, z int64, w int64) {
 	C.glowProgramUniform4i64NV(gpProgramUniform4i64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLint64EXT)(x), (C.GLint64EXT)(y), (C.GLint64EXT)(z), (C.GLint64EXT)(w))
@@ -8909,18 +8167,8 @@ func ProgramUniform4i64vNV(program uint32, location int32, count int32, value *i
 func ProgramUniform4iEXT(program uint32, location int32, v0 int32, v1 int32, v2 int32, v3 int32) {
 	C.glowProgramUniform4iEXT(gpProgramUniform4iEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform4iv(program uint32, location int32, count int32, value *int32) {
-	C.glowProgramUniform4iv(gpProgramUniform4iv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
 func ProgramUniform4ivEXT(program uint32, location int32, count int32, value *int32) {
 	C.glowProgramUniform4ivEXT(gpProgramUniform4ivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform4ui(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
-	C.glowProgramUniform4ui(gpProgramUniform4ui, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
 func ProgramUniform4ui64NV(program uint32, location int32, x uint64, y uint64, z uint64, w uint64) {
 	C.glowProgramUniform4ui64NV(gpProgramUniform4ui64NV, (C.GLuint)(program), (C.GLint)(location), (C.GLuint64EXT)(x), (C.GLuint64EXT)(y), (C.GLuint64EXT)(z), (C.GLuint64EXT)(w))
@@ -8930,11 +8178,6 @@ func ProgramUniform4ui64vNV(program uint32, location int32, count int32, value *
 }
 func ProgramUniform4uiEXT(program uint32, location int32, v0 uint32, v1 uint32, v2 uint32, v3 uint32) {
 	C.glowProgramUniform4uiEXT(gpProgramUniform4uiEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniform4uiv(program uint32, location int32, count int32, value *uint32) {
-	C.glowProgramUniform4uiv(gpProgramUniform4uiv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
 }
 func ProgramUniform4uivEXT(program uint32, location int32, count int32, value *uint32) {
 	C.glowProgramUniform4uivEXT(gpProgramUniform4uivEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(unsafe.Pointer(value)))
@@ -8951,74 +8194,29 @@ func ProgramUniformHandleui64vIMG(program uint32, location int32, count int32, v
 func ProgramUniformHandleui64vNV(program uint32, location int32, count int32, values *uint64) {
 	C.glowProgramUniformHandleui64vNV(gpProgramUniformHandleui64vNV, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(unsafe.Pointer(values)))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix2fv(gpProgramUniformMatrix2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2fvEXT(gpProgramUniformMatrix2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix2x3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix2x3fv(gpProgramUniformMatrix2x3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix2x3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x3fvEXT(gpProgramUniformMatrix2x3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix2x4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix2x4fv(gpProgramUniformMatrix2x4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix2x4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix2x4fvEXT(gpProgramUniformMatrix2x4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix3fv(gpProgramUniformMatrix3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3fvEXT(gpProgramUniformMatrix3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix3x2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix3x2fv(gpProgramUniformMatrix3x2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix3x2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x2fvEXT(gpProgramUniformMatrix3x2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix3x4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix3x4fv(gpProgramUniformMatrix3x4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix3x4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix3x4fvEXT(gpProgramUniformMatrix3x4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix4fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix4fv(gpProgramUniformMatrix4fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix4fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4fvEXT(gpProgramUniformMatrix4fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix4x2fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix4x2fv(gpProgramUniformMatrix4x2fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
 func ProgramUniformMatrix4x2fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x2fvEXT(gpProgramUniformMatrix4x2fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
-}
-
-// Specify the value of a uniform variable for a specified program object
-func ProgramUniformMatrix4x3fv(program uint32, location int32, count int32, transpose bool, value *float32) {
-	C.glowProgramUniformMatrix4x3fv(gpProgramUniformMatrix4x3fv, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
 }
 func ProgramUniformMatrix4x3fvEXT(program uint32, location int32, count int32, transpose bool, value *float32) {
 	C.glowProgramUniformMatrix4x3fvEXT(gpProgramUniformMatrix4x3fvEXT, (C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(boolToInt(transpose)), (*C.GLfloat)(unsafe.Pointer(value)))
@@ -9122,11 +8320,6 @@ func ResumeTransformFeedback() {
 // specify multisample coverage parameters
 func SampleCoverage(value float32, invert bool) {
 	C.glowSampleCoverage(gpSampleCoverage, (C.GLfloat)(value), (C.GLboolean)(boolToInt(invert)))
-}
-
-// set the value of a sub-word of the sample mask
-func SampleMaski(maskNumber uint32, mask uint32) {
-	C.glowSampleMaski(gpSampleMaski, (C.GLuint)(maskNumber), (C.GLbitfield)(mask))
 }
 func SamplerParameterIivEXT(sampler uint32, pname uint32, param *int32) {
 	C.glowSamplerParameterIivEXT(gpSamplerParameterIivEXT, (C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(unsafe.Pointer(param)))
@@ -9365,11 +8558,6 @@ func TexStorage2D(target uint32, levels int32, internalformat uint32, width int3
 }
 func TexStorage2DEXT(target uint32, levels int32, internalformat uint32, width int32, height int32) {
 	C.glowTexStorage2DEXT(gpTexStorage2DEXT, (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
-}
-
-// specify storage for a two-dimensional multisample texture
-func TexStorage2DMultisample(target uint32, samples int32, internalformat uint32, width int32, height int32, fixedsamplelocations bool) {
-	C.glowTexStorage2DMultisample(gpTexStorage2DMultisample, (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(boolToInt(fixedsamplelocations)))
 }
 
 // simultaneously specify storage for all levels of a three-dimensional, two-dimensional array or cube-map array texture
@@ -9720,11 +8908,6 @@ func UnmapBufferOES(target uint32) bool {
 func UseProgram(program uint32) {
 	C.glowUseProgram(gpUseProgram, (C.GLuint)(program))
 }
-
-// bind stages of a program object to a program pipeline
-func UseProgramStages(pipeline uint32, stages uint32, program uint32) {
-	C.glowUseProgramStages(gpUseProgramStages, (C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
-}
 func UseProgramStagesEXT(pipeline uint32, stages uint32, program uint32) {
 	C.glowUseProgramStagesEXT(gpUseProgramStagesEXT, (C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
 }
@@ -9735,11 +8918,6 @@ func UseShaderProgramEXT(xtype uint32, program uint32) {
 // Validates a program object
 func ValidateProgram(program uint32) {
 	C.glowValidateProgram(gpValidateProgram, (C.GLuint)(program))
-}
-
-// validate a program pipeline object against current GL state
-func ValidateProgramPipeline(pipeline uint32) {
-	C.glowValidateProgramPipeline(gpValidateProgramPipeline, (C.GLuint)(pipeline))
 }
 func ValidateProgramPipelineEXT(pipeline uint32) {
 	C.glowValidateProgramPipelineEXT(gpValidateProgramPipelineEXT, (C.GLuint)(pipeline))
@@ -9769,11 +8947,6 @@ func VertexAttrib4fv(index uint32, v *float32) {
 	C.glowVertexAttrib4fv(gpVertexAttrib4fv, (C.GLuint)(index), (*C.GLfloat)(unsafe.Pointer(v)))
 }
 
-// associate a vertex attribute and a vertex buffer binding for a vertex array object
-func VertexAttribBinding(attribindex uint32, bindingindex uint32) {
-	C.glowVertexAttribBinding(gpVertexAttribBinding, (C.GLuint)(attribindex), (C.GLuint)(bindingindex))
-}
-
 // modify the rate at which generic vertex attributes advance during instanced rendering
 func VertexAttribDivisor(index uint32, divisor uint32) {
 	C.glowVertexAttribDivisor(gpVertexAttribDivisor, (C.GLuint)(index), (C.GLuint)(divisor))
@@ -9787,11 +8960,6 @@ func VertexAttribDivisorEXT(index uint32, divisor uint32) {
 func VertexAttribDivisorNV(index uint32, divisor uint32) {
 	C.glowVertexAttribDivisorNV(gpVertexAttribDivisorNV, (C.GLuint)(index), (C.GLuint)(divisor))
 }
-
-// specify the organization of vertex arrays
-func VertexAttribFormat(attribindex uint32, size int32, xtype uint32, normalized bool, relativeoffset uint32) {
-	C.glowVertexAttribFormat(gpVertexAttribFormat, (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLuint)(relativeoffset))
-}
 func VertexAttribI4i(index uint32, x int32, y int32, z int32, w int32) {
 	C.glowVertexAttribI4i(gpVertexAttribI4i, (C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
@@ -9803,9 +8971,6 @@ func VertexAttribI4ui(index uint32, x uint32, y uint32, z uint32, w uint32) {
 }
 func VertexAttribI4uiv(index uint32, v *uint32) {
 	C.glowVertexAttribI4uiv(gpVertexAttribI4uiv, (C.GLuint)(index), (*C.GLuint)(unsafe.Pointer(v)))
-}
-func VertexAttribIFormat(attribindex uint32, size int32, xtype uint32, relativeoffset uint32) {
-	C.glowVertexAttribIFormat(gpVertexAttribIFormat, (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(xtype), (C.GLuint)(relativeoffset))
 }
 func VertexAttribIPointer(index uint32, size int32, xtype uint32, stride int32, pointer unsafe.Pointer) {
 	C.glowVertexAttribIPointer(gpVertexAttribIPointer, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLsizei)(stride), pointer)
@@ -9820,11 +8985,6 @@ func VertexAttribPointer(index uint32, size int32, xtype uint32, normalized bool
 }
 func VertexAttribPointerWithOffset(index uint32, size int32, xtype uint32, normalized bool, stride int32, offset uintptr) {
 	C.glowVertexAttribPointerWithOffset(gpVertexAttribPointer, (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(xtype), (C.GLboolean)(boolToInt(normalized)), (C.GLsizei)(stride), (C.uintptr_t)(offset))
-}
-
-// modify the rate at which generic vertex attributes     advance
-func VertexBindingDivisor(bindingindex uint32, divisor uint32) {
-	C.glowVertexBindingDivisor(gpVertexBindingDivisor, (C.GLuint)(bindingindex), (C.GLuint)(divisor))
 }
 
 // set the viewport
@@ -9905,10 +9065,6 @@ func Init() error {
 func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpAcquireKeyedMutexWin32EXT = (C.GPACQUIREKEYEDMUTEXWIN32EXT)(getProcAddr("glAcquireKeyedMutexWin32EXT"))
 	gpActiveProgramEXT = (C.GPACTIVEPROGRAMEXT)(getProcAddr("glActiveProgramEXT"))
-	gpActiveShaderProgram = (C.GPACTIVESHADERPROGRAM)(getProcAddr("glActiveShaderProgram"))
-	if gpActiveShaderProgram == nil {
-		return errors.New("glActiveShaderProgram")
-	}
 	gpActiveShaderProgramEXT = (C.GPACTIVESHADERPROGRAMEXT)(getProcAddr("glActiveShaderProgramEXT"))
 	gpActiveTexture = (C.GPACTIVETEXTURE)(getProcAddr("glActiveTexture"))
 	if gpActiveTexture == nil {
@@ -9954,14 +9110,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpBindFramebuffer == nil {
 		return errors.New("glBindFramebuffer")
 	}
-	gpBindImageTexture = (C.GPBINDIMAGETEXTURE)(getProcAddr("glBindImageTexture"))
-	if gpBindImageTexture == nil {
-		return errors.New("glBindImageTexture")
-	}
-	gpBindProgramPipeline = (C.GPBINDPROGRAMPIPELINE)(getProcAddr("glBindProgramPipeline"))
-	if gpBindProgramPipeline == nil {
-		return errors.New("glBindProgramPipeline")
-	}
 	gpBindProgramPipelineEXT = (C.GPBINDPROGRAMPIPELINEEXT)(getProcAddr("glBindProgramPipelineEXT"))
 	gpBindRenderbuffer = (C.GPBINDRENDERBUFFER)(getProcAddr("glBindRenderbuffer"))
 	if gpBindRenderbuffer == nil {
@@ -9985,10 +9133,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 		return errors.New("glBindVertexArray")
 	}
 	gpBindVertexArrayOES = (C.GPBINDVERTEXARRAYOES)(getProcAddr("glBindVertexArrayOES"))
-	gpBindVertexBuffer = (C.GPBINDVERTEXBUFFER)(getProcAddr("glBindVertexBuffer"))
-	if gpBindVertexBuffer == nil {
-		return errors.New("glBindVertexBuffer")
-	}
 	gpBlendBarrierKHR = (C.GPBLENDBARRIERKHR)(getProcAddr("glBlendBarrierKHR"))
 	gpBlendBarrierNV = (C.GPBLENDBARRIERNV)(getProcAddr("glBlendBarrierNV"))
 	gpBlendColor = (C.GPBLENDCOLOR)(getProcAddr("glBlendColor"))
@@ -10156,10 +9300,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 		return errors.New("glCreateShader")
 	}
 	gpCreateShaderProgramEXT = (C.GPCREATESHADERPROGRAMEXT)(getProcAddr("glCreateShaderProgramEXT"))
-	gpCreateShaderProgramv = (C.GPCREATESHADERPROGRAMV)(getProcAddr("glCreateShaderProgramv"))
-	if gpCreateShaderProgramv == nil {
-		return errors.New("glCreateShaderProgramv")
-	}
 	gpCreateShaderProgramvEXT = (C.GPCREATESHADERPROGRAMVEXT)(getProcAddr("glCreateShaderProgramvEXT"))
 	gpCullFace = (C.GPCULLFACE)(getProcAddr("glCullFace"))
 	if gpCullFace == nil {
@@ -10187,10 +9327,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDeleteProgram = (C.GPDELETEPROGRAM)(getProcAddr("glDeleteProgram"))
 	if gpDeleteProgram == nil {
 		return errors.New("glDeleteProgram")
-	}
-	gpDeleteProgramPipelines = (C.GPDELETEPROGRAMPIPELINES)(getProcAddr("glDeleteProgramPipelines"))
-	if gpDeleteProgramPipelines == nil {
-		return errors.New("glDeleteProgramPipelines")
 	}
 	gpDeleteProgramPipelinesEXT = (C.GPDELETEPROGRAMPIPELINESEXT)(getProcAddr("glDeleteProgramPipelinesEXT"))
 	gpDeleteQueries = (C.GPDELETEQUERIES)(getProcAddr("glDeleteQueries"))
@@ -10262,21 +9398,9 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpDisableiNV = (C.GPDISABLEINV)(getProcAddr("glDisableiNV"))
 	gpDisableiOES = (C.GPDISABLEIOES)(getProcAddr("glDisableiOES"))
 	gpDiscardFramebufferEXT = (C.GPDISCARDFRAMEBUFFEREXT)(getProcAddr("glDiscardFramebufferEXT"))
-	gpDispatchCompute = (C.GPDISPATCHCOMPUTE)(getProcAddr("glDispatchCompute"))
-	if gpDispatchCompute == nil {
-		return errors.New("glDispatchCompute")
-	}
-	gpDispatchComputeIndirect = (C.GPDISPATCHCOMPUTEINDIRECT)(getProcAddr("glDispatchComputeIndirect"))
-	if gpDispatchComputeIndirect == nil {
-		return errors.New("glDispatchComputeIndirect")
-	}
 	gpDrawArrays = (C.GPDRAWARRAYS)(getProcAddr("glDrawArrays"))
 	if gpDrawArrays == nil {
 		return errors.New("glDrawArrays")
-	}
-	gpDrawArraysIndirect = (C.GPDRAWARRAYSINDIRECT)(getProcAddr("glDrawArraysIndirect"))
-	if gpDrawArraysIndirect == nil {
-		return errors.New("glDrawArraysIndirect")
 	}
 	gpDrawArraysInstanced = (C.GPDRAWARRAYSINSTANCED)(getProcAddr("glDrawArraysInstanced"))
 	if gpDrawArraysInstanced == nil {
@@ -10299,10 +9423,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	}
 	gpDrawElementsBaseVertexEXT = (C.GPDRAWELEMENTSBASEVERTEXEXT)(getProcAddr("glDrawElementsBaseVertexEXT"))
 	gpDrawElementsBaseVertexOES = (C.GPDRAWELEMENTSBASEVERTEXOES)(getProcAddr("glDrawElementsBaseVertexOES"))
-	gpDrawElementsIndirect = (C.GPDRAWELEMENTSINDIRECT)(getProcAddr("glDrawElementsIndirect"))
-	if gpDrawElementsIndirect == nil {
-		return errors.New("glDrawElementsIndirect")
-	}
 	gpDrawElementsInstanced = (C.GPDRAWELEMENTSINSTANCED)(getProcAddr("glDrawElementsInstanced"))
 	if gpDrawElementsInstanced == nil {
 		return errors.New("glDrawElementsInstanced")
@@ -10391,10 +9511,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpFramebufferFetchBarrierQCOM = (C.GPFRAMEBUFFERFETCHBARRIERQCOM)(getProcAddr("glFramebufferFetchBarrierQCOM"))
 	gpFramebufferFoveationConfigQCOM = (C.GPFRAMEBUFFERFOVEATIONCONFIGQCOM)(getProcAddr("glFramebufferFoveationConfigQCOM"))
 	gpFramebufferFoveationParametersQCOM = (C.GPFRAMEBUFFERFOVEATIONPARAMETERSQCOM)(getProcAddr("glFramebufferFoveationParametersQCOM"))
-	gpFramebufferParameteri = (C.GPFRAMEBUFFERPARAMETERI)(getProcAddr("glFramebufferParameteri"))
-	if gpFramebufferParameteri == nil {
-		return errors.New("glFramebufferParameteri")
-	}
 	gpFramebufferParameteriMESA = (C.GPFRAMEBUFFERPARAMETERIMESA)(getProcAddr("glFramebufferParameteriMESA"))
 	gpFramebufferPixelLocalStorageSizeEXT = (C.GPFRAMEBUFFERPIXELLOCALSTORAGESIZEEXT)(getProcAddr("glFramebufferPixelLocalStorageSizeEXT"))
 	gpFramebufferRenderbuffer = (C.GPFRAMEBUFFERRENDERBUFFER)(getProcAddr("glFramebufferRenderbuffer"))
@@ -10434,10 +9550,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	}
 	gpGenPathsNV = (C.GPGENPATHSNV)(getProcAddr("glGenPathsNV"))
 	gpGenPerfMonitorsAMD = (C.GPGENPERFMONITORSAMD)(getProcAddr("glGenPerfMonitorsAMD"))
-	gpGenProgramPipelines = (C.GPGENPROGRAMPIPELINES)(getProcAddr("glGenProgramPipelines"))
-	if gpGenProgramPipelines == nil {
-		return errors.New("glGenProgramPipelines")
-	}
 	gpGenProgramPipelinesEXT = (C.GPGENPROGRAMPIPELINESEXT)(getProcAddr("glGenProgramPipelinesEXT"))
 	gpGenQueries = (C.GPGENQUERIES)(getProcAddr("glGenQueries"))
 	if gpGenQueries == nil {
@@ -10498,10 +9610,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpGetAttribLocation == nil {
 		return errors.New("glGetAttribLocation")
 	}
-	gpGetBooleani_v = (C.GPGETBOOLEANI_V)(getProcAddr("glGetBooleani_v"))
-	if gpGetBooleani_v == nil {
-		return errors.New("glGetBooleani_v")
-	}
 	gpGetBooleanv = (C.GPGETBOOLEANV)(getProcAddr("glGetBooleanv"))
 	if gpGetBooleanv == nil {
 		return errors.New("glGetBooleanv")
@@ -10545,10 +9653,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpGetFramebufferAttachmentParameteriv == nil {
 		return errors.New("glGetFramebufferAttachmentParameteriv")
 	}
-	gpGetFramebufferParameteriv = (C.GPGETFRAMEBUFFERPARAMETERIV)(getProcAddr("glGetFramebufferParameteriv"))
-	if gpGetFramebufferParameteriv == nil {
-		return errors.New("glGetFramebufferParameteriv")
-	}
 	gpGetFramebufferParameterivMESA = (C.GPGETFRAMEBUFFERPARAMETERIVMESA)(getProcAddr("glGetFramebufferParameterivMESA"))
 	gpGetFramebufferPixelLocalStorageSizeEXT = (C.GPGETFRAMEBUFFERPIXELLOCALSTORAGESIZEEXT)(getProcAddr("glGetFramebufferPixelLocalStorageSizeEXT"))
 	gpGetGraphicsResetStatus = (C.GPGETGRAPHICSRESETSTATUS)(getProcAddr("glGetGraphicsResetStatus"))
@@ -10581,10 +9685,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	}
 	gpGetMemoryObjectDetachedResourcesuivNV = (C.GPGETMEMORYOBJECTDETACHEDRESOURCESUIVNV)(getProcAddr("glGetMemoryObjectDetachedResourcesuivNV"))
 	gpGetMemoryObjectParameterivEXT = (C.GPGETMEMORYOBJECTPARAMETERIVEXT)(getProcAddr("glGetMemoryObjectParameterivEXT"))
-	gpGetMultisamplefv = (C.GPGETMULTISAMPLEFV)(getProcAddr("glGetMultisamplefv"))
-	if gpGetMultisamplefv == nil {
-		return errors.New("glGetMultisamplefv")
-	}
 	gpGetNextPerfQueryIdINTEL = (C.GPGETNEXTPERFQUERYIDINTEL)(getProcAddr("glGetNextPerfQueryIdINTEL"))
 	gpGetObjectLabel = (C.GPGETOBJECTLABEL)(getProcAddr("glGetObjectLabel"))
 	gpGetObjectLabelEXT = (C.GPGETOBJECTLABELEXT)(getProcAddr("glGetObjectLabelEXT"))
@@ -10621,38 +9721,10 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpGetProgramInfoLog == nil {
 		return errors.New("glGetProgramInfoLog")
 	}
-	gpGetProgramInterfaceiv = (C.GPGETPROGRAMINTERFACEIV)(getProcAddr("glGetProgramInterfaceiv"))
-	if gpGetProgramInterfaceiv == nil {
-		return errors.New("glGetProgramInterfaceiv")
-	}
-	gpGetProgramPipelineInfoLog = (C.GPGETPROGRAMPIPELINEINFOLOG)(getProcAddr("glGetProgramPipelineInfoLog"))
-	if gpGetProgramPipelineInfoLog == nil {
-		return errors.New("glGetProgramPipelineInfoLog")
-	}
 	gpGetProgramPipelineInfoLogEXT = (C.GPGETPROGRAMPIPELINEINFOLOGEXT)(getProcAddr("glGetProgramPipelineInfoLogEXT"))
-	gpGetProgramPipelineiv = (C.GPGETPROGRAMPIPELINEIV)(getProcAddr("glGetProgramPipelineiv"))
-	if gpGetProgramPipelineiv == nil {
-		return errors.New("glGetProgramPipelineiv")
-	}
 	gpGetProgramPipelineivEXT = (C.GPGETPROGRAMPIPELINEIVEXT)(getProcAddr("glGetProgramPipelineivEXT"))
-	gpGetProgramResourceIndex = (C.GPGETPROGRAMRESOURCEINDEX)(getProcAddr("glGetProgramResourceIndex"))
-	if gpGetProgramResourceIndex == nil {
-		return errors.New("glGetProgramResourceIndex")
-	}
-	gpGetProgramResourceLocation = (C.GPGETPROGRAMRESOURCELOCATION)(getProcAddr("glGetProgramResourceLocation"))
-	if gpGetProgramResourceLocation == nil {
-		return errors.New("glGetProgramResourceLocation")
-	}
 	gpGetProgramResourceLocationIndexEXT = (C.GPGETPROGRAMRESOURCELOCATIONINDEXEXT)(getProcAddr("glGetProgramResourceLocationIndexEXT"))
-	gpGetProgramResourceName = (C.GPGETPROGRAMRESOURCENAME)(getProcAddr("glGetProgramResourceName"))
-	if gpGetProgramResourceName == nil {
-		return errors.New("glGetProgramResourceName")
-	}
 	gpGetProgramResourcefvNV = (C.GPGETPROGRAMRESOURCEFVNV)(getProcAddr("glGetProgramResourcefvNV"))
-	gpGetProgramResourceiv = (C.GPGETPROGRAMRESOURCEIV)(getProcAddr("glGetProgramResourceiv"))
-	if gpGetProgramResourceiv == nil {
-		return errors.New("glGetProgramResourceiv")
-	}
 	gpGetProgramiv = (C.GPGETPROGRAMIV)(getProcAddr("glGetProgramiv"))
 	if gpGetProgramiv == nil {
 		return errors.New("glGetProgramiv")
@@ -10719,14 +9791,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 		return errors.New("glGetSynciv")
 	}
 	gpGetSyncivAPPLE = (C.GPGETSYNCIVAPPLE)(getProcAddr("glGetSyncivAPPLE"))
-	gpGetTexLevelParameterfv = (C.GPGETTEXLEVELPARAMETERFV)(getProcAddr("glGetTexLevelParameterfv"))
-	if gpGetTexLevelParameterfv == nil {
-		return errors.New("glGetTexLevelParameterfv")
-	}
-	gpGetTexLevelParameteriv = (C.GPGETTEXLEVELPARAMETERIV)(getProcAddr("glGetTexLevelParameteriv"))
-	if gpGetTexLevelParameteriv == nil {
-		return errors.New("glGetTexLevelParameteriv")
-	}
 	gpGetTexParameterIivEXT = (C.GPGETTEXPARAMETERIIVEXT)(getProcAddr("glGetTexParameterIivEXT"))
 	gpGetTexParameterIivOES = (C.GPGETTEXPARAMETERIIVOES)(getProcAddr("glGetTexParameterIivOES"))
 	gpGetTexParameterIuivEXT = (C.GPGETTEXPARAMETERIUIVEXT)(getProcAddr("glGetTexParameterIuivEXT"))
@@ -10849,10 +9913,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpIsProgram == nil {
 		return errors.New("glIsProgram")
 	}
-	gpIsProgramPipeline = (C.GPISPROGRAMPIPELINE)(getProcAddr("glIsProgramPipeline"))
-	if gpIsProgramPipeline == nil {
-		return errors.New("glIsProgramPipeline")
-	}
 	gpIsProgramPipelineEXT = (C.GPISPROGRAMPIPELINEEXT)(getProcAddr("glIsProgramPipelineEXT"))
 	gpIsQuery = (C.GPISQUERY)(getProcAddr("glIsQuery"))
 	if gpIsQuery == nil {
@@ -10936,14 +9996,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpMatrixTranslatedEXT = (C.GPMATRIXTRANSLATEDEXT)(getProcAddr("glMatrixTranslatedEXT"))
 	gpMatrixTranslatefEXT = (C.GPMATRIXTRANSLATEFEXT)(getProcAddr("glMatrixTranslatefEXT"))
 	gpMaxShaderCompilerThreadsKHR = (C.GPMAXSHADERCOMPILERTHREADSKHR)(getProcAddr("glMaxShaderCompilerThreadsKHR"))
-	gpMemoryBarrier = (C.GPMEMORYBARRIER)(getProcAddr("glMemoryBarrier"))
-	if gpMemoryBarrier == nil {
-		return errors.New("glMemoryBarrier")
-	}
-	gpMemoryBarrierByRegion = (C.GPMEMORYBARRIERBYREGION)(getProcAddr("glMemoryBarrierByRegion"))
-	if gpMemoryBarrierByRegion == nil {
-		return errors.New("glMemoryBarrierByRegion")
-	}
 	gpMemoryObjectParameterivEXT = (C.GPMEMORYOBJECTPARAMETERIVEXT)(getProcAddr("glMemoryObjectParameterivEXT"))
 	gpMinSampleShadingOES = (C.GPMINSAMPLESHADINGOES)(getProcAddr("glMinSampleShadingOES"))
 	gpMultiDrawArraysEXT = (C.GPMULTIDRAWARRAYSEXT)(getProcAddr("glMultiDrawArraysEXT"))
@@ -11014,190 +10066,58 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	}
 	gpProgramParameteriEXT = (C.GPPROGRAMPARAMETERIEXT)(getProcAddr("glProgramParameteriEXT"))
 	gpProgramPathFragmentInputGenNV = (C.GPPROGRAMPATHFRAGMENTINPUTGENNV)(getProcAddr("glProgramPathFragmentInputGenNV"))
-	gpProgramUniform1f = (C.GPPROGRAMUNIFORM1F)(getProcAddr("glProgramUniform1f"))
-	if gpProgramUniform1f == nil {
-		return errors.New("glProgramUniform1f")
-	}
 	gpProgramUniform1fEXT = (C.GPPROGRAMUNIFORM1FEXT)(getProcAddr("glProgramUniform1fEXT"))
-	gpProgramUniform1fv = (C.GPPROGRAMUNIFORM1FV)(getProcAddr("glProgramUniform1fv"))
-	if gpProgramUniform1fv == nil {
-		return errors.New("glProgramUniform1fv")
-	}
 	gpProgramUniform1fvEXT = (C.GPPROGRAMUNIFORM1FVEXT)(getProcAddr("glProgramUniform1fvEXT"))
-	gpProgramUniform1i = (C.GPPROGRAMUNIFORM1I)(getProcAddr("glProgramUniform1i"))
-	if gpProgramUniform1i == nil {
-		return errors.New("glProgramUniform1i")
-	}
 	gpProgramUniform1i64NV = (C.GPPROGRAMUNIFORM1I64NV)(getProcAddr("glProgramUniform1i64NV"))
 	gpProgramUniform1i64vNV = (C.GPPROGRAMUNIFORM1I64VNV)(getProcAddr("glProgramUniform1i64vNV"))
 	gpProgramUniform1iEXT = (C.GPPROGRAMUNIFORM1IEXT)(getProcAddr("glProgramUniform1iEXT"))
-	gpProgramUniform1iv = (C.GPPROGRAMUNIFORM1IV)(getProcAddr("glProgramUniform1iv"))
-	if gpProgramUniform1iv == nil {
-		return errors.New("glProgramUniform1iv")
-	}
 	gpProgramUniform1ivEXT = (C.GPPROGRAMUNIFORM1IVEXT)(getProcAddr("glProgramUniform1ivEXT"))
-	gpProgramUniform1ui = (C.GPPROGRAMUNIFORM1UI)(getProcAddr("glProgramUniform1ui"))
-	if gpProgramUniform1ui == nil {
-		return errors.New("glProgramUniform1ui")
-	}
 	gpProgramUniform1ui64NV = (C.GPPROGRAMUNIFORM1UI64NV)(getProcAddr("glProgramUniform1ui64NV"))
 	gpProgramUniform1ui64vNV = (C.GPPROGRAMUNIFORM1UI64VNV)(getProcAddr("glProgramUniform1ui64vNV"))
 	gpProgramUniform1uiEXT = (C.GPPROGRAMUNIFORM1UIEXT)(getProcAddr("glProgramUniform1uiEXT"))
-	gpProgramUniform1uiv = (C.GPPROGRAMUNIFORM1UIV)(getProcAddr("glProgramUniform1uiv"))
-	if gpProgramUniform1uiv == nil {
-		return errors.New("glProgramUniform1uiv")
-	}
 	gpProgramUniform1uivEXT = (C.GPPROGRAMUNIFORM1UIVEXT)(getProcAddr("glProgramUniform1uivEXT"))
-	gpProgramUniform2f = (C.GPPROGRAMUNIFORM2F)(getProcAddr("glProgramUniform2f"))
-	if gpProgramUniform2f == nil {
-		return errors.New("glProgramUniform2f")
-	}
 	gpProgramUniform2fEXT = (C.GPPROGRAMUNIFORM2FEXT)(getProcAddr("glProgramUniform2fEXT"))
-	gpProgramUniform2fv = (C.GPPROGRAMUNIFORM2FV)(getProcAddr("glProgramUniform2fv"))
-	if gpProgramUniform2fv == nil {
-		return errors.New("glProgramUniform2fv")
-	}
 	gpProgramUniform2fvEXT = (C.GPPROGRAMUNIFORM2FVEXT)(getProcAddr("glProgramUniform2fvEXT"))
-	gpProgramUniform2i = (C.GPPROGRAMUNIFORM2I)(getProcAddr("glProgramUniform2i"))
-	if gpProgramUniform2i == nil {
-		return errors.New("glProgramUniform2i")
-	}
 	gpProgramUniform2i64NV = (C.GPPROGRAMUNIFORM2I64NV)(getProcAddr("glProgramUniform2i64NV"))
 	gpProgramUniform2i64vNV = (C.GPPROGRAMUNIFORM2I64VNV)(getProcAddr("glProgramUniform2i64vNV"))
 	gpProgramUniform2iEXT = (C.GPPROGRAMUNIFORM2IEXT)(getProcAddr("glProgramUniform2iEXT"))
-	gpProgramUniform2iv = (C.GPPROGRAMUNIFORM2IV)(getProcAddr("glProgramUniform2iv"))
-	if gpProgramUniform2iv == nil {
-		return errors.New("glProgramUniform2iv")
-	}
 	gpProgramUniform2ivEXT = (C.GPPROGRAMUNIFORM2IVEXT)(getProcAddr("glProgramUniform2ivEXT"))
-	gpProgramUniform2ui = (C.GPPROGRAMUNIFORM2UI)(getProcAddr("glProgramUniform2ui"))
-	if gpProgramUniform2ui == nil {
-		return errors.New("glProgramUniform2ui")
-	}
 	gpProgramUniform2ui64NV = (C.GPPROGRAMUNIFORM2UI64NV)(getProcAddr("glProgramUniform2ui64NV"))
 	gpProgramUniform2ui64vNV = (C.GPPROGRAMUNIFORM2UI64VNV)(getProcAddr("glProgramUniform2ui64vNV"))
 	gpProgramUniform2uiEXT = (C.GPPROGRAMUNIFORM2UIEXT)(getProcAddr("glProgramUniform2uiEXT"))
-	gpProgramUniform2uiv = (C.GPPROGRAMUNIFORM2UIV)(getProcAddr("glProgramUniform2uiv"))
-	if gpProgramUniform2uiv == nil {
-		return errors.New("glProgramUniform2uiv")
-	}
 	gpProgramUniform2uivEXT = (C.GPPROGRAMUNIFORM2UIVEXT)(getProcAddr("glProgramUniform2uivEXT"))
-	gpProgramUniform3f = (C.GPPROGRAMUNIFORM3F)(getProcAddr("glProgramUniform3f"))
-	if gpProgramUniform3f == nil {
-		return errors.New("glProgramUniform3f")
-	}
 	gpProgramUniform3fEXT = (C.GPPROGRAMUNIFORM3FEXT)(getProcAddr("glProgramUniform3fEXT"))
-	gpProgramUniform3fv = (C.GPPROGRAMUNIFORM3FV)(getProcAddr("glProgramUniform3fv"))
-	if gpProgramUniform3fv == nil {
-		return errors.New("glProgramUniform3fv")
-	}
 	gpProgramUniform3fvEXT = (C.GPPROGRAMUNIFORM3FVEXT)(getProcAddr("glProgramUniform3fvEXT"))
-	gpProgramUniform3i = (C.GPPROGRAMUNIFORM3I)(getProcAddr("glProgramUniform3i"))
-	if gpProgramUniform3i == nil {
-		return errors.New("glProgramUniform3i")
-	}
 	gpProgramUniform3i64NV = (C.GPPROGRAMUNIFORM3I64NV)(getProcAddr("glProgramUniform3i64NV"))
 	gpProgramUniform3i64vNV = (C.GPPROGRAMUNIFORM3I64VNV)(getProcAddr("glProgramUniform3i64vNV"))
 	gpProgramUniform3iEXT = (C.GPPROGRAMUNIFORM3IEXT)(getProcAddr("glProgramUniform3iEXT"))
-	gpProgramUniform3iv = (C.GPPROGRAMUNIFORM3IV)(getProcAddr("glProgramUniform3iv"))
-	if gpProgramUniform3iv == nil {
-		return errors.New("glProgramUniform3iv")
-	}
 	gpProgramUniform3ivEXT = (C.GPPROGRAMUNIFORM3IVEXT)(getProcAddr("glProgramUniform3ivEXT"))
-	gpProgramUniform3ui = (C.GPPROGRAMUNIFORM3UI)(getProcAddr("glProgramUniform3ui"))
-	if gpProgramUniform3ui == nil {
-		return errors.New("glProgramUniform3ui")
-	}
 	gpProgramUniform3ui64NV = (C.GPPROGRAMUNIFORM3UI64NV)(getProcAddr("glProgramUniform3ui64NV"))
 	gpProgramUniform3ui64vNV = (C.GPPROGRAMUNIFORM3UI64VNV)(getProcAddr("glProgramUniform3ui64vNV"))
 	gpProgramUniform3uiEXT = (C.GPPROGRAMUNIFORM3UIEXT)(getProcAddr("glProgramUniform3uiEXT"))
-	gpProgramUniform3uiv = (C.GPPROGRAMUNIFORM3UIV)(getProcAddr("glProgramUniform3uiv"))
-	if gpProgramUniform3uiv == nil {
-		return errors.New("glProgramUniform3uiv")
-	}
 	gpProgramUniform3uivEXT = (C.GPPROGRAMUNIFORM3UIVEXT)(getProcAddr("glProgramUniform3uivEXT"))
-	gpProgramUniform4f = (C.GPPROGRAMUNIFORM4F)(getProcAddr("glProgramUniform4f"))
-	if gpProgramUniform4f == nil {
-		return errors.New("glProgramUniform4f")
-	}
 	gpProgramUniform4fEXT = (C.GPPROGRAMUNIFORM4FEXT)(getProcAddr("glProgramUniform4fEXT"))
-	gpProgramUniform4fv = (C.GPPROGRAMUNIFORM4FV)(getProcAddr("glProgramUniform4fv"))
-	if gpProgramUniform4fv == nil {
-		return errors.New("glProgramUniform4fv")
-	}
 	gpProgramUniform4fvEXT = (C.GPPROGRAMUNIFORM4FVEXT)(getProcAddr("glProgramUniform4fvEXT"))
-	gpProgramUniform4i = (C.GPPROGRAMUNIFORM4I)(getProcAddr("glProgramUniform4i"))
-	if gpProgramUniform4i == nil {
-		return errors.New("glProgramUniform4i")
-	}
 	gpProgramUniform4i64NV = (C.GPPROGRAMUNIFORM4I64NV)(getProcAddr("glProgramUniform4i64NV"))
 	gpProgramUniform4i64vNV = (C.GPPROGRAMUNIFORM4I64VNV)(getProcAddr("glProgramUniform4i64vNV"))
 	gpProgramUniform4iEXT = (C.GPPROGRAMUNIFORM4IEXT)(getProcAddr("glProgramUniform4iEXT"))
-	gpProgramUniform4iv = (C.GPPROGRAMUNIFORM4IV)(getProcAddr("glProgramUniform4iv"))
-	if gpProgramUniform4iv == nil {
-		return errors.New("glProgramUniform4iv")
-	}
 	gpProgramUniform4ivEXT = (C.GPPROGRAMUNIFORM4IVEXT)(getProcAddr("glProgramUniform4ivEXT"))
-	gpProgramUniform4ui = (C.GPPROGRAMUNIFORM4UI)(getProcAddr("glProgramUniform4ui"))
-	if gpProgramUniform4ui == nil {
-		return errors.New("glProgramUniform4ui")
-	}
 	gpProgramUniform4ui64NV = (C.GPPROGRAMUNIFORM4UI64NV)(getProcAddr("glProgramUniform4ui64NV"))
 	gpProgramUniform4ui64vNV = (C.GPPROGRAMUNIFORM4UI64VNV)(getProcAddr("glProgramUniform4ui64vNV"))
 	gpProgramUniform4uiEXT = (C.GPPROGRAMUNIFORM4UIEXT)(getProcAddr("glProgramUniform4uiEXT"))
-	gpProgramUniform4uiv = (C.GPPROGRAMUNIFORM4UIV)(getProcAddr("glProgramUniform4uiv"))
-	if gpProgramUniform4uiv == nil {
-		return errors.New("glProgramUniform4uiv")
-	}
 	gpProgramUniform4uivEXT = (C.GPPROGRAMUNIFORM4UIVEXT)(getProcAddr("glProgramUniform4uivEXT"))
 	gpProgramUniformHandleui64IMG = (C.GPPROGRAMUNIFORMHANDLEUI64IMG)(getProcAddr("glProgramUniformHandleui64IMG"))
 	gpProgramUniformHandleui64NV = (C.GPPROGRAMUNIFORMHANDLEUI64NV)(getProcAddr("glProgramUniformHandleui64NV"))
 	gpProgramUniformHandleui64vIMG = (C.GPPROGRAMUNIFORMHANDLEUI64VIMG)(getProcAddr("glProgramUniformHandleui64vIMG"))
 	gpProgramUniformHandleui64vNV = (C.GPPROGRAMUNIFORMHANDLEUI64VNV)(getProcAddr("glProgramUniformHandleui64vNV"))
-	gpProgramUniformMatrix2fv = (C.GPPROGRAMUNIFORMMATRIX2FV)(getProcAddr("glProgramUniformMatrix2fv"))
-	if gpProgramUniformMatrix2fv == nil {
-		return errors.New("glProgramUniformMatrix2fv")
-	}
 	gpProgramUniformMatrix2fvEXT = (C.GPPROGRAMUNIFORMMATRIX2FVEXT)(getProcAddr("glProgramUniformMatrix2fvEXT"))
-	gpProgramUniformMatrix2x3fv = (C.GPPROGRAMUNIFORMMATRIX2X3FV)(getProcAddr("glProgramUniformMatrix2x3fv"))
-	if gpProgramUniformMatrix2x3fv == nil {
-		return errors.New("glProgramUniformMatrix2x3fv")
-	}
 	gpProgramUniformMatrix2x3fvEXT = (C.GPPROGRAMUNIFORMMATRIX2X3FVEXT)(getProcAddr("glProgramUniformMatrix2x3fvEXT"))
-	gpProgramUniformMatrix2x4fv = (C.GPPROGRAMUNIFORMMATRIX2X4FV)(getProcAddr("glProgramUniformMatrix2x4fv"))
-	if gpProgramUniformMatrix2x4fv == nil {
-		return errors.New("glProgramUniformMatrix2x4fv")
-	}
 	gpProgramUniformMatrix2x4fvEXT = (C.GPPROGRAMUNIFORMMATRIX2X4FVEXT)(getProcAddr("glProgramUniformMatrix2x4fvEXT"))
-	gpProgramUniformMatrix3fv = (C.GPPROGRAMUNIFORMMATRIX3FV)(getProcAddr("glProgramUniformMatrix3fv"))
-	if gpProgramUniformMatrix3fv == nil {
-		return errors.New("glProgramUniformMatrix3fv")
-	}
 	gpProgramUniformMatrix3fvEXT = (C.GPPROGRAMUNIFORMMATRIX3FVEXT)(getProcAddr("glProgramUniformMatrix3fvEXT"))
-	gpProgramUniformMatrix3x2fv = (C.GPPROGRAMUNIFORMMATRIX3X2FV)(getProcAddr("glProgramUniformMatrix3x2fv"))
-	if gpProgramUniformMatrix3x2fv == nil {
-		return errors.New("glProgramUniformMatrix3x2fv")
-	}
 	gpProgramUniformMatrix3x2fvEXT = (C.GPPROGRAMUNIFORMMATRIX3X2FVEXT)(getProcAddr("glProgramUniformMatrix3x2fvEXT"))
-	gpProgramUniformMatrix3x4fv = (C.GPPROGRAMUNIFORMMATRIX3X4FV)(getProcAddr("glProgramUniformMatrix3x4fv"))
-	if gpProgramUniformMatrix3x4fv == nil {
-		return errors.New("glProgramUniformMatrix3x4fv")
-	}
 	gpProgramUniformMatrix3x4fvEXT = (C.GPPROGRAMUNIFORMMATRIX3X4FVEXT)(getProcAddr("glProgramUniformMatrix3x4fvEXT"))
-	gpProgramUniformMatrix4fv = (C.GPPROGRAMUNIFORMMATRIX4FV)(getProcAddr("glProgramUniformMatrix4fv"))
-	if gpProgramUniformMatrix4fv == nil {
-		return errors.New("glProgramUniformMatrix4fv")
-	}
 	gpProgramUniformMatrix4fvEXT = (C.GPPROGRAMUNIFORMMATRIX4FVEXT)(getProcAddr("glProgramUniformMatrix4fvEXT"))
-	gpProgramUniformMatrix4x2fv = (C.GPPROGRAMUNIFORMMATRIX4X2FV)(getProcAddr("glProgramUniformMatrix4x2fv"))
-	if gpProgramUniformMatrix4x2fv == nil {
-		return errors.New("glProgramUniformMatrix4x2fv")
-	}
 	gpProgramUniformMatrix4x2fvEXT = (C.GPPROGRAMUNIFORMMATRIX4X2FVEXT)(getProcAddr("glProgramUniformMatrix4x2fvEXT"))
-	gpProgramUniformMatrix4x3fv = (C.GPPROGRAMUNIFORMMATRIX4X3FV)(getProcAddr("glProgramUniformMatrix4x3fv"))
-	if gpProgramUniformMatrix4x3fv == nil {
-		return errors.New("glProgramUniformMatrix4x3fv")
-	}
 	gpProgramUniformMatrix4x3fvEXT = (C.GPPROGRAMUNIFORMMATRIX4X3FVEXT)(getProcAddr("glProgramUniformMatrix4x3fvEXT"))
 	gpPushDebugGroup = (C.GPPUSHDEBUGGROUP)(getProcAddr("glPushDebugGroup"))
 	gpPushDebugGroupKHR = (C.GPPUSHDEBUGGROUPKHR)(getProcAddr("glPushDebugGroupKHR"))
@@ -11246,10 +10166,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpSampleCoverage = (C.GPSAMPLECOVERAGE)(getProcAddr("glSampleCoverage"))
 	if gpSampleCoverage == nil {
 		return errors.New("glSampleCoverage")
-	}
-	gpSampleMaski = (C.GPSAMPLEMASKI)(getProcAddr("glSampleMaski"))
-	if gpSampleMaski == nil {
-		return errors.New("glSampleMaski")
 	}
 	gpSamplerParameterIivEXT = (C.GPSAMPLERPARAMETERIIVEXT)(getProcAddr("glSamplerParameterIivEXT"))
 	gpSamplerParameterIivOES = (C.GPSAMPLERPARAMETERIIVOES)(getProcAddr("glSamplerParameterIivOES"))
@@ -11382,10 +10298,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 		return errors.New("glTexStorage2D")
 	}
 	gpTexStorage2DEXT = (C.GPTEXSTORAGE2DEXT)(getProcAddr("glTexStorage2DEXT"))
-	gpTexStorage2DMultisample = (C.GPTEXSTORAGE2DMULTISAMPLE)(getProcAddr("glTexStorage2DMultisample"))
-	if gpTexStorage2DMultisample == nil {
-		return errors.New("glTexStorage2DMultisample")
-	}
 	gpTexStorage3D = (C.GPTEXSTORAGE3D)(getProcAddr("glTexStorage3D"))
 	if gpTexStorage3D == nil {
 		return errors.New("glTexStorage3D")
@@ -11595,19 +10507,11 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpUseProgram == nil {
 		return errors.New("glUseProgram")
 	}
-	gpUseProgramStages = (C.GPUSEPROGRAMSTAGES)(getProcAddr("glUseProgramStages"))
-	if gpUseProgramStages == nil {
-		return errors.New("glUseProgramStages")
-	}
 	gpUseProgramStagesEXT = (C.GPUSEPROGRAMSTAGESEXT)(getProcAddr("glUseProgramStagesEXT"))
 	gpUseShaderProgramEXT = (C.GPUSESHADERPROGRAMEXT)(getProcAddr("glUseShaderProgramEXT"))
 	gpValidateProgram = (C.GPVALIDATEPROGRAM)(getProcAddr("glValidateProgram"))
 	if gpValidateProgram == nil {
 		return errors.New("glValidateProgram")
-	}
-	gpValidateProgramPipeline = (C.GPVALIDATEPROGRAMPIPELINE)(getProcAddr("glValidateProgramPipeline"))
-	if gpValidateProgramPipeline == nil {
-		return errors.New("glValidateProgramPipeline")
 	}
 	gpValidateProgramPipelineEXT = (C.GPVALIDATEPROGRAMPIPELINEEXT)(getProcAddr("glValidateProgramPipelineEXT"))
 	gpVertexAttrib1f = (C.GPVERTEXATTRIB1F)(getProcAddr("glVertexAttrib1f"))
@@ -11642,10 +10546,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpVertexAttrib4fv == nil {
 		return errors.New("glVertexAttrib4fv")
 	}
-	gpVertexAttribBinding = (C.GPVERTEXATTRIBBINDING)(getProcAddr("glVertexAttribBinding"))
-	if gpVertexAttribBinding == nil {
-		return errors.New("glVertexAttribBinding")
-	}
 	gpVertexAttribDivisor = (C.GPVERTEXATTRIBDIVISOR)(getProcAddr("glVertexAttribDivisor"))
 	if gpVertexAttribDivisor == nil {
 		return errors.New("glVertexAttribDivisor")
@@ -11653,10 +10553,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpVertexAttribDivisorANGLE = (C.GPVERTEXATTRIBDIVISORANGLE)(getProcAddr("glVertexAttribDivisorANGLE"))
 	gpVertexAttribDivisorEXT = (C.GPVERTEXATTRIBDIVISOREXT)(getProcAddr("glVertexAttribDivisorEXT"))
 	gpVertexAttribDivisorNV = (C.GPVERTEXATTRIBDIVISORNV)(getProcAddr("glVertexAttribDivisorNV"))
-	gpVertexAttribFormat = (C.GPVERTEXATTRIBFORMAT)(getProcAddr("glVertexAttribFormat"))
-	if gpVertexAttribFormat == nil {
-		return errors.New("glVertexAttribFormat")
-	}
 	gpVertexAttribI4i = (C.GPVERTEXATTRIBI4I)(getProcAddr("glVertexAttribI4i"))
 	if gpVertexAttribI4i == nil {
 		return errors.New("glVertexAttribI4i")
@@ -11673,10 +10569,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	if gpVertexAttribI4uiv == nil {
 		return errors.New("glVertexAttribI4uiv")
 	}
-	gpVertexAttribIFormat = (C.GPVERTEXATTRIBIFORMAT)(getProcAddr("glVertexAttribIFormat"))
-	if gpVertexAttribIFormat == nil {
-		return errors.New("glVertexAttribIFormat")
-	}
 	gpVertexAttribIPointer = (C.GPVERTEXATTRIBIPOINTER)(getProcAddr("glVertexAttribIPointer"))
 	if gpVertexAttribIPointer == nil {
 		return errors.New("glVertexAttribIPointer")
@@ -11684,10 +10576,6 @@ func InitWithProcAddrFunc(getProcAddr func(name string) unsafe.Pointer) error {
 	gpVertexAttribPointer = (C.GPVERTEXATTRIBPOINTER)(getProcAddr("glVertexAttribPointer"))
 	if gpVertexAttribPointer == nil {
 		return errors.New("glVertexAttribPointer")
-	}
-	gpVertexBindingDivisor = (C.GPVERTEXBINDINGDIVISOR)(getProcAddr("glVertexBindingDivisor"))
-	if gpVertexBindingDivisor == nil {
-		return errors.New("glVertexBindingDivisor")
 	}
 	gpViewport = (C.GPVIEWPORT)(getProcAddr("glViewport"))
 	if gpViewport == nil {
