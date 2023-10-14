@@ -79,8 +79,6 @@ It is required to have `glow` source in a sibling directory to `go-gl/gl` since 
 For non-module-aware cases, this means `glow` needs to be in the same Go workspace as `go-gl/gl`.
 For module-aware cases, `go-gl/glow` needs to be checked out parallel to `go-gl/gl`. 
 
-In either case, the `glow` binary must be in your `$PATH`. Doable with `go get -u github.com/go-gl/glow` if your `$GOPATH/bin` is in your `$PATH`.
-
 Perform generation with the following:
 
 ```bash

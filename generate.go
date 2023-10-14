@@ -1,5 +1,6 @@
 // +build gen
 
+//go:generate -command glow go run ../glow/
 //go:generate glow generate -out=./v2.1/gl/ -api=gl -version=2.1 -xml=../glow/xml/ -tmpl=../glow/tmpl/
 //go:generate glow generate -out=./all-core/gl/ -api=gl -version=all -profile=core -lenientInit -xml=../glow/xml/ -tmpl=../glow/tmpl/
 //go:generate glow generate -out=./v3.2-core/gl/ -api=gl -version=3.2 -profile=core -xml=../glow/xml/ -tmpl=../glow/tmpl/
