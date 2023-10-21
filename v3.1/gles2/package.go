@@ -12,8 +12,8 @@
 // Package gles2 implements Go bindings to OpenGL.
 //
 // This package was automatically generated using Glow:
-//  https://github.com/go-gl/glow
 //
+//	https://github.com/go-gl/glow
 package gles2
 
 // #cgo !gles2,darwin        LDFLAGS: -framework OpenGL

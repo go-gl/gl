@@ -12,8 +12,8 @@
 // Package gl implements Go bindings to OpenGL.
 //
 // This package was automatically generated using Glow:
-//  https://github.com/go-gl/glow
 //
+//	https://github.com/go-gl/glow
 package gl
 
 // #cgo !gles2,darwin        LDFLAGS: -framework OpenGL
