@@ -10,6 +10,7 @@ Features:
 Requirements:
 - A cgo compiler (typically gcc).
 - On Ubuntu/Debian-based systems, the `libgl1-mesa-dev` package.
+- On Fedora/RHEL-based systems, the `libXxf86vm-devel` and `mesa-libGL-devel` packages.
 
 ## Usage
 
@@ -27,6 +28,11 @@ package main
 import "github.com/go-gl/gl/v3.3-core/gl"
 
 func main() {
+	if err := glfw.Init(); err != nil {
+		log.Fatalln("failed to initialize glfw:", err)
+	}
+	defer glfw.Terminate()
+
 	window := ... // Open a window.
 	window.MakeContextCurrent()
 
